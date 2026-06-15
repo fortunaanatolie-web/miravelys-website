@@ -1,0 +1,432 @@
+/**
+ * Miravelys marketing site — fluid layout & restrained typography.
+ * Rem-based scale respects browser zoom; grids reflow by viewport width.
+ */
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.site-shell {
+  /* Typography tokens (root em = browser default, typically 16px) */
+  --type-display: clamp(2rem, 1.15rem + 2.75vw, 3.5rem);
+  --type-h2: clamp(1.5rem, 0.95rem + 1.35vw, 2.125rem);
+  --type-h3: clamp(1.0625rem, 0.98rem + 0.25vw, 1.25rem);
+  --type-lead: clamp(1rem, 0.92rem + 0.25vw, 1.125rem);
+  --type-body: 0.9375rem;
+  --type-body-relaxed: 1rem;
+  --type-small: 0.8125rem;
+  --type-eyebrow: 0.6875rem;
+
+  /* Layout */
+  --page-gutter: clamp(16px, 4vw, 32px);
+  --section-space: clamp(56px, 8vw, 96px);
+  --content-max: min(92rem, 100%);
+  --grid-gap: clamp(12px, 2vw, 24px);
+  --card-radius: clamp(22px, 3vw, 34px);
+
+  font-size: var(--type-body);
+  line-height: 1.6;
+  padding-bottom: clamp(76px, 10vw, 104px);
+}
+
+/* —— Display & section headings —— */
+.site-shell .gold-wordmark {
+  font-size: var(--type-display);
+  line-height: 1.08;
+  margin: 14px 0 18px;
+}
+
+.site-shell .story-section h2,
+.site-shell .modes-section h2,
+.site-shell .benefits-section h2,
+.site-shell .mockups-section h2,
+.site-shell .trust-section h2,
+.site-shell .section-header h2,
+.site-shell .content-section h2,
+.site-shell .faq-section h2,
+.site-shell .moments-section h2,
+.site-shell .languages-section h2,
+.site-shell .explanation-section .section-header h2 {
+  font-size: var(--type-h2);
+  line-height: 1.12;
+}
+
+.site-shell .download-card h2,
+.site-shell .beta-card h2 {
+  font-size: var(--type-h2);
+  line-height: 1.12;
+}
+
+.site-shell .scenario-detail h3 {
+  font-size: var(--type-h2);
+  line-height: 1.12;
+}
+
+.site-shell .gallery-card-premium h3,
+.site-shell .signature-card h3,
+.site-shell .glass-card h3,
+.site-shell .positioning-card h3,
+.site-shell .moment-card h3 {
+  font-size: var(--type-h3);
+}
+
+.site-shell .proof-card span,
+.site-shell .positioning-card span {
+  font-size: clamp(1rem, 0.9rem + 0.35vw, 1.25rem);
+}
+
+.site-shell .mode-number {
+  font-size: clamp(1.1rem, 1rem + 0.35vw, 1.35rem);
+}
+
+/* —— Body & lead copy —— */
+.site-shell .hero-subtitle,
+.site-shell .hero-subtitle--lead {
+  font-size: var(--type-lead);
+  line-height: 1.55;
+}
+
+.site-shell .story-section p:not(.eyebrow),
+.site-shell .trust-section p,
+.site-shell .section-intro,
+.site-shell .modes-section .section-intro,
+.site-shell .benefits-section .section-intro,
+.site-shell .mockups-section .section-intro,
+.site-shell .scenario-detail p,
+.site-shell .beta-card p:not(.eyebrow),
+.site-shell .proof-card p,
+.site-shell .download-card p,
+.site-shell .site-footer p,
+.site-shell .site-footer small {
+  font-size: var(--type-body);
+  line-height: 1.65;
+}
+
+.site-shell .explanation-intro,
+.site-shell .explanation-section p,
+.site-shell .explanation-block p {
+  font-size: var(--type-body-relaxed);
+  line-height: 1.65;
+}
+
+.site-shell .eyebrow {
+  font-size: var(--type-eyebrow);
+  letter-spacing: 0.12em;
+}
+
+.site-shell .brand-mini {
+  font-size: clamp(0.92rem, 0.85rem + 0.25vw, 1rem);
+}
+
+.site-shell .nav-links {
+  font-size: var(--type-small);
+}
+
+.site-shell .quiet-quote,
+.site-shell .legal-card p {
+  font-size: var(--type-body);
+  line-height: 1.6;
+}
+
+/* —— Section rhythm & width —— */
+.site-shell .hero-section,
+.site-shell .story-section,
+.site-shell .modes-section,
+.site-shell .benefits-section,
+.site-shell .mockups-section,
+.site-shell .trust-section,
+.site-shell .content-section,
+.site-shell .scenario-section,
+.site-shell .proof-section,
+.site-shell .positioning-section,
+.site-shell .beta-section {
+  width: min(var(--content-max), calc(100% - var(--page-gutter) * 2));
+}
+
+.site-shell .hero-section {
+  min-height: auto;
+  padding-top: clamp(88px, 14vh, 120px);
+  padding-bottom: clamp(40px, 6vh, 70px);
+  gap: var(--grid-gap);
+}
+
+.site-shell .hero-section--premium {
+  min-height: auto;
+  padding-top: clamp(88px, 12vh, 108px);
+  padding-bottom: clamp(40px, 5vh, 56px);
+}
+
+.site-shell .hero-copy {
+  max-width: min(36rem, 100%);
+}
+
+.site-shell .hero-visual {
+  width: 100%;
+  max-width: 100%;
+}
+
+.site-shell .modes-section,
+.site-shell .benefits-section,
+.site-shell .mockups-section,
+.site-shell .trust-section,
+.site-shell .scenario-section,
+.site-shell .proof-section,
+.site-shell .positioning-section,
+.site-shell .beta-section,
+.site-shell .explanation-section,
+.site-shell .moments-section,
+.site-shell .faq-section,
+.site-shell .download-section,
+.site-shell .languages-section,
+.site-shell .signature-section {
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
+}
+
+.site-shell .top-nav {
+  width: min(var(--content-max), calc(100% - var(--page-gutter) * 2));
+}
+
+.site-shell .site-footer {
+  width: min(var(--content-max), calc(100% - var(--page-gutter) * 2));
+  font-size: var(--type-small);
+}
+
+.site-shell .story-body p,
+.site-shell .modes-intro > p,
+.site-shell .section-intro,
+.site-shell .mockup-bridge-card p {
+  font-size: var(--type-body);
+  line-height: 1.65;
+}
+
+.site-shell .gallery-overlay p,
+.site-shell .gallery-copy-card__inner p:not(.eyebrow) {
+  font-size: var(--type-body);
+  line-height: 1.6;
+}
+
+.site-shell .mockup-copy-panel h2 {
+  font-size: var(--type-h2);
+}
+
+/* —— Media never overflow the content rail —— */
+.site-shell img,
+.site-shell video,
+.site-shell svg {
+  max-width: 100%;
+}
+
+.site-shell .lifestyle-frame img {
+  width: 100%;
+  height: auto;
+}
+
+/* Grid/flex children shrink inside narrow columns */
+.site-shell .hero-copy,
+.site-shell .hero-visual,
+.site-shell .story-copy,
+.site-shell .story-side,
+.site-shell .mockup-copy-panel,
+.site-shell .mockup-stage,
+.site-shell .scenario-detail,
+.site-shell .beta-card > *,
+.site-shell .download-card,
+.site-shell [class*='-grid'] > *,
+.site-shell [class*='showcase'] > * {
+  min-width: 0;
+}
+
+/* —— Section headings reflow —— */
+.site-shell .section-heading {
+  display: grid;
+  gap: clamp(12px, 2vw, 20px);
+  align-items: start;
+  margin-bottom: clamp(18px, 3vw, 28px);
+}
+
+.site-shell .section-heading--split {
+  grid-template-columns: 1fr;
+}
+
+.site-shell .section-heading--split .section-intro {
+  text-align: left;
+  max-width: 42rem;
+}
+
+/* Split-section columns: site-layout-fluid.css (auto-fit) */
+
+.site-shell .image-row,
+.site-shell .mode-cards,
+.site-shell .signature-grid,
+.site-shell .moment-grid,
+.site-shell .positioning-grid,
+.site-shell .language-showcase,
+.site-shell .explanation-grid {
+  display: grid;
+  gap: var(--grid-gap);
+}
+
+.site-shell .signature-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+}
+
+.site-shell .mode-cards {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+
+.site-shell .moment-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+}
+
+.site-shell .positioning-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.5rem), 1fr));
+}
+
+.site-shell .language-showcase {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr));
+}
+
+.site-shell .explanation-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13.75rem), 1fr));
+}
+
+.site-shell .image-row {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+
+.site-shell .mockup-showcase {
+  gap: clamp(20px, 3vw, 32px);
+}
+
+.site-shell .mockup-copy-panel {
+  position: static;
+}
+
+.site-shell .mockup-stage {
+  padding: clamp(8px, 1.5vw, 16px) 0;
+  border-radius: 0;
+  border: none;
+  background: transparent;
+}
+
+.site-shell .glass-card,
+.site-shell .signature-card {
+  min-height: auto;
+  padding: clamp(18px, 3vw, 24px);
+  border-radius: var(--card-radius);
+}
+
+.site-shell .scenario-detail {
+  min-height: clamp(240px, 42vw, 360px);
+  padding: clamp(20px, 4vw, 32px);
+}
+
+.site-shell .beta-card {
+  padding: clamp(20px, 4vw, 32px);
+  border-radius: var(--card-radius);
+}
+
+.site-shell .download-card {
+  padding: clamp(24px, 5vw, 40px);
+  border-radius: var(--card-radius);
+}
+
+.site-shell .download-actions,
+.site-shell .hero-actions,
+.site-shell .mockup-panel-actions,
+.site-shell .cookie-banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.site-shell .language-pills {
+  justify-content: flex-start;
+}
+
+/* —— Tablet —— */
+@media (min-width: 40rem) {
+  .site-shell .image-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* —— Large viewports: stop type growing further —— */
+@media (min-width: 87.5rem) {
+  .site-shell {
+    --type-display: 3.5rem;
+    --type-h2: 2.125rem;
+    --type-lead: 1.125rem;
+  }
+}
+
+/* —— Navigation & sticky chrome —— */
+@media (max-width: 61.24rem) {
+  .site-shell .story-heading {
+    position: static;
+  }
+}
+
+@media (max-width: 43.75rem) {
+  .site-shell .hero-actions .primary-action,
+  .site-shell .hero-actions .secondary-action,
+  .site-shell .download-actions .primary-action,
+  .site-shell .download-actions .secondary-action,
+  .site-shell .mockup-panel-actions .primary-action,
+  .site-shell .mockup-panel-actions .secondary-action,
+  .site-shell .beta-form .primary-action {
+    flex: 1 1 auto;
+    min-width: min(100%, 11rem);
+    justify-content: center;
+  }
+
+  .site-shell .sticky-cta {
+    width: calc(100% - var(--page-gutter) * 2);
+    max-width: 22rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 6px;
+  }
+
+  .site-shell .sticky-cta .primary-action,
+  .site-shell .sticky-cta .secondary-action {
+    flex: 1 1 8rem;
+    justify-content: center;
+  }
+}
+
+/* Legal pages (outside .site-shell) */
+.legal-shell {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  width: min(42rem, calc(100% - clamp(16px, 4vw, 32px) * 2));
+  margin-inline: auto;
+}
+
+.legal-card h1 {
+  font-size: clamp(1.5rem, 0.95rem + 1.35vw, 2.125rem);
+  line-height: 1.12;
+}
+
+.legal-intro,
+.legal-section p {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
+.legal-section h2 {
+  font-size: 1rem;
+}
+
+@media (max-width: 40rem) {
+  .legal-shell {
+    width: min(100%, calc(100% - 24px));
+  }
+}

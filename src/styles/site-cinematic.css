@@ -1,0 +1,286 @@
+/**
+ * Cinematic layer — refined scroll rhythm, lifestyle editorial breaks, polished hero.
+ */
+
+/* —— Scroll progress (refined top indicator) —— */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 120;
+  height: 2px;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.scroll-progress__bar {
+  height: 100%;
+  width: 100%;
+  transform-origin: left center;
+  background: linear-gradient(90deg, var(--mira-progress-start) 0%, var(--mira-progress-mid) 55%, var(--mira-progress-end) 100%);
+  box-shadow: 0 0 14px var(--mira-gold-glow);
+  transition: transform 0.1s linear;
+}
+
+/* —— Scroll reveal (one idea per viewport) —— */
+/* .reveal and .reveal--visible are defined in site-motion.css */
+/* This file only provides the visible state override for reduced-motion */
+
+/* —— Chapter dividers (section pacing) —— */
+.chapter-divider {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 3vw, 28px);
+  width: min(1160px, calc(100% - 32px));
+  margin: clamp(32px, 5vw, 56px) auto;
+  padding: 0 var(--page-gutter, 16px);
+}
+
+.chapter-divider__line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(191, 160, 106, 0.18) 30%,
+    rgba(191, 160, 106, 0.14) 70%,
+    transparent 100%
+  );
+}
+
+.chapter-divider__label {
+  flex-shrink: 0;
+  font-size: var(--type-eyebrow, 0.6875rem);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(191, 160, 106, 0.65);
+}
+
+/* —— Full-bleed cinematic interstitial —— */
+.cinematic-break {
+  position: relative;
+  width: 100%;
+  min-height: clamp(320px, 55vh, 560px);
+  margin: clamp(64px, 9vw, 112px) 0;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.cinematic-break__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  transform: scale(1.04);
+  transition: transform 10s cubic-bezier(0.25, 1, 0.4, 1);
+}
+
+.cinematic-break:hover .cinematic-break__photo {
+  transform: scale(1.08);
+}
+
+.cinematic-break__veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(4, 6, 18, 0.52) 0%, rgba(4, 6, 18, 0.70) 100%),
+    radial-gradient(ellipse at 50% 78%, rgba(191, 160, 106, 0.06) 0%, transparent 52%);
+  pointer-events: none;
+}
+
+.cinematic-break__quote {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-content: center;
+  min-height: inherit;
+  max-width: min(42rem, calc(100% - 48px));
+  margin: 0 auto;
+  padding: clamp(48px, 8vw, 80px) 24px;
+  text-align: center;
+}
+
+.cinematic-break__quote p {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 1rem + 1.2vw, 1.75rem);
+  line-height: 1.45;
+  color: rgba(250, 245, 228, 0.93);
+  font-style: italic;
+  margin: 0;
+}
+
+.cinematic-break__quote cite {
+  display: block;
+  margin-top: 18px;
+  font-size: var(--type-small, 0.8125rem);
+  font-style: normal;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(191, 160, 106, 0.65);
+}
+
+/* —— Hero cinematic upgrade —— */
+.hero-section--cinematic {
+  min-height: min(92vh, 920px);
+  padding: clamp(108px, 12vw, 140px) 0 clamp(64px, 8vw, 96px);
+  gap: clamp(36px, 5vw, 64px);
+}
+
+@media (min-width: 981px) {
+  .hero-section--cinematic {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  }
+
+  .hero-section--cinematic .hero-visual {
+    position: relative;
+  }
+
+  .hero-section--cinematic .lifestyle-frame--hero {
+    transform: perspective(1200px) rotateY(-2deg);
+    transition: transform 0.7s cubic-bezier(0.25, 1, 0.4, 1);
+  }
+
+  .hero-section--cinematic .hero-visual:hover .lifestyle-frame--hero {
+    transform: perspective(1200px) rotateY(0deg) translateY(-4px);
+  }
+}
+
+.hero-section--cinematic .gold-wordmark {
+  letter-spacing: -0.025em;
+}
+
+.hero-section--cinematic .hero-subtitle--lead {
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  max-width: 34rem;
+}
+
+/* —— Gallery grid reveal wrappers —— */
+.gallery-grid-premium > .gallery-grid-reveal--large {
+  grid-area: large;
+}
+
+.gallery-grid-premium > .gallery-grid-reveal--copy {
+  grid-area: copy;
+}
+
+.gallery-grid-premium > .gallery-grid-reveal--small {
+  grid-area: small;
+}
+
+.gallery-grid-premium > .gallery-grid-reveal > .gallery-card-premium,
+.gallery-grid-premium > .gallery-grid-reveal > .gallery-copy-card {
+  height: 100%;
+}
+
+/* —— Card lift on hover —— */
+.signature-card,
+.glass-card,
+.moment-card,
+.positioning-card,
+.proof-card,
+.explanation-card {
+  transition:
+    transform 0.4s cubic-bezier(0.25, 1, 0.4, 1),
+    box-shadow 0.4s cubic-bezier(0.25, 1, 0.4, 1),
+    border-color 0.3s ease;
+}
+
+.signature-card:hover,
+.glass-card:hover,
+.moment-card:hover,
+.positioning-card:hover,
+.proof-card:hover,
+.explanation-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 16px 48px rgba(0, 0, 0, 0.28);
+}
+
+.gallery-card-premium {
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.4, 1);
+}
+
+.gallery-card-premium:hover {
+  transform: scale(1.01);
+}
+
+/* —— Increased section breathing room —— */
+.site-shell {
+  --section-space: clamp(64px, 11vw, 128px);
+}
+
+.site-shell .content-section + .content-section {
+  margin-top: 0;
+}
+
+/* —— Sticky mockup panel —— */
+@media (min-width: 981px) {
+  .mockup-copy-panel {
+    position: sticky;
+    top: 7.5rem;
+    align-self: start;
+  }
+}
+
+/* —— Trust section spotlight —— */
+.trust-section {
+  position: relative;
+  padding: clamp(80px, 10vw, 120px) clamp(24px, 4vw, 48px);
+  border-radius: var(--card-radius, 28px);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(191, 160, 106, 0.04) 0%, transparent 52%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* —— Download finale —— */
+.download-card {
+  text-align: center;
+  padding: clamp(48px, 7vw, 72px) clamp(24px, 4vw, 48px);
+  border-radius: var(--card-radius, 28px);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(191, 160, 106, 0.08) 0%, transparent 48%),
+    radial-gradient(ellipse at 80% 100%, rgba(148, 138, 172, 0.06) 0%, transparent 42%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* —— Reduced motion —— */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .scroll-progress__bar {
+    transition: none;
+  }
+
+  .cinematic-break__photo,
+  .gallery-card-premium,
+  .signature-card,
+  .glass-card,
+  .moment-card,
+  .positioning-card,
+  .proof-card,
+  .explanation-card {
+    transition: none;
+  }
+
+  .cinematic-break:hover .cinematic-break__photo,
+  .gallery-card-premium:hover,
+  .signature-card:hover,
+  .glass-card:hover,
+  .moment-card:hover,
+  .positioning-card:hover,
+  .proof-card:hover,
+  .explanation-card:hover {
+    transform: none;
+  }
+}

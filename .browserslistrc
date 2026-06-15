@@ -1,0 +1,7 @@
+# Broad support: modern evergreen + iOS Safari 14+, Samsung Internet
+last 2 versions
+> 0.5%
+not dead
+iOS >= 14
+Safari >= 14
+Firefox ESR

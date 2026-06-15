@@ -1,0 +1,105 @@
+/**
+ * Miravelys premium design tokens — cinematic warmth, emotional depth.
+ * Original palette; not Apple-derived. Not generic wellness.
+ */
+
+:root {
+  /* —— Deep base —— */
+  --mira-midnight: #09080e;
+  --mira-graphite: #110f17;
+  --mira-blue-black: #080b16;
+  --mira-plum: #160f1d;
+  --mira-charcoal: #18150f;
+
+  /* —— Light surfaces —— */
+  --mira-ivory: #f4efe6;
+  --mira-pearl: #e9e2d5;
+  --mira-champagne: #e2d5be;
+  --mira-cream: #f9f5ed;
+  --mira-warm-white: #f7f3ed;
+
+  /* —— Accents —— */
+  --mira-gold: #bfa06a;
+  --mira-gold-soft: #d0b27e;
+  --mira-gold-glow: rgba(191, 160, 106, 0.30);
+  --mira-rose-glow: rgba(190, 155, 140, 0.24);
+  --mira-lavender: rgba(148, 138, 172, 0.38);
+  --mira-lavender-soft: rgba(148, 138, 172, 0.16);
+  --mira-apricot: rgba(208, 162, 112, 0.18);
+  --mira-moon: #96a8c0;
+  --mira-moon-soft: rgba(150, 168, 192, 0.20);
+
+  /* —— Text —— */
+  --mira-text-primary: rgba(244, 239, 230, 0.93);
+  --mira-text-secondary: rgba(228, 220, 208, 0.72);
+  --mira-text-muted: rgba(206, 196, 184, 0.50);
+  --mira-text-whisper: rgba(191, 160, 106, 0.86);
+
+  /* —— Glass surfaces —— */
+  --mira-glass-bg: rgba(14, 12, 20, 0.62);
+  --mira-glass-bg-strong: rgba(8, 6, 14, 0.82);
+  --mira-glass-border: rgba(244, 239, 230, 0.08);
+  --mira-glass-highlight: rgba(255, 252, 248, 0.05);
+  --mira-glass-shadow: 0 24px 64px rgba(0, 0, 0, 0.48);
+
+  /* —— Motion —— */
+  --mira-ease-cinematic: cubic-bezier(0.25, 1, 0.4, 1);
+  --mira-ease-soft: cubic-bezier(0.33, 0, 0.15, 1);
+  --mira-ease-breath: cubic-bezier(0.45, 0, 0.55, 1);
+  --mira-ease-enter: cubic-bezier(0.14, 1, 0.28, 1);
+  --mira-duration-slow: 1.4s;
+  --mira-duration-medium: 0.95s;
+  --mira-duration-fast: 0.42s;
+  --mira-duration-breath: 11s;
+
+  /* —— Radius & depth —— */
+  --mira-radius-sm: 14px;
+  --mira-radius-md: 20px;
+  --mira-radius-lg: 32px;
+  --mira-radius-pill: 980px;
+  /*
+   * v5 product mockup geometry (390×844 logical).
+   * Display 40px, device shell 48px outer + 10px inset — match miravelys-redesign-v5.
+   */
+  --phone-display-corner-ratio: 0.102564; /* 40 / 390 */
+  --phone-chassis-outer-ratio: 0.123077; /* 48 / 390 */
+  --phone-chassis-inset-ratio: 0.025641; /* 10 / 390 */
+  --mira-shadow-soft: 0 8px 36px rgba(0, 0, 0, 0.36);
+  --mira-shadow-device: 0 32px 80px rgba(0, 0, 0, 0.56);
+  --mira-shadow-card-hover: 0 16px 56px rgba(0, 0, 0, 0.40);
+
+  /* —— Link & CTA —— */
+  --mira-link: #a4b6c2;
+  --mira-link-hover: #d0c2a6;
+  --mira-cta-bg: var(--mira-warm-white);
+  --mira-cta-text: #121018;
+
+  /* —— Scroll progress —— */
+  --mira-progress-start: #9488ac;
+  --mira-progress-mid: #bfa06a;
+  --mira-progress-end: #d0b27e;
+
+  /* —— Responsive breakpoints —— */
+  --bp-xs: 20rem;
+  --bp-sm: 23.4375rem;
+  --bp-md: 26.875rem;
+  --bp-tablet: 48rem;
+  --bp-tablet-lg: 52.125rem;
+  --bp-laptop: 64rem;
+  --bp-desktop: 68.75rem;
+  --bp-wide: 80rem;
+  --bp-ultra: 90rem;
+  --bp-max: 108rem;
+  --touch-min: 44px;
+  --page-gutter: clamp(16px, 4vw, 32px);
+}
+
+.site-shell--keynote {
+  --keynote-display: clamp(2.5rem, 1.25rem + 5vw, 5rem);
+  --keynote-section: clamp(2rem, 1.15rem + 3.5vw, 3.75rem);
+  --keynote-sub: clamp(1.0625rem, 0.96rem + 0.42vw, 1.3125rem);
+  --keynote-whisper: clamp(0.9375rem, 0.88rem + 0.22vw, 1.0625rem);
+  --keynote-max: min(980px, calc(100% - var(--page-gutter) * 2));
+  --keynote-device-hero: min(440px, 92vw);
+  --keynote-device-chapter: min(400px, 88vw);
+}

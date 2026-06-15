@@ -1,0 +1,157 @@
+/**
+ * Cinematic atmospheric backgrounds — layered light, slow drift, mood shifts.
+ * Premium depth; not flat, not noisy, not generic.
+ */
+
+.site-shell--keynote {
+  background:
+    radial-gradient(ellipse 130% 85% at 50% -25%, var(--mira-lavender-soft), transparent 52%),
+    radial-gradient(ellipse 95% 65% at 85% 12%, var(--mira-apricot), transparent 48%),
+    radial-gradient(ellipse 85% 55% at 10% 38%, var(--mira-moon-soft), transparent 46%),
+    linear-gradient(180deg, var(--mira-blue-black) 0%, var(--mira-midnight) 36%, var(--mira-graphite) 100%);
+  color: var(--mira-text-primary);
+}
+
+.cinematic-atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.cinematic-atmosphere__base {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    var(--mira-blue-black) 0%,
+    var(--mira-midnight) 42%,
+    var(--mira-charcoal) 100%
+  );
+}
+
+.cinematic-atmosphere__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(110px);
+  opacity: 0.5;
+  will-change: transform;
+}
+
+.cinematic-atmosphere__glow--gold {
+  width: 52vw;
+  height: 42vh;
+  min-width: 300px;
+  min-height: 260px;
+  top: -6vh;
+  left: 18%;
+  background: radial-gradient(circle, var(--mira-gold-glow), transparent 66%);
+  animation: atmosphere-drift-gold 32s var(--mira-ease-breath) infinite alternate;
+}
+
+.cinematic-atmosphere__glow--lavender {
+  width: 45vw;
+  height: 40vh;
+  min-width: 280px;
+  min-height: 240px;
+  bottom: 12vh;
+  right: -4%;
+  background: radial-gradient(circle, var(--mira-lavender), transparent 68%);
+  animation: atmosphere-drift-lavender 38s var(--mira-ease-breath) infinite alternate;
+}
+
+.cinematic-atmosphere__glow--rose {
+  width: 38vw;
+  height: 32vh;
+  top: 42vh;
+  left: -6%;
+  background: radial-gradient(circle, var(--mira-rose-glow), transparent 70%);
+  opacity: 0.35;
+  animation: atmosphere-drift-rose 35s var(--mira-ease-breath) infinite alternate-reverse;
+}
+
+.cinematic-atmosphere__vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 88% 78% at 50% 44%, transparent 38%, rgba(6, 4, 10, 0.58) 100%);
+}
+
+.site-shell--keynote .ambient-orb {
+  opacity: 0.07;
+  filter: blur(130px);
+  animation: atmosphere-drift-gold 26s var(--mira-ease-breath) infinite alternate;
+}
+
+.site-shell--keynote .ambient-orb--cyan {
+  background: var(--mira-lavender);
+  left: -10vw;
+  top: 16vh;
+}
+
+.site-shell--keynote .ambient-orb--gold {
+  background: var(--mira-gold-soft);
+  right: -12vw;
+  top: 46vh;
+  animation-duration: 34s;
+  animation-direction: alternate-reverse;
+}
+
+.site-shell--keynote .grain-layer {
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+}
+
+/* Journey mood — background shifts with active scene */
+.reveal-journey[data-journey-mood='night'] {
+  --journey-atmosphere: radial-gradient(ellipse 100% 72% at 50% 18%, rgba(42, 52, 105, 0.20), transparent 58%);
+}
+
+.reveal-journey[data-journey-mood='reflect'] {
+  --journey-atmosphere: radial-gradient(ellipse 92% 62% at 58% 38%, rgba(155, 145, 135, 0.09), transparent 56%);
+}
+
+.reveal-journey[data-journey-mood='trust'] {
+  --journey-atmosphere: radial-gradient(ellipse 88% 58% at 28% 48%, rgba(95, 145, 125, 0.07), transparent 53%);
+}
+
+.reveal-journey[data-journey-mood='warm'] {
+  --journey-atmosphere: radial-gradient(ellipse 98% 68% at 38% 42%, var(--mira-apricot), transparent 56%);
+}
+
+.reveal-journey::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--journey-atmosphere, transparent);
+  pointer-events: none;
+  transition: background 1.4s var(--mira-ease-cinematic);
+  z-index: 0;
+}
+
+.reveal-journey__layout {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes atmosphere-drift-gold {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(2.5vw, 1.5vh) scale(1.05); }
+}
+
+@keyframes atmosphere-drift-lavender {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(-1.8vw, -1.2vh) scale(1.03); }
+}
+
+@keyframes atmosphere-drift-rose {
+  from { transform: translate(0, 0); }
+  to { transform: translate(1.5vw, 0.8vh); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cinematic-atmosphere__glow,
+  .site-shell--keynote .ambient-orb {
+    animation: none;
+  }
+}

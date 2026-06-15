@@ -1,0 +1,286 @@
+/**
+ * Miravelys marketing header — simplified nav, no overlap, overlay mobile menu.
+ */
+
+.site-shell--keynote {
+  --header-bar-height: 3.25rem;
+  --header-pad-y: clamp(10px, 1.8vw, 14px);
+  --header-pad-x: clamp(12px, 2.4vw, 18px);
+  --header-radius: 999px;
+  --header-top: calc(12px + env(safe-area-inset-top, 0px));
+  scroll-padding-top: calc(var(--header-bar-height) + var(--header-top) + 20px);
+}
+
+.site-header {
+  position: sticky;
+  top: var(--header-top);
+  z-index: 50;
+  width: min(980px, calc(100% - var(--page-gutter, 20px) * 2));
+  margin: 0 auto;
+  transform: translateY(0);
+}
+
+.site-header--legal {
+  width: min(1160px, calc(100% - var(--page-gutter, 20px) * 2));
+}
+
+.site-shell--keynote .top-nav {
+  width: 100%;
+  margin: 0;
+  transform: none;
+  top: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  flex-wrap: nowrap;
+}
+
+.top-nav__bar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: clamp(10px, 2vw, 20px);
+  min-height: var(--header-bar-height);
+  padding: var(--header-pad-y) var(--header-pad-x);
+  border: 1px solid var(--mira-glass-border, rgba(255, 255, 255, 0.09));
+  border-radius: var(--header-radius);
+  background: rgba(4, 8, 18, 0.72);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+}
+
+.top-nav--legal .top-nav__bar {
+  grid-template-columns: 1fr auto;
+}
+
+.site-shell--keynote .brand-mini {
+  flex-shrink: 0;
+  font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.top-nav__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(6px, 1.2vw, 18px);
+  min-width: 0;
+}
+
+.top-nav__links a {
+  font-size: clamp(0.8125rem, 0.78rem + 0.15vw, 0.875rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  color: var(--mira-text-secondary, rgba(232, 224, 212, 0.74));
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 8px 10px;
+  border-radius: var(--mira-radius-pill, 980px);
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.top-nav__links a:hover {
+  color: var(--mira-text-primary, rgba(245, 240, 232, 0.94));
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.top-nav__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(8px, 1.4vw, 12px);
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+.top-nav__cta {
+  white-space: nowrap;
+  padding: 9px 16px;
+  font-size: clamp(0.8125rem, 0.78rem + 0.15vw, 0.875rem);
+  line-height: 1.3;
+  min-height: var(--touch-min, 44px);
+  display: inline-flex;
+  align-items: center;
+}
+
+.language-cluster--compact .language-select {
+  padding: 7px 10px;
+  min-height: var(--touch-min, 44px);
+}
+
+.language-cluster--compact .language-select select {
+  max-width: min(4.5rem, 18vw);
+  font-size: var(--type-small);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.mobile-menu-button {
+  display: none;
+  flex-shrink: 0;
+  width: var(--touch-min, 44px);
+  height: var(--touch-min, 44px);
+  place-items: center;
+  border-radius: var(--mira-radius-pill, 980px);
+  color: rgba(246, 239, 215, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.mobile-menu-button:hover {
+  border-color: rgba(196, 160, 102, 0.28);
+  background: rgba(255, 255, 255, 0.09);
+}
+
+/* —— Mobile overlay panel —— */
+.top-nav__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 48;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: rgba(4, 8, 18, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+
+.top-nav__panel {
+  position: fixed;
+  z-index: 49;
+  top: calc(var(--header-top) + var(--header-bar-height) + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  width: min(980px, calc(100% - var(--page-gutter, 20px) * 2));
+  max-height: calc(100dvh - var(--header-top) - var(--header-bar-height) - 24px);
+  overflow: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.25s var(--mira-ease-cinematic, cubic-bezier(0.22, 1, 0.36, 1)),
+    transform 0.25s var(--mira-ease-cinematic, cubic-bezier(0.22, 1, 0.36, 1));
+}
+
+.top-nav__panel--open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.top-nav__panel-inner {
+  padding: clamp(16px, 3vw, 22px);
+  border-radius: clamp(20px, 4vw, 28px);
+  border: 1px solid var(--mira-glass-border);
+  background: rgba(6, 10, 22, 0.94);
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+}
+
+.top-nav__panel-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.top-nav__panel-links a {
+  display: flex;
+  align-items: center;
+  min-height: var(--touch-min, 44px);
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--mira-text-primary);
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.top-nav__panel-links a:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.top-nav__panel-actions {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.top-nav__panel-cta {
+  width: 100%;
+  justify-content: center;
+  min-height: var(--touch-min, 44px);
+}
+
+.top-nav__panel-link {
+  justify-content: center;
+  font-size: 0.9375rem;
+}
+
+/* —— Tablet: hide inline links, keep CTA + menu —— */
+@media (max-width: 64rem) {
+  .top-nav__links {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: grid;
+  }
+
+  .top-nav__cta {
+    display: none;
+  }
+}
+
+/* —— Compact phones: tighter bar —— */
+@media (max-width: 26.875rem) {
+  .site-shell--keynote {
+    --header-bar-height: 2.75rem;
+  }
+
+  .top-nav__bar {
+    gap: 6px;
+    padding: 6px 8px;
+  }
+
+  .language-cluster--compact .language-select select {
+    max-width: 3rem;
+    font-size: 0.75rem;
+  }
+
+  .brand-mini {
+    font-size: 0.875rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .top-nav__panel {
+    transition: none;
+  }
+
+  .top-nav__panel--open {
+    transform: translateX(-50%);
+  }
+}

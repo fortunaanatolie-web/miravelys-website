@@ -1,0 +1,182 @@
+/**
+ * Day / evening appearance — semantic token swap.
+ * Day: black body copy + gold accents on warm ivory. Evening: harbor dusk.
+ */
+
+[data-appearance='day'] {
+  --mira-midnight: #f7f3ed;
+  --mira-graphite: #f0ebe3;
+  --mira-blue-black: #faf7f2;
+  --mira-plum: #f5f0e8;
+  --mira-charcoal: #ebe5dc;
+
+  /* Headings map through --mira-ivory across the site */
+  --mira-ivory: #12100e;
+  --mira-pearl: #1a1612;
+  --mira-cream: #faf7f2;
+
+  --mira-gold: #9a7b42;
+  --mira-gold-soft: #bfa06a;
+  --mira-gold-glow: rgba(191, 160, 106, 0.22);
+
+  --mira-text-primary: #12100e;
+  --mira-text-secondary: rgba(18, 16, 14, 0.78);
+  --mira-text-muted: rgba(18, 16, 14, 0.58);
+  --mira-text-whisper: #bfa06a;
+
+  --mira-glass-bg: rgba(255, 252, 248, 0.82);
+  --mira-glass-bg-strong: rgba(255, 252, 248, 0.94);
+  --mira-glass-border: rgba(18, 16, 14, 0.08);
+  --mira-glass-highlight: rgba(255, 255, 255, 0.72);
+  --mira-glass-shadow: 0 18px 48px rgba(80, 60, 40, 0.1);
+
+  --mira-rose-glow: rgba(190, 155, 140, 0.1);
+  --mira-lavender-soft: rgba(148, 138, 172, 0.08);
+  --mira-apricot: rgba(208, 162, 112, 0.14);
+  --mira-moon-soft: rgba(150, 168, 192, 0.08);
+
+  --mira-shadow-soft: 0 8px 28px rgba(80, 60, 40, 0.1);
+  --mira-shadow-device: 0 28px 64px rgba(80, 60, 40, 0.16);
+  --mira-shadow-card-hover: 0 14px 40px rgba(80, 60, 40, 0.12);
+
+  --mira-link: #7a6238;
+  --mira-link-hover: #9a7b42;
+  --mira-cta-bg: #12100e;
+  --mira-cta-text: #faf7f2;
+
+  --mira-progress-start: #bfa06a;
+  --mira-progress-mid: #9a7b42;
+  --mira-progress-end: #c9a96e;
+}
+
+[data-appearance='day'] body {
+  background: var(--mira-midnight);
+  color: var(--mira-text-primary);
+}
+
+[data-appearance='day'] .site-shell--keynote {
+  background:
+    radial-gradient(ellipse 120% 80% at 50% -20%, var(--mira-lavender-soft), transparent 55%),
+    radial-gradient(ellipse 90% 60% at 88% 8%, var(--mira-apricot), transparent 50%),
+    linear-gradient(180deg, var(--mira-blue-black) 0%, var(--mira-midnight) 48%, var(--mira-graphite) 100%);
+  color: var(--mira-text-primary);
+}
+
+[data-appearance='day'] .site-shell--keynote .eyebrow,
+[data-appearance='day'] .origin-story__eyebrow,
+[data-appearance='day'] .origin-story__chapter,
+[data-appearance='day'] .purpose-explanation__eyebrow,
+[data-appearance='day'] .purpose-step__eyebrow,
+[data-appearance='day'] .reveal-step__eyebrow,
+[data-appearance='day'] .hero-keynote__eyebrow,
+[data-appearance='day'] .origin-block__chapter {
+  color: var(--mira-gold-soft);
+}
+
+[data-appearance='day'] .site-shell--keynote h1,
+[data-appearance='day'] .site-shell--keynote h2,
+[data-appearance='day'] .site-shell--keynote h3,
+[data-appearance='day'] .hero-keynote__headline,
+[data-appearance='day'] .origin-story__title,
+[data-appearance='day'] .purpose-explanation__title,
+[data-appearance='day'] .purpose-step__title,
+[data-appearance='day'] .reveal-step__headline,
+[data-appearance='day'] .reveal-journey__title,
+[data-appearance='day'] .problem-bridge__title,
+[data-appearance='day'] .origin-block__questions li {
+  color: #12100e;
+}
+
+[data-appearance='day'] .site-shell--keynote p,
+[data-appearance='day'] .site-shell--keynote li,
+[data-appearance='day'] .section-intro,
+[data-appearance='day'] .hero-keynote__subline,
+[data-appearance='day'] .origin-block__paragraph,
+[data-appearance='day'] .purpose-step__body,
+[data-appearance='day'] .reveal-step__subline {
+  color: var(--mira-text-secondary);
+}
+
+[data-appearance='day'] .keynote-link {
+  color: var(--mira-gold);
+}
+
+[data-appearance='day'] .keynote-link:hover {
+  color: var(--mira-gold-soft);
+}
+
+[data-appearance='day'] .cinematic-atmosphere__base {
+  background: linear-gradient(180deg, #faf7f2 0%, #f4efe6 45%, #ebe5dc 100%);
+}
+
+[data-appearance='day'] .cinematic-atmosphere__glow {
+  opacity: 0.28;
+  filter: blur(90px);
+}
+
+[data-appearance='day'] .cinematic-atmosphere__vignette {
+  opacity: 0.12;
+}
+
+[data-appearance='day'] .grain-layer {
+  opacity: 0;
+  animation: none;
+}
+
+[data-appearance='day'] .ambient-orb {
+  opacity: 0.35;
+}
+
+[data-appearance='day'] .ambient-orb--cyan {
+  display: none;
+}
+
+[data-appearance='day'] .origin-block__backdrop,
+[data-appearance='day'] .purpose-step__backdrop {
+  background: linear-gradient(
+    135deg,
+    rgba(191, 160, 106, 0.05) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(148, 138, 172, 0.04) 100%
+  );
+}
+
+[data-appearance='day'] .hero-keynote__device-wrap--masked::after {
+  background: linear-gradient(to top, rgba(247, 243, 237, 0.92), transparent);
+}
+
+[data-appearance='day'] .hero-keynote__visual-whisper {
+  color: rgba(154, 123, 66, 0.72);
+}
+
+[data-appearance='day'] .mockup-screen-label {
+  color: var(--mira-gold-soft);
+}
+
+[data-appearance='day'] .origin-block__transforms li,
+[data-appearance='day'] .origin-block__insights li {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(18, 16, 14, 0.07);
+  color: var(--mira-text-secondary);
+}
+
+[data-appearance='day'] .origin-block__verse li {
+  color: rgba(18, 16, 14, 0.72);
+}
+
+[data-appearance='day'] .languages-section__note {
+  color: var(--mira-gold-soft);
+}
+
+.origin-story,
+.screen-story-section,
+.purpose-explanation,
+.reveal-journey,
+.mockups-section,
+.trust-section,
+.faq-section,
+.beta-section,
+.download-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
+}

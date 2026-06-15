@@ -1,0 +1,171 @@
+/**
+ * Miravelys marketing typography — fluid scale, premium hierarchy.
+ * Extends site-responsive.css tokens for keynote + multilingual layouts.
+ */
+
+.site-shell--keynote {
+  --type-body: clamp(0.9375rem, 0.9rem + 0.18vw, 1.0625rem);
+  --type-body-relaxed: clamp(1rem, 0.95rem + 0.22vw, 1.125rem);
+  --type-small: clamp(0.8125rem, 0.78rem + 0.15vw, 0.875rem);
+  --type-eyebrow: clamp(0.6875rem, 0.66rem + 0.12vw, 0.75rem);
+  --type-lead: clamp(1.0625rem, 0.98rem + 0.35vw, 1.25rem);
+  --type-h2: clamp(1.625rem, 1.05rem + 1.5vw, 2.25rem);
+  --type-h3: clamp(1.0625rem, 0.98rem + 0.3vw, 1.3125rem);
+}
+
+.site-shell--keynote .hero-keynote__eyebrow {
+  font-size: var(--type-eyebrow);
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+}
+
+.site-shell--keynote .hero-keynote__headline {
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+}
+
+.site-shell--keynote .keynote-cta,
+.site-shell--keynote .keynote-link {
+  font-size: clamp(0.9375rem, 0.9rem + 0.15vw, 1rem);
+  line-height: 1.35;
+}
+
+.site-shell--keynote .hero-keynote__trust li {
+  font-size: var(--type-small);
+  line-height: 1.4;
+}
+
+.site-shell--keynote .hero-keynote__brand {
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+}
+
+.site-shell--keynote .hero-keynote__headline {
+  font-size: var(--keynote-display);
+  line-height: 1.06;
+}
+
+.site-shell--keynote .hero-keynote__subline {
+  font-size: var(--keynote-sub);
+  line-height: 1.55;
+}
+
+.site-shell--keynote .reveal-step__eyebrow {
+  font-size: var(--type-small);
+  line-height: 1.4;
+}
+
+.site-shell--keynote .reveal-step__headline {
+  line-height: 1.1;
+}
+
+.site-shell--keynote .reveal-step__subline {
+  line-height: 1.58;
+  max-width: min(36rem, 100%);
+}
+
+.site-shell--keynote .reveal-step__whisper {
+  line-height: 1.55;
+  max-width: min(32rem, 100%);
+}
+
+.site-shell--keynote .reveal-step__orbit-tags li {
+  font-size: var(--type-small);
+  line-height: 1.35;
+}
+
+.site-shell--keynote .problem-bridge__title {
+  font-size: var(--keynote-section);
+  line-height: 1.14;
+}
+
+.site-shell--keynote .problem-bridge__lead,
+.site-shell--keynote .origin-story__lead p,
+.site-shell--keynote .origin-block__paragraph {
+  font-size: var(--type-body-relaxed);
+  line-height: 1.62;
+}
+
+.site-shell--keynote .mockup-bridge-card h3 {
+  font-size: clamp(1.25rem, 1.05rem + 0.6vw, 1.5rem);
+  line-height: 1.28;
+}
+
+.site-shell--keynote .origin-story__title {
+  font-size: var(--keynote-section);
+  line-height: 1.12;
+}
+
+.site-shell--keynote .mockup-bridge-card p:not(.eyebrow) {
+  font-size: var(--type-body-relaxed);
+  line-height: 1.68;
+}
+
+.site-shell--keynote .section-intro {
+  line-height: 1.62;
+  max-width: min(42rem, 100%);
+}
+
+.site-shell--keynote .trust-section--presentation .trust-grid span {
+  font-size: var(--type-body);
+  line-height: 1.5;
+}
+
+.site-shell--keynote .site-footer p,
+.site-shell--keynote .site-footer small,
+.site-shell--keynote .site-footer a {
+  line-height: 1.55;
+}
+
+.site-shell--keynote .nav-links {
+  font-size: var(--type-small);
+  line-height: 1.4;
+}
+
+.site-shell--keynote .top-nav__cta {
+  font-size: clamp(0.8125rem, 0.78rem + 0.15vw, 0.875rem);
+  line-height: 1.35;
+}
+
+.site-shell--keynote .top-nav__panel-links a {
+  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.0625rem);
+  line-height: 1.4;
+}
+
+.site-shell--keynote .language-select select {
+  font-size: var(--type-small);
+}
+
+.site-shell--keynote .language-pills button {
+  font-size: var(--type-small);
+  line-height: 1.35;
+}
+
+/* CJK / Devanagari — slightly larger body for readability */
+html:lang(zh) .site-shell--keynote,
+html:lang(ja) .site-shell--keynote,
+html:lang(hi) .site-shell--keynote {
+  --type-body: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  --type-body-relaxed: clamp(1.0625rem, 0.97rem + 0.22vw, 1.1875rem);
+  --type-small: clamp(0.875rem, 0.82rem + 0.18vw, 0.9375rem);
+  --type-eyebrow: clamp(0.75rem, 0.72rem + 0.12vw, 0.875rem);
+}
+
+@media (max-width: 23.4375rem) {
+  .site-shell--keynote {
+    --keynote-display: clamp(1.875rem, 1rem + 4.5vw, 2.35rem);
+  }
+
+  .site-shell--keynote .hero-keynote__headline,
+  .site-shell--keynote .reveal-step__headline,
+  .site-shell--keynote .problem-bridge__title,
+  .site-shell--keynote .mockup-bridge-card h3 {
+    line-height: 1.1;
+  }
+}
+
+@media (min-width: 48rem) and (max-width: 68.6874rem) {
+  .site-shell--keynote {
+    --keynote-display: clamp(2.35rem, 1.25rem + 3.8vw, 3.25rem);
+    --keynote-section: clamp(1.875rem, 1.1rem + 2.5vw, 2.75rem);
+  }
+}

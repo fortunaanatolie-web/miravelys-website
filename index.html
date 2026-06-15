@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f7f3ed" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#060b1d" media="(prefers-color-scheme: dark)" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script>
+      (function () {
+        var saved = localStorage.getItem('miravelys.appearance');
+        var hour = new Date().getHours();
+        var timeDay = hour >= 6 && hour < 19;
+        var light = window.matchMedia('(prefers-color-scheme: light)').matches;
+        var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var mode =
+          saved === 'day' || saved === 'evening'
+            ? saved
+            : light && !dark
+              ? 'day'
+              : dark && !light
+                ? 'evening'
+                : timeDay
+                  ? 'day'
+                  : 'evening';
+        document.documentElement.dataset.appearance = mode;
+        document.documentElement.style.colorScheme = mode === 'day' ? 'light' : 'dark';
+      })();
+    </script>
+    <title>Miravelys</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

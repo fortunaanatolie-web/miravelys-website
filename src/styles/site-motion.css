@@ -1,0 +1,291 @@
+/**
+ * Cinematic motion utilities — slow confidence, soft reveals, premium micro-interactions.
+ */
+
+/* —— Reveal variants —— */
+.reveal {
+  opacity: 0;
+  transition:
+    opacity 1s var(--mira-ease-cinematic),
+    transform 1s var(--mira-ease-cinematic),
+    filter 0.8s var(--mira-ease-soft);
+  will-change: opacity, transform, filter;
+}
+
+.reveal--rise {
+  transform: translateY(40px);
+}
+
+.reveal--blur-in {
+  transform: translateY(24px);
+  filter: blur(10px);
+}
+
+.reveal--soft {
+  transform: translateY(20px) scale(0.988);
+}
+
+.reveal--fade {
+  transform: none;
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+.reveal--stagger .reveal-step__eyebrow,
+.reveal--stagger .reveal-step__headline,
+.reveal--stagger .reveal-step__subline {
+  transition-delay: inherit;
+}
+
+/* Hero stagger children — cinematic timing */
+.hero-keynote__intro.reveal--visible .hero-keynote__brand {
+  animation: hero-fade-in 1.5s var(--mira-ease-enter) 0.15s both;
+}
+
+.hero-keynote__intro.reveal--visible .hero-keynote__eyebrow {
+  animation: hero-fade-in 1.5s var(--mira-ease-enter) 0.28s both;
+}
+
+.hero-keynote__intro.reveal--visible .hero-keynote__headline {
+  animation: hero-fade-in 1.5s var(--mira-ease-enter) 0.42s both;
+}
+
+.hero-keynote__intro.reveal--visible .hero-keynote__subline {
+  animation: hero-fade-in 1.2s var(--mira-ease-enter) 0.65s both;
+}
+
+.hero-keynote__intro.reveal--visible .hero-keynote__actions {
+  animation: hero-fade-in 1.2s var(--mira-ease-enter) 0.85s both;
+}
+
+.hero-keynote__intro.reveal--visible .hero-keynote__trust {
+  animation: hero-fade-in 1s var(--mira-ease-enter) 1.05s both;
+}
+
+.hero-keynote__intro.reveal--visible .hero-keynote__privacy-link {
+  animation: hero-fade-in 0.9s var(--mira-ease-enter) 1.15s both;
+}
+
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* —— Device subtle float —— */
+.phone-mockup--animate {
+  animation: device-breathe var(--mira-duration-breath) var(--mira-ease-breath) infinite;
+}
+
+@keyframes device-breathe {
+  0%,
+  100% {
+    transform: scale(calc(0.94 + var(--phone-clarity, 1) * 0.06)) translateY(0);
+  }
+  50% {
+    transform: scale(calc(0.945 + var(--phone-clarity, 1) * 0.06)) translateY(-4px);
+  }
+}
+
+.phone-mockup--scroll-linked {
+  transform: scale(calc(0.92 + var(--device-scroll, 0.5) * 0.08))
+    translateY(calc((1 - var(--device-scroll, 0.5)) * 12px));
+  transition: transform 0.12s linear;
+}
+
+/* —— Keynote CTA micro-interactions —— */
+.keynote-cta {
+  transition:
+    transform var(--mira-duration-fast) var(--mira-ease-cinematic),
+    box-shadow var(--mira-duration-fast) var(--mira-ease-soft),
+    opacity 0.25s ease;
+}
+
+.keynote-cta--primary {
+  color: var(--mira-cta-text);
+  background: var(--mira-cta-bg);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.5) inset,
+    0 4px 24px rgba(0, 0, 0, 0.22);
+}
+
+.keynote-cta--primary:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.5) inset,
+    0 10px 32px rgba(0, 0, 0, 0.30),
+    0 0 28px var(--mira-gold-glow);
+}
+
+.keynote-cta--primary:active {
+  transform: translateY(0) scale(0.985);
+}
+
+.keynote-cta:focus-visible {
+  outline: 2px solid var(--mira-gold-soft);
+  outline-offset: 3px;
+}
+
+.keynote-link {
+  color: var(--mira-link);
+  transition:
+    color var(--mira-duration-fast) ease,
+    opacity 0.25s ease;
+}
+
+.keynote-link:hover {
+  color: var(--mira-link-hover);
+  opacity: 1;
+}
+
+.keynote-link:focus-visible {
+  outline: 2px solid var(--mira-gold-soft);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* —— Premium cards —— */
+.mira-glass-card {
+  background: var(--mira-glass-bg);
+  border: 1px solid var(--mira-glass-border);
+  border-radius: var(--mira-radius-md);
+  box-shadow: var(--mira-shadow-soft);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  transition:
+    transform 0.45s var(--mira-ease-cinematic),
+    border-color 0.35s ease,
+    box-shadow 0.45s var(--mira-ease-soft);
+}
+
+.mira-glass-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(191, 160, 106, 0.20);
+  box-shadow: var(--mira-shadow-card-hover), 0 0 36px var(--mira-gold-glow);
+}
+
+.reveal-step--active .reveal-step__orbit-tags li {
+  animation: trust-card-in 0.7s var(--mira-ease-enter) both;
+}
+
+.reveal-step--active .reveal-step__orbit-tags li:nth-child(1) { animation-delay: 0.08s; }
+.reveal-step--active .reveal-step__orbit-tags li:nth-child(2) { animation-delay: 0.18s; }
+.reveal-step--active .reveal-step__orbit-tags li:nth-child(3) { animation-delay: 0.28s; }
+.reveal-step--active .reveal-step__orbit-tags li:nth-child(4) { animation-delay: 0.38s; }
+
+.reveal-journey__orbit li {
+  animation: orbit-in 0.8s var(--mira-ease-cinematic) forwards,
+    orbit-breathe 8s var(--mira-ease-breath) calc(var(--orbit-i, 0) * 0.5s + 1s) infinite;
+}
+
+@keyframes orbit-breathe {
+  0%,
+  100% {
+    box-shadow: 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 0 0 24px var(--mira-gold-glow);
+  }
+}
+
+/* —— Trust section: stable, minimal —— */
+.trust-section--presentation .trust-grid span {
+  transition:
+    border-color var(--mira-duration-fast) ease,
+    background var(--mira-duration-fast) ease,
+    transform var(--mira-duration-fast) var(--mira-ease-cinematic);
+}
+
+.trust-section--presentation.reveal--visible .trust-grid span {
+  animation: trust-card-in var(--mira-duration-medium) var(--mira-ease-enter) both;
+}
+
+.trust-section--presentation.reveal--visible .trust-grid span:nth-child(1) { animation-delay: 0.06s; }
+.trust-section--presentation.reveal--visible .trust-grid span:nth-child(2) { animation-delay: 0.12s; }
+.trust-section--presentation.reveal--visible .trust-grid span:nth-child(3) { animation-delay: 0.18s; }
+.trust-section--presentation.reveal--visible .trust-grid span:nth-child(4) { animation-delay: 0.24s; }
+.trust-section--presentation.reveal--visible .trust-grid span:nth-child(5) { animation-delay: 0.30s; }
+.trust-section--presentation.reveal--visible .trust-grid span:nth-child(6) { animation-delay: 0.36s; }
+
+@keyframes trust-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* —— Night section: slower reveals —— */
+.reveal-step--mood-night .reveal-step__content {
+  transition-duration: 1.3s;
+}
+
+.reveal-step--mood-night.reveal-step--active .reveal-step__mobile-device {
+  transition-duration: 1.4s;
+}
+
+/* —— Scroll progress —— */
+.scroll-progress__bar {
+  background: linear-gradient(
+    90deg,
+    var(--mira-progress-start) 0%,
+    var(--mira-progress-mid) 50%,
+    var(--mira-progress-end) 100%
+  );
+  box-shadow: 0 0 16px var(--mira-gold-glow);
+}
+
+/* —— Language pills —— */
+.language-pills button.active,
+.language-showcase button.active {
+  color: var(--mira-cta-text);
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--mira-champagne), var(--mira-pearl));
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22);
+}
+
+.language-pills button:hover:not(.active),
+.language-showcase button:hover:not(.active) {
+  transform: translateY(-1px);
+  border-color: rgba(191, 160, 106, 0.26);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .phone-mockup--animate,
+  .reveal-journey__orbit li,
+  .hero-keynote__intro.reveal--visible * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .reveal--rise,
+  .reveal--blur-in,
+  .reveal--soft {
+    transform: none;
+    filter: none;
+  }
+
+  .phone-mockup--scroll-linked {
+    transform: none;
+  }
+
+  .keynote-cta:hover,
+  .mira-glass-card:hover {
+    transform: none;
+  }
+}

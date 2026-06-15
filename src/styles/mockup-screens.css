@@ -1,0 +1,97 @@
+/* Presentation screen mockups — clean device PNGs, no wrapper frames */
+
+.mockup-screen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr));
+  gap: clamp(14px, 2.2vw, 22px);
+  align-items: start;
+  width: 100%;
+}
+
+.mockup-screen-card {
+  margin: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1.5vw, 12px);
+  transition: transform 0.22s ease;
+}
+
+.mockup-screen-card--active {
+  transform: translateY(-2px);
+}
+
+.mockup-screen-select {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: inherit;
+  text-align: inherit;
+  font: inherit;
+  color: inherit;
+}
+
+.mockup-screen-select:focus-visible {
+  outline: 2px solid rgba(191, 160, 106, 0.55);
+  outline-offset: 4px;
+}
+
+.mockup-screen-caption {
+  display: grid;
+  gap: 4px;
+  text-align: center;
+  padding: 0 6px;
+}
+
+.mockup-screen-label {
+  font-size: var(--type-small, 0.8125rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(191, 160, 106, 0.88);
+  line-height: 1.35;
+}
+
+.mockup-screen-sub {
+  font-size: clamp(0.8125rem, 0.78rem + 0.2vw, 0.9375rem);
+  line-height: 1.42;
+  color: rgba(242, 239, 233, 0.72);
+}
+
+.mockup-stage {
+  min-width: 0;
+  padding: clamp(8px, 1.5vw, 16px) 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+@media (min-width: 78rem) {
+  .mockup-screen-grid {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 52rem) {
+  .mockup-screen-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 8.5rem), 1fr));
+  }
+}
+
+@media (max-width: 35rem) {
+  .mockup-screen-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 24rem) {
+  .mockup-screen-grid {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: min(100%, 16rem);
+    margin-inline: auto;
+  }
+}

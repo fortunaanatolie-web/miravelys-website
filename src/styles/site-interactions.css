@@ -1,0 +1,306 @@
+/**
+ * Lifestyle-site interaction & layout polish (Calm / Oura-style clarity).
+ */
+
+/* —— In-page nav chips (hero quick links) —— */
+.hero-mini-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-mini-pills li {
+  display: contents;
+}
+
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid rgba(255, 255, 255, .12);
+  color: var(--mira-text-secondary);
+  font-size: var(--type-small, 0.8125rem);
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1.3;
+  transition: border-color 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.hero-chip:hover {
+  color: var(--mira-text-primary);
+  border-color: rgba(191, 160, 106, .26);
+  background: rgba(191, 160, 106, .06);
+}
+
+.hero-chip:focus-visible {
+  outline: 2px solid rgba(191, 160, 106, .50);
+  outline-offset: 2px;
+}
+
+/* —— Section content rail (readable measure) —— */
+.site-shell .content-section {
+  scroll-margin-top: 7rem;
+}
+
+.site-shell .section-intro,
+.site-shell .story-lead,
+.site-shell .explanation-intro,
+.site-shell .trust-section > p:not(.eyebrow) {
+  max-width: 42rem;
+}
+
+.site-shell .section-heading--split {
+  align-items: end;
+  gap: clamp(16px, 3vw, 28px);
+}
+
+.site-shell .section-heading--split .section-intro {
+  margin: 0;
+  text-align: right;
+}
+
+@media (max-width: 980px) {
+  .site-shell .section-heading--split .section-intro {
+    text-align: left;
+  }
+}
+
+/* —— Scenario tabs (accessible, lifestyle card picker) —— */
+.scenario-tabs button {
+  cursor: pointer;
+  width: 100%;
+  font-family: inherit;
+  text-align: left;
+}
+
+.scenario-tabs button:focus-visible {
+  outline: 2px solid rgba(191, 160, 106, .42);
+  outline-offset: 2px;
+}
+
+.scenario-detail[role='tabpanel']:focus {
+  outline: none;
+}
+
+.scenario-detail[role='tabpanel']:focus-visible {
+  outline: 2px solid rgba(191, 160, 106, .35);
+  outline-offset: 4px;
+}
+
+/* —— Language controls —— */
+.language-pills button,
+.language-showcase button {
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.language-pills button:focus-visible,
+.language-showcase button:focus-visible {
+  outline: 2px solid rgba(191, 160, 106, .42);
+  outline-offset: 2px;
+}
+
+.language-pills button.active,
+.language-showcase button.active {
+  color: var(--mira-cta-text);
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--mira-champagne), var(--mira-pearl));
+}
+
+/* —— Mockup panel actions —— */
+.mockup-panel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+/* —— Beta form validation —— */
+.beta-form input:user-invalid,
+.beta-form input[aria-invalid='true'] {
+  border-color: rgba(220, 100, 90, .55);
+}
+
+.beta-form-error {
+  color: rgba(240, 140, 120, .90);
+  font-size: var(--type-small, 0.8125rem);
+  line-height: 1.4;
+}
+
+/* —— Footer (lifestyle legal row) —— */
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, .08);
+  margin-top: 24px;
+  padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+}
+
+/* —— Sticky CTA + cookie banner stacking —— */
+.sticky-cta {
+  z-index: 35;
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+}
+
+.cookie-banner {
+  z-index: 45;
+  bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+  width: min(720px, calc(100% - var(--page-gutter, 16px) * 2));
+}
+
+.cookie-banner .primary-action,
+.cookie-banner .secondary-action {
+  cursor: pointer;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+@media (max-width: 35rem) {
+  .cookie-banner {
+    bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .cookie-banner-actions {
+    width: 100%;
+  }
+
+  .cookie-banner-actions .primary-action,
+  .cookie-banner-actions .secondary-action {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+}
+
+/* —— Focus states for all marketing CTAs —— */
+.site-shell .primary-action:focus-visible,
+.site-shell .secondary-action:focus-visible,
+.mobile-menu-button:focus-visible,
+.brand-mini:focus-visible {
+  outline: 2px solid rgba(191, 160, 106, .50);
+  outline-offset: 2px;
+}
+
+.brand-mini {
+  text-decoration: none;
+  color: inherit;
+  border-radius: 8px;
+  padding: 2px 4px;
+  margin: -2px -4px;
+}
+
+.top-nav__cta:focus-visible,
+.top-nav__panel-links a:focus-visible,
+.top-nav__panel-cta:focus-visible,
+.top-nav__panel-link:focus-visible,
+.nav-links a:focus-visible {
+  outline: 2px solid rgba(191, 160, 106, .42);
+  outline-offset: 2px;
+}
+
+/* —— FAQ (native details, lifestyle accordion) —— */
+.faq-item summary {
+  cursor: pointer;
+}
+
+.faq-item summary:focus-visible {
+  outline: 2px solid rgba(191, 160, 106, .40);
+  outline-offset: -2px;
+  border-radius: 20px;
+}
+
+/* Legal pages — same harbor shell as marketing home */
+.top-nav--legal {
+  margin-bottom: 8px;
+}
+
+.legal-document-section {
+  padding-top: 24px;
+  padding-bottom: 48px;
+}
+
+.legal-document-header {
+  margin-bottom: 28px;
+}
+
+.legal-document-header .eyebrow {
+  margin-bottom: 12px;
+}
+
+.legal-document-title {
+  font-size: var(--type-h2, clamp(1.5rem, 0.95rem + 1.35vw, 2.125rem));
+  margin: 0 0 14px;
+  text-align: left;
+}
+
+.legal-document-meta {
+  font-size: var(--type-small, 0.8125rem);
+  color: var(--mira-text-muted);
+  line-height: 1.5;
+}
+
+.legal-document-back {
+  color: var(--mira-text-whisper);
+  text-decoration: none;
+}
+
+.legal-document-back:hover {
+  color: var(--mira-gold-soft);
+}
+
+.legal-document-card {
+  padding: clamp(22px, 3vw, 34px);
+  border-radius: 28px;
+}
+
+.legal-document-intro {
+  font-size: var(--type-body-relaxed, 1rem);
+  line-height: 1.65;
+  color: rgba(230, 240, 250, 0.78);
+  margin: 0 0 28px;
+}
+
+.legal-document-section-block {
+  margin-bottom: 24px;
+}
+
+.legal-document-section-block h2 {
+  font-size: 1.15rem;
+  margin: 0 0 10px;
+  color: var(--mira-gold);
+}
+
+.legal-document-section-block p {
+  margin: 0 0 10px;
+  line-height: 1.65;
+  color: var(--mira-text-secondary);
+}
+
+.legal-document-governing {
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: var(--type-small, 0.8125rem);
+  color: var(--mira-text-muted);
+  line-height: 1.55;
+}
+
+/* Decorative mockup dock — not interactive */
+.oh-dock button {
+  pointer-events: none;
+  cursor: default;
+}
+
+.oh-fab {
+  pointer-events: none;
+}

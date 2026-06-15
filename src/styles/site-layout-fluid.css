@@ -1,0 +1,157 @@
+/**
+ * Fluid layout layer — reflows on window resize AND browser zoom.
+ * Uses auto-fit grids (available space) instead of viewport-only breakpoints.
+ * Load last so it overrides legacy fixed columns in index.css.
+ */
+
+.site-shell {
+  --content-max: min(92rem, 100%);
+  --split-col-min: min(100%, 26rem);
+  --split-col-min-compact: min(100%, 18rem);
+  box-sizing: border-box;
+}
+
+.site-shell *,
+.site-shell *::before,
+.site-shell *::after {
+  box-sizing: border-box;
+}
+
+/* Readable line length without blocking reflow */
+.site-shell p,
+.site-shell li,
+.site-shell h1,
+.site-shell h2,
+.site-shell h3,
+.site-shell h4,
+.site-shell blockquote {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Content rail — use horizontal space, stay within gutters */
+.site-shell > section,
+.site-shell > footer.site-footer,
+.site-shell > header.site-header,
+.site-shell > nav.top-nav {
+  width: min(var(--content-max), calc(100% - var(--page-gutter) * 2));
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+/* —— Split layouts: stack when each column would be too narrow —— */
+.site-shell .hero-section,
+.site-shell .story-section,
+.site-shell .story-section--editorial,
+.site-shell .benefits-section,
+.site-shell .explanation-hero,
+.site-shell .explanation-purpose,
+.site-shell .modes-intro,
+.site-shell .scenario-showcase,
+.site-shell .proof-section,
+.site-shell .beta-card,
+.site-shell .mockup-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--split-col-min), 1fr));
+  gap: clamp(18px, 3vw, 34px);
+  align-items: start;
+}
+
+.site-shell .hero-section {
+  --split-col-min: min(100%, 17.5rem);
+  align-items: center;
+}
+
+.site-shell .mockup-showcase {
+  --split-col-min: min(100%, 14rem);
+  container-type: inline-size;
+  container-name: mockup-showcase;
+}
+
+.site-shell .modes-intro,
+.site-shell .explanation-hero,
+.site-shell .explanation-purpose {
+  --split-col-min: min(100%, 20rem);
+}
+
+.site-shell .section-heading--split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--split-col-min-compact), 1fr));
+  gap: clamp(12px, 2vw, 24px);
+  align-items: end;
+}
+
+.site-shell .section-heading--split .section-intro {
+  max-width: none;
+  text-align: left;
+}
+
+/* Story / editorial: let copy use full column width */
+.site-shell .story-lead {
+  max-width: none;
+  font-size: clamp(1rem, 0.92rem + 0.35vw, 1.18rem);
+  line-height: 1.72;
+}
+
+.site-shell .story-body p,
+.site-shell .editorial-note-card p:not(.eyebrow) {
+  max-width: none;
+}
+
+.site-shell .editorial-note-card h3 {
+  font-size: clamp(1.2rem, 1.05rem + 0.6vw, 1.8rem);
+  line-height: 1.15;
+}
+
+.site-shell .editorial-note-card {
+  padding: clamp(18px, 3vw, 24px);
+  border-radius: clamp(22px, 3vw, 30px);
+}
+
+/* Hero image fills its column */
+.site-shell .hero-visual {
+  width: 100%;
+  max-width: 100%;
+  justify-self: stretch;
+}
+
+.site-shell .lifestyle-frame {
+  width: 100%;
+}
+
+/* Gallery: fluid cards (replaces fixed grid-template-areas) */
+.site-shell .gallery-grid-premium {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17.5rem), 1fr));
+  grid-template-areas: none;
+  grid-template-rows: none;
+  gap: clamp(14px, 2.5vw, 18px);
+}
+
+.site-shell .gallery-card-premium,
+.site-shell .gallery-copy-card {
+  min-height: clamp(240px, 40vw, 360px);
+}
+
+.site-shell .gallery-card-premium--large {
+  grid-column: auto;
+}
+
+@container mockup-showcase (min-width: 40rem) {
+  .site-shell .mockup-copy-panel {
+    position: sticky;
+    top: clamp(5rem, 9vh, 6.5rem);
+  }
+}
+
+.site-shell .mockup-copy-panel {
+  position: static;
+}
+
+/* Buttons: allow wrap instead of forcing overflow when zoomed */
+.site-shell .primary-action,
+.site-shell .secondary-action {
+  white-space: normal;
+  text-align: center;
+  max-width: 100%;
+}

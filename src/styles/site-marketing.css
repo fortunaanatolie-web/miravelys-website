@@ -1,0 +1,229 @@
+/**
+ * Marketing journey sections — problem bridge, footer product links, trust CTAs.
+ */
+
+.problem-bridge {
+  width: min(var(--keynote-max, 980px), calc(100% - var(--page-gutter) * 2));
+  margin: 0 auto;
+  padding: clamp(48px, 8vh, 80px) 0 clamp(24px, 4vh, 40px);
+  text-align: center;
+}
+
+.problem-bridge__title {
+  font-family: var(--font-serif);
+  font-size: var(--keynote-section);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--mira-ivory);
+  max-width: min(40rem, 100%);
+  margin: 0 auto 20px;
+  text-wrap: balance;
+}
+
+.problem-bridge__lead {
+  font-size: var(--keynote-sub, 1.125rem);
+  line-height: 1.58;
+  color: rgba(228, 220, 208, 0.82);
+  max-width: min(40rem, 100%);
+  margin: 0 auto 24px;
+}
+
+.problem-bridge__body {
+  display: grid;
+  gap: 14px;
+  max-width: min(38rem, 100%);
+  margin: 0 auto 28px;
+  text-align: left;
+}
+
+.problem-bridge__body p {
+  margin: 0;
+  font-size: var(--type-body-relaxed, 1.0625rem);
+  line-height: 1.68;
+  color: var(--mira-text-secondary);
+}
+
+@media (max-width: 40rem) {
+  .problem-bridge__body {
+    text-align: center;
+  }
+}
+
+.problem-bridge__highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 14px;
+  list-style: none;
+  margin: 0 auto 28px;
+  padding: 0;
+  max-width: min(42rem, 100%);
+}
+
+.problem-bridge__highlights li {
+  font-size: var(--type-small, 0.8125rem);
+  font-weight: 500;
+  color: var(--mira-text-muted);
+  padding: 10px 16px;
+  border-radius: var(--mira-radius-pill, 980px);
+  border: 1px solid var(--mira-glass-border);
+  background: var(--mira-glass-bg);
+}
+
+.problem-bridge__cta {
+  margin-top: 8px;
+}
+
+.languages-section__note {
+  margin: 12px auto 0;
+  max-width: min(38rem, 100%);
+  font-size: var(--type-small, 0.875rem);
+  line-height: 1.55;
+  color: rgba(191, 160, 106, 0.72);
+  text-align: center;
+}
+
+.trust-section__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.hero-keynote__privacy-link {
+  margin-top: 12px;
+  font-size: var(--type-small, 0.875rem);
+}
+
+/* —— Single-action sticky pill —— */
+.sticky-cta--single {
+  padding: 4px;
+  max-width: min(320px, calc(100% - 28px));
+}
+
+.sticky-cta--single .sticky-cta__pill {
+  width: 100%;
+  justify-content: center;
+  white-space: nowrap;
+  padding-inline: clamp(18px, 4vw, 28px);
+  box-shadow: 0 4px 18px rgba(102, 215, 197, 0.14);
+}
+
+@media (max-width: 700px) {
+  .sticky-cta--single {
+    bottom: max(12px, env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* —— Footer responsive —— */
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: clamp(64px, 10vh, 96px) var(--page-gutter) clamp(40px, 8vh, 56px);
+  text-align: center;
+}
+
+.site-footer strong {
+  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  letter-spacing: -0.02em;
+}
+
+.site-footer p {
+  font-size: var(--type-small, 0.8125rem);
+  color: var(--mira-text-muted);
+  max-width: 32ch;
+  margin: 0;
+}
+
+.site-footer small {
+  font-size: 0.75rem;
+  color: var(--mira-text-muted);
+  opacity: 0.7;
+  margin-bottom: 12px;
+}
+
+.site-footer-product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 14px;
+  margin: 12px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;
+  margin-top: 12px;
+}
+
+.site-footer-nav a {
+  font-size: var(--type-small, 0.8125rem);
+  color: var(--mira-text-muted);
+  text-decoration: none;
+  padding: 8px 4px;
+  border-radius: 4px;
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.site-footer-nav a:hover {
+  color: var(--mira-link-hover);
+}
+
+.site-footer-nav a:focus-visible {
+  outline: 2px solid var(--mira-gold-soft);
+  outline-offset: 2px;
+}
+
+@media (max-width: 23.4374rem) {
+  .site-footer-product {
+    gap: 4px 10px;
+  }
+
+  .site-footer-nav {
+    gap: 6px 12px;
+  }
+
+  .site-footer-nav a {
+    font-size: 0.6875rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .site-footer {
+    padding-top: clamp(64px, 10vh, 96px);
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .problem-bridge {
+    padding-top: clamp(28px, 5vh, 40px);
+  }
+
+  .problem-bridge__title {
+    font-size: clamp(1.5rem, 1.05rem + 1.8vw, 2.25rem);
+  }
+
+  .problem-bridge__lead {
+    font-size: 1rem;
+  }
+
+  .problem-bridge__highlights {
+    gap: 6px 10px;
+  }
+
+  .problem-bridge__highlights li {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+}
