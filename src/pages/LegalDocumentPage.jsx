@@ -4,11 +4,9 @@ import { ShieldCheck } from 'lucide-react';
 import { siteCopy } from '../i18n/siteCopy';
 import { legalCopy, legalDocuments } from '../i18n/legalCopy';
 import { useSiteLanguage } from '../hooks/useSiteLanguage';
-import { experienceCopy, resolveExperience } from '../i18n/experienceCopy';
 import MarketingPageShell from '../components/marketing/MarketingPageShell';
 import MarketingTopNav from '../components/marketing/MarketingTopNav';
 import MarketingSiteFooter from '../components/marketing/MarketingSiteFooter';
-import MarketingStickyCta from '../components/marketing/MarketingStickyCta';
 
 const fallbackLanguage = 'en';
 
@@ -26,7 +24,6 @@ export default function LegalDocumentPage() {
 
   const t = useMemo(() => siteCopy[lang] || siteCopy[fallbackLanguage], [lang]);
   const legal = useMemo(() => legalCopy[lang] || legalCopy[fallbackLanguage], [lang]);
-  const experience = useMemo(() => resolveExperience(lang), [lang]);
   const legalDoc = docId && legalDocuments.includes(docId) ? legal[docId] : null;
 
   useEffect(() => {
@@ -92,13 +89,6 @@ export default function LegalDocumentPage() {
       </section>
 
       <MarketingSiteFooter t={t} />
-
-      <MarketingStickyCta
-        experience={experience}
-        secondaryLabel={legal.meta.backToSite}
-        secondaryHref="/"
-        secondaryAsLink
-      />
     </MarketingPageShell>
   );
 }

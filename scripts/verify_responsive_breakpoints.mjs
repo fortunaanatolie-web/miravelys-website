@@ -24,6 +24,7 @@ const revealCss = fs.readFileSync(
 );
 const mainJs = fs.readFileSync(new URL('../src/main.jsx', import.meta.url), 'utf8');
 
+assert(mainJs.includes('site-sticky-phone-story.css'), 'main.jsx must import site-sticky-phone-story.css');
 assert(mainJs.includes('site-breakpoints.css'), 'main.jsx must import site-breakpoints.css');
 assert(tokensCss.includes('--bp-tablet'), 'site-tokens.css must define tablet breakpoint');
 assert(tokensCss.includes('--touch-min'), 'site-tokens.css must define touch target minimum');

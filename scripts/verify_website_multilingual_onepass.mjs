@@ -45,13 +45,13 @@ for (const language of languages) {
 
 const app = fs.readFileSync(new URL('../src/App.jsx', import.meta.url), 'utf8');
 const router = fs.readFileSync(new URL('../src/SiteRouter.jsx', import.meta.url), 'utf8');
-const revealJourney = fs.readFileSync(new URL('../src/components/marketing/sections/ProductRevealJourney.jsx', import.meta.url), 'utf8');
+const revealJourney = fs.readFileSync(new URL('../src/components/marketing/sections/StickyPhoneStory.jsx', import.meta.url), 'utf8');
 const phone = fs.readFileSync(new URL('../src/components/marketing/primitives/PhoneMockup.jsx', import.meta.url), 'utf8');
 
-if (!app.includes('ProductRevealJourney')) fail('Marketing site must use ProductRevealJourney scroll presentation.');
+if (!app.includes('StickyPhoneStory')) fail('Marketing site must use StickyPhoneStory scroll presentation.');
 if (app.includes('MockupsSection') || app.includes('ScreenStorySection') || app.includes('OriginStorySection')) fail('Main page still contains legacy competing marketing sections.');
 if (!router.includes('path="/story"')) fail('Story route missing.');
-if (!revealJourney.includes('float={false}')) fail('Fixed phone flow must disable float movement.');
+if (!revealJourney.includes('PhoneMockup') || !revealJourney.includes('activeIndex={activeIndex}')) fail('Fixed phone flow must use one PhoneMockup synchronized to activeIndex.');
 if (!phone.includes('phone-mockup__screen-stack--crossfade')) fail('Phone mockup must crossfade internal screens.');
 if (/href="#"\s*[^>]*>/.test(`${app}\n${revealJourney}`)) fail('Found placeholder href="#" CTA.');
 

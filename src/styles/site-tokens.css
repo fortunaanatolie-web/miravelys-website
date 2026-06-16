@@ -92,13 +92,29 @@
   --bp-max: 108rem;
   --touch-min: 44px;
   --page-gutter: clamp(16px, 4vw, 32px);
+
+  /* —— Scroll story (sticky phone) —— */
+  --site-header-height: var(--header-bar-height, 3.25rem);
+  --story-page-x: clamp(20px, 5vw, 80px);
+  --story-page-y: clamp(72px, 10vw, 160px);
+  --story-gap: clamp(32px, 7vw, 120px);
+  --story-sticky-top: calc(var(--header-top, 12px) + var(--site-header-height) + 16px);
+  --story-sticky-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  --story-sticky-height: calc(100svh - var(--story-sticky-top) - var(--story-sticky-bottom));
+  --story-progress-block: 28px;
+  --story-phone-stack-ratio: 2.38;
+  --story-phone-available: calc(var(--story-sticky-height) - var(--story-progress-block) - 12px);
+  --story-phone-width: min(
+    clamp(220px, 24vw, 340px),
+    calc(var(--story-phone-available) / var(--story-phone-stack-ratio))
+  );
+  --story-phone-max-height: calc(var(--story-phone-width) * 844 / 390);
+  --story-step-min: clamp(520px, 86svh, 920px);
+  --story-title: var(--keynote-section);
+  --story-body: var(--keynote-sub);
 }
 
 .site-shell--keynote {
-  --keynote-display: clamp(2.5rem, 1.25rem + 5vw, 5rem);
-  --keynote-section: clamp(2rem, 1.15rem + 3.5vw, 3.75rem);
-  --keynote-sub: clamp(1.0625rem, 0.96rem + 0.42vw, 1.3125rem);
-  --keynote-whisper: clamp(0.9375rem, 0.88rem + 0.22vw, 1.0625rem);
   --keynote-max: min(980px, calc(100% - var(--page-gutter) * 2));
   --keynote-device-hero: min(440px, 92vw);
   --keynote-device-chapter: min(400px, 88vw);

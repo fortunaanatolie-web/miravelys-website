@@ -1,7 +1,7 @@
 import MarketingCta from './primitives/MarketingCta';
 import { useStickyCtaVisibility } from '../../hooks/useStickyCtaVisibility';
 
-export default function MarketingStickyCta({ experience, onNavClick }) {
+export default function MarketingStickyCta({ experience, onNavClick, onEarlyAccessClick }) {
   const visible = useStickyCtaVisibility();
 
   return (
@@ -14,6 +14,7 @@ export default function MarketingStickyCta({ experience, onNavClick }) {
         role="primary"
         experience={experience}
         onNavClick={onNavClick}
+        onEarlyAccessClick={onEarlyAccessClick}
         className="sticky-cta__pill"
       />
     </aside>

@@ -137,12 +137,19 @@
   position: absolute;
   inset: 0;
   opacity: 0;
-  transform: scale(1.02);
+  transform: scale(1.015);
   transition:
-    opacity 0.75s cubic-bezier(0.25, 1, 0.4, 1),
-    transform 0.75s cubic-bezier(0.25, 1, 0.4, 1),
-    filter 0.55s ease;
-  filter: blur(3px) brightness(0.88);
+    opacity 650ms cubic-bezier(0.25, 1, 0.4, 1),
+    transform 900ms cubic-bezier(0.25, 1, 0.4, 1),
+    filter 700ms ease;
+  filter: blur(10px) brightness(0.88);
+}
+
+.phone-mockup__screen-stack--crossfade .phone-mockup__screen-frame--active {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0) brightness(calc(0.91 + var(--phone-clarity) * 0.09));
+  z-index: 2;
 }
 
 .phone-mockup__screen-frame--active {
@@ -330,6 +337,34 @@
   color: var(--mira-text-muted);
 }
 
+/* Scroll story variant — bounded height, softer glow */
+.phone-mockup--scroll-story {
+  overflow: visible;
+}
+
+.phone-mockup--scroll-story .phone-mockup__atmosphere {
+  opacity: calc(0.24 + var(--phone-clarity) * 0.28);
+  filter: blur(36px);
+}
+
+.phone-mockup--scroll-story .phone-mockup__glow {
+  opacity: calc(0.28 + var(--phone-clarity) * 0.36);
+  filter: blur(22px);
+}
+
+[data-appearance='day'] .phone-mockup--scroll-story .phone-mockup__atmosphere {
+  opacity: calc(0.18 + var(--phone-clarity) * 0.22);
+}
+
+[data-appearance='day'] .phone-mockup--scroll-story .phone-mockup__glow {
+  opacity: calc(0.2 + var(--phone-clarity) * 0.28);
+}
+
+.phone-mockup--scroll-story .phone-mockup__screen-stack--crossfade .phone-mockup__screen-frame {
+  transform: scale(1.012);
+  filter: blur(8px) brightness(0.88);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .phone-mockup--animate {
     animation: none;
@@ -337,6 +372,17 @@
 
   .phone-mockup__screen-frame {
     transition: opacity 0.2s ease;
+    transform: none;
+    filter: none;
+  }
+
+  .phone-mockup__screen-stack--crossfade .phone-mockup__screen-frame {
+    filter: none;
+    transform: none;
+  }
+
+  .phone-mockup__screen-stack--crossfade .phone-mockup__screen-frame--active {
+    opacity: 1;
   }
 
   .phone-mockup--scroll-linked {

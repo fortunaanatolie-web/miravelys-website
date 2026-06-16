@@ -1,5 +1,6 @@
 import { CheckCircle2, Sparkles } from 'lucide-react';
 import { mockupScreens } from '../../../config/mockupScreens';
+import { resolveMockupGalleryScreenshot } from '../../../lib/miravelysScreenshots';
 import { resolveScreenStoryCopy } from '../../../i18n/screenStoryCopy';
 import PhoneMockup from '../primitives/PhoneMockup';
 import RevealOnScroll from '../primitives/RevealOnScroll';
@@ -17,6 +18,8 @@ const storyMoodById = {
 function ScreenStoryCard({ screen, copy, lang, index, actionLabel, onScreenAction }) {
   const reverse = index % 2 === 1;
   const mood = storyMoodById[screen.id] || 'warm';
+  const screenshot = resolveMockupGalleryScreenshot(screen.id, lang);
+  if (!screenshot) return null;
 
   return (
     <article
@@ -55,7 +58,7 @@ function ScreenStoryCard({ screen, copy, lang, index, actionLabel, onScreenActio
           screens={[
             {
               id: screen.id,
-              asset: screen.asset,
+              ...screenshot,
               lang,
               alt: copy.title,
             },

@@ -1,7 +1,7 @@
 import { useEffect, useId, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { headerCtaAnchor, headerNavItems, mobileNavItems } from '../../config/marketingWiring';
+import { headerNavItems, mobileNavItems } from '../../config/marketingWiring';
 import { resolveHeaderCopy } from '../../i18n/headerCopy';
 import MarketingCta from './primitives/MarketingCta';
 import MarketingLanguageSwitcher from './MarketingLanguageSwitcher';
@@ -11,6 +11,7 @@ export default function MarketingTopNav({
   menuOpen,
   setMenuOpen,
   onNavClick,
+  onEarlyAccessClick,
   lang,
   setLang,
   t,
@@ -70,8 +71,6 @@ export default function MarketingTopNav({
     );
   }
 
-  const ctaLabel = experience?.sticky?.earlyAccess ?? t.nav.download;
-
   return (
     <header className={`site-header ${menuOpen ? 'site-header--menu-open' : ''}`}>
       <nav className="top-nav" aria-label={headerCopy.menuLabel}>
@@ -111,10 +110,9 @@ export default function MarketingTopNav({
               role="primary"
               experience={experience}
               onNavClick={onNavClick}
+              onEarlyAccessClick={onEarlyAccessClick}
               className="top-nav__cta"
-            >
-              {ctaLabel}
-            </MarketingCta>
+            />
             <button
               ref={menuButtonRef}
               type="button"
@@ -169,10 +167,9 @@ export default function MarketingTopNav({
               role="primary"
               experience={experience}
               onNavClick={handleNavClick}
+              onEarlyAccessClick={onEarlyAccessClick}
               className="top-nav__panel-cta"
-            >
-              {ctaLabel}
-            </MarketingCta>
+            />
           </div>
         </div>
       </div>

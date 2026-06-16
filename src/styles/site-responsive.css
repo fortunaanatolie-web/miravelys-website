@@ -1,6 +1,10 @@
 /**
  * Miravelys marketing site — fluid layout & restrained typography.
  * Rem-based scale respects browser zoom; grids reflow by viewport width.
+ *
+ * Typography tokens are defined in site-typography.css (.site-shell--keynote).
+ * This file only sets layout tokens and structure — NOT type sizes.
+ * When .site-shell--keynote is active, its tokens override everything here.
  */
 
 html {
@@ -10,31 +14,19 @@ html {
 }
 
 .site-shell {
-  /* Typography tokens (root em = browser default, typically 16px) */
-  --type-display: clamp(2rem, 1.15rem + 2.75vw, 3.5rem);
-  --type-h2: clamp(1.5rem, 0.95rem + 1.35vw, 2.125rem);
-  --type-h3: clamp(1.0625rem, 0.98rem + 0.25vw, 1.25rem);
-  --type-lead: clamp(1rem, 0.92rem + 0.25vw, 1.125rem);
-  --type-body: 0.9375rem;
-  --type-body-relaxed: 1rem;
-  --type-small: 0.8125rem;
-  --type-eyebrow: 0.6875rem;
-
-  /* Layout */
+  /* Layout tokens only — type tokens come from site-typography.css */
   --page-gutter: clamp(16px, 4vw, 32px);
   --section-space: clamp(56px, 8vw, 96px);
   --content-max: min(92rem, 100%);
   --grid-gap: clamp(12px, 2vw, 24px);
   --card-radius: clamp(22px, 3vw, 34px);
 
-  font-size: var(--type-body);
-  line-height: 1.6;
   padding-bottom: clamp(76px, 10vw, 104px);
 }
 
-/* —— Display & section headings —— */
+/* —— Display & section headings — defer to keynote tokens —— */
 .site-shell .gold-wordmark {
-  font-size: var(--type-display);
+  font-size: var(--keynote-display, var(--type-display));
   line-height: 1.08;
   margin: 14px 0 18px;
 }
@@ -50,19 +42,21 @@ html {
 .site-shell .moments-section h2,
 .site-shell .languages-section h2,
 .site-shell .explanation-section .section-header h2 {
-  font-size: var(--type-h2);
-  line-height: 1.12;
+  font-size: var(--keynote-section, var(--type-h2));
+  line-height: 1.08;
+  letter-spacing: -0.03em;
 }
 
 .site-shell .download-card h2,
 .site-shell .beta-card h2 {
-  font-size: var(--type-h2);
-  line-height: 1.12;
+  font-size: var(--keynote-section, var(--type-h2));
+  line-height: 1.08;
+  letter-spacing: -0.03em;
 }
 
 .site-shell .scenario-detail h3 {
-  font-size: var(--type-h2);
-  line-height: 1.12;
+  font-size: var(--keynote-section, var(--type-h2));
+  line-height: 1.08;
 }
 
 .site-shell .gallery-card-premium h3,
@@ -70,23 +64,23 @@ html {
 .site-shell .glass-card h3,
 .site-shell .positioning-card h3,
 .site-shell .moment-card h3 {
-  font-size: var(--type-h3);
+  font-size: var(--type-card-title, var(--type-h3));
 }
 
 .site-shell .proof-card span,
 .site-shell .positioning-card span {
-  font-size: clamp(1rem, 0.9rem + 0.35vw, 1.25rem);
+  font-size: var(--type-lead);
 }
 
 .site-shell .mode-number {
   font-size: clamp(1.1rem, 1rem + 0.35vw, 1.35rem);
 }
 
-/* —— Body & lead copy —— */
+/* —— Body & lead copy — use responsive tokens —— */
 .site-shell .hero-subtitle,
 .site-shell .hero-subtitle--lead {
-  font-size: var(--type-lead);
-  line-height: 1.55;
+  font-size: var(--type-body-relaxed);
+  line-height: 1.62;
 }
 
 .site-shell .story-section p:not(.eyebrow),
@@ -101,15 +95,15 @@ html {
 .site-shell .download-card p,
 .site-shell .site-footer p,
 .site-shell .site-footer small {
-  font-size: var(--type-body);
-  line-height: 1.65;
+  font-size: var(--type-body-relaxed);
+  line-height: 1.62;
 }
 
 .site-shell .explanation-intro,
 .site-shell .explanation-section p,
 .site-shell .explanation-block p {
   font-size: var(--type-body-relaxed);
-  line-height: 1.65;
+  line-height: 1.62;
 }
 
 .site-shell .eyebrow {
@@ -118,11 +112,11 @@ html {
 }
 
 .site-shell .brand-mini {
-  font-size: clamp(0.92rem, 0.85rem + 0.25vw, 1rem);
+  font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem);
 }
 
 .site-shell .nav-links {
-  font-size: var(--type-small);
+  font-size: var(--type-nav, var(--type-small));
 }
 
 .site-shell .quiet-quote,
@@ -192,15 +186,15 @@ html {
 
 .site-shell .site-footer {
   width: min(var(--content-max), calc(100% - var(--page-gutter) * 2));
-  font-size: var(--type-small);
+  font-size: var(--type-legal, var(--type-small));
 }
 
 .site-shell .story-body p,
 .site-shell .modes-intro > p,
 .site-shell .section-intro,
 .site-shell .mockup-bridge-card p {
-  font-size: var(--type-body);
-  line-height: 1.65;
+  font-size: var(--type-body-relaxed);
+  line-height: 1.62;
 }
 
 .site-shell .gallery-overlay p,
@@ -210,7 +204,7 @@ html {
 }
 
 .site-shell .mockup-copy-panel h2 {
-  font-size: var(--type-h2);
+  font-size: var(--keynote-section, var(--type-h2));
 }
 
 /* —— Media never overflow the content rail —— */
@@ -359,8 +353,8 @@ html {
 /* —— Large viewports: stop type growing further —— */
 @media (min-width: 87.5rem) {
   .site-shell {
-    --type-display: 3.5rem;
-    --type-h2: 2.125rem;
+    --type-display: 2.875rem;
+    --type-h2: 2.5rem;
     --type-lead: 1.125rem;
   }
 }
@@ -402,8 +396,8 @@ html {
 
 /* Legal pages (outside .site-shell) */
 .legal-shell {
-  font-size: 0.9375rem;
-  line-height: 1.6;
+  font-size: clamp(0.9375rem, 0.92rem + 0.1vw, 1rem);
+  line-height: 1.65;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   width: min(42rem, calc(100% - clamp(16px, 4vw, 32px) * 2));
@@ -411,18 +405,19 @@ html {
 }
 
 .legal-card h1 {
-  font-size: clamp(1.5rem, 0.95rem + 1.35vw, 2.125rem);
-  line-height: 1.12;
+  font-size: var(--keynote-section, clamp(1.5rem, 0.95rem + 1.35vw, 2.125rem));
+  line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 
 .legal-intro,
 .legal-section p {
-  font-size: 0.9375rem;
-  line-height: 1.65;
+  font-size: var(--type-story-body, 0.9375rem);
+  line-height: 1.74;
 }
 
 .legal-section h2 {
-  font-size: 1rem;
+  font-size: var(--type-card-title, 1rem);
 }
 
 @media (max-width: 40rem) {

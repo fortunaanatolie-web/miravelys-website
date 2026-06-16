@@ -185,7 +185,6 @@
 }
 
 .origin-block__verse li {
-  font-size: clamp(0.9375rem, 0.88rem + 0.25vw, 1.0625rem);
   line-height: 1.5;
   color: rgba(242, 239, 233, 0.78);
   font-style: italic;
@@ -193,7 +192,6 @@
 
 .origin-block__transforms li,
 .origin-block__insights li {
-  font-size: 0.9375rem;
   line-height: 1.55;
   color: var(--mira-text-muted);
   padding: 8px 14px;
@@ -209,7 +207,6 @@
 
 .origin-block__questions li {
   font-family: var(--font-serif);
-  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.1875rem);
   line-height: 1.45;
   color: var(--mira-ivory);
   padding: 12px 0;
@@ -228,7 +225,6 @@
 }
 
 .origin-block__audience li {
-  font-size: 0.9375rem;
   line-height: 1.55;
   color: var(--mira-text-muted);
   text-align: start;
@@ -415,7 +411,6 @@
   background: rgba(191, 160, 106, 0.08);
   color: rgba(244, 226, 184, 0.92);
   font-family: var(--font-serif);
-  font-size: clamp(1.2rem, 0.95rem + 0.85vw, 1.62rem);
   letter-spacing: 0.01em;
 }
 

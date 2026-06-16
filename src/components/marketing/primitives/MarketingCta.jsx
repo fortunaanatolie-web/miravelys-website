@@ -8,6 +8,7 @@ export default function MarketingCta({
   role,
   experience,
   onNavClick,
+  onEarlyAccessClick,
   className = '',
   icon = null,
   children,
@@ -23,11 +24,22 @@ export default function MarketingCta({
       ? 'keynote-link'
       : `keynote-cta keynote-cta--${config.variant ?? 'primary'}`;
 
+  const classNames = `${variantClass} ${className}`.trim();
+
+  if (config.modal && onEarlyAccessClick) {
+    return (
+      <button type="button" className={classNames} onClick={onEarlyAccessClick}>
+        {icon}
+        {label}
+      </button>
+    );
+  }
+
   if (config.external && APP_STORE_AVAILABLE) {
     return (
       <a
         href={APP_STORE_URL}
-        className={`${variantClass} ${className}`.trim()}
+        className={classNames}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -38,11 +50,20 @@ export default function MarketingCta({
   }
 
   if (config.external && !APP_STORE_AVAILABLE) {
-    const fallbackAnchor = 'beta';
+    if (config.modalFallback && onEarlyAccessClick) {
+      return (
+        <button type="button" className={classNames} onClick={onEarlyAccessClick}>
+          {icon}
+          {label}
+        </button>
+      );
+    }
+
+    const fallbackAnchor = config.fallbackAnchor ?? 'download';
     return (
       <a
         href={`#${fallbackAnchor}`}
-        className={`${variantClass} ${className}`.trim()}
+        className={classNames}
         onClick={event => onNavClick?.(event, fallbackAnchor)}
       >
         {icon}
@@ -51,11 +72,12 @@ export default function MarketingCta({
     );
   }
 
+  const anchor = config.anchor ?? config.fallbackAnchor ?? 'works';
   return (
     <a
-      href={`#${config.anchor}`}
-      className={`${variantClass} ${className}`.trim()}
-      onClick={event => onNavClick?.(event, config.anchor)}
+      href={`#${anchor}`}
+      className={classNames}
+      onClick={event => onNavClick?.(event, anchor)}
     >
       {icon}
       {label}

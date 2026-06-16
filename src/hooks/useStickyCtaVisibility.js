@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 
 /**
- * Show floating CTA only in the middle of the scroll journey —
- * hidden on hero, beta, and download finale.
+ * Show floating CTA in the middle of the scroll journey —
+ * hidden on hero, scroll story (#works), and download finale.
  */
 export function useStickyCtaVisibility() {
   const [visible, setVisible] = useState(false);
@@ -17,6 +17,16 @@ export function useStickyCtaVisibility() {
         return;
       }
 
+      const works = document.getElementById('works');
+      if (works) {
+        const rect = works.getBoundingClientRect();
+        const inScrollStory = rect.top < viewport * 0.72 && rect.bottom > viewport * 0.28;
+        if (inScrollStory) {
+          setVisible(false);
+          return;
+        }
+      }
+
       const hideNear = id => {
         const node = document.getElementById(id);
         if (!node) return false;
@@ -24,7 +34,7 @@ export function useStickyCtaVisibility() {
         return rect.top < viewport * 0.88;
       };
 
-      if (hideNear('beta') || hideNear('download')) {
+      if (hideNear('download')) {
         setVisible(false);
         return;
       }

@@ -19,7 +19,8 @@ const primitiveSources = fs
   .map(name => fs.readFileSync(new URL(name, primitiveDir), 'utf8'))
   .join('\n');
 
-const marketingBundle = `${app}\n${topNav}\n${legalPage}\n${sectionSources}\n${primitiveSources}`;
+const earlyAccessModal = fs.readFileSync(new URL('../src/components/marketing/EarlyAccessModal.jsx', import.meta.url), 'utf8');
+const marketingBundle = `${app}\n${topNav}\n${legalPage}\n${sectionSources}\n${primitiveSources}\n${earlyAccessModal}`;
 
 const errors = [];
 
@@ -38,8 +39,8 @@ const requiredHandlers = [
   'aria-pressed',
   'handleMockupSelect',
   'activeMockupId',
-  'ProductRevealJourney',
-  'RevealingDeviceFrame',
+  'StickyPhoneStory',
+  'PhoneMockup',
 ];
 
 for (const token of requiredHandlers) {
@@ -50,7 +51,10 @@ assert(
   marketingBundle.includes('href={APP_STORE_URL}') || marketingBundle.includes('APP_STORE_URL'),
   'App Store links must use APP_STORE_URL via MarketingCta'
 );
-assert(marketingBundle.includes('MarketingCta'), 'Marketing CTAs must use centralized MarketingCta component');
+assert(marketingBundle.includes('EarlyAccessModal'), 'Early access modal must be wired');
+assert(marketingBundle.includes('onEarlyAccessClick'), 'CTAs must open early access modal');
+assert(marketingBundle.includes('handleWaitlistSubmit'), 'Waitlist submit handler must remain wired in modal');
+assert(!app.includes('BetaSection'), 'Main page must not mount BetaSection');
 assert(legalPage.includes('/privacy-policy'), 'Legal pages must include privacy policy route');
 assert(legalPage.includes('privacyPolicy'), 'Legal pages must render privacy policy document');
 assert(legalPage.includes('MarketingPageShell'), 'Legal pages must use MarketingPageShell');

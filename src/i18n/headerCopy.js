@@ -4,6 +4,7 @@ export const headerCopy = {
   en: {
     openMenu: 'Open menu',
     closeMenu: 'Close menu',
+    closeModal: 'Close dialog',
     menuLabel: 'Main navigation',
     chooseLanguage: 'Choose language',
     homeLabel: 'Miravelys home',
@@ -12,6 +13,7 @@ export const headerCopy = {
   ru: {
     openMenu: 'Открыть меню',
     closeMenu: 'Закрыть меню',
+    closeModal: 'Закрыть окно',
     menuLabel: 'Главная навигация',
     chooseLanguage: 'Выбор языка',
     homeLabel: 'Главная Miravelys',
@@ -20,6 +22,7 @@ export const headerCopy = {
   ro: {
     openMenu: 'Deschide meniul',
     closeMenu: 'Închide meniul',
+    closeModal: 'Închide fereastra',
     menuLabel: 'Navigare principală',
     chooseLanguage: 'Alege limba',
     homeLabel: 'Pagina principală Miravelys',
@@ -28,6 +31,7 @@ export const headerCopy = {
   fr: {
     openMenu: 'Ouvrir le menu',
     closeMenu: 'Fermer le menu',
+    closeModal: 'Fermer la fenêtre',
     menuLabel: 'Navigation principale',
     chooseLanguage: 'Choisir la langue',
     homeLabel: 'Accueil Miravelys',
@@ -36,6 +40,7 @@ export const headerCopy = {
   hi: {
     openMenu: 'मेनू खोलें',
     closeMenu: 'मेनू बंद करें',
+    closeModal: 'विंडो बंद करें',
     menuLabel: 'मुख्य नेविगेशन',
     chooseLanguage: 'भाषा चुनें',
     homeLabel: 'Miravelys होम',
@@ -44,6 +49,7 @@ export const headerCopy = {
   zh: {
     openMenu: '打开菜单',
     closeMenu: '关闭菜单',
+    closeModal: '关闭窗口',
     menuLabel: '主导航',
     chooseLanguage: '选择语言',
     homeLabel: 'Miravelys 首页',
@@ -52,6 +58,7 @@ export const headerCopy = {
   de: {
     openMenu: 'Menü öffnen',
     closeMenu: 'Menü schließen',
+    closeModal: 'Fenster schließen',
     menuLabel: 'Hauptnavigation',
     chooseLanguage: 'Sprache wählen',
     homeLabel: 'Miravelys Startseite',
@@ -60,6 +67,7 @@ export const headerCopy = {
   ja: {
     openMenu: 'メニューを開く',
     closeMenu: 'メニューを閉じる',
+    closeModal: 'ウィンドウを閉じる',
     menuLabel: 'メインナビゲーション',
     chooseLanguage: '言語を選択',
     homeLabel: 'Miravelys ホーム',
@@ -68,6 +76,7 @@ export const headerCopy = {
   es: {
     openMenu: 'Abrir menú',
     closeMenu: 'Cerrar menú',
+    closeModal: 'Cerrar ventana',
     menuLabel: 'Navegación principal',
     chooseLanguage: 'Elegir idioma',
     homeLabel: 'Inicio de Miravelys',
@@ -76,6 +85,7 @@ export const headerCopy = {
   pt: {
     openMenu: 'Abrir menu',
     closeMenu: 'Fechar menu',
+    closeModal: 'Fechar janela',
     menuLabel: 'Navegação principal',
     chooseLanguage: 'Escolher idioma',
     homeLabel: 'Início Miravelys',

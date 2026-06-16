@@ -68,7 +68,7 @@
   .site-shell--keynote {
     --keynote-device-hero: min(280px, 92vw);
     --keynote-device-chapter: min(260px, 90vw);
-    --keynote-display: clamp(1.75rem, 1rem + 4.5vw, 2.5rem);
+    --keynote-display: clamp(1.65rem, 1.05rem + 3.2vw, 2.1rem);
   }
 
   .hero-section--keynote {
@@ -94,12 +94,12 @@
   }
 
   .hero-keynote__trust li {
-    font-size: 0.625rem;
+    font-size: var(--type-caption, 0.625rem);
     padding: 4px 8px;
   }
 
   .reveal-step__orbit-tags li {
-    font-size: 0.625rem;
+    font-size: var(--type-caption, 0.625rem);
     padding: 5px 9px;
   }
 
@@ -108,7 +108,7 @@
   }
 
   .reveal-step__subline {
-    font-size: 0.9375rem;
+    font-size: var(--type-body-relaxed, 0.9375rem);
   }
 
   .download-finale__layout {
@@ -139,11 +139,11 @@
   .site-shell--keynote {
     --keynote-device-hero: min(320px, 88vw);
     --keynote-device-chapter: min(300px, 86vw);
-    --keynote-display: clamp(1.875rem, 1.05rem + 4.5vw, 2.6rem);
+    --keynote-display: clamp(1.75rem, 1.2rem + 2.8vw, 2.2rem);
   }
 
   .hero-keynote__trust li {
-    font-size: 0.6875rem;
+    font-size: var(--type-caption, 0.6875rem);
     padding: 5px 10px;
   }
 }
@@ -156,7 +156,7 @@
   }
 
   .hero-keynote__trust li {
-    font-size: 0.75rem;
+    font-size: var(--type-caption, 0.75rem);
     padding: 5px 11px;
   }
 }
@@ -292,14 +292,29 @@
 
 /* —— Laptop: sticky reveal from 1100px —— */
 @media (min-width: 68.75rem) {
+  .scroll-story__layout,
   .reveal-journey__layout {
     grid-template-columns: minmax(280px, 38%) minmax(0, 1fr);
     max-width: min(1120px, calc(100% - var(--page-gutter) * 2));
     gap: clamp(24px, 3.5vw, 48px);
   }
 
+  .scroll-story__phone-column,
   .reveal-journey__device-rail {
     display: block;
+    position: relative;
+    top: auto;
+    z-index: auto;
+    margin-bottom: 0;
+    background: transparent;
+    padding-bottom: 0;
+  }
+
+  .scroll-story__phone-sticky,
+  .reveal-journey__device-sticky {
+    position: sticky;
+    top: clamp(88px, 12vh, 120px);
+    padding-bottom: 28vh;
   }
 
   .reveal-step__mobile-device {
@@ -316,14 +331,28 @@
   }
 }
 
-/* Between 980–1099: legacy mobile layout until 1100 — override site-reveal 980 rule */
+/* Between 980–1099: single-column sticky phone */
 @media (min-width: 61.25rem) and (max-width: 68.6874rem) {
+  .marketing-scroll-story__layout,
+  .scroll-story__layout,
+  .sticky-phone-story__layout,
+  .reveal-journey__layout {
+    grid-template-columns: 1fr;
+    max-width: min(920px, calc(100% - var(--page-gutter) * 2));
+  }
+
+  .marketing-scroll-story__phone-column,
+  .scroll-story__phone-column,
+  .sticky-phone-story__phone,
   .reveal-journey__device-rail {
-    display: none;
+    display: flex;
+    align-self: auto;
+    min-height: auto;
+    overflow: visible;
   }
 
   .reveal-step__mobile-device {
-    display: block;
+    display: none !important;
   }
 }
 
@@ -372,16 +401,12 @@
 
 /* —— Orbit tags: prevent horizontal overflow on narrower desktops —— */
 @media (min-width: 68.75rem) and (max-width: 85rem) {
-  .reveal-journey__device-rail {
-    overflow: hidden;
-  }
-
   .reveal-journey__orbit li {
     white-space: normal;
     max-width: 8.5rem;
     text-align: center;
     line-height: 1.2;
-    font-size: 0.75rem;
+    font-size: var(--type-small, 0.75rem);
     padding: 6px 10px;
   }
 

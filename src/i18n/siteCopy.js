@@ -53,49 +53,6 @@ export const languages = [
   }
 ];
 
-export const navItems = [
-  {
-    "id": "what",
-    "key": "what"
-  },
-  {
-    "id": "explanation",
-    "key": "explanation"
-  },
-  {
-    "id": "origin",
-    "key": "origin"
-  },
-  {
-    "id": "works",
-    "key": "works"
-  },
-  {
-    "id": "mockups",
-    "key": "mockups"
-  },
-  {
-    "id": "privacy",
-    "key": "privacy"
-  },
-  {
-    "id": "faq",
-    "key": "faq"
-  },
-  {
-    "id": "beta",
-    "key": "beta"
-  },
-  {
-    "id": "download",
-    "key": "download"
-  },
-  {
-    "id": "languages",
-    "key": "languages"
-  }
-];
-
 export const siteCopy = {
   "en": {
     "meta": {

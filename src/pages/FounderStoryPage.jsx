@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { siteCopy } from '../i18n/siteCopy';
 import { resolveExperience } from '../i18n/experienceCopy';
-import { preloadMockupLanguage } from '../config/mockupScreens';
+import { preloadMiravelysScreenshots } from '../lib/miravelysScreenshots';
 import { useSiteLanguage } from '../hooks/useSiteLanguage';
 import MarketingPageShell from '../components/marketing/MarketingPageShell';
 import MarketingTopNav from '../components/marketing/MarketingTopNav';
@@ -29,7 +29,7 @@ export default function FounderStoryPage() {
   }, [closeMenu]);
 
   useEffect(() => {
-    preloadMockupLanguage(lang);
+    preloadMiravelysScreenshots(lang);
   }, [lang]);
 
   useEffect(() => {
@@ -60,7 +60,7 @@ export default function FounderStoryPage() {
 
       <OriginStorySection lang={lang} experience={experience} onNavClick={onNavClick} />
 
-      <MarketingSiteFooter t={t} onNavClick={null} />
+      <MarketingSiteFooter t={t} />
     </MarketingPageShell>
   );
 }

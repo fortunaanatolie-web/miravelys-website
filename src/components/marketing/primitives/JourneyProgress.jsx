@@ -1,9 +1,9 @@
 import { productSceneOrder } from '../../../config/productScenes';
 import { scrollToSection } from '../../../lib/scrollToSection';
 
-export default function JourneyProgress({ scenes, activeIndex, progressAria }) {
+export default function JourneyProgress({ scenes, activeIndex, progressAria, onStepSelect, compact = false }) {
   return (
-    <nav className="journey-progress" aria-label={progressAria}>
+    <nav className={`journey-progress${compact ? ' journey-progress--compact' : ''}`} aria-label={progressAria}>
       <ol className="journey-progress__list">
         {productSceneOrder.map((config, index) => {
           const scene = scenes[config.key];
@@ -17,10 +17,13 @@ export default function JourneyProgress({ scenes, activeIndex, progressAria }) {
                 className={`journey-progress__step ${isActive ? 'journey-progress__step--active' : ''}`}
                 aria-current={isActive ? 'step' : undefined}
                 aria-label={label}
-                onClick={() => scrollToSection(config.sectionId)}
+                onClick={() => {
+                  onStepSelect?.(index);
+                  scrollToSection(config.sectionId);
+                }}
               >
                 <span className="journey-progress__dot" aria-hidden="true" />
-                <span className="journey-progress__label">{label}</span>
+                {compact ? null : <span className="journey-progress__label">{label}</span>}
               </button>
             </li>
           );

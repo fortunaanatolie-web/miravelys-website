@@ -16,11 +16,14 @@ import './styles/site-phone-mockup.css';
 import './styles/site-reveal.css';
 import './styles/site-motion.css';
 import './styles/site-breakpoints.css';
+import './styles/site-sticky-phone-story.css';
+import './styles/site-screenshot-placeholder.css';
+import './styles/site-early-access-modal.css';
 import './styles/site-marketing.css';
-import './styles/site-typography.css';
 import './styles/site-beauty.css';
 import './styles/site-appearance.css';
 import './styles/site-origin.css';
+import './styles/site-typography.css';
 import SiteRouter from './SiteRouter';
 
 createRoot(document.getElementById('root')).render(

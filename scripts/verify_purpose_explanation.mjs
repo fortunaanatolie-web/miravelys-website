@@ -25,11 +25,11 @@ for (const language of languages) {
 }
 
 const app = fs.readFileSync(new URL('../src/App.jsx', import.meta.url), 'utf8');
-const journey = fs.readFileSync(new URL('../src/components/marketing/sections/ProductRevealJourney.jsx', import.meta.url), 'utf8');
-assert(app.includes('ProductRevealJourney'), 'App must mount ProductRevealJourney');
+const journey = fs.readFileSync(new URL('../src/components/marketing/sections/StickyPhoneStory.jsx', import.meta.url), 'utf8');
+assert(app.includes('StickyPhoneStory'), 'App must mount StickyPhoneStory');
 assert(!app.includes('PurposeExplanationFlow'), 'Legacy purpose flow must not compete with the main scrollytelling page');
-assert(journey.includes('RevealStepPanel'), 'ProductRevealJourney must render step panels');
-assert(journey.includes('RevealingDeviceFrame'), 'ProductRevealJourney must use the fixed phone frame');
+assert(journey.includes('StoryStep'), 'StickyPhoneStory must render story step panels');
+assert(journey.includes('PhoneMockup'), 'StickyPhoneStory must use one stable phone mockup');
 
 const forbidden = [/diagnos(es|e) the user/i, /therapy replacement/i, /absolute truth/i, /who you truly are/i];
 for (const language of languages) {

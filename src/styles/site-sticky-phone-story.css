@@ -1,0 +1,365 @@
+/**
+ * Marketing scroll story — sticky phone stays fully visible for the full text column height.
+ * Loads after site-reveal / site-breakpoints so these rules win.
+ */
+
+/* —— Section shell —— */
+.marketing-scroll-story,
+.sticky-phone-story {
+  position: relative;
+  width: 100%;
+  isolation: isolate;
+  overflow: visible;
+}
+
+.marketing-scroll-story__intro,
+.sticky-phone-story__intro {
+  width: min(720px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: clamp(48px, 8vh, 72px) var(--story-page-x) clamp(8px, 2vh, 16px);
+  text-align: center;
+}
+
+/* —— Two-column grid: stretch so phone column matches text column height (sticky fix) —— */
+.marketing-scroll-story__layout,
+.sticky-phone-story__layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(420px, 1.1fr);
+  gap: var(--story-gap);
+  align-items: stretch;
+  max-width: min(1440px, 100%);
+  margin-inline: auto;
+  padding-inline: var(--story-page-x);
+  padding-block: clamp(40px, 6vw, 80px) var(--story-page-y);
+  overflow: visible;
+}
+
+/* Phone column stretches to full scroll height — sticky inner stays until last step finishes */
+.marketing-scroll-story__phone-column,
+.sticky-phone-story__phone {
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: visible;
+  z-index: 2;
+}
+
+.marketing-scroll-story__phone-inner {
+  position: sticky;
+  top: var(--story-sticky-top);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 1.8vh, 16px);
+  width: 100%;
+  min-height: min(var(--story-sticky-height), 100%);
+  max-height: var(--story-sticky-height);
+  padding-block: clamp(4px, 1vh, 12px);
+  pointer-events: auto;
+}
+
+/* Compact dot progress — below phone, never wraps as text list */
+.marketing-scroll-story .journey-progress--compact {
+  flex-shrink: 0;
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+}
+
+.marketing-scroll-story .journey-progress--compact .journey-progress__list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.marketing-scroll-story .journey-progress--compact .journey-progress__step {
+  padding: 6px;
+  border: none;
+  background: transparent;
+}
+
+.marketing-scroll-story .journey-progress--compact .journey-progress__dot {
+  width: 7px;
+  height: 7px;
+}
+
+.marketing-scroll-story .journey-progress--compact .journey-progress__step--active .journey-progress__dot {
+  width: 8px;
+  height: 8px;
+}
+
+[data-appearance='day'] .marketing-scroll-story .journey-progress--compact .journey-progress__step {
+  color: rgba(18, 16, 14, 0.35);
+}
+
+[data-appearance='day'] .marketing-scroll-story .journey-progress--compact .journey-progress__step--active {
+  color: var(--mira-gold);
+}
+
+/* Progress + phone fit inside viewport height */
+.marketing-scroll-story__phone-inner .journey-progress:not(.journey-progress--compact) {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: var(--story-phone-width);
+  margin-bottom: clamp(10px, 1.8vh, 18px);
+}
+
+.marketing-scroll-story .phone-mockup--scroll-story,
+.marketing-scroll-story__phone-inner .phone-mockup {
+  --phone-width: var(--story-phone-width);
+  flex-shrink: 0;
+  width: var(--story-phone-width);
+  max-width: 100%;
+  max-height: var(--story-phone-available);
+  transform: none !important;
+  margin-inline: auto;
+}
+
+.marketing-scroll-story .phone-mockup--scroll-story .phone-mockup__device,
+.marketing-scroll-story__phone-inner .phone-mockup__device {
+  max-height: var(--story-phone-max-height);
+}
+
+.marketing-scroll-story .phone-mockup--scroll-story .phone-mockup__screen-stack {
+  max-height: calc(var(--story-phone-max-height) - 2 * var(--phone-chassis-inset-ratio, 0.026) * var(--story-phone-width));
+}
+
+.marketing-scroll-story .phone-mockup--scroll-story .phone-mockup__floor-shadow {
+  bottom: -2%;
+  height: 8%;
+  filter: blur(10px);
+  opacity: 0.85;
+}
+
+/* Text column */
+.marketing-scroll-story__text-column,
+.sticky-phone-story__steps {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding-bottom: clamp(48px, 8vh, 120px);
+}
+
+/* Story steps — tall enough for sticky; grow for long translations */
+.marketing-scroll-story .story-step,
+.sticky-phone-story .story-step {
+  min-height: var(--story-step-min);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(40px, 6vh, 80px) 0;
+  scroll-margin-top: calc(var(--story-sticky-top) + 12px);
+  opacity: 0.42;
+  transition: opacity 400ms ease;
+}
+
+.marketing-scroll-story .story-step.is-active,
+.marketing-scroll-story .story-step--active,
+.sticky-phone-story .story-step.is-active,
+.sticky-phone-story .story-step--active {
+  opacity: 1;
+}
+
+.marketing-scroll-story .story-step__content {
+  max-width: min(560px, 100%);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.marketing-scroll-story .story-step__eyebrow {
+  font-size: var(--type-eyebrow, clamp(0.71875rem, 0.69rem + 0.1vw, 0.8125rem));
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--mira-text-whisper);
+  margin: 0 0 clamp(8px, 1.2vh, 12px);
+}
+
+.marketing-scroll-story .story-step__headline {
+  font-family: var(--font-serif);
+  font-size: var(--story-title);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--mira-ivory);
+  margin: 0 0 clamp(12px, 2vh, 16px);
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+.marketing-scroll-story .story-step__body {
+  font-size: var(--story-body);
+  line-height: 1.58;
+  color: var(--mira-text-secondary);
+  margin: 0 0 clamp(10px, 1.5vh, 14px);
+}
+
+.marketing-scroll-story .story-step__whisper {
+  font-size: var(--keynote-whisper, clamp(0.9375rem, 0.91rem + 0.12vw, 1.03125rem));
+  line-height: 1.6;
+  font-style: italic;
+  color: var(--mira-text-whisper);
+  margin: 0;
+}
+
+/* Day / evening — subtle sticky zone (no heavy panel) */
+[data-appearance='evening'] .marketing-scroll-story__phone-inner {
+  background: transparent;
+}
+
+[data-appearance='day'] .marketing-scroll-story__phone-inner {
+  background: transparent;
+}
+
+/* Desktop: balance phone + text vertically in view */
+@media (min-width: 68.75rem) {
+  .marketing-scroll-story__layout,
+  .sticky-phone-story__layout {
+    grid-template-columns: minmax(260px, 0.85fr) minmax(400px, 1.15fr);
+    gap: clamp(40px, 5vw, 96px);
+  }
+
+  .marketing-scroll-story__phone-inner {
+    justify-content: center;
+  }
+
+  .marketing-scroll-story .story-step {
+    padding-block: clamp(32px, 5vh, 64px);
+  }
+}
+
+/* Tablet landscape / medium: tighter two-column */
+@media (max-width: 64rem) {
+  .marketing-scroll-story__layout,
+  .sticky-phone-story__layout {
+    grid-template-columns: minmax(240px, 0.8fr) minmax(360px, 1.2fr);
+    gap: clamp(28px, 5vw, 64px);
+  }
+
+  :root {
+    --story-phone-width: min(
+      clamp(220px, 32vw, 340px),
+      calc(var(--story-phone-max-height) * 390 / 844)
+    );
+  }
+}
+
+/* Tablet portrait & narrow: stacked sticky phone */
+@media (max-width: 68.6874rem) {
+  .marketing-scroll-story__layout,
+  .sticky-phone-story__layout {
+    grid-template-columns: 1fr;
+    gap: clamp(20px, 4vw, 40px);
+    max-width: min(920px, calc(100% - var(--page-gutter) * 2));
+  }
+
+  .marketing-scroll-story__phone-column,
+  .sticky-phone-story__phone {
+    align-self: auto;
+    min-height: auto;
+  }
+
+  .marketing-scroll-story__phone-inner {
+    top: var(--story-sticky-top);
+    max-height: none;
+    padding-block: 12px 18px;
+    z-index: 5;
+  }
+
+  .marketing-scroll-story .story-step__content {
+    text-align: center;
+    margin-inline: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 47.9375rem) {
+  :root {
+    --story-page-x: clamp(18px, 5vw, 24px);
+    --story-page-y: 48px;
+    --story-step-min: clamp(480px, 72svh, 720px);
+    --story-phone-width: min(68vw, 280px);
+    --story-phone-max-height: min(calc(48svh), calc(var(--story-phone-width) * 844 / 390));
+    --story-sticky-top: calc(var(--header-top, 12px) + var(--site-header-height) + 8px);
+  }
+
+  .marketing-scroll-story__layout,
+  .sticky-phone-story__layout {
+    display: block;
+    padding-inline: var(--story-page-x);
+    padding-block: 32px var(--story-page-y);
+  }
+
+  .marketing-scroll-story__phone-inner {
+    pointer-events: none;
+  }
+
+  .marketing-scroll-story__phone-inner .journey-progress--compact {
+    pointer-events: auto;
+  }
+
+  .marketing-scroll-story .story-step {
+    min-height: var(--story-step-min);
+    padding-block: clamp(40px, 10vh, 88px);
+    text-align: center;
+  }
+}
+
+/* Short viewports: shrink phone further */
+@media (max-height: 820px) and (min-width: 48rem) {
+  :root {
+    --story-sticky-top: calc(var(--header-top, 12px) + var(--site-header-height) + 10px);
+    --story-progress-block: 24px;
+    --story-phone-available: calc(var(--story-sticky-height) - var(--story-progress-block) - 8px);
+    --story-phone-width: min(
+      clamp(200px, 22vw, 300px),
+      calc(var(--story-phone-available) / var(--story-phone-stack-ratio))
+    );
+  }
+}
+
+@media (max-height: 700px) and (min-width: 48rem) {
+  :root {
+    --story-phone-width: min(
+      clamp(180px, 20vw, 260px),
+      calc(var(--story-phone-available) / var(--story-phone-stack-ratio))
+    );
+  }
+}
+
+/* Override legacy reveal-journey phone sizing */
+.marketing-scroll-story.reveal-journey .phone-mockup {
+  --phone-width: var(--story-phone-width) !important;
+  transform: none !important;
+}
+
+.marketing-scroll-story.reveal-journey .reveal-step {
+  min-height: var(--story-step-min);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marketing-scroll-story .story-step,
+  .sticky-phone-story .story-step {
+    opacity: 1;
+    transition: none;
+  }
+
+  .marketing-scroll-story .story-step:not(.is-active):not(.story-step--active),
+  .sticky-phone-story .story-step:not(.is-active):not(.story-step--active) {
+    opacity: 0.72;
+  }
+
+  .marketing-scroll-story .phone-mockup__screen-frame {
+    transition: opacity 0.2s ease !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}

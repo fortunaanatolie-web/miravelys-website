@@ -44,7 +44,7 @@
   width: min(22rem, 88%);
   margin: 0;
   padding: 0 8px;
-  font-size: 0.6875rem;
+  font-size: var(--type-eyebrow, 0.6875rem);
   font-weight: 500;
   line-height: 1.45;
   letter-spacing: 0.03em;
@@ -88,7 +88,7 @@
 
 .reveal-journey__title {
   font-family: var(--font-serif);
-  font-size: clamp(1.75rem, 1.1rem + 2.2vw, 2.625rem);
+  font-size: var(--keynote-section);
   font-weight: 500;
   line-height: 1.12;
   letter-spacing: -0.02em;
@@ -141,7 +141,7 @@
   border: 1px solid transparent;
   background: transparent;
   color: var(--mira-text-muted);
-  font-size: 0.6875rem;
+  font-size: var(--type-eyebrow, 0.6875rem);
   font-weight: 600;
   letter-spacing: 0.04em;
   cursor: pointer;
@@ -206,8 +206,36 @@
   }
 }
 
+/* —— Scroll story (sticky phone + changing screen) —— */
+.scroll-story__layout,
+.reveal-journey__layout {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.9fr) minmax(420px, 1.1fr);
+  gap: clamp(48px, 7vw, 120px);
+  align-items: start;
+}
+
+.scroll-story__phone-sticky,
+.reveal-journey__device-sticky {
+  position: sticky;
+  top: clamp(96px, 14vh, 160px);
+  min-height: min(76vh, 760px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 40vh;
+}
+
+.story-step,
+.reveal-step {
+  min-height: 85vh;
+  min-height: 85svh;
+}
+
 /* —— Reveal journey layout —— */
-.reveal-journey {
+.reveal-journey,
+.scroll-story {
   position: relative;
   width: 100%;
   max-width: none;
@@ -215,10 +243,8 @@
   padding: 0;
 }
 
+.scroll-story__layout,
 .reveal-journey__layout {
-  display: grid;
-  grid-template-columns: minmax(320px, 42%) 1fr;
-  gap: clamp(24px, 4vw, 48px);
   max-width: min(1180px, calc(100% - 40px));
   margin: 0 auto;
   padding: clamp(40px, 8vh, 80px) 0 clamp(60px, 10vh, 100px);
@@ -228,14 +254,6 @@
   position: relative;
 }
 
-.reveal-journey__device-sticky {
-  position: sticky;
-  top: clamp(88px, 12vh, 120px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 40vh;
-}
 
 .reveal-journey__orbit {
   position: absolute;
@@ -280,10 +298,9 @@
 }
 
 /* —— Reveal step panels —— */
+.story-step,
 .reveal-step {
   position: relative;
-  min-height: 88svh;
-  min-height: 88dvh;
   display: flex;
   align-items: center;
   padding: clamp(48px, 8vh, 96px) 0;
@@ -298,6 +315,7 @@
   transition: opacity 0.8s ease;
 }
 
+.story-step--active .reveal-step__backdrop,
 .reveal-step--active .reveal-step__backdrop {
   opacity: 1;
 }
@@ -347,6 +365,7 @@
     filter 0.7s ease;
 }
 
+.story-step--active .reveal-step__content,
 .reveal-step--active .reveal-step__content {
   opacity: 1;
   transform: translateY(0);
@@ -355,7 +374,62 @@
 
 .reveal-step__mobile-device {
   display: none;
-  margin-bottom: 28px;
+}
+
+/* —— Mobile & tablet: one sticky phone, text scrolls —— */
+@media (max-width: 68.6874rem) {
+  .scroll-story__layout,
+  .reveal-journey__layout {
+    grid-template-columns: 1fr;
+    padding-top: 12px;
+    max-width: min(100%, calc(100% - var(--page-gutter, 20px) * 2));
+  }
+
+  .scroll-story__phone-column,
+  .reveal-journey__device-rail {
+    display: block;
+    position: sticky;
+    top: clamp(72px, 10vh, 96px);
+    z-index: 3;
+    margin-bottom: clamp(8px, 2vh, 16px);
+    background: linear-gradient(180deg, rgba(6, 10, 22, 0.92) 0%, rgba(6, 10, 22, 0.72) 72%, transparent 100%);
+    padding-bottom: 8px;
+  }
+
+  .scroll-story__phone-sticky,
+  .reveal-journey__device-sticky {
+    position: relative;
+    top: auto;
+    min-height: auto;
+    padding-bottom: 0;
+  }
+
+  .reveal-journey__orbit--desktop {
+    display: none;
+  }
+
+  .reveal-step {
+    min-height: auto;
+    padding: clamp(40px, 6vh, 72px) 0;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .reveal-step__content {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+    padding-inline: var(--page-gutter, 16px);
+  }
+
+  .reveal-step__orbit-tags {
+    justify-content: center;
+  }
+
+  .reveal-journey .phone-mockup {
+    --phone-width: min(300px, 78vw);
+    margin-inline: auto;
+  }
 }
 
 .reveal-step__eyebrow {
@@ -369,7 +443,7 @@
 
 .reveal-step__headline {
   font-family: var(--font-serif);
-  font-size: var(--keynote-section, clamp(2rem, 1.2rem + 3vw, 3.25rem));
+  font-size: var(--keynote-section);
   font-weight: 500;
   line-height: 1.08;
   letter-spacing: -0.03em;
@@ -433,7 +507,6 @@
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.03);
-  font-size: 0.9375rem;
   line-height: 1.5;
   color: var(--mira-text-primary);
   transition: border-color 0.35s ease, background 0.35s ease, transform 0.35s ease;
@@ -514,67 +587,12 @@
   }
 }
 
-/* —— Mobile & tablet (below laptop sticky layout) —— */
-@media (max-width: 68.6874rem) {
-  .reveal-journey__layout {
-    grid-template-columns: 1fr;
-    padding-top: 20px;
-    max-width: min(100%, calc(100% - var(--page-gutter, 20px) * 2));
-  }
-
-  .reveal-journey__device-rail {
-    display: none;
-  }
-
-  .reveal-journey__mobile-devices {
-    display: none;
-  }
-
-  .reveal-step {
-    min-height: auto;
-    padding: clamp(40px, 6vh, 72px) 0;
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .reveal-step__mobile-device {
-    display: block;
-    width: 100%;
-    max-width: var(--keynote-device-chapter, min(320px, 84vw));
-    margin: 0 auto 24px;
-    opacity: 0.4;
-    transform: translateY(16px);
-    filter: blur(4px);
-    transition:
-      opacity 0.7s ease,
-      transform 0.7s ease,
-      filter 0.6s ease;
-  }
-
-  .reveal-step--active .reveal-step__mobile-device {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
-
-  .reveal-step__content {
-    text-align: center;
-    margin: 0 auto;
-    max-width: 100%;
-    padding-inline: var(--page-gutter, 16px);
-  }
-
-  .reveal-step__orbit-tags {
-    justify-content: center;
-  }
-}
-
 /* —— Focused scrollytelling rebuild —— */
 .hero-section--story-intro {
-  min-height: 92svh;
-  min-height: 92dvh;
+  min-height: auto;
   justify-content: center;
-  padding-bottom: clamp(72px, 12vh, 124px);
+  padding-top: clamp(104px, 14vh, 132px);
+  padding-bottom: clamp(40px, 6vh, 64px);
 }
 
 .hero-section--story-intro .hero-keynote__intro {
@@ -582,7 +600,7 @@
 }
 
 .hero-section--story-intro .hero-keynote__headline {
-  max-width: min(54rem, 100%);
+  max-width: min(36rem, 100%);
 }
 
 .hero-section--story-intro .hero-keynote__subline {
@@ -653,10 +671,6 @@
   max-width: min(560px, 100%);
 }
 
-.reveal-step__headline {
-  font-size: clamp(2.15rem, 1.15rem + 3.3vw, 4rem);
-}
-
 .story-teaser-section {
   padding-top: clamp(36px, 7vh, 84px);
   padding-bottom: clamp(30px, 6vh, 72px);
@@ -695,7 +709,7 @@
 
 .story-teaser-card h2 {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 1.15rem + 2.8vw, 3.5rem);
+  font-size: var(--keynote-section);
   line-height: 1.08;
   letter-spacing: -0.03em;
   margin: 0 auto 16px;
@@ -717,31 +731,20 @@
 
 @media (max-width: 68.6874rem) {
   .hero-section--story-intro {
-    min-height: auto;
-    padding-top: clamp(110px, 18vh, 150px);
-    padding-bottom: clamp(52px, 9vh, 88px);
+    padding-top: clamp(96px, 12vh, 120px);
+    padding-bottom: clamp(32px, 5vh, 48px);
   }
 
   .reveal-journey {
     padding-top: 0;
   }
 
-  .reveal-journey__layout {
-    grid-template-columns: 1fr;
-    padding-top: 8px;
-  }
-
   .reveal-journey .phone-mockup {
-    --phone-width: min(330px, 82vw);
+    --phone-width: min(300px, 78vw);
   }
 
   .reveal-step {
-    min-height: auto;
     padding-block: clamp(34px, 7vh, 72px);
-  }
-
-  .reveal-step__mobile-device .phone-mockup {
-    transform: none !important;
   }
 }
 
@@ -749,10 +752,6 @@
   .reveal-journey__intro,
   .reveal-step__content {
     padding-inline: 0;
-  }
-
-  .reveal-step__headline {
-    font-size: clamp(1.85rem, 1.15rem + 8vw, 2.55rem);
   }
 
   .story-teaser-card {

@@ -1,11 +1,7 @@
 import { useMemo } from 'react';
-import { mockupScreens } from '../../../config/mockupScreens';
+import { getLocalizedScreen } from '../../../lib/getLocalizedScreen';
 import { useInViewProgress } from '../../../hooks/useInViewProgress';
 import PhoneMockup from './PhoneMockup';
-
-function resolveAsset(mockupId) {
-  return mockupScreens.find(screen => screen.id === mockupId)?.asset ?? 'screen-welcome';
-}
 
 export default function RevealingDeviceFrame({
   lang,
@@ -22,12 +18,14 @@ export default function RevealingDeviceFrame({
   const { ref, progress } = useInViewProgress();
   const screens = useMemo(
     () =>
-      steps.map(step => ({
-        id: step.mockupId,
-        asset: resolveAsset(step.mockupId),
-        lang,
-        alt: `Miravelys ${step.mockupId} screen`,
-      })),
+      steps.map(step => {
+        const localized = getLocalizedScreen(step.key ?? step.id, lang);
+        return {
+          id: step.mockupId ?? step.id,
+          ...localized,
+          lang,
+        };
+      }),
     [lang, steps]
   );
 

@@ -16,6 +16,7 @@
     "verify:origin": "node scripts/verify_origin_story.mjs",
     "verify:screen-story": "node scripts/verify_screen_story.mjs",
     "verify:mockup-assets": "node scripts/verify_mockup_assets.mjs",
+    "validate:screenshots": "node scripts/validate_screenshots.mjs",
     "capture:mockup-screens": "node scripts/capture_mockup_screenshots.mjs",
     "distribute:mockups": "node scripts/distribute_canonical_mockups.mjs",
     "sync:presentation-mockups": "node scripts/sync_presentation_mockups.mjs",

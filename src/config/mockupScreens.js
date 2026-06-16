@@ -5,7 +5,7 @@
  * npm run build:mockups — capture EN, trim, distribute to all language folders.
  */
 import { languages } from '../i18n/siteCopy.js';
-import { mockupImageDimensions } from './imageAssets';
+import { mockupImageDimensions } from './imageAssets.js';
 
 export { mockupImageDimensions };
 

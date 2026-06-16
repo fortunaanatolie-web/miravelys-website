@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { mockupScreens } from '../../config/mockupScreens';
+import { resolveMockupGalleryScreenshot } from '../../lib/miravelysScreenshots';
 import { resolveMockup } from '../../i18n/mockupResolver';
 import PhoneMockup from './primitives/PhoneMockup';
 import '../../styles/mockup-screens.css';
@@ -24,6 +25,8 @@ export default function ScreenMockupGallery({ lang, activeId, onSelect }) {
       {mockupScreens.map((screen, index) => {
         const label = screenLabel(mock, screen.copyKey);
         const isActive = activeId === screen.id;
+        const screenshot = resolveMockupGalleryScreenshot(screen.id, lang);
+        if (!screenshot) return null;
 
         return (
           <figure
@@ -46,7 +49,7 @@ export default function ScreenMockupGallery({ lang, activeId, onSelect }) {
                 screens={[
                   {
                     id: screen.id,
-                    asset: screen.asset,
+                    ...screenshot,
                     lang,
                     alt: label,
                   },

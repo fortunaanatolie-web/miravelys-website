@@ -1,113 +1,312 @@
 /**
- * Miravelys marketing typography — fluid scale, premium hierarchy.
- * Extends site-responsive.css tokens for keynote + multilingual layouts.
+ * Miravelys marketing typography — unified responsive scale, premium rhythm.
+ * This file intentionally overrides earlier legacy CSS so the live site shares
+ * one hierarchy across homepage, founder story, legal pages, and navigation.
+ *
+ * TOKEN MAP:
+ *   --keynote-display   hero headline / gold wordmark
+ *   --keynote-section   section headlines, story titles, card main headings
+ *   --type-card-title   sub-sections, card h3, legal h2
+ *   --type-h2           cinematic quotes, large editorial text
+ *   --type-h3           small sub-headings
+ *   --type-lead         FAQ questions, origin verse/questions, editorial emphasis
+ *   --type-story-body   founder story paragraphs, legal intro
+ *   --type-body-relaxed section sublines, body copy, card body
+ *   --type-body         list items, compact body, FAQ answers
+ *   --type-button       primary/secondary CTAs
+ *   --type-button-quiet quiet links, secondary text buttons
+ *   --type-nav          header nav links, language selector
+ *   --type-eyebrow      overlines, chapter labels, step indices
+ *   --type-small        footer links, chips, trust tags, meta
+ *   --type-legal        footer paragraph, small legal text
+ *   --type-caption      smallest (very-narrow mobile only)
+ *   --keynote-sub       section subtitles / leads
+ *   --keynote-whisper   whisper / safety notes, italic asides
+ *
+ * SPACING TOKENS:
+ *   --space-stack-1 through --space-stack-6
+ *   --space-section-tight / --space-section
+ *
+ * MEASURE TOKENS (max-width):
+ *   --measure-hero / --measure-heading / --measure-copy / --measure-copy-wide / --measure-story
  */
 
 .site-shell--keynote {
-  --type-body: clamp(0.9375rem, 0.9rem + 0.18vw, 1.0625rem);
-  --type-body-relaxed: clamp(1rem, 0.95rem + 0.22vw, 1.125rem);
-  --type-small: clamp(0.8125rem, 0.78rem + 0.15vw, 0.875rem);
-  --type-eyebrow: clamp(0.6875rem, 0.66rem + 0.12vw, 0.75rem);
-  --type-lead: clamp(1.0625rem, 0.98rem + 0.35vw, 1.25rem);
-  --type-h2: clamp(1.625rem, 1.05rem + 1.5vw, 2.25rem);
-  --type-h3: clamp(1.0625rem, 0.98rem + 0.3vw, 1.3125rem);
+  /* —— Responsive type scale —— */
+  --type-caption: clamp(0.75rem, 0.73rem + 0.08vw, 0.8125rem);
+  --type-small: clamp(0.84375rem, 0.82rem + 0.12vw, 0.9375rem);
+  --type-eyebrow: clamp(0.71875rem, 0.69rem + 0.1vw, 0.8125rem);
+  --type-body: clamp(0.96875rem, 0.94rem + 0.12vw, 1.03125rem);
+  --type-body-relaxed: clamp(1.03125rem, 0.99rem + 0.16vw, 1.125rem);
+  --type-story-body: clamp(1.03125rem, 0.99rem + 0.22vw, 1.15625rem);
+  --type-lead: clamp(1.0625rem, 1.01rem + 0.2vw, 1.1875rem);
+  --type-card-title: clamp(1.125rem, 1.03rem + 0.42vw, 1.375rem);
+  --type-nav: clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem);
+  --type-button: clamp(0.9375rem, 0.91rem + 0.1vw, 1rem);
+  --type-button-quiet: clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem);
+  --type-legal: clamp(0.84375rem, 0.82rem + 0.1vw, 0.9375rem);
+  --type-h2: clamp(1.75rem, 1.2rem + 1.75vw, 2.6rem);
+  --type-h3: clamp(1.125rem, 1.03rem + 0.36vw, 1.3125rem);
+
+  --keynote-display: clamp(1.875rem, 1.28rem + 1.85vw, 2.875rem);
+  --keynote-section: clamp(1.75rem, 1.12rem + 1.55vw, 2.5rem);
+  --keynote-sub: clamp(1rem, 0.97rem + 0.18vw, 1.125rem);
+  --keynote-whisper: clamp(0.9375rem, 0.91rem + 0.12vw, 1.03125rem);
+
+  /* —— Measure (max-width) tokens —— */
+  --measure-hero: min(36rem, 100%);
+  --measure-heading: min(17ch, 100%);
+  --measure-copy: min(38rem, 100%);
+  --measure-copy-wide: min(42rem, 100%);
+  --measure-story: min(40rem, 100%);
+
+  /* —— Spacing scale —— */
+  --space-stack-1: clamp(0.5rem, 0.44rem + 0.18vw, 0.7rem);
+  --space-stack-2: clamp(0.75rem, 0.68rem + 0.24vw, 0.95rem);
+  --space-stack-3: clamp(1rem, 0.92rem + 0.32vw, 1.25rem);
+  --space-stack-4: clamp(1.25rem, 1.12rem + 0.5vw, 1.6rem);
+  --space-stack-5: clamp(1.5rem, 1.34rem + 0.7vw, 2rem);
+  --space-stack-6: clamp(2rem, 1.8rem + 0.95vw, 2.75rem);
+  --space-section-tight: clamp(3.5rem, 7vh, 5.5rem);
+  --space-section: clamp(4.75rem, 10vh, 8rem);
+
+  /* —— Button system tokens —— */
+  --btn-font: var(--type-button);
+  --btn-weight: 500;
+  --btn-py: 11px;
+  --btn-px: 22px;
+  --btn-icon: 14px;
+  --btn-gap: 8px;
+  --btn-radius: 980px;
+
+  /* —— Neutralize legacy index.css base font-size —— */
+  font-size: unset;
+  line-height: unset;
 }
 
-.site-shell--keynote .hero-keynote__eyebrow {
-  font-size: var(--type-eyebrow);
-  letter-spacing: 0.1em;
-  line-height: 1.4;
-}
-
-.site-shell--keynote .hero-keynote__headline {
-  line-height: 1.06;
-  letter-spacing: -0.035em;
-}
-
-.site-shell--keynote .keynote-cta,
-.site-shell--keynote .keynote-link {
-  font-size: clamp(0.9375rem, 0.9rem + 0.15vw, 1rem);
-  line-height: 1.35;
-}
-
-.site-shell--keynote .hero-keynote__trust li {
-  font-size: var(--type-small);
-  line-height: 1.4;
-}
+/* ============================
+   HERO — brand, eyebrow, headline, subline
+   ============================ */
 
 .site-shell--keynote .hero-keynote__brand {
-  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  font-size: clamp(1.0625rem, 1rem + 0.2vw, 1.1875rem);
+}
+
+.site-shell--keynote .hero-keynote__eyebrow,
+.site-shell--keynote .origin-story__eyebrow,
+.site-shell--keynote .origin-name-story__eyebrow,
+.site-shell--keynote .origin-block__chapter,
+.site-shell--keynote .reveal-step__eyebrow,
+.site-shell--keynote .reveal-step__index,
+.site-shell--keynote .eyebrow {
+  font-size: var(--type-eyebrow);
+  line-height: 1.45;
+  letter-spacing: 0.12em;
+}
+
+.site-shell--keynote .hero-keynote__headline,
+.site-shell--keynote .reveal-journey__title,
+.site-shell--keynote .reveal-step__headline,
+.site-shell--keynote .problem-bridge__title,
+.site-shell--keynote .origin-story__title,
+.site-shell--keynote .origin-name-story__title,
+.site-shell--keynote .download-card--finale h2,
+.site-shell--keynote .trust-section__title,
+.site-shell--keynote .beta-card h2,
+.site-shell--keynote .section-header h2,
+.site-shell--keynote .story-teaser-card h2,
+.site-shell--keynote .screen-story-section__intro h2,
+.site-shell--keynote .screen-story-card h3,
+.site-shell--keynote .product-scene__headline {
+  font-family: var(--font-serif);
+  font-size: var(--keynote-section);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--mira-ivory);
+  text-wrap: balance;
 }
 
 .site-shell--keynote .hero-keynote__headline {
-  font-size: var(--keynote-display);
-  line-height: 1.06;
+  max-width: min(38rem, 100%);
+  margin: 0 auto var(--space-stack-2);
+}
+
+/* ============================
+   BODY COPY — sublines, section intros, card body
+   ============================ */
+
+.site-shell--keynote .hero-keynote__subline,
+.site-shell--keynote .reveal-journey__lead,
+.site-shell--keynote .reveal-step__subline,
+.site-shell--keynote .problem-bridge__lead,
+.site-shell--keynote .problem-bridge__body p,
+.site-shell--keynote .download-card--finale > p:not(.download-card__legacy),
+.site-shell--keynote .trust-section__lead,
+.site-shell--keynote .beta-card p:not(.eyebrow),
+.site-shell--keynote .mockup-bridge-card p:not(.eyebrow),
+.site-shell--keynote .section-intro,
+.site-shell--keynote .trust-section__detail,
+.site-shell--keynote .story-teaser-card p:not(.eyebrow),
+.site-shell--keynote .screen-story-section__intro p:not(.eyebrow),
+.site-shell--keynote .screen-story-card__copy > p,
+.site-shell--keynote .product-scene__subline {
+  font-family: var(--font-sans);
+  font-size: var(--type-body-relaxed);
+  line-height: 1.62;
+  color: var(--mira-text-secondary);
+  max-width: var(--measure-copy);
 }
 
 .site-shell--keynote .hero-keynote__subline {
-  font-size: var(--keynote-sub);
-  line-height: 1.55;
+  max-width: var(--measure-copy);
+  margin: 0 auto var(--space-stack-5);
 }
 
-.site-shell--keynote .reveal-step__eyebrow {
+/* ============================
+   BUTTONS / CTAs
+   ============================ */
+
+.site-shell--keynote .keynote-cta,
+.site-shell--keynote .keynote-link,
+.site-shell--keynote .top-nav__cta,
+.site-shell--keynote .sticky-cta__pill,
+.site-shell--keynote .beta-form .primary-action,
+.site-shell--keynote .primary-action,
+.site-shell--keynote .secondary-action,
+.site-shell--keynote .sticky-cta .primary-action,
+.site-shell--keynote .sticky-cta .secondary-action {
+  font-size: var(--type-button);
+  font-weight: var(--btn-weight);
+  line-height: 1.35;
+  gap: var(--btn-gap);
+}
+
+.site-shell--keynote .keynote-cta {
+  padding: var(--btn-py) var(--btn-px);
+  border-radius: var(--btn-radius);
+}
+
+.site-shell--keynote .hero-keynote__actions {
+  gap: 16px 20px;
+}
+
+.site-shell--keynote .hero-keynote__trust {
+  margin-top: var(--space-stack-4);
+}
+
+/* ============================
+   SMALL TEXT — footer, chips, tags, meta
+   ============================ */
+
+.site-shell--keynote .hero-keynote__trust li,
+.site-shell--keynote .reveal-step__orbit-tags li,
+.site-shell--keynote .reveal-journey__orbit li,
+.site-shell--keynote .journey-progress__step,
+.site-shell--keynote .site-footer-product a,
+.site-shell--keynote .site-footer-nav a,
+.site-shell--keynote .beta-form small,
+.site-shell--keynote .beta-form-error,
+.site-shell--keynote .legal-document-meta,
+.site-shell--keynote .legal-document-governing {
   font-size: var(--type-small);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
-.site-shell--keynote .reveal-step__headline {
-  line-height: 1.1;
-}
+/* ============================
+   NAVIGATION
+   ============================ */
 
-.site-shell--keynote .reveal-step__subline {
-  line-height: 1.58;
-  max-width: min(36rem, 100%);
-}
-
-.site-shell--keynote .reveal-step__whisper {
-  line-height: 1.55;
-  max-width: min(32rem, 100%);
-}
-
-.site-shell--keynote .reveal-step__orbit-tags li {
-  font-size: var(--type-small);
+.site-shell--keynote .top-nav__links a,
+.site-shell--keynote .nav-links,
+.site-shell--keynote .language-select select {
+  font-size: var(--type-nav);
   line-height: 1.35;
 }
 
-.site-shell--keynote .problem-bridge__title {
-  font-size: var(--keynote-section);
-  line-height: 1.14;
+.site-shell--keynote .top-nav__panel-links a {
+  font-size: var(--type-body-relaxed);
+  line-height: 1.4;
 }
 
-.site-shell--keynote .problem-bridge__lead,
+.site-shell--keynote .top-nav__panel-link {
+  font-size: var(--type-button);
+  line-height: 1.35;
+}
+
+.site-shell--keynote .language-cluster--compact .language-select select {
+  font-size: var(--type-nav);
+}
+
+/* ============================
+   SCROLL STORY — step typography
+   ============================ */
+
+.site-shell--keynote .reveal-journey__title {
+  max-width: min(38rem, 100%);
+  margin-bottom: var(--space-stack-2);
+}
+
+.site-shell--keynote .reveal-step__headline {
+  max-width: var(--measure-heading);
+}
+
+.site-shell--keynote .reveal-step__whisper,
+.site-shell--keynote .trust-section__safety,
+.site-shell--keynote .hero-keynote__privacy-link {
+  font-size: var(--keynote-whisper);
+  line-height: 1.6;
+  max-width: min(32rem, 100%);
+}
+
+/* ============================
+   CARD SUB-HEADINGS
+   ============================ */
+
+.site-shell--keynote .mockup-bridge-card h3,
+.site-shell--keynote .legal-document-section-block h2 {
+  font-size: var(--type-card-title);
+  line-height: 1.26;
+}
+
+/* ============================
+   FOUNDER STORY — editorial body
+   ============================ */
+
 .site-shell--keynote .origin-story__lead p,
-.site-shell--keynote .origin-block__paragraph {
-  font-size: var(--type-body-relaxed);
-  line-height: 1.62;
+.site-shell--keynote .origin-block__paragraph,
+.site-shell--keynote .origin-name-story__intro p,
+.site-shell--keynote .origin-name-story__closing p,
+.site-shell--keynote .origin-name-piece__copy p,
+.site-shell--keynote .legal-document-intro,
+.site-shell--keynote .legal-document-section-block p {
+  font-size: var(--type-story-body);
+  line-height: 1.74;
 }
 
-.site-shell--keynote .mockup-bridge-card h3 {
-  font-size: clamp(1.25rem, 1.05rem + 0.6vw, 1.5rem);
-  line-height: 1.28;
+.site-shell--keynote .origin-block__verse li,
+.site-shell--keynote .origin-block__questions li,
+.site-shell--keynote .origin-name-story__final {
+  font-size: var(--type-lead);
+  line-height: 1.58;
 }
 
-.site-shell--keynote .origin-story__title {
-  font-size: var(--keynote-section);
-  line-height: 1.12;
-}
-
-.site-shell--keynote .mockup-bridge-card p:not(.eyebrow) {
-  font-size: var(--type-body-relaxed);
-  line-height: 1.68;
-}
-
-.site-shell--keynote .section-intro {
-  line-height: 1.62;
-  max-width: min(42rem, 100%);
-}
-
+.site-shell--keynote .origin-block__transforms li,
+.site-shell--keynote .origin-block__insights li,
+.site-shell--keynote .origin-block__audience li,
 .site-shell--keynote .trust-section--presentation .trust-grid span {
   font-size: var(--type-body);
-  line-height: 1.5;
+  line-height: 1.62;
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+
+.site-shell--keynote .site-footer strong {
+  font-size: clamp(1.0625rem, 1.02rem + 0.12vw, 1.15625rem);
+  line-height: 1.2;
+  text-shadow: none;
 }
 
 .site-shell--keynote .site-footer p,
@@ -116,56 +315,290 @@
   line-height: 1.55;
 }
 
-.site-shell--keynote .nav-links {
-  font-size: var(--type-small);
+.site-shell--keynote .site-footer p,
+.site-shell--keynote .site-footer small {
+  font-size: var(--type-legal);
+}
+
+/* ============================
+   FORMS
+   ============================ */
+
+.site-shell--keynote .beta-form input {
+  font-size: var(--type-button);
   line-height: 1.4;
 }
 
-.site-shell--keynote .top-nav__cta {
-  font-size: clamp(0.8125rem, 0.78rem + 0.15vw, 0.875rem);
+/* ============================
+   FAQ
+   ============================ */
+
+.site-shell--keynote .faq-item summary {
+  font-size: var(--type-lead);
+  line-height: 1.45;
+}
+
+.site-shell--keynote .faq-item p {
+  font-size: var(--type-body);
+  line-height: 1.62;
+}
+
+/* ============================
+   CINEMATIC QUOTES
+   ============================ */
+
+.site-shell--keynote .cinematic-break__quote p {
+  font-size: var(--type-h2);
   line-height: 1.35;
 }
 
-.site-shell--keynote .top-nav__panel-links a {
-  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.0625rem);
+/* ============================
+   PROOF / POSITIONING CARDS
+   ============================ */
+
+.site-shell--keynote .proof-card span,
+.site-shell--keynote .positioning-card span {
+  font-size: var(--type-lead);
+  line-height: 1.3;
+}
+
+.site-shell--keynote .positioning-card h3 {
+  font-size: var(--type-card-title);
+  line-height: 1.26;
+}
+
+.site-shell--keynote .positioning-card p,
+.site-shell--keynote .proof-card p {
+  font-size: var(--type-body);
+  line-height: 1.62;
+}
+
+/* ============================
+   SCREEN STORY CARDS
+   ============================ */
+
+.site-shell--keynote .screen-story-card__number {
+  font-size: var(--type-eyebrow);
   line-height: 1.4;
 }
 
-.site-shell--keynote .language-select select {
+.site-shell--keynote .screen-story-card__shift span,
+.site-shell--keynote .screen-story-card__link,
+.site-shell--keynote .problem-bridge__highlights li,
+.site-shell--keynote .product-scene__door-tags li {
   font-size: var(--type-small);
+  line-height: 1.5;
 }
 
-.site-shell--keynote .language-pills button {
-  font-size: var(--type-small);
+/* ============================
+   QUIET LINKS / SECONDARY CTAs
+   ============================ */
+
+.site-shell--keynote .keynote-link {
+  font-size: var(--type-button-quiet);
+  line-height: 1.4;
+}
+
+.site-shell--keynote .download-card--finale .secondary-action {
+  font-size: var(--type-button-quiet);
   line-height: 1.35;
 }
 
-/* CJK / Devanagari — slightly larger body for readability */
+/* —— Brand / logo —— */
+.site-shell--keynote .brand-mini,
+.site-shell--keynote .top-nav__bar .brand-mini {
+  font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem);
+  line-height: 1.2;
+  text-shadow: none;
+}
+
+/* ============================
+   LEGAL DOCUMENTS
+   ============================ */
+
+.site-shell--keynote .legal-document h1 {
+  font-size: var(--keynote-section);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.site-shell--keynote .legal-document-section-block h2 {
+  font-size: var(--type-card-title);
+  line-height: 1.26;
+}
+
+/* ============================
+   NAME STORY GLYPH
+   ============================ */
+
+.site-shell--keynote .origin-name-piece__glyph {
+  font-size: var(--type-card-title);
+  line-height: 1.2;
+}
+
+/* ============================
+   SPACING RHYTHM
+   ============================ */
+
+.site-shell--keynote .reveal-journey__intro,
+.site-shell--keynote .problem-bridge,
+.site-shell--keynote .beta-section,
+.site-shell--keynote .screen-story-section {
+  padding-block: var(--space-section);
+}
+
+.site-shell--keynote .reveal-step {
+  padding-block: var(--space-stack-6);
+}
+
+.site-shell--keynote .reveal-step__headline + .reveal-step__subline,
+.site-shell--keynote .reveal-journey__title + .reveal-journey__lead,
+.site-shell--keynote .problem-bridge__title + .problem-bridge__lead,
+.site-shell--keynote .origin-story__title + .origin-story__lead,
+.site-shell--keynote .beta-card h2 + p {
+  margin-top: var(--space-stack-2);
+}
+
+.site-shell--keynote .origin-block__paragraph + .origin-block__paragraph,
+.site-shell--keynote .origin-name-story__intro p + p {
+  margin-top: var(--space-stack-3);
+}
+
+.site-shell--keynote .origin-story__blocks {
+  gap: var(--space-stack-6);
+}
+
+/* ============================
+   MULTILINGUAL — CJK / Devanagari
+   ============================ */
+
 html:lang(zh) .site-shell--keynote,
 html:lang(ja) .site-shell--keynote,
 html:lang(hi) .site-shell--keynote {
-  --type-body: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
-  --type-body-relaxed: clamp(1.0625rem, 0.97rem + 0.22vw, 1.1875rem);
-  --type-small: clamp(0.875rem, 0.82rem + 0.18vw, 0.9375rem);
-  --type-eyebrow: clamp(0.75rem, 0.72rem + 0.12vw, 0.875rem);
+  --type-small: clamp(0.875rem, 0.84rem + 0.12vw, 0.96875rem);
+  --type-body: clamp(1rem, 0.97rem + 0.12vw, 1.09375rem);
+  --type-body-relaxed: clamp(1.0625rem, 1.01rem + 0.16vw, 1.15625rem);
+  --type-story-body: clamp(1.0625rem, 1.01rem + 0.2vw, 1.1875rem);
+  --type-nav: clamp(0.90625rem, 0.87rem + 0.12vw, 0.96875rem);
+  --type-button: clamp(0.96875rem, 0.93rem + 0.12vw, 1.03125rem);
+  --keynote-sub: clamp(1.0625rem, 1.01rem + 0.16vw, 1.1875rem);
 }
+
+/* CJK line-height lift for readability */
+html:lang(zh) .site-shell--keynote .origin-block__paragraph,
+html:lang(ja) .site-shell--keynote .origin-block__paragraph,
+html:lang(hi) .site-shell--keynote .origin-block__paragraph,
+html:lang(zh) .site-shell--keynote .origin-name-story__intro p,
+html:lang(ja) .site-shell--keynote .origin-name-story__intro p,
+html:lang(hi) .site-shell--keynote .origin-name-story__intro p,
+html:lang(zh) .site-shell--keynote .reveal-step__subline,
+html:lang(ja) .site-shell--keynote .reveal-step__subline,
+html:lang(hi) .site-shell--keynote .reveal-step__subline {
+  line-height: 1.82;
+}
+
+/* ============================
+   MULTILINGUAL — Long-word Latin scripts
+   ============================ */
+
+html:lang(de) .site-shell--keynote,
+html:lang(ru) .site-shell--keynote,
+html:lang(fr) .site-shell--keynote,
+html:lang(ro) .site-shell--keynote,
+html:lang(es) .site-shell--keynote,
+html:lang(pt) .site-shell--keynote {
+  --type-nav: clamp(0.84375rem, 0.81rem + 0.12vw, 0.90625rem);
+}
+
+html:lang(de) .site-shell--keynote .top-nav__links a,
+html:lang(ru) .site-shell--keynote .top-nav__links a,
+html:lang(fr) .site-shell--keynote .top-nav__links a,
+html:lang(ro) .site-shell--keynote .top-nav__links a,
+html:lang(es) .site-shell--keynote .top-nav__links a,
+html:lang(pt) .site-shell--keynote .top-nav__links a,
+html:lang(de) .site-shell--keynote .top-nav__panel-links a,
+html:lang(ru) .site-shell--keynote .top-nav__panel-links a,
+html:lang(fr) .site-shell--keynote .top-nav__panel-links a,
+html:lang(ro) .site-shell--keynote .top-nav__panel-links a,
+html:lang(es) .site-shell--keynote .top-nav__panel-links a,
+html:lang(pt) .site-shell--keynote .top-nav__panel-links a {
+  line-height: 1.42;
+}
+
+/* Long-word translations: prevent heading overflow */
+html:lang(de) .site-shell--keynote .hero-keynote__headline,
+html:lang(ru) .site-shell--keynote .hero-keynote__headline,
+html:lang(fr) .site-shell--keynote .hero-keynote__headline,
+html:lang(ro) .site-shell--keynote .hero-keynote__headline,
+html:lang(es) .site-shell--keynote .hero-keynote__headline,
+html:lang(pt) .site-shell--keynote .hero-keynote__headline,
+html:lang(de) .site-shell--keynote .reveal-step__headline,
+html:lang(ru) .site-shell--keynote .reveal-step__headline,
+html:lang(fr) .site-shell--keynote .reveal-step__headline,
+html:lang(ro) .site-shell--keynote .reveal-step__headline,
+html:lang(es) .site-shell--keynote .reveal-step__headline,
+html:lang(pt) .site-shell--keynote .reveal-step__headline {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* ============================
+   RESPONSIVE — Very small screens (≤375px)
+   ============================ */
 
 @media (max-width: 23.4375rem) {
   .site-shell--keynote {
-    --keynote-display: clamp(1.875rem, 1rem + 4.5vw, 2.35rem);
+    --keynote-display: clamp(1.7rem, 1.38rem + 1.2vw, 2rem);
+    --keynote-section: clamp(1.55rem, 1.22rem + 1.2vw, 1.85rem);
+    --type-body: clamp(0.9375rem, 0.92rem + 0.14vw, 0.96875rem);
+    --type-body-relaxed: clamp(0.96875rem, 0.95rem + 0.18vw, 1rem);
+    --type-story-body: clamp(1rem, 0.98rem + 0.2vw, 1.0625rem);
+    --type-button: clamp(0.875rem, 0.86rem + 0.08vw, 0.9375rem);
+    --btn-py: 9px;
+    --btn-px: 16px;
   }
 
   .site-shell--keynote .hero-keynote__headline,
   .site-shell--keynote .reveal-step__headline,
   .site-shell--keynote .problem-bridge__title,
-  .site-shell--keynote .mockup-bridge-card h3 {
+  .site-shell--keynote .mockup-bridge-card h3,
+  .site-shell--keynote .origin-story__title,
+  .site-shell--keynote .origin-name-story__title {
     line-height: 1.1;
+  }
+
+  .site-shell--keynote .hero-keynote__trust li,
+  .site-shell--keynote .reveal-step__orbit-tags li,
+  .site-shell--keynote .reveal-journey__orbit li,
+  .site-shell--keynote .site-footer-product a,
+  .site-shell--keynote .site-footer-nav a {
+    font-size: var(--type-caption);
+  }
+
+  .site-shell--keynote .language-cluster--compact .language-select select,
+  .site-shell--keynote .brand-mini {
+    font-size: var(--type-nav);
   }
 }
 
+/* ============================
+   RESPONSIVE — Tablet (768px–1099px)
+   ============================ */
+
 @media (min-width: 48rem) and (max-width: 68.6874rem) {
   .site-shell--keynote {
-    --keynote-display: clamp(2.35rem, 1.25rem + 3.8vw, 3.25rem);
-    --keynote-section: clamp(1.875rem, 1.1rem + 2.5vw, 2.75rem);
+    --keynote-display: clamp(2rem, 1.45rem + 1.4vw, 2.65rem);
+    --keynote-section: clamp(1.8rem, 1.28rem + 1.2vw, 2.25rem);
+  }
+}
+
+/* ============================
+   RESPONSIVE — Large desktop (≥1400px)
+   ============================ */
+
+@media (min-width: 87.5rem) {
+  .site-shell--keynote {
+    --keynote-display: 2.875rem;
+    --keynote-section: 2.5rem;
   }
 }

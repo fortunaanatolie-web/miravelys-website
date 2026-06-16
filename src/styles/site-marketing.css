@@ -13,8 +13,8 @@
   font-family: var(--font-serif);
   font-size: var(--keynote-section);
   font-weight: 500;
-  line-height: 1.12;
-  letter-spacing: -0.02em;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
   color: var(--mira-ivory);
   max-width: min(40rem, 100%);
   margin: 0 auto 20px;
@@ -94,7 +94,6 @@
 
 .hero-keynote__privacy-link {
   margin-top: 12px;
-  font-size: var(--type-small, 0.875rem);
 }
 
 /* —— Single-action sticky pill —— */
@@ -128,19 +127,16 @@
 }
 
 .site-footer strong {
-  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
   letter-spacing: -0.02em;
 }
 
 .site-footer p {
-  font-size: var(--type-small, 0.8125rem);
   color: var(--mira-text-muted);
   max-width: 32ch;
   margin: 0;
 }
 
 .site-footer small {
-  font-size: 0.75rem;
   color: var(--mira-text-muted);
   opacity: 0.7;
   margin-bottom: 12px;
@@ -195,7 +191,7 @@
   }
 
   .site-footer-nav a {
-    font-size: 0.6875rem;
+    padding: 8px 4px;
   }
 }
 
@@ -210,20 +206,11 @@
     padding-top: clamp(28px, 5vh, 40px);
   }
 
-  .problem-bridge__title {
-    font-size: clamp(1.5rem, 1.05rem + 1.8vw, 2.25rem);
-  }
-
-  .problem-bridge__lead {
-    font-size: 1rem;
-  }
-
   .problem-bridge__highlights {
     gap: 6px 10px;
   }
 
   .problem-bridge__highlights li {
-    font-size: 0.75rem;
     padding: 6px 12px;
   }
 }

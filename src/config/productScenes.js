@@ -1,6 +1,10 @@
 /**
  * Main scrollytelling product presentation scenes.
  * One fixed phone, one screen change per explanation.
+ *
+ * Step id (content key) → mockup screen:
+ * overview → today | writeInside → clear | separateLayers → truth
+ * patternsOverTime → mirror | calmFirst → calm | soundsAndSleep → rest | privacyControl → welcome
  */
 export const productSceneOrder = [
   { key: 'overview', mockupId: 'today', sectionId: 'reveal-overview', tone: 'gold', mood: 'warm' },

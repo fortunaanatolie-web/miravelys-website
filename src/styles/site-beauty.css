@@ -91,7 +91,6 @@
 .site-shell--keynote .faq-item summary {
   cursor: pointer;
   list-style: none;
-  font-size: clamp(1rem, 0.94rem + 0.2vw, 1.125rem);
   line-height: 1.45;
   color: var(--mira-text-primary);
 }
@@ -111,9 +110,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.6875rem;
   font-weight: 600;
-  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--mira-text-whisper);
 }
@@ -215,7 +212,6 @@
 .site-shell--keynote .positioning-card span {
   color: var(--mira-gold-soft);
   text-shadow: none;
-  font-size: 1.125rem;
   letter-spacing: 0.06em;
 }
 
@@ -318,7 +314,6 @@
   padding: 0 20px 18px;
   color: var(--mira-text-secondary);
   line-height: 1.62;
-  font-size: 0.9375rem;
 }
 
 /* —— Download finale atmosphere —— */

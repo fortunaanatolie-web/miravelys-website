@@ -2,6 +2,7 @@ import { ChevronRight, LockKeyhole, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { marketingRoutes } from '../../../config/marketingWiring';
 import { resolvePresentation } from '../../../i18n/presentationCopy';
+import { resolveTrustScreenshot } from '../../../lib/miravelysScreenshots';
 import PhoneMockup from '../primitives/PhoneMockup';
 import RevealOnScroll from '../primitives/RevealOnScroll';
 
@@ -9,7 +10,8 @@ const trustIcons = [LockKeyhole, ShieldCheck, LockKeyhole, ShieldCheck, LockKeyh
 
 export default function TrustSection({ t, lang, experience, onNavClick }) {
   const presentation = resolvePresentation(lang);
-  const mockupAlt = presentation.trust.title;
+  const screenshot = resolveTrustScreenshot(lang);
+  const mockupAlt = screenshot.alt || presentation.trust.title;
 
   return (
     <section id="privacy" className="trust-section content-section trust-section--presentation trust-section--split">
@@ -50,7 +52,7 @@ export default function TrustSection({ t, lang, experience, onNavClick }) {
             screens={[
               {
                 id: 'welcome',
-                asset: 'screen-welcome',
+                ...screenshot,
                 lang,
                 alt: mockupAlt,
               },

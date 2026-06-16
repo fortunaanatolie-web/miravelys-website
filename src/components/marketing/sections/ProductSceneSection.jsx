@@ -1,10 +1,10 @@
 import { ChevronRight } from 'lucide-react';
-import { mockupScreens } from '../../../config/mockupScreens';
+import { resolveMockupGalleryScreenshot } from '../../../lib/miravelysScreenshots';
 import DeviceFrame from '../primitives/DeviceFrame';
 import RevealOnScroll from '../primitives/RevealOnScroll';
 
-function findAsset(mockupId) {
-  return mockupScreens.find(screen => screen.id === mockupId)?.asset ?? 'screen-welcome';
+function findScreenshot(mockupId, lang) {
+  return resolveMockupGalleryScreenshot(mockupId, lang);
 }
 
 export default function ProductSceneSection({
@@ -17,7 +17,7 @@ export default function ProductSceneSection({
   onCtaClick,
   showDoors = false,
 }) {
-  const asset = findAsset(mockupId);
+  const screenshot = findScreenshot(mockupId, lang);
   const layoutClass = [
     'product-scene',
     'product-scene--keynote',
@@ -65,7 +65,7 @@ export default function ProductSceneSection({
             <DeviceFrame
               lang={lang}
               mockupId={mockupId}
-              asset={asset}
+              screenshot={screenshot}
               alt={scene.title}
               size="chapter"
               parallax

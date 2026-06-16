@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react';
 import { loadMockupScreenImage, resolveMockupScreenImage } from '../config/mockupScreens';
 
-export function useMockupScreenImage(lang, asset, src) {
-  const cached = src || (lang && asset ? resolveMockupScreenImage(lang, asset) : '');
-  const [resolved, setResolved] = useState(cached);
+export function useMockupScreenImage(lang, asset, explicitSrc) {
+  const resolvedExplicit = explicitSrc || undefined;
+  const [resolved, setResolved] = useState(() => {
+    if (resolvedExplicit) return resolvedExplicit;
+    return lang && asset ? resolveMockupScreenImage(lang, asset) : '';
+  });
 
   useEffect(() => {
-    if (src) {
-      setResolved(src);
+    if (resolvedExplicit) {
+      setResolved(resolvedExplicit);
       return undefined;
     }
     if (!lang || !asset) {
@@ -29,7 +32,7 @@ export function useMockupScreenImage(lang, asset, src) {
     return () => {
       cancelled = true;
     };
-  }, [src, lang, asset]);
+  }, [resolvedExplicit, lang, asset]);
 
   return resolved;
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { originBlockOrder } from '../../../config/originBlocks';
+import { resolveOriginBlockScreenshot } from '../../../lib/miravelysScreenshots';
 import { resolveNameStoryCopy } from '../../../i18n/nameStoryCopy';
 import MarketingCta from '../primitives/MarketingCta';
 import PhoneMockup from '../primitives/PhoneMockup';
@@ -112,7 +113,8 @@ function NameStorySection({ nameStory }) {
 
 function OriginStoryBlock({ config, block, blockLabel, lang, index }) {
   const reverse = index % 2 === 1;
-  const hasDevice = config.showMockup !== false && config.asset;
+  const screenshot = resolveOriginBlockScreenshot(config.key, lang);
+  const hasDevice = config.showMockup !== false && screenshot;
   const blockClass = [
     'origin-block',
     reverse && hasDevice ? 'origin-block--reverse' : '',
@@ -134,9 +136,9 @@ function OriginStoryBlock({ config, block, blockLabel, lang, index }) {
             screens={[
               {
                 id: config.mockupId,
-                asset: config.asset,
+                ...screenshot,
                 lang,
-                alt: blockLabel ?? config.key,
+                alt: screenshot.alt ?? blockLabel ?? config.key,
               },
             ]}
             size={config.isFinale ? 'hero' : 'chapter'}

@@ -84,7 +84,7 @@ export const experienceCopy = {
       "privacy": "No pressure, no spam tone, no emotional manipulation. Just product updates when Miravelys is ready."
     },
     "sticky": {
-      "appStore": "Join early access",
+      "appStore": "Download Miravelys",
       "mockups": "Inside the app",
       "explore": "Begin with one clear moment",
       "earlyAccess": "Join early access",
@@ -174,7 +174,7 @@ export const experienceCopy = {
       "mailtoBody": "Добавьте, пожалуйста, {email} в список раннего доступа Miravelys."
     },
     "sticky": {
-      "appStore": "Ранний доступ",
+      "appStore": "Скачать Miravelys",
       "mockups": "Внутри приложения",
       "explore": "Начни с одного ясного момента",
       "earlyAccess": "Ранний доступ",
@@ -264,7 +264,7 @@ export const experienceCopy = {
       "mailtoBody": "Te rog adaugă {email} la actualizările de acces timpuriu Miravelys."
     },
     "sticky": {
-      "appStore": "Acces timpuriu",
+      "appStore": "Descarcă Miravelys",
       "mockups": "În aplicație",
       "explore": "Începe cu un moment clar",
       "earlyAccess": "Acces timpuriu",
@@ -354,7 +354,7 @@ export const experienceCopy = {
       "mailtoBody": "Merci d'ajouter {email} aux mises à jour d'accès anticipé Miravelys."
     },
     "sticky": {
-      "appStore": "Accès anticipé",
+      "appStore": "Télécharger Miravelys",
       "mockups": "Dans l’app",
       "explore": "Commence par un moment clair",
       "earlyAccess": "Accès anticipé",
@@ -444,7 +444,7 @@ export const experienceCopy = {
       "mailtoBody": "कृपया {email} को Miravelys शीघ्र पहुँच अपडेट में जोड़ें।"
     },
     "sticky": {
-      "appStore": "Early access",
+      "appStore": "Miravelys डाउनलोड करें",
       "mockups": "ऐप के अंदर",
       "explore": "एक स्पष्ट पल से शुरू करें",
       "earlyAccess": "शीघ्र पहुँच",
@@ -534,7 +534,7 @@ export const experienceCopy = {
       "mailtoBody": "请将 {email} 加入 Miravelys 早期访问更新列表。"
     },
     "sticky": {
-      "appStore": "早期访问",
+      "appStore": "下载 Miravelys",
       "mockups": "应用内体验",
       "explore": "从一个清晰的时刻开始",
       "earlyAccess": "加入早期访问",
@@ -624,7 +624,7 @@ export const experienceCopy = {
       "mailtoBody": "Bitte füge {email} zu den Miravelys-Frühzugang-Updates hinzu."
     },
     "sticky": {
-      "appStore": "Früher Zugang",
+      "appStore": "Miravelys herunterladen",
       "mockups": "In der App",
       "explore": "Beginne mit einem klaren Moment",
       "earlyAccess": "Frühzugang",
@@ -714,7 +714,7 @@ export const experienceCopy = {
       "mailtoBody": "{email} を Miravelys の早期アクセス更新に追加してください。"
     },
     "sticky": {
-      "appStore": "早期アクセス",
+      "appStore": "Miravelys をダウンロード",
       "mockups": "アプリの中",
       "explore": "ひとつの明確な瞬間から始める",
       "earlyAccess": "早期アクセス",
@@ -804,7 +804,7 @@ export const experienceCopy = {
       "mailtoBody": "Por favor añade {email} a las actualizaciones de acceso anticipado de Miravelys."
     },
     "sticky": {
-      "appStore": "Acceso anticipado",
+      "appStore": "Descargar Miravelys",
       "mockups": "Dentro de la app",
       "explore": "Empieza con un momento claro",
       "earlyAccess": "Acceso anticipado",
@@ -894,7 +894,7 @@ export const experienceCopy = {
       "mailtoBody": "Por favor adiciona {email} às atualizações de acesso antecipado Miravelys."
     },
     "sticky": {
-      "appStore": "Acesso antecipado",
+      "appStore": "Baixar Miravelys",
       "mockups": "Dentro da app",
       "explore": "Começa com um momento claro",
       "earlyAccess": "Acesso antecipado",

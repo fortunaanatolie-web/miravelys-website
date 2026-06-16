@@ -5,17 +5,15 @@
 export const marketingAnchors = {
   top: 'top',
   works: 'works',
-  beta: 'beta',
+  download: 'download',
 };
 
 export const marketingCtas = {
-  primary: { anchor: 'beta', labelKey: 'earlyAccess', variant: 'primary' },
+  primary: { modal: true, labelKey: 'earlyAccess', variant: 'primary' },
   secondary: { anchor: 'works', labelKey: 'mockups', variant: 'link' },
   works: { anchor: 'works', labelKey: 'mockups', variant: 'link' },
-  appStore: { external: true, labelKey: 'appStore', variant: 'primary' },
+  appStore: { external: true, labelKey: 'appStore', variant: 'primary', modalFallback: true },
 };
-
-export const headerCtaRole = 'primary';
 
 export const marketingRoutes = {
   legalNotice: '/legal-notice',
@@ -34,5 +32,3 @@ export const headerNavItems = [
 export const mobileNavItems = [
   ...headerNavItems,
 ];
-
-export const headerCtaAnchor = marketingCtas.primary.anchor;

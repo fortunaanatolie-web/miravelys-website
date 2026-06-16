@@ -275,7 +275,7 @@
 }
 
 .legal-document-section-block h2 {
-  font-size: 1.15rem;
+  font-size: var(--type-card-title, 1.15rem);
   margin: 0 0 10px;
   color: var(--mira-gold);
 }
