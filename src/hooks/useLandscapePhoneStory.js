@@ -41,3 +41,24 @@ export function useLandscapePhoneStory() {
 
   return state;
 }
+
+const DESKTOP_STORY_MQ = '(min-width: 64.0625rem)';
+
+/** True when the sticky desktop scrollytelling layout is visible and should sync screens. */
+export function useStoryScrollytellingEnabled() {
+  const { compact } = useLandscapePhoneStory();
+  const [desktopWide, setDesktopWide] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia(DESKTOP_STORY_MQ).matches;
+  });
+
+  useEffect(() => {
+    const desktop = window.matchMedia(DESKTOP_STORY_MQ);
+    const update = () => setDesktopWide(desktop.matches);
+    update();
+    desktop.addEventListener('change', update);
+    return () => desktop.removeEventListener('change', update);
+  }, []);
+
+  return desktopWide || compact;
+}

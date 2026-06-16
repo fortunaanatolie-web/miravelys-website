@@ -127,7 +127,7 @@
   --story-phone-available: calc(var(--story-sticky-height) - var(--story-progress-block) - 12px);
   --story-phone-width: min(
     clamp(220px, 24vw, 340px),
-    calc(var(--story-phone-available) / var(--story-phone-stack-ratio))
+    calc(var(--story-phone-available) * 390 / 844)
   );
   --story-phone-max-height: calc(var(--story-phone-width) * 844 / 390);
   --story-step-min: clamp(520px, 86svh, 920px);

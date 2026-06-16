@@ -184,7 +184,9 @@
 /* Landscape phone — compact sticky story when height allows */
 @media (orientation: landscape) and (max-height: 520px) and (min-width: 640px) and (max-width: 64rem) {
   .product-story--landscape-compact .marketing-scroll-story__intro,
-  .product-story--landscape-compact .sticky-phone-story__intro {
+  .product-story--landscape-compact .sticky-phone-story__intro,
+  .sticky-phone-story .marketing-scroll-story__intro,
+  .sticky-phone-story .sticky-phone-story__intro {
     display: none;
   }
 
@@ -196,29 +198,26 @@
     display: none !important;
   }
 
-  .product-story--landscape-compact {
-    --story-sticky-top: calc(var(--header-top, 4px) + var(--header-bar-height, 2.875rem) + 8px);
-    --story-sticky-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  .sticky-phone-story,
+  .product-story {
+    --story-sticky-top: calc(var(--header-top, 4px) + var(--header-bar-height, 2.875rem) + 6px);
+    --story-sticky-bottom: 8px;
     --story-sticky-height: calc(100svh - var(--story-sticky-top) - var(--story-sticky-bottom));
-    --story-step-min: min(72svh, 520px);
-    --story-progress-block: 22px;
-    --landscape-phone-height: calc(var(--story-sticky-height) - var(--story-progress-block) - 8px);
-    --landscape-phone-width: min(
-      calc(var(--landscape-phone-height) * 390 / 844),
-      36vw,
-      260px
-    );
+    --story-step-min: 88svh;
+    --landscape-phone-height: calc(100svh - var(--story-sticky-top) - 10px);
+    --landscape-phone-width: calc(var(--landscape-phone-height) * 390 / 844);
+    --landscape-phone-scale: 1.34;
   }
 
   .desktop-story .marketing-scroll-story__layout,
   .desktop-story .sticky-phone-story__layout,
   .sticky-phone-story__layout--landscape {
     display: grid !important;
-    grid-template-columns: minmax(140px, auto) minmax(0, 1fr);
-    gap: clamp(14px, 3vw, 28px);
+    grid-template-columns: minmax(0, calc(var(--landscape-phone-width) * var(--landscape-phone-scale) + 20px)) minmax(0, 1fr);
+    gap: clamp(12px, 2.5vw, 22px);
     align-items: start;
-    padding-inline: clamp(14px, 3vw, 28px);
-    padding-block: 12px 28px;
+    padding-inline: clamp(12px, 2.5vw, 24px);
+    padding-block: 8px 20px;
     max-width: 100%;
     overflow: visible;
   }
@@ -228,8 +227,9 @@
     position: relative;
     align-self: start;
     min-height: auto;
-    width: min(var(--landscape-phone-width) + 24px, 38vw);
-    max-width: 280px;
+    width: 100%;
+    max-width: none;
+    overflow: visible;
   }
 
   .desktop-story .marketing-scroll-story__phone-inner {
@@ -239,26 +239,30 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 8px;
+    gap: 0;
     width: 100%;
     min-height: auto;
-    max-height: var(--story-sticky-height);
+    max-height: none;
     padding-block: 0;
+    overflow: visible;
   }
 
   .desktop-story .phone-mockup--scroll-story,
-  .desktop-story .phone-mockup--landscape-compact {
+  .desktop-story .phone-mockup--landscape-compact,
+  .marketing-scroll-story.reveal-journey .phone-mockup--landscape-compact {
     --phone-width: var(--landscape-phone-width) !important;
     width: var(--landscape-phone-width) !important;
-    max-width: 100%;
-    max-height: var(--landscape-phone-height);
+    max-width: none !important;
+    max-height: none !important;
     flex-shrink: 0;
-    transform: none !important;
     filter: none !important;
+    transform: scale(var(--landscape-phone-scale)) !important;
+    transform-origin: top center;
+    margin-inline: auto;
   }
 
   .desktop-story .phone-mockup--landscape-compact .phone-mockup__device {
-    max-height: var(--landscape-phone-height);
+    max-height: none !important;
     box-shadow:
       0 2px 8px rgba(0, 0, 0, 0.16),
       0 10px 28px rgba(0, 0, 0, 0.2),
@@ -266,7 +270,14 @@
   }
 
   .desktop-story .phone-mockup--landscape-compact .phone-mockup__screen-stack {
-    max-height: calc(var(--landscape-phone-height) - 12px);
+    max-height: none !important;
+    width: 100%;
+    aspect-ratio: 390 / 844;
+  }
+
+  .desktop-story .phone-mockup--landscape-compact .phone-mockup__screen {
+    opacity: 1 !important;
+    filter: none !important;
   }
 
   .desktop-story .phone-mockup--landscape-compact .phone-mockup__atmosphere,
@@ -280,25 +291,42 @@
     opacity: 0;
     filter: none !important;
     transform: none !important;
+    transition: opacity 420ms ease;
   }
 
   .desktop-story .phone-mockup--landscape-compact .phone-mockup__screen-stack--crossfade .phone-mockup__screen-frame--active {
-    opacity: 1;
+    opacity: 1 !important;
     filter: none !important;
     transform: none !important;
+    z-index: 2;
+  }
+
+  .desktop-story .marketing-scroll-story__phone-inner .journey-progress--compact {
+    position: relative;
+    z-index: 4;
+    margin: -20px 0 0;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(8, 10, 16, 0.42);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  [data-appearance='day'] .desktop-story .marketing-scroll-story__phone-inner .journey-progress--compact {
+    background: rgba(255, 252, 244, 0.72);
   }
 
   .desktop-story .marketing-scroll-story__text-column,
   .desktop-story .sticky-phone-story__steps {
-    padding-bottom: 24px;
+    padding-bottom: 16px;
     min-width: 0;
   }
 
   .desktop-story .story-step,
   .desktop-story .marketing-scroll-story .story-step {
     min-height: var(--story-step-min);
-    padding-block: clamp(16px, 4svh, 28px);
-    scroll-margin-top: calc(var(--story-sticky-top) + 8px);
+    padding-block: clamp(12px, 3svh, 24px);
+    scroll-margin-top: calc(var(--story-sticky-top) + 6px);
     text-align: left;
     opacity: 0.55;
   }

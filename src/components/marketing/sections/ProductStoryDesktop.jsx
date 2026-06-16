@@ -1,6 +1,9 @@
 import { useCallback, useMemo } from 'react';
 import { useActiveStep } from '../../../hooks/useActiveStep';
-import { useLandscapePhoneStory } from '../../../hooks/useLandscapePhoneStory';
+import {
+  useLandscapePhoneStory,
+  useStoryScrollytellingEnabled,
+} from '../../../hooks/useLandscapePhoneStory';
 import JourneyProgress from '../primitives/JourneyProgress';
 import StoryStep from '../primitives/StoryStep';
 import PhoneMockup from '../primitives/PhoneMockup';
@@ -9,9 +12,15 @@ import PhoneMockup from '../primitives/PhoneMockup';
  * Desktop / tablet landscape sticky-phone scrollytelling.
  */
 export default function ProductStoryDesktop({ steps, lang, presentation }) {
-  const { activeIndex, setStepRef, focusStep } = useActiveStep(steps.length);
-  const activeStep = steps[activeIndex] ?? steps[0];
   const { compact: landscapeCompact } = useLandscapePhoneStory();
+  const scrollytellingEnabled = useStoryScrollytellingEnabled();
+  const { activeIndex, setStepRef, focusStep } = useActiveStep(steps.length, {
+    enabled: scrollytellingEnabled,
+    preferCenterScroll: landscapeCompact,
+    rootMargin: landscapeCompact ? '-8% 0px -8% 0px' : '-25% 0px -25% 0px',
+    minRatio: landscapeCompact ? 0.05 : 0.18,
+  });
+  const activeStep = steps[activeIndex] ?? steps[0];
 
   const screens = useMemo(
     () =>

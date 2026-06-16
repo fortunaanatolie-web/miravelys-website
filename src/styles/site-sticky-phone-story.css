@@ -288,30 +288,30 @@
   }
 }
 
-/* Short viewports: shrink phone further */
-@media (max-height: 820px) and (min-width: 48rem) {
+/* Short viewports: shrink phone further (not landscape phones — they use --landscape-phone-width) */
+@media (max-height: 820px) and (min-width: 48rem) and (not ((orientation: landscape) and (max-height: 520px) and (max-width: 64rem))) {
   :root {
     --story-sticky-top: calc(var(--header-top, 12px) + var(--site-header-height) + 10px);
     --story-progress-block: 24px;
     --story-phone-available: calc(var(--story-sticky-height) - var(--story-progress-block) - 8px);
     --story-phone-width: min(
       clamp(200px, 22vw, 300px),
-      calc(var(--story-phone-available) / var(--story-phone-stack-ratio))
+      calc(var(--story-phone-available) * 390 / 844)
     );
   }
 }
 
-@media (max-height: 700px) and (min-width: 48rem) {
+@media (max-height: 700px) and (min-width: 48rem) and (not ((orientation: landscape) and (max-height: 520px) and (max-width: 64rem))) {
   :root {
     --story-phone-width: min(
       clamp(180px, 20vw, 260px),
-      calc(var(--story-phone-available) / var(--story-phone-stack-ratio))
+      calc(var(--story-phone-available) * 390 / 844)
     );
   }
 }
 
 /* Override legacy reveal-journey phone sizing */
-.marketing-scroll-story.reveal-journey .phone-mockup {
+.marketing-scroll-story.reveal-journey .phone-mockup:not(.phone-mockup--landscape-compact) {
   --phone-width: var(--story-phone-width) !important;
   transform: none !important;
 }
