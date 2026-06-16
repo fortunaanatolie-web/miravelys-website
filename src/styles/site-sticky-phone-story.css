@@ -252,8 +252,8 @@
   }
 }
 
-/* Tablet portrait & narrow: stacked sticky phone */
-@media (max-width: 68.6874rem) {
+/* Tablet portrait & narrow: desktop layout only (hidden below 1024px via .desktop-story) */
+@media (min-width: 64.0625rem) and (max-width: 68.6874rem) {
   .marketing-scroll-story__layout,
   .sticky-phone-story__layout {
     grid-template-columns: 1fr;
@@ -280,36 +280,11 @@
   }
 }
 
-/* Mobile */
-@media (max-width: 47.9375rem) {
-  :root {
-    --story-page-x: clamp(18px, 5vw, 24px);
-    --story-page-y: 48px;
-    --story-step-min: clamp(480px, 72svh, 720px);
-    --story-phone-width: min(68vw, 280px);
-    --story-phone-max-height: min(calc(48svh), calc(var(--story-phone-width) * 844 / 390));
-    --story-sticky-top: calc(var(--header-top, 12px) + var(--site-header-height) + 8px);
-  }
-
-  .marketing-scroll-story__layout,
-  .sticky-phone-story__layout {
-    display: block;
-    padding-inline: var(--story-page-x);
-    padding-block: 32px var(--story-page-y);
-  }
-
-  .marketing-scroll-story__phone-inner {
-    pointer-events: none;
-  }
-
-  .marketing-scroll-story__phone-inner .journey-progress--compact {
-    pointer-events: auto;
-  }
-
-  .marketing-scroll-story .story-step {
-    min-height: var(--story-step-min);
-    padding-block: clamp(40px, 10vh, 88px);
-    text-align: center;
+/* Mobile — desktop-story hidden; stacked cards in site-mobile-story.css */
+@media (max-width: 64rem) {
+  .desktop-story .marketing-scroll-story__layout,
+  .desktop-story .sticky-phone-story__layout {
+    display: none;
   }
 }
 

@@ -32,13 +32,17 @@ for (const language of languages) {
 
 const app = fs.readFileSync(new URL('../src/App.jsx', import.meta.url), 'utf8');
 const journey = fs.readFileSync(new URL('../src/components/marketing/sections/StickyPhoneStory.jsx', import.meta.url), 'utf8');
-const frame = fs.readFileSync(new URL('../src/components/marketing/primitives/RevealingDeviceFrame.jsx', import.meta.url), 'utf8');
+const desktop = fs.readFileSync(new URL('../src/components/marketing/sections/ProductStoryDesktop.jsx', import.meta.url), 'utf8');
+const mobile = fs.readFileSync(new URL('../src/components/marketing/sections/ProductStoryMobile.jsx', import.meta.url), 'utf8');
 const phone = fs.readFileSync(new URL('../src/components/marketing/primitives/PhoneMockup.jsx', import.meta.url), 'utf8');
+
 assert(!app.includes('ScreenStorySection'), 'Legacy separate screen story must not be mounted on the main page');
-assert(journey.includes('useActiveStep'), 'StickyPhoneStory must use useActiveStep');
-assert(journey.includes('activeIndex'), 'Journey must synchronize active text with phone screen');
-assert(journey.includes('PhoneMockup'), 'Journey must use one stable PhoneMockup for internal screen crossfade');
-assert(phone.includes('phone-mockup__screen-stack--crossfade'), 'Phone must crossfade internal screens');
+assert(journey.includes('ProductStoryDesktop'), 'StickyPhoneStory must render desktop layout');
+assert(journey.includes('ProductStoryMobile'), 'StickyPhoneStory must render mobile stacked cards');
+assert(desktop.includes('useActiveStep'), 'Desktop product story must use useActiveStep');
+assert(desktop.includes('activeIndex'), 'Desktop journey must synchronize active text with phone screen');
+assert(mobile.includes('mobile-product-card'), 'Mobile story must use stacked cards per step');
+assert(phone.includes('phone-mockup__screen-stack--crossfade'), 'Phone must crossfade internal screens on desktop');
 
 const forbidden = [/this image shows/i, /mockup near/i, /screenshot showing/i, /phone floating/i, /browser frame/i];
 for (const language of languages) {

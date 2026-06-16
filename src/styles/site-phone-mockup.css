@@ -43,6 +43,15 @@
   width: var(--phone-width, min(280px, 84vw));
 }
 
+.phone-mockup--mobile-card {
+  width: var(--phone-width, min(74vw, 280px));
+  max-width: 100%;
+}
+
+.phone-mockup--mobile-card .phone-mockup__screen {
+  object-fit: contain;
+}
+
 .phone-mockup:not(.phone-mockup--animate):not(.phone-mockup--scroll-linked) {
   transform: scale(calc(0.94 + var(--phone-clarity) * 0.06));
 }

@@ -1,0 +1,203 @@
+/**
+ * Mobile shell — header, hero, cookie banner, menu (real phone browsers).
+ */
+
+@media (max-width: 64rem) {
+  .site-shell--keynote {
+    --header-top: max(8px, env(safe-area-inset-top, 0px));
+    --header-bar-height: 3.375rem;
+    --header-pad-y: 6px;
+    --header-pad-x: 10px;
+    --page-gutter: 14px;
+    scroll-padding-top: calc(var(--header-bar-height) + var(--header-top) + 12px);
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: var(--header-top) 14px 8px;
+    background: linear-gradient(
+      to bottom,
+      rgba(9, 8, 14, 0.94) 0%,
+      rgba(9, 8, 14, 0.72) 55%,
+      rgba(9, 8, 14, 0) 100%
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  [data-appearance='day'] .site-header {
+    background: linear-gradient(
+      to bottom,
+      rgba(247, 241, 229, 0.94) 0%,
+      rgba(247, 241, 229, 0.72) 55%,
+      rgba(247, 241, 229, 0) 100%
+    );
+  }
+
+  .top-nav__bar {
+    min-height: var(--header-bar-height);
+    gap: 8px;
+    padding: var(--header-pad-y) var(--header-pad-x);
+    border-radius: 28px;
+    border-color: rgba(255, 255, 255, 0.08);
+    background: rgba(6, 10, 20, 0.78);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(16px) saturate(130%);
+    -webkit-backdrop-filter: blur(16px) saturate(130%);
+  }
+
+  [data-appearance='day'] .top-nav__bar {
+    background: rgba(255, 252, 248, 0.88);
+    border-color: rgba(154, 123, 66, 0.14);
+    box-shadow: 0 4px 18px rgba(18, 16, 14, 0.08);
+  }
+
+  .site-shell--keynote .brand-mini {
+    font-size: clamp(1.05rem, 4.8vw, 1.25rem);
+  }
+
+  .language-cluster--compact .language-select {
+    padding: 6px 8px;
+    min-height: 42px;
+  }
+
+  .language-cluster--compact .language-select select {
+    max-width: 3.25rem;
+    font-size: 0.8125rem;
+  }
+
+  .mobile-menu-button {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+  }
+
+  .top-nav__panel {
+    top: calc(var(--header-top) + var(--header-bar-height) + 8px);
+    width: calc(100% - 28px);
+    max-width: 520px;
+    max-height: calc(100dvh - var(--header-top) - var(--header-bar-height) - 20px);
+  }
+
+  .top-nav__panel-inner {
+    padding: 14px;
+    border-radius: 22px;
+  }
+
+  /* Hero — readable first screen, not covered by header */
+  .hero-section--keynote {
+    min-height: auto;
+    padding: clamp(24px, 6vw, 40px) clamp(18px, 5vw, 24px) clamp(36px, 10vw, 56px);
+  }
+
+  .hero-keynote__intro {
+    width: 100%;
+    max-width: min(100%, 36rem);
+  }
+
+  .hero-keynote__brand {
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
+    margin-bottom: 8px;
+  }
+
+  .hero-keynote__eyebrow {
+    font-size: clamp(0.78rem, 3.4vw, 0.9rem);
+    letter-spacing: 0.12em;
+  }
+
+  .hero-keynote__headline {
+    max-width: 14ch;
+    margin-inline: auto;
+    font-size: clamp(2rem, 9.5vw, 3.25rem);
+    line-height: 0.95;
+    letter-spacing: -0.045em;
+  }
+
+  .hero-keynote__subline {
+    max-width: 28rem;
+    margin-inline: auto;
+    font-size: clamp(1.02rem, 4.2vw, 1.2rem);
+    line-height: 1.48;
+  }
+
+  .hero-keynote__actions {
+    margin-top: clamp(20px, 5vw, 28px);
+  }
+
+  .hero-keynote__actions .keynote-cta {
+    width: min(100%, 320px);
+    min-height: 52px;
+    margin-inline: auto;
+  }
+
+  .hero-keynote__scroll-hint {
+    display: none;
+  }
+
+  /* Cookie — compact bottom sheet */
+  .cookie-banner {
+    left: 12px;
+    right: 12px;
+    bottom: max(12px, env(safe-area-inset-bottom, 0px));
+    transform: none;
+    width: auto;
+    max-width: 520px;
+    margin-inline: auto;
+    max-height: min(68svh, 480px);
+    overflow: auto;
+    padding: 16px;
+    border-radius: 24px;
+    z-index: 80;
+  }
+
+  .cookie-banner p {
+    font-size: 0.9rem;
+    line-height: 1.42;
+  }
+
+  .cookie-banner-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .cookie-banner-actions .primary-action,
+  .cookie-banner-actions .secondary-action {
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+    flex: none;
+  }
+
+  /* Sticky CTA sits above cookie when both visible */
+  .sticky-cta--visible {
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    z-index: 35;
+  }
+
+  body:has(.cookie-banner) .sticky-cta--visible {
+    bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (max-width: 23.4375rem) {
+  .site-header {
+    padding-inline: 10px;
+  }
+
+  .top-nav__bar {
+    border-radius: 24px;
+  }
+
+  .hero-keynote__headline {
+    max-width: none;
+    font-size: clamp(1.85rem, 10vw, 2.6rem);
+  }
+}

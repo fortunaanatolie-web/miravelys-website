@@ -17,6 +17,8 @@ import './styles/site-reveal.css';
 import './styles/site-motion.css';
 import './styles/site-breakpoints.css';
 import './styles/site-sticky-phone-story.css';
+import './styles/site-mobile-story.css';
+import './styles/site-mobile-shell.css';
 import './styles/site-screenshot-placeholder.css';
 import './styles/site-early-access-modal.css';
 import './styles/site-marketing.css';

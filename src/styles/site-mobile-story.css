@@ -1,0 +1,179 @@
+/**
+ * Mobile product story — stacked cards below 1024px.
+ * Desktop sticky layout hidden; no position:sticky on phone.
+ */
+
+.desktop-story {
+  display: block;
+}
+
+.mobile-story {
+  display: none;
+}
+
+@media (max-width: 64rem) {
+  .desktop-story {
+    display: none !important;
+  }
+
+  .mobile-story {
+    display: block;
+  }
+
+  .product-story .marketing-scroll-story__intro,
+  .product-story .sticky-phone-story__intro {
+    padding: clamp(32px, 8vw, 48px) clamp(18px, 5vw, 24px) clamp(16px, 4vw, 24px);
+  }
+
+  .product-story .reveal-journey__title {
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
+    line-height: 1.12;
+  }
+
+  .product-story .reveal-journey__lead {
+    font-size: clamp(1rem, 4vw, 1.125rem);
+    line-height: 1.5;
+    max-width: 32rem;
+    margin-inline: auto;
+  }
+}
+
+.mobile-product-story {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(56px, 14vw, 88px);
+  padding: clamp(24px, 6vw, 40px) clamp(18px, 5vw, 24px) clamp(48px, 12vw, 72px);
+}
+
+.mobile-product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(24px, 7vw, 36px);
+  text-align: center;
+  scroll-margin-top: calc(var(--header-top, 12px) + var(--header-bar-height, 52px) + 16px);
+}
+
+.mobile-product-card__media {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-product-card__content {
+  width: min(100%, 560px);
+  margin-inline: auto;
+}
+
+.mobile-product-card__count {
+  margin: 0 0 12px;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mira-text-whisper);
+  opacity: 0.72;
+}
+
+.mobile-product-card__eyebrow {
+  margin: 0 0 12px;
+  font-size: clamp(0.76rem, 3.2vw, 0.9rem);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mira-text-whisper);
+}
+
+.mobile-product-card__title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(1.65rem, 7.5vw, 2.35rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: var(--mira-ivory);
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+.mobile-product-card__body {
+  margin: clamp(14px, 4vw, 18px) auto 0;
+  max-width: 31rem;
+  font-size: clamp(1rem, 4.1vw, 1.125rem);
+  line-height: 1.52;
+  color: var(--mira-text-secondary);
+}
+
+.mobile-product-card__whisper {
+  margin: 14px auto 0;
+  max-width: 28rem;
+  font-size: clamp(0.9375rem, 3.8vw, 1.03125rem);
+  line-height: 1.55;
+  font-style: italic;
+  color: var(--mira-text-whisper);
+}
+
+.mobile-product-card__doors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+}
+
+.mobile-product-card__doors li {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.8125rem;
+  color: var(--mira-text-secondary);
+}
+
+[data-appearance='day'] .mobile-product-card__title {
+  color: rgba(18, 16, 14, 0.92);
+}
+
+[data-appearance='day'] .mobile-product-card__body {
+  color: rgba(18, 16, 14, 0.68);
+}
+
+[data-appearance='day'] .mobile-product-card__doors li {
+  border-color: rgba(154, 123, 66, 0.16);
+  color: rgba(18, 16, 14, 0.62);
+}
+
+/* Mobile-card phone mockup — compact, readable, no heavy atmosphere */
+.phone-mockup--mobile-card {
+  --phone-width: min(74vw, 280px);
+  width: var(--phone-width);
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+.phone-mockup--mobile-card .phone-mockup__device {
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.18),
+    0 12px 32px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.phone-mockup--mobile-card .phone-mockup__screen {
+  object-fit: contain;
+}
+
+@media (max-width: 23.4375rem) {
+  .phone-mockup--mobile-card {
+    --phone-width: min(78vw, 260px);
+  }
+
+  .mobile-product-card__title {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+}
+
+@media (min-width: 64.0625rem) {
+  .mobile-story {
+    display: none !important;
+  }
+}

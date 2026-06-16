@@ -8,6 +8,7 @@ export const PHONE_MOCKUP_SIZES = {
   chapter: '(min-width: 981px) 400px, (min-width: 640px) 72vw, 88vw',
   gallery: '(min-width: 981px) 220px, (min-width: 640px) 42vw, 78vw',
   compact: '(min-width: 981px) 280px, (min-width: 640px) 56vw, 84vw',
+  'mobile-card': 'min(74vw, 280px)',
 };
 
 function MockupScreenImage({ screen, sizes, priorityFirst, index, isActive, isStack, activeIndex }) {

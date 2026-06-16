@@ -15,6 +15,9 @@ const topNav = fs.readFileSync(new URL('../src/components/marketing/MarketingTop
 const stickyCta = fs.readFileSync(new URL('../src/components/marketing/MarketingStickyCta.jsx', import.meta.url), 'utf8');
 const hero = fs.readFileSync(new URL('../src/components/marketing/sections/HeroSection.jsx', import.meta.url), 'utf8');
 const revealJourney = fs.readFileSync(new URL('../src/components/marketing/sections/StickyPhoneStory.jsx', import.meta.url), 'utf8');
+const storyDesktop = fs.readFileSync(new URL('../src/components/marketing/sections/ProductStoryDesktop.jsx', import.meta.url), 'utf8');
+const storyMobile = fs.readFileSync(new URL('../src/components/marketing/sections/ProductStoryMobile.jsx', import.meta.url), 'utf8');
+const mobileCss = fs.readFileSync(new URL('../src/styles/site-mobile-story.css', import.meta.url), 'utf8');
 const revealFrame = fs.readFileSync(new URL('../src/components/marketing/primitives/RevealingDeviceFrame.jsx', import.meta.url), 'utf8');
 const footer = fs.readFileSync(new URL('../src/components/marketing/MarketingSiteFooter.jsx', import.meta.url), 'utf8');
 
@@ -28,10 +31,16 @@ assert(!app.includes('PurposeExplanationFlow'), 'Purpose explanation must be int
 assert(router.includes('path="/story"') && router.includes('FounderStoryPage'), 'Router must expose /story FounderStoryPage');
 assert(revealJourney.includes('id="works"'), 'Scrollytelling flow must expose id="works"');
 assert(revealJourney.includes('marketing-scroll-story'), 'Scrollytelling must use marketing-scroll-story layout');
-assert(revealJourney.includes('phone-mockup--scroll-story'), 'Phone must use scroll-story bounded variant');
-assert(revealJourney.includes('activeIndex={activeIndex}'), 'Phone screen must be synchronized to active scroll step');
-assert(revealJourney.includes('PhoneMockup'), 'Sticky phone must use one stable PhoneMockup instance');
-assert(!revealJourney.includes('RevealingDeviceFrame'), 'Sticky phone story must mount PhoneMockup directly without remounting per step');
+assert(revealJourney.includes('desktop-story'), 'Product story must split desktop/mobile layouts');
+assert(revealJourney.includes('mobile-story'), 'Product story must split desktop/mobile layouts');
+assert(revealJourney.includes('ProductStoryDesktop'), 'StickyPhoneStory must render desktop sticky layout');
+assert(revealJourney.includes('ProductStoryMobile'), 'StickyPhoneStory must render mobile stacked cards');
+assert(storyDesktop.includes('phone-mockup--scroll-story'), 'Desktop phone must use scroll-story variant');
+assert(storyDesktop.includes('activeIndex={activeIndex}'), 'Desktop phone screen must sync to active scroll step');
+assert(storyMobile.includes('mobile-product-card'), 'Mobile story must use stacked product cards');
+assert(storyMobile.includes('phone-mockup--mobile-card'), 'Mobile cards must use compact phone mockup mode');
+assert(mobileCss.includes('.desktop-story'), 'Mobile CSS must hide desktop sticky layout below 1024px');
+assert(!storyMobile.includes('useActiveStep'), 'Mobile story must not use scroll-sync observer');
 assert(revealFrame.includes('screens = useMemo'), 'RevealingDeviceFrame must build one screen stack for crossfade changes');
 assert(!app.includes('BetaSection'), 'Main page must not include legacy beta section block');
 assert(app.includes('DownloadSection'), 'Main page must keep a clear final download CTA');
