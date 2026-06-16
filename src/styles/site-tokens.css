@@ -93,6 +93,27 @@
   --touch-min: 44px;
   --page-gutter: clamp(16px, 4vw, 32px);
 
+  /* —— Overlay stacking —— */
+  --z-sticky-cta: 35;
+  --z-header: 50;
+  --z-cookie: 70;
+  --z-mobile-menu-backdrop: 90;
+  --z-mobile-menu-panel: 91;
+  --z-modal: 100;
+
+  /* —— Mobile nav panel (fixed palette — not swapped in day mode) —— */
+  --nav-panel-bg: rgba(17, 24, 34, 0.97);
+  --nav-panel-text: rgba(255, 248, 232, 0.94);
+  --nav-panel-text-muted: rgba(255, 248, 232, 0.72);
+  --nav-panel-border: rgba(255, 248, 232, 0.14);
+  --nav-overlay-bg: rgba(12, 14, 18, 0.42);
+
+  /* —— Mobile header chrome (readable on light day surfaces) —— */
+  --header-mobile-ink: rgba(38, 34, 28, 0.9);
+  --header-mobile-ink-soft: rgba(38, 34, 28, 0.78);
+  --header-mobile-surface: rgba(255, 252, 244, 0.82);
+  --header-mobile-border: rgba(70, 58, 42, 0.14);
+
   /* —— Scroll story (sticky phone) —— */
   --site-header-height: var(--header-bar-height, 3.25rem);
   --story-page-x: clamp(20px, 5vw, 80px);

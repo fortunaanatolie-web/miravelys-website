@@ -66,7 +66,8 @@ assert(gallery.includes('mockup-screen-select'), 'Mockup gallery must use select
 assert(gallery.includes('PhoneMockup'), 'Mockup gallery must use PhoneMockup component');
 assert(topNav.includes('headerNavItems'), 'MarketingTopNav must use simplified headerNavItems');
 assert(topNav.includes('aria-expanded={menuOpen}'), 'Mobile menu must expose expanded state');
-assert(topNav.includes('Escape'), 'Mobile menu must close on Escape');
+assert(topNav.includes('mobile-menu-panel'), 'Mobile menu must use visible mobile-menu-panel structure');
+assert(topNav.includes('site-menu-open'), 'Mobile menu must toggle body class for overlay conflicts');
 assert(!/<Link[^>]*>[\s\S]*<button/i.test(app), 'Do not nest buttons inside router links in App.jsx');
 
 const crossBrowserCss = fs.readFileSync(

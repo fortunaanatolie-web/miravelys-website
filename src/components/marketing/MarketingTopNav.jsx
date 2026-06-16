@@ -19,18 +19,47 @@ export default function MarketingTopNav({
 }) {
   const panelId = useId();
   const menuButtonRef = useRef(null);
+  const panelRef = useRef(null);
+  const closeButtonRef = useRef(null);
   const headerCopy = resolveHeaderCopy(lang);
+
+  useEffect(() => {
+    document.body.classList.toggle('site-menu-open', menuOpen);
+    return () => document.body.classList.remove('site-menu-open');
+  }, [menuOpen]);
 
   useEffect(() => {
     if (!menuOpen) return undefined;
 
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+    closeButtonRef.current?.focus();
 
     const onKeyDown = event => {
       if (event.key === 'Escape') {
         setMenuOpen(false);
         menuButtonRef.current?.focus();
+      }
+
+      if (event.key !== 'Tab' || !panelRef.current) return;
+
+      const focusables = [
+        ...panelRef.current.querySelectorAll(
+          'a[href], button:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        ),
+      ].filter(node => node.getAttribute('aria-hidden') !== 'true');
+
+      if (!focusables.length) return;
+
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
       }
     };
 
@@ -41,7 +70,10 @@ export default function MarketingTopNav({
     };
   }, [menuOpen, setMenuOpen]);
 
-  const closeMenu = () => setMenuOpen(false);
+  const closeMenu = () => {
+    setMenuOpen(false);
+    menuButtonRef.current?.focus();
+  };
 
   const handleNavClick = (event, sectionId) => {
     onNavClick(event, sectionId);
@@ -85,7 +117,7 @@ export default function MarketingTopNav({
           </a>
 
           <div className="top-nav__links nav-links" aria-label={headerCopy.menuLabel}>
-            {headerNavItems.map(item => (
+            {headerNavItems.map(item =>
               item.route ? (
                 <Link key={item.route} to={item.route}>
                   {t.nav[item.key]}
@@ -95,7 +127,7 @@ export default function MarketingTopNav({
                   {t.nav[item.key]}
                 </a>
               )
-            ))}
+            )}
           </div>
 
           <div className="top-nav__actions">
@@ -131,7 +163,7 @@ export default function MarketingTopNav({
       {menuOpen ? (
         <button
           type="button"
-          className="top-nav__backdrop"
+          className="top-nav__backdrop mobile-menu-backdrop"
           aria-label={headerCopy.closeMenu}
           onClick={closeMenu}
         />
@@ -139,15 +171,29 @@ export default function MarketingTopNav({
 
       <div
         id={panelId}
-        className={`top-nav__panel ${menuOpen ? 'top-nav__panel--open' : ''}`}
+        ref={panelRef}
+        className={`top-nav__panel mobile-menu-panel ${menuOpen ? 'top-nav__panel--open mobile-menu-panel--open' : ''}`}
         role="dialog"
         aria-modal="true"
         aria-label={headerCopy.menuLabel}
         aria-hidden={!menuOpen}
         hidden={!menuOpen}
       >
-        <div className="top-nav__panel-inner">
-          <ul className="top-nav__panel-links">
+        <div className="top-nav__panel-inner mobile-menu-panel__inner">
+          <div className="mobile-menu-panel__top">
+            <span className="mobile-menu-panel__brand">Miravelys</span>
+            <button
+              ref={closeButtonRef}
+              type="button"
+              className="mobile-menu-panel__close"
+              aria-label={headerCopy.closeModal ?? headerCopy.closeMenu}
+              onClick={closeMenu}
+            >
+              <X size={18} aria-hidden="true" />
+            </button>
+          </div>
+
+          <ul className="top-nav__panel-links mobile-menu-panel__links">
             {mobileNavItems.map(item => (
               <li key={item.route ?? item.id}>
                 {item.route ? (
@@ -162,13 +208,17 @@ export default function MarketingTopNav({
               </li>
             ))}
           </ul>
-          <div className="top-nav__panel-actions">
+
+          <div className="top-nav__panel-actions mobile-menu-panel__actions">
             <MarketingCta
               role="primary"
               experience={experience}
               onNavClick={handleNavClick}
-              onEarlyAccessClick={onEarlyAccessClick}
-              className="top-nav__panel-cta"
+              onEarlyAccessClick={() => {
+                closeMenu();
+                onEarlyAccessClick?.();
+              }}
+              className="top-nav__panel-cta mobile-menu-panel__cta"
             />
           </div>
         </div>

@@ -14,7 +14,7 @@
 .site-header {
   position: sticky;
   top: var(--header-top);
-  z-index: 50;
+  z-index: var(--z-header, 50);
   width: min(980px, calc(100% - var(--page-gutter, 20px) * 2));
   margin: 0 auto;
   transform: translateY(0);
@@ -145,7 +145,7 @@
 .top-nav__backdrop {
   position: fixed;
   inset: 0;
-  z-index: 48;
+  z-index: var(--z-mobile-menu-backdrop, 90);
   margin: 0;
   padding: 0;
   border: none;
@@ -157,7 +157,7 @@
 
 .top-nav__panel {
   position: fixed;
-  z-index: 49;
+  z-index: var(--z-mobile-menu-panel, 91);
   top: calc(var(--header-top) + var(--header-bar-height) + 10px);
   left: 50%;
   transform: translateX(-50%) translateY(-8px);
@@ -180,11 +180,12 @@
 .top-nav__panel-inner {
   padding: clamp(16px, 3vw, 22px);
   border-radius: clamp(20px, 4vw, 28px);
-  border: 1px solid var(--mira-glass-border);
-  background: rgba(6, 10, 22, 0.94);
+  border: 1px solid var(--nav-panel-border, rgba(255, 248, 232, 0.14));
+  background: var(--nav-panel-bg, rgba(17, 24, 34, 0.97));
   backdrop-filter: blur(24px) saturate(150%);
   -webkit-backdrop-filter: blur(24px) saturate(150%);
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+  color: var(--nav-panel-text, rgba(255, 248, 232, 0.94));
 }
 
 .top-nav__panel-links {
@@ -203,7 +204,7 @@
   border-radius: 14px;
   font-weight: 500;
   line-height: 1.35;
-  color: var(--mira-text-primary);
+  color: var(--nav-panel-text, rgba(255, 248, 232, 0.94));
   text-decoration: none;
   border: 1px solid transparent;
   transition:

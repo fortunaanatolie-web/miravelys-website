@@ -123,24 +123,25 @@
 }
 
 .mobile-product-card__doors li {
-  padding: 6px 12px;
+  padding: 8px 14px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(70, 58, 42, 0.22);
+  background: rgba(255, 252, 244, 0.55);
   font-size: 0.8125rem;
-  color: var(--mira-text-secondary);
-}
-
-[data-appearance='day'] .mobile-product-card__title {
-  color: rgba(18, 16, 14, 0.92);
-}
-
-[data-appearance='day'] .mobile-product-card__body {
-  color: rgba(18, 16, 14, 0.68);
+  font-weight: 500;
+  color: rgba(38, 34, 28, 0.82);
 }
 
 [data-appearance='day'] .mobile-product-card__doors li {
-  border-color: rgba(154, 123, 66, 0.16);
-  color: rgba(18, 16, 14, 0.62);
+  background: rgba(255, 252, 244, 0.88);
+  border-color: rgba(154, 123, 66, 0.3);
+  color: rgba(38, 34, 28, 0.86);
+}
+
+[data-appearance='evening'] .mobile-product-card__doors li {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(244, 239, 230, 0.82);
 }
 
 /* Mobile-card phone mockup — compact, readable, no heavy atmosphere */
@@ -169,6 +170,68 @@
 
   .mobile-product-card__title {
     font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+}
+
+[data-appearance='day'] .mobile-product-card__title {
+  color: rgba(18, 16, 14, 0.92);
+}
+
+[data-appearance='day'] .mobile-product-card__body {
+  color: rgba(18, 16, 14, 0.68);
+}
+
+/* Landscape phone — compact sticky story when height allows */
+@media (orientation: landscape) and (max-height: 520px) and (min-width: 640px) and (max-width: 64rem) {
+  .desktop-story {
+    display: block !important;
+  }
+
+  .mobile-story {
+    display: none !important;
+  }
+
+  .desktop-story .marketing-scroll-story__layout,
+  .desktop-story .sticky-phone-story__layout {
+    display: grid;
+    grid-template-columns: minmax(170px, 0.72fr) minmax(280px, 1.28fr);
+    gap: clamp(16px, 3vw, 32px);
+    padding-inline: clamp(16px, 3vw, 28px);
+    padding-block: 20px 36px;
+    max-width: 100%;
+  }
+
+  .desktop-story .marketing-scroll-story__phone-inner {
+    top: calc(var(--header-top) + var(--header-bar-height) + 6px);
+    max-height: calc(100svh - var(--header-top) - var(--header-bar-height) - 16px);
+  }
+
+  .desktop-story .phone-mockup--scroll-story {
+    --phone-width: min(24vw, calc((100svh - 96px) * 390 / 844), 220px);
+    width: var(--phone-width);
+  }
+
+  .desktop-story .story-step,
+  .desktop-story .marketing-scroll-story .story-step {
+    min-height: 78svh;
+    padding-block: 20px;
+    text-align: left;
+  }
+
+  .desktop-story .story-step__content,
+  .desktop-story .marketing-scroll-story .story-step__content {
+    text-align: left;
+    margin-inline: 0;
+  }
+
+  .desktop-story .story-step__headline {
+    font-size: clamp(1.5rem, 4.5vw, 2.4rem);
+    line-height: 1.02;
+  }
+
+  .desktop-story .story-step__body {
+    font-size: clamp(0.92rem, 2.2vw, 1.05rem);
+    line-height: 1.42;
   }
 }
 

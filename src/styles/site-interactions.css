@@ -142,12 +142,12 @@
 
 /* —— Sticky CTA + cookie banner stacking —— */
 .sticky-cta {
-  z-index: 35;
+  z-index: var(--z-sticky-cta, 35);
   bottom: calc(12px + env(safe-area-inset-bottom, 0px));
 }
 
 .cookie-banner {
-  z-index: 45;
+  z-index: var(--z-cookie, 70);
   bottom: calc(72px + env(safe-area-inset-bottom, 0px));
   width: min(720px, calc(100% - var(--page-gutter, 16px) * 2));
 }
