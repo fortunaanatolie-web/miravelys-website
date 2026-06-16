@@ -1,9 +1,5 @@
 import { useEffect, useState } from 'react';
 import { originBlockOrder } from '../../../config/originBlocks';
-import { resolveOriginBlockScreenshot } from '../../../lib/miravelysScreenshots';
-import { resolveNameStoryCopy } from '../../../i18n/nameStoryCopy';
-import MarketingCta from '../primitives/MarketingCta';
-import PhoneMockup from '../primitives/PhoneMockup';
 import RevealOnScroll from '../primitives/RevealOnScroll';
 
 function OriginBlockContent({ block, config, blockLabel }) {
@@ -66,60 +62,23 @@ function OriginBlockContent({ block, config, blockLabel }) {
           ))}
         </ul>
       ) : null}
+      {block.closing?.length ? (
+        <div className="origin-block__closing">
+          {block.closing.map(paragraph => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 }
 
 
-function NameStorySection({ nameStory }) {
-  if (!nameStory) return null;
-
-  return (
-    <RevealOnScroll className="origin-name-story" variant="soft" delay={80}>
-      <div className="origin-name-story__halo" aria-hidden="true" />
-      <div className="origin-name-story__header">
-        <p className="origin-name-story__eyebrow">{nameStory.eyebrow}</p>
-        <h3 className="origin-name-story__title">{nameStory.title}</h3>
-        <div className="origin-name-story__intro">
-          {nameStory.intro?.map(paragraph => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
-      </div>
-
-      <div className="origin-name-story__pieces" aria-label={nameStory.title}>
-        {nameStory.pieces?.map(piece => (
-          <article className="origin-name-piece" key={piece.name}>
-            <span className="origin-name-piece__glyph">{piece.name}</span>
-            <div className="origin-name-piece__copy">
-              {piece.body.map(paragraph => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
-          </article>
-        ))}
-      </div>
-
-      <div className="origin-name-story__closing">
-        {nameStory.closing?.map(paragraph => (
-          <p key={paragraph}>{paragraph}</p>
-        ))}
-      </div>
-
-      <p className="origin-name-story__final">{nameStory.finalStatement}</p>
-    </RevealOnScroll>
-  );
-}
-
-function OriginStoryBlock({ config, block, blockLabel, lang, index }) {
-  const reverse = index % 2 === 1;
-  const screenshot = resolveOriginBlockScreenshot(config.key, lang);
-  const hasDevice = config.showMockup !== false && screenshot;
+function OriginStoryBlock({ config, block, blockLabel, index }) {
   const blockClass = [
     'origin-block',
-    reverse && hasDevice ? 'origin-block--reverse' : '',
     config.isFinale ? 'origin-block--finale' : '',
-    hasDevice ? 'origin-block--split' : 'origin-block--prose',
+    'origin-block--prose',
   ]
     .filter(Boolean)
     .join(' ');
@@ -127,36 +86,15 @@ function OriginStoryBlock({ config, block, blockLabel, lang, index }) {
   return (
     <article className={blockClass} data-origin-block={config.key}>
       <div className="origin-block__backdrop" aria-hidden="true" />
-      <RevealOnScroll className="origin-block__copy" variant="soft" delay={reverse ? 80 : 0}>
+      <RevealOnScroll className="origin-block__copy" variant="soft" delay={index % 2 ? 80 : 0}>
         <OriginBlockContent block={block} config={config} blockLabel={blockLabel} />
       </RevealOnScroll>
-      {hasDevice ? (
-        <RevealOnScroll className="origin-block__device" variant="rise" delay={reverse ? 0 : 80}>
-          <PhoneMockup
-            screens={[
-              {
-                id: config.mockupId,
-                ...screenshot,
-                lang,
-                alt: screenshot.alt ?? blockLabel ?? config.key,
-              },
-            ]}
-            size={config.isFinale ? 'hero' : 'chapter'}
-            mood={config.mood}
-            atmosphere
-            reflection={config.isFinale}
-            floorShadow
-            ariaLabel={blockLabel ?? config.key}
-          />
-        </RevealOnScroll>
-      ) : null}
     </article>
   );
 }
 
-export default function OriginStorySection({ lang, experience, onNavClick }) {
+export default function OriginStorySection({ lang, onNavClick, onEarlyAccessClick }) {
   const [origin, setOrigin] = useState(null);
-  const nameStory = resolveNameStoryCopy(lang);
 
   useEffect(() => {
     let cancelled = false;
@@ -211,19 +149,23 @@ export default function OriginStorySection({ lang, experience, onNavClick }) {
               config={config}
               block={block}
               blockLabel={blockLabel}
-              lang={lang}
               index={index}
             />
           );
         })}
       </div>
 
-      <NameStorySection nameStory={nameStory} />
-
       <RevealOnScroll className="origin-story__cta" variant="soft">
-        <MarketingCta role="secondary" experience={experience} onNavClick={onNavClick}>
-          {origin.cta}
-        </MarketingCta>
+        <button type="button" className="keynote-cta keynote-cta--primary" onClick={onEarlyAccessClick}>
+          {origin.ctaPrimary}
+        </button>
+        <a
+          href="#works"
+          className="keynote-link"
+          onClick={event => onNavClick?.(event, 'works')}
+        >
+          {origin.ctaSecondary}
+        </a>
       </RevealOnScroll>
     </section>
   );

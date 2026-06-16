@@ -1,64 +1,48 @@
+import { getScreenshotPath } from '../../../lib/miravelysScreenshots';
 import PhoneMockup from '../primitives/PhoneMockup';
+import ProductStoryStepContent from '../primitives/ProductStoryStepContent';
 
-/**
- * Mobile-native stacked product story — one screenshot + copy per card, no sticky scroll sync.
- */
-export default function ProductStoryMobile({ steps, lang }) {
+function mobileScreenForStep(step, locale) {
+  return {
+    id: step.id,
+    group: 'sticky-phone',
+    code: step.screenshotCode,
+    lang: locale,
+    locale,
+    publicPath: getScreenshotPath(locale, 'sticky-phone', step.screenshotCode),
+    legacyAsset: step.screen?.legacyAsset ?? null,
+    alt: step.alt,
+  };
+}
+
+export default function ProductStoryMobile({ steps, locale }) {
   const stepTotal = steps.length;
 
   return (
     <div className="mobile-product-story">
-      {steps.map((step, index) => {
-        const stepLabel = `${String(index + 1).padStart(2, '0')} / ${String(stepTotal).padStart(2, '0')}`;
-        const showDoors = step.id === 'calmFirst' && step.doors?.length;
-        const screen = { id: step.id, ...step.screen, lang };
+      {steps.map((step, index) => (
+        <article
+          key={step.id}
+          id={step.sectionId || undefined}
+          className="mobile-product-card"
+          data-step-index={index}
+          data-journey-mood={step.mood ?? 'default'}
+        >
+          <div className="mobile-product-card__media">
+            <PhoneMockup
+              screens={[mobileScreenForStep(step, locale)]}
+              activeIndex={0}
+              variant="mobile-card"
+              className="phone-mockup--mobile-card"
+              ariaLabel={step.alt || step.title}
+            />
+          </div>
 
-        return (
-          <article
-            key={step.id}
-            id={step.sectionId || undefined}
-            className="mobile-product-card"
-            data-step-index={index}
-            data-journey-mood={step.mood ?? 'default'}
-          >
-            <div className="mobile-product-card__media">
-              <PhoneMockup
-                screens={[screen]}
-                activeIndex={0}
-                size="mobile-card"
-                mood={step.mood}
-                priorityFirst={index < 2}
-                glow={false}
-                atmosphere={false}
-                reflection={false}
-                floorShadow={false}
-                className="phone-mockup--mobile-card"
-                ariaLabel={step.screen?.alt || step.title}
-              />
-            </div>
-
-            <div className="mobile-product-card__content">
-              <p className="mobile-product-card__count" aria-hidden="true">
-                {stepLabel}
-              </p>
-              <p className="mobile-product-card__eyebrow">{step.eyebrow}</p>
-              <h2 className="mobile-product-card__title">{step.title}</h2>
-              <p className="mobile-product-card__body">{step.body}</p>
-              {step.shift ? <p className="mobile-product-card__whisper">{step.shift}</p> : null}
-              {showDoors ? (
-                <ul
-                  className="mobile-product-card__doors"
-                  aria-label={step.doorsAriaLabel || step.eyebrow}
-                >
-                  {step.doors.map(door => (
-                    <li key={door.label}>{door.label}</li>
-                  ))}
-                </ul>
-              ) : null}
-            </div>
-          </article>
-        );
-      })}
+          <div className="mobile-product-card__content">
+            <ProductStoryStepContent step={step} index={index} total={stepTotal} variant="mobile" />
+          </div>
+        </article>
+      ))}
     </div>
   );
 }

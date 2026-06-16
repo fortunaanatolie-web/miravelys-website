@@ -3,37 +3,13 @@ import { mockupScreenDisplayDimensions } from '../../../config/imageAssets';
 import { useMiravelysScreenshot } from '../../../hooks/useMiravelysScreenshot';
 import ScreenshotPlaceholder from './ScreenshotPlaceholder';
 
-export const PHONE_MOCKUP_SIZES = {
-  hero: '(min-width: 981px) 440px, (min-width: 640px) 76vw, 92vw',
-  chapter: '(min-width: 981px) 400px, (min-width: 640px) 72vw, 88vw',
-  gallery: '(min-width: 981px) 220px, (min-width: 640px) 42vw, 78vw',
-  compact: '(min-width: 981px) 280px, (min-width: 640px) 56vw, 84vw',
-  'mobile-card': 'min(74vw, 310px)',
-  landscape: 'min(31vw, 340px)',
-};
-
-function MockupScreenImage({ screen, sizes, priorityFirst, index, isActive, isStack, activeIndex }) {
-  const { src, status, missing, isDev, alt } = useMiravelysScreenshot(screen, screen.lang);
-  const shouldPrioritize = priorityFirst && (index === activeIndex || index === 0);
-  const imageProps = buildResponsiveImageProps({
-    src: src || undefined,
-    width: mockupScreenDisplayDimensions.width,
-    height: mockupScreenDisplayDimensions.height,
-    sizes,
-    alt: alt || screen.alt || `Miravelys ${screen.id ?? 'app'} screen`,
-    loading: shouldPrioritize ? 'eager' : 'lazy',
-    fetchPriority: shouldPrioritize ? 'high' : undefined,
-  });
-
-  const frameClass = `phone-mockup__screen-frame ${isActive ? 'phone-mockup__screen-frame--active' : ''}`;
+function PhoneScreenImage({ screen, isActive, eager }) {
+  const { src, status, missing, isDev, alt } = useMiravelysScreenshot(screen, screen.lang ?? screen.locale);
+  const className = `phone-screen-image phone-mockup__screen${isActive ? ' is-active phone-mockup__screen-frame--active' : ''}`;
 
   if (status === 'loading' && !src) {
     return (
-      <div
-        className={frameClass}
-        data-screen-index={index}
-        aria-hidden={isStack ? !isActive : undefined}
-      >
+      <div className={`phone-mockup__screen-frame ${isActive ? 'phone-mockup__screen-frame--active' : ''}`} aria-hidden={!isActive}>
         <div className="phone-mockup__screen-crop">
           <div className="phone-mockup__screen phone-mockup__screen--loading" />
         </div>
@@ -43,116 +19,80 @@ function MockupScreenImage({ screen, sizes, priorityFirst, index, isActive, isSt
 
   if (!src && status === 'missing') {
     return (
-      <div
-        className={frameClass}
-        data-screen-index={index}
-        aria-hidden={isStack ? !isActive : undefined}
-      >
+      <div className={`phone-mockup__screen-frame ${isActive ? 'phone-mockup__screen-frame--active' : ''}`} aria-hidden={!isActive}>
         <div className="phone-mockup__screen-crop">
-          {isDev ? (
-            <ScreenshotPlaceholder
-              missing={missing || { group: '?', code: '?', locale: '?', expected: '' }}
-              className="screenshot-placeholder--visible"
-            />
-          ) : (
-            <ScreenshotPlaceholder
-              missing={missing || { group: '?', code: '?', locale: '?', expected: '' }}
-              className="screenshot-placeholder--visible screenshot-placeholder--production"
-            />
-          )}
+          <ScreenshotPlaceholder
+            missing={missing || { group: 'sticky-phone', code: screen.code ?? '?', locale: screen.locale ?? '?', expected: screen.publicPath ?? '' }}
+            className="screenshot-placeholder--visible"
+          />
         </div>
       </div>
     );
   }
 
+  const imageProps = buildResponsiveImageProps({
+    src,
+    width: mockupScreenDisplayDimensions.width,
+    height: mockupScreenDisplayDimensions.height,
+    sizes: 'min(430px, 32vw)',
+    alt: alt || screen.alt || 'Miravelys app screen',
+    loading: eager ? 'eager' : 'lazy',
+    fetchPriority: eager ? 'high' : undefined,
+  });
+
   return (
-    <div
-      className={frameClass}
-      data-screen-index={index}
-      aria-hidden={isStack ? !isActive : undefined}
-    >
+    <div className={`phone-mockup__screen-frame ${isActive ? 'phone-mockup__screen-frame--active' : ''}`} aria-hidden={!isActive}>
       <div className="phone-mockup__screen-crop">
-        <img {...imageProps} className="phone-mockup__screen" />
+        <img {...imageProps} className={className} />
       </div>
     </div>
   );
 }
 
 /**
- * Premium phone mockup — internal screen assets inside CSS device frame.
+ * Sticky-phone mockup — one stable frame, internal screens crossfade by activeIndex.
  */
 export default function PhoneMockup({
-  screens,
+  screens = [],
   activeIndex = 0,
-  size = 'chapter',
-  mood = 'default',
-  priorityFirst = false,
+  variant = 'sticky',
   className = '',
-  clarity = 1,
-  glow = true,
-  atmosphere = true,
-  reflection = true,
-  floorShadow = true,
-  dimInactive = false,
-  singleScreen = false,
-  figureRef,
   ariaLabel = 'Miravelys app',
-  style,
-  as: Tag = 'figure',
 }) {
-  const sizes = PHONE_MOCKUP_SIZES[size] ?? PHONE_MOCKUP_SIZES.chapter;
-  const safeActiveIndex =
-    typeof activeIndex === 'number' && activeIndex >= 0 && activeIndex < screens.length
+  const safeIndex =
+    Number.isFinite(activeIndex) && activeIndex >= 0 && activeIndex < screens.length
       ? activeIndex
       : 0;
-  const isStack = !singleScreen && screens.length > 1;
+
+  if (!screens.length) {
+    return (
+      <figure className={`phone-frame phone-mockup phone-mockup--missing ${className}`.trim()} aria-label={ariaLabel}>
+        <div className="phone-frame phone-frame--missing">
+          <div className="phone-screen phone-screen--missing">Missing screens</div>
+        </div>
+      </figure>
+    );
+  }
+
+  const isStack = screens.length > 1;
 
   return (
-    <Tag
-      ref={figureRef}
-      className={`phone-mockup phone-mockup--${size} phone-mockup--mood-${mood} ${className}`.trim()}
-      style={{ '--phone-clarity': clarity, ...style }}
-      role={Tag !== 'figure' ? 'img' : undefined}
+    <figure
+      className={`phone-frame phone-mockup phone-mockup--${variant} ${className}`.trim()}
       aria-label={ariaLabel}
     >
-      {atmosphere ? <div className="phone-mockup__atmosphere" aria-hidden="true" /> : null}
-      {glow ? (
-        <>
-          <div className="phone-mockup__spotlight" aria-hidden="true" />
-          <div className="phone-mockup__glow" aria-hidden="true" />
-        </>
-      ) : null}
-
-      <div className="phone-mockup__device">
-        <div className={`phone-mockup__screen-stack${isStack ? ' phone-mockup__screen-stack--crossfade' : ''}`}>
-          {screens.map((screen, index) => {
-            const isActive = index === safeActiveIndex;
-
-            return (
-              <MockupScreenImage
-                key={screen.id ?? `${screen.group}-${screen.code}` ?? index}
-                screen={screen}
-                sizes={sizes}
-                priorityFirst={priorityFirst}
-                index={index}
-                isActive={isActive}
-                isStack={isStack}
-                activeIndex={safeActiveIndex}
-              />
-            );
-          })}
+      <div className="phone-mockup__device phone-screen">
+        <div className={`phone-mockup__screen-stack${isStack ? ' phone-mockup__screen-stack--crossfade phone-mockup__screen-stack--sticky' : ''}`}>
+          {screens.map((screen, index) => (
+            <PhoneScreenImage
+              key={screen.id}
+              screen={screen}
+              isActive={index === safeIndex}
+              eager={index === 0 || index === safeIndex}
+            />
+          ))}
         </div>
-        {dimInactive ? (
-          <div
-            className="phone-mockup__dim"
-            aria-hidden="true"
-            style={{ opacity: Math.max(0, 0.45 - clarity * 0.45) }}
-          />
-        ) : null}
       </div>
-
-      {reflection ? <div className="phone-mockup__reflection" aria-hidden="true" /> : null}
-      {floorShadow ? <div className="phone-mockup__floor-shadow" aria-hidden="true" /> : null}
-    </Tag>
+    </figure>
   );
 }

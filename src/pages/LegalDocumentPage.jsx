@@ -7,6 +7,7 @@ import { useSiteLanguage } from '../hooks/useSiteLanguage';
 import MarketingPageShell from '../components/marketing/MarketingPageShell';
 import MarketingTopNav from '../components/marketing/MarketingTopNav';
 import MarketingSiteFooter from '../components/marketing/MarketingSiteFooter';
+import { setDocumentMeta } from '../lib/documentMeta';
 
 const fallbackLanguage = 'en';
 
@@ -28,7 +29,12 @@ export default function LegalDocumentPage() {
 
   useEffect(() => {
     document.documentElement.lang = t.meta.locale;
-    document.title = legalDoc ? `${legalDoc.title} — Miravelys` : 'Miravelys';
+    setDocumentMeta({
+      title: legalDoc ? `${legalDoc.title} — Miravelys` : 'Miravelys',
+      description: legalDoc?.intro ?? t.footer.line,
+      ogTitle: legalDoc ? `${legalDoc.title} — Miravelys` : 'Miravelys',
+      ogDescription: legalDoc?.intro ?? t.footer.line,
+    });
   }, [t.meta.locale, legalDoc]);
 
   if (!legalDoc) {

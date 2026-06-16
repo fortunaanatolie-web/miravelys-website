@@ -1,1504 +1,1117 @@
 /**
- * Founder origin story — full localization for the cinematic Origin section.
- * Personal, warm tone. No external authors, methods, or third-party references.
+ * Founder origin story — written-only editorial page.
+ * No screenshots, phone mockups, external methods, or named references.
  */
 
 function buildOriginContent(data) {
   return {
+    meta: data.meta,
     eyebrow: data.eyebrow,
     title: data.title,
     intro: data.intro,
     blockLabels: data.blockLabels,
     blocks: data.blocks,
     cta: data.cta,
+    ctaPrimary: data.ctaPrimary,
+    ctaSecondary: data.ctaSecondary,
   };
 }
 
 const en = {
-  eyebrow: 'The beginning',
-  title: 'How Miravelys Was Born',
-  cta: 'Return to yourself',
+  meta: {
+    title: 'How Miravelys Was Born — Miravelys',
+    description: 'The story behind Miravelys: a private reflection space for noticing what happened, what the mind may have added, and what feels closer to truth now.',
+    ogTitle: 'How Miravelys Was Born',
+    ogDescription: 'A quiet origin story about honest writing, separating the moment from the story, calming the body, and returning with more kindness.',
+  },
+  eyebrow: 'The origin',
+  title: 'How Miravelys was born',
+  cta: 'Read the story',
+  ctaPrimary: 'Join early access',
+  ctaSecondary: 'Return to the experience',
   blockLabels: {
-    search: 'The search',
-    whatMindAdds: 'What the mind adds',
-    writing: 'Writing honestly',
-    questions: 'Honest questions',
-    mirror: 'A quiet mirror',
-    separation: 'Gentle separation',
-    humility: 'What we do not claim',
-    grounding: 'Grounding first',
-    sounds: 'Calming sounds',
-    places: 'Places to land',
-    intention: 'Who it is for',
-    finale: 'Returning to yourself',
+    opening: 'A quiet search',
+    momentStory: 'The moment becomes a story',
+    writingMirror: 'Writing as a mirror',
+    separatingLayers: 'Separating the layers',
+    bodyCalm: 'The body needs calm too',
+    whyExists: 'Why Miravelys exists',
   },
   intro: [
-    'Miravelys was not born as just another idea for a new app.',
-    'It started much earlier — in a quiet search inside myself.',
-    'A search that begins when you start asking why some moments hurt more than others, why one word can echo for hours, and how a small situation can turn into a story about who you are, what you deserve, or what life is supposed to be.',
+    'Miravelys did not begin as another app idea.',
+    'It began with a question many people quietly carry: why does one small moment sometimes become a whole story inside us?',
   ],
   blocks: {
-    search: {
-      paragraphs: ['At first, I searched outside myself.'],
+    opening: {
+      paragraphs: [
+        'There were moments that hurt more than they seemed to deserve. A sentence. A silence. A change in someone’s tone. Something small on the outside, but suddenly large inside.',
+        'I began to notice that the pain was not always only in the event itself. Often, it was also in the meaning my mind placed around it.',
+      ],
       lines: [
-        'In books.',
-        'In ideas.',
-        'In silence.',
-        'In questions.',
-        'In the hope that somewhere there was a clear answer that could explain why the mind creates so much pain around simple moments.',
+        'What happened was one layer.',
+        'What I felt was another.',
+        'What my mind made it mean was often the loudest layer of all.',
       ],
     },
-    whatMindAdds: {
+    momentStory: {
       paragraphs: [
-        'But slowly, I began to understand something important: many times, what hurts us is not only what happened.',
-        'It is what we add to what happened.',
-        'And after repeating this again and again, we can begin to live inside stories that once protected us, but no longer truly belong to us.',
+        'The mind can move very quickly when it wants to protect us. It gathers a glance, a pause, a mistake, a feeling, and turns them into something that sounds certain.',
+        'After enough repetition, a story can begin to feel less like a thought and more like a self-portrait.',
       ],
       transforms: [
-        'A look becomes rejection.',
-        'A pause becomes proof.',
-        'A mistake becomes identity.',
-        'A feeling becomes a fact.',
-        'A fear becomes a belief.',
+        'A pause can become rejection.',
+        'A look can become proof.',
+        'A mistake can become identity.',
+        'A feeling can become a fact.',
+        'A fear can become a belief.',
       ],
     },
-    writing: {
+    writingMirror: {
       paragraphs: [
-        'Miravelys was created from that quiet realization.',
-        'It was created as a private place where a person can stop for a moment and write down what is happening inside — not in a perfect way, not like a beautiful diary, not to impress anyone, but honestly.',
+        'Writing became the first gentle space where those stories could be seen.',
+        'Not polished journaling. Not beautiful diary writing. Just the honest sentence that was already there: this hurt; I felt small; I think they are leaving; I do not know why this feels so big.',
+        'When a thought is written down, it can stop being the whole sky for a moment. It becomes something you can sit beside.',
+      ],
+      lines: [
+        'Write what feels tangled before it becomes a conclusion.',
+        'Write the fear without making it the final answer.',
+        'Write enough to see the space between the moment and the story.',
       ],
     },
-    questions: {
-      items: [
-        'What am I feeling?',
-        'What am I believing right now?',
-        'What did my mind add to this situation?',
-        'What is my body reacting to?',
-        'What story keeps repeating?',
-        'What feels true, and what might only feel familiar?',
-      ],
-    },
-    mirror: {
+    separatingLayers: {
       paragraphs: [
-        'Miravelys gives the user a space to capture these moments when they appear, or after they have passed. A belief that became loud. An emotion that arrived suddenly. A reaction that felt bigger than the situation. A thought that kept returning. A body feeling that seemed to carry something deeper.',
-        'And over time, these small written moments can begin to form a quiet mirror.',
-        'Not a mirror that judges.',
-        'Not a mirror that says, "This is who you are."',
-        'But a mirror that helps the user notice what has been repeated.',
+        'That space became the heart of Miravelys.',
+        'The app was created to help separate the layers gently, without forcing certainty and without deciding for the user.',
       ],
-    },
-    separation: {
-      paragraphs: [
-        'The app can help separate the moment from the story around it, the emotion from the belief, the body reaction from the identity built around it, and the unknown from the conclusions that came too quickly.',
-        'This is the heart of Miravelys.',
-        'It does not tell the user what the truth is.',
-        'It does not diagnose.',
-        'It does not replace therapy.',
-        'It does not decide who someone is.',
-        'Instead, it helps the user look more gently.',
-      ],
-    },
-    humility: {
-      paragraphs: ['Miravelys was built for those small moments of honest seeing.'],
       insights: [
-        'To see: this was a feeling, not a fact.',
-        'This was a fear, not my whole identity.',
-        'This belief may have protected me once, but maybe I do not need to live from it forever.',
-        'This story appeared quickly, but maybe there is something quieter underneath it.',
+        'What happened.',
+        'What was felt.',
+        'What the body reacted to.',
+        'What the mind may have added.',
+        'What belief may be present.',
+        'What still remains unknown.',
+      ],
+      closing: [
+        'Noticing a belief is not the same as judging it. Some beliefs may have protected us once. Miravelys simply gives them a quiet place to be seen, softened, questioned, or left alone.',
       ],
     },
-    grounding: {
+    bodyCalm: {
       paragraphs: [
-        'But the app is not only about writing and reflection.',
-        'Because sometimes, when the body is overwhelmed, the mind cannot look clearly. Sometimes the first step is not to analyze. The first step is to breathe, feel the body, slow down, and return to the present.',
-        'That is why Miravelys also includes grounding experiences: breathing, feeling awareness, meditation, sleep support, and calming sound journeys.',
+        'But clarity does not always begin in the mind.',
+        'Sometimes the body is too tense, tired, or overwhelmed to look clearly. In those moments, the kindest first step may be to breathe, slow down, listen, or rest.',
+        'That is why Miravelys includes breathing, meditation, sleep support, and grounding sounds. They are there for the moments when the body needs softness before the mind needs answers.',
       ],
-    },
-    sounds: {
-      paragraphs: [
-        'The sounds inside Miravelys were created especially for this world.',
-        'They are not just background music. They are designed to feel like soft places to land — gentle atmospheres that help the body become quieter, the breath become slower, and the moment feel a little safer.',
-        'These unique grounding sounds are part of the emotional language of Miravelys. They help the app feel less like a tool and more like a private place the user can return to.',
-      ],
-      types: [
-        'Some sounds are made for breathing.',
-        'Some are made for meditation.',
-        'Some are made for sleep.',
-        'Some are made for the moments when the user does not need more words, but needs a softer space around the body.',
-      ],
-    },
-    places: {
       items: [
         'A place to breathe.',
-        'A place to write.',
         'A place to listen.',
-        'A place to notice what has been repeated.',
-        'A place to calm the body before trying to understand everything with the mind.',
+        'A place to let the night be gentle.',
+        'A place to return to the present before trying to understand everything.',
       ],
     },
-    intention: {
+    whyExists: {
       paragraphs: [
-        'Miravelys was born from the belief that people do not always need to be pushed, fixed, or told who they are.',
-        'Sometimes they need a quiet space where they can meet themselves honestly.',
-        'A space where a tangled moment can become a little clearer.',
-        'A space where an old belief can finally be seen.',
-        'A space where the body can soften before the mind decides.',
-        'A space where the user stays in control.',
-        'A space where truth is approached gently, not forced.',
+        'Miravelys exists because people do not always need to be pushed toward a conclusion.',
+        'Sometimes they need a private place that can hold the experience without taking control of it.',
       ],
       audience: [
-        'For the person who feels too much and wants to understand it softly.',
-        'For the person who keeps repeating the same inner story and wants to see where it begins.',
-        'For the person who wants to separate what happened from what the mind added.',
-        'For the person who needs calm before clarity.',
-        'For the person who is not trying to become someone else, but to come closer to what feels honest inside.',
+        'A place where the user decides what fits.',
+        'A place where a repeated story can become visible without becoming identity.',
+        'A place where uncertainty is allowed to stay uncertain.',
+        'A place where what feels familiar can be gently compared with what feels closer to truth now.',
       ],
-    },
-    finale: {
-      paragraphs: [
+      closing: [
         'Miravelys is not about fixing who you are.',
-        'It is about helping you return to yourself — slowly, privately, and with more kindness than before.',
+        'It is about helping you return to yourself slowly, privately, and with more kindness than before.',
       ],
     },
   },
 };
 
 const ru = {
-  eyebrow: 'Начало',
+  meta: {
+    title: 'Как родился Miravelys — Miravelys',
+    description: 'История Miravelys: личное пространство для честного письма, где можно увидеть, что произошло, что мог добавить ум и что сейчас ощущается ближе к правде.',
+    ogTitle: 'Как родился Miravelys',
+    ogDescription: 'Тихая история о письме, разделении момента и истории вокруг него, заботе о теле и возвращении к себе с большей добротой.',
+  },
+  eyebrow: 'История рождения',
   title: 'Как родился Miravelys',
-  cta: 'Вернуться к себе',
+  cta: 'Прочитать историю',
+  ctaPrimary: 'Ранний доступ',
+  ctaSecondary: 'Вернуться к опыту',
   blockLabels: {
-    search: 'Поиск',
-    whatMindAdds: 'Что добавляет ум',
-    writing: 'Честное письмо',
-    questions: 'Честные вопросы',
-    mirror: 'Тихое зеркало',
-    separation: 'Мягкое разделение',
-    humility: 'Чего мы не утверждаем',
-    grounding: 'Сначала заземление',
-    sounds: 'Успокаивающие звуки',
-    places: 'Места, где можно опуститься',
-    intention: 'Для кого это',
-    finale: 'Возвращение к себе',
+    opening: 'Тихий поиск',
+    momentStory: 'Момент становится историей',
+    writingMirror: 'Письмо как зеркало',
+    separatingLayers: 'Разделить слои',
+    bodyCalm: 'Телу тоже нужен покой',
+    whyExists: 'Зачем существует Miravelys',
   },
   intro: [
-    'Miravelys не родился как просто очередная идея для приложения.',
-    'Он начался гораздо раньше — в тихом личном поиске.',
-    'В таком поиске, который начинается, когда ты вдруг спрашиваешь себя, почему некоторые моменты ранят сильнее, чем должны были бы. Почему одна фраза другого человека может часами звучать в голове. Почему маленькая ситуация может превратиться в целую историю о том, кто ты, чего ты достоин и что вообще значит жизнь.',
+    'Miravelys родился не как очередная идея для приложения.',
+    'Он начался с вопроса, который многие носят очень тихо: почему один маленький момент иногда превращается внутри нас в целую историю?',
   ],
   blocks: {
-    search: {
-      paragraphs: ['Сначала я искал ответы снаружи.'],
+    opening: {
+      paragraphs: [
+        'Бывали моменты, которые ранили сильнее, чем будто бы должны были. Фраза. Молчание. Изменившийся тон. Снаружи — что-то небольшое, а внутри вдруг очень большое.',
+        'Постепенно я начал замечать: боль не всегда живёт только в самом событии. Часто она живёт ещё и в смысле, которым ум окружает это событие.',
+      ],
       lines: [
-        'В книгах.',
-        'В идеях.',
-        'В тишине.',
-        'В вопросах.',
-        'В надежде, что где-то есть ясный ответ, который объяснит, почему ум создаёт столько боли вокруг простых моментов.',
+        'То, что произошло, было одним слоем.',
+        'То, что я почувствовал, — другим.',
+        'А то, что ум решил об этом, часто звучало громче всего.',
       ],
     },
-    whatMindAdds: {
+    momentStory: {
       paragraphs: [
-        'Но постепенно я начал понимать одну важную вещь: очень часто нас ранит не только то, что произошло.',
-        'Нас ранит то, что мы добавляем к тому, что произошло.',
-        'И если это повторяется снова и снова, мы начинаем жить внутри историй, которые когда-то защищали нас, но больше по-настоящему нам не принадлежат.',
+        'Ум умеет действовать очень быстро, когда пытается нас защитить. Он берёт взгляд, паузу, ошибку, чувство — и превращает их во что-то, что кажется несомненным.',
+        'Если это повторяется достаточно долго, история начинает ощущаться не как мысль, а почти как портрет себя.',
       ],
       transforms: [
-        'Взгляд становится отвержением.',
-        'Пауза становится доказательством.',
-        'Ошибка становится личностью.',
-        'Чувство становится фактом.',
-        'Страх становится убеждением.',
+        'Пауза может стать отвержением.',
+        'Взгляд может стать доказательством.',
+        'Ошибка может стать личностью.',
+        'Чувство может стать фактом.',
+        'Страх может стать убеждением.',
       ],
     },
-    writing: {
+    writingMirror: {
       paragraphs: [
-        'Из этого понимания и был создан Miravelys.',
-        'Он был создан как личное пространство, где человек может на мгновение остановиться и записать то, что происходит внутри — не идеально, не как красивую страницу дневника, не чтобы кому-то понравиться, а честно.',
+        'Письмо стало первым мягким местом, где эти истории можно было увидеть.',
+        'Не идеальный дневник. Не красивые страницы. Просто честная фраза, которая уже была внутри: мне больно; я почувствовал себя маленьким; кажется, они уходят; я не понимаю, почему это так сильно.',
+        'Когда мысль записана, она на мгновение перестаёт быть всем небом. Она становится чем-то, рядом с чем можно посидеть.',
+      ],
+      lines: [
+        'Записать то, что спуталось, пока оно не стало выводом.',
+        'Записать страх, не превращая его в окончательный ответ.',
+        'Записать достаточно, чтобы увидеть пространство между моментом и историей.',
       ],
     },
-    questions: {
-      items: [
-        'Что я чувствую?',
-        'Во что я сейчас верю?',
-        'Что мой ум добавил к этой ситуации?',
-        'На что реагирует моё тело?',
-        'Какая история повторяется снова и снова?',
-        'Что ощущается правдой, а что, возможно, просто кажется знакомым?',
-      ],
-    },
-    mirror: {
+    separatingLayers: {
       paragraphs: [
-        'Miravelys даёт пользователю место, чтобы сохранять такие моменты, когда они появляются или уже после того, как они прошли. Убеждение, которое стало слишком громким. Эмоцию, которая пришла внезапно. Реакцию, которая оказалась сильнее самой ситуации. Мысль, которая возвращалась снова. Ощущение в теле, будто оно несёт что-то глубже слов.',
-        'Со временем эти маленькие записи могут начать складываться в тихое зеркало.',
-        'Не зеркало, которое судит.',
-        'Не зеркало, которое говорит: «Вот кто ты.»',
-        'А зеркало, которое помогает заметить то, что повторялось.',
+        'Из этого пространства и выросло сердце Miravelys.',
+        'Приложение создано, чтобы мягко разделять слои, не заставляя делать выводы и не решая за человека.',
       ],
-    },
-    separation: {
-      paragraphs: [
-        'Приложение помогает мягко отделять сам момент от истории вокруг него, эмоцию от убеждения, реакцию тела от образа себя, который вокруг неё построился, а неизвестное — от слишком быстрых выводов.',
-        'В этом сердце Miravelys.',
-        'Он не говорит пользователю, что является истиной.',
-        'Он не ставит диагнозы.',
-        'Он не заменяет терапию.',
-        'Он не решает, кто человек есть.',
-        'Вместо этого он помогает смотреть мягче.',
-      ],
-    },
-    humility: {
-      paragraphs: ['Miravelys был создан для этих маленьких моментов честного видения.'],
       insights: [
-        'Увидеть: это было чувство, а не факт.',
-        'Это был страх, а не вся моя личность.',
-        'Это убеждение, возможно, когда-то меня защищало, но, может быть, мне больше не нужно жить из него всегда.',
-        'Эта история появилась быстро, но, возможно, под ней есть что-то тише.',
+        'Что произошло.',
+        'Что чувствовалось.',
+        'На что отреагировало тело.',
+        'Что мог добавить ум.',
+        'Какое убеждение может быть рядом.',
+        'Что пока остаётся неизвестным.',
+      ],
+      closing: [
+        'Заметить убеждение — не значит осудить его. Некоторые убеждения могли когда-то защищать нас. Miravelys просто даёт им тихое место, где их можно увидеть, смягчить, проверить или оставить в покое.',
       ],
     },
-    grounding: {
+    bodyCalm: {
       paragraphs: [
-        'Но приложение не только о письме и размышлении.',
-        'Потому что иногда, когда тело перегружено, ум не может видеть ясно. Иногда первый шаг — не анализировать. Первый шаг — дышать, почувствовать тело, замедлиться и вернуться в настоящий момент.',
-        'Поэтому в Miravelys есть и практики заземления: дыхание, внимание к ощущениям, медитации, поддержка сна и успокаивающие звуковые путешествия.',
+        'Но ясность не всегда начинается в уме.',
+        'Иногда тело слишком напряжено, устало или перегружено, чтобы смотреть ясно. Тогда самый добрый первый шаг — дышать, замедлиться, послушать или отдохнуть.',
+        'Поэтому в Miravelys есть дыхание, медитация, поддержка сна и заземляющие звуки. Они нужны для моментов, когда телу нужна мягкость раньше, чем уму нужны ответы.',
       ],
-    },
-    sounds: {
-      paragraphs: [
-        'Звуки внутри Miravelys были созданы специально для этого мира.',
-        'Это не просто фоновая музыка. Они задуманы как мягкие места, куда можно опуститься, — нежные атмосферы, которые помогают телу становиться тише, дыханию — медленнее, а моменту — немного безопаснее.',
-        'Эти уникальные звуки заземления — часть эмоционального языка Miravelys. Они помогают приложению ощущаться не просто инструментом, а личным местом, куда можно возвращаться.',
-      ],
-      types: [
-        'Одни звуки созданы для дыхания.',
-        'Другие — для медитации.',
-        'Другие — для сна.',
-        'А некоторые — для тех мгновений, когда человеку не нужны новые слова, а нужно более мягкое пространство вокруг тела.',
-      ],
-    },
-    places: {
       items: [
-        'Местом, где можно дышать.',
-        'Местом, где можно писать.',
-        'Местом, где можно слушать.',
-        'Местом, где можно заметить то, что повторялось.',
-        'Местом, где тело может успокоиться до того, как ум попытается всё понять.',
+        'Место, где можно дышать.',
+        'Место, где можно слушать.',
+        'Место, где ночь может быть мягче.',
+        'Место, где можно вернуться в настоящее до попытки всё понять.',
       ],
     },
-    intention: {
+    whyExists: {
       paragraphs: [
-        'Miravelys родился из веры в то, что людям не всегда нужно, чтобы их подталкивали, исправляли или говорили им, кто они.',
-        'Иногда им нужно тихое пространство, где можно честно встретиться с собой.',
-        'Пространство, где запутанный момент становится немного яснее.',
-        'Где старое убеждение наконец можно увидеть.',
-        'Где тело может смягчиться до того, как ум решит.',
-        'Где пользователь остаётся главным.',
-        'Где к правде приближаются мягко, а не силой.',
+        'Miravelys существует потому, что человеку не всегда нужно, чтобы его подталкивали к выводу.',
+        'Иногда нужно личное место, которое может бережно удержать переживание, не забирая управление.',
       ],
       audience: [
-        'Для человека, который чувствует слишком много и хочет понять это бережно.',
-        'Для человека, который снова и снова повторяет одну внутреннюю историю и хочет увидеть, где она начинается.',
-        'Для человека, который хочет отделить то, что произошло, от того, что добавил ум.',
-        'Для человека, которому нужен покой перед ясностью.',
-        'Для человека, который не пытается стать кем-то другим, а хочет приблизиться к тому, что внутри ощущается честным.',
+        'Место, где пользователь сам решает, что подходит.',
+        'Место, где повторяющаяся история становится видимой, но не превращается в личность.',
+        'Место, где неопределённость может оставаться неопределённой.',
+        'Место, где знакомое можно мягко сравнить с тем, что сейчас ощущается ближе к правде.',
       ],
-    },
-    finale: {
-      paragraphs: [
+      closing: [
         'Miravelys не о том, чтобы исправить себя.',
-        'Он о том, чтобы помочь вам вернуться к себе — медленно, лично и с большей добротой, чем раньше.',
+        'Он о том, чтобы помогать возвращаться к себе медленно, лично и с большей добротой, чем раньше.',
       ],
     },
   },
 };
 
 const ro = {
-  eyebrow: 'Începutul',
+  meta: {
+    title: 'Cum s-a născut Miravelys — Miravelys',
+    description: 'Povestea din spatele Miravelys: un spațiu privat de reflecție pentru a observa ce s-a întâmplat, ce poate a adăugat mintea și ce se simte mai aproape de adevăr acum.',
+    ogTitle: 'Cum s-a născut Miravelys',
+    ogDescription: 'O poveste liniștită despre scris sincer, separarea momentului de poveste, calmarea corpului și întoarcerea la tine cu mai multă blândețe.',
+  },
+  eyebrow: 'Originea',
   title: 'Cum s-a născut Miravelys',
-  cta: 'Întoarce-te la tine',
+  cta: 'Citește povestea',
+  ctaPrimary: 'Acces timpuriu',
+  ctaSecondary: 'Înapoi la experiență',
   blockLabels: {
-    search: 'Căutarea',
-    whatMindAdds: 'Ce adaugă mintea',
-    writing: 'Scriere sinceră',
-    questions: 'Întrebări sincere',
-    mirror: 'O oglindă liniștită',
-    separation: 'Separare blândă',
-    humility: 'Ce nu pretindem',
-    grounding: 'Ancorare mai întâi',
-    sounds: 'Sunete liniștitoare',
-    places: 'Locuri unde să te așezi',
-    intention: 'Pentru cine este',
-    finale: 'Întoarcerea la tine',
+    opening: 'O căutare tăcută',
+    momentStory: 'Momentul devine poveste',
+    writingMirror: 'Scrisul ca oglindă',
+    separatingLayers: 'Separarea straturilor',
+    bodyCalm: 'Și corpul are nevoie de calm',
+    whyExists: 'De ce există Miravelys',
   },
   intro: [
     'Miravelys nu s-a născut ca încă o idee de aplicație.',
-    'A început mult mai devreme — într-o căutare personală, tăcută.',
-    'Genul de căutare care începe atunci când te întrebi de ce unele momente dor mai mult decât ar trebui. De ce o singură propoziție spusă de altcineva poate rămâne în minte ore întregi. De ce o situație mică se poate transforma într-o poveste întreagă despre cine ești, ce meriți sau ce înseamnă viața.',
+    'A început cu o întrebare pe care mulți o poartă în tăcere: de ce un moment mic devine uneori o poveste întreagă în noi?',
   ],
   blocks: {
-    search: {
-      paragraphs: ['La început, am căutat în afara mea.'],
+    opening: {
+      paragraphs: [
+        'Au existat momente care au durut mai mult decât părea firesc. O propoziție. O tăcere. O schimbare de ton. În afară, ceva mic. Înăuntru, dintr-odată, ceva mare.',
+        'Am început să observ că durerea nu era mereu doar în eveniment. Adesea era și în sensul pe care mintea îl așeza în jurul lui.',
+      ],
       lines: [
-        'În cărți.',
-        'În idei.',
-        'În liniște.',
-        'În întrebări.',
-        'În speranța că undeva exista un răspuns clar care putea explica de ce mintea creează atât de multă durere în jurul unor momente simple.',
+        'Ce s-a întâmplat era un strat.',
+        'Ce am simțit era altul.',
+        'Iar ce a făcut mintea să însemne acel moment era adesea cel mai puternic strat.',
       ],
     },
-    whatMindAdds: {
+    momentStory: {
       paragraphs: [
-        'Dar, încet, am început să înțeleg ceva important: de multe ori, ceea ce ne doare nu este doar ce s-a întâmplat.',
-        'Este ceea ce adăugăm la ce s-a întâmplat.',
-        'Și, repetând asta din nou și din nou, putem ajunge să trăim în povești care cândva ne-au protejat, dar care nu ne mai aparțin cu adevărat.',
+        'Mintea se poate mișca foarte repede atunci când încearcă să ne protejeze. Adună o privire, o pauză, o greșeală, un sentiment și le transformă în ceva care sună sigur.',
+        'Dacă se repetă destul, o poveste poate începe să pară mai puțin ca un gând și mai mult ca un portret de sine.',
       ],
       transforms: [
-        'O privire devine respingere.',
-        'O pauză devine dovadă.',
-        'O greșeală devine identitate.',
-        'Un sentiment devine fapt.',
-        'O frică devine convingere.',
+        'O pauză poate deveni respingere.',
+        'O privire poate deveni dovadă.',
+        'O greșeală poate deveni identitate.',
+        'Un sentiment poate deveni fapt.',
+        'O frică poate deveni convingere.',
       ],
     },
-    writing: {
+    writingMirror: {
       paragraphs: [
-        'Din această înțelegere s-a născut Miravelys.',
-        'A fost creat ca un spațiu privat în care o persoană poate să se oprească pentru o clipă și să scrie ce se întâmplă în interior — nu perfect, nu ca într-un jurnal frumos, nu pentru a impresiona pe cineva, ci sincer.',
+        'Scrisul a devenit primul spațiu blând în care aceste povești puteau fi văzute.',
+        'Nu jurnal perfect. Nu pagini frumoase. Doar propoziția sinceră care era deja acolo: m-a durut; m-am simțit mic; cred că pleacă; nu știu de ce pare atât de mare.',
+        'Când un gând este scris, pentru o clipă nu mai este tot cerul. Devine ceva lângă care poți sta.',
+      ],
+      lines: [
+        'Scrie ce se simte încâlcit înainte să devină concluzie.',
+        'Scrie frica fără să o faci răspuns final.',
+        'Scrie suficient cât să vezi spațiul dintre moment și poveste.',
       ],
     },
-    questions: {
-      items: [
-        'Ce simt?',
-        'Ce cred acum?',
-        'Ce a adăugat mintea mea acestei situații?',
-        'La ce reacționează corpul meu?',
-        'Ce poveste se repetă?',
-        'Ce se simte adevărat și ce poate doar se simte familiar?',
-      ],
-    },
-    mirror: {
+    separatingLayers: {
       paragraphs: [
-        'Miravelys îi oferă utilizatorului un spațiu unde poate prinde aceste momente atunci când apar sau după ce au trecut. O convingere care a devenit puternică. O emoție care a venit brusc. O reacție care s-a simțit mai mare decât situația. Un gând care s-a întors iar și iar. O senzație în corp care părea să poarte ceva mai profund.',
-        'În timp, aceste mici momente scrise pot începe să formeze o oglindă liniștită.',
-        'Nu o oglindă care judecă.',
-        'Nu o oglindă care spune: „Asta ești tu.”',
-        'Ci o oglindă care ajută utilizatorul să observe ce s-a repetat.',
+        'Acest spațiu a devenit inima Miravelys.',
+        'Aplicația a fost creată pentru a separa straturile cu blândețe, fără să forțeze certitudinea și fără să decidă în locul utilizatorului.',
       ],
-    },
-    separation: {
-      paragraphs: [
-        'Aplicația poate ajuta la separarea momentului de povestea din jurul lui, emoției de convingere, reacției corpului de identitatea construită în jurul ei și necunoscutului de concluziile care au venit prea repede.',
-        'Acesta este inima Miravelys.',
-        'Nu îi spune utilizatorului care este adevărul.',
-        'Nu diagnostichează.',
-        'Nu înlocuiește terapia.',
-        'Nu decide cine este cineva.',
-        'În schimb, îl ajută să privească mai blând.',
-      ],
-    },
-    humility: {
-      paragraphs: ['Miravelys a fost construit pentru aceste mici momente de vedere sinceră.'],
       insights: [
-        'Să vadă: acesta a fost un sentiment, nu un fapt.',
-        'Aceasta a fost o frică, nu întreaga mea identitate.',
-        'Această convingere poate m-a protejat cândva, dar poate nu trebuie să trăiesc din ea pentru totdeauna.',
-        'Această poveste a apărut repede, dar poate sub ea există ceva mai liniștit.',
+        'Ce s-a întâmplat.',
+        'Ce s-a simțit.',
+        'La ce a reacționat corpul.',
+        'Ce poate a adăugat mintea.',
+        'Ce convingere poate fi prezentă.',
+        'Ce rămâne încă necunoscut.',
+      ],
+      closing: [
+        'A observa o convingere nu înseamnă a o judeca. Unele convingeri poate ne-au protejat cândva. Miravelys le oferă doar un loc liniștit în care pot fi văzute, înmuiate, întrebate sau lăsate în pace.',
       ],
     },
-    grounding: {
+    bodyCalm: {
       paragraphs: [
-        'Dar aplicația nu este doar despre scris și reflecție.',
-        'Pentru că uneori, când corpul este copleșit, mintea nu poate privi limpede. Uneori primul pas nu este analiza. Primul pas este să respiri, să simți corpul, să încetinești și să revii în prezent.',
-        'De aceea Miravelys include și experiențe de ancorare: respirație, atenție la senzații, meditație, sprijin pentru somn și călătorii sonore liniștitoare.',
+        'Dar claritatea nu începe mereu în minte.',
+        'Uneori corpul este prea încordat, obosit sau copleșit ca să privească limpede. Atunci primul pas mai blând poate fi să respiri, să încetinești, să asculți sau să te odihnești.',
+        'De aceea Miravelys include respirație, meditație, sprijin pentru somn și sunete de ancorare. Sunt acolo pentru momentele în care corpul are nevoie de moliciune înainte ca mintea să aibă nevoie de răspunsuri.',
       ],
-    },
-    sounds: {
-      paragraphs: [
-        'Sunetele din Miravelys au fost create special pentru această lume.',
-        'Nu sunt doar muzică de fundal. Sunt gândite ca locuri moi în care să te poți așeza — atmosfere blânde care ajută corpul să devină mai liniștit, respirația mai lentă și momentul puțin mai sigur.',
-        'Aceste sunete unice de ancorare fac parte din limbajul emoțional al Miravelys. Ele ajută aplicația să se simtă mai puțin ca un instrument și mai mult ca un loc privat în care utilizatorul poate reveni.',
-      ],
-      types: [
-        'Unele sunete sunt create pentru respirație.',
-        'Unele sunt create pentru meditație.',
-        'Unele sunt create pentru somn.',
-        'Unele sunt create pentru momentele în care utilizatorul nu are nevoie de mai multe cuvinte, ci de un spațiu mai blând în jurul corpului.',
-      ],
-    },
-    places: {
       items: [
-        'Un loc unde să respiri.',
-        'Un loc unde să scrii.',
-        'Un loc unde să asculți.',
-        'Un loc unde să observi ce s-a repetat.',
-        'Un loc unde corpul se poate calma înainte ca mintea să încerce să înțeleagă totul.',
+        'Un loc pentru respirație.',
+        'Un loc pentru ascultare.',
+        'Un loc unde noaptea poate fi mai blândă.',
+        'Un loc pentru a reveni în prezent înainte de a încerca să înțelegi totul.',
       ],
     },
-    intention: {
+    whyExists: {
       paragraphs: [
-        'Miravelys s-a născut din credința că oamenii nu au mereu nevoie să fie împinși, reparați sau să li se spună cine sunt.',
-        'Uneori au nevoie de un spațiu liniștit unde să se întâlnească sincer cu ei înșiși.',
-        'Un spațiu în care un moment încâlcit poate deveni puțin mai clar.',
-        'Un spațiu în care o convingere veche poate fi văzută în sfârșit.',
-        'Un spațiu în care corpul se poate înmuia înainte ca mintea să decidă.',
-        'Un spațiu în care utilizatorul rămâne în control.',
-        'Un spațiu în care adevărul este apropiat blând, nu forțat.',
+        'Miravelys există pentru că oamenii nu au mereu nevoie să fie împinși spre o concluzie.',
+        'Uneori au nevoie de un loc privat care să țină experiența fără să preia controlul asupra ei.',
       ],
       audience: [
-        'Pentru persoana care simte prea mult și vrea să înțeleagă cu blândețe.',
-        'Pentru persoana care repetă aceeași poveste interioară și vrea să vadă de unde începe.',
-        'Pentru persoana care vrea să separe ce s-a întâmplat de ce a adăugat mintea.',
-        'Pentru persoana care are nevoie de calm înainte de claritate.',
-        'Pentru persoana care nu încearcă să devină altcineva, ci să se apropie de ceea ce se simte sincer în interior.',
+        'Un loc unde utilizatorul decide ce se potrivește.',
+        'Un loc unde o poveste repetată poate deveni vizibilă fără să devină identitate.',
+        'Un loc unde incertitudinea poate rămâne incertitudine.',
+        'Un loc unde familiarul poate fi comparat blând cu ce se simte acum mai aproape de adevăr.',
       ],
-    },
-    finale: {
-      paragraphs: [
+      closing: [
         'Miravelys nu este despre a repara cine ești.',
-        'Este despre a te ajuta să te întorci la tine — încet, în privat și cu mai multă blândețe decât înainte.',
+        'Este despre a te ajuta să revii la tine încet, în privat și cu mai multă bunătate decât înainte.',
       ],
     },
   },
 };
 
 const fr = {
-  eyebrow: 'Le commencement',
+  meta: {
+    title: 'Comment Miravelys est né — Miravelys',
+    description: 'L’histoire de Miravelys : un espace privé de réflexion pour voir ce qui s’est passé, ce que l’esprit a peut-être ajouté et ce qui semble plus juste maintenant.',
+    ogTitle: 'Comment Miravelys est né',
+    ogDescription: 'Une histoire calme sur l’écriture honnête, la séparation du moment et de l’histoire, l’apaisement du corps et le retour à soi avec plus de douceur.',
+  },
+  eyebrow: 'L’origine',
   title: 'Comment Miravelys est né',
-  cta: 'Revenir à soi',
+  cta: 'Lire l’histoire',
+  ctaPrimary: 'Accès anticipé',
+  ctaSecondary: 'Retour à l’expérience',
   blockLabels: {
-    search: 'La recherche',
-    whatMindAdds: 'Ce que l\'esprit ajoute',
-    writing: 'Écrire avec honnêteté',
-    questions: 'Questions sincères',
-    mirror: 'Un miroir silencieux',
-    separation: 'Séparation douce',
-    humility: 'Ce que nous ne prétendons pas',
-    grounding: 'L\'ancrage d\'abord',
-    sounds: 'Sons apaisants',
-    places: 'Des lieux où se poser',
-    intention: 'Pour qui c\'est fait',
-    finale: 'Revenir à soi',
+    opening: 'Une recherche silencieuse',
+    momentStory: 'Le moment devient une histoire',
+    writingMirror: 'Écrire comme dans un miroir',
+    separatingLayers: 'Séparer les couches',
+    bodyCalm: 'Le corps aussi a besoin de calme',
+    whyExists: 'Pourquoi Miravelys existe',
   },
   intro: [
-    'Miravelys n\'est pas né comme une simple idée d\'application de plus.',
-    'Il a commencé bien avant — dans une recherche personnelle et silencieuse.',
-    'Le genre de recherche qui commence lorsqu\'on se demande pourquoi certains moments font plus mal qu\'ils ne le devraient. Pourquoi une seule phrase dite par quelqu\'un peut rester dans l\'esprit pendant des heures. Pourquoi une petite situation peut devenir toute une histoire sur qui l\'on est, ce que l\'on mérite ou ce que signifie la vie.',
+    'Miravelys n’est pas né comme une idée d’application de plus.',
+    'Il a commencé par une question que beaucoup portent en silence : pourquoi un petit moment devient-il parfois toute une histoire en nous ?',
   ],
   blocks: {
-    search: {
-      paragraphs: ['Au début, j\'ai cherché à l\'extérieur de moi.'],
+    opening: {
+      paragraphs: [
+        'Il y a eu des moments qui faisaient plus mal qu’ils n’auraient dû. Une phrase. Un silence. Un changement de ton. Peu de chose à l’extérieur, mais soudain quelque chose de vaste à l’intérieur.',
+        'J’ai commencé à remarquer que la douleur ne venait pas toujours seulement de l’événement. Elle venait aussi du sens que l’esprit posait autour de lui.',
+      ],
       lines: [
-        'Dans les livres.',
-        'Dans les idées.',
-        'Dans le silence.',
-        'Dans les questions.',
-        'Dans l\'espoir qu\'il existait quelque part une réponse claire capable d\'expliquer pourquoi l\'esprit crée autant de douleur autour de moments simples.',
+        'Ce qui s’est passé était une couche.',
+        'Ce que j’ai ressenti en était une autre.',
+        'Ce que mon esprit en a fait était souvent la couche la plus bruyante.',
       ],
     },
-    whatMindAdds: {
+    momentStory: {
       paragraphs: [
-        'Mais peu à peu, j\'ai commencé à comprendre quelque chose d\'important : très souvent, ce qui nous blesse n\'est pas seulement ce qui s\'est passé.',
-        'C\'est ce que nous ajoutons à ce qui s\'est passé.',
-        'Et à force de répéter cela encore et encore, nous pouvons commencer à vivre à l\'intérieur d\'histoires qui nous ont peut-être protégés autrefois, mais qui ne nous appartiennent plus vraiment.',
+        'L’esprit va très vite lorsqu’il veut nous protéger. Il rassemble un regard, une pause, une erreur, un ressenti, puis les transforme en quelque chose qui semble certain.',
+        'À force de répétition, une histoire peut finir par ressembler moins à une pensée qu’à un portrait de soi.',
       ],
       transforms: [
-        'Un regard devient un rejet.',
-        'Une pause devient une preuve.',
-        'Une erreur devient une identité.',
-        'Un ressenti devient un fait.',
-        'Une peur devient une croyance.',
+        'Une pause peut devenir un rejet.',
+        'Un regard peut devenir une preuve.',
+        'Une erreur peut devenir une identité.',
+        'Un ressenti peut devenir un fait.',
+        'Une peur peut devenir une croyance.',
       ],
     },
-    writing: {
+    writingMirror: {
       paragraphs: [
-        'Miravelys est né de cette prise de conscience.',
-        'Il a été créé comme un espace privé où une personne peut s\'arrêter un instant et écrire ce qui se passe à l\'intérieur — pas de manière parfaite, pas comme une belle page de journal, pas pour impressionner qui que ce soit, mais avec honnêteté.',
+        'L’écriture est devenue le premier espace doux où ces histoires pouvaient être vues.',
+        'Pas un journal parfait. Pas de belles pages. Seulement la phrase honnête qui était déjà là : cela m’a blessé ; je me suis senti petit ; je crois qu’ils s’éloignent ; je ne sais pas pourquoi cela prend tant de place.',
+        'Quand une pensée est écrite, elle cesse un instant d’être tout le ciel. Elle devient quelque chose auprès de quoi l’on peut s’asseoir.',
+      ],
+      lines: [
+        'Écrire ce qui est emmêlé avant que cela devienne une conclusion.',
+        'Écrire la peur sans en faire la réponse finale.',
+        'Écrire assez pour voir l’espace entre le moment et l’histoire.',
       ],
     },
-    questions: {
-      items: [
-        'Qu\'est-ce que je ressens ?',
-        'Qu\'est-ce que je crois en ce moment ?',
-        'Qu\'est-ce que mon esprit a ajouté à cette situation ?',
-        'À quoi mon corps réagit-il ?',
-        'Quelle histoire se répète ?',
-        'Qu\'est-ce qui semble vrai, et qu\'est-ce qui semble seulement familier ?',
-      ],
-    },
-    mirror: {
+    separatingLayers: {
       paragraphs: [
-        'Miravelys offre à l\'utilisateur un espace pour saisir ces moments lorsqu\'ils apparaissent, ou après leur passage. Une croyance devenue forte. Une émotion arrivée soudainement. Une réaction plus grande que la situation. Une pensée qui revenait sans cesse. Une sensation corporelle qui semblait porter quelque chose de plus profond.',
-        'Avec le temps, ces petits moments écrits peuvent commencer à former un miroir silencieux.',
-        'Pas un miroir qui juge.',
-        'Pas un miroir qui dit : « Voilà qui tu es. »',
-        'Mais un miroir qui aide l\'utilisateur à remarquer ce qui s\'est répété.',
+        'Cet espace est devenu le cœur de Miravelys.',
+        'L’application a été créée pour aider à séparer les couches avec douceur, sans forcer la certitude et sans décider à la place de la personne.',
       ],
-    },
-    separation: {
-      paragraphs: [
-        'L\'application peut aider à séparer le moment de l\'histoire qui l\'entoure, l\'émotion de la croyance, la réaction du corps de l\'identité construite autour d\'elle, et l\'inconnu des conclusions arrivées trop vite.',
-        'C\'est le cœur de Miravelys.',
-        'Il ne dit pas à l\'utilisateur quelle est la vérité.',
-        'Il ne diagnostique pas.',
-        'Il ne remplace pas une thérapie.',
-        'Il ne décide pas qui est une personne.',
-        'Il aide plutôt l\'utilisateur à regarder avec plus de douceur.',
-      ],
-    },
-    humility: {
-      paragraphs: ['Miravelys a été construit pour ces petits moments de vision honnête.'],
       insights: [
-        'À voir : c\'était un ressenti, pas un fait.',
-        'C\'était une peur, pas toute mon identité.',
-        'Cette croyance m\'a peut-être protégé autrefois, mais peut-être que je n\'ai plus besoin de vivre à partir d\'elle pour toujours.',
-        'Cette histoire est apparue rapidement, mais peut-être qu\'il y a quelque chose de plus calme en dessous.',
+        'Ce qui s’est passé.',
+        'Ce qui a été ressenti.',
+        'Ce à quoi le corps a réagi.',
+        'Ce que l’esprit a peut-être ajouté.',
+        'La croyance qui peut être présente.',
+        'Ce qui reste encore inconnu.',
+      ],
+      closing: [
+        'Remarquer une croyance ne veut pas dire la juger. Certaines croyances nous ont peut-être protégés autrefois. Miravelys leur offre simplement un lieu calme où elles peuvent être vues, adoucies, questionnées ou laissées en paix.',
       ],
     },
-    grounding: {
+    bodyCalm: {
       paragraphs: [
-        'Mais l\'application ne parle pas seulement d\'écriture et de réflexion.',
-        'Parce que parfois, lorsque le corps est submergé, l\'esprit ne peut pas regarder clairement. Parfois, la première étape n\'est pas d\'analyser. La première étape est de respirer, sentir le corps, ralentir et revenir au présent.',
-        'C\'est pourquoi Miravelys inclut aussi des expériences d\'ancrage : respiration, attention aux sensations, méditation, soutien au sommeil et voyages sonores apaisants.',
+        'Mais la clarté ne commence pas toujours dans l’esprit.',
+        'Parfois, le corps est trop tendu, fatigué ou submergé pour regarder clairement. Dans ces moments-là, le premier pas le plus doux peut être de respirer, ralentir, écouter ou se reposer.',
+        'C’est pourquoi Miravelys inclut respiration, méditation, soutien du sommeil et sons d’ancrage. Ils sont là lorsque le corps a besoin de douceur avant que l’esprit ait besoin de réponses.',
       ],
-    },
-    sounds: {
-      paragraphs: [
-        'Les sons de Miravelys ont été créés spécialement pour cet univers.',
-        'Ce ne sont pas de simples musiques de fond. Ils sont conçus comme des endroits doux où se poser — des atmosphères délicates qui aident le corps à devenir plus calme, la respiration plus lente et le moment un peu plus sûr.',
-        'Ces sons d\'ancrage uniques font partie du langage émotionnel de Miravelys. Ils aident l\'application à ressembler moins à un outil et davantage à un lieu privé où l\'utilisateur peut revenir.',
-      ],
-      types: [
-        'Certains sons sont faits pour respirer.',
-        'Certains sont faits pour méditer.',
-        'Certains sont faits pour dormir.',
-        'Certains sont faits pour les moments où l\'utilisateur n\'a pas besoin de plus de mots, mais d\'un espace plus doux autour du corps.',
-      ],
-    },
-    places: {
       items: [
         'Un lieu pour respirer.',
-        'Un lieu pour écrire.',
         'Un lieu pour écouter.',
-        'Un lieu pour remarquer ce qui s\'est répété.',
-        'Un lieu où le corps peut se calmer avant que l\'esprit essaie de tout comprendre.',
+        'Un lieu où la nuit peut rester douce.',
+        'Un lieu pour revenir au présent avant d’essayer de tout comprendre.',
       ],
     },
-    intention: {
+    whyExists: {
       paragraphs: [
-        'Miravelys est né de la conviction que les gens n\'ont pas toujours besoin d\'être poussés, réparés ou définis par quelqu\'un d\'autre.',
-        'Parfois, ils ont besoin d\'un espace silencieux où ils peuvent se rencontrer avec honnêteté.',
-        'Un espace où un moment emmêlé peut devenir un peu plus clair.',
-        'Un espace où une ancienne croyance peut enfin être vue.',
-        'Un espace où le corps peut s\'adoucir avant que l\'esprit décide.',
-        'Un espace où l\'utilisateur reste en contrôle.',
-        'Un espace où la vérité est approchée doucement, sans être forcée.',
+        'Miravelys existe parce que les gens n’ont pas toujours besoin d’être poussés vers une conclusion.',
+        'Parfois, ils ont besoin d’un lieu privé capable de contenir l’expérience sans en prendre le contrôle.',
       ],
       audience: [
-        'Pour la personne qui ressent trop et veut comprendre avec douceur.',
-        'Pour la personne qui répète la même histoire intérieure et veut voir où elle commence.',
-        'Pour la personne qui veut séparer ce qui s\'est passé de ce que l\'esprit a ajouté.',
-        'Pour la personne qui a besoin de calme avant la clarté.',
-        'Pour la personne qui ne cherche pas à devenir quelqu\'un d\'autre, mais à se rapprocher de ce qui semble honnête à l\'intérieur.',
+        'Un lieu où la personne décide ce qui lui correspond.',
+        'Un lieu où une histoire répétée peut devenir visible sans devenir une identité.',
+        'Un lieu où l’incertitude peut rester incertaine.',
+        'Un lieu où le familier peut être comparé doucement à ce qui semble plus juste maintenant.',
       ],
-    },
-    finale: {
-      paragraphs: [
-        'Miravelys ne cherche pas à réparer qui vous êtes.',
-        'Il vous aide à revenir à vous-même — lentement, en privé, et avec plus de douceur qu\'avant.',
+      closing: [
+        'Miravelys ne sert pas à réparer qui vous êtes.',
+        'Il sert à vous aider à revenir à vous lentement, en privé, avec plus de douceur qu’avant.',
       ],
     },
   },
 };
 
 const hi = {
-  eyebrow: 'शुरुआत',
+  meta: {
+    title: 'Miravelys कैसे जन्मा — Miravelys',
+    description: 'Miravelys की कहानी: एक निजी चिंतन-स्थान, जहाँ देखा जा सके कि क्या हुआ, मन ने क्या जोड़ा होगा, और अभी क्या अधिक सच्चा लगता है।',
+    ogTitle: 'Miravelys कैसे जन्मा',
+    ogDescription: 'ईमानदार लेखन, पल और कहानी को अलग देखने, शरीर को शांत करने और अपने पास अधिक दयालुता से लौटने की शांत कहानी।',
+  },
+  eyebrow: 'आरंभ',
   title: 'Miravelys कैसे जन्मा',
-  cta: 'अपने पास लौटें',
+  cta: 'कहानी पढ़ें',
+  ctaPrimary: 'शीघ्र पहुँच',
+  ctaSecondary: 'अनुभव पर लौटें',
   blockLabels: {
-    search: 'खोज',
-    whatMindAdds: 'मन क्या जोड़ता है',
-    writing: 'ईमानदारी से लिखना',
-    questions: 'ईमानदार सवाल',
-    mirror: 'एक शांत mirror',
-    separation: 'कोमल अलगाव',
-    humility: 'जो हम दावा नहीं करते',
-    grounding: 'पहले grounding',
-    sounds: 'शांत करने वाली आवाज़ें',
-    places: 'उतरने की जगहें',
-    intention: 'यह किसके लिए है',
-    finale: 'अपने पास लौटना',
+    opening: 'एक शांत खोज',
+    momentStory: 'पल कहानी बन जाता है',
+    writingMirror: 'लेखन एक दर्पण की तरह',
+    separatingLayers: 'परतों को अलग करना',
+    bodyCalm: 'शरीर को भी शांति चाहिए',
+    whyExists: 'Miravelys क्यों है',
   },
   intro: [
-    'Miravelys सिर्फ़ एक और app idea के रूप में नहीं जन्मा।',
-    'यह बहुत पहले शुरू हुआ — एक शांत, निजी खोज में।',
-    'ऐसी खोज, जो तब शुरू होती है जब आप खुद से पूछने लगते हैं कि कुछ पल जितना दर्द देने चाहिए, उससे ज़्यादा क्यों दर्द देते हैं। किसी दूसरे इंसान की एक बात घंटों तक मन में क्यों रहती है। एक छोटी-सी स्थिति आपके बारे में, आपकी क़ीमत के बारे में, या जीवन के अर्थ के बारे में पूरी कहानी कैसे बन जाती है।',
+    'Miravelys किसी और ऐप-विचार की तरह शुरू नहीं हुआ।',
+    'यह एक ऐसे प्रश्न से शुरू हुआ जिसे बहुत लोग चुपचाप ढोते हैं: एक छोटा-सा पल कभी-कभी हमारे भीतर पूरी कहानी क्यों बन जाता है?',
   ],
   blocks: {
-    search: {
-      paragraphs: ['शुरू में मैंने जवाब अपने बाहर खोजे।'],
+    opening: {
+      paragraphs: [
+        'कुछ पल ऐसे थे जो अपेक्षा से अधिक चुभे। एक वाक्य। एक चुप्पी। किसी के स्वर में हल्का बदलाव। बाहर से छोटी बात, भीतर अचानक बहुत बड़ी।',
+        'धीरे-धीरे समझ आया कि पीड़ा हमेशा केवल घटना में नहीं होती। कई बार वह उस अर्थ में भी होती है जो मन उस घटना के चारों ओर बना देता है।',
+      ],
       lines: [
-        'किताबों में।',
-        'विचारों में।',
-        'चुप्पी में।',
-        'सवालों में।',
-        'इस उम्मीद में कि कहीं कोई साफ़ जवाब होगा, जो समझा देगा कि मन साधारण पलों के चारों ओर इतना दर्द क्यों बना देता है।',
+        'जो हुआ, वह एक परत थी।',
+        'जो महसूस हुआ, वह दूसरी परत थी।',
+        'और मन ने उसका जो अर्थ बनाया, वह अक्सर सबसे ऊँची आवाज़ था।',
       ],
     },
-    whatMindAdds: {
+    momentStory: {
       paragraphs: [
-        'लेकिन धीरे-धीरे मैंने एक ज़रूरी बात समझनी शुरू की: कई बार हमें सिर्फ़ वह नहीं दुखाता जो हुआ।',
-        'हमें वह दुखाता है जो हम उस घटना में जोड़ देते हैं।',
-        'और जब यह बार-बार दोहरता है, तो हम ऐसी कहानियों के अंदर जीने लगते हैं जो कभी हमें बचाती थीं, लेकिन अब सच में हमारी नहीं रहीं।',
+        'जब मन हमें बचाना चाहता है, वह बहुत तेज़ चलता है। वह एक नज़र, एक विराम, एक गलती, एक भावना को जोड़ता है और उन्हें किसी निश्चित बात जैसा बना देता है।',
+        'बार-बार दोहरने पर एक कहानी विचार कम और अपने ही चित्र जैसी अधिक लगने लगती है।',
       ],
       transforms: [
-        'एक नज़र rejection बन जाती है।',
-        'एक pause proof बन जाता है।',
-        'एक गलती identity बन जाती है।',
-        'एक feeling fact बन जाती है।',
-        'एक डर belief बन जाता है।',
+        'एक विराम अस्वीकार जैसा लग सकता है।',
+        'एक नज़र प्रमाण बन सकती है।',
+        'एक गलती पहचान बन सकती है।',
+        'एक भावना तथ्य जैसी लग सकती है।',
+        'एक डर विश्वास बन सकता है।',
       ],
     },
-    writing: {
+    writingMirror: {
       paragraphs: [
-        'Miravelys इसी एहसास से बना।',
-        'यह एक private जगह के रूप में बनाया गया, जहाँ इंसान थोड़ी देर रुक सके और लिख सके कि अंदर क्या हो रहा है — perfect तरीके से नहीं, सुंदर diary की तरह नहीं, किसी को impress करने के लिए नहीं, बल्कि honestly.',
+        'लिखना पहला कोमल स्थान बना जहाँ इन कहानियों को देखा जा सकता था।',
+        'न पूर्ण डायरी। न सुंदर भाषा। बस वही सच्चा वाक्य जो भीतर पहले से था: यह चुभा; मैं छोटा महसूस हुआ; लगता है वे दूर जा रहे हैं; पता नहीं यह इतना बड़ा क्यों लग रहा है।',
+        'जब कोई विचार लिख दिया जाता है, वह कुछ देर के लिए पूरा आकाश नहीं रहता। वह कुछ ऐसा बनता है जिसके पास बैठा जा सके।',
+      ],
+      lines: [
+        'जो उलझा है उसे निष्कर्ष बनने से पहले लिखना।',
+        'डर को अंतिम उत्तर बनाए बिना लिखना।',
+        'इतना लिखना कि पल और कहानी के बीच की जगह दिख सके।',
       ],
     },
-    questions: {
-      items: [
-        'मैं क्या महसूस कर रहा हूँ?',
-        'मैं अभी किस बात पर विश्वास कर रहा हूँ?',
-        'मेरे मन ने इस situation में क्या जोड़ दिया?',
-        'मेरा शरीर किस बात पर react कर रहा है?',
-        'कौन-सी कहानी बार-बार लौट रही है?',
-        'क्या सच जैसा महसूस होता है, और क्या शायद सिर्फ़ familiar लगता है?',
-      ],
-    },
-    mirror: {
+    separatingLayers: {
       paragraphs: [
-        'Miravelys user को ये moments capture करने की जगह देता है — जब वे आते हैं, या उनके गुजर जाने के बाद। एक belief जो ज़ोर से महसूस होने लगा। एक emotion जो अचानक आया। एक reaction जो situation से बड़ा लगा। एक thought जो बार-बार लौटता रहा। शरीर का एक एहसास, जैसे वह शब्दों से गहरी कोई चीज़ उठा रहा हो।',
-        'और समय के साथ, ये छोटे लिखे हुए moments एक शांत mirror बन सकते हैं।',
-        'ऐसा mirror जो judge नहीं करता।',
-        'ऐसा mirror जो नहीं कहता, "तुम यही हो।"',
-        'बल्कि ऐसा mirror जो user को notice करने में मदद करता है कि क्या repeat होता रहा।',
+        'यही जगह Miravelys का हृदय बनी।',
+        'ऐप को परतों को धीरे से अलग देखने में मदद करने के लिए बनाया गया, बिना निश्चितता थोपे और बिना उपयोगकर्ता की जगह निर्णय लिए।',
       ],
-    },
-    separation: {
-      paragraphs: [
-        'App moment को उसके चारों ओर बनी story से, emotion को belief से, body reaction को उसके around बनी identity से, और unknown को जल्दी आए conclusions से अलग देखने में मदद कर सकता है।',
-        'यही Miravelys का heart है।',
-        'यह user को नहीं बताता कि truth क्या है।',
-        'यह diagnose नहीं करता।',
-        'यह therapy को replace नहीं करता।',
-        'यह decide नहीं करता कि कोई कौन है।',
-        'इसके बजाय, यह user को ज़्यादा gently देखने में मदद करता है।',
-      ],
-    },
-    humility: {
-      paragraphs: ['Miravelys honest seeing के इन्हीं छोटे moments के लिए बनाया गया।'],
       insights: [
-        'देखने के लिए: यह feeling थी, fact नहीं।',
-        'यह डर था, मेरी पूरी identity नहीं।',
-        'यह belief शायद कभी मुझे protect करता था, लेकिन शायद मुझे हमेशा इसी से जीने की ज़रूरत नहीं।',
-        'यह story जल्दी आ गई, लेकिन शायद इसके नीचे कुछ ज़्यादा शांत है।',
+        'क्या हुआ।',
+        'क्या महसूस हुआ।',
+        'शरीर ने किस पर प्रतिक्रिया दी।',
+        'मन ने क्या जोड़ा होगा।',
+        'कौन-सा विश्वास मौजूद हो सकता है।',
+        'क्या अभी भी अज्ञात है।',
+      ],
+      closing: [
+        'किसी विश्वास को देखना उसे गलत ठहराना नहीं है। कुछ विश्वासों ने शायद कभी हमें बचाया हो। Miravelys उन्हें बस एक शांत जगह देता है जहाँ उन्हें देखा, नरम किया, परखा या वैसे ही छोड़ा जा सके।',
       ],
     },
-    grounding: {
+    bodyCalm: {
       paragraphs: [
-        'लेकिन app सिर्फ़ writing और reflection के बारे में नहीं है।',
-        'क्योंकि कभी-कभी, जब body overwhelmed होती है, mind साफ़ नहीं देख पाता। कभी-कभी पहला कदम analyze करना नहीं होता। पहला कदम होता है breathe करना, body को feel करना, slow down करना, और present में लौटना।',
-        'इसीलिए Miravelys में grounding experiences भी हैं: breathing, feeling awareness, meditation, sleep support और calming sound journeys.',
+        'पर स्पष्टता हमेशा मन से शुरू नहीं होती।',
+        'कभी शरीर इतना तना, थका या भरा होता है कि साफ़ देखना कठिन हो जाता है। तब पहला दयालु कदम साँस लेना, धीमा होना, सुनना या विश्राम करना हो सकता है।',
+        'इसीलिए Miravelys में साँस, ध्यान, नींद का सहारा और स्थिरता देने वाली ध्वनियाँ हैं। वे उन पलों के लिए हैं जब शरीर को उत्तरों से पहले कोमलता चाहिए।',
       ],
-    },
-    sounds: {
-      paragraphs: [
-        'Miravelys के sounds खास इसी world के लिए बनाए गए हैं।',
-        'वे सिर्फ़ background music नहीं हैं। वे soft places to land जैसे महसूस होने के लिए बनाए गए हैं — gentle atmospheres जो body को शांत, breath को धीमा, और moment को थोड़ा safer महसूस करने में मदद करते हैं।',
-        'ये unique grounding sounds Miravelys की emotional language का हिस्सा हैं। वे app को सिर्फ़ tool जैसा नहीं, बल्कि एक private place जैसा महसूस कराते हैं जहाँ user लौट सकता है।',
-      ],
-      types: [
-        'कुछ sounds breathing के लिए बने हैं।',
-        'कुछ meditation के लिए।',
-        'कुछ sleep के लिए।',
-        'कुछ उन moments के लिए जब user को और words नहीं चाहिए, बल्कि body के around एक softer space चाहिए।',
-      ],
-    },
-    places: {
       items: [
-        'एक जगह breathe करने के लिए।',
-        'एक जगह लिखने के लिए।',
-        'एक जगह सुनने के लिए।',
-        'एक जगह notice करने के लिए कि क्या repeat हुआ।',
-        'एक जगह body को calm करने के लिए, इससे पहले कि mind सब कुछ समझने की कोशिश करे।',
+        'साँस लेने की जगह।',
+        'सुनने की जगह।',
+        'रात को थोड़ा नरम रहने देने की जगह।',
+        'सब कुछ समझने से पहले वर्तमान में लौटने की जगह।',
       ],
     },
-    intention: {
+    whyExists: {
       paragraphs: [
-        'Miravelys इस विश्वास से जन्मा कि लोगों को हमेशा push, fix, या define किए जाने की ज़रूरत नहीं होती।',
-        'कभी-कभी उन्हें एक शांत जगह चाहिए, जहाँ वे खुद से honestly मिल सकें।',
-        'एक जगह जहाँ tangled moment थोड़ा clearer हो सके।',
-        'एक जगह जहाँ old belief आखिरकार दिखाई दे सके।',
-        'एक जगह जहाँ body soft हो सके, इससे पहले कि mind decide करे।',
-        'एक जगह जहाँ user control में रहे।',
-        'एक जगह जहाँ truth को gently approach किया जाए, force नहीं किया जाए।',
+        'Miravelys इसलिए है क्योंकि लोगों को हर बार किसी निष्कर्ष की ओर धकेले जाने की ज़रूरत नहीं होती।',
+        'कभी उन्हें ऐसी निजी जगह चाहिए जो अनुभव को थाम सके, पर नियंत्रण अपने हाथ में न ले।',
       ],
       audience: [
-        'Miravelys उस व्यक्ति के लिए है जो बहुत महसूस करता है और उसे softly समझना चाहता है।',
-        'उस व्यक्ति के लिए जो वही inner story बार-बार repeat करता है और देखना चाहता है कि वह कहाँ शुरू होती है।',
-        'उस व्यक्ति के लिए जो अलग करना चाहता है कि क्या हुआ और mind ने क्या जोड़ा।',
-        'उस व्यक्ति के लिए जिसे clarity से पहले calm चाहिए।',
-        'उस व्यक्ति के लिए जो कोई और बनने की कोशिश नहीं कर रहा, बल्कि अंदर जो honest लगता है उसके करीब आना चाहता है।',
+        'ऐसी जगह जहाँ उपयोगकर्ता तय करता है कि क्या सही बैठता है।',
+        'ऐसी जगह जहाँ दोहरती कहानी दिख सकती है, पर पहचान नहीं बनती।',
+        'ऐसी जगह जहाँ अनिश्चितता को अनिश्चित रहने दिया जा सकता है।',
+        'ऐसी जगह जहाँ परिचित लगने वाली बात को इस समय अधिक सच्चा लगने वाली बात से धीरे से मिलाया जा सके।',
       ],
-    },
-    finale: {
-      paragraphs: [
-        'Miravelys यह नहीं है कि आप कौन हैं उसे fix करे।',
-        'यह आपको अपने पास लौटने में मदद करने के बारे में है — धीरे-धीरे, privately, और पहले से ज़्यादा kindness के साथ।',
+      closing: [
+        'Miravelys आपको ठीक करने के बारे में नहीं है।',
+        'यह आपको धीरे-धीरे, निजी रूप से, और पहले से अधिक दयालुता के साथ अपने पास लौटने में मदद करने के बारे में है।',
       ],
     },
   },
 };
 
 const zh = {
+  meta: {
+    title: 'Miravelys 如何诞生 — Miravelys',
+    description: 'Miravelys 背后的故事：一个私密的反思空间，用来留意发生了什么、头脑可能添加了什么，以及此刻什么更接近真实。',
+    ogTitle: 'Miravelys 如何诞生',
+    ogDescription: '一个安静的起源故事：诚实书写，分开当下与故事，先安顿身体，再带着更多温柔回到自己。',
+  },
   eyebrow: '起源',
-  title: 'Miravelys 是如何诞生的',
-  cta: '回到自己',
+  title: 'Miravelys 如何诞生',
+  cta: '阅读故事',
+  ctaPrimary: '加入早期访问',
+  ctaSecondary: '回到体验',
   blockLabels: {
-    search: '寻找',
-    whatMindAdds: '头脑添加了什么',
-    writing: '诚实地书写',
-    questions: '诚实的问题',
-    mirror: '一面安静的镜子',
-    separation: '温柔地分开',
-    humility: '我们不声称什么',
-    grounding: '先 grounding',
-    sounds: '安抚的声音',
-    places: '可以落脚的地方',
-    intention: '为谁而存在',
-    finale: '回到自己',
+    opening: '一次安静的寻找',
+    momentStory: '时刻变成故事',
+    writingMirror: '书写像一面镜子',
+    separatingLayers: '分开层次',
+    bodyCalm: '身体也需要安静',
+    whyExists: 'Miravelys 为什么存在',
   },
   intro: [
-    'Miravelys 并不是作为"又一个 app 想法"诞生的。',
-    '它开始得更早——开始于一段安静的个人寻找。',
-    '那种寻找，会在人开始问自己一些问题时出现：为什么有些时刻比它本该造成的伤害更痛？为什么别人一句话可以在脑海里停留好几个小时？为什么一件很小的事情，能变成关于"我是谁""我配不配""生活到底意味着什么"的一整套故事？',
+    'Miravelys 并不是作为另一个应用想法开始的。',
+    '它始于许多人默默带着的一个问题：为什么一个很小的时刻，有时会在我们心里变成一整段故事？',
   ],
   blocks: {
-    search: {
-      paragraphs: ['一开始，我在外面寻找答案。'],
+    opening: {
+      paragraphs: [
+        '有些时刻，比它看起来应有的分量更刺痛。一个句子。一段沉默。语气里很小的变化。外面只是小事，里面却突然变得很大。',
+        '我开始注意到，痛感并不总是只来自事件本身。很多时候，它也来自头脑围绕事件放上的意义。',
+      ],
       lines: [
-        '在书里。',
-        '在想法里。',
-        '在沉默里。',
-        '在问题里。',
-        '在一种希望里：希望某个地方有一个清晰的答案，可以解释为什么头脑会围绕简单的时刻制造那么多痛苦。',
+        '发生的事是一层。',
+        '感受到的是另一层。',
+        '而头脑赋予它的意义，往往是最响的一层。',
       ],
     },
-    whatMindAdds: {
+    momentStory: {
       paragraphs: [
-        '但慢慢地，我开始明白一件重要的事：很多时候，伤害我们的不只是发生了什么。',
-        '还有我们为它添加了什么。',
-        '当这一切反复发生，我们可能开始活在一些故事里——它们曾经保护过我们，但已经不再真正属于我们。',
+        '当头脑想保护我们时，它会跑得很快。它抓住一个眼神、一次停顿、一个错误、一种感受，然后把它们变成听起来很确定的东西。',
+        '重复得足够多之后，一个故事会不再像想法，而更像对自己的画像。',
       ],
       transforms: [
-        '一个眼神变成了被拒绝。',
-        '一次停顿变成了证据。',
-        '一个错误变成了身份。',
-        '一种感受变成了事实。',
-        '一个恐惧变成了信念。',
+        '一次停顿可能变成被拒绝。',
+        '一个眼神可能变成证据。',
+        '一个错误可能变成身份。',
+        '一种感受可能变成事实。',
+        '一个恐惧可能变成信念。',
       ],
     },
-    writing: {
+    writingMirror: {
       paragraphs: [
-        'Miravelys 正是从这个看见中被创造出来的。',
-        '它被设计成一个私密空间，让人可以停下来一会儿，把内在正在发生的事情写下来——不是为了写得完美，不是为了写成漂亮的日记，也不是为了取悦任何人，而是诚实地写。',
+        '书写成了第一个温柔的空间，让这些故事可以被看见。',
+        '不是完美日记。不是漂亮文字。只是那个已经在心里的诚实句子：这让我难过；我觉得自己很小；我以为他们要离开；我不知道为什么这件事这么大。',
+        '当一个念头被写下来，它会暂时不再占据整片天空。它变成可以坐在旁边看的东西。',
+      ],
+      lines: [
+        '在纠结变成结论之前写下来。',
+        '把恐惧写出来，但不把它当成最终答案。',
+        '写到足以看见时刻与故事之间的空间。',
       ],
     },
-    questions: {
-      items: [
-        '我正在感受什么？',
-        '我现在相信了什么？',
-        '我的头脑给这个情况添加了什么？',
-        '我的身体在对什么产生反应？',
-        '哪个故事一直在重复？',
-        '什么感觉像是真的，什么也许只是熟悉？',
-      ],
-    },
-    mirror: {
+    separatingLayers: {
       paragraphs: [
-        'Miravelys 给用户一个空间，让他们在这些时刻出现时，或在它们过去之后，把它们记录下来。一个突然变得很响的信念。一种忽然到来的情绪。一个比情况本身更强烈的反应。一个不断回来的念头。一种身体感觉，像是在承载比语言更深的东西。',
-        '随着时间推移，这些小小的书写时刻，可能会慢慢形成一面安静的镜子。',
-        '不是一面评判你的镜子。',
-        '不是一面告诉你"这就是你"的镜子。',
-        '而是一面帮助用户看见什么一直在重复的镜子。',
+        '这个空间后来成了 Miravelys 的核心。',
+        '应用被创建出来，是为了温柔地分开层次，不强迫确定，也不替用户下结论。',
       ],
-    },
-    separation: {
-      paragraphs: [
-        '这个 app 可以帮助用户把当下发生的时刻和围绕它产生的故事分开，把情绪和信念分开，把身体反应和围绕它建立起来的身份感分开，也把未知和太快到来的结论分开。',
-        '这就是 Miravelys 的核心。',
-        '它不会告诉用户什么是真理。',
-        '它不会诊断。',
-        '它不会替代治疗。',
-        '它不会决定一个人是谁。',
-        '相反，它帮助用户以更温柔的方式看见。',
-      ],
-    },
-    humility: {
-      paragraphs: ['Miravelys 是为这些诚实看见的小瞬间而建立的。'],
       insights: [
-        '看见：这是一种感受，不是事实。',
-        '这是一个恐惧，不是我的全部身份。',
-        '这个信念也许曾经保护过我，但也许我不需要永远从它出发生活。',
-        '这个故事来得很快，但也许它下面还有某种更安静的东西。',
+        '发生了什么。',
+        '感受到了什么。',
+        '身体对什么有反应。',
+        '头脑可能添加了什么。',
+        '什么信念可能在场。',
+        '什么仍然未知。',
+      ],
+      closing: [
+        '看见一个信念，并不等于评判它。有些信念也许曾经保护过我们。Miravelys 只是给它们一个安静的位置，让它们可以被看见、放软、询问，或暂时被放下。',
       ],
     },
-    grounding: {
+    bodyCalm: {
       paragraphs: [
-        '但这个 app 不只关于书写和反思。',
-        '因为有时候，当身体被压得太满，头脑就无法看清。有时候第一步不是分析。第一步是呼吸，感受身体，慢下来，回到当下。',
-        '所以 Miravelys 也包含 grounding 体验：呼吸、感受觉察、冥想、睡眠支持，以及安静的声音旅程。',
+        '但清晰并不总是从头脑开始。',
+        '有时身体太紧、太累、太满，无法清楚地看。在那些时刻，最温柔的第一步也许是呼吸、慢下来、聆听，或休息。',
+        '所以 Miravelys 包含呼吸、冥想、睡眠支持和安定声音。它们服务于那些身体先需要柔软、头脑之后再寻找答案的时刻。',
       ],
-    },
-    sounds: {
-      paragraphs: [
-        'Miravelys 里的声音，是专门为这个世界创造的。',
-        '它们不只是背景音乐。它们被设计成像柔软的落脚之处——温柔的氛围，帮助身体更安静，呼吸更慢，让这一刻感觉稍微安全一点。',
-        '这些独特的 grounding 声音，是 Miravelys 情感语言的一部分。它们让这个 app 不只是一个工具，而更像是用户可以回来的私密空间。',
-      ],
-      types: [
-        '有些声音为呼吸而做。',
-        '有些为冥想而做。',
-        '有些为睡眠而做。',
-        '有些为那些不需要更多语言、只需要身体周围有一个更柔软空间的时刻而做。',
-      ],
-    },
-    places: {
       items: [
         '一个可以呼吸的地方。',
-        '一个可以书写的地方。',
-        '一个可以倾听的地方。',
-        '一个可以看见什么一直在重复的地方。',
-        '一个让身体先安静下来，再让头脑尝试理解一切的地方。',
+        '一个可以聆听的地方。',
+        '一个让夜晚保持柔和的地方。',
+        '一个在试图理解一切之前回到当下的地方。',
       ],
     },
-    intention: {
+    whyExists: {
       paragraphs: [
-        'Miravelys 诞生于这样一种相信：人们并不总是需要被推动、被修复，或被告诉自己是谁。',
-        '有时候，他们需要的是一个安静的空间，在那里可以诚实地遇见自己。',
-        '一个让纠结的时刻变得稍微清晰一点的空间。',
-        '一个让旧信念终于被看见的空间。',
-        '一个让身体在头脑做决定之前先柔软下来的空间。',
-        '一个用户始终保持掌控的空间。',
-        '一个温柔靠近真实，而不是强迫真实出现的空间。',
+        'Miravelys 存在，是因为人并不总是需要被推向结论。',
+        '有时，人需要一个私密空间，可以承接体验，却不接管体验。',
       ],
       audience: [
-        'Miravelys 为那些感受太多、却想温柔理解自己的人而存在。',
-        '为那些反复经历同一个内在故事、并想看见它从哪里开始的人而存在。',
-        '为那些想把真正发生的事和头脑添加的东西分开的人而存在。',
-        '为那些在清晰之前需要平静的人而存在。',
-        '为那些不是想变成别人，而是想靠近内在诚实感的人而存在。',
+        '一个由用户决定什么合适的地方。',
+        '一个让重复故事被看见、却不变成身份的地方。',
+        '一个允许未知继续未知的地方。',
+        '一个把熟悉感与此刻更接近真实的东西温柔比较的地方。',
       ],
-    },
-    finale: {
-      paragraphs: [
-        'Miravelys 不是为了修复你是谁。',
-        '它是为了帮助你回到自己——慢慢地，私密地，并比从前更加温柔地。',
+      closing: [
+        'Miravelys 不是为了修理你是谁。',
+        '它是为了帮助你慢慢地、私密地、带着更多善意回到自己。',
       ],
     },
   },
 };
 
 const de = {
-  eyebrow: 'Der Anfang',
-  title: 'Wie Miravelys entstanden ist',
-  cta: 'Zu dir zurückkehren',
+  meta: {
+    title: 'Wie Miravelys entstand — Miravelys',
+    description: 'Die Geschichte hinter Miravelys: ein privater Reflexionsraum, um zu bemerken, was passiert ist, was der Geist vielleicht hinzugefügt hat und was sich jetzt stimmiger anfühlt.',
+    ogTitle: 'Wie Miravelys entstand',
+    ogDescription: 'Eine leise Ursprungsgeschichte über ehrliches Schreiben, das Trennen von Moment und Geschichte, das Beruhigen des Körpers und eine freundlichere Rückkehr zu sich selbst.',
+  },
+  eyebrow: 'Der Ursprung',
+  title: 'Wie Miravelys entstand',
+  cta: 'Die Geschichte lesen',
+  ctaPrimary: 'Frühen Zugang erhalten',
+  ctaSecondary: 'Zur Erfahrung zurück',
   blockLabels: {
-    search: 'Die Suche',
-    whatMindAdds: 'Was der Verstand hinzufügt',
-    writing: 'Ehrlich schreiben',
-    questions: 'Ehrliche Fragen',
-    mirror: 'Ein stiller Spiegel',
-    separation: 'Sanfte Trennung',
-    humility: 'Was wir nicht behaupten',
-    grounding: 'Zuerst Erdung',
-    sounds: 'Beruhigende Klänge',
-    places: 'Orte zum Ankommen',
-    intention: 'Für wen es ist',
-    finale: 'Zu dir zurückkehren',
+    opening: 'Eine stille Suche',
+    momentStory: 'Der Moment wird zur Geschichte',
+    writingMirror: 'Schreiben als Spiegel',
+    separatingLayers: 'Die Ebenen trennen',
+    bodyCalm: 'Auch der Körper braucht Ruhe',
+    whyExists: 'Warum Miravelys existiert',
   },
   intro: [
-    'Miravelys ist nicht einfach als eine weitere App-Idee entstanden.',
-    'Es begann viel früher — in einer stillen persönlichen Suche.',
-    'In der Art von Suche, die beginnt, wenn man sich fragt, warum manche Momente mehr weh tun, als sie sollten. Warum ein einziger Satz eines anderen Menschen stundenlang im Kopf bleiben kann. Warum eine kleine Situation zu einer ganzen Geschichte darüber werden kann, wer man ist, was man verdient oder was das Leben bedeutet.',
+    'Miravelys begann nicht als einfach eine weitere App-Idee.',
+    'Es begann mit einer Frage, die viele Menschen leise in sich tragen: Warum wird ein kleiner Moment manchmal zu einer ganzen Geschichte in uns?',
   ],
   blocks: {
-    search: {
-      paragraphs: ['Am Anfang suchte ich außerhalb von mir.'],
+    opening: {
+      paragraphs: [
+        'Es gab Momente, die mehr weh taten, als sie scheinbar sollten. Ein Satz. Ein Schweigen. Eine veränderte Stimme. Außen etwas Kleines, innen plötzlich etwas Großes.',
+        'Ich begann zu bemerken, dass der Schmerz nicht immer nur im Ereignis selbst lag. Oft lag er auch in der Bedeutung, die der Geist darumlegte.',
+      ],
       lines: [
-        'In Büchern.',
-        'In Ideen.',
-        'In der Stille.',
-        'In Fragen.',
-        'In der Hoffnung, dass es irgendwo eine klare Antwort gibt, die erklären kann, warum der Verstand um einfache Momente so viel Schmerz erschafft.',
+        'Was passiert war, war eine Ebene.',
+        'Was ich fühlte, war eine andere.',
+        'Und was mein Geist daraus machte, war oft die lauteste Ebene.',
       ],
     },
-    whatMindAdds: {
+    momentStory: {
       paragraphs: [
-        'Doch langsam begann ich etwas Wichtiges zu verstehen: Oft verletzt uns nicht nur das, was passiert ist.',
-        'Es ist das, was wir dem Geschehen hinzufügen.',
-        'Und wenn sich das immer wieder wiederholt, können wir beginnen, in Geschichten zu leben, die uns einst geschützt haben, aber nicht mehr wirklich zu uns gehören.',
+        'Der Geist kann sehr schnell werden, wenn er uns schützen will. Er sammelt einen Blick, eine Pause, einen Fehler, ein Gefühl und macht daraus etwas, das sicher klingt.',
+        'Nach genügend Wiederholung fühlt sich eine Geschichte irgendwann weniger wie ein Gedanke an und mehr wie ein Selbstbild.',
       ],
       transforms: [
-        'Ein Blick wird zu Ablehnung.',
-        'Eine Pause wird zu einem Beweis.',
-        'Ein Fehler wird zu Identität.',
-        'Ein Gefühl wird zu einer Tatsache.',
-        'Eine Angst wird zu einer Überzeugung.',
+        'Eine Pause kann zu Ablehnung werden.',
+        'Ein Blick kann zum Beweis werden.',
+        'Ein Fehler kann zur Identität werden.',
+        'Ein Gefühl kann zur Tatsache werden.',
+        'Eine Angst kann zur Überzeugung werden.',
       ],
     },
-    writing: {
+    writingMirror: {
       paragraphs: [
-        'Aus dieser Erkenntnis heraus entstand Miravelys.',
-        'Es wurde als privater Ort geschaffen, an dem ein Mensch für einen Moment innehalten und aufschreiben kann, was innen geschieht — nicht perfekt, nicht wie eine schöne Tagebuchseite, nicht um jemanden zu beeindrucken, sondern ehrlich.',
+        'Schreiben wurde der erste sanfte Raum, in dem diese Geschichten sichtbar werden konnten.',
+        'Kein perfektes Tagebuch. Keine schönen Seiten. Nur der ehrliche Satz, der schon da war: Das hat wehgetan; ich fühlte mich klein; ich glaube, sie gehen; ich weiß nicht, warum sich das so groß anfühlt.',
+        'Wenn ein Gedanke aufgeschrieben ist, ist er für einen Moment nicht mehr der ganze Himmel. Er wird zu etwas, neben dem man sitzen kann.',
+      ],
+      lines: [
+        'Aufschreiben, was verworren ist, bevor es zur Schlussfolgerung wird.',
+        'Die Angst schreiben, ohne sie zur endgültigen Antwort zu machen.',
+        'Genug schreiben, um den Raum zwischen Moment und Geschichte zu sehen.',
       ],
     },
-    questions: {
-      items: [
-        'Was fühle ich?',
-        'Woran glaube ich gerade?',
-        'Was hat mein Verstand zu dieser Situation hinzugefügt?',
-        'Worauf reagiert mein Körper?',
-        'Welche Geschichte wiederholt sich?',
-        'Was fühlt sich wahr an, und was fühlt sich vielleicht nur vertraut an?',
-      ],
-    },
-    mirror: {
+    separatingLayers: {
       paragraphs: [
-        'Miravelys gibt dem Nutzer einen Raum, um diese Momente festzuhalten, wenn sie erscheinen oder nachdem sie vergangen sind. Eine Überzeugung, die laut wurde. Eine Emotion, die plötzlich kam. Eine Reaktion, die größer wirkte als die Situation. Ein Gedanke, der immer wieder zurückkehrte. Ein Körpergefühl, das etwas Tieferes zu tragen schien.',
-        'Mit der Zeit können diese kleinen geschriebenen Momente zu einem stillen Spiegel werden.',
-        'Nicht zu einem Spiegel, der urteilt.',
-        'Nicht zu einem Spiegel, der sagt: „Das bist du."',
-        'Sondern zu einem Spiegel, der hilft zu bemerken, was sich wiederholt hat.',
+        'Dieser Raum wurde zum Herzen von Miravelys.',
+        'Die App wurde geschaffen, um Ebenen behutsam zu trennen, ohne Gewissheit zu erzwingen und ohne für die Nutzerin oder den Nutzer zu entscheiden.',
       ],
-    },
-    separation: {
-      paragraphs: [
-        'Die App kann helfen, den Moment von der Geschichte darum zu trennen, die Emotion von der Überzeugung, die Körperreaktion von der Identität, die darum aufgebaut wurde, und das Unbekannte von den Schlussfolgerungen, die zu schnell kamen.',
-        'Das ist das Herz von Miravelys.',
-        'Es sagt dem Nutzer nicht, was die Wahrheit ist.',
-        'Es diagnostiziert nicht.',
-        'Es ersetzt keine Therapie.',
-        'Es entscheidet nicht, wer jemand ist.',
-        'Stattdessen hilft es dem Nutzer, sanfter hinzusehen.',
-      ],
-    },
-    humility: {
-      paragraphs: ['Miravelys wurde für diese kleinen Momente ehrlichen Sehens geschaffen.'],
       insights: [
-        'Zu sehen: Das war ein Gefühl, keine Tatsache.',
-        'Das war eine Angst, nicht meine ganze Identität.',
-        'Diese Überzeugung hat mich vielleicht einmal geschützt, aber vielleicht muss ich nicht für immer aus ihr heraus leben.',
-        'Diese Geschichte erschien schnell, aber vielleicht liegt darunter etwas Leiseres.',
+        'Was passiert ist.',
+        'Was gefühlt wurde.',
+        'Worauf der Körper reagiert hat.',
+        'Was der Geist vielleicht hinzugefügt hat.',
+        'Welche Überzeugung da sein könnte.',
+        'Was noch unbekannt bleibt.',
+      ],
+      closing: [
+        'Eine Überzeugung zu bemerken heißt nicht, sie zu verurteilen. Manche Überzeugungen haben uns vielleicht einmal geschützt. Miravelys gibt ihnen nur einen stillen Ort, an dem sie gesehen, weicher gemacht, befragt oder in Ruhe gelassen werden können.',
       ],
     },
-    grounding: {
+    bodyCalm: {
       paragraphs: [
-        'Aber die App handelt nicht nur vom Schreiben und Reflektieren.',
-        'Denn manchmal, wenn der Körper überfordert ist, kann der Verstand nicht klar sehen. Manchmal ist der erste Schritt nicht Analyse. Der erste Schritt ist zu atmen, den Körper zu spüren, langsamer zu werden und in die Gegenwart zurückzukehren.',
-        'Darum enthält Miravelys auch Erdungserfahrungen: Atmung, Wahrnehmung von Gefühlen, Meditation, Schlafunterstützung und beruhigende Klangreisen.',
+        'Klarheit beginnt aber nicht immer im Geist.',
+        'Manchmal ist der Körper zu angespannt, müde oder überladen, um klar zu schauen. Dann kann der freundlichste erste Schritt sein: atmen, langsamer werden, zuhören oder ruhen.',
+        'Darum enthält Miravelys Atmung, Meditation, Schlafunterstützung und erdende Klänge. Sie sind für die Momente da, in denen der Körper Weichheit braucht, bevor der Geist Antworten braucht.',
       ],
-    },
-    sounds: {
-      paragraphs: [
-        'Die Klänge in Miravelys wurden speziell für diese Welt geschaffen.',
-        'Sie sind nicht einfach Hintergrundmusik. Sie sind so gestaltet, dass sie sich wie weiche Orte zum Ankommen anfühlen — sanfte Atmosphären, die dem Körper helfen, ruhiger zu werden, dem Atem, langsamer zu werden, und dem Moment, sich etwas sicherer anzufühlen.',
-        'Diese einzigartigen Erdungsklänge sind Teil der emotionalen Sprache von Miravelys. Sie helfen der App, sich weniger wie ein Werkzeug anzufühlen und mehr wie ein privater Ort, zu dem der Nutzer zurückkehren kann.',
-      ],
-      types: [
-        'Manche Klänge sind fürs Atmen gemacht.',
-        'Manche für Meditation.',
-        'Manche für den Schlaf.',
-        'Manche für die Momente, in denen der Nutzer keine weiteren Worte braucht, sondern einen weicheren Raum um den Körper.',
-      ],
-    },
-    places: {
       items: [
         'Ein Ort zum Atmen.',
-        'Ein Ort zum Schreiben.',
         'Ein Ort zum Zuhören.',
-        'Ein Ort, um zu bemerken, was sich wiederholt hat.',
-        'Ein Ort, um den Körper zu beruhigen, bevor der Verstand versucht, alles zu verstehen.',
+        'Ein Ort, an dem die Nacht sanfter sein darf.',
+        'Ein Ort, um in die Gegenwart zurückzukehren, bevor alles verstanden werden muss.',
       ],
     },
-    intention: {
+    whyExists: {
       paragraphs: [
-        'Miravelys entstand aus dem Glauben, dass Menschen nicht immer gedrängt, repariert oder definiert werden müssen.',
-        'Manchmal brauchen sie einen stillen Raum, in dem sie sich selbst ehrlich begegnen können.',
-        'Einen Raum, in dem ein verstrickter Moment etwas klarer werden kann.',
-        'Einen Raum, in dem eine alte Überzeugung endlich gesehen werden kann.',
-        'Einen Raum, in dem der Körper weicher werden kann, bevor der Verstand entscheidet.',
-        'Einen Raum, in dem der Nutzer die Kontrolle behält.',
-        'Einen Raum, in dem Wahrheit sanft berührt wird, nicht erzwungen.',
+        'Miravelys existiert, weil Menschen nicht immer zu einer Schlussfolgerung gedrängt werden müssen.',
+        'Manchmal brauchen sie einen privaten Ort, der die Erfahrung halten kann, ohne die Kontrolle darüber zu übernehmen.',
       ],
       audience: [
-        'Für den Menschen, der zu viel fühlt und es sanft verstehen möchte.',
-        'Für den Menschen, der dieselbe innere Geschichte immer wieder wiederholt und sehen möchte, wo sie beginnt.',
-        'Für den Menschen, der trennen möchte, was passiert ist, von dem, was der Verstand hinzugefügt hat.',
-        'Für den Menschen, der Ruhe vor Klarheit braucht.',
-        'Für den Menschen, der nicht versucht, jemand anderes zu werden, sondern dem näherkommen möchte, was sich innen ehrlich anfühlt.',
+        'Ein Ort, an dem die Nutzerin oder der Nutzer entscheidet, was passt.',
+        'Ein Ort, an dem eine wiederholte Geschichte sichtbar werden kann, ohne zur Identität zu werden.',
+        'Ein Ort, an dem Ungewissheit ungewiss bleiben darf.',
+        'Ein Ort, an dem Vertrautes behutsam mit dem verglichen werden kann, was sich jetzt stimmiger anfühlt.',
       ],
-    },
-    finale: {
-      paragraphs: [
-        'Miravelys geht nicht darum, zu reparieren, wer du bist.',
-        'Es geht darum, dir zu helfen, zu dir selbst zurückzukehren — langsam, privat und mit mehr Freundlichkeit als zuvor.',
+      closing: [
+        'Miravelys ist nicht dazu da, dich zu reparieren.',
+        'Es ist dazu da, dir zu helfen, langsam, privat und mit mehr Freundlichkeit zu dir zurückzukehren.',
       ],
     },
   },
 };
 
 const ja = {
+  meta: {
+    title: 'Miravelys はどのように生まれたか — Miravelys',
+    description: 'Miravelys の背景にある物語。起きたこと、心が加えたかもしれない意味、そして今より真実に近く感じるものに気づくための私的な振り返りの場です。',
+    ogTitle: 'Miravelys はどのように生まれたか',
+    ogDescription: '正直に書くこと、瞬間と物語を分けること、身体を落ち着けること、そしてよりやさしく自分に戻ることについての静かな物語。',
+  },
   eyebrow: 'はじまり',
-  title: 'Miravelys はどのように生まれたのか',
-  cta: '自分自身に戻る',
+  title: 'Miravelys はどのように生まれたか',
+  cta: '物語を読む',
+  ctaPrimary: '早期アクセスに参加',
+  ctaSecondary: '体験に戻る',
   blockLabels: {
-    search: '探求',
-    whatMindAdds: '心が加えるもの',
-    writing: '正直に書く',
-    questions: '正直な問い',
-    mirror: '静かな鏡',
-    separation: 'やさしい分離',
-    humility: '私たちが主張しないこと',
-    grounding: 'まずグラウンディング',
-    sounds: '落ち着く音',
-    places: '降り立てる場所',
-    intention: '誰のためのものか',
-    finale: '自分自身に戻る',
+    opening: '静かな探求',
+    momentStory: '瞬間が物語になる',
+    writingMirror: '鏡としての書くこと',
+    separatingLayers: '層を分ける',
+    bodyCalm: '身体にも静けさが必要',
+    whyExists: 'Miravelys が存在する理由',
   },
   intro: [
-    'Miravelys は、ただの新しいアプリのアイデアとして生まれたわけではありません。',
-    'それはもっと前から始まっていました。静かな、個人的な探求の中で。',
-    'なぜ、ある瞬間は本来よりも深く傷つくのか。なぜ、誰かのたった一言が何時間も心に残るのか。なぜ、小さな出来事が「自分は誰なのか」「自分には何の価値があるのか」「人生とは何なのか」という大きな物語に変わってしまうのか。そんな問いから始まる探求です。',
+    'Miravelys は、ただの新しいアプリのアイデアとして始まったわけではありません。',
+    'それは多くの人が静かに抱えている問いから始まりました。なぜ小さな瞬間が、ときどき内側でひとつの大きな物語になるのだろう、と。',
   ],
   blocks: {
-    search: {
-      paragraphs: ['最初、私は自分の外側に答えを探していました。'],
+    opening: {
+      paragraphs: [
+        '必要以上に痛む瞬間がありました。ひとつの言葉。沈黙。声の調子の小さな変化。外側では小さなことなのに、内側では急に大きくなる。',
+        '少しずつ気づきました。痛みはいつも出来事そのものだけにあるわけではない。心がその周りに置いた意味の中にもあるのだと。',
+      ],
       lines: [
-        '本の中に。',
-        '考えの中に。',
-        '沈黙の中に。',
-        '問いの中に。',
-        'どこかに、心がなぜ小さな瞬間の周りにこれほど多くの痛みを作り出すのかを説明してくれる、明確な答えがあるのではないかと思っていました。',
+        '起きたことは、ひとつの層でした。',
+        '感じたことは、別の層でした。',
+        'そして心がそこに与えた意味が、いちばん大きな音になることがありました。',
       ],
     },
-    whatMindAdds: {
+    momentStory: {
       paragraphs: [
-        'けれど少しずつ、大切なことが見えてきました。私たちを傷つけるのは、起きた出来事そのものだけではないことが多いのです。',
-        'それは、起きたことに私たちが加えたものです。',
-        'そしてそれを何度も繰り返すうちに、かつては自分を守ってくれていたけれど、もう本当には自分のものではない物語の中で生きるようになることがあります。',
+        '心は守ろうとすると、とても速く動きます。視線、間、失敗、感情を集め、それを確かなもののように変えてしまう。',
+        '何度も繰り返されるうちに、物語は考えというより、自分の姿のように感じられることがあります。',
       ],
       transforms: [
-        'ひとつの視線が拒絶になる。',
-        'ひとつの沈黙が証拠になる。',
-        'ひとつの間違いが自己像になる。',
-        'ひとつの感情が事実になる。',
-        'ひとつの恐れが信念になる。',
+        '沈黙が拒絶になることがある。',
+        '視線が証拠になることがある。',
+        '失敗が自分そのものに見えることがある。',
+        '感情が事実のように感じられることがある。',
+        '恐れが信念になることがある。',
       ],
     },
-    writing: {
+    writingMirror: {
       paragraphs: [
-        'Miravelys は、その気づきから作られました。',
-        '人が一瞬立ち止まり、自分の内側で起きていることを書き留められる、プライベートな場所として作られました。完璧に書くためではありません。美しい日記を書くためでもありません。誰かに見せるためでもありません。ただ、正直に書くためです。',
+        '書くことは、その物語を見られる最初のやさしい場所になりました。',
+        '完璧な日記ではありません。美しい文章でもありません。ただ、すでに内側にあった正直な一文です。傷ついた。小さく感じた。離れていく気がする。なぜこんなに大きく感じるのかわからない。',
+        '思考は書かれると、しばらくのあいだ空全体ではなくなります。隣に座って眺められるものになります。',
+      ],
+      lines: [
+        '絡まったものが結論になる前に書く。',
+        '恐れを書きながら、それを最後の答えにはしない。',
+        '瞬間と物語のあいだにある余白が見えるところまで書く。',
       ],
     },
-    questions: {
-      items: [
-        '私は何を感じているのか。',
-        '今、何を信じているのか。',
-        'この状況に、心は何を加えたのか。',
-        '身体は何に反応しているのか。',
-        'どんな物語が繰り返されているのか。',
-        '何が本当のように感じられ、何がただ慣れ親しんだものなのか。',
-      ],
-    },
-    mirror: {
+    separatingLayers: {
       paragraphs: [
-        'Miravelys は、そうした瞬間が現れたとき、または過ぎ去った後に、それを記録できる空間をユーザーに提供します。強くなった信念。突然やってきた感情。出来事よりも大きく感じられる反応。何度も戻ってくる思考。言葉よりも深い何かを抱えているような身体感覚。',
-        '時間が経つにつれて、そうした小さな書かれた瞬間は、静かな鏡のようになっていきます。',
-        '裁く鏡ではありません。',
-        '「これがあなたです」と決めつける鏡でもありません。',
-        '繰り返されてきたものに気づくための鏡です。',
+        'その余白が Miravelys の中心になりました。',
+        'このアプリは、確かさを押しつけず、ユーザーの代わりに決めずに、層をやさしく分けるために作られました。',
       ],
-    },
-    separation: {
-      paragraphs: [
-        'このアプリは、出来事そのものとその周りに生まれた物語、感情と信念、身体の反応とその周りに作られた自己像、そして未知のものと早すぎる結論を、やさしく分けて見る手助けをします。',
-        'それが Miravelys の中心です。',
-        'Miravelys は、ユーザーに「これが真実です」と告げるものではありません。',
-        '診断するものではありません。',
-        'セラピーに代わるものではありません。',
-        'その人が誰なのかを決めるものでもありません。',
-        'その代わりに、もっとやさしく見る手助けをします。',
-      ],
-    },
-    humility: {
-      paragraphs: ['Miravelys は、そうした小さな正直な気づきの瞬間のために作られました。'],
       insights: [
-        'これは感情であって、事実ではなかった。',
-        'これは恐れであって、私のすべてではなかった。',
-        'この信念は、かつて私を守ってくれていたのかもしれない。でも、これからもずっとそれに従って生きる必要はないのかもしれない。',
-        'この物語はすぐに現れた。でも、その奥にはもっと静かな何かがあるのかもしれない。',
+        '何が起きたのか。',
+        '何を感じたのか。',
+        '身体は何に反応したのか。',
+        '心は何を加えたのかもしれないか。',
+        'どんな信念がそばにあるのかもしれないか。',
+        'まだわからないことは何か。',
+      ],
+      closing: [
+        '信念に気づくことは、それを責めることではありません。ある信念は、かつて私たちを守ってくれたのかもしれません。Miravelys はそれらを見たり、やわらげたり、問いかけたり、そっとしておいたりできる静かな場所を用意します。',
       ],
     },
-    grounding: {
+    bodyCalm: {
       paragraphs: [
-        'けれど、このアプリは書くことや振り返ることだけのためにあるのではありません。',
-        '身体が圧倒されているとき、心ははっきり見ることができないことがあります。最初の一歩は分析ではないことがあります。最初の一歩は、呼吸すること。身体を感じること。ゆっくりすること。そして今ここに戻ることです。',
-        'そのため Miravelys には、グラウンディングの体験も含まれています。呼吸、感覚への気づき、瞑想、睡眠サポート、そして落ち着きをもたらすサウンドジャーニーです。',
+        'けれど、明晰さはいつも心から始まるわけではありません。',
+        '身体が緊張し、疲れ、いっぱいになっていると、はっきり見ることは難しくなります。そのとき最初のやさしい一歩は、呼吸すること、ゆっくりすること、聴くこと、休むことかもしれません。',
+        'だから Miravelys には、呼吸、瞑想、睡眠の支え、落ち着くための音があります。身体が答えより先にやわらかさを必要とする瞬間のためです。',
       ],
-    },
-    sounds: {
-      paragraphs: [
-        'Miravelys のサウンドは、この世界のために特別に作られました。',
-        'それらはただの背景音楽ではありません。やわらかく降り立てる場所のように感じられるように作られています。身体が静まり、呼吸がゆっくりになり、その瞬間が少しだけ安全に感じられるような、やさしい空気です。',
-        'これらの特別なグラウンディングサウンドは、Miravelys の感情の言語の一部です。アプリをただの道具ではなく、ユーザーが戻ってこられるプライベートな場所のように感じさせます。',
-      ],
-      types: [
-        '呼吸のための音があります。',
-        '瞑想のための音があります。',
-        '眠りのための音があります。',
-        'そして、もう言葉はいらず、ただ身体の周りにやわらかい空間が必要な瞬間のための音もあります。',
-      ],
-    },
-    places: {
       items: [
         '呼吸する場所。',
-        '書く場所。',
         '聴く場所。',
-        '繰り返されてきたものに気づく場所。',
-        '心がすべてを理解しようとする前に、身体を落ち着かせる場所。',
+        '夜をやさしくしておく場所。',
+        'すべてを理解しようとする前に、今に戻る場所。',
       ],
     },
-    intention: {
+    whyExists: {
       paragraphs: [
-        'Miravelys は、人はいつも押される必要も、直される必要も、誰かに「あなたはこういう人です」と言われる必要もない、という思いから生まれました。',
-        '時には、自分自身と正直に出会える静かな場所が必要です。',
-        '絡まった瞬間が少しだけ明確になる場所。',
-        '古い信念がようやく見える場所。',
-        '心が決める前に、身体がやわらぐ場所。',
-        'ユーザーが自分の主導権を持ち続けられる場所。',
-        '真実に力で迫るのではなく、やさしく近づいていく場所。',
+        'Miravelys が存在するのは、人はいつも結論へ急がされる必要があるわけではないからです。',
+        'ときには、体験を受け止めながらも、その主導権を奪わない私的な場所が必要です。',
       ],
       audience: [
-        'Miravelys は、たくさん感じすぎてしまい、それをやさしく理解したい人のためにあります。',
-        '同じ内側の物語を何度も繰り返し、それがどこから始まっているのかを見たい人のためにあります。',
-        '起きたことと、心がそこに加えたものを分けたい人のためにあります。',
-        '明晰さの前に、まず静けさが必要な人のためにあります。',
-        '別の誰かになろうとしているのではなく、内側で正直に感じられるものに近づきたい人のためにあります。',
+        '何が合うかをユーザー自身が決められる場所。',
+        '繰り返す物語が見えるようになっても、それが自分そのものにはならない場所。',
+        'わからないことを、わからないまま置いておける場所。',
+        'なじみのある感じと、今より真実に近く感じるものを、やさしく比べられる場所。',
       ],
-    },
-    finale: {
-      paragraphs: [
+      closing: [
         'Miravelys は、あなたを直すためのものではありません。',
-        'それは、あなたが自分自身に戻る手助けをするためのものです。ゆっくりと、プライベートに、そして以前よりもやさしく。',
+        'ゆっくり、私的に、以前より少しやさしく、自分に戻るためのものです。',
       ],
     },
   },
 };
 
 const es = {
-  eyebrow: 'El comienzo',
+  meta: {
+    title: 'Cómo nació Miravelys — Miravelys',
+    description: 'La historia detrás de Miravelys: un espacio privado de reflexión para notar qué ocurrió, qué pudo añadir la mente y qué se siente más cercano a la verdad ahora.',
+    ogTitle: 'Cómo nació Miravelys',
+    ogDescription: 'Una historia tranquila sobre escribir con honestidad, separar el momento de la historia, calmar el cuerpo y volver a ti con más amabilidad.',
+  },
+  eyebrow: 'El origen',
   title: 'Cómo nació Miravelys',
-  cta: 'Vuelve a ti',
+  cta: 'Leer la historia',
+  ctaPrimary: 'Acceso anticipado',
+  ctaSecondary: 'Volver a la experiencia',
   blockLabels: {
-    search: 'La búsqueda',
-    whatMindAdds: 'Lo que la mente añade',
-    writing: 'Escribir con honestidad',
-    questions: 'Preguntas sinceras',
-    mirror: 'Un espejo silencioso',
-    separation: 'Separación suave',
-    humility: 'Lo que no afirmamos',
-    grounding: 'Primero el grounding',
-    sounds: 'Sonidos calmantes',
-    places: 'Lugares donde aterrizar',
-    intention: 'Para quién es',
-    finale: 'Volver a ti',
+    opening: 'Una búsqueda silenciosa',
+    momentStory: 'El momento se vuelve historia',
+    writingMirror: 'Escribir como espejo',
+    separatingLayers: 'Separar las capas',
+    bodyCalm: 'El cuerpo también necesita calma',
+    whyExists: 'Por qué existe Miravelys',
   },
   intro: [
-    'Miravelys no nació como una idea más para una aplicación.',
-    'Empezó mucho antes — en una búsqueda personal y silenciosa.',
-    'El tipo de búsqueda que comienza cuando empiezas a preguntarte por qué algunos momentos duelen más de lo que deberían. Por qué una sola frase de otra persona puede quedarse en tu mente durante horas. Por qué una situación pequeña puede convertirse en toda una historia sobre quién eres, qué mereces o qué significa la vida.',
+    'Miravelys no nació como otra idea de app.',
+    'Empezó con una pregunta que muchas personas llevan en silencio: ¿por qué un momento pequeño a veces se convierte en toda una historia dentro de nosotros?',
   ],
   blocks: {
-    search: {
-      paragraphs: ['Al principio, busqué fuera de mí.'],
+    opening: {
+      paragraphs: [
+        'Hubo momentos que dolieron más de lo esperado. Una frase. Un silencio. Un cambio de tono. Algo pequeño por fuera, pero de pronto enorme por dentro.',
+        'Empecé a notar que el dolor no siempre estaba solo en el hecho. Muchas veces también estaba en el significado que la mente colocaba alrededor.',
+      ],
       lines: [
-        'En libros.',
-        'En ideas.',
-        'En el silencio.',
-        'En preguntas.',
-        'Con la esperanza de que en algún lugar existiera una respuesta clara capaz de explicar por qué la mente crea tanto dolor alrededor de momentos simples.',
+        'Lo que ocurrió era una capa.',
+        'Lo que sentí era otra.',
+        'Y lo que mi mente hizo significar solía ser la capa más ruidosa.',
       ],
     },
-    whatMindAdds: {
+    momentStory: {
       paragraphs: [
-        'Pero poco a poco empecé a entender algo importante: muchas veces, lo que nos duele no es solo lo que ocurrió.',
-        'Es lo que añadimos a lo que ocurrió.',
-        'Y después de repetirlo una y otra vez, podemos empezar a vivir dentro de historias que una vez nos protegieron, pero que ya no nos pertenecen de verdad.',
+        'La mente puede moverse muy rápido cuando intenta protegernos. Toma una mirada, una pausa, un error, una sensación, y los convierte en algo que suena seguro.',
+        'Con suficiente repetición, una historia puede sentirse menos como un pensamiento y más como un retrato propio.',
       ],
       transforms: [
-        'Una mirada se convierte en rechazo.',
-        'Una pausa se convierte en prueba.',
-        'Un error se convierte en identidad.',
-        'Una sensación se convierte en un hecho.',
-        'Un miedo se convierte en una creencia.',
+        'Una pausa puede volverse rechazo.',
+        'Una mirada puede volverse prueba.',
+        'Un error puede volverse identidad.',
+        'Una sensación puede volverse hecho.',
+        'Un miedo puede volverse creencia.',
       ],
     },
-    writing: {
+    writingMirror: {
       paragraphs: [
-        'Miravelys fue creado a partir de esa comprensión.',
-        'Fue creado como un espacio privado donde una persona puede detenerse por un momento y escribir lo que está ocurriendo dentro — no de forma perfecta, no como una página bonita de diario, no para impresionar a nadie, sino con honestidad.',
+        'Escribir se volvió el primer espacio amable donde esas historias podían verse.',
+        'No un diario perfecto. No escritura bonita. Solo la frase honesta que ya estaba ahí: esto dolió; me sentí pequeño; creo que se van; no sé por qué esto se siente tan grande.',
+        'Cuando un pensamiento se escribe, por un momento deja de ser todo el cielo. Se vuelve algo junto a lo que puedes sentarte.',
+      ],
+      lines: [
+        'Escribir lo que está enredado antes de que se vuelva conclusión.',
+        'Escribir el miedo sin convertirlo en la respuesta final.',
+        'Escribir lo suficiente para ver el espacio entre el momento y la historia.',
       ],
     },
-    questions: {
-      items: [
-        '¿Qué estoy sintiendo?',
-        '¿Qué estoy creyendo ahora mismo?',
-        '¿Qué añadió mi mente a esta situación?',
-        '¿A qué está reaccionando mi cuerpo?',
-        '¿Qué historia se repite?',
-        '¿Qué se siente verdadero y qué quizá solo se siente familiar?',
-      ],
-    },
-    mirror: {
+    separatingLayers: {
       paragraphs: [
-        'Miravelys le da al usuario un espacio para capturar estos momentos cuando aparecen, o después de que hayan pasado. Una creencia que se volvió fuerte. Una emoción que llegó de repente. Una reacción que se sintió más grande que la situación. Un pensamiento que seguía volviendo. Una sensación corporal que parecía llevar algo más profundo.',
-        'Y con el tiempo, esos pequeños momentos escritos pueden empezar a formar un espejo silencioso.',
-        'No un espejo que juzga.',
-        'No un espejo que dice: "Esto es lo que eres."',
-        'Sino un espejo que ayuda al usuario a notar lo que se ha repetido.',
+        'Ese espacio se convirtió en el corazón de Miravelys.',
+        'La app fue creada para ayudar a separar las capas con suavidad, sin forzar certeza y sin decidir por la persona.',
       ],
-    },
-    separation: {
-      paragraphs: [
-        'La app puede ayudar a separar el momento de la historia que lo rodea, la emoción de la creencia, la reacción del cuerpo de la identidad construida alrededor de ella, y lo desconocido de las conclusiones que llegaron demasiado rápido.',
-        'Este es el corazón de Miravelys.',
-        'No le dice al usuario cuál es la verdad.',
-        'No diagnostica.',
-        'No reemplaza la terapia.',
-        'No decide quién es alguien.',
-        'En cambio, ayuda al usuario a mirar con más suavidad.',
-      ],
-    },
-    humility: {
-      paragraphs: ['Miravelys fue construido para esos pequeños momentos de ver con honestidad.'],
       insights: [
-        'A ver: esto fue una sensación, no un hecho.',
-        'Esto fue un miedo, no toda mi identidad.',
-        'Esta creencia quizá me protegió una vez, pero tal vez no necesito vivir desde ella para siempre.',
-        'Esta historia apareció rápido, pero quizá debajo de ella hay algo más tranquilo.',
+        'Qué ocurrió.',
+        'Qué se sintió.',
+        'A qué reaccionó el cuerpo.',
+        'Qué pudo añadir la mente.',
+        'Qué creencia puede estar presente.',
+        'Qué sigue siendo desconocido.',
+      ],
+      closing: [
+        'Notar una creencia no significa juzgarla. Algunas creencias quizá nos protegieron alguna vez. Miravelys solo les da un lugar tranquilo para ser vistas, suavizadas, preguntadas o dejadas en paz.',
       ],
     },
-    grounding: {
+    bodyCalm: {
       paragraphs: [
-        'Pero la app no trata solo de escribir y reflexionar.',
-        'Porque a veces, cuando el cuerpo está sobrepasado, la mente no puede mirar con claridad. A veces el primer paso no es analizar. El primer paso es respirar, sentir el cuerpo, bajar el ritmo y volver al presente.',
-        'Por eso Miravelys también incluye experiencias de grounding: respiración, conciencia de las sensaciones, meditación, apoyo para el sueño y viajes sonoros calmantes.',
+        'Pero la claridad no siempre empieza en la mente.',
+        'A veces el cuerpo está demasiado tenso, cansado o abrumado para mirar con claridad. En esos momentos, el primer paso más amable puede ser respirar, bajar el ritmo, escuchar o descansar.',
+        'Por eso Miravelys incluye respiración, meditación, apoyo para el sueño y sonidos de arraigo. Están ahí para cuando el cuerpo necesita suavidad antes de que la mente necesite respuestas.',
       ],
-    },
-    sounds: {
-      paragraphs: [
-        'Los sonidos dentro de Miravelys fueron creados especialmente para este mundo.',
-        'No son solo música de fondo. Están diseñados para sentirse como lugares suaves donde aterrizar — atmósferas delicadas que ayudan al cuerpo a calmarse, a la respiración a volverse más lenta y al momento a sentirse un poco más seguro.',
-        'Estos sonidos únicos de grounding forman parte del lenguaje emocional de Miravelys. Ayudan a que la app se sienta menos como una herramienta y más como un lugar privado al que el usuario puede volver.',
-      ],
-      types: [
-        'Algunos sonidos están hechos para respirar.',
-        'Algunos están hechos para meditar.',
-        'Algunos están hechos para dormir.',
-        'Algunos están hechos para esos momentos en los que el usuario no necesita más palabras, sino un espacio más suave alrededor del cuerpo.',
-      ],
-    },
-    places: {
       items: [
         'Un lugar para respirar.',
-        'Un lugar para escribir.',
         'Un lugar para escuchar.',
-        'Un lugar para notar lo que se ha repetido.',
-        'Un lugar para calmar el cuerpo antes de intentar entenderlo todo con la mente.',
+        'Un lugar donde la noche pueda ser más suave.',
+        'Un lugar para volver al presente antes de intentar entenderlo todo.',
       ],
     },
-    intention: {
+    whyExists: {
       paragraphs: [
-        'Miravelys nació de la creencia de que las personas no siempre necesitan ser empujadas, arregladas o definidas.',
-        'A veces necesitan un espacio tranquilo donde puedan encontrarse consigo mismas con honestidad.',
-        'Un espacio donde un momento enredado pueda volverse un poco más claro.',
-        'Un espacio donde una vieja creencia finalmente pueda verse.',
-        'Un espacio donde el cuerpo pueda suavizarse antes de que la mente decida.',
-        'Un espacio donde el usuario permanece en control.',
-        'Un espacio donde la verdad se acerca con suavidad, no se fuerza.',
+        'Miravelys existe porque las personas no siempre necesitan ser empujadas hacia una conclusión.',
+        'A veces necesitan un lugar privado que sostenga la experiencia sin tomar control de ella.',
       ],
       audience: [
-        'Para la persona que siente demasiado y quiere entenderlo con suavidad.',
-        'Para la persona que repite la misma historia interior y quiere ver dónde empieza.',
-        'Para la persona que quiere separar lo que ocurrió de lo que la mente añadió.',
-        'Para la persona que necesita calma antes que claridad.',
-        'Para la persona que no intenta convertirse en alguien distinto, sino acercarse a lo que se siente honesto por dentro.',
+        'Un lugar donde la persona decide qué encaja.',
+        'Un lugar donde una historia repetida puede hacerse visible sin volverse identidad.',
+        'Un lugar donde la incertidumbre puede seguir siendo incertidumbre.',
+        'Un lugar donde lo familiar puede compararse con suavidad con lo que ahora se siente más cercano a la verdad.',
       ],
-    },
-    finale: {
-      paragraphs: [
-        'Miravelys no se trata de arreglar quién eres.',
-        'Se trata de ayudarte a volver a ti — despacio, en privado y con más amabilidad que antes.',
+      closing: [
+        'Miravelys no trata de arreglar quien eres.',
+        'Trata de ayudarte a volver a ti poco a poco, en privado y con más amabilidad que antes.',
       ],
     },
   },
 };
 
 const pt = {
-  eyebrow: 'O começo',
+  meta: {
+    title: 'Como o Miravelys nasceu — Miravelys',
+    description: 'A história por trás do Miravelys: um espaço privado de reflexão para perceber o que aconteceu, o que a mente talvez tenha acrescentado e o que agora parece mais próximo da verdade.',
+    ogTitle: 'Como o Miravelys nasceu',
+    ogDescription: 'Uma história calma sobre escrever com honestidade, separar o momento da história, acalmar o corpo e voltar a si com mais gentileza.',
+  },
+  eyebrow: 'A origem',
   title: 'Como o Miravelys nasceu',
-  cta: 'Volte para si',
+  cta: 'Ler a história',
+  ctaPrimary: 'Acesso antecipado',
+  ctaSecondary: 'Voltar à experiência',
   blockLabels: {
-    search: 'A busca',
-    whatMindAdds: 'O que a mente acrescenta',
-    writing: 'Escrever com honestidade',
-    questions: 'Perguntas sinceras',
-    mirror: 'Um espelho silencioso',
-    separation: 'Separação suave',
-    humility: 'O que não afirmamos',
-    grounding: 'Primeiro o grounding',
-    sounds: 'Sons calmantes',
-    places: 'Lugares para pousar',
-    intention: 'Para quem é',
-    finale: 'Voltar para si',
+    opening: 'Uma procura silenciosa',
+    momentStory: 'O momento vira história',
+    writingMirror: 'Escrever como espelho',
+    separatingLayers: 'Separar as camadas',
+    bodyCalm: 'O corpo também precisa de calma',
+    whyExists: 'Por que o Miravelys existe',
   },
   intro: [
-    'O Miravelys não nasceu como apenas mais uma ideia de aplicativo.',
-    'Ele começou muito antes — em uma busca pessoal e silenciosa.',
-    'O tipo de busca que começa quando você passa a se perguntar por que alguns momentos doem mais do que deveriam. Por que uma única frase de outra pessoa pode ficar na sua mente por horas. Por que uma pequena situação pode se transformar em uma história inteira sobre quem você é, o que você merece ou o que a vida significa.',
+    'O Miravelys não nasceu como mais uma ideia de app.',
+    'Começou com uma pergunta que muita gente carrega em silêncio: por que um momento pequeno às vezes vira uma história inteira dentro de nós?',
   ],
   blocks: {
-    search: {
-      paragraphs: ['No começo, eu procurei fora de mim.'],
+    opening: {
+      paragraphs: [
+        'Houve momentos que doeram mais do que pareciam merecer. Uma frase. Um silêncio. Uma mudança de tom. Algo pequeno por fora, mas de repente enorme por dentro.',
+        'Comecei a perceber que a dor nem sempre estava só no acontecimento. Muitas vezes também estava no significado que a mente colocava ao redor dele.',
+      ],
       lines: [
-        'Em livros.',
-        'Em ideias.',
-        'No silêncio.',
-        'Em perguntas.',
-        'Na esperança de que em algum lugar existisse uma resposta clara capaz de explicar por que a mente cria tanta dor ao redor de momentos simples.',
+        'O que aconteceu era uma camada.',
+        'O que senti era outra.',
+        'E o que minha mente fez aquilo significar era muitas vezes a camada mais alta.',
       ],
     },
-    whatMindAdds: {
+    momentStory: {
       paragraphs: [
-        'Mas, aos poucos, comecei a entender algo importante: muitas vezes, o que nos machuca não é apenas o que aconteceu.',
-        'É o que acrescentamos ao que aconteceu.',
-        'E depois de repetir isso muitas vezes, podemos começar a viver dentro de histórias que um dia nos protegeram, mas que já não pertencem de verdade a nós.',
+        'A mente pode se mover muito rápido quando tenta nos proteger. Ela junta um olhar, uma pausa, um erro, uma sensação, e transforma tudo em algo que parece certo.',
+        'Com repetição suficiente, uma história pode parecer menos um pensamento e mais um retrato de quem somos.',
       ],
       transforms: [
-        'Um olhar vira rejeição.',
-        'Uma pausa vira prova.',
-        'Um erro vira identidade.',
-        'Um sentimento vira fato.',
-        'Um medo vira crença.',
+        'Uma pausa pode virar rejeição.',
+        'Um olhar pode virar prova.',
+        'Um erro pode virar identidade.',
+        'Uma sensação pode virar fato.',
+        'Um medo pode virar crença.',
       ],
     },
-    writing: {
+    writingMirror: {
       paragraphs: [
-        'O Miravelys foi criado a partir dessa percepção.',
-        'Ele foi criado como um espaço privado onde uma pessoa pode parar por um momento e escrever o que está acontecendo por dentro — não de uma forma perfeita, não como uma página bonita de diário, não para impressionar ninguém, mas com honestidade.',
+        'Escrever se tornou o primeiro espaço gentil onde essas histórias podiam ser vistas.',
+        'Não um diário perfeito. Não uma escrita bonita. Só a frase honesta que já estava ali: isso doeu; me senti pequeno; acho que estão indo embora; não sei por que isso parece tão grande.',
+        'Quando um pensamento é escrito, por um momento ele deixa de ser o céu inteiro. Vira algo ao lado do qual você pode sentar.',
+      ],
+      lines: [
+        'Escrever o que está emaranhado antes que vire conclusão.',
+        'Escrever o medo sem torná-lo a resposta final.',
+        'Escrever o bastante para ver o espaço entre o momento e a história.',
       ],
     },
-    questions: {
-      items: [
-        'O que estou sentindo?',
-        'No que estou acreditando agora?',
-        'O que minha mente acrescentou a esta situação?',
-        'A que meu corpo está reagindo?',
-        'Que história continua se repetindo?',
-        'O que parece verdadeiro, e o que talvez apenas pareça familiar?',
-      ],
-    },
-    mirror: {
+    separatingLayers: {
       paragraphs: [
-        'O Miravelys dá ao usuário um espaço para capturar esses momentos quando eles aparecem, ou depois que passam. Uma crença que ficou forte. Uma emoção que chegou de repente. Uma reação que pareceu maior do que a situação. Um pensamento que continuava voltando. Uma sensação no corpo que parecia carregar algo mais profundo.',
-        'E, com o tempo, esses pequenos momentos escritos podem começar a formar um espelho silencioso.',
-        'Não um espelho que julga.',
-        'Não um espelho que diz: "É isso que você é."',
-        'Mas um espelho que ajuda o usuário a perceber o que se repetiu.',
+        'Esse espaço se tornou o coração do Miravelys.',
+        'O app foi criado para ajudar a separar as camadas com delicadeza, sem forçar certeza e sem decidir pela pessoa.',
       ],
-    },
-    separation: {
-      paragraphs: [
-        'O app pode ajudar a separar o momento da história criada ao redor dele, a emoção da crença, a reação do corpo da identidade construída em torno dela, e o desconhecido das conclusões que chegaram rápido demais.',
-        'Esse é o coração do Miravelys.',
-        'Ele não diz ao usuário qual é a verdade.',
-        'Ele não diagnostica.',
-        'Ele não substitui terapia.',
-        'Ele não decide quem alguém é.',
-        'Em vez disso, ele ajuda o usuário a olhar com mais suavidade.',
-      ],
-    },
-    humility: {
-      paragraphs: ['O Miravelys foi criado para esses pequenos momentos de olhar honesto.'],
       insights: [
-        'A ver: isso foi um sentimento, não um fato.',
-        'Isso foi um medo, não toda a minha identidade.',
-        'Essa crença talvez tenha me protegido um dia, mas talvez eu não precise viver a partir dela para sempre.',
-        'Essa história apareceu rápido, mas talvez exista algo mais quieto por baixo dela.',
+        'O que aconteceu.',
+        'O que foi sentido.',
+        'Ao que o corpo reagiu.',
+        'O que a mente talvez tenha acrescentado.',
+        'Que crença pode estar presente.',
+        'O que ainda permanece desconhecido.',
+      ],
+      closing: [
+        'Perceber uma crença não é julgá-la. Algumas crenças talvez tenham nos protegido um dia. O Miravelys apenas oferece um lugar quieto onde elas podem ser vistas, suavizadas, questionadas ou deixadas em paz.',
       ],
     },
-    grounding: {
+    bodyCalm: {
       paragraphs: [
-        'Mas o app não é apenas sobre escrever e refletir.',
-        'Porque às vezes, quando o corpo está sobrecarregado, a mente não consegue olhar com clareza. Às vezes o primeiro passo não é analisar. O primeiro passo é respirar, sentir o corpo, desacelerar e voltar ao presente.',
-        'É por isso que o Miravelys também inclui experiências de grounding: respiração, consciência das sensações, meditação, apoio ao sono e jornadas sonoras calmantes.',
+        'Mas a clareza nem sempre começa na mente.',
+        'Às vezes o corpo está tenso, cansado ou sobrecarregado demais para olhar com clareza. Nesses momentos, o primeiro passo mais gentil pode ser respirar, desacelerar, escutar ou descansar.',
+        'Por isso o Miravelys inclui respiração, meditação, apoio ao sono e sons de ancoragem. Eles existem para quando o corpo precisa de suavidade antes que a mente precise de respostas.',
       ],
-    },
-    sounds: {
-      paragraphs: [
-        'Os sons dentro do Miravelys foram criados especialmente para este mundo.',
-        'Eles não são apenas música de fundo. Foram pensados para parecer lugares suaves onde pousar — atmosferas delicadas que ajudam o corpo a ficar mais quieto, a respiração a desacelerar e o momento a parecer um pouco mais seguro.',
-        'Esses sons únicos de grounding fazem parte da linguagem emocional do Miravelys. Eles ajudam o app a parecer menos uma ferramenta e mais um lugar privado para onde o usuário pode voltar.',
-      ],
-      types: [
-        'Alguns sons são feitos para respirar.',
-        'Alguns são feitos para meditar.',
-        'Alguns são feitos para dormir.',
-        'Alguns são feitos para aqueles momentos em que o usuário não precisa de mais palavras, mas de um espaço mais suave ao redor do corpo.',
-      ],
-    },
-    places: {
       items: [
         'Um lugar para respirar.',
-        'Um lugar para escrever.',
         'Um lugar para escutar.',
-        'Um lugar para perceber o que se repetiu.',
-        'Um lugar para acalmar o corpo antes de tentar entender tudo com a mente.',
+        'Um lugar onde a noite pode ficar mais suave.',
+        'Um lugar para voltar ao presente antes de tentar entender tudo.',
       ],
     },
-    intention: {
+    whyExists: {
       paragraphs: [
-        'O Miravelys nasceu da crença de que as pessoas nem sempre precisam ser empurradas, consertadas ou definidas.',
-        'Às vezes, elas precisam de um espaço silencioso onde possam se encontrar com honestidade.',
-        'Um espaço onde um momento confuso pode ficar um pouco mais claro.',
-        'Um espaço onde uma crença antiga pode finalmente ser vista.',
-        'Um espaço onde o corpo pode suavizar antes que a mente decida.',
-        'Um espaço onde o usuário permanece no controle.',
-        'Um espaço onde a verdade é aproximada com delicadeza, não forçada.',
+        'O Miravelys existe porque as pessoas nem sempre precisam ser empurradas para uma conclusão.',
+        'Às vezes precisam de um lugar privado que segure a experiência sem tomar o controle dela.',
       ],
       audience: [
-        'Para a pessoa que sente demais e quer entender isso com suavidade.',
-        'Para a pessoa que repete a mesma história interna e quer ver onde ela começa.',
-        'Para a pessoa que quer separar o que aconteceu do que a mente acrescentou.',
-        'Para a pessoa que precisa de calma antes da clareza.',
-        'Para a pessoa que não está tentando se tornar outra pessoa, mas se aproximar do que parece honesto por dentro.',
+        'Um lugar onde a pessoa decide o que combina.',
+        'Um lugar onde uma história repetida pode ficar visível sem virar identidade.',
+        'Um lugar onde a incerteza pode continuar incerta.',
+        'Um lugar onde o familiar pode ser comparado com suavidade ao que agora parece mais próximo da verdade.',
       ],
-    },
-    finale: {
-      paragraphs: [
+      closing: [
         'O Miravelys não é sobre consertar quem você é.',
-        'É sobre ajudar você a voltar para si — devagar, em privado e com mais gentileza do que antes.',
+        'É sobre ajudar você a voltar para si aos poucos, em privado e com mais gentileza do que antes.',
       ],
     },
   },

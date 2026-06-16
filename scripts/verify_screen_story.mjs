@@ -31,21 +31,26 @@ for (const language of languages) {
 }
 
 const app = fs.readFileSync(new URL('../src/App.jsx', import.meta.url), 'utf8');
-const journey = fs.readFileSync(new URL('../src/components/marketing/sections/StickyPhoneStory.jsx', import.meta.url), 'utf8');
-const desktop = fs.readFileSync(new URL('../src/components/marketing/sections/ProductStoryDesktop.jsx', import.meta.url), 'utf8');
+const productStory = fs.readFileSync(new URL('../src/components/marketing/sections/ProductStory.jsx', import.meta.url), 'utf8');
+const stickyLayout = fs.readFileSync(new URL('../src/components/marketing/sections/StickyStoryLayout.jsx', import.meta.url), 'utf8');
 const mobile = fs.readFileSync(new URL('../src/components/marketing/sections/ProductStoryMobile.jsx', import.meta.url), 'utf8');
 const phone = fs.readFileSync(new URL('../src/components/marketing/primitives/PhoneMockup.jsx', import.meta.url), 'utf8');
+const stepsLib = fs.readFileSync(new URL('../src/lib/productStorySteps.js', import.meta.url), 'utf8');
+const productCss = fs.readFileSync(new URL('../src/styles/site-product-story.css', import.meta.url), 'utf8');
 
 assert(!app.includes('ScreenStorySection'), 'Legacy separate screen story must not be mounted on the main page');
-assert(journey.includes('ProductStoryDesktop'), 'StickyPhoneStory must render desktop layout');
-assert(journey.includes('ProductStoryMobile'), 'StickyPhoneStory must render mobile stacked cards');
-assert(desktop.includes('useActiveStep'), 'Desktop product story must use useActiveStep');
-assert(desktop.includes('useStickyPhoneStoryMode'), 'Desktop story must use sticky phone mode detection');
-assert(desktop.includes('useStickyPhoneScreens'), 'Landscape must swap phone screen from active step data');
-assert(desktop.includes('singleScreen={isLandscape}'), 'Landscape must use single-screen phone mockup (no blur stack)');
-assert(desktop.includes('activeIndex'), 'Desktop journey must synchronize active text with phone screen');
+assert(productStory.includes('ProductStoryDesktop'), 'ProductStory must render desktop layout');
+assert(productStory.includes('ProductStoryMobile'), 'ProductStory must render mobile stacked cards');
+assert(productStory.includes('ProductStoryLandscape'), 'ProductStory must render landscape sticky layout');
+assert(productStory.includes('product-story__desktop'), 'ProductStory must use CSS layout wrappers');
+assert(stickyLayout.includes('useActiveStep'), 'Sticky story must use useActiveStep');
+assert(stickyLayout.includes('activeIndex'), 'Sticky story must synchronize active text with phone screen');
+assert(stickyLayout.includes('stepsToPhoneScreens'), 'Sticky story must build phone screens from canonical steps');
 assert(mobile.includes('mobile-product-card'), 'Mobile story must use stacked cards per step');
 assert(phone.includes('phone-mockup__screen-stack--crossfade'), 'Phone must crossfade internal screens on desktop');
+assert(stepsLib.includes('buildProductStorySteps'), 'Canonical story steps must live in productStorySteps.js');
+assert(stepsLib.includes('screenshotCode'), 'Story steps must include screenshotCode');
+assert(productCss.includes('product-story__landscape'), 'CSS must control landscape layout visibility');
 
 const forbidden = [/this image shows/i, /mockup near/i, /screenshot showing/i, /phone floating/i, /browser frame/i];
 for (const language of languages) {

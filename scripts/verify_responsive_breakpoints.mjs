@@ -25,6 +25,7 @@ const revealCss = fs.readFileSync(
 const mainJs = fs.readFileSync(new URL('../src/main.jsx', import.meta.url), 'utf8');
 
 assert(mainJs.includes('site-sticky-phone-story.css'), 'main.jsx must import site-sticky-phone-story.css');
+assert(mainJs.includes('site-product-story.css'), 'main.jsx must import site-product-story.css');
 assert(mainJs.includes('site-breakpoints.css'), 'main.jsx must import site-breakpoints.css');
 assert(tokensCss.includes('--bp-tablet'), 'site-tokens.css must define tablet breakpoint');
 assert(tokensCss.includes('--phone-width-landscape'), 'site-tokens.css must define landscape phone width token');
@@ -32,21 +33,21 @@ assert(breakpointsCss.includes('--keynote-device-hero'), 'site-breakpoints.css m
 assert(breakpointsCss.includes('overflow-wrap'), 'site-breakpoints.css must handle long translated text');
 assert(breakpointsCss.includes('orientation: landscape'), 'site-breakpoints.css must handle landscape layouts');
 
-const mobileStoryCss = fs.readFileSync(
-  new URL('../src/styles/site-mobile-story.css', import.meta.url),
+const productStoryCss = fs.readFileSync(
+  new URL('../src/styles/site-product-story.css', import.meta.url),
   'utf8'
 );
 assert(
-  mobileStoryCss.includes('product-story--landscape-compact'),
-  'site-mobile-story.css must define landscape compact sticky story'
+  productStoryCss.includes('sticky-story--landscape'),
+  'site-product-story.css must define landscape compact sticky story'
 );
 assert(
-  mobileStoryCss.includes('phone-mockup--landscape-compact'),
-  'site-mobile-story.css must style crisp landscape phone mockup'
+  productStoryCss.includes('phone-mockup--landscape'),
+  'site-product-story.css must style landscape phone mockup'
 );
 assert(
-  mobileStoryCss.includes('max-height: 340px'),
-  'site-mobile-story.css must fall back to stacked cards on very short landscape'
+  productStoryCss.includes('max-height: 21.25rem'),
+  'site-product-story.css must fall back to stacked cards on very short landscape'
 );
 assert(breakpointsCss.includes('68.75rem'), 'site-breakpoints.css must define laptop sticky layout breakpoint');
 assert(revealCss.includes('68.6874rem'), 'site-reveal.css must align mobile/tablet cutoff with breakpoints');

@@ -21,23 +21,7 @@
     max-width: none;
     margin: 0;
     padding: var(--header-top) 14px 8px;
-    background: linear-gradient(
-      to bottom,
-      rgba(248, 243, 233, 0.96) 0%,
-      rgba(248, 243, 233, 0.78) 55%,
-      rgba(248, 243, 233, 0) 100%
-    );
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
-
-  [data-appearance='evening'] .site-header {
-    background: linear-gradient(
-      to bottom,
-      rgba(9, 8, 14, 0.94) 0%,
-      rgba(9, 8, 14, 0.72) 55%,
-      rgba(9, 8, 14, 0) 100%
-    );
+    background: transparent;
   }
 
   .top-nav__bar {
@@ -45,34 +29,19 @@
     gap: 8px;
     padding: var(--header-pad-y) var(--header-pad-x);
     border-radius: 28px;
-    border: 1px solid var(--header-mobile-border, rgba(70, 58, 42, 0.14));
-    background: var(--header-mobile-surface, rgba(255, 252, 244, 0.82));
-    box-shadow: 0 10px 28px rgba(50, 40, 25, 0.1);
-    backdrop-filter: blur(14px) saturate(130%);
-    -webkit-backdrop-filter: blur(14px) saturate(130%);
-  }
-
-  [data-appearance='evening'] .top-nav__bar {
-    border-color: rgba(255, 255, 255, 0.1);
-    background: rgba(6, 10, 20, 0.82);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
   }
 
   .site-shell--keynote .brand-mini {
     font-size: clamp(1.05rem, 4.8vw, 1.25rem);
-    color: var(--header-mobile-ink, rgba(28, 24, 19, 0.92));
-  }
-
-  [data-appearance='evening'] .site-shell--keynote .brand-mini {
-    color: rgba(244, 239, 230, 0.94);
+    color: var(--header-ink);
   }
 
   .language-cluster--compact .language-select {
     padding: 6px 10px;
     min-height: 42px;
-    color: var(--header-mobile-ink, rgba(38, 34, 28, 0.88));
-    background: rgba(255, 255, 255, 0.38);
-    border: 1px solid var(--header-mobile-border, rgba(70, 58, 42, 0.14));
+    color: var(--header-ink);
+    background: var(--header-control-bg);
+    border: 1px solid var(--header-control-border);
   }
 
   .language-cluster--compact .language-select svg {
@@ -87,26 +56,14 @@
     color: inherit;
   }
 
-  [data-appearance='evening'] .language-cluster--compact .language-select {
-    color: rgba(244, 239, 230, 0.92);
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.12);
-  }
-
   .mobile-menu-button {
     width: 44px;
     height: 44px;
     min-width: 44px;
     min-height: 44px;
-    color: var(--header-mobile-ink, rgba(38, 34, 28, 0.9));
-    background: rgba(255, 255, 255, 0.34);
-    border: 1px solid var(--header-mobile-border, rgba(70, 58, 42, 0.14));
-  }
-
-  [data-appearance='evening'] .mobile-menu-button {
-    color: rgba(244, 239, 230, 0.92);
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.12);
+    color: var(--header-ink);
+    background: var(--header-control-bg);
+    border: 1px solid var(--header-control-border);
   }
 
   /* Mobile menu — always light text on dark panel */

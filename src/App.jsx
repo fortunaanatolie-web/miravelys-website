@@ -14,6 +14,7 @@ import StickyPhoneStory from './components/marketing/sections/StickyPhoneStory';
 import StoryTeaserSection from './components/marketing/sections/StoryTeaserSection';
 import DownloadSection from './components/marketing/sections/DownloadSection';
 import { handleInPageNav } from './lib/scrollToSection';
+import { setDocumentMeta } from './lib/documentMeta';
 
 const fallbackLanguage = 'en';
 
@@ -36,16 +37,13 @@ function App() {
   useEffect(() => {
     document.documentElement.lang = t.meta.locale;
     document.documentElement.dir = 'ltr';
-    document.title = 'Miravelys';
-    const description = t.hero.body;
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', description);
-  }, [t.meta.locale, t.hero.body]);
+    setDocumentMeta({
+      title: t.meta.title ?? 'Miravelys',
+      description: t.meta.description ?? t.hero.body,
+      ogTitle: t.meta.ogTitle ?? t.meta.title ?? 'Miravelys',
+      ogDescription: t.meta.ogDescription ?? t.meta.description ?? t.hero.body,
+    });
+  }, [t.meta, t.hero.body]);
 
   return (
     <MarketingPageShell lang={lang} skipLinkTarget="#works">

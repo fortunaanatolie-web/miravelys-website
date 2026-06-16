@@ -1,14 +1,14 @@
 import { resolvePresentation } from '../../../i18n/presentationCopy';
 import StickyStoryLayout from './StickyStoryLayout';
 
-export default function ProductStoryDesktop({ steps, locale }) {
+export default function ProductStoryLandscape({ steps, locale }) {
   const presentation = resolvePresentation(locale ?? 'en');
 
   return (
     <StickyStoryLayout
       steps={steps}
       locale={locale}
-      variant="desktop"
+      variant="landscape"
       presentation={presentation}
       progressAria={presentation.journey?.progressAria}
     />

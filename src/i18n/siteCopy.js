@@ -57,7 +57,11 @@ export const siteCopy = {
   "en": {
     "meta": {
       "locale": "en",
-      "languageName": "English"
+      "languageName": "English",
+      "title": "Miravelys — private clarity for tangled moments",
+      "description": "A private place to write what feels tangled, separate what happened from what the mind added, and return with more room inside.",
+      "ogTitle": "Miravelys — private clarity for tangled moments",
+      "ogDescription": "Write honestly, separate the layers, calm the body first, and decide what feels closer to truth now."
     },
     "nav": {
       "what": "What it is",
@@ -116,7 +120,7 @@ export const siteCopy = {
       "userAgreement": "User agreement",
       "privacyPolicy": "Privacy policy",
       "cookies": "Cookies",
-      "cookieBanner": "This site stores only essential preferences in your browser (language and cookie choice). No advertising cookies.",
+      "cookieBanner": "This site only remembers basic browser choices, like language and cookie consent. No advertising cookies.",
       "cookieAccept": "OK",
       "productNavAria": "Product sections",
       "legalNavAria": "Legal and support"
@@ -376,7 +380,11 @@ export const siteCopy = {
   "ru": {
     "meta": {
       "locale": "ru",
-      "languageName": "Русский"
+      "languageName": "Русский",
+      "title": "Miravelys — личная ясность для запутанных моментов",
+      "description": "Личное место, где можно записать то, что запуталось внутри, отделить событие от того, что добавил ум, и вернуться с чуть большим пространством.",
+      "ogTitle": "Miravelys — личная ясность для запутанных моментов",
+      "ogDescription": "Пишите честно, разделяйте слои, сначала успокаивайте тело и сами решайте, что сейчас ближе к правде."
     },
     "nav": {
       "what": "Что это",
@@ -435,7 +443,7 @@ export const siteCopy = {
       "userAgreement": "Пользовательское соглашение",
       "privacyPolicy": "Политика конфиденциальности",
       "cookies": "Cookie",
-      "cookieBanner": "Сайт сохраняет только необходимые настройки в браузере (язык и выбор cookie). Рекламных cookie нет.",
+      "cookieBanner": "Сайт запоминает только базовые настройки браузера: язык и выбор cookie. Рекламных cookie нет.",
       "cookieAccept": "Понятно",
       "productNavAria": "Разделы продукта",
       "legalNavAria": "Правовая информация и поддержка"
@@ -695,7 +703,11 @@ export const siteCopy = {
   "ro": {
     "meta": {
       "locale": "ro",
-      "languageName": "Română"
+      "languageName": "Română",
+      "title": "Miravelys — claritate privată pentru momente încâlcite",
+      "description": "Un loc privat unde poți scrie ce se simte încâlcit, separa ce s-a întâmplat de ce a adăugat mintea și reveni cu mai mult spațiu interior.",
+      "ogTitle": "Miravelys — claritate privată pentru momente încâlcite",
+      "ogDescription": "Scrie sincer, separă straturile, liniștește mai întâi corpul și alegi tu ce se simte mai aproape de adevăr acum."
     },
     "nav": {
       "what": "Ce este",
@@ -754,7 +766,7 @@ export const siteCopy = {
       "userAgreement": "Acordul utilizatorului",
       "privacyPolicy": "Politica de confidențialitate",
       "cookies": "Cookie-uri",
-      "cookieBanner": "Site-ul salvează doar preferințe esențiale în browser (limbă și alegerea cookie). Fără cookie-uri publicitare.",
+      "cookieBanner": "Site-ul reține doar alegeri de bază în browser: limba și acordul pentru cookie-uri. Fără cookie-uri publicitare.",
       "cookieAccept": "OK",
       "productNavAria": "Secțiuni produs",
       "legalNavAria": "Legal și suport"
@@ -1014,7 +1026,11 @@ export const siteCopy = {
   "fr": {
     "meta": {
       "locale": "fr",
-      "languageName": "Français"
+      "languageName": "Français",
+      "title": "Miravelys — une clarté privée pour les moments emmêlés",
+      "description": "Un lieu privé pour écrire ce qui semble emmêlé, distinguer ce qui s’est passé de ce que l’esprit a ajouté, et revenir avec un peu plus d’espace.",
+      "ogTitle": "Miravelys — une clarté privée pour les moments emmêlés",
+      "ogDescription": "Écrire avec honnêteté, séparer les couches, apaiser le corps d’abord et choisir ce qui semble plus juste maintenant."
     },
     "nav": {
       "what": "Ce que c’est",
@@ -1073,7 +1089,7 @@ export const siteCopy = {
       "userAgreement": "Conditions d’utilisation",
       "privacyPolicy": "Politique de confidentialité",
       "cookies": "Cookies",
-      "cookieBanner": "Ce site enregistre uniquement des préférences essentielles (langue et choix cookie). Pas de cookies publicitaires.",
+      "cookieBanner": "Ce site mémorise seulement des choix de base dans le navigateur : langue et accord cookies. Aucun cookie publicitaire.",
       "cookieAccept": "OK",
       "productNavAria": "Sections produit",
       "legalNavAria": "Mentions légales et support"
@@ -1333,7 +1349,11 @@ export const siteCopy = {
   "hi": {
     "meta": {
       "locale": "hi",
-      "languageName": "हिन्दी"
+      "languageName": "हिन्दी",
+      "title": "Miravelys — उलझे पलों के लिए निजी स्पष्टता",
+      "description": "एक निजी जगह, जहाँ आप भीतर उलझी बात लिख सकें, जो हुआ उसे मन की जोड़ी हुई कहानी से अलग देख सकें, और थोड़ी अधिक जगह के साथ लौट सकें।",
+      "ogTitle": "Miravelys — उलझे पलों के लिए निजी स्पष्टता",
+      "ogDescription": "ईमानदारी से लिखें, परतों को अलग देखें, पहले शरीर को शांत करें, और तय करें कि अभी क्या अधिक सच्चा लगता है।"
     },
     "nav": {
       "what": "यह क्या है",
@@ -1392,7 +1412,7 @@ export const siteCopy = {
       "userAgreement": "उपयोगकर्ता समझौता",
       "privacyPolicy": "गोपनीयता नीति",
       "cookies": "कुकीज़",
-      "cookieBanner": "यह साइट ब्राउज़र में केवल आवश्यक प्राथमिकताएँ (भाषा और cookie विकल्प) रखती है। कोई विज्ञापन कुकी नहीं।",
+      "cookieBanner": "यह साइट ब्राउज़र में केवल भाषा और cookie सहमति जैसी मूल पसंद याद रखती है। विज्ञापन cookie नहीं हैं।",
       "cookieAccept": "ठीक है",
       "productNavAria": "उत्पाद अनुभाग",
       "legalNavAria": "कानूनी जानकारी और सहायता"
@@ -1652,7 +1672,11 @@ export const siteCopy = {
   "zh": {
     "meta": {
       "locale": "zh-CN",
-      "languageName": "简体中文"
+      "languageName": "简体中文",
+      "title": "Miravelys — 给纠结时刻的私密清晰空间",
+      "description": "一个私密空间，用来写下内心纠结的部分，区分发生的事与头脑添加的意义，并带着更多余地回到自己。",
+      "ogTitle": "Miravelys — 给纠结时刻的私密清晰空间",
+      "ogDescription": "诚实书写，分开层次，先安顿身体，再由你决定此刻什么更接近真实。"
     },
     "nav": {
       "what": "它是什么",
@@ -1711,7 +1735,7 @@ export const siteCopy = {
       "userAgreement": "用户协议",
       "privacyPolicy": "隐私政策",
       "cookies": "Cookie",
-      "cookieBanner": "本网站仅在浏览器中保存必要偏好（语言和 Cookie 选择）。不使用广告 Cookie。",
+      "cookieBanner": "本网站只在浏览器中记住语言和 Cookie 同意等基本选择。不使用广告 Cookie。",
       "cookieAccept": "好的",
       "productNavAria": "产品板块",
       "legalNavAria": "法律信息与支持"
@@ -1910,7 +1934,11 @@ export const siteCopy = {
   "de": {
     "meta": {
       "locale": "de",
-      "languageName": "Deutsch"
+      "languageName": "Deutsch",
+      "title": "Miravelys — private Klarheit für verworrene Momente",
+      "description": "Ein privater Ort, um aufzuschreiben, was sich innerlich verworren anfühlt, das Geschehene von dem zu trennen, was der Geist hinzugefügt hat, und mit mehr Raum zurückzukehren.",
+      "ogTitle": "Miravelys — private Klarheit für verworrene Momente",
+      "ogDescription": "Ehrlich schreiben, die Ebenen trennen, zuerst den Körper beruhigen und selbst entscheiden, was sich jetzt stimmiger anfühlt."
     },
     "nav": {
       "what": "Was es ist",
@@ -1969,7 +1997,7 @@ export const siteCopy = {
       "userAgreement": "Nutzungsvereinbarung",
       "privacyPolicy": "Datenschutzerklärung",
       "cookies": "Cookies",
-      "cookieBanner": "Diese Website speichert nur notwendige Einstellungen (Sprache und Cookie-Wahl). Keine Werbe-Cookies.",
+      "cookieBanner": "Diese Website merkt sich nur grundlegende Browser-Entscheidungen wie Sprache und Cookie-Zustimmung. Keine Werbe-Cookies.",
       "cookieAccept": "OK",
       "productNavAria": "Produktbereiche",
       "legalNavAria": "Rechtliches und Support"
@@ -2168,7 +2196,11 @@ export const siteCopy = {
   "ja": {
     "meta": {
       "locale": "ja",
-      "languageName": "日本語"
+      "languageName": "日本語",
+      "title": "Miravelys — 絡まった瞬間のための私的な明晰さ",
+      "description": "内側で絡まったことを書き、起きたことと心が加えた意味を分け、少し余白をもって戻るための私的な場所です。",
+      "ogTitle": "Miravelys — 絡まった瞬間のための私的な明晰さ",
+      "ogDescription": "正直に書き、層を分け、まず身体を落ち着けて、今なにがより真実に近いかを自分で選ぶ。"
     },
     "nav": {
       "what": "Miravelysとは",
@@ -2227,7 +2259,7 @@ export const siteCopy = {
       "userAgreement": "利用規約",
       "privacyPolicy": "プライバシーポリシー",
       "cookies": "Cookie",
-      "cookieBanner": "このサイトはブラウザに必要な設定のみ（言語と Cookie の選択）を保存します。広告 Cookie は使用しません。",
+      "cookieBanner": "このサイトは、言語と Cookie 同意などの基本的な選択だけをブラウザに保存します。広告 Cookie は使いません。",
       "cookieAccept": "了解",
       "productNavAria": "製品セクション",
       "legalNavAria": "法的情報とサポート"
@@ -2426,7 +2458,11 @@ export const siteCopy = {
   "es": {
     "meta": {
       "locale": "es",
-      "languageName": "Español"
+      "languageName": "Español",
+      "title": "Miravelys — claridad privada para momentos enredados",
+      "description": "Un lugar privado para escribir lo que se siente enredado, separar lo que ocurrió de lo que añadió la mente y volver con un poco más de espacio interior.",
+      "ogTitle": "Miravelys — claridad privada para momentos enredados",
+      "ogDescription": "Escribe con honestidad, separa las capas, calma primero el cuerpo y decide qué se siente más cercano a la verdad ahora."
     },
     "nav": {
       "what": "Qué es",
@@ -2485,7 +2521,7 @@ export const siteCopy = {
       "userAgreement": "Acuerdo de usuario",
       "privacyPolicy": "Política de privacidad",
       "cookies": "Cookies",
-      "cookieBanner": "Este sitio guarda solo preferencias esenciales (idioma y elección de cookies). Sin cookies publicitarias.",
+      "cookieBanner": "Este sitio solo recuerda elecciones básicas del navegador, como idioma y consentimiento de cookies. Sin cookies publicitarias.",
       "cookieAccept": "OK",
       "productNavAria": "Secciones del producto",
       "legalNavAria": "Legal y soporte"
@@ -2684,7 +2720,11 @@ export const siteCopy = {
   "pt": {
     "meta": {
       "locale": "pt",
-      "languageName": "Português"
+      "languageName": "Português",
+      "title": "Miravelys — clareza privada para momentos emaranhados",
+      "description": "Um lugar privado para escrever o que parece emaranhado, separar o que aconteceu do que a mente acrescentou e voltar com um pouco mais de espaço interior.",
+      "ogTitle": "Miravelys — clareza privada para momentos emaranhados",
+      "ogDescription": "Escreve com honestidade, separa as camadas, acalma primeiro o corpo e decide o que agora parece mais próximo da verdade."
     },
     "nav": {
       "what": "O que é",
@@ -2743,7 +2783,7 @@ export const siteCopy = {
       "userAgreement": "Acordo do utilizador",
       "privacyPolicy": "Política de privacidade",
       "cookies": "Cookies",
-      "cookieBanner": "Este site guarda apenas preferências essenciais (idioma e escolha de cookies). Sem cookies publicitários.",
+      "cookieBanner": "Este site lembra apenas escolhas básicas do navegador, como idioma e consentimento de cookies. Sem cookies publicitários.",
       "cookieAccept": "OK",
       "productNavAria": "Secções do produto",
       "legalNavAria": "Legal e suporte"

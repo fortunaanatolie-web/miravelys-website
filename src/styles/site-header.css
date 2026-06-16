@@ -45,12 +45,10 @@
   gap: clamp(10px, 2vw, 20px);
   min-height: var(--header-bar-height);
   padding: var(--header-pad-y) var(--header-pad-x);
-  border: 1px solid var(--mira-glass-border, rgba(255, 255, 255, 0.09));
+  border: 1px solid var(--header-bar-border);
   border-radius: var(--header-radius);
-  background: rgba(4, 8, 18, 0.72);
-  backdrop-filter: blur(20px) saturate(140%);
-  -webkit-backdrop-filter: blur(20px) saturate(140%);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+  background: var(--header-bar-bg);
+  box-shadow: var(--header-bar-shadow);
 }
 
 .top-nav--legal .top-nav__bar {
@@ -61,6 +59,7 @@
   flex-shrink: 0;
   line-height: 1.2;
   white-space: nowrap;
+  color: var(--header-ink);
 }
 
 .top-nav__links {
@@ -75,7 +74,7 @@
   font-weight: 500;
   letter-spacing: -0.01em;
   line-height: 1.35;
-  color: var(--mira-text-secondary, rgba(232, 224, 212, 0.74));
+  color: var(--header-ink-soft);
   text-decoration: none;
   white-space: nowrap;
   padding: 8px 10px;
@@ -86,8 +85,8 @@
 }
 
 .top-nav__links a:hover {
-  color: var(--mira-text-primary, rgba(245, 240, 232, 0.94));
-  background: rgba(255, 255, 255, 0.06);
+  color: var(--header-ink);
+  background: var(--header-control-bg);
 }
 
 .top-nav__actions {
@@ -111,6 +110,14 @@
 .language-cluster--compact .language-select {
   padding: 7px 10px;
   min-height: var(--touch-min, 44px);
+  color: var(--header-ink);
+  background: var(--header-control-bg);
+  border: 1px solid var(--header-control-border);
+}
+
+.language-cluster--compact .language-select svg {
+  color: currentColor;
+  opacity: 0.88;
 }
 
 .language-cluster--compact .language-select select {
@@ -127,18 +134,20 @@
   height: var(--touch-min, 44px);
   place-items: center;
   border-radius: var(--mira-radius-pill, 980px);
-  color: rgba(246, 239, 215, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.06);
+  color: var(--header-ink);
+  border: 1px solid var(--header-control-border);
+  background: var(--header-control-bg);
   cursor: pointer;
   transition:
     border-color 0.2s ease,
-    background 0.2s ease;
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .mobile-menu-button:hover {
-  border-color: rgba(196, 160, 102, 0.28);
-  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(196, 160, 102, 0.35);
+  background: var(--header-control-bg);
+  color: var(--header-ink);
 }
 
 /* —— Mobile overlay panel —— */

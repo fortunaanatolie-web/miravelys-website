@@ -111,22 +111,37 @@
   /* —— Mobile header chrome (readable on light day surfaces) —— */
   --header-mobile-ink: rgba(38, 34, 28, 0.9);
   --header-mobile-ink-soft: rgba(38, 34, 28, 0.78);
-  --header-mobile-surface: rgba(255, 252, 244, 0.82);
-  --header-mobile-border: rgba(70, 58, 42, 0.14);
+  --header-mobile-surface: #faf7f2;
+  --header-mobile-border: rgba(62, 52, 40, 0.11);
+
+  /* Header bar — evening default (solid, not glass) */
+  --header-bar-bg: #10141c;
+  --header-bar-border: rgba(255, 255, 255, 0.09);
+  --header-bar-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.06) inset,
+    0 10px 32px rgba(0, 0, 0, 0.28);
+  --header-control-bg: rgba(255, 255, 255, 0.06);
+  --header-control-border: rgba(255, 255, 255, 0.11);
+  --header-ink: rgba(245, 240, 232, 0.94);
+  --header-ink-soft: rgba(232, 224, 212, 0.74);
 
   /* —— Scroll story (sticky phone) —— */
   --site-header-height: var(--header-bar-height, 3.25rem);
   --story-page-x: clamp(20px, 5vw, 80px);
   --story-page-y: clamp(72px, 10vw, 160px);
   --story-gap: clamp(32px, 7vw, 120px);
-  --story-sticky-top: calc(var(--header-top, 12px) + var(--site-header-height) + 16px);
-  --story-sticky-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  --story-phone-gap-top: 0.5cm;
+  --story-phone-gap-bottom: 1cm;
+  --story-sticky-top: calc(
+    var(--header-top, 12px) + var(--site-header-height) + var(--story-phone-gap-top)
+  );
+  --story-sticky-bottom: calc(var(--story-phone-gap-bottom) + env(safe-area-inset-bottom, 0px));
   --story-sticky-height: calc(100svh - var(--story-sticky-top) - var(--story-sticky-bottom));
   --story-progress-block: 28px;
   --story-phone-stack-ratio: 2.38;
-  --story-phone-available: calc(var(--story-sticky-height) - var(--story-progress-block) - 12px);
+  --story-phone-available: calc(var(--story-sticky-height) - var(--story-progress-block));
   --story-phone-width: min(
-    clamp(220px, 24vw, 340px),
+    clamp(280px, 34vw, 520px),
     calc(var(--story-phone-available) * 390 / 844)
   );
   --story-phone-max-height: calc(var(--story-phone-width) * 844 / 390);
@@ -135,16 +150,19 @@
   --story-body: var(--keynote-sub);
 
   /* Phone mockup width by layout mode */
-  --phone-width-desktop: min(
-    clamp(260px, 28vw, 430px),
-    calc((100svh - 160px) * 390 / 844)
-  );
+  --phone-width-desktop: var(--story-phone-width);
   --phone-width-mobile-card: min(74vw, 310px);
   --phone-width-landscape: min(
-    clamp(220px, 31vw, 340px),
-    calc((100svh - 72px) * 390 / 844)
+    clamp(240px, 34vw, 460px),
+    calc(
+      (
+        100svh - var(--header-top, 12px) - var(--site-header-height) - var(--story-phone-gap-top) -
+          var(--story-phone-gap-bottom) - var(--story-progress-block) -
+          env(safe-area-inset-bottom, 0px)
+      ) * 390 / 844
+    )
   );
-  --phone-width-landscape-scale: 1.38;
+  --phone-width-landscape-scale: 1;
 }
 
 .site-shell--keynote {

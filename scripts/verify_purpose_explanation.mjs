@@ -25,15 +25,15 @@ for (const language of languages) {
 }
 
 const app = fs.readFileSync(new URL('../src/App.jsx', import.meta.url), 'utf8');
-const journey = fs.readFileSync(new URL('../src/components/marketing/sections/StickyPhoneStory.jsx', import.meta.url), 'utf8');
-const storyDesktop = fs.readFileSync(new URL('../src/components/marketing/sections/ProductStoryDesktop.jsx', import.meta.url), 'utf8');
+const journey = fs.readFileSync(new URL('../src/components/marketing/sections/ProductStory.jsx', import.meta.url), 'utf8');
+const stickyLayout = fs.readFileSync(new URL('../src/components/marketing/sections/StickyStoryLayout.jsx', import.meta.url), 'utf8');
 const storyMobile = fs.readFileSync(new URL('../src/components/marketing/sections/ProductStoryMobile.jsx', import.meta.url), 'utf8');
 assert(app.includes('StickyPhoneStory'), 'App must mount StickyPhoneStory');
 assert(!app.includes('PurposeExplanationFlow'), 'Legacy purpose flow must not compete with the main scrollytelling page');
-assert(journey.includes('ProductStoryDesktop'), 'StickyPhoneStory must render desktop sticky layout');
-assert(journey.includes('ProductStoryMobile'), 'StickyPhoneStory must render mobile stacked cards');
-assert(storyDesktop.includes('StoryStep'), 'Desktop story must render story step panels');
-assert(storyDesktop.includes('PhoneMockup'), 'Desktop story must use one stable phone mockup');
+assert(journey.includes('ProductStoryDesktop'), 'ProductStory must render desktop sticky layout');
+assert(journey.includes('ProductStoryMobile'), 'ProductStory must render mobile stacked cards');
+assert(stickyLayout.includes('ProductStoryStepContent'), 'Sticky story must render shared step content panels');
+assert(stickyLayout.includes('PhoneMockup'), 'Sticky story must use one stable phone mockup');
 assert(storyMobile.includes('mobile-product-card'), 'Mobile story must render stacked cards');
 
 const forbidden = [/diagnos(es|e) the user/i, /therapy replacement/i, /absolute truth/i, /who you truly are/i];

@@ -1,0 +1,447 @@
+/**
+ * Product story — CSS-only layout switching (desktop / portrait mobile / landscape).
+ * Loads after site-sticky-phone-story.css and site-mobile-story.css so these rules win.
+ */
+
+/* —— Layout visibility —— */
+.product-story__desktop {
+  display: block;
+}
+
+.product-story__mobile,
+.product-story__landscape {
+  display: none;
+}
+
+@media (max-width: 47.9375rem) and (orientation: portrait) {
+  .product-story__desktop,
+  .product-story__landscape {
+    display: none;
+  }
+
+  .product-story__mobile {
+    display: block;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 32.5rem) and (min-width: 40rem) and (max-width: 64rem) {
+  .product-story__desktop,
+  .product-story__mobile {
+    display: none;
+  }
+
+  .product-story__landscape {
+    display: block;
+  }
+
+  .product-story .marketing-scroll-story__intro,
+  .product-story .sticky-phone-story__intro {
+    display: none;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 21.25rem) {
+  .product-story__desktop,
+  .product-story__landscape {
+    display: none;
+  }
+
+  .product-story__mobile {
+    display: block;
+  }
+}
+
+/* Tablet portrait: stacked cards when sticky would be cramped */
+@media (min-width: 48rem) and (max-width: 64rem) and (orientation: portrait) {
+  .product-story__desktop,
+  .product-story__landscape {
+    display: none;
+  }
+
+  .product-story__mobile {
+    display: block;
+  }
+}
+
+/* —— Desktop sticky story —— */
+.sticky-story--desktop {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.9fr) minmax(460px, 1.1fr);
+  gap: clamp(56px, 7vw, 128px);
+  max-width: 1360px;
+  margin-inline: auto;
+  padding: clamp(40px, 6vw, 80px) var(--story-page-x) var(--story-page-y);
+  align-items: stretch;
+  overflow: visible;
+}
+
+.sticky-story--desktop .sticky-story__phone-column {
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: visible;
+  z-index: 2;
+}
+
+.sticky-story--desktop .sticky-story__phone-inner {
+  position: sticky;
+  top: var(--story-sticky-top);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 1.2vh, 12px);
+  width: 100%;
+  min-height: min(var(--story-sticky-height), 100%);
+  max-height: var(--story-sticky-height);
+  padding-block: 0;
+  pointer-events: auto;
+}
+
+.sticky-story--desktop .sticky-story__text-column {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding-bottom: clamp(48px, 8vh, 120px);
+}
+
+.sticky-story--desktop .phone-mockup--scroll-story,
+.sticky-story--desktop .phone-mockup--desktop {
+  --phone-width: var(--story-phone-width);
+  width: var(--story-phone-width);
+  max-width: 100%;
+  max-height: var(--story-phone-available);
+  flex-shrink: 0;
+  transform: none !important;
+  margin-inline: auto;
+}
+
+.sticky-story--desktop .phone-mockup--scroll-story .phone-mockup__device,
+.sticky-story--desktop .phone-mockup--desktop .phone-mockup__device {
+  max-height: var(--story-phone-max-height);
+}
+
+.sticky-story--desktop .phone-mockup--scroll-story .phone-mockup__screen-stack,
+.sticky-story--desktop .phone-mockup--desktop .phone-mockup__screen-stack {
+  max-height: calc(
+    var(--story-phone-max-height) - 2 * var(--phone-chassis-inset-ratio, 0.026) * var(--story-phone-width)
+  );
+}
+
+/* —— Story steps (desktop + landscape) —— */
+.sticky-story .story-step {
+  min-height: var(--story-step-min);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(40px, 6vh, 80px) 0;
+  scroll-margin-top: calc(var(--story-sticky-top) + 12px);
+  opacity: 0.42;
+  transition: opacity 360ms ease, transform 420ms ease;
+}
+
+.sticky-story .story-step.is-active,
+.sticky-story .story-step--active {
+  opacity: 1;
+}
+
+.sticky-story .story-step__content {
+  max-width: min(560px, 100%);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.sticky-story .story-step__index {
+  margin: 0 0 10px;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mira-text-whisper);
+  opacity: 0.72;
+}
+
+.sticky-story .story-step__eyebrow {
+  font-size: var(--type-eyebrow, clamp(0.71875rem, 0.69rem + 0.1vw, 0.8125rem));
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--mira-text-whisper);
+  margin: 0 0 clamp(8px, 1.2vh, 12px);
+}
+
+.sticky-story .story-step__headline,
+.sticky-story .story-step__title {
+  font-family: var(--font-serif);
+  font-size: var(--story-title);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--mira-ivory);
+  margin: 0 0 clamp(12px, 2vh, 16px);
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+.sticky-story .story-step__body {
+  font-size: var(--story-body);
+  line-height: 1.58;
+  color: var(--mira-text-secondary);
+  margin: 0 0 clamp(10px, 1.5vh, 14px);
+}
+
+.sticky-story .story-step__whisper,
+.sticky-story .story-step__note {
+  font-size: var(--keynote-whisper, clamp(0.9375rem, 0.91rem + 0.12vw, 1.03125rem));
+  line-height: 1.6;
+  font-style: italic;
+  color: var(--mira-text-whisper);
+  margin: 0;
+}
+
+.sticky-story .story-step__doors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+}
+
+.sticky-story .story-step__doors li {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(70, 58, 42, 0.22);
+  background: rgba(255, 252, 244, 0.55);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: rgba(38, 34, 28, 0.82);
+}
+
+/* Mobile card typography via shared step content */
+.mobile-product-story .story-step__headline,
+.mobile-product-story .story-step__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.65rem, 7.5vw, 2.35rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: var(--mira-ivory);
+  margin: 0;
+  text-wrap: balance;
+}
+
+.mobile-product-story .story-step__body {
+  margin: clamp(14px, 4vw, 18px) auto 0;
+  max-width: 31rem;
+  font-size: clamp(1rem, 4.1vw, 1.125rem);
+  line-height: 1.52;
+  color: var(--mira-text-secondary);
+}
+
+.mobile-product-story .story-step__whisper,
+.mobile-product-story .story-step__note {
+  margin: 14px auto 0;
+  max-width: 28rem;
+  font-size: clamp(0.9375rem, 3.8vw, 1.03125rem);
+  line-height: 1.55;
+  font-style: italic;
+  color: var(--mira-text-whisper);
+}
+
+.mobile-product-story .story-step__eyebrow {
+  margin: 0 0 12px;
+  font-size: clamp(0.76rem, 3.2vw, 0.9rem);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mira-text-whisper);
+}
+
+.mobile-product-card .phone-mockup--mobile-card {
+  --phone-width: var(--phone-width-mobile-card);
+  width: var(--phone-width-mobile-card);
+  max-height: 54svh;
+}
+
+/* Journey progress in sticky layouts */
+.sticky-story .journey-progress--compact {
+  flex-shrink: 0;
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+}
+
+/* —— Landscape compact sticky —— */
+@media (orientation: landscape) and (max-height: 32.5rem) and (min-width: 40rem) and (max-width: 64rem) {
+  :root {
+    --site-header-height: 2.5rem;
+  }
+
+  .site-shell--keynote {
+    --header-bar-height: 2.5rem;
+    --header-top: max(env(safe-area-inset-top), 4px);
+  }
+
+  .site-header {
+    padding: max(env(safe-area-inset-top), 4px) 12px 6px;
+  }
+
+  .top-nav__bar {
+    min-height: 44px;
+    padding: 5px 8px 5px 14px;
+    gap: 6px;
+  }
+
+  .language-cluster--compact .language-select {
+    min-height: 38px;
+  }
+
+  .mobile-menu-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .product-story {
+    --story-sticky-top: calc(
+      var(--header-top, 4px) + var(--site-header-height, 2.5rem) + var(--story-phone-gap-top, 0.5cm)
+    );
+    --story-sticky-bottom: calc(var(--story-phone-gap-bottom, 1cm) + env(safe-area-inset-bottom, 0px));
+    --story-sticky-height: calc(100svh - var(--story-sticky-top) - var(--story-sticky-bottom));
+    --story-phone-available: calc(var(--story-sticky-height) - var(--story-progress-block));
+    --story-phone-width: min(
+      clamp(240px, 34vw, 460px),
+      calc(var(--story-phone-available) * 390 / 844)
+    );
+    --story-step-min: 82svh;
+  }
+
+  .sticky-story--landscape {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.9fr) minmax(420px, 1.1fr);
+    gap: clamp(28px, 4vw, 56px);
+    max-width: 1120px;
+    margin-inline: auto;
+    padding: 18px clamp(20px, 4vw, 52px) 36px;
+    align-items: start;
+    overflow: visible;
+  }
+
+  .sticky-story--landscape .sticky-story__phone-column {
+    position: sticky;
+    top: var(--story-sticky-top);
+    align-self: start;
+    height: var(--story-sticky-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+  }
+
+  .sticky-story--landscape .sticky-story__phone-inner {
+    position: relative;
+    top: auto;
+    max-height: none;
+    min-height: auto;
+    padding-block: 0;
+  }
+
+  .sticky-story--landscape .phone-mockup--landscape,
+  .sticky-story--landscape .phone-mockup--scroll-story {
+    --phone-width: var(--story-phone-width);
+    width: var(--story-phone-width);
+    max-width: none;
+    max-height: var(--story-phone-available);
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .sticky-story--landscape .phone-mockup__screen-stack--crossfade .phone-mockup__screen-frame {
+    filter: none !important;
+    transform: none !important;
+    transition: opacity 350ms ease;
+  }
+
+  .sticky-story--landscape .phone-mockup__screen-stack--crossfade .phone-mockup__screen-frame--active {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
+
+  .sticky-story--landscape .story-step {
+    min-height: 82svh;
+    padding-block: 18px;
+    justify-content: center;
+    opacity: 0.55;
+  }
+
+  .sticky-story--landscape .story-step.is-active,
+  .sticky-story--landscape .story-step--active {
+    opacity: 1;
+  }
+
+  .sticky-story--landscape .story-step__title,
+  .sticky-story--landscape .story-step__headline {
+    max-width: 12ch;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 0.95;
+  }
+
+  .sticky-story--landscape .story-step__body {
+    max-width: 36rem;
+    font-size: clamp(0.96rem, 2.2vw, 1.14rem);
+    line-height: 1.42;
+  }
+
+  .sticky-story--landscape .journey-progress--compact {
+    margin-top: -12px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: rgba(8, 10, 16, 0.42);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+/* Very short landscape — horizontal stacked cards */
+@media (orientation: landscape) and (max-height: 21.25rem) {
+  .mobile-product-story {
+    gap: clamp(24px, 6vw, 40px);
+    padding-block: 12px 24px;
+  }
+
+  .mobile-product-card {
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(10px, 2.5vw, 16px);
+    text-align: left;
+  }
+
+  .mobile-product-card__media {
+    flex: 0 0 auto;
+    width: min(34vw, 140px);
+  }
+
+  .mobile-product-card__content {
+    flex: 1;
+    min-width: 0;
+    margin-inline: 0;
+    text-align: left;
+  }
+
+  .mobile-product-card .phone-mockup--mobile-card {
+    --phone-width: min(34vw, 140px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sticky-story .story-step {
+    opacity: 1;
+    transition: none;
+  }
+
+  .sticky-story .story-step:not(.is-active):not(.story-step--active) {
+    opacity: 0.72;
+  }
+}
