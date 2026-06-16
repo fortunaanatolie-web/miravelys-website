@@ -28,6 +28,8 @@ export default function StickyStoryLayout({
 
   const screens = useMemo(() => stepsToPhoneScreens(steps, locale), [steps, locale]);
   const handleProgressSelect = useCallback(index => focusStep(index), [focusStep]);
+  const phoneVariant =
+    variant === 'landscape' ? 'landscape' : variant === 'mobile' ? 'mobile' : 'desktop';
 
   return (
     <div className={`sticky-story sticky-story--${variant}`} data-sticky-phone-mode={variant}>
@@ -36,7 +38,7 @@ export default function StickyStoryLayout({
           <PhoneMockup
             screens={screens}
             activeIndex={activeIndex}
-            variant={variant === 'landscape' ? 'landscape' : 'desktop'}
+            variant={phoneVariant}
             className="phone-mockup--scroll-story"
             ariaLabel={presentation?.hero?.deviceLabel || 'Miravelys app screens'}
           />
@@ -56,7 +58,7 @@ export default function StickyStoryLayout({
         {steps.map((step, index) => (
           <article
             key={step.id}
-            id={step.sectionId || undefined}
+            id={variant === 'desktop' ? step.sectionId || undefined : undefined}
             ref={node => setStepRef(index, node)}
             data-step-index={index}
             className={`story-step${index === activeIndex ? ' is-active story-step--active' : ''}`}

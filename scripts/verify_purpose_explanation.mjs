@@ -34,7 +34,7 @@ assert(journey.includes('ProductStoryDesktop'), 'ProductStory must render deskto
 assert(journey.includes('ProductStoryMobile'), 'ProductStory must render mobile stacked cards');
 assert(stickyLayout.includes('ProductStoryStepContent'), 'Sticky story must render shared step content panels');
 assert(stickyLayout.includes('PhoneMockup'), 'Sticky story must use one stable phone mockup');
-assert(storyMobile.includes('mobile-product-card'), 'Mobile story must render stacked cards');
+assert(storyMobile.includes('StickyStoryLayout'), 'Mobile story must render sticky scrollytelling layout');
 
 const forbidden = [/diagnos(es|e) the user/i, /therapy replacement/i, /absolute truth/i, /who you truly are/i];
 for (const language of languages) {

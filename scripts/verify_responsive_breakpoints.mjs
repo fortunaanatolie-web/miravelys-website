@@ -46,8 +46,8 @@ assert(
   'site-product-story.css must style landscape phone mockup'
 );
 assert(
-  productStoryCss.includes('max-height: 21.25rem'),
-  'site-product-story.css must fall back to stacked cards on very short landscape'
+  productStoryCss.includes('sticky-story--mobile'),
+  'site-product-story.css must define mobile sticky story layout'
 );
 assert(breakpointsCss.includes('68.75rem'), 'site-breakpoints.css must define laptop sticky layout breakpoint');
 assert(revealCss.includes('68.6874rem'), 'site-reveal.css must align mobile/tablet cutoff with breakpoints');

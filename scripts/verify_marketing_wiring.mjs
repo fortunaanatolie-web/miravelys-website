@@ -34,14 +34,13 @@ assert(productStory.includes('marketing-scroll-story'), 'Scrollytelling must use
 assert(productStory.includes('product-story__desktop'), 'Product story must split desktop/mobile/landscape via CSS');
 assert(productStory.includes('product-story__mobile'), 'Product story must split desktop/mobile/landscape via CSS');
 assert(productStory.includes('ProductStoryDesktop'), 'ProductStory must render desktop sticky layout');
-assert(productStory.includes('ProductStoryMobile'), 'ProductStory must render mobile stacked cards');
+assert(productStory.includes('ProductStoryMobile'), 'ProductStory must render mobile sticky layout');
 assert(stickyLayout.includes('phone-mockup--scroll-story'), 'Sticky layout phone must use scroll-story variant');
 assert(stickyLayout.includes('activeIndex'), 'Sticky layout phone screen must sync to active scroll step');
 assert(stickyLayout.includes('stepsToPhoneScreens'), 'Sticky layout must build screens from canonical steps');
-assert(storyMobile.includes('mobile-product-card'), 'Mobile story must use stacked product cards');
-assert(storyMobile.includes('phone-mockup--mobile-card'), 'Mobile cards must use compact phone mockup mode');
-assert(productCss.includes('.product-story__mobile'), 'Product story CSS must control mobile layout visibility');
-assert(!storyMobile.includes('useActiveStep'), 'Mobile story must not use scroll-sync observer');
+assert(storyMobile.includes('StickyStoryLayout'), 'Mobile story must use shared sticky scrollytelling layout');
+assert(!storyMobile.includes('useActiveStep'), 'Mobile story must not duplicate scroll observer (lives in StickyStoryLayout)');
+assert(productCss.includes('sticky-story--mobile'), 'Product story CSS must define mobile sticky layout');
 assert(revealFrame.includes('screens = useMemo'), 'RevealingDeviceFrame must build one screen stack for crossfade changes');
 assert(!app.includes('BetaSection'), 'Main page must not include legacy beta section block');
 assert(app.includes('DownloadSection'), 'Main page must keep a clear final download CTA');

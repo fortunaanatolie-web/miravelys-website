@@ -24,7 +24,7 @@
   }
 }
 
-@media (orientation: landscape) and (max-height: 32.5rem) and (min-width: 40rem) and (max-width: 64rem) {
+@media (orientation: landscape) and (max-height: 32.5rem) and (max-width: 64rem) {
   .product-story__desktop,
   .product-story__mobile {
     display: none;
@@ -40,18 +40,18 @@
   }
 }
 
-@media (orientation: landscape) and (max-height: 21.25rem) {
+@media (orientation: landscape) and (max-height: 21.25rem) and (max-width: 64rem) {
   .product-story__desktop,
-  .product-story__landscape {
+  .product-story__mobile {
     display: none;
   }
 
-  .product-story__mobile {
+  .product-story__landscape {
     display: block;
   }
 }
 
-/* Tablet portrait: stacked cards when sticky would be cramped */
+/* Tablet portrait: sticky story (same as phone) */
 @media (min-width: 48rem) and (max-width: 64rem) and (orientation: portrait) {
   .product-story__desktop,
   .product-story__landscape {
@@ -130,7 +130,69 @@
   );
 }
 
-/* —— Story steps (desktop + landscape) —— */
+/* —— Portrait mobile sticky (same StickyStoryLayout as desktop) —— */
+.sticky-story--mobile {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  max-width: 100%;
+  margin-inline: auto;
+  padding: clamp(12px, 3vw, 24px) clamp(18px, 5vw, 24px) var(--story-page-y);
+  overflow: visible;
+}
+
+.sticky-story--mobile .sticky-story__phone-column {
+  grid-area: 1 / 1;
+  position: sticky;
+  top: var(--story-sticky-top);
+  align-self: start;
+  justify-self: center;
+  z-index: 3;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+}
+
+.sticky-story--mobile .sticky-story__phone-inner {
+  position: relative;
+  top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: clamp(8px, 1.2vh, 12px);
+  width: 100%;
+  min-height: auto;
+  max-height: none;
+  padding-block: 0;
+  pointer-events: auto;
+}
+
+.sticky-story--mobile .sticky-story__text-column {
+  grid-area: 1 / 1;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding-top: var(--story-sticky-phone-block, calc(var(--story-phone-width) * 844 / 390 + 40px));
+  padding-bottom: clamp(32px, 8vh, 64px);
+}
+
+@media (max-width: 64rem) {
+  .product-story {
+    --story-sticky-phone-block: calc(
+      min(var(--story-phone-max-height), 52svh) + var(--story-progress-block) + 12px
+    );
+    --story-phone-width: min(
+      clamp(240px, 68vw, 360px),
+      calc(var(--story-phone-available) * 390 / 844)
+    );
+    --story-phone-max-height: calc(var(--story-phone-width) * 844 / 390);
+    --story-step-min: clamp(380px, 68svh, 680px);
+  }
+}
+
+/* —— Shared story steps (desktop + landscape + mobile) —— */
 .sticky-story .story-step {
   min-height: var(--story-step-min);
   display: flex;
@@ -219,53 +281,7 @@
   color: rgba(38, 34, 28, 0.82);
 }
 
-/* Mobile card typography via shared step content */
-.mobile-product-story .story-step__headline,
-.mobile-product-story .story-step__title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.65rem, 7.5vw, 2.35rem);
-  font-weight: 500;
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  color: var(--mira-ivory);
-  margin: 0;
-  text-wrap: balance;
-}
-
-.mobile-product-story .story-step__body {
-  margin: clamp(14px, 4vw, 18px) auto 0;
-  max-width: 31rem;
-  font-size: clamp(1rem, 4.1vw, 1.125rem);
-  line-height: 1.52;
-  color: var(--mira-text-secondary);
-}
-
-.mobile-product-story .story-step__whisper,
-.mobile-product-story .story-step__note {
-  margin: 14px auto 0;
-  max-width: 28rem;
-  font-size: clamp(0.9375rem, 3.8vw, 1.03125rem);
-  line-height: 1.55;
-  font-style: italic;
-  color: var(--mira-text-whisper);
-}
-
-.mobile-product-story .story-step__eyebrow {
-  margin: 0 0 12px;
-  font-size: clamp(0.76rem, 3.2vw, 0.9rem);
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--mira-text-whisper);
-}
-
-.mobile-product-card .phone-mockup--mobile-card {
-  --phone-width: var(--phone-width-mobile-card);
-  width: var(--phone-width-mobile-card);
-  max-height: 54svh;
-}
-
-/* Journey progress in sticky layouts */
+/* —— Story steps (desktop + landscape + mobile) —— */
 .sticky-story .journey-progress--compact {
   flex-shrink: 0;
   width: auto;
@@ -273,8 +289,47 @@
   margin: 0;
 }
 
+/* Mobile portrait overrides (after shared step rules) */
+.sticky-story--mobile .story-step {
+  min-height: var(--story-step-min);
+  padding: clamp(20px, 5vw, 36px) 0;
+  text-align: center;
+}
+
+.sticky-story--mobile .story-step__content {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.sticky-story--mobile .story-step__headline,
+.sticky-story--mobile .story-step__title {
+  font-size: clamp(1.65rem, 7.5vw, 2.25rem);
+  line-height: 1.08;
+}
+
+.sticky-story--mobile .story-step__body {
+  font-size: clamp(1rem, 4.1vw, 1.125rem);
+  line-height: 1.52;
+}
+
+.sticky-story--mobile .phone-mockup--scroll-story,
+.sticky-story--mobile .phone-mockup--mobile {
+  --phone-width: var(--story-phone-width);
+  width: var(--story-phone-width);
+  max-width: 100%;
+  max-height: min(var(--story-phone-available), 52svh);
+  flex-shrink: 0;
+  transform: none !important;
+  margin-inline: auto;
+}
+
+.sticky-story--mobile .phone-mockup--scroll-story .phone-mockup__device,
+.sticky-story--mobile .phone-mockup--mobile .phone-mockup__device {
+  max-height: min(var(--story-phone-max-height), 52svh);
+}
+
 /* —— Landscape compact sticky —— */
-@media (orientation: landscape) and (max-height: 32.5rem) and (min-width: 40rem) and (max-width: 64rem) {
+@media (orientation: landscape) and (max-height: 32.5rem) and (max-width: 64rem) {
   :root {
     --site-header-height: 2.5rem;
   }
@@ -401,37 +456,6 @@
     background: rgba(8, 10, 16, 0.42);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-  }
-}
-
-/* Very short landscape — horizontal stacked cards */
-@media (orientation: landscape) and (max-height: 21.25rem) {
-  .mobile-product-story {
-    gap: clamp(24px, 6vw, 40px);
-    padding-block: 12px 24px;
-  }
-
-  .mobile-product-card {
-    flex-direction: row;
-    align-items: center;
-    gap: clamp(10px, 2.5vw, 16px);
-    text-align: left;
-  }
-
-  .mobile-product-card__media {
-    flex: 0 0 auto;
-    width: min(34vw, 140px);
-  }
-
-  .mobile-product-card__content {
-    flex: 1;
-    min-width: 0;
-    margin-inline: 0;
-    text-align: left;
-  }
-
-  .mobile-product-card .phone-mockup--mobile-card {
-    --phone-width: min(34vw, 140px);
   }
 }
 
