@@ -53,7 +53,7 @@ const phone = fs.readFileSync(new URL('../src/components/marketing/primitives/Ph
 if (!app.includes('StickyPhoneStory')) fail('Marketing site must use StickyPhoneStory scroll presentation.');
 if (app.includes('MockupsSection') || app.includes('ScreenStorySection') || app.includes('OriginStorySection')) fail('Main page still contains legacy competing marketing sections.');
 if (!router.includes('path="/story"')) fail('Story route missing.');
-if (!storyDesktop.includes('PhoneMockup') || !storyDesktop.includes('activeIndex={landscapeCompact ? 0 : safeActiveIndex}')) fail('Desktop fixed phone flow must use one PhoneMockup synchronized to activeIndex.');
+if (!storyDesktop.includes('PhoneMockup') || !storyDesktop.includes('activeIndex={isLandscape ? 0 : activeIndex}')) fail('Desktop fixed phone flow must use one PhoneMockup synchronized to activeIndex.');
 if (!storyMobile.includes('mobile-product-card')) fail('Mobile product story must use stacked cards.');
 if (!phone.includes('phone-mockup__screen-stack--crossfade')) fail('Phone mockup must crossfade internal screens.');
 if (/href="#"\s*[^>]*>/.test(`${app}\n${revealJourney}`)) fail('Found placeholder href="#" CTA.');

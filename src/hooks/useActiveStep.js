@@ -1,8 +1,9 @@
 import { useCallback, useLayoutEffect, useRef, useState } from 'react';
 
-const DEFAULT_ROOT_MARGIN = '-25% 0px -25% 0px';
-const DEFAULT_MIN_RATIO = 0.18;
-
+/**
+ * Pick the step whose vertical center is closest to the viewport center.
+ * Works reliably for desktop sticky scrollytelling and compact landscape layouts.
+ */
 function pickActiveByCenter(nodes) {
   if (!nodes.length) return 0;
 
@@ -12,7 +13,7 @@ function pickActiveByCenter(nodes) {
 
   nodes.forEach((node, index) => {
     const rect = node.getBoundingClientRect();
-    if (rect.height <= 0 || rect.bottom <= 0 || rect.top >= window.innerHeight) return;
+    if (rect.height <= 0) return;
 
     const center = rect.top + rect.height / 2;
     const distance = Math.abs(center - viewportCenter);
@@ -25,7 +26,7 @@ function pickActiveByCenter(nodes) {
   return bestIndex;
 }
 
-function nodesAreVisible(nodes) {
+function layoutIsVisible(nodes) {
   return nodes.some(node => {
     const rect = node.getBoundingClientRect();
     return rect.height > 0 && rect.width > 0;
@@ -35,18 +36,10 @@ function nodesAreVisible(nodes) {
 /**
  * Tracks which story step is nearest the viewport center for sticky-phone scrollytelling.
  */
-export function useActiveStep(stepCount, options = {}) {
-  const {
-    enabled = true,
-    rootMargin = DEFAULT_ROOT_MARGIN,
-    minRatio = DEFAULT_MIN_RATIO,
-    preferCenterScroll = false,
-  } = options;
-
+export function useActiveStep(stepCount) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [ready, setReady] = useState(false);
   const stepRefs = useRef([]);
-  const ratiosRef = useRef({});
 
   const setStepRef = useCallback(
     (index, node) => {
@@ -69,74 +62,50 @@ export function useActiveStep(stepCount, options = {}) {
   );
 
   useLayoutEffect(() => {
-    if (!enabled || !ready || stepCount < 1) return undefined;
+    if (!ready || stepCount < 1) return undefined;
 
     const nodes = stepRefs.current.filter(Boolean);
     if (nodes.length < stepCount) return undefined;
 
-    ratiosRef.current = {};
     let frame = 0;
 
-    function pickActiveFromRatios() {
-      let bestIndex = 0;
-      let bestRatio = 0;
-      Object.entries(ratiosRef.current).forEach(([index, ratio]) => {
-        if (ratio > bestRatio) {
-          bestRatio = ratio;
-          bestIndex = Number(index);
-        }
-      });
-      if (bestRatio >= minRatio) {
-        setActiveIndex(bestIndex);
-        return true;
-      }
-      return false;
-    }
+    const syncActiveStep = () => {
+      if (!layoutIsVisible(nodes)) return;
 
-    function syncActiveStep() {
-      if (!nodesAreVisible(nodes)) return;
-
-      if (preferCenterScroll) {
-        cancelAnimationFrame(frame);
-        frame = requestAnimationFrame(() => {
-          setActiveIndex(pickActiveByCenter(nodes));
-        });
-        return;
-      }
-
-      if (!pickActiveFromRatios()) {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
         setActiveIndex(pickActiveByCenter(nodes));
-      }
-    }
-
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          const index = entry.target.getAttribute('data-step-index');
-          if (index != null) ratiosRef.current[index] = entry.intersectionRatio;
-        });
-        if (!preferCenterScroll) syncActiveStep();
-      },
-      { threshold: [0, 0.2, 0.35, 0.5, 0.65, 0.8, 1], rootMargin }
-    );
-
-    nodes.forEach(node => observer.observe(node));
+      });
+    };
 
     syncActiveStep();
+
     window.addEventListener('scroll', syncActiveStep, { passive: true });
     window.addEventListener('resize', syncActiveStep);
     window.addEventListener('orientationchange', syncActiveStep);
 
+    const visibilityObserver =
+      typeof ResizeObserver !== 'undefined'
+        ? new ResizeObserver(() => syncActiveStep())
+        : null;
+
+    nodes.forEach(node => visibilityObserver?.observe(node));
+
     return () => {
       cancelAnimationFrame(frame);
-      observer.disconnect();
       window.removeEventListener('scroll', syncActiveStep);
       window.removeEventListener('resize', syncActiveStep);
       window.removeEventListener('orientationchange', syncActiveStep);
+      visibilityObserver?.disconnect();
     };
-  }, [enabled, ready, stepCount, rootMargin, minRatio, preferCenterScroll]);
+  }, [ready, stepCount]);
 
-  return { activeIndex, setStepRef, focusStep };
+  const safeActiveIndex =
+    typeof activeIndex === 'number' && activeIndex >= 0 && activeIndex < stepCount
+      ? activeIndex
+      : 0;
+
+  return { activeIndex: safeActiveIndex, setStepRef, focusStep };
 }
 
 /** @deprecated Use useActiveStep */

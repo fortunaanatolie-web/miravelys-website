@@ -17,7 +17,8 @@ export default function StickyPhoneStory({ lang, t, steps: stepsProp }) {
   );
   const presentation = resolvePresentation(lang ?? 'en');
   const works = t?.works;
-  const { compact: landscapeCompact, fallbackStacked: shortLandscape } = useLandscapePhoneStory();
+  const { fallbackStacked: shortLandscape } = useLandscapePhoneStory();
+  const mode = useStickyPhoneStoryMode();
 
   useEffect(() => {
     if (lang) preloadMiravelysScreenshots(lang);
@@ -28,7 +29,7 @@ export default function StickyPhoneStory({ lang, t, steps: stepsProp }) {
   return (
     <section
       id="works"
-      className={`product-story marketing-scroll-story sticky-phone-story scroll-story reveal-journey${landscapeCompact ? ' product-story--landscape-compact' : ''}${shortLandscape ? ' product-story--landscape-stacked' : ''}`}
+      className={`product-story marketing-scroll-story sticky-phone-story scroll-story reveal-journey${mode === 'landscape' ? ' product-story--landscape-compact' : ''}${mode === 'mobile' && shortLandscape ? ' product-story--landscape-stacked' : ''}`}
       aria-label={presentation.journey?.progressAria || 'Miravelys product story'}
     >
       {works ? (

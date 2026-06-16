@@ -36,8 +36,8 @@ assert(revealJourney.includes('mobile-story'), 'Product story must split desktop
 assert(revealJourney.includes('ProductStoryDesktop'), 'StickyPhoneStory must render desktop sticky layout');
 assert(revealJourney.includes('ProductStoryMobile'), 'StickyPhoneStory must render mobile stacked cards');
 assert(storyDesktop.includes('phone-mockup--scroll-story'), 'Desktop phone must use scroll-story variant');
-assert(storyDesktop.includes('safeActiveIndex'), 'Desktop phone screen must sync to active scroll step');
-assert(storyDesktop.includes('displayScreens'), 'Landscape must swap phone screen from active step data');
+assert(storyDesktop.includes('activeIndex'), 'Desktop phone screen must sync to active scroll step');
+assert(storyDesktop.includes('useStickyPhoneScreens'), 'Landscape must swap phone screen from active step data');
 assert(storyMobile.includes('mobile-product-card'), 'Mobile story must use stacked product cards');
 assert(storyMobile.includes('phone-mockup--mobile-card'), 'Mobile cards must use compact phone mockup mode');
 assert(mobileCss.includes('.desktop-story'), 'Mobile CSS must hide desktop sticky layout below 1024px');

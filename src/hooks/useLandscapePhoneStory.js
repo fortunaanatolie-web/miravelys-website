@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 /** Compact sticky scrollytelling on landscape phones with enough space. */
 export const LANDSCAPE_PHONE_STORY_MQ =
@@ -7,6 +7,8 @@ export const LANDSCAPE_PHONE_STORY_MQ =
 /** Very short landscape — fall back to stacked mobile cards. */
 export const SHORT_LANDSCAPE_STACKED_MQ =
   '(orientation: landscape) and (max-height: 340px) and (max-width: 64rem)';
+
+const DESKTOP_STORY_MQ = '(min-width: 64.0625rem)';
 
 function readLandscapeState() {
   if (typeof window === 'undefined') {
@@ -42,9 +44,7 @@ export function useLandscapePhoneStory() {
   return state;
 }
 
-const DESKTOP_STORY_MQ = '(min-width: 64.0625rem)';
-
-/** True when the sticky desktop scrollytelling layout is visible and should sync screens. */
+/** @deprecated Use useStickyPhoneStoryMode */
 export function useStoryScrollytellingEnabled() {
   const { compact } = useLandscapePhoneStory();
   const [desktopWide, setDesktopWide] = useState(() => {
