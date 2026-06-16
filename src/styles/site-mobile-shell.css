@@ -308,11 +308,12 @@
   }
 }
 
-/* Landscape phone — compact header */
+/* Landscape phone — compact header + story offset */
 @media (orientation: landscape) and (max-height: 520px) and (max-width: 64rem) {
   .site-shell--keynote {
     --header-bar-height: 2.875rem;
     --header-top: max(4px, env(safe-area-inset-top, 0px));
+    --header-safe-offset: calc(var(--header-top) + var(--header-bar-height) + 8px);
   }
 
   .site-header {
@@ -325,8 +326,26 @@
     border-radius: 22px;
   }
 
-  .mobile-menu-button,
+  .mobile-menu-button {
+    min-height: 40px;
+    width: 40px;
+    min-width: 40px;
+  }
+
   .language-cluster--compact .language-select {
     min-height: 40px;
+    width: auto;
+    min-width: auto;
+    padding-inline: 10px;
+  }
+
+  .hero-section--keynote {
+    min-height: auto;
+    padding-top: var(--header-safe-offset);
+    padding-bottom: clamp(16px, 4svh, 28px);
+  }
+
+  .product-story--landscape-compact {
+    scroll-margin-top: var(--header-safe-offset);
   }
 }

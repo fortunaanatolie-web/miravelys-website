@@ -1,5 +1,6 @@
 import { useCallback, useMemo } from 'react';
 import { useActiveStep } from '../../../hooks/useActiveStep';
+import { useLandscapePhoneStory } from '../../../hooks/useLandscapePhoneStory';
 import JourneyProgress from '../primitives/JourneyProgress';
 import StoryStep from '../primitives/StoryStep';
 import PhoneMockup from '../primitives/PhoneMockup';
@@ -10,6 +11,7 @@ import PhoneMockup from '../primitives/PhoneMockup';
 export default function ProductStoryDesktop({ steps, lang, presentation }) {
   const { activeIndex, setStepRef, focusStep } = useActiveStep(steps.length);
   const activeStep = steps[activeIndex] ?? steps[0];
+  const { compact: landscapeCompact } = useLandscapePhoneStory();
 
   const screens = useMemo(
     () =>
@@ -25,7 +27,7 @@ export default function ProductStoryDesktop({ steps, lang, presentation }) {
 
   return (
     <div
-      className="marketing-scroll-story__layout sticky-phone-story__layout desktop-story__layout"
+      className={`marketing-scroll-story__layout sticky-phone-story__layout desktop-story__layout${landscapeCompact ? ' sticky-phone-story__layout--landscape' : ''}`}
       data-journey-mood={activeStep?.mood ?? 'default'}
     >
       <div
@@ -39,11 +41,11 @@ export default function ProductStoryDesktop({ steps, lang, presentation }) {
             size="chapter"
             mood={activeStep?.mood}
             priorityFirst
-            glow
-            atmosphere
-            reflection={false}
-            floorShadow
-            className="phone-mockup--scroll-story"
+            glow={!landscapeCompact}
+            atmosphere={!landscapeCompact}
+            reflection={!landscapeCompact}
+            floorShadow={!landscapeCompact}
+            className={`phone-mockup--scroll-story${landscapeCompact ? ' phone-mockup--landscape-compact' : ''}`}
             ariaLabel={presentation.hero?.deviceLabel || 'Miravelys app screens'}
           />
           <JourneyProgress

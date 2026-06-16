@@ -2,6 +2,7 @@ import { useEffect, useMemo } from 'react';
 import { buildMarketingSteps } from '../../../lib/buildMarketingSteps';
 import { preloadMiravelysScreenshots } from '../../../lib/miravelysScreenshots';
 import { resolvePresentation } from '../../../i18n/presentationCopy';
+import { useLandscapePhoneStory } from '../../../hooks/useLandscapePhoneStory';
 import RevealOnScroll from '../primitives/RevealOnScroll';
 import ProductStoryDesktop from './ProductStoryDesktop';
 import ProductStoryMobile from './ProductStoryMobile';
@@ -16,6 +17,7 @@ export default function StickyPhoneStory({ lang, t, steps: stepsProp }) {
   );
   const presentation = resolvePresentation(lang ?? 'en');
   const works = t?.works;
+  const { compact: landscapeCompact, fallbackStacked: shortLandscape } = useLandscapePhoneStory();
 
   useEffect(() => {
     if (lang) preloadMiravelysScreenshots(lang);
@@ -26,7 +28,7 @@ export default function StickyPhoneStory({ lang, t, steps: stepsProp }) {
   return (
     <section
       id="works"
-      className="product-story marketing-scroll-story sticky-phone-story scroll-story reveal-journey"
+      className={`product-story marketing-scroll-story sticky-phone-story scroll-story reveal-journey${landscapeCompact ? ' product-story--landscape-compact' : ''}${shortLandscape ? ' product-story--landscape-stacked' : ''}`}
       aria-label={presentation.journey?.progressAria || 'Miravelys product story'}
     >
       {works ? (

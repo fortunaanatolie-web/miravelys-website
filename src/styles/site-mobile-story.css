@@ -183,6 +183,11 @@
 
 /* Landscape phone — compact sticky story when height allows */
 @media (orientation: landscape) and (max-height: 520px) and (min-width: 640px) and (max-width: 64rem) {
+  .product-story--landscape-compact .marketing-scroll-story__intro,
+  .product-story--landscape-compact .sticky-phone-story__intro {
+    display: none;
+  }
+
   .desktop-story {
     display: block !important;
   }
@@ -191,47 +196,201 @@
     display: none !important;
   }
 
+  .product-story--landscape-compact {
+    --story-sticky-top: calc(var(--header-top, 4px) + var(--header-bar-height, 2.875rem) + 8px);
+    --story-sticky-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    --story-sticky-height: calc(100svh - var(--story-sticky-top) - var(--story-sticky-bottom));
+    --story-step-min: min(72svh, 520px);
+    --story-progress-block: 22px;
+    --landscape-phone-height: calc(var(--story-sticky-height) - var(--story-progress-block) - 8px);
+    --landscape-phone-width: min(
+      calc(var(--landscape-phone-height) * 390 / 844),
+      36vw,
+      260px
+    );
+  }
+
   .desktop-story .marketing-scroll-story__layout,
-  .desktop-story .sticky-phone-story__layout {
-    display: grid;
-    grid-template-columns: minmax(170px, 0.72fr) minmax(280px, 1.28fr);
-    gap: clamp(16px, 3vw, 32px);
-    padding-inline: clamp(16px, 3vw, 28px);
-    padding-block: 20px 36px;
+  .desktop-story .sticky-phone-story__layout,
+  .sticky-phone-story__layout--landscape {
+    display: grid !important;
+    grid-template-columns: minmax(140px, auto) minmax(0, 1fr);
+    gap: clamp(14px, 3vw, 28px);
+    align-items: start;
+    padding-inline: clamp(14px, 3vw, 28px);
+    padding-block: 12px 28px;
     max-width: 100%;
+    overflow: visible;
+  }
+
+  .desktop-story .marketing-scroll-story__phone-column,
+  .desktop-story .sticky-phone-story__phone {
+    position: relative;
+    align-self: start;
+    min-height: auto;
+    width: min(var(--landscape-phone-width) + 24px, 38vw);
+    max-width: 280px;
   }
 
   .desktop-story .marketing-scroll-story__phone-inner {
-    top: calc(var(--header-top) + var(--header-bar-height) + 6px);
-    max-height: calc(100svh - var(--header-top) - var(--header-bar-height) - 16px);
+    position: sticky;
+    top: var(--story-sticky-top);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    width: 100%;
+    min-height: auto;
+    max-height: var(--story-sticky-height);
+    padding-block: 0;
   }
 
-  .desktop-story .phone-mockup--scroll-story {
-    --phone-width: min(24vw, calc((100svh - 96px) * 390 / 844), 220px);
-    width: var(--phone-width);
+  .desktop-story .phone-mockup--scroll-story,
+  .desktop-story .phone-mockup--landscape-compact {
+    --phone-width: var(--landscape-phone-width) !important;
+    width: var(--landscape-phone-width) !important;
+    max-width: 100%;
+    max-height: var(--landscape-phone-height);
+    flex-shrink: 0;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .desktop-story .phone-mockup--landscape-compact .phone-mockup__device {
+    max-height: var(--landscape-phone-height);
+    box-shadow:
+      0 2px 8px rgba(0, 0, 0, 0.16),
+      0 10px 28px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .desktop-story .phone-mockup--landscape-compact .phone-mockup__screen-stack {
+    max-height: calc(var(--landscape-phone-height) - 12px);
+  }
+
+  .desktop-story .phone-mockup--landscape-compact .phone-mockup__atmosphere,
+  .desktop-story .phone-mockup--landscape-compact .phone-mockup__glow,
+  .desktop-story .phone-mockup--landscape-compact .phone-mockup__spotlight,
+  .desktop-story .phone-mockup--landscape-compact .phone-mockup__floor-shadow {
+    display: none !important;
+  }
+
+  .desktop-story .phone-mockup--landscape-compact .phone-mockup__screen-stack--crossfade .phone-mockup__screen-frame {
+    opacity: 0;
+    filter: none !important;
+    transform: none !important;
+  }
+
+  .desktop-story .phone-mockup--landscape-compact .phone-mockup__screen-stack--crossfade .phone-mockup__screen-frame--active {
+    opacity: 1;
+    filter: none !important;
+    transform: none !important;
+  }
+
+  .desktop-story .marketing-scroll-story__text-column,
+  .desktop-story .sticky-phone-story__steps {
+    padding-bottom: 24px;
+    min-width: 0;
   }
 
   .desktop-story .story-step,
   .desktop-story .marketing-scroll-story .story-step {
-    min-height: 78svh;
-    padding-block: 20px;
+    min-height: var(--story-step-min);
+    padding-block: clamp(16px, 4svh, 28px);
+    scroll-margin-top: calc(var(--story-sticky-top) + 8px);
     text-align: left;
+    opacity: 0.55;
+  }
+
+  .desktop-story .story-step.is-active,
+  .desktop-story .story-step--active {
+    opacity: 1;
   }
 
   .desktop-story .story-step__content,
   .desktop-story .marketing-scroll-story .story-step__content {
     text-align: left;
     margin-inline: 0;
+    max-width: 100%;
   }
 
   .desktop-story .story-step__headline {
-    font-size: clamp(1.5rem, 4.5vw, 2.4rem);
-    line-height: 1.02;
+    font-size: clamp(1.35rem, 4.2vw, 2rem);
+    line-height: 1.06;
+    margin-bottom: 8px;
   }
 
   .desktop-story .story-step__body {
-    font-size: clamp(0.92rem, 2.2vw, 1.05rem);
+    font-size: clamp(0.88rem, 2.1vw, 1rem);
     line-height: 1.42;
+    margin-bottom: 6px;
+  }
+
+  .desktop-story .story-step__whisper {
+    font-size: clamp(0.82rem, 1.9vw, 0.94rem);
+    line-height: 1.4;
+  }
+
+  .desktop-story .story-step__eyebrow {
+    font-size: 0.72rem;
+    margin-bottom: 6px;
+  }
+
+  [data-appearance='day'] .desktop-story .story-step__headline {
+    color: rgba(18, 16, 14, 0.92);
+  }
+
+  [data-appearance='day'] .desktop-story .story-step__body {
+    color: rgba(18, 16, 14, 0.68);
+  }
+
+  .desktop-story .journey-progress--compact .journey-progress__dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .desktop-story .journey-progress--compact .journey-progress__step--active .journey-progress__dot {
+    width: 7px;
+    height: 7px;
+  }
+}
+
+/* Very short landscape — fall back to stacked mobile cards */
+@media (orientation: landscape) and (max-height: 360px) and (max-width: 64rem) {
+  .product-story--landscape-stacked .desktop-story {
+    display: none !important;
+  }
+
+  .product-story--landscape-stacked .mobile-story {
+    display: block !important;
+  }
+
+  .mobile-product-story {
+    gap: clamp(32px, 8vw, 48px);
+    padding-block: 16px 32px;
+  }
+
+  .mobile-product-card {
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(12px, 3vw, 20px);
+    text-align: left;
+  }
+
+  .mobile-product-card__media {
+    flex: 0 0 auto;
+    width: min(38vw, 160px);
+  }
+
+  .mobile-product-card__content {
+    flex: 1;
+    min-width: 0;
+    margin-inline: 0;
+  }
+
+  .phone-mockup--mobile-card {
+    --phone-width: min(38vw, 160px);
   }
 }
 

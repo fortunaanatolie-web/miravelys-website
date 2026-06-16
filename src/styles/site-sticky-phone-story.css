@@ -280,8 +280,8 @@
   }
 }
 
-/* Mobile — desktop-story hidden; stacked cards in site-mobile-story.css */
-@media (max-width: 64rem) {
+/* Mobile — desktop-story hidden in portrait; landscape compact rules in site-mobile-story.css */
+@media (max-width: 64rem) and (not ((orientation: landscape) and (max-height: 520px) and (min-width: 640px))) {
   .desktop-story .marketing-scroll-story__layout,
   .desktop-story .sticky-phone-story__layout {
     display: none;

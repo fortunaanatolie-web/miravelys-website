@@ -31,6 +31,23 @@ assert(tokensCss.includes('--touch-min'), 'site-tokens.css must define touch tar
 assert(breakpointsCss.includes('--keynote-device-hero'), 'site-breakpoints.css must define fluid mockup sizing');
 assert(breakpointsCss.includes('overflow-wrap'), 'site-breakpoints.css must handle long translated text');
 assert(breakpointsCss.includes('orientation: landscape'), 'site-breakpoints.css must handle landscape layouts');
+
+const mobileStoryCss = fs.readFileSync(
+  new URL('../src/styles/site-mobile-story.css', import.meta.url),
+  'utf8'
+);
+assert(
+  mobileStoryCss.includes('product-story--landscape-compact'),
+  'site-mobile-story.css must define landscape compact sticky story'
+);
+assert(
+  mobileStoryCss.includes('phone-mockup--landscape-compact'),
+  'site-mobile-story.css must style crisp landscape phone mockup'
+);
+assert(
+  mobileStoryCss.includes('max-height: 360px'),
+  'site-mobile-story.css must fall back to stacked cards on very short landscape'
+);
 assert(breakpointsCss.includes('68.75rem'), 'site-breakpoints.css must define laptop sticky layout breakpoint');
 assert(revealCss.includes('68.6874rem'), 'site-reveal.css must align mobile/tablet cutoff with breakpoints');
 assert(breakpointsCss.includes('prefers-reduced-motion'), 'site-breakpoints.css must respect reduced motion');
