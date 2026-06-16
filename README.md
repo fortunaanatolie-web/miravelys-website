@@ -65,3 +65,4 @@ npm run build
 ```
 
 A copy completeness check confirmed all 10 languages include the required website sections and mockup text.
+# Miravelys
