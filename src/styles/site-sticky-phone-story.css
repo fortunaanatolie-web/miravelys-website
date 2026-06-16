@@ -112,8 +112,8 @@
   margin-bottom: clamp(10px, 1.8vh, 18px);
 }
 
-.marketing-scroll-story .phone-mockup--scroll-story,
-.marketing-scroll-story__phone-inner .phone-mockup {
+.marketing-scroll-story .phone-mockup--scroll-story:not(.phone-mockup--landscape-compact),
+.marketing-scroll-story__phone-inner .phone-mockup:not(.phone-mockup--landscape-compact) {
   --phone-width: var(--story-phone-width);
   flex-shrink: 0;
   width: var(--story-phone-width);
@@ -123,12 +123,12 @@
   margin-inline: auto;
 }
 
-.marketing-scroll-story .phone-mockup--scroll-story .phone-mockup__device,
-.marketing-scroll-story__phone-inner .phone-mockup__device {
+.marketing-scroll-story .phone-mockup--scroll-story:not(.phone-mockup--landscape-compact) .phone-mockup__device,
+.marketing-scroll-story__phone-inner .phone-mockup:not(.phone-mockup--landscape-compact) .phone-mockup__device {
   max-height: var(--story-phone-max-height);
 }
 
-.marketing-scroll-story .phone-mockup--scroll-story .phone-mockup__screen-stack {
+.marketing-scroll-story .phone-mockup--scroll-story:not(.phone-mockup--landscape-compact) .phone-mockup__screen-stack {
   max-height: calc(var(--story-phone-max-height) - 2 * var(--phone-chassis-inset-ratio, 0.026) * var(--story-phone-width));
 }
 

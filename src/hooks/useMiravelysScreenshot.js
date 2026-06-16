@@ -11,7 +11,8 @@ const isDev = import.meta.env.DEV;
 
 /**
  * Resolves a Miravelys website screenshot with .webp primary + legacy PNG fallback.
- * Never swaps unrelated screens — only locale → English → legacy asset chain.
+ * Starts legacy PNG load in parallel with .webp probe so the first successful
+ * image wins — no multi-second dark placeholder when .webp files are absent.
  */
 export function useMiravelysScreenshot(screen, lang) {
   const descriptor = useMemo(() => {
@@ -26,11 +27,17 @@ export function useMiravelysScreenshot(screen, lang) {
     return { locale, group, code, legacyAsset, publicPath, alt: screen.alt ?? '' };
   }, [screen, lang]);
 
-  const [state, setState] = useState(() => ({
-    src: '',
-    status: 'loading',
-    missing: null,
-  }));
+  const [state, setState] = useState(() => {
+    if (!descriptor) return { src: '', status: 'loading', missing: null };
+    const { locale, group, code, legacyAsset, publicPath } = descriptor;
+    if (legacyAsset) {
+      const cached = resolveLegacyScreenshotUrl(locale, legacyAsset);
+      if (cached) {
+        return { src: cached, status: 'legacy-fallback', missing: null };
+      }
+    }
+    return { src: '', status: 'loading', missing: null };
+  });
 
   useEffect(() => {
     if (!descriptor) {
@@ -39,71 +46,106 @@ export function useMiravelysScreenshot(screen, lang) {
     }
 
     let cancelled = false;
+    let resolved = false;
     const { locale, group, code, legacyAsset, publicPath } = descriptor;
 
+    function resolveOnce(src, status) {
+      if (cancelled || resolved) return;
+      resolved = true;
+      setState({ src, status, missing: null });
+    }
+
+    function markMissing() {
+      if (cancelled || resolved) return;
+      resolved = true;
+      setState({
+        src: '',
+        status: 'missing',
+        missing: { group, code, locale, expected: publicPath },
+      });
+    }
+
     async function resolve() {
-      if (!publicPath && legacyAsset) {
-        const legacy = await loadLegacyScreenshotUrl(locale, legacyAsset);
-        if (cancelled) return;
-        if (legacy) {
-          setState({ src: legacy, status: 'legacy-fallback', missing: null });
+      // Immediately check sync legacy cache for instant render
+      if (legacyAsset) {
+        const cached = resolveLegacyScreenshotUrl(locale, legacyAsset);
+        if (cached) {
+          resolveOnce(cached, 'legacy-fallback');
           return;
         }
       }
 
-      if (publicPath) {
-        const img = new Image();
-        img.onload = async () => {
-          if (cancelled) return;
-          setState({ src: publicPath, status: 'ready', missing: null });
-        };
-        img.onerror = async () => {
-          if (cancelled) return;
-
-          if (locale !== CANONICAL_LOCALE && group && code) {
-            const enPath = getEnglishScreenshotPath(group, code);
-            const enImg = new Image();
-            enImg.onload = () => {
-              if (!cancelled) setState({ src: enPath, status: 'en-fallback', missing: null });
-            };
-            enImg.onerror = () => tryLegacy();
-            enImg.src = enPath;
-            return;
-          }
-
-          tryLegacy();
-        };
-        img.src = publicPath;
+      // No publicPath and no cached legacy — try async legacy only
+      if (!publicPath) {
+        if (legacyAsset) {
+          const loaded = await loadLegacyScreenshotUrl(locale, legacyAsset);
+          if (loaded && !cancelled) { resolveOnce(loaded, 'legacy-fallback'); return; }
+        }
+        markMissing();
         return;
       }
 
-      tryLegacy();
+      // Start legacy PNG load in parallel with .webp probe
+      // so the first successful image wins instead of waiting for two 404s
+      let legacyResult = null;
+      let legacyDone = false;
 
-      async function tryLegacy() {
-        if (legacyAsset) {
-          const cached = resolveLegacyScreenshotUrl(locale, legacyAsset);
-          if (cached && !cancelled) {
-            setState({ src: cached, status: 'legacy-fallback', missing: null });
-            return;
+      if (legacyAsset) {
+        loadLegacyScreenshotUrl(locale, legacyAsset).then(url => {
+          legacyResult = url;
+          legacyDone = true;
+          // If .webp hasn't resolved yet, use legacy immediately
+          if (!resolved && url) {
+            resolveOnce(url, 'legacy-fallback');
           }
-          const loaded = await loadLegacyScreenshotUrl(locale, legacyAsset);
-          if (loaded && !cancelled) {
-            setState({ src: loaded, status: 'legacy-fallback', missing: null });
-            return;
-          }
-        }
-
-        if (!cancelled) {
-          setState({
-            src: '',
-            status: 'missing',
-            missing: { group, code, locale, expected: publicPath },
-          });
-        }
+        });
       }
+
+      // Probe the .webp public path
+      const img = new Image();
+      img.onload = () => {
+        resolveOnce(publicPath, 'ready');
+      };
+      img.onerror = () => {
+        if (cancelled || resolved) return;
+
+        // Try English .webp fallback
+        if (locale !== CANONICAL_LOCALE && group && code) {
+          const enPath = getEnglishScreenshotPath(group, code);
+          const enImg = new Image();
+          enImg.onload = () => {
+            resolveOnce(enPath, 'en-fallback');
+          };
+          enImg.onerror = () => {
+            // English .webp also failed — wait for legacy if still loading
+            if (resolved) return;
+            if (legacyDone) {
+              if (legacyResult) {
+                resolveOnce(legacyResult, 'legacy-fallback');
+              } else {
+                markMissing();
+              }
+            }
+            // Otherwise legacy load still in flight — it will resolve or markMissing
+          };
+          enImg.src = enPath;
+          return;
+        }
+
+        // Same locale or no English fallback — wait for legacy if still loading
+        if (legacyDone) {
+          if (legacyResult) {
+            resolveOnce(legacyResult, 'legacy-fallback');
+          } else {
+            markMissing();
+          }
+        }
+      };
+      img.src = publicPath;
     }
 
     setState({ src: '', status: 'loading', missing: null });
+    resolved = false;
     resolve();
 
     return () => {

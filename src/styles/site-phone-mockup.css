@@ -374,6 +374,30 @@
   filter: blur(8px) brightness(0.88);
 }
 
+/* Landscape compact — one clear active screen, no crossfade blur stack */
+.phone-mockup--landscape-compact .phone-mockup__screen-stack--crossfade .phone-mockup__screen-frame,
+.phone-mockup--landscape-compact .phone-mockup__screen-frame {
+  position: relative;
+  inset: auto;
+  opacity: 1;
+  transform: none !important;
+  filter: none !important;
+}
+
+.phone-mockup--landscape-compact .phone-mockup__screen-stack {
+  position: relative;
+}
+
+.phone-mockup--landscape-compact .phone-mockup__screen-stack--crossfade .phone-mockup__screen-frame:not(.phone-mockup__screen-frame--active) {
+  display: none;
+}
+
+.phone-mockup--landscape-compact .phone-mockup__screen {
+  opacity: 1 !important;
+  filter: none !important;
+  object-fit: contain;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .phone-mockup--animate {
     animation: none;

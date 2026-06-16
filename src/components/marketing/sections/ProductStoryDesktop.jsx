@@ -1,4 +1,6 @@
-import { useCallback, useMemo } from 'react';
+import { useCallback, useEffect, useMemo } from 'react';
+import { preloadMockupLanguage } from '../../../config/mockupScreens';
+import { preloadMiravelysScreenshots } from '../../../lib/miravelysScreenshots';
 import { useActiveStep } from '../../../hooks/useActiveStep';
 import {
   useLandscapePhoneStory,
@@ -21,6 +23,15 @@ export default function ProductStoryDesktop({ steps, lang, presentation }) {
     minRatio: landscapeCompact ? 0.05 : 0.18,
   });
   const activeStep = steps[activeIndex] ?? steps[0];
+  const safeActiveIndex =
+    typeof activeIndex === 'number' && activeIndex >= 0 && activeIndex < steps.length ? activeIndex : 0;
+
+  useEffect(() => {
+    if (!scrollytellingEnabled || !lang) return undefined;
+    preloadMiravelysScreenshots(lang);
+    preloadMockupLanguage(lang);
+    return undefined;
+  }, [scrollytellingEnabled, lang]);
 
   const screens = useMemo(
     () =>
@@ -31,6 +42,12 @@ export default function ProductStoryDesktop({ steps, lang, presentation }) {
       })),
     [lang, steps]
   );
+
+  const displayScreens = useMemo(() => {
+    if (!landscapeCompact) return screens;
+    const activeScreen = screens[safeActiveIndex] ?? screens[0];
+    return activeScreen ? [activeScreen] : screens.slice(0, 1);
+  }, [landscapeCompact, safeActiveIndex, screens]);
 
   const handleProgressSelect = useCallback(index => focusStep(index), [focusStep]);
 
@@ -45,21 +62,22 @@ export default function ProductStoryDesktop({ steps, lang, presentation }) {
       >
         <div className="marketing-scroll-story__phone-inner">
           <PhoneMockup
-            screens={screens}
-            activeIndex={activeIndex}
-            size="chapter"
+            screens={displayScreens}
+            activeIndex={landscapeCompact ? 0 : safeActiveIndex}
+            size={landscapeCompact ? 'landscape' : 'chapter'}
             mood={activeStep?.mood}
             priorityFirst
+            singleScreen={landscapeCompact}
             glow={!landscapeCompact}
             atmosphere={!landscapeCompact}
-            reflection={!landscapeCompact}
+            reflection={false}
             floorShadow={!landscapeCompact}
             className={`phone-mockup--scroll-story${landscapeCompact ? ' phone-mockup--landscape-compact' : ''}`}
             ariaLabel={presentation.hero?.deviceLabel || 'Miravelys app screens'}
           />
           <JourneyProgress
             scenes={presentation.scenes}
-            activeIndex={activeIndex}
+            activeIndex={safeActiveIndex}
             progressAria={presentation.journey?.progressAria}
             onStepSelect={handleProgressSelect}
             compact
@@ -74,7 +92,7 @@ export default function ProductStoryDesktop({ steps, lang, presentation }) {
             step={step}
             index={index}
             stepTotal={steps.length}
-            active={activeIndex === index}
+            active={safeActiveIndex === index}
             setPanelRef={setStepRef}
           />
         ))}

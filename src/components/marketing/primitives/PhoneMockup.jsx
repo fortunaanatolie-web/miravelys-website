@@ -8,7 +8,8 @@ export const PHONE_MOCKUP_SIZES = {
   chapter: '(min-width: 981px) 400px, (min-width: 640px) 72vw, 88vw',
   gallery: '(min-width: 981px) 220px, (min-width: 640px) 42vw, 78vw',
   compact: '(min-width: 981px) 280px, (min-width: 640px) 56vw, 84vw',
-  'mobile-card': 'min(74vw, 280px)',
+  'mobile-card': 'min(74vw, 310px)',
+  landscape: 'min(31vw, 340px)',
 };
 
 function MockupScreenImage({ screen, sizes, priorityFirst, index, isActive, isStack, activeIndex }) {
@@ -49,9 +50,15 @@ function MockupScreenImage({ screen, sizes, priorityFirst, index, isActive, isSt
       >
         <div className="phone-mockup__screen-crop">
           {isDev ? (
-            <ScreenshotPlaceholder missing={missing} className="screenshot-placeholder--visible" />
+            <ScreenshotPlaceholder
+              missing={missing || { group: '?', code: '?', locale: '?', expected: '' }}
+              className="screenshot-placeholder--visible"
+            />
           ) : (
-            <div className="phone-mockup__screen production-missing-screen" role="img" aria-label={alt} />
+            <ScreenshotPlaceholder
+              missing={missing || { group: '?', code: '?', locale: '?', expected: '' }}
+              className="screenshot-placeholder--visible screenshot-placeholder--production"
+            />
           )}
         </div>
       </div>
@@ -87,13 +94,18 @@ export default function PhoneMockup({
   reflection = true,
   floorShadow = true,
   dimInactive = false,
+  singleScreen = false,
   figureRef,
   ariaLabel = 'Miravelys app',
   style,
   as: Tag = 'figure',
 }) {
   const sizes = PHONE_MOCKUP_SIZES[size] ?? PHONE_MOCKUP_SIZES.chapter;
-  const isStack = screens.length > 1;
+  const safeActiveIndex =
+    typeof activeIndex === 'number' && activeIndex >= 0 && activeIndex < screens.length
+      ? activeIndex
+      : 0;
+  const isStack = !singleScreen && screens.length > 1;
 
   return (
     <Tag
@@ -114,7 +126,7 @@ export default function PhoneMockup({
       <div className="phone-mockup__device">
         <div className={`phone-mockup__screen-stack${isStack ? ' phone-mockup__screen-stack--crossfade' : ''}`}>
           {screens.map((screen, index) => {
-            const isActive = index === activeIndex;
+            const isActive = index === safeActiveIndex;
 
             return (
               <MockupScreenImage
@@ -125,7 +137,7 @@ export default function PhoneMockup({
                 index={index}
                 isActive={isActive}
                 isStack={isStack}
-                activeIndex={activeIndex}
+                activeIndex={safeActiveIndex}
               />
             );
           })}

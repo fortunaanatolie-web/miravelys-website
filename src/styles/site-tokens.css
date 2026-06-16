@@ -133,6 +133,18 @@
   --story-step-min: clamp(520px, 86svh, 920px);
   --story-title: var(--keynote-section);
   --story-body: var(--keynote-sub);
+
+  /* Phone mockup width by layout mode */
+  --phone-width-desktop: min(
+    clamp(260px, 28vw, 430px),
+    calc((100svh - 160px) * 390 / 844)
+  );
+  --phone-width-mobile-card: min(74vw, 310px);
+  --phone-width-landscape: min(
+    clamp(220px, 31vw, 340px),
+    calc((100svh - 72px) * 390 / 844)
+  );
+  --phone-width-landscape-scale: 1.38;
 }
 
 .site-shell--keynote {

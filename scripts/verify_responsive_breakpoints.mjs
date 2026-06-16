@@ -27,7 +27,7 @@ const mainJs = fs.readFileSync(new URL('../src/main.jsx', import.meta.url), 'utf
 assert(mainJs.includes('site-sticky-phone-story.css'), 'main.jsx must import site-sticky-phone-story.css');
 assert(mainJs.includes('site-breakpoints.css'), 'main.jsx must import site-breakpoints.css');
 assert(tokensCss.includes('--bp-tablet'), 'site-tokens.css must define tablet breakpoint');
-assert(tokensCss.includes('--touch-min'), 'site-tokens.css must define touch target minimum');
+assert(tokensCss.includes('--phone-width-landscape'), 'site-tokens.css must define landscape phone width token');
 assert(breakpointsCss.includes('--keynote-device-hero'), 'site-breakpoints.css must define fluid mockup sizing');
 assert(breakpointsCss.includes('overflow-wrap'), 'site-breakpoints.css must handle long translated text');
 assert(breakpointsCss.includes('orientation: landscape'), 'site-breakpoints.css must handle landscape layouts');
@@ -45,7 +45,7 @@ assert(
   'site-mobile-story.css must style crisp landscape phone mockup'
 );
 assert(
-  mobileStoryCss.includes('max-height: 360px'),
+  mobileStoryCss.includes('max-height: 340px'),
   'site-mobile-story.css must fall back to stacked cards on very short landscape'
 );
 assert(breakpointsCss.includes('68.75rem'), 'site-breakpoints.css must define laptop sticky layout breakpoint');

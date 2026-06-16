@@ -40,7 +40,8 @@ assert(!app.includes('ScreenStorySection'), 'Legacy separate screen story must n
 assert(journey.includes('ProductStoryDesktop'), 'StickyPhoneStory must render desktop layout');
 assert(journey.includes('ProductStoryMobile'), 'StickyPhoneStory must render mobile stacked cards');
 assert(desktop.includes('useActiveStep'), 'Desktop product story must use useActiveStep');
-assert(desktop.includes('useStoryScrollytellingEnabled'), 'Desktop story must enable scroll sync only when layout is visible');
+assert(desktop.includes('displayScreens'), 'Desktop story must render single active screen in landscape compact mode');
+assert(desktop.includes('singleScreen={landscapeCompact}'), 'Landscape must use single-screen phone mockup (no blur stack)');
 assert(desktop.includes('activeIndex'), 'Desktop journey must synchronize active text with phone screen');
 assert(mobile.includes('mobile-product-card'), 'Mobile story must use stacked cards per step');
 assert(phone.includes('phone-mockup__screen-stack--crossfade'), 'Phone must crossfade internal screens on desktop');

@@ -6,7 +6,7 @@ export const LANDSCAPE_PHONE_STORY_MQ =
 
 /** Very short landscape — fall back to stacked mobile cards. */
 export const SHORT_LANDSCAPE_STACKED_MQ =
-  '(orientation: landscape) and (max-height: 360px) and (max-width: 64rem)';
+  '(orientation: landscape) and (max-height: 340px) and (max-width: 64rem)';
 
 function readLandscapeState() {
   if (typeof window === 'undefined') {
