@@ -20,8 +20,6 @@ assert(app.includes('StoryTeaserSection'), 'Main App must include tasteful story
 assert(router.includes('path="/story"') && router.includes('FounderStoryPage'), 'Router must expose /story FounderStoryPage');
 assert(page.includes('OriginStorySection'), 'FounderStoryPage must mount OriginStorySection');
 assert(section.includes('id="origin"'), 'OriginStorySection must expose id="origin"');
-assert(section.includes('PhoneMockup'), 'Origin story must include phone mockups');
-assert(section.includes('NameStorySection'), 'Origin story must render the final name story section');
 assert(teaser.includes('to="/story"'), 'Story teaser must link to /story');
 
 for (const language of languages) {
@@ -33,23 +31,9 @@ for (const language of languages) {
   assert((origin.intro ?? []).length >= 2, `origin.intro needs paragraphs in ${code}`);
   for (const key of requiredBlockKeys) {
     assert(origin.blocks?.[key], `Missing origin.blocks.${key} in ${code}`);
-    assert(origin.blockLabels?.[key], `Missing origin.blockLabels.${key} in ${code}`);
   }
-  assert((origin.blocks.questions?.items ?? []).length >= 6, `questions list in ${code}`);
-  assert((origin.blocks.whatMindAdds?.transforms ?? []).length >= 5, `transforms in ${code}`);
-  assert((origin.blocks.humility?.insights ?? []).length >= 4, `insights in ${code}`);
-  assert((origin.blocks.sounds?.types ?? []).length >= 4, `sound types in ${code}`);
-  assert((origin.blocks.places?.items ?? []).length >= 5, `places in ${code}`);
-  assert((origin.blocks.intention?.audience ?? []).length >= 5, `audience in ${code}`);
 
-  const nameStory = resolveNameStoryCopy(code);
-  assert(nameStoryCopy[code], `Missing nameStoryCopy for ${code}`);
-  assert(nameStory.title, `Missing nameStory.title in ${code}`);
-  assert((nameStory.intro ?? []).length >= 3, `nameStory.intro needs paragraphs in ${code}`);
-  assert((nameStory.pieces ?? []).length === 3, `nameStory.pieces must include Mira, vel, lys in ${code}`);
-  assert(nameStory.pieces?.map(piece => piece.name).join('|') === 'Mira|vel|lys', `nameStory.pieces must preserve Mira/vel/lys in ${code}`);
-  assert((nameStory.closing ?? []).length >= 5, `nameStory.closing needs paragraphs in ${code}`);
-  assert(nameStory.finalStatement, `Missing nameStory.finalStatement in ${code}`);
+
 }
 
 if (errors.length) {

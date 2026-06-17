@@ -7,7 +7,6 @@ import { useWaitlist } from './hooks/useWaitlist';
 import MarketingPageShell from './components/marketing/MarketingPageShell';
 import MarketingTopNav from './components/marketing/MarketingTopNav';
 import MarketingSiteFooter from './components/marketing/MarketingSiteFooter';
-import MarketingStickyCta from './components/marketing/MarketingStickyCta';
 import EarlyAccessModal from './components/marketing/EarlyAccessModal';
 import HeroSection from './components/marketing/sections/HeroSection';
 import StickyPhoneStory from './components/marketing/sections/StickyPhoneStory';
@@ -76,11 +75,7 @@ function App() {
         onEarlyAccessClick={waitlist.openEarlyAccess}
       />
 
-      <MarketingStickyCta
-        experience={experience}
-        onNavClick={onNavClick}
-        onEarlyAccessClick={waitlist.openEarlyAccess}
-      />
+
 
       <MarketingSiteFooter t={t} />
 
