@@ -79,10 +79,10 @@ export const siteCopy = {
       "origin": "Our story"
     },
     "hero": {
-      "eyebrow": "A private companion for emotional clarity",
+      "eyebrow": "A private companion for tangled moments",
       "title": "Miravelys",
-      "subtitle": "When one moment becomes a whole story, Miravelys helps you see what is real, what is felt, and what your mind added.",
-      "body": "A private companion for emotional clarity — calm enough to trust, precise enough to help you return to yourself.",
+      "subtitle": "When one simple moment becomes a whole story inside you, Miravelys helps you gently separate what happened, what you felt, what your body carried, and what your mind added.",
+      "body": "No pressure. No diagnosis. Just a private place to slow the moment down and return to yourself.",
       "primary": "Begin with one clear moment",
       "secondary": "See the privacy promise",
       "visualLabel": "Miravelys helps separate the moment, the emotion, the body reaction, the story, the belief, and the unknown."
@@ -126,35 +126,35 @@ export const siteCopy = {
       "legalNavAria": "Legal and support"
     },
     "what": {
-      "eyebrow": "The product idea",
-      "title": "A messy moment becomes clearer without the app pretending to know the absolute truth.",
+      "eyebrow": "What it is",
+      "title": "A private place where one honest line can become a little more room inside.",
       "paragraphs": [
-        "You do not need to arrive calm, poetic, or perfectly self-aware. You can open Miravelys with one rough sentence: “I feel weird,” “I think they hate me,” “I cannot sleep,” or “I know I am overreacting but it still feels real.” The app begins there, in normal human language, not in a worksheet voice.",
-        "Miravelys gently sorts the moment into pieces: facts, body signals, feelings, predictions, stories, beliefs, needs, and unknowns. It can be soft when you need support, direct when you want clearer questions, or more challenging when you choose to test a repeating illusion. The important part is that you stay in charge. You can correct it, soften it, stop it, or tell it “not me.”",
-        "Over time, the app becomes less generic. It notices what actually helps you calm down, sleep better, challenge a belief, or take a smaller true step. It does not build a dramatic identity about you. It builds a humble, evidence-backed map that you can edit at any time."
+        "Miravelys begins with the smallest possible entry: one rough sentence about what touched, tightened, or kept returning in you. You do not need to be calm, poetic, or fully understood. The app meets you in normal human language, not a worksheet voice.",
+        "It gently separates the moment into pieces: what happened, what you felt, what your body carried, what story your mind added, what belief might be underneath, and what is still unknown. You stay in charge. You can soften it, correct it, stop it, or say “not me.”",
+        "Over time, Miravelys notices what actually helps you calm down, sleep better, question a repeating thought, or take a smaller, truer step. It does not build an identity around you. It builds a humble, correctable map that you can edit at any time."
       ],
       "callout": "Miravelys is not trying to win an argument with your mind. It helps you slow the argument down until you can see which part is real, which part is protection, and which part simply needs rest."
     },
     "works": {
       "eyebrow": "How Miravelys works",
       "title": "One honest line becomes a calmer next step.",
-      "intro": "The experience is deliberately simple. You write what feels true, the app separates the pieces, and then it helps you choose whether you need calm, clarity, sleep, or a direct question.",
+      "intro": "When a cold look can feel like rejection, silence like proof, or a mistake like identity, Miravelys helps you slow the moment down. You write what feels true, the app separates the pieces, and then you choose whether you need calm, clarity, sleep, or a direct question.",
       "steps": [
         {
           "title": "Home understands the moment",
-          "body": "Home becomes an intelligent front door. It asks what feels true now, notices whether you may be activated, tired, looping, or ready to inquire, and guides you toward the support that fits the moment."
+          "body": "Home asks what feels true now and notices whether you may need grounding, sleep, a gentle question, or a clearer reflection."
         },
         {
-          "title": "Truth Line separates the room",
-          "body": "Get Clear turns one messy line into clearer pieces: what happened, what you felt, what the mind added, what might be a belief, and what remains unknown."
+          "title": "Truth Line separates the layers",
+          "body": "Get Clear turns one messy line into clearer pieces: event, emotion, body signal, story, possible belief, and unknown."
         },
         {
           "title": "Calm Now protects the body",
-          "body": "When your nervous system is too loud, Miravelys does not force deep analysis. It helps you breathe, soften, ground, or step away before asking harder questions."
+          "body": "When your nervous system is too loud, Miravelys does not force deep analysis. It helps you breathe, soften, ground, or step away first."
         },
         {
           "title": "Sleep Now knows when to stop",
-          "body": "At night, the app becomes quieter. It avoids heavy inquiry, offers sleep-safe reflection, and gives soft sound, release, and tomorrow-friendly prompts."
+          "body": "At night, the app becomes quieter. It avoids heavy inquiry, offers sleep-safe reflection, and gives soft sound and tomorrow-friendly prompts."
         },
         {
           "title": "Weekly Mirror shows evidence",
@@ -267,7 +267,7 @@ export const siteCopy = {
     "explanation": {
       "eyebrow": "A fuller explanation",
       "title": "What Miravelys is, why it exists, and what it is here to do.",
-      "intro": "Miravelys is built for the ordinary moments that become emotionally noisy: a sentence that keeps replaying, a message that suddenly feels personal, a tired evening when one thought grows teeth, or a quiet fear that sounds very convincing at 2 a.m. The purpose of the app is not to make you positive, fix you, or tell you who you are. Its purpose is to help you return to reality with more tenderness, more precision, and more choice.",
+      "intro": "Miravelys is built for the ordinary moments that become emotionally noisy: a sentence that keeps replaying, a message that suddenly feels personal, a tired evening when one thought grows teeth, or a quiet fear that sounds very convincing at 2 a.m. The purpose of the app is not to make you positive, change you, or tell you who you are. Its purpose is to help you return to reality with more tenderness, more precision, and more choice.",
       "blocks": [
         {
           "title": "The purpose of the app",
@@ -367,11 +367,11 @@ export const siteCopy = {
       },
       "finalExplanation": {
         "eyebrow": "The intention of Miravelys",
-        "title": "Not about fixing who you are. About creating a softer, clearer place to listen to yourself.",
+        "title": "Not about changing who you are. About creating a softer, clearer place to listen to yourself.",
         "paragraphs": [
-          "Miravelys is not about fixing who you are.",
+          "Miravelys is not about changing who you are.",
           "It is about creating a softer, clearer place where you can listen to yourself, calm your body, notice your inner patterns, and come closer to the truth of what is really happening inside.",
-          "Step by step, the user can begin to see what has been repeated, what has been protected, what has been misunderstood, and what may no longer belong to them."
+          "Step by step, you can begin to see what has been repeated, what has been protected, what has been misunderstood, and what may no longer belong to you."
         ],
         "cta": "Begin with one clear moment"
       }
@@ -402,10 +402,10 @@ export const siteCopy = {
       "origin": "Наша история"
     },
     "hero": {
-      "eyebrow": "Личный спутник для эмоциональной ясности",
+      "eyebrow": "Личный спутник для запутанных моментов",
       "title": "Miravelys",
-      "subtitle": "Когда один момент становится целой историей, Miravelys помогает увидеть, что реально, что чувствуется и что добавил ум.",
-      "body": "Частный спутник для эмоциональной ясности — достаточно спокойный, чтобы доверять, достаточно точный, чтобы вернуться к себе.",
+      "subtitle": "Когда один простой момент становится внутри тебя целой историей, Miravelys мягко помогает разделить то, что произошло, что ты почувствовал, что пронесло тело и что добавил ум.",
+      "body": "Без давления. Без диагнозов. Просто личное место, чтобы замедлить момент и вернуться к себе.",
       "primary": "Начни с одного ясного момента",
       "secondary": "О приватности",
       "visualLabel": "Miravelys помогает отделить момент, эмоцию, реакцию тела, историю, убеждение и неизвестное."
@@ -449,27 +449,27 @@ export const siteCopy = {
       "legalNavAria": "Правовая информация и поддержка"
     },
     "what": {
-      "eyebrow": "Идея продукта",
-      "title": "Спутанный момент становится яснее, но приложение не делает вид, что знает абсолютную правду.",
+      "eyebrow": "Что это",
+      "title": "Личное место, где одна честная строка может стать чуть большим пространством внутри.",
       "paragraphs": [
-        "Не нужно приходить спокойным, красивым в формулировках или идеально осознанным. Можно открыть Miravelys с обычной фразой: «мне странно», «кажется, они меня ненавидят», «я не могу уснуть» или «я понимаю, что перегибаю, но это всё равно ощущается реальным». Приложение начинает именно отсюда — человеческим языком, а не голосом анкеты.",
-        "Miravelys мягко разбирает момент на части: факты, сигналы тела, чувства, прогнозы, истории, убеждения, потребности и неизвестное. Оно может быть очень поддерживающим, более прямым или заметно жёстче — если ты сам выбираешь проверить повторяющуюся иллюзию. Главное: управление остаётся у тебя. Можно исправить, смягчить, остановить или сказать: «это не про меня».",
-        "Со временем приложение становится менее общим. Оно замечает, что именно помогает тебе успокоиться, лучше заснуть, проверить убеждение или сделать маленький честный шаг. Оно не строит драматичную личность вокруг тебя. Оно строит скромную карту на основе доказательств, которую можно редактировать."
+        "Miravelys начинается с самой маленькой возможной записи: одной простой фразы о том, что задело, сжало или снова и снова возвращалось внутри. Не нужно приходить спокойным, красиво говорящим или идеально осознанным. Приложение встречает тебя человеческим языком, а не голосом анкеты.",
+        "Оно мягко разделяет момент на части: что произошло, что ты почувствовал, что пронесло тело, какую историю добавил ум, какое убеждение может быть внизу и что пока неизвестно. Управление остаётся у тебя. Можно смягчить, исправить, остановить или сказать: «это не про меня».",
+        "Со временем Miravelys замечает, что именно помогает тебе успокоиться, лучше заснуть, проверить повторяющуюся мысль или сделать маленький более честный шаг. Оно не строит вокруг тебя личность. Оно строит скромную, исправляемую карту, которую можно редактировать в любое время."
       ],
       "callout": "Miravelys не пытается победить твой ум в споре. Оно помогает замедлить этот спор, чтобы стало видно, где реальность, где защита, а где просто нужна пауза."
     },
     "works": {
       "eyebrow": "Как работает Miravelys",
       "title": "Одна честная строка становится более спокойным следующим шагом.",
-      "intro": "Опыт намеренно простой. Ты пишешь то, что сейчас кажется правдой, приложение разделяет части момента, а затем помогает понять: нужно ли телу успокоение, ясность, сон или более прямой вопрос.",
+      "intro": "Когда холодный взгляд кажется отвержением, молчание — доказательством, а ошибка — частью личности, Miravelys помогает замедлить момент. Ты пишешь то, что кажется правдой, приложение разделяет части, а потом ты выбираешь: нужен ли покой, ясность, сон или прямой вопрос.",
       "steps": [
         {
           "title": "Home понимает момент",
-          "body": "Home становится умным входом. Он спрашивает, что сейчас кажется правдой, замечает напряжение, усталость, зацикленность или готовность к исследованию и ведёт к подходящей поддержке."
+          "body": "Home спрашивает, что сейчас кажется правдой, и замечает, нужно ли сначала заземление, сон, мягкий вопрос или более ясное отражение."
         },
         {
-          "title": "Truth Line раскладывает всё по местам",
-          "body": "Get Clear превращает одну спутанную строку в более ясные части: что произошло, что ты почувствовал, что добавил ум, где может быть убеждение и что пока неизвестно."
+          "title": "Truth Line раскладывает по слоям",
+          "body": "Get Clear превращает одну спутанную строку в более ясные части: событие, эмоцию, сигнал тела, историю, возможное убеждение и неизвестное."
         },
         {
           "title": "Calm Now защищает тело",
@@ -590,7 +590,7 @@ export const siteCopy = {
     "explanation": {
       "eyebrow": "Подробное объяснение",
       "title": "Что такое Miravelys, зачем он существует и какую роль он должен выполнять.",
-      "intro": "Miravelys создан для обычных моментов, которые внутри становятся слишком громкими: фраза, которая снова и снова прокручивается в голове, сообщение, которое вдруг кажется личным, уставший вечер, когда одна мысль становится страшнее, или тихий страх, который в два часа ночи звучит очень убедительно. Цель приложения не в том, чтобы заставить человека быть позитивным, исправить его или сказать, кто он такой. Его цель — помочь вернуться к реальности мягче, точнее и с большим выбором.",
+      "intro": "Miravelys создан для обычных моментов, которые внутри становятся слишком громкими: фраза, которая снова и снова прокручивается в голове, сообщение, которое вдруг кажется личным, уставший вечер, когда одна мысль становится страшнее, или тихий страх, который в два часа ночи звучит очень убедительно. Цель приложения не в том, чтобы заставить человека быть позитивным, изменить его или сказать, кто он такой. Его цель — помочь вернуться к реальности мягче, точнее и с большим выбором.",
       "blocks": [
         {
           "title": "Цель приложения",
@@ -690,11 +690,11 @@ export const siteCopy = {
       },
       "finalExplanation": {
         "eyebrow": "Намерение Miravelys",
-        "title": "Не об «исправлении» себя. О создании более мягкого и ясного места, чтобы слышать себя.",
+        "title": "Не об изменении себя. О создании более мягкого и ясного места, чтобы слышать себя.",
         "paragraphs": [
-          "Miravelys не о том, чтобы «исправить» себя.",
-          "Оно о том, чтобы создать более мягкое и ясное место, где можно услышать себя, успокоить тело, заметить внутренние patterns и приблизиться к тому, что действительно происходит внутри.",
-          "Шаг за шагом пользователь может начать видеть, что повторялось, что его защищало, что было понято неправильно и что, возможно, больше ему не принадлежит."
+          "Miravelys не о том, чтобы изменить себя.",
+          "Оно о том, чтобы создать более мягкое и ясное место, где можно услышать себя, успокоить тело, заметить внутренние паттерны и приблизиться к тому, что действительно происходит внутри.",
+          "Шаг за шагом можно начать видеть, что повторялось, что защищало, что было понято неправильно и что, возможно, больше не принадлежит тебе."
         ],
         "cta": "Начать с одного ясного момента"
       }
@@ -725,10 +725,10 @@ export const siteCopy = {
       "origin": "Povestea noastră"
     },
     "hero": {
-      "eyebrow": "Un companion privat pentru claritate emoțională",
+      "eyebrow": "Un companion privat pentru momente încâlcite",
       "title": "Miravelys",
-      "subtitle": "Când un moment devine o poveste întreagă, Miravelys te ajută să vezi ce e real, ce se simte și ce a adăugat mintea.",
-      "body": "Un companion privat pentru claritate emoțională — suficient de calm pentru încredere, suficient de precis pentru a te întoarce la tine.",
+      "subtitle": "Când un moment simplu devine în tine o poveste întreagă, Miravelys te ajută blând să separi ce s-a întâmplat, ce ai simțit, ce a dus corpul și ce a adăugat mintea.",
+      "body": "Fără presiune. Fără diagnostic. Doar un loc privat să încetinești momentul și să revii la tine.",
       "primary": "Începe cu un moment clar",
       "secondary": "Vezi promisiunea de confidențialitate",
       "visualLabel": "Miravelys te ajută să separi momentul, emoția, reacția corpului, povestea, credința și necunoscutul."
@@ -772,27 +772,27 @@ export const siteCopy = {
       "legalNavAria": "Legal și suport"
     },
     "what": {
-      "eyebrow": "Ideea produsului",
-      "title": "Un moment încurcat devine mai clar fără ca aplicația să pretindă că știe adevărul absolut.",
+      "eyebrow": "Ce este",
+      "title": "Un loc privat unde o propoziție sinceră poate deveni puțin mai mult spațiu în interior.",
       "paragraphs": [
-        "Nu trebuie să vii calm, poetic sau perfect conștient de tine. Poți deschide Miravelys cu o propoziție simplă: „mă simt ciudat”, „cred că mă urăsc”, „nu pot dormi” sau „știu că exagerez, dar tot pare real”. Aplicația începe exact de acolo, în limbaj omenesc, nu ca un formular rece.",
-        "Miravelys sortează ușor momentul în părți: fapte, semnale ale corpului, sentimente, predicții, povești, credințe, nevoi și necunoscute. Poate fi blând când ai nevoie de sprijin, direct când vrei întrebări mai clare sau mai provocator când alegi să testezi o iluzie care se repetă. Controlul rămâne la tine.",
-        "Cu timpul, aplicația devine mai puțin generică. Observă ce te ajută pe tine să te liniștești, să dormi mai bine, să verifici o credință sau să faci un pas mic și adevărat. Nu construiește o identitate dramatică despre tine, ci o hartă modestă, bazată pe dovezi, pe care o poți edita."
+        "Miravelys începe cu cea mai mică intrare posibilă: o propoziție simplă despre ce te-a atins, te-a strâns sau a tot revenit în tine. Nu trebuie să vii calm, poetic sau perfect conștient. Aplicația te întâlnește în limbaj uman, nu cu vocea unui formular.",
+        "Sortează ușor momentul în părți: ce s-a întâmplat, ce ai simțit, ce a dus corpul, ce poveste a adăugat mintea, ce credință ar putea fi dedesubt și ce rămâne necunoscut. Controlul rămâne la tine. Poți să înmoi, să corectezi, să oprești sau să spui „nu sunt eu”.",
+        "Cu timpul, Miravelys observă ce te ajută cu adevărat să te liniștești, să dormi mai bine, să pui la îndoială un gând care se repetă sau să faci un pas mic și mai adevărat. Nu construiește o identitate în jurul tău, ci o hartă modestă, corectabilă, pe care o poți edita oricând."
       ],
       "callout": "Miravelys nu încearcă să câștige o ceartă cu mintea ta. Ajută cearta să încetinească până poți vedea ce este real, ce este protecție și ce are nevoie doar de odihnă."
     },
     "works": {
       "eyebrow": "Cum funcționează Miravelys",
       "title": "O propoziție sinceră devine un pas următor mai calm.",
-      "intro": "Experiența rămâne intenționat simplă. Scrii ce pare adevărat acum, aplicația separă părțile momentului, apoi te ajută să alegi: ai nevoie de calm, claritate, somn sau o întrebare mai directă.",
+      "intro": "Când o privire rece poate părea respingere, tăcerea dovadă, iar o greșeală identitate, Miravelys te ajută să încetinești momentul. Scrii ce se simte adevărat, aplicația separă piesele, apoi alegi dacă ai nevoie de calm, claritate, somn sau o întrebare directă.",
       "steps": [
         {
           "title": "Home înțelege momentul",
-          "body": "Home devine o intrare inteligentă. Întreabă ce pare adevărat acum, observă dacă ești activat, obosit, prins în buclă sau pregătit pentru întrebări și te duce spre sprijinul potrivit."
+          "body": "Home întreabă ce pare adevărat acum și observă dacă ai nevoie mai întâi de ancorare, somn, o întrebare blândă sau o reflecție mai clară."
         },
         {
-          "title": "Truth Line separă lucrurile",
-          "body": "Get Clear transformă o linie încurcată în bucăți mai clare: ce s-a întâmplat, ce ai simțit, ce a adăugat mintea, unde poate fi o credință și ce rămâne necunoscut."
+          "title": "Truth Line separă straturile",
+          "body": "Get Clear transformă o linie încurcată în bucăți mai clare: eveniment, emoție, semnal al corpului, poveste, credință posibilă și necunoscut."
         },
         {
           "title": "Calm Now protejează corpul",
@@ -913,7 +913,7 @@ export const siteCopy = {
     "explanation": {
       "eyebrow": "Explicație completă",
       "title": "Ce este Miravelys, de ce există și ce rol are aplicația.",
-      "intro": "Miravelys este creat pentru momentele obișnuite care devin gălăgioase în interior: o propoziție care se repetă în minte, un mesaj care pare brusc personal, o seară obosită în care un gând capătă greutate sau o teamă liniștită care pare foarte convingătoare noaptea. Scopul aplicației nu este să te facă pozitiv cu forța, să te repare sau să îți spună cine ești. Scopul ei este să te ajute să te întorci la realitate cu mai multă blândețe, precizie și libertate de alegere.",
+      "intro": "Miravelys este creat pentru momentele obișnuite care devin gălăgioase în interior: o propoziție care se repetă în minte, un mesaj care pare brusc personal, o seară obosită în care un gând capătă greutate sau o teamă liniștită care pare foarte convingătoare noaptea. Scopul aplicației nu este să te facă pozitiv cu forța, să te schimbe sau să îți spună cine ești. Scopul ei este să te ajute să te întorci la realitate cu mai multă blândețe, precizie și libertate de alegere.",
       "blocks": [
         {
           "title": "Scopul aplicației",
@@ -1013,11 +1013,11 @@ export const siteCopy = {
       },
       "finalExplanation": {
         "eyebrow": "Intenția Miravelys",
-        "title": "Nu despre a repara cine ești. Despre a crea un loc mai blând și mai clar să te asculți.",
+        "title": "Nu despre a schimba cine ești. Despre a crea un loc mai blând și mai clar să te asculți.",
         "paragraphs": [
-          "Miravelys nu este despre a repara cine ești.",
+          "Miravelys nu este despre a schimba cine ești.",
           "Este despre a crea un loc mai blând și mai clar unde poți să te asculți, să îți calmezi corpul, să observi tiparele interioare și să te apropii de adevărul a ceea ce se întâmplă în tine.",
-          "Pas cu pas, utilizatorul poate începe să vadă ce s-a repetat, ce l-a protejat, ce a fost înțeles greșit și ce poate nu îi mai aparține."
+          "Pas cu pas, poți începe să vezi ce s-a repetat, ce te-a protejat, ce a fost înțeles greșit și ce poate nu îți mai aparține."
         ],
         "cta": "Începe cu un moment mai clar"
       }
@@ -1048,10 +1048,10 @@ export const siteCopy = {
       "origin": "Notre histoire"
     },
     "hero": {
-      "eyebrow": "Un compagnon privé pour la clarté émotionnelle",
+      "eyebrow": "Un compagnon privé pour les moments emmêlés",
       "title": "Miravelys",
-      "subtitle": "Quand un moment devient toute une histoire, Miravelys t’aide à voir ce qui est réel, ce qui est ressenti et ce que l’esprit a ajouté.",
-      "body": "Un compagnon privé pour la clarté émotionnelle — assez calme pour inspirer confiance, assez précis pour te ramener à toi.",
+      "subtitle": "Quand un moment simple devient toute une histoire en vous, Miravelys vous aide doucement à séparer ce qui s’est passé, ce que vous avez ressenti, ce que le corps a porté et ce que l’esprit a ajouté.",
+      "body": "Pas de pression. Pas de diagnostic. Juste un lieu privé pour ralentir le moment et revenir à vous.",
       "primary": "Commence par un moment clair",
       "secondary": "Voir la promesse de confidentialité",
       "visualLabel": "Miravelys aide à distinguer le moment, l’émotion, la réaction du corps, l’histoire, la croyance et l’inconnu."
@@ -1095,27 +1095,27 @@ export const siteCopy = {
       "legalNavAria": "Mentions légales et support"
     },
     "what": {
-      "eyebrow": "L’idée du produit",
-      "title": "Un moment confus devient plus clair sans que l’app prétende connaître la vérité absolue.",
+      "eyebrow": "Ce que c’est",
+      "title": "Un lieu privé où une ligne honnête peut devenir un peu plus d’espace intérieur.",
       "paragraphs": [
-        "Tu n’as pas besoin d’arriver calme, poétique ou parfaitement conscient. Tu peux ouvrir Miravelys avec une phrase brute : « je me sens bizarre », « je crois qu’ils me détestent », « je n’arrive pas à dormir » ou « je sais que j’exagère, mais ça paraît réel ». L’app commence là, en langage humain.",
-        "Miravelys trie doucement le moment : faits, signaux du corps, ressentis, prédictions, histoires, croyances, besoins et inconnus. Il peut être tendre, direct ou plus confrontant si tu choisis de tester une illusion répétitive. Le contrôle reste à toi.",
-        "Avec le temps, l’app devient moins générique. Elle remarque ce qui t’aide vraiment à te calmer, dormir, remettre une croyance en question ou faire un pas vrai. Elle ne construit pas une identité dramatique : elle crée une carte humble, fondée sur des indices, que tu peux corriger."
+        "Miravelys commence par la plus petite entrée possible : une ligne brute sur ce qui vous a touché, serré ou qui est revenu. Vous n’avez pas besoin d’arriver calme, poétique ou parfaitement conscient. L’app vous rencontre en langage humain, pas en voix de formulaire.",
+        "Il trie doucement le moment : ce qui s’est passé, ce que vous avez ressenti, ce que le corps a porté, quelle histoire l’esprit a ajoutée, quelle croyance pourrait être en dessous et ce qui est encore inconnu. Le contrôle reste à vous. Vous pouvez adoucir, corriger, arrêter ou dire « pas moi ».",
+        "Avec le temps, Miravelys remarque ce qui vous aide vraiment à vous calmer, à dormir, à questionner une pensée qui revient ou à faire un pas plus vrai. Il ne construit pas une identité autour de vous. Il crée une carte humble et corrigeable que vous pouvez éditer."
       ],
-      "callout": "Miravelys ne cherche pas à gagner un débat contre ton esprit. L’app ralentit le débat jusqu’à ce que tu distingues ce qui est réel, ce qui protège, et ce qui a simplement besoin de repos."
+      "callout": "Miravelys ne cherche pas à gagner un débat contre votre esprit. Il ralentit le débat jusqu’à ce que vous distinguiez ce qui est réel, ce qui protège, et ce qui a simplement besoin de repos."
     },
     "works": {
       "eyebrow": "Comment fonctionne Miravelys",
       "title": "Une ligne honnête devient une prochaine étape plus calme.",
-      "intro": "L’expérience reste volontairement simple. Tu écris ce qui semble vrai maintenant, l’app sépare les morceaux du moment, puis t'aide à choisir entre apaisement, clarté, sommeil ou question plus directe.",
+      "intro": "Quand un regard froid peut sembler un rejet, le silence une preuve, ou une erreur une identité, Miravelys vous aide à ralentir le moment. Vous écrivez ce qui semble vrai, l’application sépare les pièces, puis vous choisissez si vous avez besoin de calme, de clarté, de sommeil ou d’une question directe.",
       "steps": [
         {
           "title": "Home comprend le moment",
-          "body": "Home devient une porte d’entrée intelligente. Il demande ce qui semble vrai maintenant et remarque si tu es activé, fatigué, en boucle ou prêt à explorer."
+          "body": "Home demande ce qui semble vrai maintenant et remarque si vous avez besoin d’abord d’ancrage, de sommeil, d’une question douce ou d’un reflet plus clair."
         },
         {
-          "title": "Truth Line range la pièce",
-          "body": "Get Clear transforme une phrase confuse en parties plus claires : faits, ressentis, ajouts de l’esprit, croyance possible et inconnu."
+          "title": "Truth Line sépare les couches",
+          "body": "Get Clear transforme une phrase confuse en parties plus claires : événement, émotion, signal du corps, histoire, croyance possible et inconnu."
         },
         {
           "title": "Calm Now protège le corps",
@@ -1236,7 +1236,7 @@ export const siteCopy = {
     "explanation": {
       "eyebrow": "Explication complète",
       "title": "Ce qu’est Miravelys, pourquoi l’app existe et ce qu’elle vient soutenir.",
-      "intro": "Miravelys est pensé pour les moments ordinaires qui deviennent bruyants à l’intérieur : une phrase qui tourne en boucle, un message qui paraît soudain personnel, un soir de fatigue où une pensée prend trop de place, ou une peur calme qui semble très convaincante au milieu de la nuit. L’objectif de l’app n’est pas de te rendre positif à tout prix, de te réparer, ni de te dire qui tu es. Son but est de t’aider à revenir vers la réalité avec plus de douceur, de précision et de choix.",
+      "intro": "Miravelys est pensé pour les moments ordinaires qui deviennent bruyants à l’intérieur : une phrase qui tourne en boucle, un message qui paraît soudain personnel, un soir de fatigue où une pensée prend trop de place, ou une peur calme qui semble très convaincante au milieu de la nuit. L’objectif de l’app n’est pas de te rendre positif à tout prix, de te changer, ni de te dire qui tu es. Son but est de t’aider à revenir vers la réalité avec plus de douceur, de précision et de choix.",
       "blocks": [
         {
           "title": "Le but de l’app",
@@ -1336,11 +1336,11 @@ export const siteCopy = {
       },
       "finalExplanation": {
         "eyebrow": "L'intention de Miravelys",
-        "title": "Pas pour réparer qui vous êtes. Pour créer un espace plus doux, plus clair, où vous écouter.",
+        "title": "Pas pour changer qui vous êtes. Pour créer un espace plus doux, plus clair, où vous écouter.",
         "paragraphs": [
-          "Miravelys ne cherche pas à réparer qui vous êtes.",
+          "Miravelys ne cherche pas à changer qui vous êtes.",
           "Il s'agit de créer un espace plus doux et plus clair où vous pouvez vous écouter, calmer votre corps, observer vos schémas intérieurs et vous rapprocher de ce qui se passe réellement en vous.",
-          "Pas à pas, l'utilisateur peut commencer à voir ce qui se répète, ce qui a servi à le protéger, ce qui a pu être mal compris et ce qui ne lui appartient peut-être plus."
+          "Pas à pas, vous pouvez commencer à voir ce qui se répète, ce qui a servi à vous protéger, ce qui a pu être mal compris et ce qui ne vous appartient peut-être plus."
         ],
         "cta": "Commencer par un moment plus clair"
       }
@@ -1371,10 +1371,10 @@ export const siteCopy = {
       "origin": "हमारी कहानी"
     },
     "hero": {
-      "eyebrow": "भावनात्मक स्पष्टता के लिए निजी साथी",
+      "eyebrow": "उलझे हुए पलों के लिए निजी साथी",
       "title": "Miravelys",
-      "subtitle": "जब एक पल पूरी कहानी बन जाता है, Miravelys आपको दिखाता है क्या वास्तविक है, क्या महसूस हो रहा है और मन ने क्या जोड़ा।",
-      "body": "भावनात्मक स्पष्टता के लिए निजी साथी — भरोसे के लिए शांत, खुद तक लौटने के लिए सटीक।",
+      "subtitle": "जब एक साधारण पल आपके भीतर पूरी कहानी बन जाता है, Miravelys धीरे से अलग देखने में मदद करता है कि क्या हुआ, क्या महसूस हुआ, शरीर ने क्या सहा और मन ने क्या जोड़ा।",
+      "body": "कोई दबाव नहीं। कोई निदान नहीं। बस एक निजी जगह जहाँ पल को धीमा किया जा सके और खुद तक लौटा जा सके।",
       "primary": "एक स्पष्ट पल से शुरू करें",
       "secondary": "गोपनीयता वादा देखें",
       "visualLabel": "Miravelys पल, भावना, शरीर की प्रतिक्रिया, कहानी, विश्वास और अनजाने हिस्से को अलग देखने में मदद करता है।"
@@ -1418,27 +1418,27 @@ export const siteCopy = {
       "legalNavAria": "कानूनी जानकारी और सहायता"
     },
     "what": {
-      "eyebrow": "उत्पाद का विचार",
-      "title": "एक उलझा पल साफ़ होता है, बिना यह दिखावा किए कि ऐप अंतिम सच जानता है।",
+      "eyebrow": "यह क्या है",
+      "title": "एक निजी जगह जहाँ एक ईमानदार पंक्ति अंदर थोड़ी और जगह बना सकती है।",
       "paragraphs": [
-        "आपको शांत, सुंदर शब्दों वाला या पूरी तरह self-aware होकर आने की ज़रूरत नहीं है। आप Miravelys को एक कच्चे वाक्य से खोल सकते हैं: “मुझे अजीब लग रहा है,” “मुझे लगता है वे मुझे नापसंद करते हैं,” “मुझे नींद नहीं आ रही,” या “शायद मैं ज़्यादा सोच रहा हूँ, पर यह सच जैसा लगता है।” ऐप यहीं से शुरू करता है।",
-        "Miravelys पल को हिस्सों में बाँटता है: तथ्य, शरीर के संकेत, भावनाएँ, अनुमान, कहानियाँ, विश्वास, ज़रूरतें और अज्ञात। यह सहायक, सीधा या आपके चुने हुए समय पर अधिक चुनौतीपूर्ण हो सकता है। नियंत्रण आपके पास रहता है।",
-        "समय के साथ ऐप कम सामान्य और ज़्यादा व्यक्तिगत बनता है। यह सीखता है कि आपको क्या सच में शांत करता है, सोने में मदद करता है, किसी विश्वास को जाँचता है या एक छोटा सच्चा कदम देता है। यह आपकी नाटकीय पहचान नहीं बनाता; यह संपादन योग्य, प्रमाण-आधारित नक्शा बनाता है।"
+        "Miravelys सबसे छोटी संभव एंट्री से शुरू होता है: एक कच्चा वाक्य जो बताए कि क्या छू गया, कस गया, या बार-बार लौट आया। आपको शांत, सुंदर शब्दों वाला या पूरी तरह जागरूक होकर आने की ज़रूरत नहीं है। ऐप आपसे इंसानी भाषा में मिलता है, किसी फ़ॉर्म की भाषा में नहीं।",
+        "यह पल को धीरे-धीरे हिस्सों में बाँटता है: क्या हुआ, क्या महसूस हुआ, शरीर ने क्या सहा, मन ने कौन-सी कहानी जोड़ी, कौन-सा विश्वास नीचे हो सकता है, और क्या अभी भी अज्ञात है। नियंत्रण आपके पास रहता है। आप इसे नरम, सही, रोक सकते हैं या “यह मैं नहीं” कह सकते हैं।",
+        "समय के साथ Miravelys सीखता है कि आपको वास्तव में क्या शांत करता है, नींद में मदद करता है, दोहराते विचार पर सवाल उठाता है, या एक छोटा सच्चा कदम दिलाता है। यह आपकी पहचान नहीं बनाता; यह एक विनम्र, सुधार योग्य नक्शा बनाता है जिसे आप कभी भी बदल सकते हैं।"
       ],
       "callout": "Miravelys आपके मन से बहस जीतने की कोशिश नहीं करता। यह बहस को धीमा करता है ताकि आप देख सकें कि क्या वास्तविक है, क्या सुरक्षा है, और किसे सिर्फ आराम चाहिए।"
     },
     "works": {
       "eyebrow": "Miravelys कैसे काम करता है",
       "title": "एक ईमानदार पंक्ति शांत अगला कदम बन जाती है।",
-      "intro": "आप लिखते हैं कि अभी क्या सच लगता है, ऐप उस पल को हिस्सों में अलग करता है, फिर बताता है कि आपको शांति, स्पष्टता, नींद या सीधा सवाल चाहिए।",
+      "intro": "जब ठंडी नज़र अस्वीकृति, खामोशी सबूत, या गलती identity लग सकती है, Miravelys पल को धीमा करने में मदद करता है। आप जो सच लगता है उसे लिखते हैं, app परतें अलग करता है, फिर चुनते हैं कि calm, clarity, sleep या direct question चाहिए।",
       "steps": [
         {
           "title": "Home पल को समझता है",
-          "body": "Home एक समझदार प्रवेश-द्वार बनता है। यह पूछता है अभी क्या सच लगता है, देखता है आप सक्रिय, थके, लूप में या inquiry के लिए तैयार हो सकते हैं, और पल के अनुसार सही सहारा सुझाता है।"
+          "body": "Home पूछता है अभी क्या सच लगता है, और देखता है कि क्या आपको पहले grounding, नींद, एक कोमल सवाल या एक स्पष्ट प्रतिबिंब चाहिए।"
         },
         {
-          "title": "Truth Line चीज़ों को अलग करता है",
-          "body": "Get Clear एक messy line को facts, feelings, mind-added story, possible belief और unknown में अलग करता है।"
+          "title": "Truth Line परतों को अलग करता है",
+          "body": "Get Clear एक messy line को घटना, भाव, शरीर के संकेत, कहानी, संभावित विश्वास और अज्ञात में अलग करता है।"
         },
         {
           "title": "Calm Now शरीर की रक्षा करता है",
@@ -1559,7 +1559,7 @@ export const siteCopy = {
     "explanation": {
       "eyebrow": "पूरी व्याख्या",
       "title": "Miravelys क्या है, यह क्यों मौजूद है, और इसका उद्देश्य क्या है।",
-      "intro": "Miravelys उन सामान्य पलों के लिए बनाया गया है जो भीतर बहुत शोर करने लगते हैं: कोई वाक्य जो बार-बार मन में घूमता है, कोई संदेश जो अचानक निजी लगने लगता है, थकी हुई शाम जब एक विचार बहुत भारी हो जाता है, या रात में शांत डर जो बहुत सच लगता है। ऐप का उद्देश्य आपको जबरन सकारात्मक बनाना, आपको ठीक करना, या यह बताना नहीं है कि आप कौन हैं। इसका उद्देश्य है आपको वास्तविकता की ओर अधिक नरमी, अधिक सटीकता और अधिक चुनाव के साथ लौटने में मदद करना।",
+      "intro": "Miravelys उन सामान्य पलों के लिए बनाया गया है जो भीतर बहुत शोर करने लगते हैं: कोई वाक्य जो बार-बार मन में घूमता है, कोई संदेश जो अचानक निजी लगने लगता है, थकी हुई शाम जब एक विचार बहुत भारी हो जाता है, या रात में शांत डर जो बहुत सच लगता है। ऐप का उद्देश्य आपको जबरन सकारात्मक बनाना, आपको बदलना, या यह बताना नहीं है कि आप कौन हैं। इसका उद्देश्य है आपको वास्तविकता की ओर अधिक नरमी, अधिक सटीकता और अधिक चुनाव के साथ लौटने में मदद करना।",
       "blocks": [
         {
           "title": "ऐप का उद्देश्य",
@@ -1659,11 +1659,11 @@ export const siteCopy = {
       },
       "finalExplanation": {
         "eyebrow": "Miravelys का उद्देश्य",
-        "title": "तुम्हें ठीक करने के बारे में नहीं। एक नरम, साफ़ जगह बनाने के बारे में जहाँ तुम खुद को सुन सको।",
+        "title": "तुम्हें बदलने के बारे में नहीं। एक नरम, साफ़ जगह बनाने के बारे में जहाँ तुम खुद को सुन सको।",
         "paragraphs": [
-          "Miravelys तुम्हें ठीक करने के बारे में नहीं है।",
-          "यह एक नरम और साफ़ जगह बनाने के बारे में है, जहाँ तुम खुद को सुन सको, शरीर शांत कर सको, inner patterns notice कर सको, और अपने अंदर सच में क्या हो रहा है उसके करीब आ सको।",
-          "धीरे-धीरे, उपयोगकर्ता देखना शुरू कर सकता है कि क्या बार-बार दोहराया गया, क्या उसे बचा रहा था, क्या गलत समझा गया, और क्या शायद अब उसका हिस्सा नहीं रहना चाहिए।"
+          "Miravelys तुम्हें बदलने के बारे में नहीं है।",
+          "यह एक नरम और साफ़ जगह बनाने के बारे में है, जहाँ तुम खुद को सुन सको, शरीर शांत कर सको, भीतरी पैटर्न देख सको, और अपने अंदर सच में क्या हो रहा है उसके करीब आ सको।",
+          "धीरे-धीरे, तुम देखना शुरू कर सकते हो कि क्या बार-बार दोहराया गया, क्या तुम्हें बचा रहा था, क्या गलत समझा गया, और क्या शायद अब तुम्हारा हिस्सा नहीं रहना चाहिए।"
         ],
         "cta": "एक साफ़ पल से शुरू करें"
       }
@@ -1694,10 +1694,10 @@ export const siteCopy = {
       "origin": "我们的故事"
     },
     "hero": {
-      "eyebrow": "用于情绪清晰的私人陪伴",
+      "eyebrow": "为纠结时刻而生的私密陪伴",
       "title": "Miravelys",
-      "subtitle": "当一个时刻变成一整段故事，Miravelys 帮你看清什么是真实的、什么是感受、什么是头脑添加的。",
-      "body": "情绪清晰的私人陪伴——足够平静以值得信任，足够精准以回到自己。",
+      "subtitle": "当一个简单的时刻在心里变成一整段故事，Miravelys 帮你温柔地分开：发生了什么、感受到什么、身体承载了什么、头脑添加了什么。",
+      "body": "没有压力。没有诊断。只是一个私密空间，让你把这一刻放慢，回到自己。",
       "primary": "从一个清晰的时刻开始",
       "secondary": "查看隐私承诺",
       "visualLabel": "Miravelys 帮你区分当下、情绪、身体反应、故事、信念与未知。"
@@ -1741,27 +1741,27 @@ export const siteCopy = {
       "legalNavAria": "法律信息与支持"
     },
     "what": {
-      "eyebrow": "产品理念",
-      "title": "混乱的时刻会变清晰，但应用不会假装知道绝对真相。",
+      "eyebrow": "它是什么",
+      "title": "一个私密空间，一句诚实的话，就能让内心多一点余地。",
       "paragraphs": [
-        "你不需要平静、会表达，或完全了解自己。你可以用一句很粗糙的话打开 Miravelys：“我感觉怪怪的”、“我觉得他们讨厌我”、“我睡不着”，或者“我知道我可能反应过度，但它还是像真的”。应用从这里开始，用人的语言，而不是表格的声音。",
-        "Miravelys 会轻轻把当下拆开：事实、身体信号、感受、预测、故事、信念、需求和未知。它可以很柔和，也可以更直接；当你选择时，它也可以更有挑战性地检查一个反复出现的幻象。控制权始终在你手里。",
-        "随着时间推移，应用会变得不那么泛泛而谈。它会学习什么真正帮你平静、睡得更好、检查信念或迈出一个更真实的小步。它不会给你制造戏剧化身份，而是建立一张谦逊、基于证据、可编辑的地图。"
+        "Miravelys 从最小可能的入口开始：一句粗糙的句子，写下什么触动了你、让你发紧、或反复出现。你不需要平静、会表达，或完全了解自己。应用用人的语言与你相遇，而不是表格的语气。",
+        "它会轻轻把当下拆开：发生了什么、感受到什么、身体承载了什么、头脑添加了什么故事、底下可能有什么信念、还有什么未知。控制权始终在你手里。你可以让它更柔和、纠正它、暂停它，或说“这不是我”。",
+        "随着时间推移，Miravelys 会留意什么真正帮你平静下来、睡得更好、质疑一个反复的念头、或迈出更真实的一小步。它不会围绕你建立一个身份，而是建立一张谦逊、可修正、可随时编辑的地图。"
       ],
       "callout": "Miravelys 不是要和你的大脑争输赢。它帮你把争论慢下来，直到你能看见哪一部分是真实，哪一部分是在保护你，哪一部分只是需要休息。"
     },
     "works": {
       "eyebrow": "Miravelys 如何运作",
       "title": "一句诚实的话，变成更平静的下一步。",
-      "intro": "你写下此刻感觉真实的内容，应用把事实、感受、故事和身体信号分开，然后帮助你选择：平静、看清、睡下，还是问一个更直接的问题。",
+      "intro": "当冷淡的眼神像拒绝、沉默像证据、错误像身份时，Miravelys 帮你放慢这个片刻。你写下此刻感觉真实的内容，应用分离层次，然后选择你需要的是平静、清晰、睡眠，还是一个直接的问题。",
       "steps": [
         {
           "title": "Home 理解此刻",
-          "body": "Home 成为智能入口。它询问现在什么像是真的，并观察你是被激活、疲惫、循环思考，还是准备好深入探询。"
+          "body": "Home 询问此刻什么像是真的，并观察你是需要先安定身体、入睡、一个温和的问题，还是一个更清晰的映照。"
         },
         {
-          "title": "Truth Line 整理房间",
-          "body": "Get Clear 把一句混乱的话拆成更清楚的部分：发生了什么、你感受到了什么、大脑添加了什么、可能的信念和仍未知的部分。"
+          "title": "Truth Line 分开层次",
+          "body": "Get Clear 把一句混乱的话拆成更清楚的部分：事件、情绪、身体信号、故事、可能的信念和未知。"
         },
         {
           "title": "Calm Now 保护身体",
@@ -1882,7 +1882,7 @@ export const siteCopy = {
     "explanation": {
       "eyebrow": "完整说明",
       "title": "Miravelys 是什么，为什么存在，以及它想帮助你做什么。",
-      "intro": "Miravelys 是为那些普通却在内心变得很吵的时刻而设计的：一句话反复在脑中回放，一条消息突然变得很私人，一个疲惫的夜晚让一个念头变得很重，或者凌晨两点某个安静的恐惧听起来特别真实。这个应用不是为了强迫你积极、修好你，或告诉你你是谁。它的目的，是帮助你以更温柔、更准确、更有选择的方式回到现实。",
+      "intro": "Miravelys 是为那些普通却在内心变得很吵的时刻而设计的：一句话反复在脑中回放，一条消息突然变得很私人，一个疲惫的夜晚让一个念头变得很重，或者凌晨两点某个安静的恐惧听起来特别真实。这个应用不是为了强迫你积极、改变你，或告诉你你是谁。它的目的，是帮助你以更温柔、更准确、更有选择的方式回到现实。",
       "blocks": [
         {
           "title": "应用的目的",
@@ -1956,10 +1956,10 @@ export const siteCopy = {
       "origin": "Unsere Geschichte"
     },
     "hero": {
-      "eyebrow": "Ein privater Begleiter für emotionale Klarheit",
+      "eyebrow": "Ein privater Begleiter für verworrene Momente",
       "title": "Miravelys",
-      "subtitle": "Wenn ein Moment zur ganzen Geschichte wird, hilft Miravelys dir zu sehen, was real ist, was gefühlt wird und was der Verstand hinzufügte.",
-      "body": "Ein privater Begleiter für emotionale Klarheit — ruhig genug zum Vertrauen, präzise genug, um zu dir zurückzukehren.",
+      "subtitle": "Wenn ein einfacher Moment in dir zur ganzen Geschichte wird, hilft Miravelys dir behutsam zu trennen: was passiert ist, was du gefühlt hast, was der Körper getragen hat und was der Verstand hinzugefügt hat.",
+      "body": "Kein Druck. Keine Diagnose. Nur ein privater Ort, um den Moment zu verlangsamen und zu dir zurückzukehren.",
       "primary": "Beginne mit einem klaren Moment",
       "secondary": "Privatsphäre ansehen",
       "visualLabel": "Miravelys hilft, den Moment, die Emotion, die Körperreaktion, die Geschichte, den Glaubenssatz und das Unbekannte zu unterscheiden."
@@ -2003,27 +2003,27 @@ export const siteCopy = {
       "legalNavAria": "Rechtliches und Support"
     },
     "what": {
-      "eyebrow": "Die Produktidee",
-      "title": "Ein chaotischer Moment wird klarer, ohne dass die App absolute Wahrheit behauptet.",
+      "eyebrow": "Was es ist",
+      "title": "Ein privater Ort, an dem eine ehrliche Zeile zu etwas mehr Raum nach innen werden kann.",
       "paragraphs": [
-        "Du musst nicht ruhig, poetisch oder perfekt selbstbewusst ankommen. Du kannst Miravelys mit einem rohen Satz öffnen: „Ich fühle mich komisch“, „Ich glaube, sie hassen mich“, „Ich kann nicht schlafen“ oder „Ich weiß, ich übertreibe, aber es fühlt sich echt an“. Die App beginnt genau dort — in menschlicher Sprache.",
-        "Miravelys sortiert den Moment: Fakten, Körpersignale, Gefühle, Vorhersagen, Geschichten, Überzeugungen, Bedürfnisse und Unbekanntes. Sie kann sanft, direkter oder auf Wunsch herausfordernder sein. Die Kontrolle bleibt bei dir.",
-        "Mit der Zeit wird die App weniger generisch. Sie erkennt, was dir wirklich hilft: ruhiger werden, besser schlafen, eine Überzeugung prüfen oder einen kleinen wahren Schritt gehen. Sie baut keine dramatische Identität, sondern eine bescheidene, evidenzbasierte Karte, die du bearbeiten kannst."
+        "Miravelys beginnt mit dem kleinstmöglichen Einstieg: ein roher Satz darüber, was dich berührt, verkrampft oder immer wieder zurückgebracht hat. Du musst nicht ruhig, poetisch oder perfekt selbstbewusst ankommen. Die App trifft dich in menschlicher Sprache, nicht im Ton eines Formulars.",
+        "Sie sortiert den Moment behutsam in Teile: was passiert ist, was du gefühlt hast, was der Körper getragen hat, welche Geschichte der Verstand hinzugefügt hat, welcher Glaube darunter liegen könnte und was noch unbekannt ist. Die Kontrolle bleibt bei dir. Du kannst es abschwächen, korrigieren, stoppen oder sagen: „nicht ich“.",
+        "Mit der Zeit bemerkt Miravelys, was dir wirklich hilft, ruhiger zu werden, besser zu schlafen, einen wiederkehrenden Gedanken zu hinterfragen oder einen kleineren, wahren Schritt zu gehen. Sie baut keine Identität um dich herum, sondern eine bescheidene, korrigierbare Karte, die du jederzeit bearbeiten kannst."
       ],
       "callout": "Miravelys versucht nicht, einen Streit mit deinem Kopf zu gewinnen. Es verlangsamt ihn, bis sichtbar wird, was real ist, was schützt und was Ruhe braucht."
     },
     "works": {
       "eyebrow": "So funktioniert Miravelys",
       "title": "Eine ehrliche Zeile wird zu einem ruhigeren nächsten Schritt.",
-      "intro": "Du schreibst, was sich gerade wahr anfühlt, die App trennt die Teile des Moments und hilft dir zu wählen: Ruhe, Klarheit, Schlaf oder eine direktere Frage.",
+      "intro": "Wenn ein kalter Blick wie Ablehnung wirken kann, Schweigen wie Beweis und ein Fehler wie Identität, hilft Miravelys, den Moment zu verlangsamen. Du schreibst, was sich wahr anfühlt, die App trennt die Teile, und dann wählst du, ob du Ruhe, Klarheit, Schlaf oder eine direkte Frage brauchst.",
       "steps": [
         {
           "title": "Home versteht den Moment",
-          "body": "Home wird zur intelligenten Eingangstür. Er fragt, was sich jetzt wahr anfühlt, und erkennt Aktivierung, Müdigkeit, Gedankenschleifen oder Bereitschaft zur Inquiry."
+          "body": "Home fragt, was sich jetzt wahr anfühlt, und erkennt, ob du zuerst Erdung, Schlaf, eine sanfte Frage oder eine klarere Spiegelung brauchen könntest."
         },
         {
-          "title": "Truth Line sortiert den Raum",
-          "body": "Get Clear verwandelt eine chaotische Zeile in klarere Teile: Ereignis, Gefühl, hinzugefügte Geschichte, mögliche Überzeugung und Unbekanntes."
+          "title": "Truth Line trennt die Ebenen",
+          "body": "Get Clear verwandelt eine chaotische Zeile in klarere Teile: Ereignis, Emotion, Körpersignal, Geschichte, mögliche Überzeugung und Unbekanntes."
         },
         {
           "title": "Calm Now schützt den Körper",
@@ -2144,7 +2144,7 @@ export const siteCopy = {
     "explanation": {
       "eyebrow": "Ausführliche Erklärung",
       "title": "Was Miravelys ist, warum es existiert und wofür die App da ist.",
-      "intro": "Miravelys ist für gewöhnliche Momente gebaut, die innerlich laut werden: ein Satz, der immer wieder im Kopf läuft, eine Nachricht, die plötzlich persönlich wirkt, ein müder Abend, an dem ein Gedanke Zähne bekommt, oder eine leise Angst, die um zwei Uhr morgens sehr überzeugend klingt. Die App soll dich nicht zwanghaft positiv machen, dich reparieren oder dir sagen, wer du bist. Sie soll dir helfen, mit mehr Sanftheit, Präzision und Wahl zurück zur Realität zu finden.",
+      "intro": "Miravelys ist für gewöhnliche Momente gebaut, die innerlich laut werden: ein Satz, der immer wieder im Kopf läuft, eine Nachricht, die plötzlich persönlich wirkt, ein müder Abend, an dem ein Gedanke Zähne bekommt, oder eine leise Angst, die um zwei Uhr morgens sehr überzeugend klingt. Die App soll dich nicht zwanghaft positiv machen, dich verändern oder dir sagen, wer du bist. Sie soll dir helfen, mit mehr Sanftheit, Präzision und Wahl zurück zur Realität zu finden.",
       "blocks": [
         {
           "title": "Der Zweck der App",
@@ -2218,10 +2218,10 @@ export const siteCopy = {
       "origin": "私たちの物語"
     },
     "hero": {
-      "eyebrow": "感情の明晰さのためのプライベートな伴走者",
+      "eyebrow": "絡まった瞬間のためのプライベートな伴走者",
       "title": "Miravelys",
-      "subtitle": "ひとつの瞬間が物語全体になるとき、Miravelys は何が現実で、何が感じられ、心が何を足したかを見えるようにする。",
-      "body": "感情の明晰さのためのプライベートな伴走者——信頼できるほど穏やかで、自分に戻れるほど正確。",
+      "subtitle": "ありふれた一瞬が内側で大きな物語になったとき、Miravelys はそっと手伝う。何が起きたのか、何を感じたのか、身体が何を運んできたのか、心が何を加えたのかを分けて見る。",
+      "body": "プレッシャーはない。診断もない。ただ、瞬間をゆっくりにして、自分に戻るための私的な場所。",
       "primary": "ひとつの明確な瞬間から始める",
       "secondary": "プライバシーを見る",
       "visualLabel": "Miravelys は、出来事・感情・身体の反応・物語・信念・まだ分からないことを分けて見られるようにします。"
@@ -2265,27 +2265,27 @@ export const siteCopy = {
       "legalNavAria": "法的情報とサポート"
     },
     "what": {
-      "eyebrow": "プロダクトの考え方",
-      "title": "混乱した瞬間を明るくする。ただしアプリは絶対的な真実を知っているふりをしない。",
+      "eyebrow": "Miravelysとは",
+      "title": "正直な一文が、内側に少し余白を生み出す私的な場所。",
       "paragraphs": [
-        "落ち着いていなくても、きれいに言葉にできなくても、完璧に自分を理解していなくても大丈夫です。Miravelys は「なんか変」「嫌われている気がする」「眠れない」「大げさかもしれないけど本当みたいに感じる」という一文から始められます。",
-        "Miravelys は、その瞬間を事実、体のサイン、感情、予測、物語、信念、必要としているもの、まだ分からないことに分けます。やさしくも、より直接的にも、選んだときには少し強く問いかけることもできます。主導権は常にあなたにあります。",
-        "時間が経つほど、アプリは一般論ではなくなります。何があなたを落ち着かせ、眠りやすくし、信念を見直し、小さな本当の一歩を助けるかを学びます。大げさな自己像ではなく、修正できる証拠ベースの地図を作ります。"
+        "Miravelys は最も小さな入り口から始まります。何に触れられたか、体が締め付けられたか、何度も立ち返ったかを書く、ありのままの一文です。落ち着いている必要も、うまく言葉にできている必要も、完璧に自分を理解している必要もありません。アプリは人間の言葉で出会い、ワークシートのような声ではありません。",
+        "その瞬間をやさしく分けます。何が起きたのか、何を感じたのか、身体が何を運んできたのか、心がどんな物語を加えたのか、どんな信念が下にありそうか、そして何がまだ未知か。主導権は常にあなたにあります。やわらげたり、訂正したり、止めたり、「私じゃない」と言うこともできます。",
+        "使い続けるほど、Miravelys はあなたを落ち着かせ、眠りを助け、繰り返す考えに疑問を投げかけ、より小さな本当の一歩を踏み出す助けになるものを観察します。あなたを囲む自己像を作るのではなく、謙虚で修正可能な地図を作ります。"
       ],
       "callout": "Miravelys は、あなたの心との議論に勝とうとしません。その議論をゆっくりにして、現実、保護、休息の必要を見えるようにします。"
     },
     "works": {
       "eyebrow": "Miravelys の仕組み",
       "title": "正直な一行が、少し落ち着いた次の一歩になる。",
-      "intro": "今ほんとうに感じていることを書き、アプリが事実・感情・物語・身体の反応を分け、そのあと必要な方向を一緒に選びます。",
+      "intro": "冷たい視線が拒絶に、沈黙が証拠に、失敗がアイデンティティのように感じられるとき、Miravelys はその瞬間をゆっくりにする手助けをします。今 honest に感じることを書き、アプリが層を分け、それから calm、clarity、sleep、direct question のどれが必要か選びます。",
       "steps": [
         {
           "title": "Home が今を理解する",
-          "body": "Home は賢い入口になります。今何が本当らしく感じるかを聞き、活性化、疲れ、思考ループ、探究の準備を見分けます。"
+          "body": "Home は今何が本当らしく感じるかを聞き、まず身体を落ち着かせる、眠る、やさしい問いを受ける、それともよりはっきり映し返されるのかを見分けます。"
         },
         {
-          "title": "Truth Line が整理する",
-          "body": "Get Clear は一つの混乱した文を、起きたこと、感じたこと、心が足した物語、可能性のある信念、未知へ分けます。"
+          "title": "Truth Line が層を分ける",
+          "body": "Get Clear は一つの混乱した文を、出来事・感情・身体の信号・物語・可能性のある信念・未知へ分けます。"
         },
         {
           "title": "Calm Now が体を守る",
@@ -2406,7 +2406,7 @@ export const siteCopy = {
     "explanation": {
       "eyebrow": "詳しい説明",
       "title": "Miravelysとは何か、なぜ存在するのか、何を支えるためのアプリなのか。",
-      "intro": "Miravelysは、普通の出来事なのに心の中で大きくなってしまう瞬間のために作られています。頭の中で何度も再生される一言、急に自分への攻撃のように感じるメッセージ、疲れた夜に重くなる考え、夜中にとても本当らしく聞こえる小さな不安。アプリの目的は、無理に前向きにすることでも、あなたを直すことでも、あなたが誰かを決めることでもありません。目的は、より優しく、より正確に、より選択肢を持って現実に戻る手助けをすることです。",
+      "intro": "Miravelysは、普通の出来事なのに心の中で大きくなってしまう瞬間のために作られています。頭の中で何度も再生される一言、急に自分への攻撃のように感じるメッセージ、疲れた夜に重くなる考え、夜中にとても本当らしく聞こえる小さな不安。アプリの目的は、無理に前向きにすることでも、あなたを変えることでも、あなたが誰かを決めることでもありません。目的は、より優しく、より正確に、より選択肢を持って現実に戻る手助けをすることです。",
       "blocks": [
         {
           "title": "アプリの目的",
@@ -2480,10 +2480,10 @@ export const siteCopy = {
       "origin": "Nuestra historia"
     },
     "hero": {
-      "eyebrow": "Un compañero privado para claridad emocional",
+      "eyebrow": "Un compañero privado para momentos enredados",
       "title": "Miravelys",
-      "subtitle": "Cuando un momento se convierte en toda una historia, Miravelys te ayuda a ver qué es real, qué se siente y qué añadió la mente.",
-      "body": "Un compañero privado para claridad emocional — lo bastante calmado para confiar, lo bastante preciso para volver a ti.",
+      "subtitle": "Cuando un momento simple se convierte en toda una historia dentro de ti, Miravelys te ayuda con suavidad a separar qué ocurrió, qué sentiste, qué cargó el cuerpo y qué añadió la mente.",
+      "body": "Sin presión. Sin diagnóstico. Solo un lugar privado para frenar el momento y volver a ti.",
       "primary": "Empieza con un momento claro",
       "secondary": "Ver promesa de privacidad",
       "visualLabel": "Miravelys ayuda a separar el momento, la emoción, la reacción del cuerpo, la historia, la creencia y lo desconocido."
@@ -2527,27 +2527,27 @@ export const siteCopy = {
       "legalNavAria": "Legal y soporte"
     },
     "what": {
-      "eyebrow": "La idea del producto",
-      "title": "Un momento confuso se vuelve más claro sin que la app finja saber la verdad absoluta.",
+      "eyebrow": "Qué es",
+      "title": "Un lugar privado donde una línea honesta puede dejar un poco más de espacio interior.",
       "paragraphs": [
-        "No necesitas llegar en calma, poético ni perfectamente consciente. Puedes abrir Miravelys con una frase cruda: “me siento raro”, “creo que me odian”, “no puedo dormir” o “sé que estoy exagerando, pero se siente real”. La app empieza ahí, con lenguaje humano.",
-        "Miravelys ordena el momento en piezas: hechos, señales del cuerpo, emociones, predicciones, historias, creencias, necesidades y lo desconocido. Puede ser suave, directo o más desafiante si eliges comprobar una ilusión repetida. El control sigue siendo tuyo.",
-        "Con el tiempo, la app se vuelve menos genérica. Aprende qué te calma, qué te ayuda a dormir, qué cuestiona una creencia y qué paso pequeño es verdadero para ti. No crea una identidad dramática: crea un mapa humilde, basado en evidencia y editable."
+        "Miravelys empieza con la entrada más pequeña posible: una frase cruda sobre qué te tocó, te tensó o siguió volviendo. No necesitas llegar en calma, poético ni perfectamente consciente. La app te encuentra en lenguaje humano, no con voz de formulario.",
+        "Ordena el momento en piezas: qué ocurrió, qué sentiste, qué cargó el cuerpo, qué historia añadió la mente, qué creencia podría estar debajo y qué sigue desconocido. El control sigue siendo tuyo. Puedes suavizarlo, corregirlo, detenerlo o decir “no soy yo”.",
+        "Con el tiempo, Miravelys aprende qué te calma de verdad, qué te ayuda a dormir, qué cuestiona un pensamiento repetido o qué te lleva a un paso más pequeño y verdadero. No crea una identidad a tu alrededor. Crea un mapa humilde, corregible, que puedes editar."
       ],
       "callout": "Miravelys no intenta ganar una discusión con tu mente. La ralentiza hasta que puedes ver qué es real, qué protege y qué necesita descanso."
     },
     "works": {
       "eyebrow": "Cómo funciona Miravelys",
       "title": "Una línea honesta se convierte en un siguiente paso más tranquilo.",
-      "intro": "Escribes lo que ahora se siente verdadero, la app separa las piezas del momento y te ayuda a elegir calma, claridad, sueño o una pregunta más directa.",
+      "intro": "Cuando una mirada fría puede sentirse como rechazo, el silencio como prueba o un error como identidad, Miravelys te ayuda a ralentizar el momento. Escribes lo que se siente cierto, la app separa las piezas y luego eliges si necesitas calma, claridad, sueño o una pregunta directa.",
       "steps": [
         {
           "title": "Home entiende el momento",
-          "body": "Home se vuelve una puerta inteligente. Pregunta qué se siente verdadero ahora y detecta activación, cansancio, bucle mental o disposición para indagar."
+          "body": "Home pregunta qué se siente verdadero ahora y detecta si necesitas primero anclaje, sueño, una pregunta suave o un reflejo más claro."
         },
         {
-          "title": "Truth Line ordena la habitación",
-          "body": "Get Clear convierte una línea confusa en partes claras: lo que pasó, lo que sentiste, lo que añadió la mente, una posible creencia y lo desconocido."
+          "title": "Truth Line separa las capas",
+          "body": "Get Clear convierte una línea confusa en partes claras: evento, emoción, señal del cuerpo, historia, creencia posible y desconocido."
         },
         {
           "title": "Calm Now protege el cuerpo",
@@ -2668,7 +2668,7 @@ export const siteCopy = {
     "explanation": {
       "eyebrow": "Explicación completa",
       "title": "Qué es Miravelys, por qué existe y cuál es el propósito de la app.",
-      "intro": "Miravelys está hecha para esos momentos comunes que se vuelven ruidosos por dentro: una frase que se repite, un mensaje que de pronto se siente personal, una noche cansada en la que un pensamiento crece demasiado, o un miedo silencioso que a las dos de la mañana parece muy convincente. La app no existe para obligarte a ser positivo, arreglarte ni decirte quién eres. Existe para ayudarte a volver a la realidad con más ternura, más precisión y más posibilidad de elegir.",
+      "intro": "Miravelys está hecha para esos momentos comunes que se vuelven ruidosos por dentro: una frase que se repite, un mensaje que de pronto se siente personal, una noche cansada en la que un pensamiento crece demasiado, o un miedo silencioso que a las dos de la mañana parece muy convincente. La app no existe para obligarte a ser positivo, cambiarte ni decirte quién eres. Existe para ayudarte a volver a la realidad con más ternura, más precisión y más posibilidad de elegir.",
       "blocks": [
         {
           "title": "El propósito de la app",
@@ -2742,10 +2742,10 @@ export const siteCopy = {
       "origin": "A nossa história"
     },
     "hero": {
-      "eyebrow": "Um companheiro privado para clareza emocional",
+      "eyebrow": "Um companheiro privado para momentos emaranhados",
       "title": "Miravelys",
-      "subtitle": "Quando um momento se torna uma história inteira, o Miravelys ajuda-te a ver o que é real, o que se sente e o que a mente acrescentou.",
-      "body": "Um companheiro privado para clareza emocional — calmo o suficiente para confiar, preciso o suficiente para voltares a ti.",
+      "subtitle": "Quando um momento simples se torna uma história inteira dentro de ti, o Miravelys ajuda-te suavemente a separar o que aconteceu, o que sentiste, o que o corpo carregou e o que a mente acrescentou.",
+      "body": "Sem pressão. Sem diagnóstico. Apenas um lugar privado para abrandar o momento e voltares a ti.",
       "primary": "Começa com um momento claro",
       "secondary": "Ver promessa de privacidade",
       "visualLabel": "Miravelys ajuda a separar o momento, a emoção, a reação do corpo, a história, a crença e o desconhecido."
@@ -2789,27 +2789,27 @@ export const siteCopy = {
       "legalNavAria": "Legal e suporte"
     },
     "what": {
-      "eyebrow": "A ideia do produto",
-      "title": "Um momento confuso fica mais claro sem a app fingir que sabe a verdade absoluta.",
+      "eyebrow": "O que é",
+      "title": "Um lugar privado onde uma frase honesta pode deixar mais espaço por dentro.",
       "paragraphs": [
-        "Não precisas de chegar calmo, poético ou perfeitamente consciente. Podes abrir Miravelys com uma frase crua: “sinto-me estranho”, “acho que me odeiam”, “não consigo dormir” ou “sei que estou a exagerar, mas parece real”. A app começa aí, em linguagem humana.",
-        "Miravelys organiza o momento em peças: factos, sinais do corpo, sentimentos, previsões, histórias, crenças, necessidades e desconhecidos. Pode ser suave, direta ou mais desafiante se escolheres testar uma ilusão repetida. O controlo fica contigo.",
-        "Com o tempo, a app torna-se menos genérica. Aprende o que realmente te acalma, ajuda a dormir, questiona uma crença ou leva a um passo pequeno e verdadeiro. Não cria uma identidade dramática; cria um mapa humilde, baseado em evidência e editável."
+        "O Miravelys começa com a entrada mais pequena possível: uma frase crua sobre o que te tocou, apertou ou foi voltando. Não precisas de chegar calmo, poético ou perfeitamente consciente. A app encontra-te em linguagem humana, não com voz de formulário.",
+        "Ela organiza o momento em peças: o que aconteceu, o que sentiste, o que o corpo carregou, que história a mente acrescentou, que crença pode estar por baixo e o que ainda é desconhecido. O controlo fica contigo. Podes suavizar, corrigir, parar ou dizer “não sou eu”.",
+        "Com o tempo, o Miravelys aprende o que realmente te acalma, ajuda a dormir, questiona um pensamento repetido ou leva a um passo mais pequeno e verdadeiro. Não cria uma identidade à tua volta. Cria um mapa humilde, corrigível, que podes editar."
       ],
-      "callout": "Miravelys não tenta vencer uma discussão com a sua mente. Ele desacelera a discussão até tu veres o que é real, o que protege e o que precisa descansar."
+      "callout": "O Miravelys não tenta vencer uma discussão com a tua mente. Ele desacelera a discussão até veres o que é real, o que protege e o que precisa descansar."
     },
     "works": {
       "eyebrow": "Como o Miravelys funciona",
       "title": "Uma linha honesta vira um próximo passo mais calmo.",
-      "intro": "Tu escreves o que parece verdadeiro agora, o app separa as partes do momento e ajuda a escolher calma, clareza, sono ou uma pergunta mais direta.",
+      "intro": "Quando um olhar frio pode parecer rejeição, o silêncio prova, ou um erro identidade, o Miravelys ajuda a abrandar o momento. Escreves o que parece verdadeiro, a app separa as peças e depois escolhes se precisas de calma, clareza, sono ou uma pergunta directa.",
       "steps": [
         {
           "title": "Home entende o momento",
-          "body": "Home torna-se uma entrada inteligente. Pergunta o que parece verdadeiro agora e percebe ativação, cansaço, looping ou prontidão para investigar."
+          "body": "Home pergunta o que parece verdadeiro agora e percebe se precisas primeiro de aterragem, sono, uma pergunta suave ou um reflexo mais claro."
         },
         {
-          "title": "Truth Line organiza a sala",
-          "body": "Get Clear transforma uma linha confusa em partes claras: o que aconteceu, o que sentiste, o que a mente adicionou, uma crença possível e o desconhecido."
+          "title": "Truth Line separa as camadas",
+          "body": "Get Clear transforma uma linha confusa em partes claras: evento, emoção, sinal do corpo, história, crença possível e desconhecido."
         },
         {
           "title": "Calm Now protege o corpo",
@@ -2930,7 +2930,7 @@ export const siteCopy = {
     "explanation": {
       "eyebrow": "Explicação completa",
       "title": "O que é o Miravelys, por que ele existe e qual é o propósito do app.",
-      "intro": "Miravelys foi criado para os momentos comuns que ficam barulhentos por dentro: uma frase que não para de voltar, uma mensagem que de repente parece pessoal, uma noite cansada em que um pensamento fica pesado demais, ou um medo silencioso que às duas da manhã parece muito convincente. O app não existe para forçar positividade, consertar-te ou dizer quem tu és. Ele existe para ajudar-te a voltar para a realidade com mais ternura, mais precisão e mais escolha.",
+      "intro": "Miravelys foi criado para os momentos comuns que ficam barulhentos por dentro: uma frase que não para de voltar, uma mensagem que de repente parece pessoal, uma noite cansada em que um pensamento fica pesado demais, ou um medo silencioso que às duas da manhã parece muito convincente. O app não existe para forçar positividade, mudar-te ou dizer quem tu és. Ele existe para ajudar-te a voltar para a realidade com mais ternura, mais precisão e mais escolha.",
       "blocks": [
         {
           "title": "O propósito do app",

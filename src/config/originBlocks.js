@@ -4,9 +4,12 @@
  */
 export const originBlockOrder = [
   { key: 'opening' },
+  { key: 'theSearch' },
+  { key: 'theRealization' },
   { key: 'momentStory' },
   { key: 'writingMirror' },
   { key: 'separatingLayers' },
+  { key: 'patternsWithoutLabels' },
   { key: 'bodyCalm' },
   { key: 'whyExists', isFinale: true },
 ];

@@ -37,18 +37,9 @@ const productStoryCss = fs.readFileSync(
   new URL('../src/styles/site-product-story.css', import.meta.url),
   'utf8'
 );
-assert(
-  productStoryCss.includes('sticky-story--landscape'),
-  'site-product-story.css must define landscape compact sticky story'
-);
-assert(
-  productStoryCss.includes('phone-mockup--landscape'),
-  'site-product-story.css must style landscape phone mockup'
-);
-assert(
-  productStoryCss.includes('sticky-story--mobile'),
-  'site-product-story.css must define mobile sticky story layout'
-);
+assert(productStoryCss.includes('stacked-story-card'), 'site-product-story.css must define stacked card layout for mobile');
+assert(productStoryCss.includes('sticky-story--landscape'), 'site-product-story.css must define landscape sticky story layout');
+assert(productStoryCss.includes('phone-width-mobile-card'), 'site-product-story.css must use mobile card sizing');
 assert(breakpointsCss.includes('68.75rem'), 'site-breakpoints.css must define laptop sticky layout breakpoint');
 assert(revealCss.includes('68.6874rem'), 'site-reveal.css must align mobile/tablet cutoff with breakpoints');
 assert(breakpointsCss.includes('prefers-reduced-motion'), 'site-breakpoints.css must respect reduced motion');

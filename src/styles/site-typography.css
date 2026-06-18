@@ -219,7 +219,7 @@
 
 .site-shell--keynote .top-nav__links a,
 .site-shell--keynote .nav-links,
-.site-shell--keynote .language-select select {
+.site-shell--keynote .language-select__value {
   font-size: var(--type-nav);
   line-height: 1.35;
 }
@@ -234,7 +234,7 @@
   line-height: 1.35;
 }
 
-.site-shell--keynote .language-cluster--compact .language-select select {
+.site-shell--keynote .language-cluster--compact .language-select__value {
   font-size: var(--type-nav);
 }
 
@@ -575,7 +575,7 @@ html:lang(pt) .site-shell--keynote .reveal-step__headline {
     font-size: var(--type-caption);
   }
 
-  .site-shell--keynote .language-cluster--compact .language-select select,
+  .site-shell--keynote .language-cluster--compact .language-select__value,
   .site-shell--keynote .brand-mini {
     font-size: var(--type-nav);
   }

@@ -21,10 +21,14 @@ function PhoneScreenImage({ screen, isActive, eager }) {
     return (
       <div className={`phone-mockup__screen-frame ${isActive ? 'phone-mockup__screen-frame--active' : ''}`} aria-hidden={!isActive}>
         <div className="phone-mockup__screen-crop">
-          <ScreenshotPlaceholder
-            missing={missing || { group: 'sticky-phone', code: screen.code ?? '?', locale: screen.locale ?? '?', expected: screen.publicPath ?? '' }}
-            className="screenshot-placeholder--visible"
-          />
+          {isDev ? (
+            <ScreenshotPlaceholder
+              missing={missing || { group: 'sticky-phone', code: screen.code ?? '?', locale: screen.locale ?? '?', expected: screen.publicPath ?? '' }}
+              className="screenshot-placeholder--visible"
+            />
+          ) : (
+             <div className="phone-mockup__screen phone-mockup__screen--loading" />
+          )}
         </div>
       </div>
     );

@@ -41,7 +41,7 @@ export const nameStoryCopy = {
       "A place where the mind can separate fact from story, feeling from belief, fear from truth.",
       "A beautiful inner mirror that helps you see yourself more clearly, gently, and truthfully."
     ],
-    "finalStatement": "Miravelys was chosen because it sounds like what healing clarity should feel like: soft, intelligent, private, and deeply human."
+    "finalStatement": "Miravelys was chosen because it sounds like what gentle clarity should feel like: soft, intelligent, private, and deeply human."
   },
   "ru": {
     "eyebrow": "История имени",
@@ -80,7 +80,7 @@ export const nameStoryCopy = {
       "Где ум учится отделять факт от истории, чувство от убеждения, страх от правды.",
       "Красивое внутреннее зеркало, которое помогает человеку увидеть себя яснее, мягче и честнее."
     ],
-    "finalStatement": "Miravelys был выбран потому, что звучит так, как должна ощущаться исцеляющая ясность: мягко, умно, приватно и глубоко по-человечески."
+    "finalStatement": "Miravelys был выбран потому, что звучит так, как должна ощущаться мягкая ясность: мягко, умно, приватно и глубоко по-человечески."
   },
   "ro": {
     "eyebrow": "Povestea numelui",
@@ -119,7 +119,7 @@ export const nameStoryCopy = {
       "Un loc unde mintea poate separa faptul de poveste, sentimentul de credință, frica de adevăr.",
       "O oglindă interioară frumoasă, care te ajută să te vezi mai clar, mai blând și mai sincer."
     ],
-    "finalStatement": "Miravelys a fost ales pentru că sună așa cum ar trebui să se simtă claritatea vindecătoare: blândă, inteligentă, privată și profund umană."
+    "finalStatement": "Miravelys a fost ales pentru că sună așa cum ar trebui să se simtă claritatea blândă: blândă, inteligentă, privată și profund umană."
   },
   "fr": {
     "eyebrow": "L’histoire du nom",
@@ -158,7 +158,7 @@ export const nameStoryCopy = {
       "Un lieu où l’esprit peut séparer le fait de l’histoire, le sentiment de la croyance, la peur de la vérité.",
       "Un beau miroir intérieur qui aide à se voir plus clairement, plus doucement et plus sincèrement."
     ],
-    "finalStatement": "Miravelys a été choisi parce qu’il sonne comme ce que la clarté qui apaise devrait ressentir : douce, intelligente, privée et profondément humaine."
+    "finalStatement": "Miravelys a été choisi parce qu’il sonne comme ce que la clarté douce devrait ressentir : douce, intelligente, privée et profondément humaine."
   },
   "hi": {
     "eyebrow": "नाम की कहानी",
@@ -197,7 +197,7 @@ export const nameStoryCopy = {
       "जहाँ मन तथ्य को कहानी से, भावना को विश्वास से, और डर को सत्य से अलग करना सीखता है।",
       "एक सुंदर आंतरिक आईना, जो व्यक्ति को खुद को ज़्यादा साफ़, ज़्यादा कोमल और ज़्यादा सच्चाई से देखने में मदद करता है।"
     ],
-    "finalStatement": "Miravelys इसलिए चुना गया क्योंकि यह वैसा सुनाई देता है जैसा उपचार देने वाली स्पष्टता महसूस होनी चाहिए: कोमल, बुद्धिमान, निजी और गहराई से मानवीय।"
+    "finalStatement": "Miravelys इसलिए चुना गया क्योंकि यह वैसा सुनाई देता है जैसा कोमल स्पष्टता महसूस होनी चाहिए: कोमल, बुद्धिमान, निजी और गहराई से मानवीय।"
   },
   "zh": {
     "eyebrow": "名字的故事",
@@ -236,7 +236,7 @@ export const nameStoryCopy = {
       "一个让大脑学会区分事实与故事、感受与信念、恐惧与真相的地方。",
       "一面美丽的内在镜子，帮助人更清楚、更温柔、更真实地看见自己。"
     ],
-    "finalStatement": "Miravelys 被选择，是因为它听起来就像疗愈性的清晰应该拥有的感觉：柔软、聪明、私密，并且深深地具有人性。"
+    "finalStatement": "Miravelys 被选择，是因为它听起来就像柔和的清晰应该拥有的感觉：柔软、聪明、私密，并且深深地具有人性。"
   },
   "de": {
     "eyebrow": "Die Geschichte des Namens",
@@ -275,7 +275,7 @@ export const nameStoryCopy = {
       "Ein Ort, an dem der Geist lernen kann, Tatsache von Geschichte, Gefühl von Überzeugung und Angst von Wahrheit zu unterscheiden.",
       "Ein schöner innerer Spiegel, der hilft, sich selbst klarer, sanfter und wahrhaftiger zu sehen."
     ],
-    "finalStatement": "Miravelys wurde gewählt, weil es so klingt, wie heilende Klarheit sich anfühlen sollte: sanft, intelligent, privat und zutiefst menschlich."
+    "finalStatement": "Miravelys wurde gewählt, weil es so klingt, wie sanfte Klarheit sich anfühlen sollte: sanft, intelligent, privat und zutiefst menschlich."
   },
   "ja": {
     "eyebrow": "名前の物語",
@@ -314,7 +314,7 @@ export const nameStoryCopy = {
       "心が、事実と物語、感情と信念、恐れと真実を分けて見られるようになる場所。",
       "自分自身をより明確に、よりやさしく、より正直に見るための、美しい内なる鏡。"
     ],
-    "finalStatement": "Miravelys は、癒やしをもたらす明晰さが本来どのように感じられるべきかを、その響きで表しているから選ばれました。やわらかく、知的で、プライベートで、深く人間的に。"
+    "finalStatement": "Miravelys は、やわらかな明晰さが本来どのように感じられるべきかを、その響きで表しているから選ばれました。やわらかく、知的で、プライベートで、深く人間的に。"
   },
   "es": {
     "eyebrow": "La historia del nombre",
@@ -353,7 +353,7 @@ export const nameStoryCopy = {
       "Un lugar donde la mente puede separar el hecho de la historia, el sentimiento de la creencia, el miedo de la verdad.",
       "Un hermoso espejo interior que ayuda a verse con más claridad, más suavidad y más honestidad."
     ],
-    "finalStatement": "Miravelys fue elegido porque suena como debería sentirse la claridad que sana: suave, inteligente, privada y profundamente humana."
+    "finalStatement": "Miravelys fue elegido porque suena como debería sentirse la claridad suave: suave, inteligente, privada y profundamente humana."
   },
   "pt": {
     "eyebrow": "A história do nome",
@@ -392,7 +392,7 @@ export const nameStoryCopy = {
       "Um lugar onde a mente pode separar o facto da história, o sentimento da crença, o medo da verdade.",
       "Um belo espelho interior que ajuda a pessoa a ver-se com mais clareza, mais suavidade e mais verdade."
     ],
-    "finalStatement": "Miravelys foi escolhido porque soa como a clareza curativa deveria sentir-se: suave, inteligente, privada e profundamente humana."
+    "finalStatement": "Miravelys foi escolhido porque soa como a clareza suave deveria sentir-se: suave, inteligente, privada e profundamente humana."
   }
 };
 

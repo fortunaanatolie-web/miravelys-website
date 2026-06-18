@@ -12,6 +12,7 @@ import HeroSection from './components/marketing/sections/HeroSection';
 import StickyPhoneStory from './components/marketing/sections/StickyPhoneStory';
 import StoryTeaserSection from './components/marketing/sections/StoryTeaserSection';
 import DownloadSection from './components/marketing/sections/DownloadSection';
+import MarketingStickyCta from './components/marketing/MarketingStickyCta';
 import { handleInPageNav } from './lib/scrollToSection';
 import { setDocumentMeta } from './lib/documentMeta';
 
@@ -78,6 +79,12 @@ function App() {
 
 
       <MarketingSiteFooter t={t} />
+
+      <MarketingStickyCta
+        experience={experience}
+        onNavClick={onNavClick}
+        onEarlyAccessClick={waitlist.openEarlyAccess}
+      />
 
       <EarlyAccessModal
         open={waitlist.earlyAccessOpen}

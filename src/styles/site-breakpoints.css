@@ -46,9 +46,9 @@
   min-height: var(--touch-min);
 }
 
-.site-shell--keynote .language-select {
-  min-height: var(--touch-min);
-  padding: 8px 12px;
+.site-shell--keynote .language-cluster--compact .language-select {
+  min-height: auto;
+  padding: 4px 8px;
 }
 
 .site-shell--keynote .nav-links a {
@@ -454,11 +454,6 @@
 }
 
 /* —— Top nav: keynote shell (layout in site-header.css) —— */
-@media (max-width: 61.24rem) {
-  .site-shell--keynote .language-select select {
-    max-width: min(100px, 26vw);
-  }
-}
 
 /* —— Motion: lighter on mobile for performance —— */
 @media (max-width: 47.99rem) {

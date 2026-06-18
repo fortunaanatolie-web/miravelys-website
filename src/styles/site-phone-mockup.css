@@ -1,424 +1,82 @@
 /**
- * Phone mockup — screen-only PNG assets inside a slim CSS device chassis + immersive depth shadows.
- * Corner geometry matches v5 (--radius-phone 40px, shell 48px + 10px inset).
+ * Phone mockup — clean, reliable, fixed aspect ratio.
  */
 
-.site-shell--keynote .phone-mockup {
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  background: transparent;
-  box-shadow: none;
-  overflow: visible;
-}
-
-.site-shell--keynote .phone-mockup:hover {
-  transform: none;
-  border-color: transparent;
-  box-shadow: none;
-}
-
 .phone-mockup {
-  --phone-clarity: 1;
-  container-type: inline-size;
   position: relative;
-  margin: 0;
-  width: var(--phone-width, var(--keynote-device-chapter, min(400px, 88vw)));
-  transition: transform 0.7s var(--mira-ease-cinematic, cubic-bezier(0.25, 1, 0.4, 1));
-}
-
-.phone-mockup--hero {
-  width: var(--phone-width, var(--keynote-device-hero, min(440px, 92vw)));
-}
-
-.phone-mockup--chapter {
-  width: var(--phone-width, var(--keynote-device-chapter, min(400px, 88vw)));
-}
-
-.phone-mockup--gallery {
+  /* width is controlled via layout CSS */
   width: 100%;
+  aspect-ratio: 390 / 844;
+  margin: 0 auto;
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.4, 1);
 }
 
-.phone-mockup--compact {
-  width: var(--phone-width, min(280px, 84vw));
-}
-
-.phone-mockup--mobile-card {
-  width: var(--phone-width, min(74vw, 280px));
-  max-width: 100%;
-}
-
-.phone-mockup--mobile-card .phone-mockup__screen {
-  object-fit: contain;
-}
-
-.phone-mockup:not(.phone-mockup--animate):not(.phone-mockup--scroll-linked) {
-  transform: scale(calc(0.94 + var(--phone-clarity) * 0.06));
-}
-
-/* —— Atmospheric layers —— */
-.phone-mockup__atmosphere,
-.phone-mockup__spotlight,
-.phone-mockup__glow {
-  position: absolute;
-  pointer-events: none;
-  border-radius: 50%;
-}
-
-.phone-mockup__atmosphere {
-  inset: -18% -12%;
-  background: radial-gradient(ellipse at 50% 38%, rgba(191, 160, 106, 0.10), transparent 66%);
-  opacity: calc(0.32 + var(--phone-clarity) * 0.42);
-  filter: blur(44px);
-}
-
-.phone-mockup__spotlight {
-  width: 68%;
-  height: 52%;
-  top: -6%;
-  left: 16%;
-  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.12), transparent 68%);
-  opacity: var(--phone-clarity);
-}
-
-.phone-mockup__glow {
-  width: 88%;
-  height: 38%;
-  bottom: -10%;
-  left: 6%;
-  background: radial-gradient(ellipse, var(--mira-moon-soft, rgba(150, 168, 192, 0.20)), transparent 70%);
-  filter: blur(30px);
-  opacity: calc(0.38 + var(--phone-clarity) * 0.48);
-}
-
-/* —— Screen-only presentation with slim CSS device chassis —— */
 .phone-mockup__device {
-  position: relative;
-  z-index: 2;
-  padding: calc(var(--phone-chassis-inset-ratio) * 100cqw);
-  border-radius: calc(var(--phone-chassis-outer-ratio) * 100cqw);
-  background: linear-gradient(165deg, #222b2f 0%, #0b0f12 46%, #161c20 100%);
+  position: absolute;
+  inset: 0;
+  border-radius: clamp(34px, 4vw, 58px);
+  background: #101317;
   box-shadow:
-    0 2px 12px rgba(0, 0, 0, 0.24),
-    0 22px 54px rgba(0, 0, 0, 0.36),
-    0 50px 104px rgba(0, 0, 0, 0.3),
+    0 34px 90px rgba(0, 0, 0, 0.24),
+    0 0 70px rgba(206, 171, 112, 0.14),
     inset 0 1px 0 rgba(255, 255, 255, 0.14),
     inset 0 0 0 1px rgba(255, 255, 255, 0.07);
-  filter: none;
-}
-
-.phone-mockup__device::before {
-  content: '';
-  position: absolute;
-  inset: 1px;
-  border-radius: inherit;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.09), transparent 42%);
-  pointer-events: none;
-  z-index: 1;
-}
-
-[data-appearance='day'] .phone-mockup__device {
-  background: linear-gradient(165deg, #2e3438 0%, #14181c 48%, #22282d 100%);
-  box-shadow:
-    0 2px 10px rgba(40, 30, 20, 0.12),
-    0 20px 48px rgba(40, 30, 20, 0.2),
-    0 44px 92px rgba(40, 30, 20, 0.14),
-    inset 0 1px 0 rgba(255, 255, 255, 0.16),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
 }
 
 .phone-mockup__screen-stack {
-  position: relative;
-  z-index: 2;
-  line-height: 0;
-  width: 100%;
-  aspect-ratio: 390 / 844;
-  container-type: inline-size;
+  position: absolute;
+  inset: 2.5%;
+  overflow: hidden;
+  border-radius: calc(clamp(34px, 4vw, 58px) * 0.9);
+  background: #000;
 }
 
 .phone-mockup__screen-frame {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.phone-mockup__screen-stack--crossfade .phone-mockup__screen-frame {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transform: scale(1.015);
+  transform: scale(1.012);
+  filter: blur(6px);
   transition:
-    opacity 650ms cubic-bezier(0.25, 1, 0.4, 1),
-    transform 900ms cubic-bezier(0.25, 1, 0.4, 1),
-    filter 700ms ease;
-  filter: blur(10px) brightness(0.88);
-}
-
-.phone-mockup__screen-stack--crossfade .phone-mockup__screen-frame--active {
-  opacity: 1;
-  transform: scale(1);
-  filter: blur(0) brightness(calc(0.91 + var(--phone-clarity) * 0.09));
-  z-index: 2;
+    opacity 520ms ease,
+    transform 700ms ease,
+    filter 520ms ease;
+  z-index: 1;
 }
 
 .phone-mockup__screen-frame--active {
   opacity: 1;
   transform: scale(1);
-  filter: blur(0) brightness(calc(0.91 + var(--phone-clarity) * 0.09));
+  filter: blur(0);
   z-index: 2;
 }
 
 .phone-mockup__screen-crop {
-  position: relative;
-  overflow: hidden;
   width: 100%;
   height: 100%;
-  border-radius: calc(var(--phone-display-corner-ratio) * 100cqw);
-  isolation: isolate;
-  box-shadow:
-    inset 0 0 0 1px rgba(0, 0, 0, 0.32),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
-  transition: box-shadow 0.35s ease;
 }
 
-[data-appearance='day'] .phone-mockup__screen-crop {
-  box-shadow:
-    inset 0 0 0 1px rgba(0, 0, 0, 0.22),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
-}
-
-.phone-mockup--gallery .phone-mockup__device {
-  box-shadow:
-    0 2px 10px rgba(0, 0, 0, 0.2),
-    0 18px 44px rgba(0, 0, 0, 0.3),
-    0 40px 80px rgba(0, 0, 0, 0.24),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
-}
-
-.phone-mockup--gallery-active .phone-mockup__device {
-  box-shadow:
-    0 4px 16px rgba(0, 0, 0, 0.26),
-    0 24px 58px rgba(0, 0, 0, 0.38),
-    0 52px 108px rgba(0, 0, 0, 0.32),
-    0 0 52px rgba(191, 160, 106, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.14),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
-}
-
-.mockup-screen-select:hover .phone-mockup__device {
-  box-shadow:
-    0 4px 16px rgba(0, 0, 0, 0.28),
-    0 26px 62px rgba(0, 0, 0, 0.4),
-    0 56px 112px rgba(0, 0, 0, 0.34),
-    0 0 44px rgba(191, 160, 106, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.14),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
-}
-
-.phone-mockup__screen-crop .phone-mockup__screen {
-  display: block;
+.phone-mockup__screen {
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
   object-fit: contain;
-  object-position: center top;
-  vertical-align: top;
 }
 
-.phone-mockup__screen-crop .phone-mockup__screen--loading {
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  border-radius: 0;
-  background: linear-gradient(
-    165deg,
-    rgba(191, 160, 106, 0.06) 0%,
-    rgba(255, 255, 255, 0.03) 45%,
-    rgba(191, 160, 106, 0.04) 100%
-  );
+.phone-mockup__screen--loading {
+  background: linear-gradient(165deg, #1c2125 0%, #0d1215 48%, #14191d 100%);
   animation: phone-mockup-shimmer 1.4s ease-in-out infinite;
 }
 
 @keyframes phone-mockup-shimmer {
-  0%,
-  100% {
-    opacity: 0.55;
-  }
-  50% {
-    opacity: 0.9;
-  }
-}
-
-.phone-mockup__dim {
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  background: rgba(4, 6, 16, 0.32);
-  pointer-events: none;
-  transition: opacity 0.45s ease;
-  border-radius: calc(var(--phone-chassis-outer-ratio) * 100cqw);
-}
-
-.phone-mockup__reflection {
-  position: absolute;
-  left: 8%;
-  right: 8%;
-  bottom: -11%;
-  height: 18%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), transparent);
-  transform: scaleY(-0.32) perspective(400px) rotateX(11deg);
-  filter: blur(7px);
-  opacity: calc(0.22 + var(--phone-clarity) * 0.32);
-  pointer-events: none;
-}
-
-.phone-mockup__floor-shadow {
-  position: absolute;
-  left: 12%;
-  right: 12%;
-  bottom: -6%;
-  height: 14%;
-  background: radial-gradient(ellipse, rgba(0, 0, 0, 0.42), transparent 72%);
-  filter: blur(18px);
-  pointer-events: none;
-}
-
-[data-appearance='day'] .phone-mockup__floor-shadow {
-  background: radial-gradient(ellipse, rgba(40, 30, 20, 0.18), transparent 72%);
-}
-
-/* —— Mood lighting —— */
-.phone-mockup--mood-night .phone-mockup__atmosphere {
-  background: radial-gradient(ellipse at 50% 28%, rgba(65, 85, 170, 0.12), transparent 68%);
-}
-
-.phone-mockup--mood-night .phone-mockup__glow {
-  background: radial-gradient(ellipse, rgba(50, 70, 155, 0.20), transparent 70%);
-}
-
-.phone-mockup--mood-reflect .phone-mockup__atmosphere {
-  background: radial-gradient(ellipse at 50% 32%, rgba(148, 138, 172, 0.14), transparent 66%);
-}
-
-.phone-mockup--mood-reflect .phone-mockup__glow {
-  background: radial-gradient(ellipse, rgba(148, 138, 172, 0.18), transparent 70%);
-}
-
-.phone-mockup--mood-calm .phone-mockup__atmosphere {
-  background: radial-gradient(ellipse at 50% 38%, rgba(60, 210, 200, 0.08), transparent 66%);
-}
-
-.phone-mockup--mood-calm .phone-mockup__glow {
-  background: radial-gradient(ellipse, rgba(60, 210, 200, 0.12), transparent 70%);
-}
-
-.phone-mockup--mood-warm .phone-mockup__atmosphere {
-  background: radial-gradient(ellipse at 50% 36%, rgba(208, 162, 112, 0.12), transparent 66%);
-}
-
-.phone-mockup--mood-warm .phone-mockup__glow {
-  background: radial-gradient(ellipse, rgba(208, 162, 112, 0.16), transparent 70%);
-}
-
-.phone-mockup--mood-trust .phone-mockup__glow {
-  background: radial-gradient(ellipse, rgba(95, 175, 135, 0.12), transparent 70%);
-}
-
-/* —— Legacy device-frame parallax bridge —— */
-.device-frame {
-  --device-scale: 1;
-  --device-opacity: 1;
-  opacity: var(--device-opacity);
-  transform: scale(var(--device-scale));
-  transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.25, 1, 0.4, 1);
-  will-change: transform, opacity;
-}
-
-.device-frame__caption {
-  margin-top: 12px;
-  text-align: center;
-  font-size: var(--type-small, 0.8125rem);
-  color: var(--mira-text-muted);
-}
-
-/* Scroll story variant — bounded height, softer glow */
-.phone-mockup--scroll-story {
-  overflow: visible;
-}
-
-.phone-mockup--scroll-story .phone-mockup__atmosphere {
-  opacity: calc(0.24 + var(--phone-clarity) * 0.28);
-  filter: blur(36px);
-}
-
-.phone-mockup--scroll-story .phone-mockup__glow {
-  opacity: calc(0.28 + var(--phone-clarity) * 0.36);
-  filter: blur(22px);
-}
-
-[data-appearance='day'] .phone-mockup--scroll-story .phone-mockup__atmosphere {
-  opacity: calc(0.18 + var(--phone-clarity) * 0.22);
-}
-
-[data-appearance='day'] .phone-mockup--scroll-story .phone-mockup__glow {
-  opacity: calc(0.2 + var(--phone-clarity) * 0.28);
-}
-
-.phone-mockup--scroll-story .phone-mockup__screen-stack--crossfade .phone-mockup__screen-frame {
-  transform: scale(1.012);
-  filter: blur(8px) brightness(0.88);
-}
-
-/* Landscape compact — one clear active screen, no crossfade blur stack */
-.phone-mockup--landscape-compact .phone-mockup__screen-stack--crossfade .phone-mockup__screen-frame,
-.phone-mockup--landscape-compact .phone-mockup__screen-frame {
-  position: relative;
-  inset: auto;
-  opacity: 1;
-  transform: none !important;
-  filter: none !important;
-}
-
-.phone-mockup--landscape-compact .phone-mockup__screen-stack {
-  position: relative;
-}
-
-.phone-mockup--landscape-compact .phone-mockup__screen-stack--crossfade .phone-mockup__screen-frame:not(.phone-mockup__screen-frame--active) {
-  display: none;
-}
-
-.phone-mockup--landscape-compact .phone-mockup__screen {
-  opacity: 1 !important;
-  filter: none !important;
-  object-fit: contain;
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 0.9; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .phone-mockup--animate {
-    animation: none;
-  }
-
   .phone-mockup__screen-frame {
     transition: opacity 0.2s ease;
     transform: none;
     filter: none;
-  }
-
-  .phone-mockup__screen-stack--crossfade .phone-mockup__screen-frame {
-    filter: none;
-    transform: none;
-  }
-
-  .phone-mockup__screen-stack--crossfade .phone-mockup__screen-frame--active {
-    opacity: 1;
-  }
-
-  .phone-mockup--scroll-linked {
-    transform: none;
   }
 }

@@ -39,6 +39,8 @@
 }
 
 .top-nav__bar {
+  position: relative;
+  isolation: isolate;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -49,6 +51,21 @@
   border-radius: var(--header-radius);
   background: var(--header-bar-bg);
   box-shadow: var(--header-bar-shadow);
+}
+
+.top-nav__bar::after {
+  content: '';
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: -16px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--header-bar-glow);
+  filter: blur(12px);
+  opacity: 0.92;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .top-nav--legal .top-nav__bar {
@@ -108,23 +125,52 @@
 }
 
 .language-cluster--compact .language-select {
-  padding: 7px 10px;
-  min-height: var(--touch-min, 44px);
+  position: relative;
+  padding: 4px 8px;
+  min-height: 0;
+  min-width: 0;
   color: var(--header-ink);
   background: var(--header-control-bg);
   border: 1px solid var(--header-control-border);
+  cursor: pointer;
+}
+
+.language-select__face {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  pointer-events: none;
+}
+
+.language-select__value {
+  font-size: var(--type-nav);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 .language-cluster--compact .language-select svg {
   color: currentColor;
   opacity: 0.88;
+  flex-shrink: 0;
 }
 
 .language-cluster--compact .language-select select {
-  max-width: min(4.5rem, 18vw);
-  font-size: var(--type-small);
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.language-cluster--compact .language-select:hover {
+  border-color: rgba(196, 160, 102, 0.35);
 }
 
 .mobile-menu-button {
@@ -269,9 +315,17 @@
     gap: 6px;
     padding: 6px 8px;
   }
+}
 
-  .language-cluster--compact .language-select select {
-    max-width: 3rem;
+/* —— Landscape Mobile: shorter height —— */
+@media (orientation: landscape) and (max-height: 32.5rem) {
+  .site-shell--keynote {
+    --header-bar-height: 2.5rem;
+    --header-pad-y: 4px;
+    --header-top: max(env(safe-area-inset-top), 4px);
+  }
+  .top-nav__bar {
+    padding: 4px 8px;
   }
 }
 

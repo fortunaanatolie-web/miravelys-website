@@ -60,6 +60,13 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Sticky Phone Tokens */
+    --site-header-height: 64px;
+    --phone-width-desktop: min(clamp(280px, 28vw, 430px), calc((100svh - 150px) * 0.46));
+    --phone-width-tablet: min(clamp(250px, 38vw, 380px), calc((100svh - 130px) * 0.46));
+    --phone-width-mobile-card: min(72vw, 300px);
+    --phone-width-landscape: min(clamp(220px, 32vw, 350px), calc((100svh - var(--site-header-height, 52px) - 24px) * 0.5));
   }
 
   .dark {
@@ -275,8 +282,8 @@
 .brand-mini { font-family: var(--font-serif); color: #f0ca78; letter-spacing: .04em; text-shadow: none; font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem); }
 .nav-links { display: flex; gap: 18px; font-size: .88rem; color: rgba(220, 230, 245, .70); }
 .nav-links a:hover { color: #f3cf83; }
-.language-select { display: inline-flex; align-items: center; gap: 8px; color: rgba(230,238,247,.82); border: 1px solid rgba(255,255,255,.1); border-radius: 999px; padding: 8px 10px; background: rgba(255,255,255,.06); }
-.language-select select { color: inherit; background: transparent; border: none; outline: none; max-width: 130px; }
+.language-select { display: inline-flex; align-items: center; gap: 8px; color: rgba(230,238,247,.82); border: 1px solid rgba(255,255,255,.1); border-radius: 999px; padding: 8px 10px; background: rgba(255,255,255,.06); position: relative; cursor: pointer; }
+.language-select select { color: inherit; background: transparent; border: none; outline: none; }
 .language-select option { background: #071026; color: white; }
 .hero-section, .story-section, .modes-section, .benefits-section, .mockups-section, .trust-section { width: min(1160px, calc(100% - 32px)); margin: 0 auto; }
 .hero-section { min-height: 92vh; display: grid; grid-template-columns: 1fr; gap: 42px; align-items: center; padding: 120px 0 70px; }
@@ -445,12 +452,32 @@ button.secondary-action {
   scroll-margin-top: 110px;
 }
 .language-cluster { display: inline-flex; align-items: center; gap: 10px; }
+.language-cluster--compact .language-select {
+  min-width: auto;
+}
 .language-select {
   position: relative;
+  display: inline-flex;
+  align-items: center;
   min-width: 154px;
   justify-content: center;
+  cursor: pointer;
 }
-.language-select select { appearance: none; padding-right: 14px; cursor: pointer; }
+.language-select select {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+  appearance: none;
+  border: none;
+  background: transparent;
+}
 .language-current {
   display: none;
   font-size: .74rem;
@@ -1214,6 +1241,7 @@ button.secondary-action {
 @media (max-width: 720px) {
   .language-cluster { margin-left: auto; }
   .language-select { min-width: 124px; }
+  .language-cluster--compact .language-select { min-width: auto; }
   .hero-section { gap: 28px; }
   .signature-grid,
   .mode-cards,
@@ -2263,7 +2291,6 @@ html { scroll-behavior: smooth; }
   .top-nav { top: 10px; width: min(100% - 20px, 1160px); transform: translateY(10px); }
   .brand-mini { font-size: 1rem; }
   .language-current { display: none; }
-  .language-select select { max-width: 86px; }
   .nav-links { grid-template-columns: 1fr; }
   .positioning-grid { grid-template-columns: 1fr; }
   .scenario-tabs button { padding: 9px 11px; }

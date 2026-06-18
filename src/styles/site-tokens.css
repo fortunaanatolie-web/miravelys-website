@@ -115,11 +115,29 @@
   --header-mobile-border: rgba(62, 52, 40, 0.11);
 
   /* Header bar — evening default (solid, not glass) */
-  --header-bar-bg: #10141c;
-  --header-bar-border: rgba(255, 255, 255, 0.09);
+  --header-bar-bg:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.02) 42%,
+      rgba(0, 0, 0, 0.14) 100%
+    ),
+    #10141c;
+  --header-bar-border: rgba(255, 255, 255, 0.1);
   --header-bar-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.06) inset,
-    0 10px 32px rgba(0, 0, 0, 0.28);
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.28),
+    0 1px 2px rgba(0, 0, 0, 0.2),
+    0 6px 14px rgba(0, 0, 0, 0.18),
+    0 14px 32px rgba(0, 0, 0, 0.26),
+    0 28px 56px rgba(0, 0, 0, 0.14);
+  --header-bar-glow:
+    radial-gradient(
+      ellipse 88% 120% at 50% 0%,
+      rgba(191, 160, 106, 0.22) 0%,
+      rgba(0, 0, 0, 0.34) 44%,
+      transparent 72%
+    );
   --header-control-bg: rgba(255, 255, 255, 0.06);
   --header-control-border: rgba(255, 255, 255, 0.11);
   --header-ink: rgba(245, 240, 232, 0.94);

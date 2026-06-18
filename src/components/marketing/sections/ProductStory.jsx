@@ -5,7 +5,8 @@ import { resolvePresentation } from '../../../i18n/presentationCopy';
 import RevealOnScroll from '../primitives/RevealOnScroll';
 import ProductStoryDesktop from './ProductStoryDesktop';
 import ProductStoryLandscape from './ProductStoryLandscape';
-import ProductStoryMobile from './ProductStoryMobile';
+import ProductStoryMobilePortrait from './ProductStoryMobilePortrait';
+import ProductStoryTablet from './ProductStoryTablet';
 
 /**
  * Product story — CSS selects desktop / portrait mobile / landscape layouts.
@@ -46,8 +47,12 @@ export default function ProductStory({ lang, locale, t, steps: stepsProp }) {
         <ProductStoryDesktop steps={steps} locale={activeLocale} />
       </div>
 
-      <div className="product-story__mobile">
-        <ProductStoryMobile steps={steps} locale={activeLocale} />
+      <div className="product-story__tablet">
+        <ProductStoryTablet steps={steps} locale={activeLocale} />
+      </div>
+
+      <div className="product-story__mobile-portrait">
+        <ProductStoryMobilePortrait steps={steps} locale={activeLocale} />
       </div>
 
       <div className="product-story__landscape">
