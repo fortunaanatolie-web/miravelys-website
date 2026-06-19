@@ -1,82 +1,250 @@
 /**
- * Phone mockup — clean, reliable, fixed aspect ratio.
+ * iPhone 13 Pro sticky-phone frame — 390×844 logical viewport.
+ * One outer shell, inner rim, screen surface, screen-only screenshot.
+ * Never set width and height together; aspect-ratio drives the other axis.
  */
 
-.phone-mockup {
+.iphone13-frame,
+.phone-mockup.iphone13-frame {
+  --iphone13-width: var(--iphone13-width-desktop, auto);
+
   position: relative;
-  /* width is controlled via layout CSS */
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
   aspect-ratio: 390 / 844;
-  margin: 0 auto;
-  transition: transform 0.7s cubic-bezier(0.25, 1, 0.4, 1);
-}
-
-.phone-mockup__device {
-  position: absolute;
-  inset: 0;
-  border-radius: clamp(34px, 4vw, 58px);
-  background: #101317;
+  width: var(--iphone13-width);
+  height: auto;
+  margin: 0;
+  padding: clamp(7px, 0.8vw, 10px);
+  flex-shrink: 0;
+  border: none;
+  border-radius: clamp(40px, 4.8vw, 58px);
+  background:
+    linear-gradient(145deg, rgba(42, 46, 50, 1) 0%, rgba(15, 17, 20, 1) 46%, rgba(5, 6, 8, 1) 100%);
   box-shadow:
-    0 34px 90px rgba(0, 0, 0, 0.24),
-    0 0 70px rgba(206, 171, 112, 0.14),
-    inset 0 1px 0 rgba(255, 255, 255, 0.14),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.07);
+    0 34px 82px rgba(0, 0, 0, 0.22),
+    0 12px 30px rgba(0, 0, 0, 0.16),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    inset 0 -14px 28px rgba(0, 0, 0, 0.24);
   overflow: hidden;
 }
 
-.phone-mockup__screen-stack {
-  position: absolute;
-  inset: 2.5%;
-  overflow: hidden;
-  border-radius: calc(clamp(34px, 4vw, 58px) * 0.9);
-  background: #000;
-}
-
-.phone-mockup__screen-frame {
+/* Subtle hardware highlight — no glossy toy reflection */
+.iphone13-frame::before {
+  content: '';
   position: absolute;
   inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 5;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.13), transparent 24%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.045), transparent 28%);
+  opacity: 0.42;
+}
+
+/* No notch overlay — screenshots include iOS status bar spacing */
+
+.iphone13-rim {
+  position: relative;
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 0;
+  border-radius: clamp(33px, 4.1vw, 49px);
+  background: #090b0e;
+  overflow: hidden;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.045),
+    inset 0 0 16px rgba(0, 0, 0, 0.28);
+}
+
+.iphone13-screen {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: inherit;
+  overflow: hidden;
+  background: #101317;
+}
+
+.iphone13-frame--framed-asset,
+.phone-mockup--framed-asset.iphone13-frame {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.iphone13-frame--framed-asset::before,
+.phone-mockup--framed-asset.iphone13-frame::before {
+  display: none;
+}
+
+.iphone13-frame--framed-asset .iphone13-rim {
+  background: transparent;
+  box-shadow: none;
+}
+
+.iphone13-frame--framed-asset .iphone13-screen {
+  background: transparent;
+}
+
+.iphone13-screen--missing,
+.iphone13-screen-image--loading {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(165deg, #1c2125 0%, #0d1215 48%, #14191d 100%);
+}
+
+.iphone13-screen-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   opacity: 0;
-  transform: scale(1.012);
-  filter: blur(6px);
+  transform: scale(1.008);
+  filter: blur(5px);
   transition:
     opacity 520ms ease,
     transform 700ms ease,
     filter 520ms ease;
-  z-index: 1;
+  pointer-events: none;
 }
 
-.phone-mockup__screen-frame--active {
+.iphone13-screen-image--screen-only {
+  object-fit: cover;
+  object-position: top center;
+}
+
+.iphone13-screen-image--framed {
+  object-fit: contain;
+  object-position: center center;
+}
+
+.iphone13-screen-image.is-active {
   opacity: 1;
   transform: scale(1);
   filter: blur(0);
   z-index: 2;
 }
 
-.phone-mockup__screen-crop {
-  width: 100%;
-  height: 100%;
+.screenshot-placeholder--phone {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: 1;
 }
 
-.phone-mockup__screen {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.screenshot-placeholder--phone.is-active {
+  opacity: 1;
+  z-index: 2;
 }
 
-.phone-mockup__screen--loading {
-  background: linear-gradient(165deg, #1c2125 0%, #0d1215 48%, #14191d 100%);
-  animation: phone-mockup-shimmer 1.4s ease-in-out infinite;
+/* —— Layout sizing —— */
+.iphone13-frame--desktop,
+.phone-mockup--scroll-story.iphone13-frame--desktop {
+  --iphone13-width: var(--iphone13-width-desktop);
+  width: var(--iphone13-width-desktop);
+  max-width: 100%;
+  max-inline-size: 100%;
 }
 
-@keyframes phone-mockup-shimmer {
-  0%, 100% { opacity: 0.55; }
-  50% { opacity: 0.9; }
+.sticky-story--tablet .iphone13-frame--desktop,
+.sticky-story--tablet .phone-mockup--scroll-story,
+.iphone13-frame--tablet {
+  --iphone13-width: var(--iphone13-width-tablet);
+  width: var(--iphone13-width-tablet);
+  max-width: 100%;
+  max-inline-size: 100%;
+}
+
+.iphone13-frame--mobile-card,
+.phone-mockup--mobile-card.iphone13-frame {
+  --iphone13-width: var(--iphone13-width-mobile-card);
+  width: var(--iphone13-width-mobile-card);
+  max-width: 85vw;
+  border-radius: clamp(22px, 12%, 48px);
+  padding: clamp(5px, 1.1vw, 8px);
+}
+
+.iphone13-frame--mobile-card .iphone13-rim,
+.phone-mockup--mobile-card .iphone13-rim {
+  border-radius: clamp(18px, 10.5%, 42px);
+}
+
+.iphone13-frame--mobile-stage,
+.phone-mockup.phone-mockup--mobile-stage.iphone13-frame {
+  --iphone13-width: auto;
+  width: auto;
+  height: var(--iphone13-height-mobile-stage);
+  max-width: 72vw;
+  max-inline-size: 72vw;
+  max-height: var(--iphone13-height-mobile-stage);
+  flex: 0 0 auto;
+  align-self: center;
+  border-radius: clamp(22px, 12%, 48px);
+  padding: clamp(5px, 1.1vw, 8px);
+}
+
+.iphone13-frame--mobile-stage .iphone13-rim,
+.phone-mockup--mobile-stage .iphone13-rim {
+  border-radius: clamp(18px, 10.5%, 42px);
+}
+
+.iphone13-frame--landscape,
+.phone-mockup.phone-mockup--landscape-stage.iphone13-frame {
+  --iphone13-width: auto;
+  width: auto;
+  height: var(--iphone13-height-landscape);
+  max-width: 34vw;
+  max-inline-size: 34vw;
+  max-height: var(--iphone13-height-landscape);
+  flex: 0 0 auto;
+  align-self: center;
+  border-radius: clamp(22px, 12%, 48px);
+  padding: clamp(5px, 1.1vw, 8px);
+}
+
+.iphone13-frame--landscape .iphone13-rim,
+.phone-mockup--landscape-stage .iphone13-rim {
+  border-radius: clamp(18px, 10.5%, 42px);
+}
+
+.sticky-story .phone-mockup--scroll-story {
+  height: auto !important;
+  max-height: none !important;
+  flex: 0 0 auto;
+}
+
+/* Tablet width safeguard — do not inherit desktop cap */
+@media (min-width: 48rem) and (max-width: 63.9375rem) {
+  :root {
+    --iphone13-width-tablet: min(
+      clamp(250px, 36vw, 350px),
+      calc((100svh - 130px) * 390 / 844)
+    );
+  }
+
+  .iphone13-frame--tablet,
+  .sticky-story--tablet .phone-mockup--scroll-story {
+    width: var(--iphone13-width-tablet);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .phone-mockup__screen-frame {
+  .iphone13-screen-image {
     transition: opacity 0.2s ease;
     transform: none;
     filter: none;
+  }
+
+  .iphone13-frame::before {
+    opacity: 0.3;
   }
 }

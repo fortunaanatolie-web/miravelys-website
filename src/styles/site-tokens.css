@@ -151,7 +151,7 @@
   --story-phone-gap-top: 0.5cm;
   --story-phone-gap-bottom: 1cm;
   --story-sticky-top: calc(
-    var(--header-top, 12px) + var(--site-header-height) + var(--story-phone-gap-top)
+    var(--site-header-height) + var(--story-phone-gap-top)
   );
   --story-sticky-bottom: calc(var(--story-phone-gap-bottom) + env(safe-area-inset-bottom, 0px));
   --story-sticky-height: calc(100svh - var(--story-sticky-top) - var(--story-sticky-bottom));
@@ -159,7 +159,7 @@
   --story-phone-stack-ratio: 2.38;
   --story-phone-available: calc(var(--story-sticky-height) - var(--story-progress-block));
   --story-phone-width: min(
-    clamp(280px, 34vw, 520px),
+    clamp(270px, 24vw, 390px),
     calc(var(--story-phone-available) * 390 / 844)
   );
   --story-phone-max-height: calc(var(--story-phone-width) * 844 / 390);
@@ -167,14 +167,33 @@
   --story-title: var(--keynote-section);
   --story-body: var(--keynote-sub);
 
-  /* Phone mockup width by layout mode */
-  --phone-width-desktop: var(--story-phone-width);
-  --phone-width-mobile-card: min(74vw, 310px);
+  /* iPhone 13 Pro mockup sizing — 390×844 logical viewport */
+  --iphone13-width-desktop: min(
+    clamp(270px, 24vw, 390px),
+    calc((100svh - 150px) * 390 / 844)
+  );
+  --iphone13-width-tablet: min(
+    clamp(250px, 36vw, 350px),
+    calc((100svh - 130px) * 390 / 844)
+  );
+  --iphone13-width-mobile-card: min(72vw, 300px);
+  --iphone13-height-mobile-stage: min(34svh, 300px);
+  --iphone13-height-landscape: min(
+    calc(100svh - var(--site-header-height, 52px) - 28px),
+    78svh
+  );
+
+  /* Legacy aliases — sticky layouts reference these */
+  --phone-width-desktop: var(--iphone13-width-desktop);
+  --phone-width-tablet: var(--iphone13-width-tablet);
+  --phone-width-mobile-card: var(--iphone13-width-mobile-card);
+  --phone-height-mobile-stage: var(--iphone13-height-mobile-stage);
+  --phone-height-landscape: var(--iphone13-height-landscape);
   --phone-width-landscape: min(
     clamp(240px, 34vw, 460px),
     calc(
       (
-        100svh - var(--header-top, 12px) - var(--site-header-height) - var(--story-phone-gap-top) -
+        100svh - var(--site-header-height) - var(--story-phone-gap-top) -
           var(--story-phone-gap-bottom) - var(--story-progress-block) -
           env(safe-area-inset-bottom, 0px)
       ) * 390 / 844

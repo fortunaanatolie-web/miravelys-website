@@ -8,6 +8,10 @@ import { originBlockOrder } from '../config/originBlocks.js';
 import { resolveScreenshotAlt } from '../i18n/screenshotAltCopy.js';
 import { loadMockupScreenImage, resolveMockupScreenImage } from '../config/mockupScreens.js';
 
+/** Sticky-phone screenshots are screen-only app captures (390×844 logical, 780×1688 @2x). */
+export const SCREENSHOT_ASSET_MODE = 'screen-only';
+
+/** @typedef {'screen-only' | 'already-framed'} ScreenshotAssetMode */
 export const SCREENSHOT_BASE = '/miravelys-screenshots';
 export const SCREENSHOT_EXTENSION = 'webp';
 export const CANONICAL_LOCALE = 'en';
@@ -116,7 +120,7 @@ export function resolveLocale(locale) {
 
 export function getScreenshotPath(locale, group, code) {
   const safeLocale = resolveLocale(locale);
-  return `${SCREENSHOT_BASE}/${group}/${safeLocale}/${code}.${SCREENSHOT_EXTENSION}`;
+  return `${SCREENSHOT_BASE}/${group}/${safeLocale}/${code}.${SCREENSHOT_EXTENSION}?v=3`;
 }
 
 export function getLegacyAssetForScreenshot(group, code) {

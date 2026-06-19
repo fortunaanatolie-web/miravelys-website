@@ -4,12 +4,13 @@ import { preloadMiravelysScreenshots } from '../../../lib/miravelysScreenshots';
 import { resolvePresentation } from '../../../i18n/presentationCopy';
 import RevealOnScroll from '../primitives/RevealOnScroll';
 import ProductStoryDesktop from './ProductStoryDesktop';
-import ProductStoryLandscape from './ProductStoryLandscape';
+import ProductStoryMobileLandscape from './ProductStoryMobileLandscape';
 import ProductStoryMobilePortrait from './ProductStoryMobilePortrait';
+import ProductStoryMobilePortraitCards from './ProductStoryMobilePortraitCards';
 import ProductStoryTablet from './ProductStoryTablet';
 
 /**
- * Product story — CSS selects desktop / portrait mobile / landscape layouts.
+ * Product story — CSS selects desktop / tablet / portrait mobile / landscape layouts.
  */
 export default function ProductStory({ lang, locale, t, steps: stepsProp }) {
   const activeLocale = locale ?? lang;
@@ -55,8 +56,16 @@ export default function ProductStory({ lang, locale, t, steps: stepsProp }) {
         <ProductStoryMobilePortrait steps={steps} locale={activeLocale} />
       </div>
 
+      <div className="product-story__mobile-portrait-cards">
+        <ProductStoryMobilePortraitCards steps={steps} locale={activeLocale} />
+      </div>
+
       <div className="product-story__landscape">
-        <ProductStoryLandscape steps={steps} locale={activeLocale} />
+        <ProductStoryMobileLandscape steps={steps} locale={activeLocale} />
+      </div>
+
+      <div className="product-story__landscape-cards">
+        <ProductStoryMobilePortraitCards steps={steps} locale={activeLocale} />
       </div>
     </section>
   );

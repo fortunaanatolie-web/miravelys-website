@@ -28,30 +28,26 @@ export default function StickyStoryLayout({
 
   const screens = useMemo(() => stepsToPhoneScreens(steps, locale), [steps, locale]);
   const handleProgressSelect = useCallback(index => focusStep(index), [focusStep]);
-  const phoneVariant =
-    variant === 'landscape' ? 'landscape' : variant === 'mobile' ? 'mobile' : 'desktop';
-
   return (
     <div className={`sticky-story sticky-story--${variant}`} data-sticky-phone-mode={variant}>
       <div className="sticky-story__phone-column">
-        <div className="sticky-story__phone-inner">
-          <PhoneMockup
-            screens={screens}
+        <PhoneMockup
+          screens={screens}
+          activeIndex={activeIndex}
+          variant="scroll-story"
+          assetMode="screen-only"
+            className={`phone-mockup--scroll-story iphone13-frame--${variant === 'tablet' ? 'tablet' : 'desktop'}`}
+          ariaLabel={presentation?.hero?.deviceLabel || 'Miravelys app screens'}
+        />
+        {variant !== 'landscape' && presentation?.scenes ? (
+          <JourneyProgress
+            scenes={presentation.scenes}
             activeIndex={activeIndex}
-            variant={phoneVariant}
-            className="phone-mockup--scroll-story"
-            ariaLabel={presentation?.hero?.deviceLabel || 'Miravelys app screens'}
+            progressAria={progressAria}
+            onStepSelect={handleProgressSelect}
+            compact
           />
-          {presentation?.scenes ? (
-            <JourneyProgress
-              scenes={presentation.scenes}
-              activeIndex={activeIndex}
-              progressAria={progressAria}
-              onStepSelect={handleProgressSelect}
-              compact
-            />
-          ) : null}
-        </div>
+        ) : null}
       </div>
 
       <div className="sticky-story__text-column">

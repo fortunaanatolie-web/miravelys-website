@@ -75,6 +75,11 @@
     border: 1px solid var(--header-control-border);
   }
 
+  body.site-menu-open .mobile-portrait-story__stage,
+  body.site-menu-open .mobile-landscape-story__phone {
+    visibility: hidden;
+  }
+
   /* Mobile menu — always light text on dark panel */
   .mobile-menu-backdrop,
   .top-nav__backdrop {

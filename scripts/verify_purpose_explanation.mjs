@@ -27,14 +27,17 @@ for (const language of languages) {
 const app = fs.readFileSync(new URL('../src/App.jsx', import.meta.url), 'utf8');
 const journey = fs.readFileSync(new URL('../src/components/marketing/sections/ProductStory.jsx', import.meta.url), 'utf8');
 const stickyLayout = fs.readFileSync(new URL('../src/components/marketing/sections/StickyStoryLayout.jsx', import.meta.url), 'utf8');
-const storyMobile = fs.readFileSync(new URL('../src/components/marketing/sections/ProductStoryMobile.jsx', import.meta.url), 'utf8');
+const storyPortrait = fs.readFileSync(new URL('../src/components/marketing/sections/ProductStoryMobilePortrait.jsx', import.meta.url), 'utf8');
+const storyLandscape = fs.readFileSync(new URL('../src/components/marketing/sections/ProductStoryMobileLandscape.jsx', import.meta.url), 'utf8');
 assert(app.includes('StickyPhoneStory'), 'App must mount StickyPhoneStory');
 assert(!app.includes('PurposeExplanationFlow'), 'Legacy purpose flow must not compete with the main scrollytelling page');
 assert(journey.includes('ProductStoryDesktop'), 'ProductStory must render desktop sticky layout');
-assert(journey.includes('ProductStoryMobile'), 'ProductStory must render mobile stacked cards');
+assert(journey.includes('ProductStoryMobilePortrait'), 'ProductStory must render portrait mobile sticky stage');
+assert(journey.includes('ProductStoryMobileLandscape'), 'ProductStory must render landscape mobile layout');
 assert(stickyLayout.includes('ProductStoryStepContent'), 'Sticky story must render shared step content panels');
 assert(stickyLayout.includes('PhoneMockup'), 'Sticky story must use one stable phone mockup');
-assert(storyMobile.includes('StickyStoryLayout'), 'Mobile story must render sticky scrollytelling layout');
+assert(storyPortrait.includes('mobile-portrait-story__stage'), 'Portrait mobile must reserve a sticky media stage');
+assert(storyLandscape.includes('mobile-landscape-story'), 'Landscape mobile must use dedicated layout region');
 
 const forbidden = [/diagnos(es|e) the user/i, /therapy replacement/i, /absolute truth/i, /who you truly are/i];
 for (const language of languages) {

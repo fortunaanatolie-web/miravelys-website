@@ -115,6 +115,9 @@ export function useMiravelysScreenshot(screen, lang) {
 
       const src = webpSrc || enWebpSrc || legacySrc || '';
       if (src) {
+        if (isDev && !webpSrc && enWebpSrc) {
+          console.warn(`[MiravelysScreenshots] Missing localized screenshot: ${publicPath}. Falling back to English (${enWebpSrc}).`);
+        }
         finish({
           src,
           status: webpSrc ? 'ready' : enWebpSrc ? 'en-fallback' : 'legacy-fallback',

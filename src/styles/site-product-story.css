@@ -1,108 +1,362 @@
 /**
- * Product story — responsive layout switching (desktop / tablet / portrait mobile / landscape).
+ * Product story — device-specific responsive layout branches.
+ * Desktop ≥1024 | Tablet 768–1023 | Portrait mobile ≤767 | Landscape mobile | Cards fallback
  */
 
 /* —— Layout visibility —— */
 .product-story__desktop,
 .product-story__tablet,
 .product-story__mobile-portrait,
-.product-story__landscape {
+.product-story__mobile-portrait-cards,
+.product-story__landscape,
+.product-story__landscape-cards {
   display: none;
 }
 
-/* 1. Desktop (>= 1024px, not landscape mobile) */
+/* Desktop sticky scrollytelling (≥1024px) */
 @media (min-width: 64rem) {
   .product-story__desktop {
     display: block;
   }
 }
 
-/* 2. Tablet (768px - 1023px, portrait or landscape, but not short mobile) */
+/* Tablet sticky scrollytelling (768px–1023px) */
 @media (min-width: 48rem) and (max-width: 63.9375rem) {
   .product-story__tablet {
     display: block;
   }
 }
 
-/* 3. Portrait Mobile (< 768px, portrait) */
+/* Portrait mobile sticky stage (≤767px portrait) */
 @media (max-width: 47.9375rem) and (orientation: portrait) {
   .product-story__mobile-portrait {
     display: block;
   }
 }
 
-/* 4. Landscape Mobile (< 768px width OR short height) */
-@media (orientation: landscape) and (max-height: 32.5rem) and (max-width: 64rem),
-       (orientation: landscape) and (max-width: 47.9375rem) {
+/* Very small portrait — stacked cards (≤360px) */
+@media (max-width: 22.5rem) and (orientation: portrait) {
+  .product-story__mobile-portrait {
+    display: none;
+  }
+
+  .product-story__mobile-portrait-cards {
+    display: block;
+  }
+}
+
+/* Landscape mobile — compact two-column (640px+ wide, ≤540px tall) */
+@media (orientation: landscape) and (max-height: 33.75rem) and (min-width: 40rem) {
   .product-story__landscape {
     display: block;
   }
-  
-  /* Hide intro on compact landscape */
-  .product-story .marketing-scroll-story__intro {
+
+  .product-story__desktop,
+  .product-story__tablet,
+  .product-story__mobile-portrait,
+  .product-story__mobile-portrait-cards {
+    display: none !important;
+  }
+
+  .product-story .marketing-scroll-story__intro,
+  .product-story .sticky-phone-story__intro {
     display: none;
   }
 }
 
-/* —— Desktop sticky story —— */
+/* Very short landscape — stacked cards */
+@media (orientation: landscape) and (max-height: 22.5rem) {
+  .product-story__landscape {
+    display: none !important;
+  }
+
+  .product-story__landscape-cards {
+    display: block;
+  }
+
+  .product-story__desktop,
+  .product-story__tablet,
+  .product-story__mobile-portrait {
+    display: none !important;
+  }
+}
+
+/* Hide journey dots below desktop breakpoint */
+@media (max-width: 63.9375rem) {
+  .product-story .journey-progress {
+    display: none !important;
+  }
+}
+
+/* Hide doorway chips on mobile — prevents leaked labels in landscape */
+@media (max-width: 63.9375rem) {
+  .product-story .story-step__doors {
+    display: none !important;
+  }
+}
+
+/* Inactive steps never show doorway chips (desktop/tablet bleed fix) */
+.product-story .story-step:not(.is-active) .story-step__doors {
+  display: none;
+}
+
+/* ===================================================================
+   Shared story step content
+   =================================================================== */
+.story-step__content {
+  text-align: left;
+}
+
+.story-step__index {
+  margin: 0 0 10px;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mira-text-whisper, rgba(200, 210, 220, 0.6));
+  opacity: 0.72;
+}
+
+.story-step__eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mira-text-whisper, rgba(200, 210, 220, 0.6));
+  margin: 0 0 10px;
+}
+
+.story-step__title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.08;
+  color: var(--mira-ivory, #fff);
+  margin: 0 0 14px;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+.story-step__body {
+  line-height: 1.55;
+  color: var(--mira-text-secondary, rgba(220, 230, 240, 0.8));
+  margin: 0 0 12px;
+}
+
+.story-step__note {
+  font-style: italic;
+  color: var(--mira-text-whisper, rgba(200, 210, 220, 0.6));
+  margin: 0;
+}
+
+.story-step__doors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+}
+
+.story-step__doors li {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(70, 58, 42, 0.22);
+  background: rgba(255, 252, 244, 0.55);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: rgba(38, 34, 28, 0.82);
+}
+
+[data-appearance='evening'] .story-step__doors li {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(244, 239, 230, 0.82);
+}
+
+/* ===================================================================
+   Desktop + tablet sticky story
+   =================================================================== */
 .sticky-story--desktop {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(56px, 7vw, 128px);
-  max-width: 1360px;
+  grid-template-columns: minmax(300px, 0.9fr) minmax(520px, 1.1fr);
+  gap: clamp(72px, 8vw, 140px);
+  max-width: 1320px;
   margin-inline: auto;
-  padding: clamp(40px, 6vw, 80px) 24px 80px;
-  align-items: stretch;
+  padding: clamp(88px, 9vw, 150px) clamp(28px, 5vw, 80px);
+  align-items: start;
 }
 
 .sticky-story--tablet {
   display: grid;
-  grid-template-columns: minmax(250px, 0.8fr) minmax(360px, 1.2fr);
-  gap: clamp(28px, 5vw, 64px);
+  grid-template-columns: minmax(250px, 0.85fr) minmax(360px, 1.15fr);
+  gap: clamp(40px, 6vw, 72px);
   max-width: 960px;
   margin-inline: auto;
-  padding: clamp(32px, 5vw, 64px) 24px 64px;
-  align-items: stretch;
+  padding: clamp(64px, 8vw, 96px) clamp(20px, 4vw, 32px);
+  align-items: start;
 }
 
 .sticky-story__phone-column {
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-}
-
-.sticky-story__phone-inner {
   position: sticky;
-  top: clamp(80px, 12vh, 120px);
+  top: calc(var(--site-header-height) + clamp(24px, 5vh, 72px));
+  height: calc(100svh - clamp(120px, 18vh, 190px));
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 0;
+  min-width: 0;
+  z-index: 2;
+}
+
+.sticky-story--desktop .sticky-story__phone-column {
+  top: calc(var(--site-header-height) + clamp(24px, 5vh, 72px));
+}
+
+.sticky-story--tablet .sticky-story__phone-column {
+  top: calc(var(--site-header-height) + clamp(20px, 4vh, 56px));
+  height: calc(100svh - clamp(100px, 16vh, 170px));
+}
+
+.sticky-story--desktop .phone-mockup--scroll-story {
+  --phone-width: var(--phone-width-desktop);
+}
+
+.sticky-story--tablet .phone-mockup--scroll-story {
+  --phone-width: var(--phone-width-tablet);
+}
+
+.sticky-story .phone-mockup--scroll-story {
+  width: var(--phone-width);
+  max-width: 100%;
+  height: auto !important;
+  max-height: none !important;
+  flex: 0 0 auto;
 }
 
 .sticky-story__text-column {
   display: flex;
   flex-direction: column;
+  min-width: 0;
   padding-bottom: 120px;
 }
 
-.sticky-story--desktop .phone-mockup {
-  width: var(--phone-width-desktop) !important;
-  max-width: none !important;
-  max-height: none !important;
-}
-.sticky-story--tablet .phone-mockup {
-  width: var(--phone-width-tablet) !important;
-  max-width: none !important;
-  max-height: none !important;
+.sticky-story--desktop .story-step,
+.sticky-story--tablet .story-step {
+  min-height: clamp(560px, 86svh, 920px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(40px, 6vh, 80px) 0;
+  opacity: 0.42;
+  transition: opacity 360ms ease, transform 420ms ease;
 }
 
-/* —— Portrait mobile stacked story —— */
+.sticky-story--desktop .story-step.is-active,
+.sticky-story--tablet .story-step.is-active {
+  opacity: 1;
+}
+
+.sticky-story--desktop .story-step__title,
+.sticky-story--tablet .story-step__title {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+}
+
+.sticky-story--desktop .story-step__body,
+.sticky-story--tablet .story-step__body {
+  font-size: clamp(1rem, 1.1vw, 1.125rem);
+}
+
+/* ===================================================================
+   Portrait mobile sticky stage
+   =================================================================== */
+.mobile-portrait-story {
+  position: relative;
+  padding-inline: clamp(18px, 5vw, 24px);
+  padding-bottom: 72px;
+}
+
+.mobile-portrait-story__stage {
+  position: sticky;
+  top: calc(var(--site-header-height, 72px) + 8px);
+  z-index: 3;
+  height: clamp(260px, 42svh, 360px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: calc(clamp(18px, 5vw, 24px) * -1);
+  margin-bottom: clamp(28px, 8vw, 44px);
+  background:
+    radial-gradient(circle at 50% 35%, rgba(218, 189, 128, 0.16), transparent 58%),
+    linear-gradient(to bottom, rgba(248, 244, 235, 0.98), rgba(248, 244, 235, 0.92));
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+[data-appearance='evening'] .mobile-portrait-story__stage {
+  background:
+    radial-gradient(circle at 50% 35%, rgba(206, 171, 112, 0.12), transparent 58%),
+    linear-gradient(to bottom, rgba(9, 8, 14, 0.98), rgba(9, 8, 14, 0.92));
+}
+
+body.site-menu-open .mobile-portrait-story__stage {
+  visibility: hidden;
+}
+
+.mobile-portrait-story__steps {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(44px, 12vw, 72px);
+}
+
+.mobile-portrait-story__step {
+  min-height: 58svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  opacity: 0.48;
+  transition: opacity 260ms ease, transform 260ms ease;
+}
+
+.mobile-portrait-story__step.is-active {
+  opacity: 1;
+}
+
+.mobile-portrait-story__step .story-step__content {
+  text-align: center;
+}
+
+.mobile-portrait-story__step .story-step__index {
+  margin-bottom: 12px;
+}
+
+.mobile-portrait-story__step .story-step__title {
+  font-size: clamp(2.1rem, 10vw, 3.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.mobile-portrait-story__step .story-step__body {
+  font-size: clamp(1rem, 4.3vw, 1.22rem);
+  line-height: 1.5;
+  max-width: 32rem;
+  margin-inline: auto;
+}
+
+.mobile-portrait-story__step .story-step__note {
+  font-size: clamp(0.94rem, 3.8vw, 1.05rem);
+  line-height: 1.5;
+  max-width: 28rem;
+  margin-inline: auto;
+}
+
+/* ===================================================================
+   Portrait mobile stacked cards fallback
+   =================================================================== */
 .stacked-story-mobile {
   display: grid;
-  gap: 48px;
-  padding: 32px 24px 64px;
+  gap: clamp(40px, 10vw, 64px);
+  padding: clamp(24px, 6vw, 40px) clamp(18px, 5vw, 24px) clamp(48px, 12vw, 72px);
   max-width: 480px;
   margin-inline: auto;
 }
@@ -115,148 +369,88 @@
   gap: 24px;
 }
 
-.stacked-story-card__media .phone-mockup {
-  width: var(--phone-width-mobile-card, 280px) !important;
-  max-width: 85vw !important;
-  max-height: none !important;
-  aspect-ratio: 390 / 844 !important;
-  height: auto !important;
-  flex-shrink: 0 !important;
+.stacked-story-card__media .phone-mockup--mobile-card {
+  --phone-width: var(--phone-width-mobile-card);
 }
 
-/* —— Landscape compact sticky —— */
-.sticky-story--landscape {
+/* ===================================================================
+   Landscape mobile — dedicated two-column sticky
+   =================================================================== */
+.mobile-landscape-story {
   display: grid;
-  grid-template-columns: minmax(220px, 0.9fr) minmax(320px, 1.1fr);
-  gap: clamp(28px, 4vw, 56px);
+  grid-template-columns: minmax(240px, 0.85fr) minmax(380px, 1.15fr);
+  gap: clamp(24px, 4vw, 52px);
   max-width: 1120px;
   margin-inline: auto;
-  padding: 18px clamp(20px, 4vw, 52px) 36px;
+  padding: 14px clamp(18px, 4vw, 48px) 32px;
   align-items: start;
 }
 
-.sticky-story--landscape .sticky-story__phone-column {
+.mobile-landscape-story__phone {
   position: sticky;
-  top: calc(var(--site-header-height, 52px) + 12px);
-  height: calc(100svh - var(--site-header-height, 52px) - 24px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.sticky-story--landscape .sticky-story__phone-inner {
-  position: relative;
-  top: auto;
+  top: calc(var(--site-header-height, 52px) + 8px);
+  height: calc(100svh - var(--site-header-height, 52px) - 18px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  min-width: 0;
+  z-index: 2;
 }
 
-.sticky-story--landscape .sticky-story__phone-inner > * {
-  flex-shrink: 0 !important;
+.mobile-landscape-story__steps {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-.sticky-story--landscape .phone-mockup {
-  width: min(34vw, calc((100svh - 140px) * 390 / 844)) !important;
-  max-width: 260px !important;
-  max-height: calc(100svh - 140px) !important;
-  aspect-ratio: 390 / 844 !important;
-  height: auto !important;
-  margin: 0 auto !important;
-}
-
-.sticky-story--landscape .journey-progress {
-  position: relative !important;
-  margin-top: 12px !important;
-  margin-bottom: 0 !important;
-  padding: 0 !important;
-}
-
-/* —— Shared story steps —— */
-.story-step {
-  min-height: 80svh;
+.mobile-landscape-story__step {
+  min-height: 82svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(40px, 6vh, 80px) 0;
-  opacity: 0.42;
-  transition: opacity 360ms ease;
+  padding: clamp(12px, 2vh, 24px) 0;
+  opacity: 0.46;
+  transition: opacity 260ms ease;
 }
 
-.story-step.is-active,
-.story-step--active {
+.mobile-landscape-story__step.is-active {
   opacity: 1;
 }
 
-.story-step__eyebrow {
-  font-size: 0.8125rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--mira-text-whisper, rgba(200, 210, 220, 0.6));
-  margin: 0 0 12px;
+.mobile-landscape-story__step .story-step__title,
+.mobile-landscape-story__step .story-step__headline {
+  max-width: 14ch;
+  font-size: clamp(1.55rem, 4.2vw, 2.35rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
 }
 
-.story-step__title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-  font-weight: 500;
-  line-height: 1.1;
-  color: white;
-  margin: 0 0 16px;
+.mobile-landscape-story__step .story-step__body {
+  max-width: 36rem;
+  font-size: clamp(0.94rem, 2.1vw, 1.08rem);
+  line-height: 1.42;
 }
 
-.story-step__body {
-  font-size: clamp(1rem, 1.1vw, 1.125rem);
-  line-height: 1.58;
-  color: rgba(220, 230, 240, 0.8);
-  margin: 0 0 14px;
-}
-
-.story-step__note {
-  font-size: 0.95rem;
-  font-style: italic;
-  color: rgba(200, 210, 220, 0.6);
-  margin: 0;
-}
-
-/* Landscape compact overrides */
-.sticky-story--landscape .story-step {
-  min-height: 100svh;
-  padding-block: 60px;
-  justify-content: center;
-}
-.sticky-story--landscape .story-step__title {
-  font-size: clamp(1.6rem, 4vw, 2.2rem);
-}
-.stacked-story-card .story-step {
-  min-height: auto;
-  padding: 0;
-  opacity: 1;
-}
-
-/* —— Journey Progress (Dots) —— */
+/* ===================================================================
+   Journey progress dots (desktop only)
+   =================================================================== */
 .journey-progress {
   display: flex;
   justify-content: center;
-  padding: 12px 0;
+  padding: 0;
   z-index: 10;
+  flex-shrink: 0;
 }
 
 .journey-progress__list {
   display: flex;
-  gap: 8px;
+  gap: 13px;
   list-style: none;
   margin: 0;
-  padding: 8px 12px;
-  background: rgba(16, 19, 23, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0;
+  background: transparent;
+  border: none;
 }
 
 .journey-progress__step {
@@ -273,19 +467,84 @@
 
 .journey-progress__dot {
   display: block;
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
+  background: rgba(68, 57, 42, 0.2);
+  transition:
+    background 220ms ease,
+    transform 220ms ease,
+    opacity 220ms ease;
+}
+
+[data-appearance='evening'] .journey-progress__dot {
+  background: rgba(255, 255, 255, 0.22);
 }
 
 .journey-progress__step:hover .journey-progress__dot {
-  background: rgba(255, 255, 255, 0.5);
-  transform: scale(1.2);
+  transform: scale(1.08);
 }
 
 .journey-progress__step--active .journey-progress__dot {
-  background: #ceab70;
-  transform: scale(1.4);
+  background: rgba(190, 145, 58, 0.9);
+  transform: scale(1.08);
+}
+
+.sticky-story .journey-progress--compact {
+  margin-top: clamp(18px, 2.4vw, 28px);
+}
+
+/* ===================================================================
+   Very short landscape — stacked cards in horizontal rows
+   =================================================================== */
+.product-story__landscape-cards .stacked-story-mobile {
+  gap: clamp(24px, 6vw, 40px);
+  padding-block: 12px 24px;
+}
+
+.product-story__landscape-cards .stacked-story-card {
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(10px, 2.5vw, 16px);
+  text-align: left;
+}
+
+.product-story__landscape-cards .stacked-story-card__media {
+  flex: 0 0 auto;
+  width: min(34vw, 140px);
+}
+
+.product-story__landscape-cards .stacked-story-card__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.product-story__landscape-cards .stacked-story-card__text .story-step__title {
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+}
+
+.product-story__landscape-cards .stacked-story-card__text .story-step__body {
+  font-size: clamp(0.82rem, 2vw, 0.95rem);
+  line-height: 1.4;
+}
+
+.product-story__landscape-cards .phone-mockup--mobile-card {
+  --phone-width-mobile-card: min(34vw, 140px);
+}
+
+/* ===================================================================
+   Accessibility
+   =================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .iphone13-screen-image,
+  .phone-screen-image,
+  .story-step,
+  .mobile-portrait-story__step {
+    transition: none;
+  }
+
+  .phone-screen-image {
+    transform: none;
+    filter: none;
+  }
 }

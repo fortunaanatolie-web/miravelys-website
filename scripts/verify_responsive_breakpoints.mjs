@@ -38,7 +38,7 @@ const productStoryCss = fs.readFileSync(
   'utf8'
 );
 assert(productStoryCss.includes('stacked-story-card'), 'site-product-story.css must define stacked card layout for mobile');
-assert(productStoryCss.includes('sticky-story--landscape'), 'site-product-story.css must define landscape sticky story layout');
+assert(productStoryCss.includes('mobile-landscape-story'), 'site-product-story.css must define landscape sticky story layout');
 assert(productStoryCss.includes('phone-width-mobile-card'), 'site-product-story.css must use mobile card sizing');
 assert(breakpointsCss.includes('68.75rem'), 'site-breakpoints.css must define laptop sticky layout breakpoint');
 assert(revealCss.includes('68.6874rem'), 'site-reveal.css must align mobile/tablet cutoff with breakpoints');

@@ -41,13 +41,15 @@ const productCss = fs.readFileSync(new URL('../src/styles/site-product-story.css
 assert(!app.includes('ScreenStorySection'), 'Legacy separate screen story must not be mounted on the main page');
 assert(productStory.includes('ProductStoryDesktop'), 'ProductStory must render desktop layout');
 assert(productStory.includes('ProductStoryMobilePortrait'), 'ProductStory must render mobile portrait layout');
-assert(productStory.includes('ProductStoryLandscape'), 'ProductStory must render landscape sticky layout');
+assert(productStory.includes('ProductStoryMobileLandscape'), 'ProductStory must render landscape mobile layout');
 assert(productStory.includes('product-story__desktop'), 'ProductStory must use CSS layout wrappers');
 assert(stickyLayout.includes('useActiveStep'), 'Sticky story must use useActiveStep');
 assert(stickyLayout.includes('activeIndex'), 'Sticky story must synchronize active text with phone screen');
 assert(stickyLayout.includes('stepsToPhoneScreens'), 'Sticky story must build phone screens from canonical steps');
-assert(mobile.includes('stacked-story-card'), 'Mobile story must use stacked cards layout');
-assert(phone.includes('phone-mockup'), 'Phone must crossfade internal screens');
+const mobileCards = fs.readFileSync(new URL('../src/components/marketing/sections/ProductStoryMobilePortraitCards.jsx', import.meta.url), 'utf8');
+assert(mobile.includes('useNearestStep'), 'Mobile portrait must use nearest-step scroll sync');
+assert(mobileCards.includes('stacked-story-card'), 'Mobile fallback must use stacked cards layout');
+assert(phone.includes('assetMode'), 'Phone mockup must support screen-only vs framed asset modes');
 assert(stepsLib.includes('buildProductStorySteps'), 'Canonical story steps must live in productStorySteps.js');
 assert(stepsLib.includes('screenshotCode'), 'Story steps must include screenshotCode');
 assert(productCss.includes('stacked-story-card'), 'CSS must define stacked card layout');

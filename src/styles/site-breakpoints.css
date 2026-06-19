@@ -498,9 +498,10 @@
 }
 
 .phone-mockup,
-.phone-mockup__device,
-.phone-mockup__screen-stack,
-.phone-mockup__screen {
+.iphone13-frame,
+.iphone13-screen,
+.iphone13-screen-image,
+.phone-screen-image {
   max-inline-size: 100%;
 }
 

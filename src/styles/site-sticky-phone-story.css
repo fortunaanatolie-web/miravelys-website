@@ -64,6 +64,7 @@
   width: auto;
   max-width: 100%;
   margin: 0;
+  margin-top: clamp(18px, 2.4vw, 28px);
 }
 
 .marketing-scroll-story .journey-progress--compact .journey-progress__list {
@@ -71,14 +72,17 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  gap: 6px;
+  gap: 13px;
   list-style: none;
   margin: 0;
   padding: 0;
+  background: transparent;
 }
 
 .marketing-scroll-story .journey-progress--compact .journey-progress__step {
-  padding: 6px;
+  padding: 0;
+  width: 24px;
+  height: 24px;
   border: none;
   background: transparent;
 }
@@ -86,11 +90,14 @@
 .marketing-scroll-story .journey-progress--compact .journey-progress__dot {
   width: 7px;
   height: 7px;
+  background: rgba(68, 57, 42, 0.2);
 }
 
 .marketing-scroll-story .journey-progress--compact .journey-progress__step--active .journey-progress__dot {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
+  background: rgba(190, 145, 58, 0.9);
+  transform: scale(1.08);
 }
 
 [data-appearance='day'] .marketing-scroll-story .journey-progress--compact .journey-progress__step {
@@ -109,31 +116,21 @@
   margin-bottom: clamp(10px, 1.8vh, 18px);
 }
 
-.marketing-scroll-story .phone-mockup--scroll-story:not(.phone-mockup--landscape-compact),
-.marketing-scroll-story__phone-inner .phone-mockup:not(.phone-mockup--landscape-compact) {
-  --phone-width: var(--story-phone-width);
-  flex-shrink: 0;
-  width: var(--story-phone-width);
-  max-width: 100%;
-  max-height: var(--story-phone-available);
-  transform: none !important;
-  margin-inline: auto;
-}
-
-.marketing-scroll-story .phone-mockup--scroll-story:not(.phone-mockup--landscape-compact) .phone-mockup__device,
-.marketing-scroll-story__phone-inner .phone-mockup:not(.phone-mockup--landscape-compact) .phone-mockup__device {
-  max-height: var(--story-phone-max-height);
-}
-
-.marketing-scroll-story .phone-mockup--scroll-story:not(.phone-mockup--landscape-compact) .phone-mockup__screen-stack {
-  max-height: calc(var(--story-phone-max-height) - 2 * var(--phone-chassis-inset-ratio, 0.026) * var(--story-phone-width));
+/* Desktop / tablet sticky phone sizing — scoped to .sticky-story (see site-product-story.css) */
+@media (min-width: 48rem) {
+  .marketing-scroll-story:not(:has(.sticky-story)) .phone-mockup--scroll-story {
+    --phone-width: var(--story-phone-width);
+    flex-shrink: 0;
+    width: var(--story-phone-width);
+    max-width: 100%;
+    max-height: none;
+    transform: none !important;
+    margin-inline: auto;
+  }
 }
 
 .marketing-scroll-story .phone-mockup--scroll-story .phone-mockup__floor-shadow {
-  bottom: -2%;
-  height: 8%;
-  filter: blur(10px);
-  opacity: 0.85;
+  display: none;
 }
 
 /* Text column */
@@ -291,26 +288,27 @@
     --story-progress-block: 24px;
     --story-phone-available: calc(var(--story-sticky-height) - var(--story-progress-block));
     --story-phone-width: min(
-      clamp(260px, 30vw, 480px),
+      clamp(260px, 24vw, 390px),
       calc(var(--story-phone-available) * 390 / 844)
     );
     --phone-width-desktop: var(--story-phone-width);
+    --iphone13-width-desktop: var(--story-phone-width);
   }
 }
 
 @media (max-height: 700px) and (min-width: 48rem) and (not ((orientation: landscape) and (max-height: 520px) and (max-width: 64rem))) {
   :root {
     --story-phone-width: min(
-      clamp(240px, 28vw, 420px),
+      clamp(240px, 22vw, 390px),
       calc(var(--story-phone-available) * 390 / 844)
     );
     --phone-width-desktop: var(--story-phone-width);
+    --iphone13-width-desktop: var(--story-phone-width);
   }
 }
 
-/* Override legacy reveal-journey phone sizing */
-.marketing-scroll-story.reveal-journey .phone-mockup:not(.phone-mockup--landscape-compact) {
-  --phone-width: var(--story-phone-width) !important;
+/* Override legacy reveal-journey phone sizing — sticky story uses .sticky-story rules */
+.marketing-scroll-story.reveal-journey .phone-mockup--scroll-story {
   transform: none !important;
 }
 
@@ -330,7 +328,8 @@
     opacity: 0.72;
   }
 
-  .marketing-scroll-story .phone-mockup__screen-frame {
+  .marketing-scroll-story .iphone13-screen-image,
+  .marketing-scroll-story .phone-screen-image {
     transition: opacity 0.2s ease !important;
     transform: none !important;
     filter: none !important;

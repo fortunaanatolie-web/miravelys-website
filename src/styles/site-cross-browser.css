@@ -88,14 +88,13 @@ body {
 .gallery-card-premium img,
 .cinematic-break img,
 .gallery-mini-figure img,
-.phone-mockup__screen {
+.iphone13-screen-image {
   image-rendering: auto;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
-/* Prevent upscaled blur when source is smaller than layout slot */
-.phone-mockup__screen {
+.iphone13-screen-image {
   max-width: 100%;
 }
 

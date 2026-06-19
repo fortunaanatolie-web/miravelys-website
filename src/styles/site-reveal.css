@@ -564,7 +564,8 @@
     opacity: 0;
   }
 
-  .phone-mockup__screen {
+  .iphone13-screen-image,
+  .phone-screen-image {
     transition: none;
     filter: none;
   }
@@ -645,12 +646,13 @@
   padding-bottom: 0;
 }
 
-.reveal-journey .phone-mockup {
+.reveal-journey .phone-mockup:not(.phone-mockup--scroll-story) {
   --phone-width: min(390px, 34vw);
   transform: none !important;
 }
 
-.reveal-journey .phone-mockup__screen-stack--crossfade .phone-mockup__screen-frame {
+.reveal-journey .iphone13-screen-image,
+.reveal-journey .phone-screen-image {
   transition:
     opacity 0.82s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.82s cubic-bezier(0.22, 1, 0.36, 1),
@@ -739,7 +741,7 @@
     padding-top: 0;
   }
 
-  .reveal-journey .phone-mockup {
+  .reveal-journey .phone-mockup:not(.phone-mockup--scroll-story) {
     --phone-width: min(300px, 78vw);
   }
 

@@ -47,15 +47,17 @@ const app = fs.readFileSync(new URL('../src/App.jsx', import.meta.url), 'utf8');
 const router = fs.readFileSync(new URL('../src/SiteRouter.jsx', import.meta.url), 'utf8');
 const revealJourney = fs.readFileSync(new URL('../src/components/marketing/sections/StickyPhoneStory.jsx', import.meta.url), 'utf8');
 const stickyLayout = fs.readFileSync(new URL('../src/components/marketing/sections/StickyStoryLayout.jsx', import.meta.url), 'utf8');
-const storyMobile = fs.readFileSync(new URL('../src/components/marketing/sections/ProductStoryMobile.jsx', import.meta.url), 'utf8');
+const storyPortrait = fs.readFileSync(new URL('../src/components/marketing/sections/ProductStoryMobilePortrait.jsx', import.meta.url), 'utf8');
+const storyLandscape = fs.readFileSync(new URL('../src/components/marketing/sections/ProductStoryMobileLandscape.jsx', import.meta.url), 'utf8');
 const phone = fs.readFileSync(new URL('../src/components/marketing/primitives/PhoneMockup.jsx', import.meta.url), 'utf8');
 
 if (!app.includes('StickyPhoneStory')) fail('Marketing site must use StickyPhoneStory scroll presentation.');
 if (app.includes('MockupsSection') || app.includes('ScreenStorySection') || app.includes('OriginStorySection')) fail('Main page still contains legacy competing marketing sections.');
 if (!router.includes('path="/story"')) fail('Story route missing.');
 if (!stickyLayout.includes('PhoneMockup') || !stickyLayout.includes('activeIndex={activeIndex}')) fail('Sticky story must use one PhoneMockup synchronized to activeIndex.');
-if (!storyMobile.includes('StickyStoryLayout')) fail('Mobile product story must use sticky scrollytelling layout.');
-if (!phone.includes('phone-mockup__screen-stack--crossfade')) fail('Phone mockup must crossfade internal screens.');
+if (!storyPortrait.includes('useNearestStep')) fail('Portrait mobile product story must use nearest-step scroll sync.');
+if (!storyLandscape.includes('mobile-landscape-story')) fail('Landscape mobile product story must use dedicated layout region.');
+if (!phone.includes('iphone13-screen-image') || !phone.includes('is-active')) fail('Phone mockup must crossfade internal screens.');
 if (/href="#"\s*[^>]*>/.test(`${app}\n${revealJourney}`)) fail('Found placeholder href="#" CTA.');
 
 const srcBlob = fs.readFileSync(new URL('../src/App.jsx', import.meta.url), 'utf8')

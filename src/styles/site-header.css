@@ -213,12 +213,13 @@
 .top-nav__panel {
   position: fixed;
   z-index: var(--z-mobile-menu-panel, 91);
-  top: calc(var(--header-top) + var(--header-bar-height) + 10px);
+  top: calc(var(--header-bar-height) + 8px);
   left: 50%;
   transform: translateX(-50%) translateY(-8px);
   width: min(980px, calc(100% - var(--page-gutter, 20px) * 2));
-  max-height: calc(100dvh - var(--header-top) - var(--header-bar-height) - 24px);
+  max-height: calc(100dvh - var(--header-bar-height) - 24px);
   overflow: auto;
+  display: none;
   opacity: 0;
   pointer-events: none;
   transition:
@@ -226,7 +227,16 @@
     transform 0.25s var(--mira-ease-cinematic, cubic-bezier(0.22, 1, 0.36, 1));
 }
 
+.top-nav__panel[hidden],
+.top-nav__panel:not(.top-nav__panel--open) {
+  display: none !important;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .top-nav__panel--open {
+  display: block;
   opacity: 1;
   pointer-events: auto;
   transform: translateX(-50%) translateY(0);

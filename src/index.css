@@ -61,12 +61,7 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* Sticky Phone Tokens */
-    --site-header-height: 64px;
-    --phone-width-desktop: min(clamp(280px, 28vw, 430px), calc((100svh - 150px) * 0.46));
-    --phone-width-tablet: min(clamp(250px, 38vw, 380px), calc((100svh - 130px) * 0.46));
-    --phone-width-mobile-card: min(72vw, 300px);
-    --phone-width-landscape: min(clamp(220px, 32vw, 350px), calc((100svh - var(--site-header-height, 52px) - 24px) * 0.5));
+    /* Sticky phone sizing lives in site-tokens.css + site-product-story.css */
   }
 
   .dark {
@@ -402,7 +397,9 @@ button.secondary-action {
 .app-mockup-grid .phone-mockup--glow { box-shadow: 0 26px 80px rgba(0,0,0,.36), 0 0 70px rgba(224,183,91,.18); }
 .phone-top { height: 30px; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; color: rgba(235,241,248,.55); font-size: .72rem; }
 .phone-top span { width: 34px; height: 4px; border-radius: 99px; background: rgba(255,255,255,.18); }
-.phone-screen { min-height: 310px; display: flex; flex-direction: column; gap: 16px; padding: 18px; border-radius: 26px; background: radial-gradient(circle at 50% 0%, rgba(96,222,204,.14), transparent 42%), linear-gradient(180deg, rgba(11,22,50,.96), rgba(5,10,26,.98)); }
+.mockup-grid .phone-screen,
+.app-mockup-grid .phone-screen,
+.oura-mockup-grid .phone-screen { min-height: 310px; display: flex; flex-direction: column; gap: 16px; padding: 18px; border-radius: 26px; background: radial-gradient(circle at 50% 0%, rgba(96,222,204,.14), transparent 42%), linear-gradient(180deg, rgba(11,22,50,.96), rgba(5,10,26,.98)); }
 .screen-kicker { color: #ecc578; text-transform: uppercase; letter-spacing: .12em; font-size: .68rem; }
 .phone-screen h3 { color: white; font-size: 1.08rem; line-height: 1.25; }
 .phone-screen button {
@@ -429,7 +426,7 @@ button.secondary-action {
 .trust-grid { margin-top: 24px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
 .trust-grid span { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.05); padding: 10px 13px; border-radius: 999px; color: rgba(236,244,250,.7); }
 @media (max-width: 980px) { .nav-links { display: none; } .hero-section, .story-section, .benefits-section { grid-template-columns: 1fr; } .mode-cards, .image-row { grid-template-columns: 1fr; } .mockup-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .section-heading { display: block; } .language-pills { justify-content: flex-start; margin-top: 16px; } }
-@media (max-width: 560px) { .top-nav { border-radius: 22px; align-items: flex-start; } .hero-section { padding-top: 105px; } .mockup-grid { grid-template-columns: 1fr; } .phone-screen { min-height: 270px; } }
+@media (max-width: 560px) { .top-nav { border-radius: 22px; align-items: flex-start; } .hero-section { padding-top: 105px; } .mockup-grid { grid-template-columns: 1fr; } .mockup-grid .phone-screen, .app-mockup-grid .phone-screen { min-height: 270px; } }
 
 /* Miravelys public website — expanded multilingual lifestyle implementation */
 .ambient-orb {
@@ -608,8 +605,12 @@ button.secondary-action {
   background: linear-gradient(180deg, rgba(255,255,255,.08), transparent);
   pointer-events: none;
 }
-.phone-screen { position: relative; overflow: hidden; }
-.phone-screen::before {
+.mockup-grid .phone-screen,
+.app-mockup-grid .phone-screen,
+.oura-mockup-grid .phone-screen { position: relative; overflow: hidden; }
+.mockup-grid .phone-screen::before,
+.app-mockup-grid .phone-screen::before,
+.oura-mockup-grid .phone-screen::before {
   content: '';
   position: absolute;
   inset: -40% -20% auto;

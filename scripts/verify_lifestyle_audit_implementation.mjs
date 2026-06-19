@@ -68,7 +68,8 @@ const phoneMockupCss = fs.readFileSync(
   new URL('../src/styles/site-phone-mockup.css', import.meta.url),
   'utf8'
 );
-assert(phoneMockupCss.includes('.phone-mockup__device'), 'site-phone-mockup.css must define clean device presentation');
+assert(phoneMockupCss.includes('.iphone13-rim'), 'site-phone-mockup.css must define iPhone 13 Pro frame rim');
+assert(phoneMockupCss.includes('.iphone13-screen'), 'site-phone-mockup.css must define iPhone 13 Pro screen surface');
 assert(!phoneMockupCss.includes('__notch'), 'phone mockup must not add CSS notch chrome');
 
 const revealCss = fs.readFileSync(
