@@ -76,7 +76,7 @@
   }
 
   body.site-menu-open .mobile-portrait-story__stage,
-  body.site-menu-open .landscape-story__phone-column {
+  body.site-menu-open .landscape-story__stage {
     visibility: hidden;
   }
 
@@ -334,7 +334,7 @@
     scroll-margin-top: var(--header-safe-offset);
   }
 
-  .product-story__landscape .landscape-story__phone-column {
+  .product-story__landscape .landscape-story__stage {
     top: var(--header-safe-offset);
   }
 }

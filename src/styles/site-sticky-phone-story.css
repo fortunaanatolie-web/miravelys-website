@@ -155,10 +155,10 @@
   transition: opacity 400ms ease;
 }
 
-/* Landscape branch uses .landscape-story-step — keep marketing step rhythm off it */
-.marketing-scroll-story:has(.landscape-story) .story-step__headline,
-.marketing-scroll-story:has(.landscape-story) .story-step__title,
-.marketing-scroll-story:has(.landscape-story) .story-step__body {
+/* Landscape branch — scoped to visible landscape wrapper only */
+.product-story__landscape .landscape-story .story-step__headline,
+.product-story__landscape .landscape-story .story-step__title,
+.product-story__landscape .landscape-story .story-step__body {
   max-width: 100%;
 }
 

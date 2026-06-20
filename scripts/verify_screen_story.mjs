@@ -37,6 +37,10 @@ const mobile = fs.readFileSync(new URL('../src/components/marketing/sections/Pro
 const phone = fs.readFileSync(new URL('../src/components/marketing/primitives/PhoneMockup.jsx', import.meta.url), 'utf8');
 const stepsLib = fs.readFileSync(new URL('../src/lib/productStorySteps.js', import.meta.url), 'utf8');
 const productCss = fs.readFileSync(new URL('../src/styles/site-product-story.css', import.meta.url), 'utf8');
+const portraitCss = fs.readFileSync(new URL('../src/styles/product-story/ProductStoryPortrait.css', import.meta.url), 'utf8');
+const landscapeCss = fs.readFileSync(new URL('../src/styles/product-story/ProductStoryLandscape.css', import.meta.url), 'utf8');
+const breakpointsCss = fs.readFileSync(new URL('../src/styles/product-story/productStoryBreakpoints.css', import.meta.url), 'utf8');
+const desktopCss = fs.readFileSync(new URL('../src/styles/product-story/ProductStoryDesktop.css', import.meta.url), 'utf8');
 
 assert(!app.includes('ScreenStorySection'), 'Legacy separate screen story must not be mounted on the main page');
 assert(productStory.includes('ProductStoryDesktop'), 'ProductStory must render desktop layout');
@@ -52,8 +56,11 @@ assert(mobileCards.includes('stacked-story-card'), 'Mobile fallback must use sta
 assert(phone.includes('assetMode'), 'Phone mockup must support screen-only vs framed asset modes');
 assert(stepsLib.includes('buildProductStorySteps'), 'Canonical story steps must live in productStorySteps.js');
 assert(stepsLib.includes('screenshotCode'), 'Story steps must include screenshotCode');
-assert(productCss.includes('stacked-story-card'), 'CSS must define stacked card layout');
-assert(productCss.includes('product-story__landscape'), 'CSS must control landscape layout visibility');
+assert(portraitCss.includes('stacked-story-card'), 'Portrait CSS must define stacked card layout');
+assert(breakpointsCss.includes('product-story__landscape'), 'Breakpoints must control landscape layout visibility');
+assert(breakpointsCss.includes('product-story__desktop'), 'Breakpoints must control desktop layout visibility');
+assert(desktopCss.includes('sticky-story--desktop'), 'Desktop CSS must define sticky desktop layout');
+assert(landscapeCss.includes('landscape-story__stage'), 'Landscape CSS must define side-by-side sticky stage');
 
 const forbidden = [/this image shows/i, /mockup near/i, /screenshot showing/i, /phone floating/i, /browser frame/i];
 for (const language of languages) {
