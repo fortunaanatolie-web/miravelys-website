@@ -104,7 +104,6 @@
   letter-spacing: 0.12em;
 }
 
-.site-shell--keynote .hero-keynote__headline,
 .site-shell--keynote .reveal-journey__title,
 .site-shell--keynote .reveal-step__headline,
 .site-shell--keynote .problem-bridge__title,
@@ -128,7 +127,16 @@
 }
 
 .site-shell--keynote .hero-keynote__headline {
-  max-width: min(38rem, 100%);
+  font-family: var(--font-serif);
+  font-size: var(--keynote-display);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: var(--mira-ivory);
+  text-wrap: wrap;
+  overflow-wrap: break-word;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto var(--space-stack-2);
 }
 
@@ -159,7 +167,7 @@
 }
 
 .site-shell--keynote .hero-keynote__subline {
-  max-width: var(--measure-copy);
+  max-width: var(--main-lead-measure, var(--measure-copy));
   margin: 0 auto var(--space-stack-5);
 }
 
@@ -526,12 +534,6 @@ html:lang(pt) .site-shell--keynote .top-nav__panel-links a {
 }
 
 /* Long-word translations: prevent heading overflow */
-html:lang(de) .site-shell--keynote .hero-keynote__headline,
-html:lang(ru) .site-shell--keynote .hero-keynote__headline,
-html:lang(fr) .site-shell--keynote .hero-keynote__headline,
-html:lang(ro) .site-shell--keynote .hero-keynote__headline,
-html:lang(es) .site-shell--keynote .hero-keynote__headline,
-html:lang(pt) .site-shell--keynote .hero-keynote__headline,
 html:lang(de) .site-shell--keynote .reveal-step__headline,
 html:lang(ru) .site-shell--keynote .reveal-step__headline,
 html:lang(fr) .site-shell--keynote .reveal-step__headline,
@@ -540,6 +542,33 @@ html:lang(es) .site-shell--keynote .reveal-step__headline,
 html:lang(pt) .site-shell--keynote .reveal-step__headline {
   overflow-wrap: anywhere;
   word-break: break-word;
+}
+
+/* ============================
+   RESPONSIVE — Mobile portrait (≤767px)
+   ============================ */
+
+@media (max-width: 47.99rem) and (orientation: portrait) {
+  .site-shell--keynote {
+    --keynote-display: clamp(1.75rem, 7.8vw, 2.35rem);
+    --keynote-section: clamp(1.5rem, 6.8vw, 2rem);
+    --keynote-sub: clamp(0.97rem, 3.9vw, 1.08rem);
+    --keynote-whisper: clamp(0.9rem, 3.4vw, 0.98rem);
+    --type-body-relaxed: clamp(0.97rem, 3.6vw, 1.06rem);
+    --type-story-body: clamp(0.97rem, 3.6vw, 1.06rem);
+  }
+
+  .site-shell--keynote .reveal-journey__title,
+  .site-shell--keynote .download-card--finale h2 {
+    font-size: var(--keynote-section);
+    line-height: 1.08;
+  }
+
+  .site-shell--keynote .reveal-journey__lead,
+  .site-shell--keynote .download-card--finale > p:not(.download-card__legacy) {
+    font-size: var(--keynote-sub);
+    line-height: 1.5;
+  }
 }
 
 /* ============================

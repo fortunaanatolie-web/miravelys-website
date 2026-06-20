@@ -600,12 +600,11 @@
   max-width: min(920px, calc(100% - 32px));
 }
 
-.hero-section--story-intro .hero-keynote__headline {
-  max-width: min(36rem, 100%);
-}
-
+.hero-section--story-intro .hero-keynote__headline,
 .hero-section--story-intro .hero-keynote__subline {
-  max-width: min(44rem, 100%);
+  width: 100%;
+  max-width: 100%;
+  text-wrap: wrap;
 }
 
 .reveal-journey {
@@ -712,19 +711,18 @@
 .story-teaser-card h2 {
   font-family: var(--font-serif);
   font-size: var(--keynote-section);
-  line-height: 1.08;
+  line-height: 1.1;
   letter-spacing: -0.03em;
-  margin: 0 auto 16px;
   color: var(--mira-ivory);
   text-wrap: balance;
+  max-width: var(--main-headline-measure, min(28rem, 100%));
 }
 
 .story-teaser-card p:not(.eyebrow) {
-  max-width: min(620px, 100%);
-  margin: 0 auto 24px;
+  max-width: var(--main-lead-measure, min(32rem, 100%));
   color: var(--mira-text-secondary);
   font-size: var(--keynote-sub);
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
 .story-teaser-card__link {
@@ -754,13 +752,5 @@
   .reveal-journey__intro,
   .reveal-step__content {
     padding-inline: 0;
-  }
-
-  .story-teaser-card {
-    text-align: start;
-  }
-
-  .story-teaser-card__link {
-    justify-content: flex-start;
   }
 }

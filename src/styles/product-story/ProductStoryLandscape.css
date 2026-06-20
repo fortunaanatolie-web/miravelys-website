@@ -114,21 +114,23 @@
 
   .landscape-story-step .story-step__title,
   .landscape-story-step .story-step__headline {
-    max-width: 13ch;
-    font-size: clamp(1.95rem, 5vw, 3.25rem);
-    line-height: 0.96;
-    letter-spacing: -0.04em;
+    max-width: 100%;
+    font-size: clamp(1.35rem, 5.8svh, 1.95rem);
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+    text-wrap: pretty;
+    overflow-wrap: break-word;
   }
 
   .landscape-story-step .story-step__body {
     max-width: 35rem;
-    font-size: clamp(0.95rem, 2.2vw, 1.12rem);
-    line-height: 1.42;
+    font-size: clamp(0.88rem, 2.4svh, 1.02rem);
+    line-height: 1.4;
   }
 
   .landscape-story-step .story-step__note {
-    font-size: clamp(0.9rem, 2vw, 1.04rem);
-    line-height: 1.38;
+    font-size: clamp(0.84rem, 2.2svh, 0.96rem);
+    line-height: 1.36;
   }
 
   body.site-menu-open .landscape-story__phone-column {
@@ -160,12 +162,12 @@
 }
 
 .product-story__landscape-cards .stacked-story-card__text .story-step__title {
-  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  font-size: clamp(1.05rem, 3.6svh, 1.4rem);
 }
 
 .product-story__landscape-cards .stacked-story-card__text .story-step__body {
-  font-size: clamp(0.82rem, 2vw, 0.95rem);
-  line-height: 1.4;
+  font-size: clamp(0.8rem, 2.2svh, 0.92rem);
+  line-height: 1.38;
 }
 
 .product-story__landscape-cards .phone-mockup--mobile-card {

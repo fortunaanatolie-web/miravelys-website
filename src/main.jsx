@@ -22,6 +22,7 @@ import './styles/product-story/ProductStoryDesktop.css';
 import './styles/product-story/ProductStoryPortrait.css';
 import './styles/product-story/ProductStoryLandscape.css';
 import './styles/site-product-story.css';
+import './styles/site-main-copy.css';
 import './styles/site-mobile-shell.css';
 import './styles/site-screenshot-placeholder.css';
 import './styles/site-early-access-modal.css';

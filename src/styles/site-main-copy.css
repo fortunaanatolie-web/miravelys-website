@@ -1,0 +1,177 @@
+/**
+ * Main page editorial copy — shared rhythm for hero, works intro, and teaser.
+ * Keeps hierarchy and measure consistent without touching desktop sticky story.
+ */
+
+.site-shell--keynote {
+  --main-headline-measure: min(36rem, 100%);
+  --main-lead-measure: min(32rem, 100%);
+  --main-copy-gap-tight: clamp(8px, 2vw, 12px);
+  --main-copy-gap: clamp(12px, 2.8vw, 18px);
+  --main-copy-gap-wide: clamp(18px, 4vw, 28px);
+}
+
+/* —— Shared copy stacks —— */
+.hero-keynote__intro,
+.marketing-scroll-story__intro,
+.sticky-phone-story__intro,
+.story-teaser-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+}
+
+.hero-keynote__brand,
+.hero-keynote__eyebrow,
+.hero-keynote__headline,
+.hero-keynote__subline,
+.marketing-scroll-story__intro .eyebrow,
+.marketing-scroll-story__intro .reveal-journey__title,
+.marketing-scroll-story__intro .reveal-journey__lead,
+.sticky-phone-story__intro .eyebrow,
+.sticky-phone-story__intro .reveal-journey__title,
+.sticky-phone-story__intro .reveal-journey__lead,
+.story-teaser-card .eyebrow,
+.story-teaser-card h2,
+.story-teaser-card p:not(.eyebrow) {
+  margin: 0;
+  width: 100%;
+}
+
+.site-shell--keynote .hero-keynote__headline {
+  font-size: var(--keynote-display);
+  width: 100%;
+  max-width: 100%;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  text-wrap: wrap;
+  overflow-wrap: break-word;
+}
+
+.site-shell--keynote .hero-keynote__brand {
+  margin-bottom: var(--main-copy-gap-tight);
+}
+
+.site-shell--keynote .hero-keynote__eyebrow,
+.marketing-scroll-story__intro .eyebrow,
+.sticky-phone-story__intro .eyebrow,
+.story-teaser-card .eyebrow {
+  margin-bottom: var(--main-copy-gap);
+}
+
+.site-shell--keynote .hero-keynote__headline,
+.marketing-scroll-story__intro .reveal-journey__title,
+.sticky-phone-story__intro .reveal-journey__title,
+.story-teaser-card h2 {
+  margin-bottom: var(--main-copy-gap);
+}
+
+.site-shell--keynote .hero-keynote__subline,
+.marketing-scroll-story__intro .reveal-journey__lead,
+.sticky-phone-story__intro .reveal-journey__lead,
+.story-teaser-card p:not(.eyebrow) {
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+  line-height: 1.55;
+}
+
+.site-shell--keynote .hero-keynote__subline,
+.marketing-scroll-story__intro .reveal-journey__lead,
+.sticky-phone-story__intro .reveal-journey__lead {
+  margin-bottom: var(--main-copy-gap-wide);
+}
+
+.story-teaser-card p:not(.eyebrow) {
+  margin-bottom: var(--main-copy-gap-wide);
+}
+
+.hero-keynote__actions,
+.story-teaser-card__link {
+  margin-top: 0;
+}
+
+.marketing-scroll-story__intro .reveal-journey__title,
+.sticky-phone-story__intro .reveal-journey__title {
+  font-family: var(--font-serif);
+  font-size: var(--keynote-section);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--mira-ivory);
+  max-width: var(--main-headline-measure);
+  text-wrap: balance;
+}
+
+.marketing-scroll-story__intro .reveal-journey__lead,
+.sticky-phone-story__intro .reveal-journey__lead {
+  font-size: var(--keynote-sub);
+  color: var(--mira-text-secondary);
+}
+
+.mobile-portrait-story__step .story-step__content {
+  max-width: min(100%, 26rem);
+  margin-inline: auto;
+}
+
+.mobile-portrait-story__step .story-step__index {
+  margin-bottom: var(--main-copy-gap-tight);
+}
+
+.mobile-portrait-story__step .story-step__eyebrow {
+  margin-bottom: var(--main-copy-gap);
+}
+
+.mobile-portrait-story__step .story-step__title {
+  margin-bottom: var(--main-copy-gap);
+}
+
+.mobile-portrait-story__step .story-step__body {
+  margin-bottom: var(--main-copy-gap);
+}
+
+.mobile-portrait-story__step .story-step__note {
+  margin-bottom: 0;
+}
+
+@media (max-width: 47.99rem) and (orientation: portrait) {
+  .site-shell--keynote {
+    --main-headline-measure: min(28rem, 100%);
+    --main-lead-measure: min(28rem, 100%);
+  }
+
+  .hero-section--keynote {
+    padding-top: clamp(24px, 6vw, 40px);
+    padding-bottom: clamp(32px, 8vw, 52px);
+  }
+
+  .hero-keynote__intro,
+  .marketing-scroll-story__intro,
+  .sticky-phone-story__intro {
+    max-width: min(100%, 28rem);
+    padding-inline: clamp(2px, 1vw, 8px);
+  }
+
+  .marketing-scroll-story__intro,
+  .sticky-phone-story__intro {
+    padding-top: clamp(36px, 8vw, 56px);
+    padding-bottom: clamp(12px, 3vw, 20px);
+  }
+
+  .story-teaser-card {
+    text-align: center;
+    align-items: center;
+  }
+
+  .story-teaser-card__link {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 48rem) {
+  .site-shell--keynote {
+    --main-headline-measure: min(42rem, 100%);
+    --main-lead-measure: min(40rem, 100%);
+  }
+}

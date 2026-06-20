@@ -181,12 +181,13 @@
   font-family: var(--font-serif);
   font-size: var(--story-title);
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 1.12;
   letter-spacing: -0.03em;
   color: var(--mira-ivory);
   margin: 0 0 clamp(12px, 2vh, 16px);
-  text-wrap: balance;
-  overflow-wrap: anywhere;
+  max-width: 100%;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
 }
 
 .marketing-scroll-story .story-step__body {
@@ -333,5 +334,21 @@
     transition: opacity 0.2s ease !important;
     transform: none !important;
     filter: none !important;
+  }
+}
+
+@media (max-width: 47.99rem) and (orientation: portrait) {
+  .marketing-scroll-story__intro .reveal-journey__title,
+  .sticky-phone-story__intro .reveal-journey__title {
+    font-size: var(--keynote-section);
+    line-height: 1.1;
+    max-width: var(--main-headline-measure, min(20rem, 100%));
+  }
+
+  .marketing-scroll-story__intro .reveal-journey__lead,
+  .sticky-phone-story__intro .reveal-journey__lead {
+    font-size: var(--keynote-sub);
+    line-height: 1.55;
+    max-width: var(--main-lead-measure, min(28rem, 100%));
   }
 }

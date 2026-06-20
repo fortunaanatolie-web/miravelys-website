@@ -39,11 +39,11 @@ body.site-menu-open .mobile-portrait-story__stage {
 .mobile-portrait-story__steps {
   display: flex;
   flex-direction: column;
-  gap: clamp(44px, 12vw, 72px);
+  gap: clamp(32px, 8vw, 56px);
 }
 
 .mobile-portrait-story__step {
-  min-height: 58svh;
+  min-height: min(46svh, 480px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,21 +65,24 @@ body.site-menu-open .mobile-portrait-story__stage {
 }
 
 .mobile-portrait-story__step .story-step__title {
-  font-size: clamp(2.1rem, 10vw, 3.8rem);
-  line-height: 0.95;
+  font-size: clamp(1.7rem, 7.8vw, 2.45rem);
+  line-height: 1.1;
   letter-spacing: -0.03em;
+  max-width: 100%;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
 }
 
 .mobile-portrait-story__step .story-step__body {
-  font-size: clamp(1rem, 4.3vw, 1.22rem);
-  line-height: 1.5;
+  font-size: clamp(0.94rem, 3.6vw, 1.08rem);
+  line-height: 1.48;
   max-width: 32rem;
   margin-inline: auto;
 }
 
 .mobile-portrait-story__step .story-step__note {
-  font-size: clamp(0.94rem, 3.8vw, 1.05rem);
-  line-height: 1.5;
+  font-size: clamp(0.88rem, 3.2vw, 0.98rem);
+  line-height: 1.46;
   max-width: 28rem;
   margin-inline: auto;
 }
@@ -103,6 +106,16 @@ body.site-menu-open .mobile-portrait-story__stage {
 
 .stacked-story-card__media .phone-mockup--mobile-card {
   --phone-width: var(--phone-width-mobile-card);
+}
+
+.stacked-story-card .story-step__title {
+  font-size: clamp(1.45rem, 6.5vw, 2rem);
+  line-height: 1.02;
+}
+
+.stacked-story-card .story-step__body {
+  font-size: clamp(0.92rem, 3.5vw, 1.02rem);
+  line-height: 1.45;
 }
 
 @media (prefers-reduced-motion: reduce) {

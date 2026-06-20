@@ -87,8 +87,18 @@
 }
 
 .sticky-story--desktop .story-step__title,
-.sticky-story--tablet .story-step__title {
+.sticky-story--tablet .story-step__title,
+.sticky-story--desktop .story-step__headline,
+.sticky-story--tablet .story-step__headline {
   font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  line-height: 1.12;
+  max-width: 100%;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+}
+
+.sticky-story--tablet .story-step {
+  min-height: clamp(480px, 72svh, 800px);
 }
 
 .sticky-story--desktop .story-step__body,

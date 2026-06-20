@@ -50,11 +50,12 @@
 .story-step__title {
   font-family: var(--font-serif);
   font-weight: 500;
-  line-height: 1.08;
+  line-height: 1.12;
   color: var(--mira-ivory, #fff);
   margin: 0 0 14px;
-  text-wrap: balance;
-  overflow-wrap: anywhere;
+  max-width: 100%;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
 }
 
 .story-step__body {

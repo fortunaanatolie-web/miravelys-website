@@ -165,12 +165,11 @@
 
   .hero-keynote__intro {
     width: 100%;
-    max-width: min(100%, 36rem);
+    max-width: min(100%, 32rem);
   }
 
   .hero-keynote__brand {
     font-size: clamp(0.95rem, 4vw, 1.1rem);
-    margin-bottom: 8px;
   }
 
   .hero-keynote__eyebrow {
@@ -179,22 +178,27 @@
   }
 
   .hero-keynote__headline {
-    max-width: 14ch;
+    width: 100%;
+    max-width: 100%;
     margin-inline: auto;
-    font-size: clamp(2rem, 9.5vw, 3.25rem);
-    line-height: 0.95;
-    letter-spacing: -0.045em;
+    font-size: var(--keynote-display, clamp(1.75rem, 7.8vw, 2.35rem));
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+    text-wrap: wrap;
+    overflow-wrap: break-word;
   }
 
   .hero-keynote__subline {
-    max-width: 28rem;
+    width: 100%;
+    max-width: 100%;
     margin-inline: auto;
-    font-size: clamp(1.02rem, 4.2vw, 1.2rem);
-    line-height: 1.48;
+    font-size: var(--keynote-sub, clamp(0.97rem, 3.9vw, 1.1rem));
+    line-height: 1.55;
   }
 
   .hero-keynote__actions {
-    margin-top: clamp(20px, 5vw, 28px);
+    width: 100%;
+    max-width: min(100%, 20rem);
   }
 
   .hero-keynote__actions .keynote-cta {
@@ -279,7 +283,8 @@
   }
 
   .hero-keynote__headline {
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
     font-size: clamp(1.85rem, 10vw, 2.6rem);
   }
 }

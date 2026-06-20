@@ -173,22 +173,24 @@ button.keynote-cta {
 
 .hero-keynote__headline {
   font-family: var(--font-serif);
-  font-size: var(--keynote-section);
+  font-size: var(--keynote-display, var(--keynote-section));
   font-weight: 500;
   line-height: 1.08;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
   color: var(--mira-ivory);
   margin: 0 auto 14px;
-  max-width: min(38rem, 100%);
-  text-wrap: balance;
+  width: 100%;
+  max-width: 100%;
+  text-wrap: wrap;
+  overflow-wrap: break-word;
 }
 
 .hero-keynote__subline {
   font-size: var(--type-body-relaxed);
-  line-height: 1.62;
+  line-height: 1.55;
   letter-spacing: -0.01em;
   color: var(--mira-text-secondary);
-  max-width: min(38rem, 100%);
+  max-width: var(--main-lead-measure, min(38rem, 100%));
   margin: 0 auto 28px;
 }
 
@@ -644,8 +646,9 @@ button.keynote-cta {
 }
 
 @media (max-width: 640px) {
-  .hero-keynote__headline {
-    max-width: none;
+  .site-shell--keynote .hero-keynote__headline {
+    width: 100%;
+    max-width: 100%;
   }
 
   .product-scene__headline {

@@ -8,7 +8,14 @@
   overflow-x: clip;
 }
 
-.site-shell--keynote .hero-keynote__headline,
+.site-shell--keynote .hero-keynote__headline {
+  max-width: 100%;
+  text-wrap: wrap;
+  overflow-wrap: break-word;
+  -webkit-hyphens: none;
+  hyphens: none;
+}
+
 .site-shell--keynote .reveal-step__headline,
 .site-shell--keynote .download-card h2,
 .site-shell--keynote .trust-section__title,
@@ -139,7 +146,7 @@
   .site-shell--keynote {
     --keynote-device-hero: min(320px, 88vw);
     --keynote-device-chapter: min(300px, 86vw);
-    --keynote-display: clamp(1.75rem, 1.2rem + 2.8vw, 2.2rem);
+    --keynote-display: clamp(1.7rem, 1.15rem + 2.4vw, 2.05rem);
   }
 
   .hero-keynote__trust li {
@@ -478,7 +485,10 @@
 
 /* Final product-accuracy polish: keep long localized Miravelys copy readable
    without hiding content or adding fake frames around app mockups. */
-.hero-keynote__headline,
+.hero-keynote__headline {
+  text-wrap: wrap;
+}
+
 .section-title,
 .purpose-step__title,
 .reveal-step__headline,
