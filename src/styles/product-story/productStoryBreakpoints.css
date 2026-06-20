@@ -1,0 +1,97 @@
+/**
+ * Product story layout visibility — isolated branch switching.
+ * Desktop | tablet portrait | portrait mobile | landscape mobile | card fallbacks
+ */
+
+.product-story__desktop,
+.product-story__tablet,
+.product-story__portrait,
+.product-story__mobile-portrait,
+.product-story__mobile-portrait-cards,
+.product-story__landscape,
+.product-story__landscape-cards {
+  display: none;
+}
+
+/* Desktop sticky scrollytelling (≥1024px) */
+@media (min-width: 64rem) {
+  .product-story__desktop {
+    display: block;
+  }
+}
+
+/* Tablet sticky — portrait only (768px–1023px) */
+@media (min-width: 48rem) and (max-width: 63.9375rem) and (orientation: portrait) {
+  .product-story__tablet {
+    display: block;
+  }
+}
+
+/* Portrait mobile sticky stage (≤767px portrait) */
+@media (max-width: 47.9375rem) and (orientation: portrait) {
+  .product-story__portrait,
+  .product-story__mobile-portrait {
+    display: block;
+  }
+}
+
+/* Very small portrait — stacked cards (≤360px) */
+@media (max-width: 22.5rem) and (orientation: portrait) {
+  .product-story__portrait,
+  .product-story__mobile-portrait {
+    display: none;
+  }
+
+  .product-story__mobile-portrait-cards {
+    display: block;
+  }
+}
+
+/* Landscape mobile — compact two-column (≤1023px landscape, height > 360px) */
+@media (max-width: 63.9375rem) and (orientation: landscape) and (min-height: 22.5625rem) {
+  .product-story__landscape {
+    display: block;
+  }
+
+  .product-story__desktop,
+  .product-story__tablet,
+  .product-story__portrait,
+  .product-story__mobile-portrait,
+  .product-story__mobile-portrait-cards {
+    display: none !important;
+  }
+
+  .product-story .marketing-scroll-story__intro,
+  .product-story .sticky-phone-story__intro {
+    display: none;
+  }
+}
+
+/* Short landscape — fall back to portrait sticky */
+@media (max-width: 63.9375rem) and (orientation: landscape) and (max-height: 22.5rem) {
+  .product-story__landscape {
+    display: none !important;
+  }
+
+  .product-story__desktop,
+  .product-story__tablet {
+    display: none !important;
+  }
+
+  .product-story__portrait,
+  .product-story__mobile-portrait {
+    display: block;
+  }
+}
+
+/* Ultra-short landscape — horizontal stacked cards */
+@media (max-width: 63.9375rem) and (orientation: landscape) and (max-height: 18rem) {
+  .product-story__portrait,
+  .product-story__mobile-portrait {
+    display: none !important;
+  }
+
+  .product-story__landscape-cards {
+    display: block;
+  }
+}

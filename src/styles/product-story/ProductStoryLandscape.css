@@ -1,0 +1,179 @@
+/**
+ * Landscape mobile sticky story — isolated layout branch.
+ * Only applies inside .landscape-story; does not affect desktop or portrait.
+ */
+
+@media (max-width: 63.9375rem) and (orientation: landscape) and (min-height: 22.5625rem) {
+  :root {
+    --site-header-height: 52px;
+  }
+
+  .site-header {
+    padding: max(env(safe-area-inset-top), 4px) 12px 6px;
+  }
+
+  .top-nav__bar {
+    min-height: 44px;
+    padding: 5px 8px 5px 14px;
+    max-width: min(100%, 760px);
+  }
+
+  .language-cluster--compact .language-select {
+    min-height: 38px;
+    padding-inline: 10px;
+  }
+
+  .mobile-menu-button {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .landscape-story {
+    display: grid;
+    grid-template-columns: minmax(210px, 0.82fr) minmax(360px, 1.18fr);
+    gap: clamp(20px, 4vw, 44px);
+    max-width: 980px;
+    margin-inline: auto;
+    padding-inline: clamp(16px, 4vw, 42px);
+    padding-block: 10px 28px;
+    align-items: start;
+    overflow-x: clip;
+  }
+
+  .landscape-story__phone-column {
+    position: sticky;
+    top: calc(var(--site-header-height, 52px) + 8px);
+    height: calc(100svh - var(--site-header-height, 52px) - 18px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    z-index: 2;
+  }
+
+  .landscape-story .iphone13-frame--landscape,
+  .landscape-story .phone-mockup--landscape-stage {
+    width: auto;
+    height: min(
+      calc(100svh - var(--site-header-height, 52px) - 34px),
+      78svh
+    );
+    max-width: 32vw;
+    max-height: min(
+      calc(100svh - var(--site-header-height, 52px) - 34px),
+      78svh
+    );
+    aspect-ratio: 390 / 844;
+    flex: 0 0 auto;
+    align-self: center;
+    border-radius: clamp(22px, 12%, 48px);
+    padding: clamp(5px, 1.1vw, 8px);
+  }
+
+  .landscape-story .iphone13-frame--landscape .iphone13-rim,
+  .landscape-story .phone-mockup--landscape-stage .iphone13-rim {
+    border-radius: clamp(18px, 10.5%, 42px);
+  }
+
+  .landscape-story__text-column {
+    min-width: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .landscape-story__text-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .landscape-story-step {
+    min-height: 82svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(12px, 2vh, 24px) 0;
+    opacity: 0.44;
+    transition: opacity 260ms ease;
+  }
+
+  .landscape-story-step.is-active {
+    opacity: 1;
+  }
+
+  .landscape-story-step .story-step__index {
+    font-size: clamp(0.72rem, 1.8vw, 0.86rem);
+    letter-spacing: 0.12em;
+  }
+
+  .landscape-story-step .story-step__eyebrow {
+    font-size: clamp(0.72rem, 1.8vw, 0.88rem);
+    letter-spacing: 0.14em;
+  }
+
+  .landscape-story-step .story-step__title,
+  .landscape-story-step .story-step__headline {
+    max-width: 13ch;
+    font-size: clamp(1.95rem, 5vw, 3.25rem);
+    line-height: 0.96;
+    letter-spacing: -0.04em;
+  }
+
+  .landscape-story-step .story-step__body {
+    max-width: 35rem;
+    font-size: clamp(0.95rem, 2.2vw, 1.12rem);
+    line-height: 1.42;
+  }
+
+  .landscape-story-step .story-step__note {
+    font-size: clamp(0.9rem, 2vw, 1.04rem);
+    line-height: 1.38;
+  }
+
+  body.site-menu-open .landscape-story__phone-column {
+    visibility: hidden;
+  }
+}
+
+/* Very short landscape — stacked cards in horizontal rows */
+.product-story__landscape-cards .stacked-story-mobile {
+  gap: clamp(24px, 6vw, 40px);
+  padding-block: 12px 24px;
+}
+
+.product-story__landscape-cards .stacked-story-card {
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(10px, 2.5vw, 16px);
+  text-align: left;
+}
+
+.product-story__landscape-cards .stacked-story-card__media {
+  flex: 0 0 auto;
+  width: min(34vw, 140px);
+}
+
+.product-story__landscape-cards .stacked-story-card__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.product-story__landscape-cards .stacked-story-card__text .story-step__title {
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+}
+
+.product-story__landscape-cards .stacked-story-card__text .story-step__body {
+  font-size: clamp(0.82rem, 2vw, 0.95rem);
+  line-height: 1.4;
+}
+
+.product-story__landscape-cards .phone-mockup--mobile-card {
+  --phone-width-mobile-card: min(34vw, 140px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landscape-story-step {
+    transition: none;
+  }
+}

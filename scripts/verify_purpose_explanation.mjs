@@ -37,7 +37,7 @@ assert(journey.includes('ProductStoryMobileLandscape'), 'ProductStory must rende
 assert(stickyLayout.includes('ProductStoryStepContent'), 'Sticky story must render shared step content panels');
 assert(stickyLayout.includes('PhoneMockup'), 'Sticky story must use one stable phone mockup');
 assert(storyPortrait.includes('mobile-portrait-story__stage'), 'Portrait mobile must reserve a sticky media stage');
-assert(storyLandscape.includes('mobile-landscape-story'), 'Landscape mobile must use dedicated layout region');
+assert(storyLandscape.includes('landscape-story'), 'Landscape mobile must use dedicated layout region');
 
 const forbidden = [/diagnos(es|e) the user/i, /therapy replacement/i, /absolute truth/i, /who you truly are/i];
 for (const language of languages) {

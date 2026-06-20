@@ -197,18 +197,11 @@
   border-radius: clamp(18px, 10.5%, 42px);
 }
 
+/* Landscape frame base — height/width sizing lives in ProductStoryLandscape.css */
 .iphone13-frame--landscape,
 .phone-mockup.phone-mockup--landscape-stage.iphone13-frame {
-  --iphone13-width: min(34vw, calc(var(--iphone13-height-landscape) * 390 / 844));
-  width: var(--iphone13-width);
-  height: var(--iphone13-height-landscape);
-  max-width: 34vw;
-  max-inline-size: 34vw;
-  max-height: var(--iphone13-height-landscape);
   flex: 0 0 auto;
   align-self: center;
-  border-radius: clamp(22px, 12%, 48px);
-  padding: clamp(5px, 1.1vw, 8px);
 }
 
 .iphone13-frame--landscape .iphone13-rim,

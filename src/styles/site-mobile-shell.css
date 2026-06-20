@@ -76,7 +76,7 @@
   }
 
   body.site-menu-open .mobile-portrait-story__stage,
-  body.site-menu-open .mobile-landscape-story__phone {
+  body.site-menu-open .landscape-story__phone-column {
     visibility: hidden;
   }
 

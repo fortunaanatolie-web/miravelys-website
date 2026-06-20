@@ -56,7 +56,7 @@ if (app.includes('MockupsSection') || app.includes('ScreenStorySection') || app.
 if (!router.includes('path="/story"')) fail('Story route missing.');
 if (!stickyLayout.includes('PhoneMockup') || !stickyLayout.includes('activeIndex={activeIndex}')) fail('Sticky story must use one PhoneMockup synchronized to activeIndex.');
 if (!storyPortrait.includes('useNearestStep')) fail('Portrait mobile product story must use nearest-step scroll sync.');
-if (!storyLandscape.includes('mobile-landscape-story')) fail('Landscape mobile product story must use dedicated layout region.');
+if (!storyLandscape.includes('landscape-story')) fail('Landscape mobile product story must use dedicated layout region.');
 if (!phone.includes('iphone13-screen-image') || !phone.includes('is-active')) fail('Phone mockup must crossfade internal screens.');
 if (/href="#"\s*[^>]*>/.test(`${app}\n${revealJourney}`)) fail('Found placeholder href="#" CTA.');
 

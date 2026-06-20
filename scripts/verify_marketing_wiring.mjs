@@ -18,7 +18,8 @@ const productStory = fs.readFileSync(new URL('../src/components/marketing/sectio
 const stickyLayout = fs.readFileSync(new URL('../src/components/marketing/sections/StickyStoryLayout.jsx', import.meta.url), 'utf8');
 const storyPortrait = fs.readFileSync(new URL('../src/components/marketing/sections/ProductStoryMobilePortrait.jsx', import.meta.url), 'utf8');
 const storyLandscape = fs.readFileSync(new URL('../src/components/marketing/sections/ProductStoryMobileLandscape.jsx', import.meta.url), 'utf8');
-const productCss = fs.readFileSync(new URL('../src/styles/site-product-story.css', import.meta.url), 'utf8');
+const portraitCss = fs.readFileSync(new URL('../src/styles/product-story/ProductStoryPortrait.css', import.meta.url), 'utf8');
+const landscapeCss = fs.readFileSync(new URL('../src/styles/product-story/ProductStoryLandscape.css', import.meta.url), 'utf8');
 const revealFrame = fs.readFileSync(new URL('../src/components/marketing/primitives/RevealingDeviceFrame.jsx', import.meta.url), 'utf8');
 const footer = fs.readFileSync(new URL('../src/components/marketing/MarketingSiteFooter.jsx', import.meta.url), 'utf8');
 
@@ -44,9 +45,9 @@ assert(stickyLayout.includes('stepsToPhoneScreens'), 'Sticky layout must build s
 assert(storyPortrait.includes('useNearestStep'), 'Portrait mobile must use nearest-step scroll sync');
 assert(storyPortrait.includes('mobile-portrait-story__stage'), 'Portrait mobile must use sticky media stage');
 assert(storyLandscape.includes('useNearestStep'), 'Landscape mobile must use nearest-step scroll sync');
-assert(storyLandscape.includes('mobile-landscape-story'), 'Landscape mobile must use dedicated layout region');
-assert(productCss.includes('mobile-portrait-story__stage'), 'Product story CSS must define portrait sticky stage');
-assert(productCss.includes('mobile-landscape-story'), 'Product story CSS must define landscape mobile layout');
+assert(storyLandscape.includes('landscape-story'), 'Landscape mobile must use dedicated layout region');
+assert(portraitCss.includes('mobile-portrait-story__stage'), 'Product story CSS must define portrait sticky stage');
+assert(landscapeCss.includes('landscape-story'), 'Product story CSS must define landscape mobile layout');
 assert(revealFrame.includes('screens = useMemo'), 'RevealingDeviceFrame must build one screen stack for crossfade changes');
 assert(!app.includes('BetaSection'), 'Main page must not include legacy beta section block');
 assert(app.includes('DownloadSection'), 'Main page must keep a clear final download CTA');

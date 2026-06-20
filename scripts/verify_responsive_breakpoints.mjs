@@ -25,6 +25,8 @@ const revealCss = fs.readFileSync(
 const mainJs = fs.readFileSync(new URL('../src/main.jsx', import.meta.url), 'utf8');
 
 assert(mainJs.includes('site-sticky-phone-story.css'), 'main.jsx must import site-sticky-phone-story.css');
+assert(mainJs.includes('product-story/productStoryBreakpoints.css'), 'main.jsx must import productStoryBreakpoints.css');
+assert(mainJs.includes('product-story/ProductStoryLandscape.css'), 'main.jsx must import ProductStoryLandscape.css');
 assert(mainJs.includes('site-product-story.css'), 'main.jsx must import site-product-story.css');
 assert(mainJs.includes('site-breakpoints.css'), 'main.jsx must import site-breakpoints.css');
 assert(tokensCss.includes('--bp-tablet'), 'site-tokens.css must define tablet breakpoint');
@@ -37,9 +39,22 @@ const productStoryCss = fs.readFileSync(
   new URL('../src/styles/site-product-story.css', import.meta.url),
   'utf8'
 );
-assert(productStoryCss.includes('stacked-story-card'), 'site-product-story.css must define stacked card layout for mobile');
-assert(productStoryCss.includes('mobile-landscape-story'), 'site-product-story.css must define landscape sticky story layout');
-assert(productStoryCss.includes('phone-width-mobile-card'), 'site-product-story.css must use mobile card sizing');
+const landscapeCss = fs.readFileSync(
+  new URL('../src/styles/product-story/ProductStoryLandscape.css', import.meta.url),
+  'utf8'
+);
+const breakpointsCss2 = fs.readFileSync(
+  new URL('../src/styles/product-story/productStoryBreakpoints.css', import.meta.url),
+  'utf8'
+);
+const portraitCss = fs.readFileSync(
+  new URL('../src/styles/product-story/ProductStoryPortrait.css', import.meta.url),
+  'utf8'
+);
+assert(portraitCss.includes('stacked-story-card'), 'ProductStoryPortrait.css must define stacked card layout for mobile');
+assert(landscapeCss.includes('landscape-story'), 'ProductStoryLandscape.css must define landscape sticky story layout');
+assert(breakpointsCss2.includes('product-story__landscape'), 'productStoryBreakpoints.css must define landscape branch visibility');
+assert(productStoryCss.includes('phone-width-mobile-card') || landscapeCss.includes('phone-width-mobile-card'), 'product story must use mobile card sizing');
 assert(breakpointsCss.includes('68.75rem'), 'site-breakpoints.css must define laptop sticky layout breakpoint');
 assert(revealCss.includes('68.6874rem'), 'site-reveal.css must align mobile/tablet cutoff with breakpoints');
 assert(breakpointsCss.includes('prefers-reduced-motion'), 'site-breakpoints.css must respect reduced motion');

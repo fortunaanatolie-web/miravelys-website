@@ -52,7 +52,7 @@ export default function ProductStory({ lang, locale, t, steps: stepsProp }) {
         <ProductStoryTablet steps={steps} locale={activeLocale} />
       </div>
 
-      <div className="product-story__mobile-portrait">
+      <div className="product-story__portrait product-story__mobile-portrait">
         <ProductStoryMobilePortrait steps={steps} locale={activeLocale} />
       </div>
 
