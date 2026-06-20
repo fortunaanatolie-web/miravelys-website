@@ -60,6 +60,8 @@ assert(portraitCss.includes('stacked-story-card'), 'Portrait CSS must define sta
 assert(breakpointsCss.includes('product-story__landscape'), 'Breakpoints must control landscape layout visibility');
 assert(breakpointsCss.includes('product-story__desktop'), 'Breakpoints must control desktop layout visibility');
 assert(desktopCss.includes('sticky-story--desktop'), 'Desktop CSS must define sticky desktop layout');
+assert(desktopCss.includes('sticky-story__phone-inner'), 'Desktop CSS must use inner sticky phone wrapper');
+assert(stickyLayout.includes('sticky-story__phone-inner'), 'Sticky story must wrap phone in inner sticky container');
 assert(landscapeCss.includes('landscape-story__stage'), 'Landscape CSS must define side-by-side sticky stage');
 
 const forbidden = [/this image shows/i, /mockup near/i, /screenshot showing/i, /phone floating/i, /browser frame/i];

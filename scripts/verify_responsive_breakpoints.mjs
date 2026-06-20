@@ -54,7 +54,7 @@ const portraitCss = fs.readFileSync(
 assert(portraitCss.includes('stacked-story-card'), 'ProductStoryPortrait.css must define stacked card layout for mobile');
 assert(landscapeCss.includes('landscape-story'), 'ProductStoryLandscape.css must define landscape sticky story layout');
 assert(breakpointsCss2.includes('product-story__landscape'), 'productStoryBreakpoints.css must define landscape branch visibility');
-assert(productStoryCss.includes('phone-width-mobile-card') || landscapeCss.includes('phone-width-mobile-card'), 'product story must use mobile card sizing');
+assert(landscapeCss.includes('.product-story__landscape-cards'), 'product story must use mobile card sizing');
 assert(breakpointsCss.includes('68.75rem'), 'site-breakpoints.css must define laptop sticky layout breakpoint');
 assert(revealCss.includes('68.6874rem'), 'site-reveal.css must align mobile/tablet cutoff with breakpoints');
 assert(breakpointsCss.includes('prefers-reduced-motion'), 'site-breakpoints.css must respect reduced motion');

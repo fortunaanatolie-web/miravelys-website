@@ -23,42 +23,60 @@
   align-items: start;
 }
 
+/* Stretch with text column so sticky inner tracks the full story scroll */
 .sticky-story--desktop .sticky-story__phone-column,
 .sticky-story--tablet .sticky-story__phone-column {
-  position: sticky;
+  position: relative;
+  align-self: stretch;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
   min-width: 0;
   z-index: 2;
 }
 
-.sticky-story--desktop .sticky-story__phone-column {
-  top: calc(var(--site-header-height) + clamp(24px, 5vh, 72px));
-  height: calc(100svh - clamp(120px, 18vh, 190px));
+.sticky-story--desktop .sticky-story__phone-inner,
+.sticky-story--tablet .sticky-story__phone-inner {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  width: 100%;
 }
 
-.sticky-story--tablet .sticky-story__phone-column {
-  top: calc(var(--site-header-height) + clamp(20px, 4vh, 56px));
-  height: calc(100svh - clamp(100px, 16vh, 170px));
+.sticky-story--desktop .sticky-story__phone-inner {
+  top: var(--story-desktop-sticky-top);
+  max-height: var(--story-desktop-sticky-height);
+}
+
+.sticky-story--tablet .sticky-story__phone-inner {
+  top: var(--story-tablet-sticky-top);
+  max-height: var(--story-tablet-sticky-height);
 }
 
 .sticky-story--desktop .phone-mockup--scroll-story {
   --phone-width: var(--phone-width-desktop);
+  --story-phone-max-stack: calc(
+    var(--story-desktop-sticky-height) - var(--story-progress-block, 28px) -
+      clamp(18px, 2.4vw, 28px)
+  );
 }
 
 .sticky-story--tablet .phone-mockup--scroll-story {
   --phone-width: var(--phone-width-tablet);
+  --story-phone-max-stack: calc(
+    var(--story-tablet-sticky-height) - var(--story-progress-block, 28px) -
+      clamp(14px, 2vw, 24px)
+  );
 }
 
 .sticky-story--desktop .phone-mockup--scroll-story,
 .sticky-story--tablet .phone-mockup--scroll-story {
-  width: var(--phone-width);
+  width: min(var(--phone-width), calc(var(--story-phone-max-stack) * 390 / 844));
   max-width: 100%;
+  max-height: var(--story-phone-max-stack);
   height: auto !important;
-  max-height: none !important;
   flex: 0 0 auto;
 }
 
@@ -109,4 +127,5 @@
 .sticky-story--desktop .journey-progress--compact,
 .sticky-story--tablet .journey-progress--compact {
   margin-top: clamp(18px, 2.4vw, 28px);
+  flex: 0 0 auto;
 }

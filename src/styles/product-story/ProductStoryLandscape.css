@@ -1,21 +1,92 @@
 /**
- * Landscape mobile sticky story — portrait pattern, side-by-side.
- * Sticky phone stage on the left; steps scroll in a separate column on the right.
+ * Landscape product story.
+ *
+ * Normal phone landscape uses .product-story__landscape-cards.
+ * .product-story__landscape is only for larger/taller landscape viewports.
  */
+
+/* ----------------------------- */
+/* Landscape cards fallback      */
+/* ----------------------------- */
+
+.product-story__landscape-cards .stacked-story-mobile {
+  display: grid;
+  gap: clamp(18px, 4vw, 32px);
+  width: min(100%, 960px);
+  margin-inline: auto;
+  padding: 12px clamp(14px, 4vw, 32px) 32px;
+}
+
+.product-story__landscape-cards .stacked-story-card {
+  display: grid;
+  grid-template-columns: minmax(92px, 26vw) minmax(0, 1fr);
+  gap: clamp(14px, 3vw, 24px);
+  align-items: center;
+  text-align: left;
+  min-height: auto;
+}
+
+.product-story__landscape-cards .stacked-story-card__media {
+  width: min(26vw, 132px);
+  max-width: 132px;
+}
+
+.product-story__landscape-cards .stacked-story-card__text {
+  min-width: 0;
+}
+
+.product-story__landscape-cards .phone-mockup--mobile-card,
+.product-story__landscape-cards .iphone13-frame--mobile-card {
+  --iphone13-width: min(26vw, 132px);
+
+  width: min(26vw, 132px);
+  max-width: 132px;
+}
+
+.product-story__landscape-cards .story-step__index {
+  margin-bottom: 0.35rem;
+  font-size: clamp(0.68rem, 1.9svh, 0.8rem);
+  letter-spacing: 0.12em;
+}
+
+.product-story__landscape-cards .story-step__eyebrow {
+  font-size: clamp(0.68rem, 1.9svh, 0.8rem);
+  letter-spacing: 0.13em;
+}
+
+.product-story__landscape-cards .story-step__title,
+.product-story__landscape-cards .story-step__headline {
+  max-width: 18ch;
+  font-size: clamp(1.15rem, 5svh, 1.7rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.product-story__landscape-cards .story-step__body {
+  max-width: 34rem;
+  font-size: clamp(0.82rem, 2.5svh, 0.98rem);
+  line-height: 1.4;
+}
+
+.product-story__landscape-cards .story-step__note,
+.product-story__landscape-cards .story-step__whisper {
+  display: none;
+}
+
+/* ----------------------------- */
+/* Taller landscape compact sticky */
+/* ----------------------------- */
 
 .product-story__landscape .landscape-story {
   --landscape-header-offset: var(
     --header-safe-offset,
-    calc(var(--site-header-height, 52px) + 12px)
+    calc(var(--site-header-height, 52px) + 10px)
   );
-  --landscape-stage-height: min(
-    calc(100svh - var(--landscape-header-offset) - 24px),
-    calc(100dvh - var(--landscape-header-offset) - 24px)
-  );
-  --landscape-phone-height: min(var(--landscape-stage-height), 72svh);
+  --landscape-stage-height: calc(var(--safe-viewport-height, var(--vvh, 100svh)) - var(--landscape-header-offset) - 20px);
+  --landscape-phone-height: min(var(--landscape-stage-height), 72svh, 320px);
   --landscape-phone-width: min(
     calc(var(--landscape-phone-height) * 390 / 844),
-    32vw
+    30vw
   );
 
   position: relative;
@@ -23,15 +94,18 @@
   grid-template-columns: minmax(0, var(--landscape-phone-width)) minmax(0, 1fr);
   grid-template-areas: 'stage steps';
   align-items: start;
-  gap: clamp(16px, 3vw, 36px);
-  max-width: min(980px, 100%);
+  gap: clamp(18px, 4vw, 36px);
+  width: min(100%, 980px);
   margin-inline: auto;
-  padding-inline: clamp(12px, 3vw, 32px);
-  padding-block: 8px 56px;
+  padding-inline: clamp(14px, 4vw, 32px);
+  padding-block: 8px 40px;
+  overflow: visible;
+  transform: none;
+  will-change: auto;
+  contain: none;
   isolation: isolate;
 }
 
-/* Left rail — mirrors portrait .mobile-portrait-story__stage */
 .product-story__landscape .landscape-story__stage {
   grid-area: stage;
   position: sticky;
@@ -43,11 +117,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  overflow: visible;
+  transform: none;
+  will-change: auto;
   border-radius: clamp(18px, 3vw, 28px);
   background:
-    radial-gradient(circle at 42% 38%, rgba(218, 189, 128, 0.16), transparent 62%),
-    linear-gradient(to right, rgba(248, 244, 235, 0.98), rgba(248, 244, 235, 0.9));
+    radial-gradient(circle at 42% 38%, rgba(218, 189, 128, 0.14), transparent 62%),
+    linear-gradient(to right, rgba(248, 244, 235, 0.96), rgba(248, 244, 235, 0.88));
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
@@ -55,7 +131,7 @@
 [data-appearance='evening'] .product-story__landscape .landscape-story__stage {
   background:
     radial-gradient(circle at 42% 38%, rgba(206, 171, 112, 0.12), transparent 62%),
-    linear-gradient(to right, rgba(9, 8, 14, 0.98), rgba(9, 8, 14, 0.9));
+    linear-gradient(to right, rgba(9, 8, 14, 0.96), rgba(9, 8, 14, 0.88));
 }
 
 .product-story__landscape .landscape-story__stage .phone-mockup--landscape-stage,
@@ -63,9 +139,9 @@
   --iphone13-width: auto;
 
   width: auto !important;
-  max-width: 100% !important;
   height: var(--landscape-phone-height) !important;
-  max-height: calc(100% - 12px) !important;
+  max-height: calc(var(--landscape-stage-height) - 12px) !important;
+  max-width: 30vw !important;
   aspect-ratio: 390 / 844;
   flex: 0 0 auto;
   margin-inline: auto;
@@ -77,7 +153,6 @@
   border-radius: clamp(16px, 9.5%, 38px);
 }
 
-/* Right column — mirrors portrait .mobile-portrait-story__steps */
 .product-story__landscape .landscape-story__steps {
   grid-area: steps;
   display: flex;
@@ -86,9 +161,8 @@
   min-width: 0;
 }
 
-/* Each step — mirrors portrait .mobile-portrait-story__step */
 .product-story__landscape .landscape-story__step {
-  min-height: min(46svh, 480px);
+  min-height: min(48svh, 480px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -119,9 +193,9 @@
 
 .product-story__landscape .landscape-story__step .story-step__title,
 .product-story__landscape .landscape-story__step .story-step__headline {
-  max-width: 100%;
-  font-size: clamp(1.2rem, 4.8svh, 1.75rem);
-  line-height: 1.12;
+  max-width: 14ch;
+  font-size: clamp(1.25rem, 4.8svh, 1.85rem);
+  line-height: 1.08;
   letter-spacing: -0.03em;
   text-wrap: wrap;
   overflow-wrap: break-word;
@@ -140,7 +214,8 @@
   line-height: 1.36;
 }
 
-@media (max-width: 63.9375rem) and (orientation: landscape) {
+/* Landscape-only compact header. Do not affect portrait or desktop. */
+@media (max-width: 68.6875rem) and (orientation: landscape) {
   :root {
     --site-header-height: 52px;
   }
@@ -167,53 +242,13 @@
     min-height: 40px;
   }
 
-  .product-story__landscape {
-    scroll-margin-top: var(--header-safe-offset, var(--landscape-header-offset));
-  }
-
   body.site-menu-open .landscape-story__stage {
     visibility: hidden;
   }
 }
 
-/* Very short landscape — stacked cards in horizontal rows */
-.product-story__landscape-cards .stacked-story-mobile {
-  gap: clamp(24px, 6vw, 40px);
-  padding-block: 12px 24px;
-}
-
-.product-story__landscape-cards .stacked-story-card {
-  flex-direction: row;
-  align-items: center;
-  gap: clamp(10px, 2.5vw, 16px);
-  text-align: left;
-}
-
-.product-story__landscape-cards .stacked-story-card__media {
-  flex: 0 0 auto;
-  width: min(34vw, 140px);
-}
-
-.product-story__landscape-cards .stacked-story-card__text {
-  flex: 1;
-  min-width: 0;
-}
-
-.product-story__landscape-cards .stacked-story-card__text .story-step__title {
-  font-size: clamp(1.05rem, 3.6svh, 1.4rem);
-}
-
-.product-story__landscape-cards .stacked-story-card__text .story-step__body {
-  font-size: clamp(0.8rem, 2.2svh, 0.92rem);
-  line-height: 1.38;
-}
-
-.product-story__landscape-cards .phone-mockup--mobile-card {
-  --phone-width-mobile-card: min(34vw, 140px);
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .landscape-story__step {
+  .product-story__landscape .landscape-story__step {
     transition: none;
   }
 }

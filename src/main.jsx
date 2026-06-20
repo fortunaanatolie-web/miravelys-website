@@ -17,6 +17,7 @@ import './styles/site-motion.css';
 import './styles/site-breakpoints.css';
 import './styles/site-phone-mockup.css';
 import './styles/site-sticky-phone-story.css';
+import './styles/browser-environment.css';
 import './styles/product-story/productStoryBreakpoints.css';
 import './styles/product-story/ProductStoryDesktop.css';
 import './styles/product-story/ProductStoryPortrait.css';

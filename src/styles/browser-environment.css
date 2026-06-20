@@ -1,0 +1,62 @@
+/**
+ * Cross-browser viewport support.
+ * Prefer dvh/svh where supported, but keep visualViewport variables as runtime fallback.
+ */
+
+:root {
+  --safe-viewport-height: 100vh;
+  --safe-small-viewport-height: 100vh;
+  --safe-dynamic-viewport-height: 100vh;
+}
+
+@supports (height: 100svh) {
+  :root {
+    --safe-small-viewport-height: 100svh;
+  }
+}
+
+@supports (height: 100dvh) {
+  :root {
+    --safe-dynamic-viewport-height: 100dvh;
+  }
+}
+
+:root {
+  --safe-viewport-height: min(
+    var(--vvh, 100svh),
+    var(--safe-dynamic-viewport-height, 100dvh)
+  );
+}
+
+/* iOS browser chrome is the most fragile for sticky/viewport math. */
+html.is-webkit-ios {
+  --safe-viewport-height: var(--vvh, 100svh);
+}
+
+/* Android Chromium usually handles dvh well, but visualViewport remains safer during browser bar changes. */
+html.is-chromium-android {
+  --safe-viewport-height: var(--vvh, 100dvh);
+}
+
+/* Firefox may not expose visualViewport consistently on every platform. */
+html.is-gecko {
+  --safe-viewport-height: var(--safe-dynamic-viewport-height, 100vh);
+}
+
+/* Sticky parent safety for product story only. */
+.product-story,
+.product-story--isolated,
+.product-story__desktop,
+.product-story__tablet,
+.product-story__portrait,
+.product-story__mobile-portrait,
+.product-story__mobile-portrait-cards,
+.product-story__landscape,
+.product-story__landscape-cards {
+  overflow: visible;
+  transform: none;
+  will-change: auto;
+  contain: none;
+}
+
+/* Do not apply this to phone screens; they need overflow hidden. */

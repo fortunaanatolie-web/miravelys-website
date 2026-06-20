@@ -5,7 +5,7 @@
 
 /* —— Global overflow & text safety —— */
 .site-shell--keynote {
-  overflow-x: clip;
+  overflow: visible;
 }
 
 .site-shell--keynote .hero-keynote__headline {

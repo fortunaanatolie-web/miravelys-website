@@ -2,6 +2,8 @@ import { useEffect, useMemo } from 'react';
 import { buildProductStorySteps } from '../../../lib/productStorySteps';
 import { preloadMiravelysScreenshots } from '../../../lib/miravelysScreenshots';
 import { resolvePresentation } from '../../../i18n/presentationCopy';
+import { useBrowserEnvironment } from '../../../hooks/useBrowserEnvironment';
+import { useVisualViewportVars } from '../../../hooks/useVisualViewportVars';
 import RevealOnScroll from '../primitives/RevealOnScroll';
 import ProductStoryDesktop from './ProductStoryDesktop';
 import ProductStoryMobileLandscape from './ProductStoryMobileLandscape';
@@ -13,6 +15,9 @@ import ProductStoryTablet from './ProductStoryTablet';
  * Product story — CSS selects desktop / tablet / portrait mobile / landscape layouts.
  */
 export default function ProductStory({ lang, locale, t, steps: stepsProp }) {
+  useBrowserEnvironment();
+  useVisualViewportVars();
+
   const activeLocale = locale ?? lang;
   const steps = useMemo(
     () => stepsProp ?? (activeLocale ? buildProductStorySteps(activeLocale) : []),
@@ -30,12 +35,12 @@ export default function ProductStory({ lang, locale, t, steps: stepsProp }) {
   return (
     <section
       id="works"
-      className="product-story marketing-scroll-story sticky-phone-story scroll-story reveal-journey"
+      className="product-story product-story--isolated"
       aria-label={presentation.journey?.progressAria || 'Miravelys product story'}
     >
       {works ? (
         <RevealOnScroll
-          className="marketing-scroll-story__intro sticky-phone-story__intro reveal-journey__intro"
+          className="product-story__intro"
           variant="blur-in"
         >
           <p className="eyebrow">{works.eyebrow}</p>

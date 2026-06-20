@@ -11,7 +11,7 @@
 
 .mobile-portrait-story__stage {
   position: sticky;
-  top: calc(var(--site-header-height, 72px) + 8px);
+  top: calc(var(--header-safe-offset, calc(var(--site-header-height, 72px) + 20px)) + 8px);
   z-index: 3;
   height: clamp(260px, 42svh, 360px);
   display: flex;

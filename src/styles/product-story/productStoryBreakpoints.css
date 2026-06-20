@@ -1,7 +1,25 @@
 /**
- * Product story layout visibility — isolated branch switching.
- * Desktop | tablet portrait | portrait mobile | landscape mobile | card fallbacks
+ * Product story layout visibility — protected branch switching.
+ *
+ * Desktop:
+ *   full sticky-phone scrollytelling
+ *
+ * Portrait mobile:
+ *   current working portrait sticky stage
+ *
+ * Phone landscape:
+ *   horizontal cards, not sticky
+ *
+ * Large/tall landscape tablet:
+ *   compact sticky allowed only when there is enough height
  */
+
+:root {
+  --vvh: 100svh;
+  --vvw: 100svw;
+  --vv-offset-top: 0px;
+  --vv-offset-left: 0px;
+}
 
 .product-story__desktop,
 .product-story__tablet,
@@ -13,52 +31,29 @@
   display: none;
 }
 
-/* Desktop sticky scrollytelling (≥1024px) */
+/* Desktop sticky scrollytelling */
 @media (min-width: 64rem) {
   .product-story__desktop {
     display: block;
   }
 }
 
-/* Short tablet / iPad landscape — use compact two-column, not desktop sticky */
-@media (min-width: 64rem) and (max-width: 68.6874rem) and (orientation: landscape) and (max-height: 44rem) {
-  .product-story__desktop {
-    display: none !important;
-  }
-
-  .product-story__landscape {
-    display: block !important;
-  }
-
-  .product-story__tablet,
-  .product-story__portrait,
-  .product-story__mobile-portrait,
-  .product-story__mobile-portrait-cards {
-    display: none !important;
-  }
-
-  .product-story .marketing-scroll-story__intro,
-  .product-story .sticky-phone-story__intro {
-    display: none;
-  }
-}
-
-/* Tablet sticky — portrait only (768px–1023px) */
+/* Tablet portrait */
 @media (min-width: 48rem) and (max-width: 63.9375rem) and (orientation: portrait) {
   .product-story__tablet {
     display: block;
   }
 }
 
-/* Portrait mobile sticky stage (≤767px portrait) */
-@media (max-width: 47.9375rem) and (orientation: portrait) {
+/* Portrait phone and portrait small tablet */
+@media (max-width: 63.9375rem) and (orientation: portrait) {
   .product-story__portrait,
   .product-story__mobile-portrait {
     display: block;
   }
 }
 
-/* Very small portrait — stacked cards (≤360px) */
+/* Very small portrait fallback */
 @media (max-width: 22.5rem) and (orientation: portrait) {
   .product-story__portrait,
   .product-story__mobile-portrait {
@@ -70,41 +65,55 @@
   }
 }
 
-/* Landscape mobile — compact two-column (≤1099px landscape, min height ~300px) */
-@media (max-width: 68.6874rem) and (orientation: landscape) and (min-height: 18.75rem) {
-  .product-story__landscape {
-    display: block;
-  }
-
+/*
+ * Phone landscape default:
+ * Do not force sticky phone on low-height phone landscape.
+ * Use horizontal product cards instead across iOS/Android browsers.
+ */
+@media (max-width: 68.6875rem) and (orientation: landscape) {
   .product-story__desktop,
   .product-story__tablet,
   .product-story__portrait,
   .product-story__mobile-portrait,
-  .product-story__mobile-portrait-cards {
-    display: none !important;
-  }
-
-  .product-story .marketing-scroll-story__intro,
-  .product-story .sticky-phone-story__intro {
-    display: none;
-  }
-}
-
-/* Ultra-short landscape — horizontal stacked cards (never portrait-in-landscape) */
-@media (max-width: 68.6874rem) and (orientation: landscape) and (max-height: 18.6874rem) {
+  .product-story__mobile-portrait-cards,
   .product-story__landscape {
-    display: none !important;
-  }
-
-  .product-story__desktop,
-  .product-story__tablet,
-  .product-story__portrait,
-  .product-story__mobile-portrait,
-  .product-story__mobile-portrait-cards {
     display: none !important;
   }
 
   .product-story__landscape-cards {
     display: block;
   }
+}
+
+/*
+ * Large/tall landscape only:
+ * Allow compact sticky when the viewport has enough height.
+ * This is meant for larger landscape tablets or unusually tall landscape windows,
+ * not normal phone landscape.
+ */
+@media (min-width: 48rem) and (max-width: 68.6875rem) and (orientation: landscape) and (min-height: 28rem) {
+  .product-story__desktop,
+  .product-story__tablet,
+  .product-story__portrait,
+  .product-story__mobile-portrait,
+  .product-story__mobile-portrait-cards,
+  .product-story__landscape-cards {
+    display: none !important;
+  }
+
+  .product-story__landscape {
+    display: block;
+  }
+}
+
+/*
+ * Extra safety:
+ * On iOS browsers, phone landscape should stay on cards unless explicitly tablet-like.
+ */
+html.is-webkit-ios[data-viewport-orientation='landscape'] .product-story__landscape {
+  display: none !important;
+}
+
+html.is-webkit-ios[data-viewport-orientation='landscape'] .product-story__landscape-cards {
+  display: block !important;
 }

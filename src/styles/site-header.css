@@ -8,7 +8,23 @@
   --header-pad-x: clamp(12px, 2.4vw, 18px);
   --header-radius: 999px;
   --header-top: calc(12px + env(safe-area-inset-top, 0px));
-  scroll-padding-top: calc(var(--header-bar-height) + var(--header-top) + 20px);
+  --header-occupied: calc(var(--header-top) + var(--header-bar-height) + var(--header-pad-y) * 2);
+  --header-safe-offset: calc(var(--header-occupied) + 12px);
+  --site-header-height: var(--header-occupied);
+  --story-desktop-sticky-gap: clamp(16px, 3vh, 40px);
+  --story-desktop-sticky-top: calc(var(--header-safe-offset) + var(--story-desktop-sticky-gap));
+  --story-desktop-sticky-bottom: clamp(48px, 10vh, 96px);
+  --story-desktop-sticky-height: calc(
+    100svh - var(--story-desktop-sticky-top) - var(--story-desktop-sticky-bottom)
+  );
+  --story-tablet-sticky-gap: clamp(12px, 2.5vh, 32px);
+  --story-tablet-sticky-top: calc(var(--header-safe-offset) + var(--story-tablet-sticky-gap));
+  --story-tablet-sticky-bottom: clamp(40px, 8vh, 80px);
+  --story-tablet-sticky-height: calc(
+    100svh - var(--story-tablet-sticky-top) - var(--story-tablet-sticky-bottom)
+  );
+  scroll-padding-top: var(--header-safe-offset);
+  --story-sticky-top: calc(var(--header-safe-offset) + var(--story-phone-gap-top));
 }
 
 .site-header {
