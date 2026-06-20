@@ -1,9 +1,138 @@
 /**
  * Landscape mobile sticky story — isolated layout branch.
- * Only applies inside .landscape-story; does not affect desktop or portrait.
+ * Scoped to .product-story__landscape .landscape-story (never desktop/portrait).
  */
 
-@media (max-width: 63.9375rem) and (orientation: landscape) and (min-height: 22.5625rem) {
+.product-story__landscape .landscape-story {
+  --landscape-header-offset: var(
+    --header-safe-offset,
+    calc(var(--site-header-height, 52px) + 12px)
+  );
+  --landscape-phone-height: min(
+    calc(100svh - var(--landscape-header-offset) - 28px),
+    calc(100dvh - var(--landscape-header-offset) - 28px),
+    62svh
+  );
+  --landscape-phone-width: min(
+    calc(var(--landscape-phone-height) * 390 / 844),
+    30vw
+  );
+
+  display: grid;
+  grid-template-columns: minmax(0, var(--landscape-phone-width)) minmax(0, 1fr);
+  gap: clamp(14px, 2.8vw, 32px);
+  align-items: start;
+  max-width: min(980px, 100%);
+  margin-inline: auto;
+  padding-inline: clamp(12px, 3vw, 36px);
+  padding-block: 6px 24px;
+  overflow-x: clip;
+}
+
+.product-story__landscape .landscape-story__phone-column {
+  position: sticky;
+  top: var(--landscape-header-offset);
+  z-index: 1;
+  align-self: start;
+  width: 100%;
+  max-width: var(--landscape-phone-width);
+  min-width: 0;
+  max-height: calc(100svh - var(--landscape-header-offset) - 12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.product-story__landscape .landscape-story__phone-column .phone-mockup {
+  pointer-events: auto;
+}
+
+.product-story__landscape .landscape-story .iphone13-frame--landscape,
+.product-story__landscape .landscape-story .phone-mockup--landscape-stage {
+  --iphone13-width: auto;
+
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: var(--landscape-phone-height);
+  aspect-ratio: 390 / 844;
+  flex: 0 0 auto;
+  align-self: center;
+  margin-inline: auto;
+  border-radius: clamp(20px, 11%, 44px);
+  padding: clamp(4px, 1vw, 7px);
+}
+
+.product-story__landscape .landscape-story .iphone13-frame--landscape .iphone13-rim,
+.product-story__landscape .landscape-story .phone-mockup--landscape-stage .iphone13-rim {
+  border-radius: clamp(16px, 9.5%, 38px);
+}
+
+.product-story__landscape .landscape-story__text-column {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: clamp(2px, 0.8vw, 10px);
+}
+
+.product-story__landscape .landscape-story-step {
+  min-height: calc(100svh - var(--landscape-header-offset) - 20px);
+  min-height: calc(100dvh - var(--landscape-header-offset) - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(8px, 1.6svh, 18px) 0;
+  opacity: 0.44;
+  transition: opacity 260ms ease;
+}
+
+.product-story__landscape .landscape-story-step.is-active {
+  opacity: 1;
+}
+
+.product-story__landscape .landscape-story-step .story-step__content {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.product-story__landscape .landscape-story-step .story-step__index {
+  font-size: clamp(0.7rem, 1.6svh, 0.84rem);
+  letter-spacing: 0.12em;
+}
+
+.product-story__landscape .landscape-story-step .story-step__eyebrow {
+  font-size: clamp(0.7rem, 1.6svh, 0.86rem);
+  letter-spacing: 0.14em;
+}
+
+.product-story__landscape .landscape-story-step .story-step__title,
+.product-story__landscape .landscape-story-step .story-step__headline {
+  max-width: 100%;
+  font-size: clamp(1.15rem, 4.6svh, 1.7rem);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  text-wrap: wrap;
+  overflow-wrap: break-word;
+}
+
+.product-story__landscape .landscape-story-step .story-step__body {
+  max-width: 100%;
+  font-size: clamp(0.84rem, 2.2svh, 0.98rem);
+  line-height: 1.42;
+}
+
+.product-story__landscape .landscape-story-step .story-step__note,
+.product-story__landscape .landscape-story-step .story-step__whisper {
+  max-width: 100%;
+  font-size: clamp(0.8rem, 2svh, 0.92rem);
+  line-height: 1.36;
+}
+
+@media (max-width: 63.9375rem) and (orientation: landscape) {
   :root {
     --site-header-height: 52px;
   }
@@ -30,107 +159,8 @@
     min-height: 40px;
   }
 
-  .landscape-story {
-    display: grid;
-    grid-template-columns: minmax(210px, 0.82fr) minmax(360px, 1.18fr);
-    gap: clamp(20px, 4vw, 44px);
-    max-width: 980px;
-    margin-inline: auto;
-    padding-inline: clamp(16px, 4vw, 42px);
-    padding-block: 10px 28px;
-    align-items: start;
-    overflow-x: clip;
-  }
-
-  .landscape-story__phone-column {
-    position: sticky;
-    top: calc(var(--site-header-height, 52px) + 8px);
-    height: calc(100svh - var(--site-header-height, 52px) - 18px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 0;
-    z-index: 2;
-  }
-
-  .landscape-story .iphone13-frame--landscape,
-  .landscape-story .phone-mockup--landscape-stage {
-    width: auto;
-    height: min(
-      calc(100svh - var(--site-header-height, 52px) - 34px),
-      78svh
-    );
-    max-width: 32vw;
-    max-height: min(
-      calc(100svh - var(--site-header-height, 52px) - 34px),
-      78svh
-    );
-    aspect-ratio: 390 / 844;
-    flex: 0 0 auto;
-    align-self: center;
-    border-radius: clamp(22px, 12%, 48px);
-    padding: clamp(5px, 1.1vw, 8px);
-  }
-
-  .landscape-story .iphone13-frame--landscape .iphone13-rim,
-  .landscape-story .phone-mockup--landscape-stage .iphone13-rim {
-    border-radius: clamp(18px, 10.5%, 42px);
-  }
-
-  .landscape-story__text-column {
-    min-width: 0;
-    position: relative;
-    z-index: 1;
-  }
-
-  .landscape-story__text-column {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .landscape-story-step {
-    min-height: 82svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: clamp(12px, 2vh, 24px) 0;
-    opacity: 0.44;
-    transition: opacity 260ms ease;
-  }
-
-  .landscape-story-step.is-active {
-    opacity: 1;
-  }
-
-  .landscape-story-step .story-step__index {
-    font-size: clamp(0.72rem, 1.8vw, 0.86rem);
-    letter-spacing: 0.12em;
-  }
-
-  .landscape-story-step .story-step__eyebrow {
-    font-size: clamp(0.72rem, 1.8vw, 0.88rem);
-    letter-spacing: 0.14em;
-  }
-
-  .landscape-story-step .story-step__title,
-  .landscape-story-step .story-step__headline {
-    max-width: 100%;
-    font-size: clamp(1.35rem, 5.8svh, 1.95rem);
-    line-height: 1.1;
-    letter-spacing: -0.035em;
-    text-wrap: pretty;
-    overflow-wrap: break-word;
-  }
-
-  .landscape-story-step .story-step__body {
-    max-width: 35rem;
-    font-size: clamp(0.88rem, 2.4svh, 1.02rem);
-    line-height: 1.4;
-  }
-
-  .landscape-story-step .story-step__note {
-    font-size: clamp(0.84rem, 2.2svh, 0.96rem);
-    line-height: 1.36;
+  .product-story__landscape {
+    scroll-margin-top: var(--header-safe-offset, var(--landscape-header-offset));
   }
 
   body.site-menu-open .landscape-story__phone-column {

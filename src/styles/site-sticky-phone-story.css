@@ -155,6 +155,13 @@
   transition: opacity 400ms ease;
 }
 
+/* Landscape branch uses .landscape-story-step — keep marketing step rhythm off it */
+.marketing-scroll-story:has(.landscape-story) .story-step__headline,
+.marketing-scroll-story:has(.landscape-story) .story-step__title,
+.marketing-scroll-story:has(.landscape-story) .story-step__body {
+  max-width: 100%;
+}
+
 .marketing-scroll-story .story-step.is-active,
 .marketing-scroll-story .story-step--active,
 .sticky-phone-story .story-step.is-active,

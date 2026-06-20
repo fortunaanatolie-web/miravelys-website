@@ -329,4 +329,12 @@
   .product-story--landscape-compact {
     scroll-margin-top: var(--header-safe-offset);
   }
+
+  .product-story__landscape .landscape-story {
+    scroll-margin-top: var(--header-safe-offset);
+  }
+
+  .product-story__landscape .landscape-story__phone-column {
+    top: var(--header-safe-offset);
+  }
 }

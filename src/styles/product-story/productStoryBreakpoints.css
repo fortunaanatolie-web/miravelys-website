@@ -20,6 +20,29 @@
   }
 }
 
+/* Short tablet / iPad landscape — use compact two-column, not desktop sticky */
+@media (min-width: 64rem) and (max-width: 68.6874rem) and (orientation: landscape) and (max-height: 44rem) {
+  .product-story__desktop {
+    display: none !important;
+  }
+
+  .product-story__landscape {
+    display: block !important;
+  }
+
+  .product-story__tablet,
+  .product-story__portrait,
+  .product-story__mobile-portrait,
+  .product-story__mobile-portrait-cards {
+    display: none !important;
+  }
+
+  .product-story .marketing-scroll-story__intro,
+  .product-story .sticky-phone-story__intro {
+    display: none;
+  }
+}
+
 /* Tablet sticky — portrait only (768px–1023px) */
 @media (min-width: 48rem) and (max-width: 63.9375rem) and (orientation: portrait) {
   .product-story__tablet {
@@ -47,8 +70,8 @@
   }
 }
 
-/* Landscape mobile — compact two-column (≤1023px landscape, height > 360px) */
-@media (max-width: 63.9375rem) and (orientation: landscape) and (min-height: 22.5625rem) {
+/* Landscape mobile — compact two-column (≤1099px landscape, min height ~300px) */
+@media (max-width: 68.6874rem) and (orientation: landscape) and (min-height: 18.75rem) {
   .product-story__landscape {
     display: block;
   }
@@ -67,27 +90,17 @@
   }
 }
 
-/* Short landscape — fall back to portrait sticky */
-@media (max-width: 63.9375rem) and (orientation: landscape) and (max-height: 22.5rem) {
+/* Ultra-short landscape — horizontal stacked cards (never portrait-in-landscape) */
+@media (max-width: 68.6874rem) and (orientation: landscape) and (max-height: 18.6874rem) {
   .product-story__landscape {
     display: none !important;
   }
 
   .product-story__desktop,
-  .product-story__tablet {
-    display: none !important;
-  }
-
+  .product-story__tablet,
   .product-story__portrait,
-  .product-story__mobile-portrait {
-    display: block;
-  }
-}
-
-/* Ultra-short landscape — horizontal stacked cards */
-@media (max-width: 63.9375rem) and (orientation: landscape) and (max-height: 18rem) {
-  .product-story__portrait,
-  .product-story__mobile-portrait {
+  .product-story__mobile-portrait,
+  .product-story__mobile-portrait-cards {
     display: none !important;
   }
 
