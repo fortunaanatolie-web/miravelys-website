@@ -377,6 +377,7 @@ body.site-menu-open .mobile-portrait-story__stage {
    Landscape mobile — dedicated two-column sticky
    =================================================================== */
 .mobile-landscape-story {
+  --site-header-height: 52px;
   display: grid;
   grid-template-columns: minmax(240px, 0.85fr) minmax(380px, 1.15fr);
   gap: clamp(24px, 4vw, 52px);

@@ -199,8 +199,8 @@
 
 .iphone13-frame--landscape,
 .phone-mockup.phone-mockup--landscape-stage.iphone13-frame {
-  --iphone13-width: auto;
-  width: auto;
+  --iphone13-width: min(34vw, calc(var(--iphone13-height-landscape) * 390 / 844));
+  width: var(--iphone13-width);
   height: var(--iphone13-height-landscape);
   max-width: 34vw;
   max-inline-size: 34vw;
