@@ -8,7 +8,6 @@ const __dirname = path.dirname(__filename);
 const presentationCopyPath = path.join(__dirname, '../src/i18n/presentationCopy.js');
 let content = fs.readFileSync(presentationCopyPath, 'utf8');
 
-// I will extract each language object string block, perform replace, and put it back.
 const mapping = {
   "ru": { "Get Clear": "Линия ясности", "Truth Line": "Линия ясности", "Four Gentle Doorways": "Четыре мягких входа", "Weekly Mirror": "Зеркало", "Sleep With Me": "Засыпай со мной", "Breathe With Me": "Дыши со мной", "Meditate With Me": "Медитируй со мной", "Align Your Energy": "Настрой свою энергию" },
   "ro": { "Get Clear": "Linie clară", "Truth Line": "Linie clară", "Four Gentle Doorways": "Patru uși blânde", "Weekly Mirror": "Oglindă", "Sleep With Me": "Dormi cu mine", "Breathe With Me": "Respiră cu mine", "Meditate With Me": "Meditează cu mine", "Align Your Energy": "Aliniază-ți energia" },
@@ -24,19 +23,19 @@ const mapping = {
 let modifiedContent = content;
 
 for (const [lang, map] of Object.entries(mapping)) {
-  // Find the block `const lang = { ... };`
   const regex = new RegExp(`const ${lang} = \\{([\\s\\S]*?)\\n\\};`, 'g');
   
   modifiedContent = modifiedContent.replace(regex, (match, blockContent) => {
     let updatedBlock = blockContent;
     for (const [enTerm, translatedTerm] of Object.entries(map)) {
-      // replace occurrences of enTerm
+      const finalTerm = `"${translatedTerm}"`;
+      // We want to replace occurrences of enTerm
       const termRegex = new RegExp(`\\b${enTerm}\\b`, 'g');
-      updatedBlock = updatedBlock.replace(termRegex, translatedTerm);
+      updatedBlock = updatedBlock.replace(termRegex, finalTerm);
     }
     return `const ${lang} = {${updatedBlock}\n};`;
   });
 }
 
 fs.writeFileSync(presentationCopyPath, modifiedContent, 'utf8');
-console.log("Updated presentationCopy.js with localized section names.");
+console.log("Updated presentationCopy.js with quoted localized section names.");

@@ -85,23 +85,23 @@ export const injections = {
     "intro": "Когда мимолётный взгляд кажется отвержением, когда молчание подтверждает страхи или когда ошибка кажется доказательством вашей неполноценности, Miravelys рядом, чтобы замедлить этот поток. Вы пишете то, что чувствуете, приложение помогает это распутать, а затем вы решаете, что вам сейчас нужнее: покой, ясность, отдых или бережный вопрос, чтобы двигаться дальше.",
     "steps": [
       {
-        "title": "Главная встречает вас такими, какие вы есть",
-        "body": "Главная просто спрашивает, что кажется правдой сейчас, и замечает, нужно ли вам заземлиться, отдохнуть, ответить на мягкий вопрос или копнуть глубже."
+        "title": "\"Главная\" встречает вас такими, какие вы есть",
+        "body": "\"Главная\" просто спрашивает, что кажется правдой сейчас, и замечает, нужно ли вам заземлиться, отдохнуть, ответить на мягкий вопрос или копнуть глубже."
       },
       {
-        "title": "Линия ясности распутывает клубок",
-        "body": "Линия ясности берёт одну тяжёлую мысль и бережно разделяет её на: событие, чувство, реакцию тела, вашу историю, скрытое убеждение и неизвестность."
+        "title": "\"Линия ясности\" распутывает клубок",
+        "body": "\"Линия ясности\" берёт одну тяжёлую мысль и бережно разделяет её на: событие, чувство, реакцию тела, вашу историю, скрытое убеждение и неизвестность."
       },
       {
-        "title": "Сначала спокойствие защищает ваш покой",
+        "title": "\"Сначала спокойствие\" защищает ваш покой",
         "body": "Когда мысли несутся вскачь, Miravelys не заставит вас анализировать. Он предложит подышать, расслабиться, найти опору или просто отвлечься."
       },
       {
-        "title": "Засыпай со мной уважает ваш отдых",
+        "title": "\"Засыпай со мной\" уважает ваш отдых",
         "body": "С наступлением ночи приложение затихает вместе с вами. Оно откладывает тяжёлые вопросы, предлагая успокаивающие мысли, мягкие звуки и то, что лучше оставить на завтра."
       },
       {
-        "title": "Зеркало отражает с заботой",
+        "title": "\"Зеркало\" отражает с заботой",
         "body": "Шаблоны показываются вам мягко и только если для них есть достаточно оснований. Мы никогда не вешаем ярлыков. Всё предлагается лишь как наблюдение, готовое к вашим поправкам."
       },
       {
@@ -227,7 +227,7 @@ export const injections = {
       },
       {
         "title": "Обрести покой перед поиском ответов",
-        "body": "Когда ваше тело находится в режиме 'бей или беги', попытка проанализировать свои мысли часто лишь закручивает новую спираль. Miravelys внимательно следит за этим, замечая, когда вам, возможно, сначала нужно заземлиться. Наша функция 'Сначала спокойствие' — это не просто таймер для дыхания, это важнейшая часть процесса прояснения ума, помогающая вам успокоить тело, чтобы вы могли вернуться к своим мыслям с более устойчивым сердцем."
+        "body": "Когда ваше тело находится в режиме 'бей или беги', попытка проанализировать свои мысли часто лишь закручивает новую спираль. Miravelys внимательно следит за этим, замечая, когда вам, возможно, сначала нужно заземлиться. Наша функция '\"Сначала спокойствие\"' — это не просто таймер для дыхания, это важнейшая часть процесса прояснения ума, помогающая вам успокоить тело, чтобы вы могли вернуться к своим мыслям с более устойчивым сердцем."
       },
       {
         "title": "Вы сами выбираете, насколько глубоко идти",
@@ -239,7 +239,7 @@ export const injections = {
       },
       {
         "title": "Зеркало, а не судья",
-        "body": "В 'Зеркало' паттерны показываются только тогда, когда для них есть неоспоримые доказательства, и делается это со скромностью. Оно не превратит тяжёлую неделю в постоянный изъян вашей личности. Оно просто подмечает вещи: возможно, какая-то история всплыла несколько раз, или дыхательное упражнение действительно помогло, или определённое убеждение, возможно, стоит изучить. Дело не в создании драмы; дело в том, чтобы предложить бережное отражение, которое вы всегда можете исправить."
+        "body": "В '\"Зеркало\"' паттерны показываются только тогда, когда для них есть неоспоримые доказательства, и делается это со скромностью. Оно не превратит тяжёлую неделю в постоянный изъян вашей личности. Оно просто подмечает вещи: возможно, какая-то история всплыла несколько раз, или дыхательное упражнение действительно помогло, или определённое убеждение, возможно, стоит изучить. Дело не в создании драмы; дело в том, чтобы предложить бережное отражение, которое вы всегда можете исправить."
       },
       {
         "title": "Чем мы никогда не станем",
@@ -407,23 +407,23 @@ export const injections = {
     "intro": "Când o privire trecătoare pare o respingere, când tăcerea pare o dovadă a fricilor tale sau când o greșeală pare că te definește, Miravelys este aici pentru a încetini lucrurile. Scrii ceea ce simți că este adevărat, aplicația te ajută să descurci lucrurile, iar apoi tu decizi de ce ai cea mai mare nevoie: calm, claritate, odihnă sau o întrebare blândă pentru a merge mai departe.",
     "steps": [
       {
-        "title": "Acasă te întâlnește acolo unde ești",
-        "body": "Acasă pur și simplu te întreabă ce simți că este adevărat chiar acum, recunoscând dacă ai nevoie să te ancorezi, să te odihnești, să răspunzi la un îndemn blând sau să privești mai adânc."
+        "title": "\"Acasă\" te întâlnește acolo unde ești",
+        "body": "\"Acasă\" pur și simplu te întreabă ce simți că este adevărat chiar acum, recunoscând dacă ai nevoie să te ancorezi, să te odihnești, să răspunzi la un îndemn blând sau să privești mai adânc."
       },
       {
-        "title": "Linie clară descurcă dezordinea",
-        "body": "Linie clară ia un singur gând copleșitor și îl separă cu blândețe în ceea ce s-a întâmplat, ceea ce ai simțit, ceea ce a experimentat corpul tău, povestea pe care ți-ai spus-o, convingerea de dedesubt și ceea ce rămâne necunoscut."
+        "title": "\"Linie clară\" descurcă dezordinea",
+        "body": "\"Linie clară\" ia un singur gând copleșitor și îl separă cu blândețe în ceea ce s-a întâmplat, ceea ce ai simțit, ceea ce a experimentat corpul tău, povestea pe care ți-ai spus-o, convingerea de dedesubt și ceea ce rămâne necunoscut."
       },
       {
-        "title": "Calmul mai întâi îți protejează pacea",
+        "title": "\"Calmul mai întâi\" îți protejează pacea",
         "body": "Când mintea ta gonește, Miravelys nu te va împinge să analizezi. Te invită să respiri, să te înmoi, să-ți găsești echilibrul sau pur și simplu să faci un pas înapoi."
       },
       {
-        "title": "Dormi cu mine îți respectă odihna",
+        "title": "\"Dormi cu mine\" îți respectă odihna",
         "body": "Pe măsură ce noaptea se adâncește, aplicația se liniștește odată cu tine. Lasă deoparte întrebările grele, oferind reflecții liniștitoare, sunete blânde și gânduri care sunt mai bine păstrate pentru mâine."
       },
       {
-        "title": "Oglindă reflectă cu grijă",
+        "title": "\"Oglindă\" reflectă cu grijă",
         "body": "Tiparele îți sunt împărtășite cu blândețe și doar atunci când există suficiente dovezi. Nu te etichetăm niciodată. Totul este oferit ca o sugestie, gata pentru corectarea ta."
       },
       {
@@ -549,7 +549,7 @@ export const injections = {
       },
       {
         "title": "Găsirea calmului înainte de a căuta răspunsuri",
-        "body": "Când corpul tău este în modul de luptă sau fugi, încercarea de a-ți analiza gândurile creează adesea doar o altă spirală. Miravelys este atent, observând când s-ar putea să ai nevoie să te ancorezi mai întâi. Funcția noastră 'Calmul mai întâi' nu este doar un temporizator de respirație — este o parte esențială a procesului de claritate, ajutându-te să-ți liniștești corpul, astfel încât să poți reveni la gândurile tale cu o inimă mai stabilă."
+        "body": "Când corpul tău este în modul de luptă sau fugi, încercarea de a-ți analiza gândurile creează adesea doar o altă spirală. Miravelys este atent, observând când s-ar putea să ai nevoie să te ancorezi mai întâi. Funcția noastră '\"Calmul mai întâi\"' nu este doar un temporizator de respirație — este o parte esențială a procesului de claritate, ajutându-te să-ți liniștești corpul, astfel încât să poți reveni la gândurile tale cu o inimă mai stabilă."
       },
       {
         "title": "Tu alegi cât de adânc să mergi",
@@ -561,7 +561,7 @@ export const injections = {
       },
       {
         "title": "O oglindă, nu un judecător",
-        "body": "'Oglindă' îți arată tipare doar atunci când există dovezi incontestabile și face acest lucru cu smerenie. Nu va transforma o săptămână dificilă într-un defect permanent de personalitate. Pur și simplu observă lucruri: poate că o anumită poveste a apărut de câteva ori, sau un exercițiu de respirație a ajutat cu adevărat, sau o anumită convingere ar merita explorată. Nu este vorba de a crea dramă; este vorba de a oferi o reflecție blândă pe care o poți corecta întotdeauna."
+        "body": "'\"Oglindă\"' îți arată tipare doar atunci când există dovezi incontestabile și face acest lucru cu smerenie. Nu va transforma o săptămână dificilă într-un defect permanent de personalitate. Pur și simplu observă lucruri: poate că o anumită poveste a apărut de câteva ori, sau un exercițiu de respirație a ajutat cu adevărat, sau o anumită convingere ar merita explorată. Nu este vorba de a crea dramă; este vorba de a oferi o reflecție blândă pe care o poți corecta întotdeauna."
       },
       {
         "title": "Ce nu vom fi niciodată",
@@ -729,23 +729,23 @@ export const injections = {
     "intro": "Lorsqu'un regard fugace ressemble à un rejet, quand le silence vous donne l'impression de confirmer vos peurs, ou lorsqu'une erreur semble vous définir, Miravelys est là pour ralentir les choses. Vous écrivez ce qui vous semble vrai, l'application vous aide à le démêler, et vous décidez ensuite de ce dont vous avez le plus besoin : du calme, de la clarté, du repos, ou une question douce pour avancer.",
     "steps": [
       {
-        "title": "Accueil vous rencontre là où vous êtes",
-        "body": "Accueil vous demande simplement ce qui vous semble vrai maintenant, et perçoit si vous avez besoin de vous ancrer, de vous reposer, de répondre à une petite incitation, ou d'aller plus au fond."
+        "title": "\"Accueil\" vous rencontre là où vous êtes",
+        "body": "\"Accueil\" vous demande simplement ce qui vous semble vrai maintenant, et perçoit si vous avez besoin de vous ancrer, de vous reposer, de répondre à une petite incitation, ou d'aller plus au fond."
       },
       {
-        "title": "Ligne claire démêle le chaos",
-        "body": "Ligne claire prend une seule pensée accablante et la sépare doucement en ce qui s'est passé, ce que vous avez ressenti, ce que votre corps a expérimenté, l'histoire que vous vous êtes racontée, la croyance en dessous, et ce qui reste inconnu."
+        "title": "\"Ligne claire\" démêle le chaos",
+        "body": "\"Ligne claire\" prend une seule pensée accablante et la sépare doucement en ce qui s'est passé, ce que vous avez ressenti, ce que votre corps a expérimenté, l'histoire que vous vous êtes racontée, la croyance en dessous, et ce qui reste inconnu."
       },
       {
-        "title": "Le calme d'abord protège votre paix",
+        "title": "\"Le calme d'abord\" protège votre paix",
         "body": "Quand votre esprit s'emballe, Miravelys ne vous poussera pas à analyser. Il vous invite à respirer, à vous adoucir, à retrouver vos appuis, ou simplement à prendre du recul."
       },
       {
-        "title": "Dors avec moi respecte votre repos",
+        "title": "\"Dors avec moi\" respecte votre repos",
         "body": "À mesure que la nuit tombe, l'application s'apaise avec vous. Elle met de côté les questions lourdes, offrant des réflexions douces, des sons apaisants, et des pensées qu'il vaut mieux garder pour demain."
       },
       {
-        "title": "Miroir reflète avec soin",
+        "title": "\"Miroir\" reflète avec soin",
         "body": "Les schémas vous sont partagés avec douceur, et uniquement quand il y a suffisamment de preuves. Nous ne vous étiquetons jamais. Tout est offert comme une suggestion, prête pour vos corrections."
       },
       {
@@ -871,7 +871,7 @@ export const injections = {
       },
       {
         "title": "Trouver le calme avant de chercher des réponses",
-        "body": "Lorsque votre corps est en mode 'combat ou fuite', essayer d'analyser vos pensées crée souvent une nouvelle spirale. Miravelys fait attention, remarquant quand vous pourriez avoir besoin de vous ancrer d'abord. Notre fonction 'Le calme d'abord' n'est pas seulement un minuteur de respiration — c'est une partie essentielle du processus de clarté, vous aidant à apaiser votre corps pour pouvoir revenir à vos pensées avec un cœur plus stable."
+        "body": "Lorsque votre corps est en mode 'combat ou fuite', essayer d'analyser vos pensées crée souvent une nouvelle spirale. Miravelys fait attention, remarquant quand vous pourriez avoir besoin de vous ancrer d'abord. Notre fonction '\"Le calme d'abord\"' n'est pas seulement un minuteur de respiration — c'est une partie essentielle du processus de clarté, vous aidant à apaiser votre corps pour pouvoir revenir à vos pensées avec un cœur plus stable."
       },
       {
         "title": "Vous choisissez jusqu'où vous voulez aller",
@@ -883,7 +883,7 @@ export const injections = {
       },
       {
         "title": "Un miroir, pas un juge",
-        "body": "Le 'Miroir' ne vous montre des schémas que lorsqu'il y a des preuves indéniables, et il le fait avec humilité. Il ne transformera pas une semaine difficile en un défaut de personnalité permanent. Il remarque simplement des choses : peut-être qu'une histoire précise est apparue plusieurs fois, ou qu'un exercice de respiration a vraiment aidé, ou qu'une certaine croyance vaudrait la peine d'être explorée. Il ne s'agit pas de créer du drame ; il s'agit d'offrir un reflet bienveillant que vous pouvez toujours corriger."
+        "body": "Le '\"Miroir\"' ne vous montre des schémas que lorsqu'il y a des preuves indéniables, et il le fait avec humilité. Il ne transformera pas une semaine difficile en un défaut de personnalité permanent. Il remarque simplement des choses : peut-être qu'une histoire précise est apparue plusieurs fois, ou qu'un exercice de respiration a vraiment aidé, ou qu'une certaine croyance vaudrait la peine d'être explorée. Il ne s'agit pas de créer du drame ; il s'agit d'offrir un reflet bienveillant que vous pouvez toujours corriger."
       },
       {
         "title": "Ce que nous ne serons jamais",
@@ -1051,23 +1051,23 @@ export const injections = {
     "intro": "जब कोई उड़ती हुई नज़र अस्वीकृति जैसी लगती है, जब मौन आपके डर का प्रमाण लगता है, या जब कोई गलती ऐसी लगती है जैसे वह आपकी पहचान तय करती है, तो Miravelys चीजों को धीमा करने के लिए यहाँ है। आप वह लिखते हैं जो आपको सच लगता है, ऐप इसे सुलझाने में मदद करता है, और फिर आप तय करते हैं कि आपको सबसे ज़्यादा किस चीज़ की ज़रूरत है: शांति, स्पष्टता, आराम, या आगे बढ़ने के लिए एक कोमल प्रश्न।",
     "steps": [
       {
-        "title": "होम आपसे वहीं मिलता है जहाँ आप हैं",
-        "body": "होम बस यह पूछता है कि अभी क्या सच लगता है, यह पहचानते हुए कि क्या आपको खुद को शांत करने, आराम करने, किसी सवाल का जवाब देने, या गहराई से देखने की ज़रूरत है।"
+        "title": "\"होम\" आपसे वहीं मिलता है जहाँ आप हैं",
+        "body": "\"होम\" बस यह पूछता है कि अभी क्या सच लगता है, यह पहचानते हुए कि क्या आपको खुद को शांत करने, आराम करने, किसी सवाल का जवाब देने, या गहराई से देखने की ज़रूरत है।"
       },
       {
-        "title": "स्पष्ट रेखा उलझन को सुलझाती है",
-        "body": "स्पष्ट रेखा एक भारी विचार को लेता है और धीरे से इसे अलग करता है कि क्या हुआ, आपने क्या महसूस किया, आपके शरीर ने क्या अनुभव किया, वह कहानी जो आपने खुद को बताई, उसके नीचे का विश्वास, और क्या अनजाना है।"
+        "title": "\"स्पष्ट रेखा\" उलझन को सुलझाती है",
+        "body": "\"स्पष्ट रेखा\" एक भारी विचार को लेता है और धीरे से इसे अलग करता है कि क्या हुआ, आपने क्या महसूस किया, आपके शरीर ने क्या अनुभव किया, वह कहानी जो आपने खुद को बताई, उसके नीचे का विश्वास, और क्या अनजाना है।"
       },
       {
-        "title": "पहले शांति आपकी शांति की रक्षा करता है",
+        "title": "\"पहले शांति\" आपकी शांति की रक्षा करता है",
         "body": "जब आपका दिमाग तेज़ दौड़ रहा हो, तो Miravelys आपको विश्लेषण करने के लिए मजबूर नहीं करेगा। यह आपको साँस लेने, नरम होने, अपना संतुलन खोजने, या बस पीछे हटने के लिए आमंत्रित करता है।"
       },
       {
-        "title": "मेरे साथ सोएं आपके आराम का सम्मान करता है",
+        "title": "\"मेरे साथ सोएं\" आपके आराम का सम्मान करता है",
         "body": "जैसे-जैसे रात गहरी होती है, ऐप आपके साथ शांत हो जाता है। यह भारी सवालों को अलग रख देता है, सुखद विचार, हल्की आवाज़ें, और वे बातें पेश करता है जिन्हें कल के लिए बचा कर रखना बेहतर है।"
       },
       {
-        "title": "दर्पण देखभाल के साथ दर्शाता है",
+        "title": "\"दर्पण\" देखभाल के साथ दर्शाता है",
         "body": "पैटर्न आपके साथ धीरे से साझा किए जाते हैं, और केवल तभी जब पर्याप्त सबूत हों। हम आपको कभी भी लेबल नहीं करते। सब कुछ एक सुझाव के रूप में प्रस्तुत किया जाता है, जिसे आप सुधार सकते हैं।"
       },
       {
@@ -1193,7 +1193,7 @@ export const injections = {
       },
       {
         "title": "जवाब खोजने से पहले शांति खोजना",
-        "body": "जब आपका शरीर लड़ाई-या-उड़ान मोड (fight-or-flight) में होता है, तो अपने विचारों का विश्लेषण करने की कोशिश अक्सर एक और चक्र बनाती है। Miravelys ध्यान देता है, यह देखते हुए कि आपको पहले खुद को शांत करने की आवश्यकता हो सकती है। हमारी 'पहले शांति' सुविधा केवल एक साँस लेने का टाइमर नहीं है — यह स्पष्टता प्रक्रिया का एक अनिवार्य हिस्सा है, जो आपको अपने शरीर को शांत करने में मदद करता है ताकि आप स्थिर हृदय के साथ अपने विचारों पर लौट सकें。"
+        "body": "जब आपका शरीर लड़ाई-या-उड़ान मोड (fight-or-flight) में होता है, तो अपने विचारों का विश्लेषण करने की कोशिश अक्सर एक और चक्र बनाती है। Miravelys ध्यान देता है, यह देखते हुए कि आपको पहले खुद को शांत करने की आवश्यकता हो सकती है। हमारी '\"पहले शांति\"' सुविधा केवल एक साँस लेने का टाइमर नहीं है — यह स्पष्टता प्रक्रिया का एक अनिवार्य हिस्सा है, जो आपको अपने शरीर को शांत करने में मदद करता है ताकि आप स्थिर हृदय के साथ अपने विचारों पर लौट सकें。"
       },
       {
         "title": "आप चुनते हैं कि कितनी गहराई तक जाना है",
@@ -1205,7 +1205,7 @@ export const injections = {
       },
       {
         "title": "एक दर्पण, न्यायाधीश नहीं",
-        "body": "द 'दर्पण' आपको केवल तभी पैटर्न दिखाता है जब निर्विवाद साक्ष्य हों, और यह नम्रता के साथ ऐसा करता है। यह एक कठिन सप्ताह को स्थायी व्यक्तित्व दोष में नहीं बदलेगा। यह केवल चीजों को नोटिस करता है: शायद एक विशिष्ट कहानी कुछ बार सामने आई, या साँस लेने के व्यायाम ने वास्तव में मदद की, या एक निश्चित विश्वास तलाशने लायक हो सकता है। यह नाटक बनाने के बारे में नहीं है; यह एक कोमल प्रतिबिंब पेश करने के बारे में है जिसे आप हमेशा सही कर सकते हैं।"
+        "body": "द '\"दर्पण\"' आपको केवल तभी पैटर्न दिखाता है जब निर्विवाद साक्ष्य हों, और यह नम्रता के साथ ऐसा करता है। यह एक कठिन सप्ताह को स्थायी व्यक्तित्व दोष में नहीं बदलेगा। यह केवल चीजों को नोटिस करता है: शायद एक विशिष्ट कहानी कुछ बार सामने आई, या साँस लेने के व्यायाम ने वास्तव में मदद की, या एक निश्चित विश्वास तलाशने लायक हो सकता है। यह नाटक बनाने के बारे में नहीं है; यह एक कोमल प्रतिबिंब पेश करने के बारे में है जिसे आप हमेशा सही कर सकते हैं।"
       },
       {
         "title": "हम क्या कभी नहीं होंगे",
@@ -1373,23 +1373,23 @@ export const injections = {
     "intro": "当匆匆一瞥感觉像是否定，当沉默感觉像证实了你的恐惧，或者当一个错误感觉像是定义了你时，Miravelys 在这里帮你慢下来。你写下让你觉得真实的东西，应用帮你理清它，然后由你决定你最需要什么：是平静、清晰、休息，还是一个温柔的问题来推动你前进。",
     "steps": [
       {
-        "title": "首页 在你所在的地方遇见你",
-        "body": "首页 只是问你现在觉得什么是真实的，并感知你是否需要脚踏实地、休息、回答一个温和的提示，还是更深入地探索。"
+        "title": "\"首页\" 在你所在的地方遇见你",
+        "body": "\"首页\" 只是问你现在觉得什么是真实的，并感知你是否需要脚踏实地、休息、回答一个温和的提示，还是更深入地探索。"
       },
       {
-        "title": "清晰线索 理清混乱",
-        "body": "清晰线索 会捕捉一个压倒性的想法，并温柔地将它分离为：发生的事实、你的感受、你身体的体验、你告诉自己的故事、背后的信念，以及未知。"
+        "title": "\"清晰线索\" 理清混乱",
+        "body": "\"清晰线索\" 会捕捉一个压倒性的想法，并温柔地将它分离为：发生的事实、你的感受、你身体的体验、你告诉自己的故事、背后的信念，以及未知。"
       },
       {
-        "title": "先平复心情 守护你的平静",
+        "title": "\"先平复心情\" 守护你的平静",
         "body": "当你的大脑飞速运转时，Miravelys 不会逼你分析。它邀请你深呼吸，放松下来，找回重心，或者干脆先退后一步。"
       },
       {
-        "title": "和我一起入睡 尊重你的休息",
+        "title": "\"和我一起入睡\" 尊重你的休息",
         "body": "夜幕降临时，应用也会和你一起安静下来。它会把沉重的问题放在一边，提供舒缓的反思、柔和的声音，以及那些最好留到明天再想的念头。"
       },
       {
-        "title": "镜子 带着关怀去映射",
+        "title": "\"镜子\" 带着关怀去映射",
         "body": "只有在有足够证据时，才会温柔地与你分享你的模式。我们从不给你贴标签。一切都只是作为建议提供，随时准备接受你的修正。"
       },
       {
@@ -1515,7 +1515,7 @@ export const injections = {
       },
       {
         "title": "在寻找答案前，先找到平静",
-        "body": "当你的身体处于“战斗或逃跑”模式时，试图分析你的想法往往只会制造另一个螺旋。Miravelys 会注意到这一点，察觉到你何时可能需要先稳住自己。我们的“先平复心情”功能不仅仅是一个呼吸计时器 — 它是清晰过程中至关重要的一部分，帮助你安抚身体，以便你能带着更平稳的心回到你的思绪中。"
+        "body": "当你的身体处于“战斗或逃跑”模式时，试图分析你的想法往往只会制造另一个螺旋。Miravelys 会注意到这一点，察觉到你何时可能需要先稳住自己。我们的“\"先平复心情\"”功能不仅仅是一个呼吸计时器 — 它是清晰过程中至关重要的一部分，帮助你安抚身体，以便你能带着更平稳的心回到你的思绪中。"
       },
       {
         "title": "深入的程度，由你选择",
@@ -1527,7 +1527,7 @@ export const injections = {
       },
       {
         "title": "一面镜子，而不是法官",
-        "body": "“镜子”只有在有不可否认的证据时才会向你展示模式，而且它会以谦逊的姿态来做这件事。它不会把艰难的一周变成永久的性格缺陷。它只是注意到了某些事情：也许一个特定的故事出现了几次，或者一个呼吸练习真的有帮助，或者某个特定的信念可能值得探索。这关乎的不是制造戏剧性；而是提供一个你可以随时纠正的温柔倒影。"
+        "body": "“\"镜子\"”只有在有不可否认的证据时才会向你展示模式，而且它会以谦逊的姿态来做这件事。它不会把艰难的一周变成永久的性格缺陷。它只是注意到了某些事情：也许一个特定的故事出现了几次，或者一个呼吸练习真的有帮助，或者某个特定的信念可能值得探索。这关乎的不是制造戏剧性；而是提供一个你可以随时纠正的温柔倒影。"
       },
       {
         "title": "我们永远不会成为什么",
@@ -1695,23 +1695,23 @@ export const injections = {
     "intro": "Wenn sich ein flüchtiger Blick wie Ablehnung anfühlt, wenn sich Schweigen wie ein Beweis für deine Ängste anfühlt oder wenn sich ein Fehler anfühlt, als würde er dich definieren, ist Miravelys hier, um die Dinge zu verlangsamen. Du schreibst, was sich wahr anfühlt, die App hilft dir, es zu entwirren, und dann entscheidest du, was du am meisten brauchst: Ruhe, Klarheit, Schlaf oder eine sanfte Frage, um voranzukommen.",
     "steps": [
       {
-        "title": "Start holt dich da ab, wo du bist",
-        "body": "Start fragt einfach, was sich gerade jetzt wahr anfühlt, und erkennt, ob du dich erden, ausruhen, auf eine sanfte Aufforderung antworten oder tiefer blicken musst."
+        "title": "\"Start\" holt dich da ab, wo du bist",
+        "body": "\"Start\" fragt einfach, was sich gerade jetzt wahr anfühlt, und erkennt, ob du dich erden, ausruhen, auf eine sanfte Aufforderung antworten oder tiefer blicken musst."
       },
       {
-        "title": "Klare Linie entwirrt das Chaos",
-        "body": "Klare Linie nimmt einen einzigen überwältigenden Gedanken und trennt ihn sanft in das, was passiert ist, was du gefühlt hast, was dein Körper erlebt hat, die Geschichte, die du dir erzählt hast, die Überzeugung darunter und das, was unbekannt bleibt."
+        "title": "\"Klare Linie\" entwirrt das Chaos",
+        "body": "\"Klare Linie\" nimmt einen einzigen überwältigenden Gedanken und trennt ihn sanft in das, was passiert ist, was du gefühlt hast, was dein Körper erlebt hat, die Geschichte, die du dir erzählt hast, die Überzeugung darunter und das, was unbekannt bleibt."
       },
       {
-        "title": "Zuerst Ruhe schützt deinen Frieden",
+        "title": "\"Zuerst Ruhe\" schützt deinen Frieden",
         "body": "Wenn deine Gedanken rasen, wird Miravelys dich nicht zur Analyse drängen. Es lädt dich ein zu atmen, weicher zu werden, deinen Halt zu finden oder einfach einen Schritt zurückzutreten."
       },
       {
-        "title": "Schlaf mit mir respektiert deine Ruhe",
+        "title": "\"Schlaf mit mir\" respektiert deine Ruhe",
         "body": "Wenn die Nacht tiefer wird, wird die App mit dir leiser. Sie legt schwere Fragen beiseite und bietet beruhigende Reflexionen, sanfte Klänge und Gedanken, die man besser für morgen aufhebt."
       },
       {
-        "title": "Spiegel reflektiert mit Sorgfalt",
+        "title": "\"Spiegel\" reflektiert mit Sorgfalt",
         "body": "Muster werden dir sanft mitgeteilt, und nur, wenn es genügend Beweise gibt. Wir etikettieren dich nie. Alles wird als Vorschlag angeboten, bereit für deine Korrektur."
       },
       {
@@ -1837,7 +1837,7 @@ export const injections = {
       },
       {
         "title": "Ruhe finden, bevor man nach Antworten sucht",
-        "body": "Wenn sich dein Körper im Kampf-oder-Flucht-Modus befindet, führt der Versuch, deine Gedanken zu analysieren, oft nur zu einer weiteren Spirale. Miravelys achtet darauf und bemerkt, wenn du dich vielleicht erst erden musst. Unsere 'Zuerst Ruhe'-Funktion ist nicht nur ein Atem-Timer — sie ist ein wesentlicher Bestandteil des Klarheits-Prozesses und hilft dir, deinen Körper zu beruhigen, damit du mit einem beständigeren Herzen zu deinen Gedanken zurückkehren kannst."
+        "body": "Wenn sich dein Körper im Kampf-oder-Flucht-Modus befindet, führt der Versuch, deine Gedanken zu analysieren, oft nur zu einer weiteren Spirale. Miravelys achtet darauf und bemerkt, wenn du dich vielleicht erst erden musst. Unsere '\"Zuerst Ruhe\"'-Funktion ist nicht nur ein Atem-Timer — sie ist ein wesentlicher Bestandteil des Klarheits-Prozesses und hilft dir, deinen Körper zu beruhigen, damit du mit einem beständigeren Herzen zu deinen Gedanken zurückkehren kannst."
       },
       {
         "title": "Du entscheidest, wie tief du gehen willst",
@@ -1849,7 +1849,7 @@ export const injections = {
       },
       {
         "title": "Ein Spiegel, kein Richter",
-        "body": "Der 'Spiegel' zeigt dir Muster nur dann auf, wenn es unbestreitbare Beweise gibt, und tut dies mit Bescheidenheit. Er wird eine schwierige Woche nicht in einen dauerhaften Persönlichkeitsfehler verwandeln. Er bemerkt einfach Dinge: Vielleicht ist eine bestimmte Geschichte ein paar Mal aufgetaucht, oder eine Atemübung hat wirklich geholfen, oder eine bestimmte Überzeugung könnte es wert sein, erforscht zu werden. Es geht nicht darum, Drama zu erzeugen; es geht darum, eine sanfte Reflexion anzubieten, die du jederzeit korrigieren kannst."
+        "body": "Der '\"Spiegel\"' zeigt dir Muster nur dann auf, wenn es unbestreitbare Beweise gibt, und tut dies mit Bescheidenheit. Er wird eine schwierige Woche nicht in einen dauerhaften Persönlichkeitsfehler verwandeln. Er bemerkt einfach Dinge: Vielleicht ist eine bestimmte Geschichte ein paar Mal aufgetaucht, oder eine Atemübung hat wirklich geholfen, oder eine bestimmte Überzeugung könnte es wert sein, erforscht zu werden. Es geht nicht darum, Drama zu erzeugen; es geht darum, eine sanfte Reflexion anzubieten, die du jederzeit korrigieren kannst."
       },
       {
         "title": "Was wir niemals sein werden",
@@ -2017,23 +2017,23 @@ export const injections = {
     "intro": "ふとした視線が拒絶のように感じられる時、沈黙が不安の証拠のように思える時、または一つの失敗が自分自身を定義しているように感じる時、Miravelysは物事を少し遅らせるためにここにいます。あなたが真実だと感じることを書き、アプリがそれを解きほぐすのを手伝い、そして、今一番必要なもの — 落ち着き、明確さ、休息、あるいは前に進むための優しい問いかけ — をあなた自身が選びます。",
     "steps": [
       {
-        "title": "ホームは今のあなたを受け入れます",
-        "body": "ホームはただ、今何が真実だと感じるかを尋ね、あなたが地に足をつける必要があるか、休む必要があるか、優しい問いに答える必要があるか、あるいはより深く見る必要があるかを感じ取ります。"
+        "title": "\"ホーム\"は今のあなたを受け入れます",
+        "body": "\"ホーム\"はただ、今何が真実だと感じるかを尋ね、あなたが地に足をつける必要があるか、休む必要があるか、優しい問いに答える必要があるか、あるいはより深く見る必要があるかを感じ取ります。"
       },
       {
-        "title": "明確なラインが絡まりを解く",
-        "body": "明確なラインは、圧倒的な一つの考えを受け取り、何が起きたか、何を感じたか、体がどう反応したか、自分に語った物語、その奥の思い込み、そして未知のものへと、優しく分けていきます。"
+        "title": "\"明確なライン\"が絡まりを解く",
+        "body": "\"明確なライン\"は、圧倒的な一つの考えを受け取り、何が起きたか、何を感じたか、体がどう反応したか、自分に語った物語、その奥の思い込み、そして未知のものへと、優しく分けていきます。"
       },
       {
-        "title": "まずは穏やかにがあなたの平穏を守る",
+        "title": "\"まずは穏やかに\"があなたの平穏を守る",
         "body": "思考がぐるぐると回っている時、Miravelysはあなたに分析を強要しません。息をし、力を抜き、自分を取り戻すか、ただ一歩下がるように誘います。"
       },
       {
-        "title": "一緒に眠るは休息を尊重する",
+        "title": "\"一緒に眠る\"は休息を尊重する",
         "body": "夜が深まると、アプリもあなたと一緒に静かになります。重い問いかけを避け、心地よい振り返り、優しい音、そして明日まで取っておくべき考えを提案します。"
       },
       {
-        "title": "ミラーは気遣いとともに映し出す",
+        "title": "\"ミラー\"は気遣いとともに映し出す",
         "body": "パターンは優しく、十分な証拠がある場合にのみ共有されます。私たちは決してあなたを決めつけません。すべては提案として提供され、いつでも修正できます。"
       },
       {
@@ -2159,7 +2159,7 @@ export const injections = {
       },
       {
         "title": "答えを探す前に、落ち着きを見つける",
-        "body": "体が「闘争・逃走反応」にある時、思考を分析しようとすると、往々にしてまた別のループを生み出してしまいます。Miravelysはそれに気づき、あなたがまずグラウンディング（地に足をつけること）を必要としているかもしれない時に気を配ります。私たちの「まずは穏やかに」機能は、単なる呼吸のタイマーではありません — それは明確になるためのプロセスの不可欠な一部であり、体を落ち着かせ、より安定した心で思考に戻れるようにするのを助けます。"
+        "body": "体が「闘争・逃走反応」にある時、思考を分析しようとすると、往々にしてまた別のループを生み出してしまいます。Miravelysはそれに気づき、あなたがまずグラウンディング（地に足をつけること）を必要としているかもしれない時に気を配ります。私たちの「\"まずは穏やかに\"」機能は、単なる呼吸のタイマーではありません — それは明確になるためのプロセスの不可欠な一部であり、体を落ち着かせ、より安定した心で思考に戻れるようにするのを助けます。"
       },
       {
         "title": "どこまで深く行くかはあなたが選ぶ",
@@ -2171,7 +2171,7 @@ export const injections = {
       },
       {
         "title": "鏡であり、裁判官ではない",
-        "body": "「ミラー」は、否定できない証拠がある時にのみパターンを見せ、それも謙虚に行います。辛い一週間を、永続的な性格の欠陥に変えるようなことはしません。ただ、気づくだけです：特定の物語が数回現れたとか、呼吸の練習が本当に役に立ったとか、あるいはある思い込みを探求してみる価値があるかもしれないとか。ドラマを作ることが目的ではありません。いつでもあなたが修正できる、優しい鏡を提供することが目的なのです。"
+        "body": "「\"ミラー\"」は、否定できない証拠がある時にのみパターンを見せ、それも謙虚に行います。辛い一週間を、永続的な性格の欠陥に変えるようなことはしません。ただ、気づくだけです：特定の物語が数回現れたとか、呼吸の練習が本当に役に立ったとか、あるいはある思い込みを探求してみる価値があるかもしれないとか。ドラマを作ることが目的ではありません。いつでもあなたが修正できる、優しい鏡を提供することが目的なのです。"
       },
       {
         "title": "私たちが決してならないもの",
@@ -2339,23 +2339,23 @@ export const injections = {
     "intro": "Cuando una mirada fugaz se siente como rechazo, cuando el silencio parece confirmar tus miedos o cuando un error parece definirte, Miravelys está aquí para bajar el ritmo. Escribes lo que se siente verdadero, la aplicación te ayuda a desenredarlo, y luego decides qué necesitas más: calma, claridad, descanso o una pregunta suave para seguir adelante.",
     "steps": [
       {
-        "title": "Inicio te encuentra donde estás",
-        "body": "Inicio simplemente pregunta qué se siente verdadero ahora, reconociendo si necesitas conectarte contigo mismo, descansar, responder a una indicación suave o mirar más profundamente."
+        "title": "\"Inicio\" te encuentra donde estás",
+        "body": "\"Inicio\" simplemente pregunta qué se siente verdadero ahora, reconociendo si necesitas conectarte contigo mismo, descansar, responder a una indicación suave o mirar más profundamente."
       },
       {
-        "title": "Línea clara desenreda el lío",
-        "body": "Línea clara toma un pensamiento abrumador y lo separa suavemente en lo que pasó, lo que sentiste, lo que tu cuerpo experimentó, la historia que te contaste, la creencia debajo y lo que sigue siendo desconocido."
+        "title": "\"Línea clara\" desenreda el lío",
+        "body": "\"Línea clara\" toma un pensamiento abrumador y lo separa suavemente en lo que pasó, lo que sentiste, lo que tu cuerpo experimentó, la historia que te contaste, la creencia debajo y lo que sigue siendo desconocido."
       },
       {
-        "title": "La calma primero protege tu paz",
+        "title": "\"La calma primero\" protege tu paz",
         "body": "Cuando tu mente va a mil por hora, Miravelys no te empujará a analizar. Te invita a respirar, suavizarte, encontrar tu equilibrio o simplemente dar un paso atrás."
       },
       {
-        "title": "Duerme conmigo respeta tu descanso",
+        "title": "\"Duerme conmigo\" respeta tu descanso",
         "body": "A medida que la noche avanza, la aplicación se aquieta contigo. Deja a un lado las preguntas pesadas, ofreciendo reflexiones relajantes, sonidos suaves y pensamientos que es mejor guardar para mañana."
       },
       {
-        "title": "Espejo refleja con cuidado",
+        "title": "\"Espejo\" refleja con cuidado",
         "body": "Los patrones se comparten contigo con delicadeza, y solo cuando hay pruebas suficientes. Nunca te etiquetamos. Todo se ofrece como una sugerencia, lista para tu corrección."
       },
       {
@@ -2481,7 +2481,7 @@ export const injections = {
       },
       {
         "title": "Encontrar la calma antes de buscar respuestas",
-        "body": "Cuando tu cuerpo está en modo de lucha o huida, intentar analizar tus pensamientos a menudo solo crea otra espiral. Miravelys presta atención, notando cuándo podrías necesitar conectar con tu cuerpo primero. Nuestra función 'La calma primero' no es solo un temporizador de respiración — es una parte esencial del proceso de claridad, que te ayuda a calmar tu cuerpo para que puedas regresar a tus pensamientos con un corazón más estable."
+        "body": "Cuando tu cuerpo está en modo de lucha o huida, intentar analizar tus pensamientos a menudo solo crea otra espiral. Miravelys presta atención, notando cuándo podrías necesitar conectar con tu cuerpo primero. Nuestra función '\"La calma primero\"' no es solo un temporizador de respiración — es una parte esencial del proceso de claridad, que te ayuda a calmar tu cuerpo para que puedas regresar a tus pensamientos con un corazón más estable."
       },
       {
         "title": "Tú eliges cuán profundo llegar",
@@ -2493,7 +2493,7 @@ export const injections = {
       },
       {
         "title": "Un espejo, no un juez",
-        "body": "El 'Espejo' solo te muestra patrones cuando hay evidencia innegable, y lo hace con humildad. No convertirá una semana difícil en un defecto de personalidad permanente. Simplemente nota cosas: tal vez una historia específica apareció un par de veces, o un ejercicio de respiración realmente ayudó, o podría valer la pena explorar cierta creencia. No se trata de crear drama; se trata de ofrecer un reflejo suave que siempre puedas corregir."
+        "body": "El '\"Espejo\"' solo te muestra patrones cuando hay evidencia innegable, y lo hace con humildad. No convertirá una semana difícil en un defecto de personalidad permanente. Simplemente nota cosas: tal vez una historia específica apareció un par de veces, o un ejercicio de respiración realmente ayudó, o podría valer la pena explorar cierta creencia. No se trata de crear drama; se trata de ofrecer un reflejo suave que siempre puedas corregir."
       },
       {
         "title": "Lo que nunca seremos",
@@ -2661,23 +2661,23 @@ export const injections = {
     "intro": "Quando um olhar fugaz parece rejeição, quando o silêncio parece confirmar os teus medos, ou quando um erro parece definir-te, o Miravelys está aqui para abrandar as coisas. Tu escreves o que sentes ser verdade, a aplicação ajuda-te a desembaraçar as pontas, e depois tu decides do que precisas mais: calma, clareza, descanso ou uma pergunta suave para seguir em frente.",
     "steps": [
       {
-        "title": "O Início encontra-te onde estás",
-        "body": "O Início simplesmente pergunta o que sentes ser verdade neste momento, reconhecendo se precisas de te conectar com o chão, descansar, responder a um pequeno estímulo ou olhar mais fundo."
+        "title": "O \"Início\" encontra-te onde estás",
+        "body": "O \"Início\" simplesmente pergunta o que sentes ser verdade neste momento, reconhecendo se precisas de te conectar com o chão, descansar, responder a um pequeno estímulo ou olhar mais fundo."
       },
       {
-        "title": "Linha clara desembaraça a confusão",
-        "body": "O Linha clara pega num único pensamento avassalador e separa-o suavemente entre o que aconteceu, o que sentiste, o que o teu corpo experienciou, a história que contaste a ti mesmo, a crença por baixo disso e o que permanece desconhecido."
+        "title": "\"Linha clara\" desembaraça a confusão",
+        "body": "O \"Linha clara\" pega num único pensamento avassalador e separa-o suavemente entre o que aconteceu, o que sentiste, o que o teu corpo experienciou, a história que contaste a ti mesmo, a crença por baixo disso e o que permanece desconhecido."
       },
       {
-        "title": "Calma primeiro protege a tua paz",
+        "title": "\"Calma primeiro\" protege a tua paz",
         "body": "Quando a tua mente está a mil à hora, o Miravelys não te vai pressionar a analisar. Convida-te a respirar, a suavizar, a encontrar o teu equilíbrio ou simplesmente a dar um passo atrás."
       },
       {
-        "title": "Durma comigo respeita o teu descanso",
+        "title": "\"Durma comigo\" respeita o teu descanso",
         "body": "À medida que a noite cai, a aplicação aquieta-se contigo. Põe de lado as perguntas pesadas, oferecendo reflexões relaxantes, sons suaves e pensamentos que é melhor guardar para amanhã."
       },
       {
-        "title": "Espelho reflete com cuidado",
+        "title": "\"Espelho\" reflete com cuidado",
         "body": "Os padrões são partilhados contigo de forma delicada, e apenas quando há provas suficientes. Nunca te rotulamos. Tudo é oferecido como uma sugestão, pronta para a tua correção."
       },
       {
@@ -2803,7 +2803,7 @@ export const injections = {
       },
       {
         "title": "Encontrar a calma antes de procurar respostas",
-        "body": "Quando o teu corpo está em modo de luta ou fuga, tentar analisar os teus pensamentos muitas vezes apenas cria outra espiral. O Miravelys presta atenção, notando quando podes precisar de te conectar com o corpo primeiro. A nossa funcionalidade 'Calma primeiro' não é apenas um temporizador de respiração — é uma parte essencial do processo de clareza, ajudando-te a acalmar o corpo para que possas regressar aos teus pensamentos com um coração mais estável."
+        "body": "Quando o teu corpo está em modo de luta ou fuga, tentar analisar os teus pensamentos muitas vezes apenas cria outra espiral. O Miravelys presta atenção, notando quando podes precisar de te conectar com o corpo primeiro. A nossa funcionalidade '\"Calma primeiro\"' não é apenas um temporizador de respiração — é uma parte essencial do processo de clareza, ajudando-te a acalmar o corpo para que possas regressar aos teus pensamentos com um coração mais estável."
       },
       {
         "title": "Tu escolhes o quão fundo ir",
@@ -2815,7 +2815,7 @@ export const injections = {
       },
       {
         "title": "Um espelho, não um juiz",
-        "body": "O 'Espelho' só te mostra padrões quando existem provas inegáveis, e fá-lo com humildade. Não transformará uma semana difícil numa falha de personalidade permanente. Simplesmente nota coisas: talvez uma história específica tenha surgido algumas vezes, ou um exercício de respiração tenha ajudado muito, ou uma determinada crença possa valer a pena explorar. Não se trata de criar drama; trata-se de oferecer um reflexo gentil que podes sempre corrigir."
+        "body": "O '\"Espelho\"' só te mostra padrões quando existem provas inegáveis, e fá-lo com humildade. Não transformará uma semana difícil numa falha de personalidade permanente. Simplesmente nota coisas: talvez uma história específica tenha surgido algumas vezes, ou um exercício de respiração tenha ajudado muito, ou uma determinada crença possa valer a pena explorar. Não se trata de criar drama; trata-se de oferecer um reflexo gentil que podes sempre corrigir."
       },
       {
         "title": "O que nunca seremos",
