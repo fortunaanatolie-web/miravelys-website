@@ -463,19 +463,19 @@ export const siteCopy = {
       "intro": "Когда мимолётный взгляд кажется отвержением, когда молчание подтверждает страхи или когда ошибка кажется доказательством вашей неполноценности, Miravelys рядом, чтобы замедлить этот поток. Вы пишете то, что чувствуете, приложение помогает это распутать, а затем вы решаете, что вам сейчас нужнее: покой, ясность, отдых или бережный вопрос, чтобы двигаться дальше.",
       "steps": [
         {
-          "title": "\"Главная\" встречает вас такими, какие вы есть",
-          "body": "\"Главная\" просто спрашивает, что кажется правдой сейчас, и замечает, нужно ли вам заземлиться, отдохнуть, ответить на мягкий вопрос или копнуть глубже."
+          "title": "Home встречает вас такими, какие вы есть",
+          "body": "Home просто спрашивает, что кажется правдой сейчас, и замечает, нужно ли вам заземлиться, отдохнуть, ответить на мягкий вопрос или копнуть глубже."
         },
         {
           "title": "\"Линия ясности\" распутывает клубок",
           "body": "\"Линия ясности\" берёт одну тяжёлую мысль и бережно разделяет её на: событие, чувство, реакцию тела, вашу историю, скрытое убеждение и неизвестность."
         },
         {
-          "title": "\"Сначала спокойствие\" защищает ваш покой",
+          "title": "Calm Now защищает ваш покой",
           "body": "Когда мысли несутся вскачь, Miravelys не заставит вас анализировать. Он предложит подышать, расслабиться, найти опору или просто отвлечься."
         },
         {
-          "title": "\"Засыпай со мной\" уважает ваш отдых",
+          "title": "Sleep Now уважает ваш отдых",
           "body": "С наступлением ночи приложение затихает вместе с вами. Оно откладывает тяжёлые вопросы, предлагая успокаивающие мысли, мягкие звуки и то, что лучше оставить на завтра."
         },
         {
@@ -605,7 +605,7 @@ export const siteCopy = {
         },
         {
           "title": "Обрести покой перед поиском ответов",
-          "body": "Когда ваше тело находится в режиме 'бей или беги', попытка проанализировать свои мысли часто лишь закручивает новую спираль. Miravelys внимательно следит за этим, замечая, когда вам, возможно, сначала нужно заземлиться. Наша функция '\"Сначала спокойствие\"' — это не просто таймер для дыхания, это важнейшая часть процесса прояснения ума, помогающая вам успокоить тело, чтобы вы могли вернуться к своим мыслям с более устойчивым сердцем."
+          "body": "Когда ваше тело находится в режиме 'бей или беги', попытка проанализировать свои мысли часто лишь закручивает новую спираль. Miravelys внимательно следит за этим, замечая, когда вам, возможно, сначала нужно заземлиться. Наша функция 'Calm Now' — это не просто таймер для дыхания, это важнейшая часть процесса прояснения ума, помогающая вам успокоить тело, чтобы вы могли вернуться к своим мыслям с более устойчивым сердцем."
         },
         {
           "title": "Вы сами выбираете, насколько глубоко идти",
@@ -785,19 +785,19 @@ export const siteCopy = {
       "intro": "Când o privire trecătoare pare o respingere, când tăcerea pare o dovadă a fricilor tale sau când o greșeală pare că te definește, Miravelys este aici pentru a încetini lucrurile. Scrii ceea ce simți că este adevărat, aplicația te ajută să descurci lucrurile, iar apoi tu decizi de ce ai cea mai mare nevoie: calm, claritate, odihnă sau o întrebare blândă pentru a merge mai departe.",
       "steps": [
         {
-          "title": "\"Acasă\" te întâlnește acolo unde ești",
-          "body": "\"Acasă\" pur și simplu te întreabă ce simți că este adevărat chiar acum, recunoscând dacă ai nevoie să te ancorezi, să te odihnești, să răspunzi la un îndemn blând sau să privești mai adânc."
+          "title": "Home te întâlnește acolo unde ești",
+          "body": "Home pur și simplu te întreabă ce simți că este adevărat chiar acum, recunoscând dacă ai nevoie să te ancorezi, să te odihnești, să răspunzi la un îndemn blând sau să privești mai adânc."
         },
         {
           "title": "\"Linie clară\" descurcă dezordinea",
           "body": "\"Linie clară\" ia un singur gând copleșitor și îl separă cu blândețe în ceea ce s-a întâmplat, ceea ce ai simțit, ceea ce a experimentat corpul tău, povestea pe care ți-ai spus-o, convingerea de dedesubt și ceea ce rămâne necunoscut."
         },
         {
-          "title": "\"Calmul mai întâi\" îți protejează pacea",
+          "title": "Calm Now îți protejează pacea",
           "body": "Când mintea ta gonește, Miravelys nu te va împinge să analizezi. Te invită să respiri, să te înmoi, să-ți găsești echilibrul sau pur și simplu să faci un pas înapoi."
         },
         {
-          "title": "\"Dormi cu mine\" îți respectă odihna",
+          "title": "Sleep Now îți respectă odihna",
           "body": "Pe măsură ce noaptea se adâncește, aplicația se liniștește odată cu tine. Lasă deoparte întrebările grele, oferind reflecții liniștitoare, sunete blânde și gânduri care sunt mai bine păstrate pentru mâine."
         },
         {
@@ -927,7 +927,7 @@ export const siteCopy = {
         },
         {
           "title": "Găsirea calmului înainte de a căuta răspunsuri",
-          "body": "Când corpul tău este în modul de luptă sau fugi, încercarea de a-ți analiza gândurile creează adesea doar o altă spirală. Miravelys este atent, observând când s-ar putea să ai nevoie să te ancorezi mai întâi. Funcția noastră '\"Calmul mai întâi\"' nu este doar un temporizator de respirație — este o parte esențială a procesului de claritate, ajutându-te să-ți liniștești corpul, astfel încât să poți reveni la gândurile tale cu o inimă mai stabilă."
+          "body": "Când corpul tău este în modul de luptă sau fugi, încercarea de a-ți analiza gândurile creează adesea doar o altă spirală. Miravelys este atent, observând când s-ar putea să ai nevoie să te ancorezi mai întâi. Funcția noastră 'Calm Now' nu este doar un temporizator de respirație — este o parte esențială a procesului de claritate, ajutându-te să-ți liniștești corpul, astfel încât să poți reveni la gândurile tale cu o inimă mai stabilă."
         },
         {
           "title": "Tu alegi cât de adânc să mergi",
@@ -1107,19 +1107,19 @@ export const siteCopy = {
       "intro": "Lorsqu'un regard fugace ressemble à un rejet, quand le silence vous donne l'impression de confirmer vos peurs, ou lorsqu'une erreur semble vous définir, Miravelys est là pour ralentir les choses. Vous écrivez ce qui vous semble vrai, l'application vous aide à le démêler, et vous décidez ensuite de ce dont vous avez le plus besoin : du calme, de la clarté, du repos, ou une question douce pour avancer.",
       "steps": [
         {
-          "title": "\"Accueil\" vous rencontre là où vous êtes",
-          "body": "\"Accueil\" vous demande simplement ce qui vous semble vrai maintenant, et perçoit si vous avez besoin de vous ancrer, de vous reposer, de répondre à une petite incitation, ou d'aller plus au fond."
+          "title": "Home vous rencontre là où vous êtes",
+          "body": "Home vous demande simplement ce qui vous semble vrai maintenant, et perçoit si vous avez besoin de vous ancrer, de vous reposer, de répondre à une petite incitation, ou d'aller plus au fond."
         },
         {
           "title": "\"Ligne claire\" démêle le chaos",
           "body": "\"Ligne claire\" prend une seule pensée accablante et la sépare doucement en ce qui s'est passé, ce que vous avez ressenti, ce que votre corps a expérimenté, l'histoire que vous vous êtes racontée, la croyance en dessous, et ce qui reste inconnu."
         },
         {
-          "title": "\"Le calme d'abord\" protège votre paix",
+          "title": "Calm Now protège votre paix",
           "body": "Quand votre esprit s'emballe, Miravelys ne vous poussera pas à analyser. Il vous invite à respirer, à vous adoucir, à retrouver vos appuis, ou simplement à prendre du recul."
         },
         {
-          "title": "\"Dors avec moi\" respecte votre repos",
+          "title": "Sleep Now respecte votre repos",
           "body": "À mesure que la nuit tombe, l'application s'apaise avec vous. Elle met de côté les questions lourdes, offrant des réflexions douces, des sons apaisants, et des pensées qu'il vaut mieux garder pour demain."
         },
         {
@@ -1249,7 +1249,7 @@ export const siteCopy = {
         },
         {
           "title": "Trouver le calme avant de chercher des réponses",
-          "body": "Lorsque votre corps est en mode 'combat ou fuite', essayer d'analyser vos pensées crée souvent une nouvelle spirale. Miravelys fait attention, remarquant quand vous pourriez avoir besoin de vous ancrer d'abord. Notre fonction '\"Le calme d'abord\"' n'est pas seulement un minuteur de respiration — c'est une partie essentielle du processus de clarté, vous aidant à apaiser votre corps pour pouvoir revenir à vos pensées avec un cœur plus stable."
+          "body": "Lorsque votre corps est en mode 'combat ou fuite', essayer d'analyser vos pensées crée souvent une nouvelle spirale. Miravelys fait attention, remarquant quand vous pourriez avoir besoin de vous ancrer d'abord. Notre fonction 'Calm Now' n'est pas seulement un minuteur de respiration — c'est une partie essentielle du processus de clarté, vous aidant à apaiser votre corps pour pouvoir revenir à vos pensées avec un cœur plus stable."
         },
         {
           "title": "Vous choisissez jusqu'où vous voulez aller",
@@ -1429,19 +1429,19 @@ export const siteCopy = {
       "intro": "जब कोई उड़ती हुई नज़र अस्वीकृति जैसी लगती है, जब मौन आपके डर का प्रमाण लगता है, या जब कोई गलती ऐसी लगती है जैसे वह आपकी पहचान तय करती है, तो Miravelys चीजों को धीमा करने के लिए यहाँ है। आप वह लिखते हैं जो आपको सच लगता है, ऐप इसे सुलझाने में मदद करता है, और फिर आप तय करते हैं कि आपको सबसे ज़्यादा किस चीज़ की ज़रूरत है: शांति, स्पष्टता, आराम, या आगे बढ़ने के लिए एक कोमल प्रश्न।",
       "steps": [
         {
-          "title": "\"होम\" आपसे वहीं मिलता है जहाँ आप हैं",
-          "body": "\"होम\" बस यह पूछता है कि अभी क्या सच लगता है, यह पहचानते हुए कि क्या आपको खुद को शांत करने, आराम करने, किसी सवाल का जवाब देने, या गहराई से देखने की ज़रूरत है।"
+          "title": "Home आपसे वहीं मिलता है जहाँ आप हैं",
+          "body": "Home बस यह पूछता है कि अभी क्या सच लगता है, यह पहचानते हुए कि क्या आपको खुद को शांत करने, आराम करने, किसी सवाल का जवाब देने, या गहराई से देखने की ज़रूरत है।"
         },
         {
           "title": "\"स्पष्ट रेखा\" उलझन को सुलझाती है",
           "body": "\"स्पष्ट रेखा\" एक भारी विचार को लेता है और धीरे से इसे अलग करता है कि क्या हुआ, आपने क्या महसूस किया, आपके शरीर ने क्या अनुभव किया, वह कहानी जो आपने खुद को बताई, उसके नीचे का विश्वास, और क्या अनजाना है।"
         },
         {
-          "title": "\"पहले शांति\" आपकी शांति की रक्षा करता है",
+          "title": "Calm Now आपकी शांति की रक्षा करता है",
           "body": "जब आपका दिमाग तेज़ दौड़ रहा हो, तो Miravelys आपको विश्लेषण करने के लिए मजबूर नहीं करेगा। यह आपको साँस लेने, नरम होने, अपना संतुलन खोजने, या बस पीछे हटने के लिए आमंत्रित करता है।"
         },
         {
-          "title": "\"मेरे साथ सोएं\" आपके आराम का सम्मान करता है",
+          "title": "Sleep Now आपके आराम का सम्मान करता है",
           "body": "जैसे-जैसे रात गहरी होती है, ऐप आपके साथ शांत हो जाता है। यह भारी सवालों को अलग रख देता है, सुखद विचार, हल्की आवाज़ें, और वे बातें पेश करता है जिन्हें कल के लिए बचा कर रखना बेहतर है।"
         },
         {
@@ -1571,7 +1571,7 @@ export const siteCopy = {
         },
         {
           "title": "जवाब खोजने से पहले शांति खोजना",
-          "body": "जब आपका शरीर लड़ाई-या-उड़ान मोड (fight-or-flight) में होता है, तो अपने विचारों का विश्लेषण करने की कोशिश अक्सर एक और चक्र बनाती है। Miravelys ध्यान देता है, यह देखते हुए कि आपको पहले खुद को शांत करने की आवश्यकता हो सकती है। हमारी '\"पहले शांति\"' सुविधा केवल एक साँस लेने का टाइमर नहीं है — यह स्पष्टता प्रक्रिया का एक अनिवार्य हिस्सा है, जो आपको अपने शरीर को शांत करने में मदद करता है ताकि आप स्थिर हृदय के साथ अपने विचारों पर लौट सकें。"
+          "body": "जब आपका शरीर लड़ाई-या-उड़ान मोड (fight-or-flight) में होता है, तो अपने विचारों का विश्लेषण करने की कोशिश अक्सर एक और चक्र बनाती है। Miravelys ध्यान देता है, यह देखते हुए कि आपको पहले खुद को शांत करने की आवश्यकता हो सकती है। हमारी 'Calm Now' सुविधा केवल एक साँस लेने का टाइमर नहीं है — यह स्पष्टता प्रक्रिया का एक अनिवार्य हिस्सा है, जो आपको अपने शरीर को शांत करने में मदद करता है ताकि आप स्थिर हृदय के साथ अपने विचारों पर लौट सकें。"
         },
         {
           "title": "आप चुनते हैं कि कितनी गहराई तक जाना है",
@@ -1751,19 +1751,19 @@ export const siteCopy = {
       "intro": "当匆匆一瞥感觉像是否定，当沉默感觉像证实了你的恐惧，或者当一个错误感觉像是定义了你时，Miravelys 在这里帮你慢下来。你写下让你觉得真实的东西，应用帮你理清它，然后由你决定你最需要什么：是平静、清晰、休息，还是一个温柔的问题来推动你前进。",
       "steps": [
         {
-          "title": "\"首页\" 在你所在的地方遇见你",
-          "body": "\"首页\" 只是问你现在觉得什么是真实的，并感知你是否需要脚踏实地、休息、回答一个温和的提示，还是更深入地探索。"
+          "title": "Home 在你所在的地方遇见你",
+          "body": "Home 只是问你现在觉得什么是真实的，并感知你是否需要脚踏实地、休息、回答一个温和的提示，还是更深入地探索。"
         },
         {
           "title": "\"清晰线索\" 理清混乱",
           "body": "\"清晰线索\" 会捕捉一个压倒性的想法，并温柔地将它分离为：发生的事实、你的感受、你身体的体验、你告诉自己的故事、背后的信念，以及未知。"
         },
         {
-          "title": "\"先平复心情\" 守护你的平静",
+          "title": "Calm Now 守护你的平静",
           "body": "当你的大脑飞速运转时，Miravelys 不会逼你分析。它邀请你深呼吸，放松下来，找回重心，或者干脆先退后一步。"
         },
         {
-          "title": "\"和我一起入睡\" 尊重你的休息",
+          "title": "Sleep Now 尊重你的休息",
           "body": "夜幕降临时，应用也会和你一起安静下来。它会把沉重的问题放在一边，提供舒缓的反思、柔和的声音，以及那些最好留到明天再想的念头。"
         },
         {
@@ -1893,7 +1893,7 @@ export const siteCopy = {
         },
         {
           "title": "在寻找答案前，先找到平静",
-          "body": "当你的身体处于“战斗或逃跑”模式时，试图分析你的想法往往只会制造另一个螺旋。Miravelys 会注意到这一点，察觉到你何时可能需要先稳住自己。我们的“\"先平复心情\"”功能不仅仅是一个呼吸计时器 — 它是清晰过程中至关重要的一部分，帮助你安抚身体，以便你能带着更平稳的心回到你的思绪中。"
+          "body": "当你的身体处于“战斗或逃跑”模式时，试图分析你的想法往往只会制造另一个螺旋。Miravelys 会注意到这一点，察觉到你何时可能需要先稳住自己。我们的“Calm Now”功能不仅仅是一个呼吸计时器 — 它是清晰过程中至关重要的一部分，帮助你安抚身体，以便你能带着更平稳的心回到你的思绪中。"
         },
         {
           "title": "深入的程度，由你选择",
@@ -2073,19 +2073,19 @@ export const siteCopy = {
       "intro": "Wenn sich ein flüchtiger Blick wie Ablehnung anfühlt, wenn sich Schweigen wie ein Beweis für deine Ängste anfühlt oder wenn sich ein Fehler anfühlt, als würde er dich definieren, ist Miravelys hier, um die Dinge zu verlangsamen. Du schreibst, was sich wahr anfühlt, die App hilft dir, es zu entwirren, und dann entscheidest du, was du am meisten brauchst: Ruhe, Klarheit, Schlaf oder eine sanfte Frage, um voranzukommen.",
       "steps": [
         {
-          "title": "\"Start\" holt dich da ab, wo du bist",
-          "body": "\"Start\" fragt einfach, was sich gerade jetzt wahr anfühlt, und erkennt, ob du dich erden, ausruhen, auf eine sanfte Aufforderung antworten oder tiefer blicken musst."
+          "title": "Home holt dich da ab, wo du bist",
+          "body": "Home fragt einfach, was sich gerade jetzt wahr anfühlt, und erkennt, ob du dich erden, ausruhen, auf eine sanfte Aufforderung antworten oder tiefer blicken musst."
         },
         {
           "title": "\"Klare Linie\" entwirrt das Chaos",
           "body": "\"Klare Linie\" nimmt einen einzigen überwältigenden Gedanken und trennt ihn sanft in das, was passiert ist, was du gefühlt hast, was dein Körper erlebt hat, die Geschichte, die du dir erzählt hast, die Überzeugung darunter und das, was unbekannt bleibt."
         },
         {
-          "title": "\"Zuerst Ruhe\" schützt deinen Frieden",
+          "title": "Calm Now schützt deinen Frieden",
           "body": "Wenn deine Gedanken rasen, wird Miravelys dich nicht zur Analyse drängen. Es lädt dich ein zu atmen, weicher zu werden, deinen Halt zu finden oder einfach einen Schritt zurückzutreten."
         },
         {
-          "title": "\"Schlaf mit mir\" respektiert deine Ruhe",
+          "title": "Sleep Now respektiert deine Ruhe",
           "body": "Wenn die Nacht tiefer wird, wird die App mit dir leiser. Sie legt schwere Fragen beiseite und bietet beruhigende Reflexionen, sanfte Klänge und Gedanken, die man besser für morgen aufhebt."
         },
         {
@@ -2215,7 +2215,7 @@ export const siteCopy = {
         },
         {
           "title": "Ruhe finden, bevor man nach Antworten sucht",
-          "body": "Wenn sich dein Körper im Kampf-oder-Flucht-Modus befindet, führt der Versuch, deine Gedanken zu analysieren, oft nur zu einer weiteren Spirale. Miravelys achtet darauf und bemerkt, wenn du dich vielleicht erst erden musst. Unsere '\"Zuerst Ruhe\"'-Funktion ist nicht nur ein Atem-Timer — sie ist ein wesentlicher Bestandteil des Klarheits-Prozesses und hilft dir, deinen Körper zu beruhigen, damit du mit einem beständigeren Herzen zu deinen Gedanken zurückkehren kannst."
+          "body": "Wenn sich dein Körper im Kampf-oder-Flucht-Modus befindet, führt der Versuch, deine Gedanken zu analysieren, oft nur zu einer weiteren Spirale. Miravelys achtet darauf und bemerkt, wenn du dich vielleicht erst erden musst. Unsere 'Calm Now'-Funktion ist nicht nur ein Atem-Timer — sie ist ein wesentlicher Bestandteil des Klarheits-Prozesses und hilft dir, deinen Körper zu beruhigen, damit du mit einem beständigeren Herzen zu deinen Gedanken zurückkehren kannst."
         },
         {
           "title": "Du entscheidest, wie tief du gehen willst",
@@ -2395,19 +2395,19 @@ export const siteCopy = {
       "intro": "ふとした視線が拒絶のように感じられる時、沈黙が不安の証拠のように思える時、または一つの失敗が自分自身を定義しているように感じる時、Miravelysは物事を少し遅らせるためにここにいます。あなたが真実だと感じることを書き、アプリがそれを解きほぐすのを手伝い、そして、今一番必要なもの — 落ち着き、明確さ、休息、あるいは前に進むための優しい問いかけ — をあなた自身が選びます。",
       "steps": [
         {
-          "title": "\"ホーム\"は今のあなたを受け入れます",
-          "body": "\"ホーム\"はただ、今何が真実だと感じるかを尋ね、あなたが地に足をつける必要があるか、休む必要があるか、優しい問いに答える必要があるか、あるいはより深く見る必要があるかを感じ取ります。"
+          "title": "Homeは今のあなたを受け入れます",
+          "body": "Homeはただ、今何が真実だと感じるかを尋ね、あなたが地に足をつける必要があるか、休む必要があるか、優しい問いに答える必要があるか、あるいはより深く見る必要があるかを感じ取ります。"
         },
         {
           "title": "\"明確なライン\"が絡まりを解く",
           "body": "\"明確なライン\"は、圧倒的な一つの考えを受け取り、何が起きたか、何を感じたか、体がどう反応したか、自分に語った物語、その奥の思い込み、そして未知のものへと、優しく分けていきます。"
         },
         {
-          "title": "\"まずは穏やかに\"があなたの平穏を守る",
+          "title": "Calm Nowがあなたの平穏を守る",
           "body": "思考がぐるぐると回っている時、Miravelysはあなたに分析を強要しません。息をし、力を抜き、自分を取り戻すか、ただ一歩下がるように誘います。"
         },
         {
-          "title": "\"一緒に眠る\"は休息を尊重する",
+          "title": "Sleep Nowは休息を尊重する",
           "body": "夜が深まると、アプリもあなたと一緒に静かになります。重い問いかけを避け、心地よい振り返り、優しい音、そして明日まで取っておくべき考えを提案します。"
         },
         {
@@ -2537,7 +2537,7 @@ export const siteCopy = {
         },
         {
           "title": "答えを探す前に、落ち着きを見つける",
-          "body": "体が「闘争・逃走反応」にある時、思考を分析しようとすると、往々にしてまた別のループを生み出してしまいます。Miravelysはそれに気づき、あなたがまずグラウンディング（地に足をつけること）を必要としているかもしれない時に気を配ります。私たちの「\"まずは穏やかに\"」機能は、単なる呼吸のタイマーではありません — それは明確になるためのプロセスの不可欠な一部であり、体を落ち着かせ、より安定した心で思考に戻れるようにするのを助けます。"
+          "body": "体が「闘争・逃走反応」にある時、思考を分析しようとすると、往々にしてまた別のループを生み出してしまいます。Miravelysはそれに気づき、あなたがまずグラウンディング（地に足をつけること）を必要としているかもしれない時に気を配ります。私たちの「Calm Now」機能は、単なる呼吸のタイマーではありません — それは明確になるためのプロセスの不可欠な一部であり、体を落ち着かせ、より安定した心で思考に戻れるようにするのを助けます。"
         },
         {
           "title": "どこまで深く行くかはあなたが選ぶ",
@@ -2717,19 +2717,19 @@ export const siteCopy = {
       "intro": "Cuando una mirada fugaz se siente como rechazo, cuando el silencio parece confirmar tus miedos o cuando un error parece definirte, Miravelys está aquí para bajar el ritmo. Escribes lo que se siente verdadero, la aplicación te ayuda a desenredarlo, y luego decides qué necesitas más: calma, claridad, descanso o una pregunta suave para seguir adelante.",
       "steps": [
         {
-          "title": "\"Inicio\" te encuentra donde estás",
-          "body": "\"Inicio\" simplemente pregunta qué se siente verdadero ahora, reconociendo si necesitas conectarte contigo mismo, descansar, responder a una indicación suave o mirar más profundamente."
+          "title": "Home te encuentra donde estás",
+          "body": "Home simplemente pregunta qué se siente verdadero ahora, reconociendo si necesitas conectarte contigo mismo, descansar, responder a una indicación suave o mirar más profundamente."
         },
         {
           "title": "\"Línea clara\" desenreda el lío",
           "body": "\"Línea clara\" toma un pensamiento abrumador y lo separa suavemente en lo que pasó, lo que sentiste, lo que tu cuerpo experimentó, la historia que te contaste, la creencia debajo y lo que sigue siendo desconocido."
         },
         {
-          "title": "\"La calma primero\" protege tu paz",
+          "title": "Calm Now protege tu paz",
           "body": "Cuando tu mente va a mil por hora, Miravelys no te empujará a analizar. Te invita a respirar, suavizarte, encontrar tu equilibrio o simplemente dar un paso atrás."
         },
         {
-          "title": "\"Duerme conmigo\" respeta tu descanso",
+          "title": "Sleep Now respeta tu descanso",
           "body": "A medida que la noche avanza, la aplicación se aquieta contigo. Deja a un lado las preguntas pesadas, ofreciendo reflexiones relajantes, sonidos suaves y pensamientos que es mejor guardar para mañana."
         },
         {
@@ -2859,7 +2859,7 @@ export const siteCopy = {
         },
         {
           "title": "Encontrar la calma antes de buscar respuestas",
-          "body": "Cuando tu cuerpo está en modo de lucha o huida, intentar analizar tus pensamientos a menudo solo crea otra espiral. Miravelys presta atención, notando cuándo podrías necesitar conectar con tu cuerpo primero. Nuestra función '\"La calma primero\"' no es solo un temporizador de respiración — es una parte esencial del proceso de claridad, que te ayuda a calmar tu cuerpo para que puedas regresar a tus pensamientos con un corazón más estable."
+          "body": "Cuando tu cuerpo está en modo de lucha o huida, intentar analizar tus pensamientos a menudo solo crea otra espiral. Miravelys presta atención, notando cuándo podrías necesitar conectar con tu cuerpo primero. Nuestra función 'Calm Now' no es solo un temporizador de respiración — es una parte esencial del proceso de claridad, que te ayuda a calmar tu cuerpo para que puedas regresar a tus pensamientos con un corazón más estable."
         },
         {
           "title": "Tú eliges cuán profundo llegar",
@@ -3039,19 +3039,19 @@ export const siteCopy = {
       "intro": "Quando um olhar fugaz parece rejeição, quando o silêncio parece confirmar os teus medos, ou quando um erro parece definir-te, o Miravelys está aqui para abrandar as coisas. Tu escreves o que sentes ser verdade, a aplicação ajuda-te a desembaraçar as pontas, e depois tu decides do que precisas mais: calma, clareza, descanso ou uma pergunta suave para seguir em frente.",
       "steps": [
         {
-          "title": "O \"Início\" encontra-te onde estás",
-          "body": "O \"Início\" simplesmente pergunta o que sentes ser verdade neste momento, reconhecendo se precisas de te conectar com o chão, descansar, responder a um pequeno estímulo ou olhar mais fundo."
+          "title": "O Home encontra-te onde estás",
+          "body": "O Home simplesmente pergunta o que sentes ser verdade neste momento, reconhecendo se precisas de te conectar com o chão, descansar, responder a um pequeno estímulo ou olhar mais fundo."
         },
         {
           "title": "\"Linha clara\" desembaraça a confusão",
           "body": "O \"Linha clara\" pega num único pensamento avassalador e separa-o suavemente entre o que aconteceu, o que sentiste, o que o teu corpo experienciou, a história que contaste a ti mesmo, a crença por baixo disso e o que permanece desconhecido."
         },
         {
-          "title": "\"Calma primeiro\" protege a tua paz",
+          "title": "Calm Now protege a tua paz",
           "body": "Quando a tua mente está a mil à hora, o Miravelys não te vai pressionar a analisar. Convida-te a respirar, a suavizar, a encontrar o teu equilíbrio ou simplesmente a dar um passo atrás."
         },
         {
-          "title": "\"Durma comigo\" respeita o teu descanso",
+          "title": "Sleep Now respeita o teu descanso",
           "body": "À medida que a noite cai, a aplicação aquieta-se contigo. Põe de lado as perguntas pesadas, oferecendo reflexões relaxantes, sons suaves e pensamentos que é melhor guardar para amanhã."
         },
         {
@@ -3181,7 +3181,7 @@ export const siteCopy = {
         },
         {
           "title": "Encontrar a calma antes de procurar respostas",
-          "body": "Quando o teu corpo está em modo de luta ou fuga, tentar analisar os teus pensamentos muitas vezes apenas cria outra espiral. O Miravelys presta atenção, notando quando podes precisar de te conectar com o corpo primeiro. A nossa funcionalidade '\"Calma primeiro\"' não é apenas um temporizador de respiração — é uma parte essencial do processo de clareza, ajudando-te a acalmar o corpo para que possas regressar aos teus pensamentos com um coração mais estável."
+          "body": "Quando o teu corpo está em modo de luta ou fuga, tentar analisar os teus pensamentos muitas vezes apenas cria outra espiral. O Miravelys presta atenção, notando quando podes precisar de te conectar com o corpo primeiro. A nossa funcionalidade 'Calm Now' não é apenas um temporizador de respiração — é uma parte essencial do processo de clareza, ajudando-te a acalmar o corpo para que possas regressar aos teus pensamentos com um coração mais estável."
         },
         {
           "title": "Tu escolhes o quão fundo ir",
