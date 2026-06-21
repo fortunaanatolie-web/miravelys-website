@@ -1120,3 +1120,12 @@ export const pt = {
     "secondary": "Acesso antecipado"
   }
 };
+
+const presentationCopy = { en, ru, ro, fr, hi, zh, de, es, pt, ja };
+
+export function resolvePresentation(lang) {
+  return presentationCopy[lang] || presentationCopy.en;
+}
+
+export { presentationCopy };
+export default presentationCopy;
