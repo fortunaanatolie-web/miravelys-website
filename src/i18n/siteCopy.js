@@ -79,15 +79,14 @@ export const siteCopy = {
       "origin": "The Story"
     },
     "hero": {
-      "eyebrow": "A gentle space for your hardest moments",
+      "eyebrow": "A private space for your hardest moments",
       "title": "Miravelys",
-      "subtitle": "When a single moment spirals into an overwhelming story, Miravelys is here to help you untangle it. Gently separate what happened from what you felt, what your body is carrying, and what your mind added.",
-      "body": "No expectations. No diagnoses. Just a quiet, private place to slow down, breathe, and find your way back to yourself.",
-      "primary": "Start with a single moment",
+      "subtitle": "When an anxious thought or a difficult emotion takes over, Miravelys helps you break it down. It's a guided journaling app that helps you separate what actually happened from the stories your mind is inventing.",
+      "body": "No algorithms diagnosing you. No pressure to be positive. Just a quiet, safe place to calm your body and understand your mind.",
+      "primary": "Start untangling your thoughts",
       "secondary": "Read our privacy promise",
-      "visualLabel": "Miravelys helps you untangle the moment, your emotions, your body's response, the stories you tell yourself, hidden beliefs, and what remains unknown."
+      "visualLabel": "Miravelys helps you break down an overwhelming moment: your emotions, your physical reactions, your mind's assumptions, and your hidden beliefs."
     },
-
     "mockups": {
       "eyebrow": "A look inside",
       "title": "Watch a tangled moment find its clarity.",
@@ -126,102 +125,102 @@ export const siteCopy = {
       "legalNavAria": "Legal details and support"
     },
     "what": {
-      "eyebrow": "What is it?",
-      "title": "A quiet space where a single honest sentence can create room to breathe.",
+      "eyebrow": "What is Miravelys?",
+      "title": "A guided journal that helps you find clarity when you're overwhelmed.",
       "paragraphs": [
-        "Miravelys starts exactly where you are: with just one messy, unfinished sentence about what hurt, what overwhelmed you, or what keeps echoing in your mind. You don't need to be calm, articulate, or have it all figured out. We meet you with human warmth, not a clinical checklist.",
-        "The app helps you gently untangle that moment: what actually happened, what you felt, where your body held the tension, the stories your mind rushed to tell, the quiet beliefs hiding underneath, and the things you simply don't know yet. You are always in control—you can soften the reflection, correct it, pause, or just say, 'That doesn't feel like me.'",
-        "Over time, Miravelys begins to notice what truly brings you peace, helps you rest, or allows you to challenge a painful recurring thought. It doesn't box you into an identity. Instead, it builds a gentle, living map of your inner world—one you can rewrite whenever you need to."
+        "You don't need to write a perfect diary entry. Start with one messy, honest sentence about what triggered you or what's keeping you awake. Miravelys meets you there.",
+        "The app asks you gentle questions to help you separate the facts of the situation from your body's physical tension and your mind's anxious stories. You are always in control—you can skip questions, edit your answers, or pause at any time.",
+        "Over time, the app acts as a mirror, helping you spot recurring emotional loops and protective habits, so you can build a healthier relationship with your own thoughts."
       ],
       "callout": "Miravelys isn't here to argue with your mind. It's here to help you slow the noise down, so you can see what's real, what's a defense mechanism, and what simply needs a moment of rest."
     },
     "works": {
-      "eyebrow": "How it guides you",
-      "title": "Watch an honest thought become a peaceful next step.",
-      "intro": "When a fleeting glance feels like rejection, when silence feels like proof of your fears, or when a mistake feels like it defines you, Miravelys is here to slow things down. You write what feels true, the app helps you untangle it, and then you decide what you need most: calm, clarity, rest, or a gentle question to move forward.",
+      "eyebrow": "How the app works",
+      "title": "From an overwhelming thought to a clear next step.",
+      "intro": "Miravelys provides a toolkit of reflection and calming exercises to help you process difficult moments at your own pace.",
       "steps": [
         {
-          "title": "Home meets you where you are",
-          "body": "Home simply asks what feels true right now, recognizing if you need to ground yourself, rest, answer a gentle prompt, or look deeper."
+          "title": "Home adapts to you",
+          "body": "The app simply asks what you need right now—whether it's to calm down, vent your frustrations, or sleep."
         },
         {
-          "title": "Truth Line untangles the mess",
-          "body": "Get Clear takes a single overwhelming thought and gently separates it into what happened, what you felt, what your body experienced, the story you told, the belief beneath it, and what remains unknown."
+          "title": "Get Clear breaks it down",
+          "body": "Take a single heavy thought and separate it into pieces: the event, the emotion, your body's reaction, the story you told yourself, and the unknown."
         },
         {
-          "title": "Calm Now protects your peace",
-          "body": "When your mind is racing, Miravelys won't push you to analyze. It invites you to breathe, soften, find your footing, or simply step away."
+          "title": "Calm Now soothes your body",
+          "body": "When your mind is racing, we offer guided breathing and meditation to help your nervous system settle before you try to analyze anything."
         },
         {
-          "title": "Sleep Now respects your rest",
-          "body": "As the night deepens, the app quiets down with you. It sets aside heavy questions, offering soothing reflections, gentle sounds, and thoughts better saved for tomorrow."
+          "title": "Sleep Now helps you rest",
+          "body": "When anxiety hits at night, the app sets aside heavy questions and offers calming soundscapes to help you sleep."
         },
         {
-          "title": "Weekly Mirror reflects with care",
-          "body": "Patterns are shared with you gently, and only when there is enough evidence. We never label you. Everything is offered as a suggestion, ready for your correction."
+          "title": "Weekly Mirror shows your patterns",
+          "body": "The app gently points out recurring themes or beliefs you've written about, giving you a chance to reflect on them without judgment."
         },
         {
-          "title": "Your voice shapes the journey",
-          "body": "Every time you correct the app—telling it to be gentler, that a thought isn't yours, or to delete an assumption—it learns to support you better."
+          "title": "You are in control",
+          "body": "You can always correct the app, delete entries, and shape how it supports you."
         }
       ]
     },
     "depths": {
-      "eyebrow": "You set the pace",
-      "title": "Three ways to reflect, one unwavering commitment to your safety.",
+      "eyebrow": "Choose your reflection mode",
+      "title": "Three levels of guidance, depending on what you can handle today.",
       "intro": "Miravelys adapts its tone to what you need, but its ethics never change. It will never humiliate you, diagnose you, or claim to know the absolute truth. It only goes as deep as you invite it to.",
       "items": [
         {
           "title": "Calm Mirror",
           "tag": "Gentle",
-          "body": "For your most fragile moments. The app reflects your words with deep care, asks only one small question at a time, and prioritizes helping you feel safe."
+          "body": "For your most fragile moments. The app asks only one small question at a time and focuses entirely on helping you feel safe and grounded."
         },
         {
           "title": "Direct Inquiry",
           "tag": "Clear",
-          "body": "For when you need a little less cushioning. The questions become sharper and more focused, while remaining warm, supportive, and open to correction."
+          "body": "For when you need practical clarity. The questions are straightforward and focused on helping you untangle the facts from your feelings."
         },
         {
           "title": "Bold Clarity",
           "tag": "Challenging",
-          "body": "For the recurring loops that keep tricking you. The app gently pushes back against exaggerations, avoidance, and protective stories—always keeping your safety controls within reach."
+          "body": "For breaking out of recurring mental loops. The app gently challenges your exaggerations and asks you to look closer at your blind spots."
         }
       ]
     },
     "moments": {
-      "eyebrow": "Finding clarity",
-      "title": "The tiny shifts that change how your day feels.",
+      "eyebrow": "The benefits",
+      "title": "Small moments of reflection create lasting mental clarity.",
       "items": [
         {
-          "title": "You learn to separate the facts from the stories your mind creates.",
-          "body": "An overwhelming thought stops feeling like a storm and becomes something you can simply observe."
+          "title": "Separate facts from anxiety.",
+          "body": "Learn to see the difference between what actually happened and what your mind is afraid of."
         },
         {
-          "title": "You discover what truly brings your body peace.",
-          "body": "Your nervous system gets a moment of quiet before your mind tries to fix everything."
+          "title": "Calm your nervous system.",
+          "body": "Give your body a moment to breathe and settle before trying to fix the problem."
         },
         {
-          "title": "You stop letting a single feeling define who you are.",
-          "body": "A thought that felt like absolute truth suddenly becomes something you can question."
+          "title": "Question your beliefs.",
+          "body": "Take a thought that feels like absolute truth and realize it's just an assumption you can let go of."
         },
         {
-          "title": "You recognize your patterns without the heavy drama.",
-          "body": "Those late-night anxieties are gently set aside, rather than wrestled with until dawn."
+          "title": "Notice your patterns.",
+          "body": "Gently observe your emotional triggers instead of wrestling with them."
         },
         {
-          "title": "You find a next step that feels smaller, kinder, and deeply honest.",
-          "body": "You see your recurring struggles with compassion and clarity, rather than judgment."
+          "title": "Find a smaller, kinder next step.",
+          "body": "See your recurring struggles with compassion and clarity, rather than judgment."
         },
         {
-          "title": "The experience grows with you, shaped by your own truth.",
+          "title": "The experience grows with you.",
           "body": "Every correction you make teaches the app how to be a better, truer companion for you."
         }
       ]
     },
     "privacy": {
-      "eyebrow": "Privacy & Control",
-      "title": "Your inner world belongs to you, not an algorithm.",
-      "body": "Miravelys is built local-first because your raw material—your fears, your restless nights, your corrections, and the quiet things you rarely say out loud—is profoundly personal. The app treats your thoughts with reverence. You can pause, soften, edit, hide, or delete anything at any time. When you correct the app, it's not a minor preference; it is the most important lesson the system learns.",
+      "eyebrow": "Total Privacy",
+      "title": "Your reflections stay on your device, completely private.",
+      "body": "Your fears, your sleep-deprived thoughts, and your private venting are deeply personal. Miravelys is built to keep your data local and secure. The app will never diagnose you or use your entries to label you. You have the ultimate power to edit, hide, or permanently delete anything you write.",
       "bullets": [
         "Your experience stays on your device by default",
         "Cloud support is only there if you want it",
@@ -402,13 +401,13 @@ export const siteCopy = {
       "origin": "История"
     },
     "hero": {
-      "eyebrow": "Бережное пространство для самых сложных моментов",
+      "eyebrow": "Безопасное место для самых сложных моментов",
       "title": "Miravelys",
-      "subtitle": "Когда одна маленькая деталь разрастается в огромную тревожную историю, Miravelys помогает распутать этот клубок. Мягко отделите то, что произошло, от того, что вы почувствовали, как отреагировало тело и что додумал ваш ум.",
-      "body": "Никаких ожиданий. Никаких диагнозов. Только тихое, личное место, чтобы замедлиться, выдохнуть и найти дорогу обратно к себе.",
-      "primary": "Начните с одного ясного момента",
+      "subtitle": "Когда тревожные мысли или тяжелые эмоции берут верх, Miravelys помогает их распутать. Это дневник с направляющими вопросами, который помогает отделить то, что произошло на самом деле, от историй, придуманных вашим разумом.",
+      "body": "Никаких алгоритмов с диагнозами. Никакого давления быть позитивным. Только тихое, безопасное место, чтобы успокоить тело и понять свой ум.",
+      "primary": "Начать распутывать мысли",
       "secondary": "О нашей приватности",
-      "visualLabel": "Miravelys помогает распутать момент: ваши эмоции, реакцию тела, придуманные истории, скрытые убеждения и то, что пока остаётся неизвестным."
+      "visualLabel": "Miravelys помогает разложить сложный момент на части: ваши эмоции, телесные реакции, догадки ума и скрытые убеждения."
     },
     "mockups": {
       "eyebrow": "Взгляд изнутри",
@@ -448,105 +447,105 @@ export const siteCopy = {
       "legalNavAria": "Правовая информация и поддержка"
     },
     "what": {
-      "eyebrow": "Что это?",
-      "title": "Тихое пространство, где одна честная фраза помогает дышать свободнее.",
+      "eyebrow": "Что такое Miravelys?",
+      "title": "Дневник, который помогает обрести ясность, когда вы перегружены.",
       "paragraphs": [
-        "Miravelys начинается ровно там, где вы сейчас: с одной незаконченной, сбивчивой фразы о том, что вас задело, напугало или просто не выходит из головы. Вам не нужно быть спокойным, логичным или всё понимать. Мы встречаем вас с человеческим теплом, а не с клиническим опросником.",
-        "Приложение мягко помогает распутать момент: что случилось на самом деле, что вы почувствовали, где в теле скопилось напряжение, какую историю поспешил рассказать ваш ум, какие тихие убеждения кроются внизу и что пока остаётся неизвестным. Вы всегда контролируете процесс — вы можете смягчить отражение, исправить его, сделать паузу или просто сказать: «Нет, это не про меня».",
-        "Со временем Miravelys начинает замечать, что именно приносит вам покой, помогает уснуть или позволяет усомниться в болезненной мысли. Он не загоняет вас в рамки диагнозов. Вместо этого он выстраивает бережную, живую карту вашего внутреннего мира — ту, которую вы можете переписать, когда захотите."
+        "Вам не нужно писать идеальные записи. Начните с одной честной, пусть и сбивчивой, фразы о том, что вас задело или не дает уснуть. Miravelys встретит вас именно там, где вы находитесь.",
+        "Приложение задает мягкие вопросы, чтобы помочь отделить факты от телесного напряжения и тревожных мыслей. Вы всегда контролируете процесс: можно пропустить вопрос, изменить ответ или сделать паузу в любой момент.",
+        "Со временем приложение начинает работать как зеркало, помогая замечать повторяющиеся эмоциональные циклы и защитные привычки, чтобы вы могли выстроить более здоровые отношения со своими мыслями."
       ],
-      "callout": "Miravelys здесь не для того, чтобы спорить с вашим разумом. Он здесь, чтобы приглушить шум, чтобы вы смогли увидеть: где реальность, где механизм защиты, а где просто нужен отдых."
+      "callout": "Miravelys здесь не для того, чтобы спорить с вашим разумом. Он здесь, чтобы приглушить шум, чтобы вы могли увидеть: где реальность, где механизм защиты, а где просто нужен отдых."
     },
     "works": {
-      "eyebrow": "Как это помогает",
-      "title": "Посмотрите, как честная мысль превращается в спокойный шаг.",
-      "intro": "Когда мимолётный взгляд кажется отвержением, когда молчание подтверждает страхи или когда ошибка кажется доказательством вашей неполноценности, Miravelys рядом, чтобы замедлить этот поток. Вы пишете то, что чувствуете, приложение помогает это распутать, а затем вы решаете, что вам сейчас нужнее: покой, ясность, отдых или бережный вопрос, чтобы двигаться дальше.",
+      "eyebrow": "Как работает приложение",
+      "title": "От тяжелой мысли к ясному следующему шагу.",
+      "intro": "Miravelys предлагает набор практик для рефлексии и успокоения, чтобы вы могли проживать сложные моменты в своем собственном темпе.",
       "steps": [
         {
-          "title": "Home встречает вас такими, какие вы есть",
-          "body": "Home просто спрашивает, что кажется правдой сейчас, и замечает, нужно ли вам заземлиться, отдохнуть, ответить на мягкий вопрос или копнуть глубже."
+          "title": "Home подстраивается под вас",
+          "body": "Приложение просто спрашивает, что вам сейчас нужно: успокоиться, выговориться или уснуть."
         },
         {
-          "title": "\"Линия ясности\" распутывает клубок",
-          "body": "\"Линия ясности\" берёт одну тяжёлую мысль и бережно разделяет её на: событие, чувство, реакцию тела, вашу историю, скрытое убеждение и неизвестность."
+          "title": "Внести ясность (Get Clear) раскладывает всё по полочкам",
+          "body": "Возьмите одну тяжелую мысль и разделите её на части: событие, эмоция, реакция тела, придуманная история и то, что пока неизвестно."
         },
         {
-          "title": "Calm Now защищает ваш покой",
-          "body": "Когда мысли несутся вскачь, Miravelys не заставит вас анализировать. Он предложит подышать, расслабиться, найти опору или просто отвлечься."
+          "title": "Calm Now успокаивает тело",
+          "body": "Когда мысли несутся вскачь, мы предлагаем дыхательные практики и медитации, чтобы успокоить нервную систему до того, как вы начнете что-то анализировать."
         },
         {
-          "title": "Sleep Now уважает ваш отдых",
-          "body": "С наступлением ночи приложение затихает вместе с вами. Оно откладывает тяжёлые вопросы, предлагая успокаивающие мысли, мягкие звуки и то, что лучше оставить на завтра."
+          "title": "Sleep Now помогает уснуть",
+          "body": "Когда тревога накрывает ночью, приложение откладывает тяжелые вопросы и включает успокаивающие звуки для сна."
         },
         {
-          "title": "\"Зеркало\" отражает с заботой",
-          "body": "Шаблоны показываются вам мягко и только если для них есть достаточно оснований. Мы никогда не вешаем ярлыков. Всё предлагается лишь как наблюдение, готовое к вашим поправкам."
+          "title": "Еженедельное зеркало показывает паттерны",
+          "body": "Приложение бережно подсвечивает повторяющиеся темы или убеждения из ваших записей, давая шанс поразмышлять над ними без осуждения."
         },
         {
-          "title": "Ваш голос формирует путь",
-          "body": "Каждый раз, когда вы поправляете приложение — просите быть мягче, говорите, что мысль не ваша, или удаляете предположение, — оно учится поддерживать вас лучше."
+          "title": "Вы управляете процессом",
+          "body": "Вы всегда можете поправить приложение, удалить записи и настроить то, как именно оно вас поддерживает."
         }
       ]
     },
     "depths": {
-      "eyebrow": "Вы задаёте темп",
-      "title": "Три способа рефлексии, одна неизменная гарантия безопасности.",
-      "intro": "Miravelys подстраивает свой тон под ваши нужды, но его этика неизменна. Он никогда не унизит вас, не поставит диагноз и не будет претендовать на истину в последней инстанции. Он идёт лишь так глубоко, как вы позволите.",
+      "eyebrow": "Выберите режим рефлексии",
+      "title": "Три уровня глубины, в зависимости от того, к чему вы готовы сегодня.",
+      "intro": "Miravelys подстраивает свой тон под вас, но его этика неизменна. Он никогда не унизит вас, не поставит диагноз и не будет претендовать на абсолютную истину. Он идет лишь так глубоко, как вы позволите.",
       "items": [
         {
           "title": "Calm Mirror",
           "tag": "Мягко",
-          "body": "Для самых хрупких моментов. Приложение отражает ваши слова с глубокой заботой, задаёт лишь по одному маленькому вопросу и в первую очередь помогает вам почувствовать себя в безопасности."
+          "body": "Для самых уязвимых моментов. Приложение задает только один маленький вопрос за раз и полностью сосредоточено на том, чтобы помочь вам почувствовать себя в безопасности."
         },
         {
           "title": "Direct Inquiry",
           "tag": "Ясно",
-          "body": "Для тех случаев, когда вам нужно чуть меньше смягчения. Вопросы становятся более чёткими и сфокусированными, оставаясь тёплыми, поддерживающими и открытыми для правок."
+          "body": "Когда нужна практическая ясность. Вопросы становятся более прямыми и сфокусированными на отделении фактов от чувств."
         },
         {
           "title": "Bold Clarity",
           "tag": "С вызовом",
-          "body": "Для тех циклических мыслей, которые постоянно вас обманывают. Приложение мягко бросает вызов преувеличениям, избеганию и защитным историям — при этом ваши элементы управления безопасностью всегда под рукой."
+          "body": "Для выхода из повторяющихся циклов мыслей. Приложение мягко бросает вызов вашим преувеличениям и просит присмотреться к «слепым пятнам»."
         }
       ]
     },
     "moments": {
-      "eyebrow": "Обретение ясности",
-      "title": "Крошечные сдвиги, которые меняют ощущение от дня.",
+      "eyebrow": "Преимущества",
+      "title": "Маленькие моменты рефлексии создают долговременную ясность ума.",
       "items": [
         {
-          "title": "Вы учитесь отделять факты от историй, которые создаёт ваш ум.",
-          "body": "Тяжёлая мысль перестаёт ощущаться как буря и становится тем, за чем можно просто наблюдать."
+          "title": "Отделите факты от тревоги.",
+          "body": "Научитесь видеть разницу между тем, что произошло на самом деле, и тем, чего боится ваш разум."
         },
         {
-          "title": "Вы открываете, что именно приносит покой вашему телу.",
-          "body": "Ваша нервная система получает минуту тишины до того, как ум попытается всё исправить."
+          "title": "Успокойте нервную систему.",
+          "body": "Дайте телу время подышать и прийти в себя, прежде чем пытаться решить проблему."
         },
         {
-          "title": "Вы перестаёте позволять одному чувству определять вас.",
-          "body": "Мысль, которая казалась абсолютной правдой, внезапно становится тем, в чём можно усомниться."
+          "title": "Подвергайте сомнению свои убеждения.",
+          "body": "Возьмите мысль, которая кажется абсолютной правдой, и осознайте, что это лишь догадка, которую можно отпустить."
         },
         {
-          "title": "Вы осознаёте свои шаблоны без тяжёлой драмы.",
-          "body": "Эту ночную тревогу можно просто бережно отложить, а не бороться с ней до самого рассвета."
+          "title": "Замечайте свои паттерны.",
+          "body": "Бережно наблюдайте за своими эмоциональными триггерами вместо того, чтобы бороться с ними."
         },
         {
-          "title": "Вы находите следующий шаг, который кажется меньше, добрее и честнее.",
-          "body": "Вы смотрите на свои повторяющиеся трудности с состраданием и ясностью, а не с осуждением."
+          "title": "Найдите маленький, добрый шаг вперед.",
+          "body": "Смотрите на свои повторяющиеся трудности с состраданием и ясностью, а не с осуждением."
         },
         {
-          "title": "Опыт растёт вместе с вами, формируясь вашей правдой.",
-          "body": "Каждая ваша правка учит приложение быть для вас лучшим, более верным спутником."
+          "title": "Опыт растет вместе с вами.",
+          "body": "Каждая ваша правка учит приложение быть лучшим, более верным спутником для вас."
         }
       ]
     },
     "privacy": {
-      "eyebrow": "Приватность и Контроль",
-      "title": "Ваш внутренний мир принадлежит вам, а не алгоритмам.",
-      "body": "Miravelys создан по принципу «сначала локально», потому что ваш материал — ваши страхи, ваши бессонные ночи, ваши исправления и те тихие вещи, которые вы редко произносите вслух — это глубоко личное. Приложение относится к вашим мыслям с благоговением. Вы можете сделать паузу, смягчить, отредактировать, скрыть или удалить всё в любой момент. Когда вы поправляете приложение, это не просто мелкая настройка; это самый важный урок, который усваивает система.",
+      "eyebrow": "Полная приватность",
+      "title": "Ваши записи остаются на вашем устройстве, полностью скрытые от других.",
+      "body": "Ваши страхи, мысли во время бессонницы и личные переживания — это глубоко личное. Miravelys создан так, чтобы ваши данные оставались только на вашем устройстве в безопасности. Приложение никогда не будет ставить вам диагнозы или использовать ваши записи для навешивания ярлыков. У вас есть абсолютная власть редактировать, скрывать или навсегда удалять всё, что вы пишете.",
       "bullets": [
-        "Ваш опыт по умолчанию остаётся на устройстве",
-        "Облачная поддержка работает только если вы сами захотите",
+        "Ваш опыт по умолчанию остается на устройстве",
+        "Облачная поддержка работает только по вашему желанию",
         "Мы никогда не ставим диагнозы и не вешаем ярлыков",
         "Подсказки даются очень бережно и только на основе того, чем вы поделились",
         "Ваши правки всегда важнее любых предположений приложения",
@@ -724,13 +723,13 @@ export const siteCopy = {
       "origin": "Povestea"
     },
     "hero": {
-      "eyebrow": "Un spațiu blând pentru cele mai grele momente ale tale",
+      "eyebrow": "Un spațiu privat pentru cele mai grele momente",
       "title": "Miravelys",
-      "subtitle": "Când un singur moment se transformă într-o poveste copleșitoare, Miravelys este aici pentru a te ajuta să-l descurci. Separă cu blândețe ceea ce s-a întâmplat de ceea ce ai simțit, ceea ce poartă corpul tău și ceea ce a adăugat mintea ta.",
-      "body": "Fără așteptări. Fără diagnostice. Doar un loc liniștit, privat, pentru a încetini, a respira și a-ți găsi drumul înapoi spre tine.",
-      "primary": "Începe cu un singur moment clar",
+      "subtitle": "Când un gând anxios sau o emoție dificilă preia controlul, Miravelys te ajută să o descurci. Este un jurnal ghidat care te ajută să separi ceea ce s-a întâmplat cu adevărat de poveștile pe care mintea ta le inventează.",
+      "body": "Fără algoritmi care te diagnostichează. Fără presiunea de a fi pozitiv. Doar un loc liniștit și sigur pentru a-ți calma corpul și a-ți înțelege mintea.",
+      "primary": "Începe să-ți descurci gândurile",
       "secondary": "Citește promisiunea noastră de confidențialitate",
-      "visualLabel": "Miravelys te ajută să descurci momentul, emoțiile tale, răspunsul corpului tău, poveștile pe care ți le spui, convingerile ascunse și ceea ce rămâne necunoscut."
+      "visualLabel": "Miravelys te ajută să descompui un moment copleșitor: emoțiile tale, reacțiile fizice, presupunerile minții tale și convingerile tale ascunse."
     },
     "mockups": {
       "eyebrow": "O privire în interior",
@@ -770,109 +769,109 @@ export const siteCopy = {
       "legalNavAria": "Detalii legale și suport"
     },
     "what": {
-      "eyebrow": "Ce este?",
-      "title": "Un spațiu liniștit unde o singură propoziție sinceră poate crea spațiu pentru a respira.",
+      "eyebrow": "Ce este Miravelys?",
+      "title": "Un jurnal ghidat care te ajută să găsești claritate când ești copleșit.",
       "paragraphs": [
-        "Miravelys începe exact acolo unde ești: cu doar o propoziție dezordonată, neterminată despre ce te-a durut, ce te-a copleșit sau ce continuă să-ți răsune în minte. Nu trebuie să fii calm, articulat sau să ai totul clar. Te întâmpinăm cu căldură umană, nu cu o listă de verificare clinică.",
-        "Aplicația te ajută să descurci cu blândețe acel moment: ce s-a întâmplat de fapt, ce ai simțit, unde a reținut corpul tău tensiunea, poveștile pe care mintea ta s-a grăbit să le spună, convingerile tăcute ascunse dedesubt și lucrurile pe care pur și simplu nu le știi încă. Ești întotdeauna la control — poți atenua reflecția, o poți corecta, poți pune pe pauză sau poți spune pur și simplu: 'Asta nu simt că mă reprezintă'.",
-        "În timp, Miravelys începe să observe ce îți aduce cu adevărat pace, ce te ajută să te odihnești sau îți permite să pui la îndoială un gând dureros care se repetă. Nu te închide într-o identitate. În schimb, construiește o hartă blândă, vie, a lumii tale interioare — una pe care o poți rescrie oricând ai nevoie."
+        "Nu trebuie să scrii o intrare de jurnal perfectă. Începe cu o propoziție dezordonată și sinceră despre ceea ce te-a deranjat sau ceea ce te ține treaz. Miravelys te întâlnește exact acolo.",
+        "Aplicația îți pune întrebări blânde pentru a te ajuta să separi faptele situației de tensiunea fizică a corpului tău și de poveștile anxioase ale minții tale. Ești mereu în control – poți sări peste întrebări, îți poți edita răspunsurile sau poți pune pauză în orice moment.",
+        "În timp, aplicația acționează ca o oglindă, ajutându-te să observi buclele emoționale recurente și obiceiurile de protecție, astfel încât să poți construi o relație mai sănătoasă cu propriile tale gânduri."
       ],
-      "callout": "Miravelys nu este aici pentru a te certa cu mintea ta. Este aici pentru a te ajuta să încetinești zgomotul, astfel încât să poți vedea ce este real, ce este un mecanism de apărare și ce are pur și simplu nevoie de un moment de odihnă."
+      "callout": "Miravelys nu este aici pentru a se certa cu mintea ta. Este aici pentru a te ajuta să încetinești zgomotul, astfel încât să poți vedea ce este real, ce este un mecanism de apărare și ce are nevoie doar de un moment de odihnă."
     },
     "works": {
-      "eyebrow": "Cum te ghidează",
-      "title": "Urmărește un gând sincer devenind un pas pașnic.",
-      "intro": "Când o privire trecătoare pare o respingere, când tăcerea pare o dovadă a fricilor tale sau când o greșeală pare că te definește, Miravelys este aici pentru a încetini lucrurile. Scrii ceea ce simți că este adevărat, aplicația te ajută să descurci lucrurile, iar apoi tu decizi de ce ai cea mai mare nevoie: calm, claritate, odihnă sau o întrebare blândă pentru a merge mai departe.",
+      "eyebrow": "Cum funcționează aplicația",
+      "title": "De la un gând copleșitor la un următor pas clar.",
+      "intro": "Miravelys oferă un set de instrumente de reflecție și exerciții de calmare pentru a te ajuta să procesezi momentele dificile în propriul tău ritm.",
       "steps": [
         {
-          "title": "Home te întâlnește acolo unde ești",
-          "body": "Home pur și simplu te întreabă ce simți că este adevărat chiar acum, recunoscând dacă ai nevoie să te ancorezi, să te odihnești, să răspunzi la un îndemn blând sau să privești mai adânc."
+          "title": "Home se adaptează ție",
+          "body": "Aplicația te întreabă pur și simplu de ce ai nevoie chiar acum – fie că este vorba să te calmezi, să te descarci sau să dormi."
         },
         {
-          "title": "\"Linie clară\" descurcă dezordinea",
-          "body": "\"Linie clară\" ia un singur gând copleșitor și îl separă cu blândețe în ceea ce s-a întâmplat, ceea ce ai simțit, ceea ce a experimentat corpul tău, povestea pe care ți-ai spus-o, convingerea de dedesubt și ceea ce rămâne necunoscut."
+          "title": "Obține claritate (Get Clear) o descompune",
+          "body": "Ia un singur gând greu și separă-l în bucăți: evenimentul, emoția, reacția corpului tău, povestea pe care ți-ai spus-o și necunoscutul."
         },
         {
-          "title": "Calm Now îți protejează pacea",
-          "body": "Când mintea ta gonește, Miravelys nu te va împinge să analizezi. Te invită să respiri, să te înmoi, să-ți găsești echilibrul sau pur și simplu să faci un pas înapoi."
+          "title": "Calm Now îți liniștește corpul",
+          "body": "Când mintea ta este o cursă, îți oferim respirație ghidată și meditație pentru a ajuta sistemul tău nervos să se așeze înainte de a încerca să analizezi ceva."
         },
         {
-          "title": "Sleep Now îți respectă odihna",
-          "body": "Pe măsură ce noaptea se adâncește, aplicația se liniștește odată cu tine. Lasă deoparte întrebările grele, oferind reflecții liniștitoare, sunete blânde și gânduri care sunt mai bine păstrate pentru mâine."
+          "title": "Sleep Now te ajută să te odihnești",
+          "body": "Când anxietatea lovește noaptea, aplicația dă deoparte întrebările grele și îți oferă peisaje sonore calmante pentru a te ajuta să dormi."
         },
         {
-          "title": "\"Oglindă\" reflectă cu grijă",
-          "body": "Tiparele îți sunt împărtășite cu blândețe și doar atunci când există suficiente dovezi. Nu te etichetăm niciodată. Totul este oferit ca o sugestie, gata pentru corectarea ta."
+          "title": "Oglinda săptămânală îți arată tiparele",
+          "body": "Aplicația îți indică blând temele sau convingerile recurente despre care ai scris, oferindu-ți șansa de a reflecta asupra lor fără judecată."
         },
         {
-          "title": "Vocea ta modelează călătoria",
-          "body": "De fiecare dată când corectezi aplicația — spunându-i să fie mai blândă, că un gând nu este al tău sau să șteargă o presupunere — învață să te sprijine mai bine."
+          "title": "Tu ești în control",
+          "body": "Poți oricând să corectezi aplicația, să ștergi intrări și să modelezi modul în care te sprijină."
         }
       ]
     },
     "depths": {
-      "eyebrow": "Tu stabilești ritmul",
-      "title": "Trei moduri de a reflecta, un singur angajament neclintit pentru siguranța ta.",
-      "intro": "Miravelys își adaptează tonul la ceea ce ai nevoie, dar etica sa nu se schimbă niciodată. Nu te va umili niciodată, nu te va diagnostica și nu va pretinde că știe adevărul absolut. Merge doar atât de adânc pe cât îl inviți.",
+      "eyebrow": "Alege-ți modul de reflecție",
+      "title": "Trei niveluri de îndrumare, în funcție de ce poți duce astăzi.",
+      "intro": "Miravelys își adaptează tonul la ceea ce ai nevoie, dar etica sa nu se schimbă niciodată. Nu te va umili niciodată, nu te va diagnostica sau pretinde că știe adevărul absolut. Merge doar atât de adânc pe cât îi permiți.",
       "items": [
         {
           "title": "Calm Mirror",
           "tag": "Blând",
-          "body": "Pentru cele mai fragile momente ale tale. Aplicația îți reflectă cuvintele cu mare grijă, îți adresează doar o mică întrebare la un moment dat și prioritizează să te ajute să te simți în siguranță."
+          "body": "Pentru momentele tale cele mai fragile. Aplicația pune o singură întrebare mică la un moment dat și se concentrează în întregime pe a te ajuta să te simți în siguranță și ancorat."
         },
         {
           "title": "Direct Inquiry",
           "tag": "Clar",
-          "body": "Pentru momentele în care ai nevoie de puțin mai puțină amortizare. Întrebările devin mai ascuțite și mai concentrate, rămânând în același timp calde, de susținere și deschise la corectare."
+          "body": "Pentru atunci când ai nevoie de claritate practică. Întrebările sunt directe și concentrate pe a te ajuta să descurci faptele de sentimentele tale."
         },
         {
           "title": "Bold Clarity",
           "tag": "Provocator",
-          "body": "Pentru acele bucle recurente care continuă să te păcălească. Aplicația împinge ușor înapoi împotriva exagerărilor, evitării și poveștilor de protecție — menținând mereu controalele tale de siguranță la îndemână."
+          "body": "Pentru a ieși din buclele mentale recurente. Aplicația provoacă blând exagerările tale și te roagă să te uiți mai atent la punctele tale oarbe."
         }
       ]
     },
     "moments": {
-      "eyebrow": "Găsirea clarității",
-      "title": "Micile schimbări care transformă felul în care se simte ziua ta.",
+      "eyebrow": "Beneficiile",
+      "title": "Momentele mici de reflecție creează claritate mentală de durată.",
       "items": [
         {
-          "title": "Înveți să separi faptele de poveștile pe care le creează mintea ta.",
-          "body": "Un gând copleșitor nu se mai simte ca o furtună și devine ceva ce poți pur și simplu să observi."
+          "title": "Separă faptele de anxietate.",
+          "body": "Învață să vezi diferența dintre ce s-a întâmplat cu adevărat și ce se teme mintea ta."
         },
         {
-          "title": "Descoperi ce aduce cu adevărat pace corpului tău.",
-          "body": "Sistemul tău nervos primește un moment de liniște înainte ca mintea ta să încerce să repare totul."
+          "title": "Calmează-ți sistemul nervos.",
+          "body": "Dă-i corpului tău un moment să respire și să se așeze înainte de a încerca să rezolvi problema."
         },
         {
-          "title": "Nu mai lași un singur sentiment să definească cine ești.",
-          "body": "Un gând care părea un adevăr absolut devine brusc ceva ce poți pune la îndoială."
+          "title": "Pune la îndoială convingerile tale.",
+          "body": "Ia un gând care se simte ca un adevăr absolut și realizează că este doar o presupunere la care poți renunța."
         },
         {
-          "title": "Îți recunoști tiparele fără drama grea.",
-          "body": "Acele anxietăți de noapte târziu sunt lăsate cu blândețe deoparte, în loc să te lupți cu ele până în zori."
+          "title": "Observă-ți tiparele.",
+          "body": "Observă-ți blând factorii declanșatori emoționali în loc să te lupți cu ei."
         },
         {
-          "title": "Găsești un pas următor care se simte mai mic, mai blând și profund sincer.",
-          "body": "Îți privești luptele recurente cu compasiune și claritate, mai degrabă decât cu judecată."
+          "title": "Găsește un pas următor mai mic și mai blând.",
+          "body": "Privește la luptele tale recurente cu compasiune și claritate, mai degrabă decât cu judecată."
         },
         {
-          "title": "Experiența crește odată cu tine, modelată de propriul tău adevăr.",
-          "body": "Fiecare corectură pe care o faci învață aplicația cum să fie un partener mai bun și mai adevărat pentru tine."
+          "title": "Experiența crește odată cu tine.",
+          "body": "Fiecare corectură pe care o faci învață aplicația cum să fie un companion mai bun și mai adevărat pentru tine."
         }
       ]
     },
     "privacy": {
-      "eyebrow": "Confidențialitate și Control",
-      "title": "Lumea ta interioară îți aparține ție, nu unui algoritm.",
-      "body": "Miravelys este construit 'local-first' pentru că materialul tău brut — fricile tale, nopțile tale nedormite, corecturile tale și lucrurile liniștite pe care rar le spui cu voce tare — este profund personal. Aplicația tratează gândurile tale cu reverență. Poți pune pe pauză, atenua, edita, ascunde sau șterge orice, în orice moment. Când corectezi aplicația, nu este o preferință minoră; este cea mai importantă lecție pe care sistemul o învață.",
+      "eyebrow": "Confidențialitate Totală",
+      "title": "Reflecțiile tale rămân pe dispozitivul tău, complet private.",
+      "body": "Fricile tale, gândurile din nopțile nedormite și descărcările tale private sunt profund personale. Miravelys este construit pentru a-ți păstra datele local și în siguranță. Aplicația nu te va diagnostica niciodată și nu va folosi intrările tale pentru a te eticheta. Ai puterea supremă de a edita, ascunde sau șterge permanent orice scrii.",
       "bullets": [
-        "Experiența ta rămâne pe dispozitivul tău în mod implicit",
-        "Suportul în cloud este acolo doar dacă îl dorești",
+        "Experiența ta rămâne implicit pe dispozitivul tău",
+        "Suportul cloud este acolo doar dacă îl dorești",
         "Nu te diagnosticăm și nu te etichetăm niciodată",
         "Perspectivele sunt oferite cu blândețe, bazate doar pe ceea ce împărtășești",
-        "Corecturile tale suprascriu întotdeauna sugestiile aplicației",
-        "Poți pune pe pauză, atenua, edita sau șterge orice, oricând"
+        "Corecturile tale anulează întotdeauna sugestiile aplicației",
+        "Poți să pui pauză, să atenuezi, să editezi sau să ștergi orice, oricând"
       ]
     },
     "faq": {
@@ -1046,13 +1045,13 @@ export const siteCopy = {
       "origin": "L'Histoire"
     },
     "hero": {
-      "eyebrow": "Un espace bienveillant pour vos moments les plus lourds",
+      "eyebrow": "Un espace privé pour vos moments les plus difficiles",
       "title": "Miravelys",
-      "subtitle": "Lorsqu'un simple moment se transforme en une histoire écrasante, Miravelys est là pour vous aider à la démêler. Séparez en douceur ce qui s'est passé de ce que vous avez ressenti, de ce que votre corps porte, et de ce que votre esprit a ajouté.",
-      "body": "Aucune attente. Aucun diagnostic. Juste un endroit calme et privé pour ralentir, respirer, et retrouver votre propre centre.",
-      "primary": "Commencez par un moment de clarté",
+      "subtitle": "Lorsqu'une pensée anxieuse ou une émotion difficile prend le dessus, Miravelys vous aide à la décomposer. C'est un journal guidé qui vous aide à séparer ce qui s'est réellement passé des histoires que votre esprit invente.",
+      "body": "Pas d'algorithmes qui vous diagnostiquent. Pas de pression pour être positif. Juste un endroit calme et sûr pour apaiser votre corps et comprendre votre esprit.",
+      "primary": "Commencer à démêler vos pensées",
       "secondary": "Lisez notre promesse de confidentialité",
-      "visualLabel": "Miravelys vous aide à démêler le moment, vos émotions, la réaction de votre corps, les histoires que vous vous racontez, vos croyances cachées, et ce qui reste inconnu."
+      "visualLabel": "Miravelys vous aide à décomposer un moment accablant : vos émotions, vos réactions physiques, les suppositions de votre esprit et vos croyances cachées."
     },
     "mockups": {
       "eyebrow": "Un regard à l'intérieur",
@@ -1092,108 +1091,108 @@ export const siteCopy = {
       "legalNavAria": "Détails juridiques et assistance"
     },
     "what": {
-      "eyebrow": "Qu'est-ce que c'est ?",
-      "title": "Un espace calme où une seule phrase sincère peut créer de l'espace pour respirer.",
+      "eyebrow": "Qu'est-ce que Miravelys ?",
+      "title": "Un journal guidé qui vous aide à trouver la clarté lorsque vous êtes dépassé.",
       "paragraphs": [
-        "Miravelys commence exactement là où vous êtes : avec juste une phrase inachevée, peut-être désordonnée, sur ce qui a fait mal, ce qui vous a submergé, ou ce qui résonne sans fin dans votre esprit. Vous n'avez pas besoin d'être calme, de bien parler, ou d'avoir tout compris. Nous vous accueillons avec une chaleur humaine, pas avec un questionnaire clinique.",
-        "L'application vous aide à démêler ce moment en douceur : ce qui s'est réellement passé, ce que vous avez ressenti, où votre corps a gardé la tension, les histoires que votre esprit s'est empressé de raconter, les croyances silencieuses cachées en dessous, et les choses que vous ne savez tout simplement pas encore. Vous gardez toujours le contrôle — vous pouvez adoucir le reflet, le corriger, faire une pause, ou simplement dire : « Ça ne me ressemble pas. »",
-        "Au fil du temps, Miravelys commence à remarquer ce qui vous apporte vraiment la paix, vous aide à vous reposer, ou vous permet de remettre en question une pensée douloureuse qui revient. Il ne vous enferme pas dans une identité. Il construit plutôt une carte douce et vivante de votre monde intérieur — une carte que vous pouvez réécrire chaque fois que vous en avez besoin."
+        "Vous n'avez pas besoin d'écrire une entrée de journal parfaite. Commencez par une phrase désordonnée et honnête sur ce qui vous a déclenché ou ce qui vous empêche de dormir. Miravelys vous rencontre là où vous êtes.",
+        "L'application vous pose des questions douces pour vous aider à séparer les faits de la tension physique de votre corps et des histoires anxieuses de votre esprit. Vous gardez toujours le contrôle : vous pouvez passer des questions, modifier vos réponses ou faire une pause à tout moment.",
+        "Au fil du temps, l'application agit comme un miroir, vous aidant à repérer les boucles émotionnelles récurrentes et les habitudes de protection, afin que vous puissiez construire une relation plus saine avec vos propres pensées."
       ],
-      "callout": "Miravelys n'est pas là pour se disputer avec votre esprit. Il est là pour vous aider à réduire le bruit, afin que vous puissiez voir ce qui est réel, ce qui est un mécanisme de défense, et ce qui a simplement besoin d'un instant de repos."
+      "callout": "Miravelys n'est pas là pour débattre avec votre esprit. Il est là pour vous aider à ralentir le bruit, afin que vous puissiez voir ce qui est réel, ce qui est un mécanisme de défense et ce qui a simplement besoin d'un moment de repos."
     },
     "works": {
-      "eyebrow": "Comment ça guide",
-      "title": "Regardez une pensée honnête devenir une étape apaisante.",
-      "intro": "Lorsqu'un regard fugace ressemble à un rejet, quand le silence vous donne l'impression de confirmer vos peurs, ou lorsqu'une erreur semble vous définir, Miravelys est là pour ralentir les choses. Vous écrivez ce qui vous semble vrai, l'application vous aide à le démêler, et vous décidez ensuite de ce dont vous avez le plus besoin : du calme, de la clarté, du repos, ou une question douce pour avancer.",
+      "eyebrow": "Comment l'application fonctionne",
+      "title": "D'une pensée écrasante à une prochaine étape claire.",
+      "intro": "Miravelys propose une boîte à outils de réflexion et d'exercices d'apaisement pour vous aider à traverser les moments difficiles à votre propre rythme.",
       "steps": [
         {
-          "title": "Home vous rencontre là où vous êtes",
-          "body": "Home vous demande simplement ce qui vous semble vrai maintenant, et perçoit si vous avez besoin de vous ancrer, de vous reposer, de répondre à une petite incitation, ou d'aller plus au fond."
+          "title": "Home s'adapte à vous",
+          "body": "L'application vous demande simplement de quoi vous avez besoin en ce moment – que ce soit de vous calmer, de vous défouler ou de dormir."
         },
         {
-          "title": "\"Ligne claire\" démêle le chaos",
-          "body": "\"Ligne claire\" prend une seule pensée accablante et la sépare doucement en ce qui s'est passé, ce que vous avez ressenti, ce que votre corps a expérimenté, l'histoire que vous vous êtes racontée, la croyance en dessous, et ce qui reste inconnu."
+          "title": "Faire le point (Get Clear) décompose tout",
+          "body": "Prenez une seule pensée lourde et séparez-la en éléments : l'événement, l'émotion, la réaction de votre corps, l'histoire que vous vous êtes racontée et l'inconnu."
         },
         {
-          "title": "Calm Now protège votre paix",
-          "body": "Quand votre esprit s'emballe, Miravelys ne vous poussera pas à analyser. Il vous invite à respirer, à vous adoucir, à retrouver vos appuis, ou simplement à prendre du recul."
+          "title": "Calm Now apaise votre corps",
+          "body": "Lorsque votre esprit s'emballe, nous proposons des exercices de respiration guidée et de la méditation pour aider votre système nerveux à s'apaiser avant d'essayer de tout analyser."
         },
         {
-          "title": "Sleep Now respecte votre repos",
-          "body": "À mesure que la nuit tombe, l'application s'apaise avec vous. Elle met de côté les questions lourdes, offrant des réflexions douces, des sons apaisants, et des pensées qu'il vaut mieux garder pour demain."
+          "title": "Sleep Now vous aide à vous reposer",
+          "body": "Lorsque l'anxiété frappe la nuit, l'application met de côté les questions lourdes et propose des paysages sonores apaisants pour vous aider à dormir."
         },
         {
-          "title": "\"Miroir\" reflète avec soin",
-          "body": "Les schémas vous sont partagés avec douceur, et uniquement quand il y a suffisamment de preuves. Nous ne vous étiquetons jamais. Tout est offert comme une suggestion, prête pour vos corrections."
+          "title": "Le Miroir hebdomadaire montre vos schémas",
+          "body": "L'application souligne doucement les thèmes récurrents ou les croyances sur lesquels vous avez écrit, vous donnant la chance d'y réfléchir sans jugement."
         },
         {
-          "title": "Votre voix façonne le parcours",
-          "body": "Chaque fois que vous corrigez l'application — en lui disant d'être plus douce, qu'une pensée n'est pas la vôtre, ou d'effacer une supposition — elle apprend à mieux vous soutenir."
+          "title": "Vous avez le contrôle",
+          "body": "Vous pouvez toujours corriger l'application, supprimer des entrées et façonner la manière dont elle vous soutient."
         }
       ]
     },
     "depths": {
-      "eyebrow": "Vous donnez le rythme",
-      "title": "Trois façons de réfléchir, un engagement inébranlable pour votre sécurité.",
-      "intro": "Miravelys adapte son ton à vos besoins, mais son éthique ne change jamais. Il ne vous humiliera jamais, ne vous diagnostiquera pas, ni ne prétendra détenir la vérité absolue. Il ne va que jusqu'où vous l'y invitez.",
+      "eyebrow": "Choisissez votre mode de réflexion",
+      "title": "Trois niveaux d'accompagnement, selon ce que vous pouvez gérer aujourd'hui.",
+      "intro": "Miravelys adapte son ton à vos besoins, mais son éthique ne change jamais. Il ne vous humiliera jamais, ne vous diagnostiquera pas et ne prétendra pas détenir la vérité absolue. Il ne va que là où vous l'y invitez.",
       "items": [
         {
           "title": "Calm Mirror",
           "tag": "Doux",
-          "body": "Pour vos moments les plus fragiles. L'application reflète vos mots avec un grand soin, ne pose qu'une petite question à la fois, et donne la priorité à vous faire vous sentir en sécurité."
+          "body": "Pour vos moments les plus fragiles. L'application ne pose qu'une petite question à la fois et se concentre entièrement pour vous aider à vous sentir en sécurité et ancré."
         },
         {
           "title": "Direct Inquiry",
           "tag": "Clair",
-          "body": "Pour les moments où vous avez besoin d'un peu moins de coussin. Les questions deviennent plus précises et plus ciblées, tout en restant chaleureuses, soutenantes et ouvertes aux corrections."
+          "body": "Pour les moments où vous avez besoin d'une clarté pratique. Les questions sont directes et visent à vous aider à séparer les faits de vos sentiments."
         },
         {
           "title": "Bold Clarity",
-          "tag": "Pour aller plus loin",
-          "body": "Pour les boucles récurrentes qui continuent de vous tromper. L'application s'oppose en douceur aux exagérations, à l'évitement et aux histoires de protection — tout en gardant toujours vos contrôles de sécurité à portée de main."
+          "tag": "Défiant",
+          "body": "Pour briser les boucles mentales récurrentes. L'application remet doucement en question vos exagérations et vous demande de regarder de plus près vos angles morts."
         }
       ]
     },
     "moments": {
-      "eyebrow": "Trouver la clarté",
-      "title": "Les petits décalages qui changent le ressenti de votre journée.",
+      "eyebrow": "Les avantages",
+      "title": "De petits moments de réflexion créent une clarté mentale durable.",
       "items": [
         {
-          "title": "Vous apprenez à séparer les faits des histoires que votre esprit crée.",
-          "body": "Une pensée écrasante cesse d'être une tempête et devient quelque chose que vous pouvez simplement observer."
+          "title": "Séparez les faits de l'anxiété.",
+          "body": "Apprenez à voir la différence entre ce qui s'est réellement passé et ce que votre esprit craint."
         },
         {
-          "title": "Vous découvrez ce qui apporte véritablement la paix à votre corps.",
-          "body": "Votre système nerveux obtient un instant de silence avant que votre esprit n'essaie de tout réparer."
+          "title": "Apaisez votre système nerveux.",
+          "body": "Donnez à votre corps un moment pour respirer et se poser avant d'essayer de résoudre le problème."
         },
         {
-          "title": "Vous arrêtez de laisser un seul sentiment définir qui vous êtes.",
-          "body": "Une pensée qui semblait être une vérité absolue devient soudainement quelque chose que vous pouvez remettre en question."
+          "title": "Remettez en question vos croyances.",
+          "body": "Prenez une pensée qui semble être une vérité absolue et réalisez que c'est juste une supposition que vous pouvez lâcher."
         },
         {
-          "title": "Vous reconnaissez vos schémas sans le poids du drame.",
-          "body": "Ces anxiétés de fin de soirée sont mises de côté avec douceur, plutôt que d'être combattues jusqu'à l'aube."
+          "title": "Remarquez vos schémas.",
+          "body": "Observez doucement vos déclencheurs émotionnels au lieu de lutter contre eux."
         },
         {
-          "title": "Vous trouvez une prochaine étape qui semble plus petite, plus bienveillante et profondément honnête.",
-          "body": "Vous voyez vos luttes récurrentes avec compassion et clarté, plutôt qu'avec jugement."
+          "title": "Trouvez une prochaine étape plus petite et plus douce.",
+          "body": "Considérez vos luttes récurrentes avec compassion et clarté, plutôt qu'avec jugement."
         },
         {
-          "title": "L'expérience grandit avec vous, façonnée par votre propre vérité.",
-          "body": "Chaque correction que vous apportez apprend à l'application à être un meilleur et plus vrai compagnon pour vous."
+          "title": "L'expérience grandit avec vous.",
+          "body": "Chaque correction que vous apportez apprend à l'application comment être un compagnon meilleur et plus vrai pour vous."
         }
       ]
     },
     "privacy": {
-      "eyebrow": "Vie Privée et Contrôle",
-      "title": "Votre monde intérieur vous appartient, pas à un algorithme.",
-      "body": "Miravelys est construit en privilégiant l'expérience locale, parce que votre matière première — vos peurs, vos nuits blanches, vos corrections, et les choses silencieuses que vous dites rarement à voix haute — est profondément personnelle. L'application traite vos pensées avec respect. Vous pouvez mettre en pause, adoucir, modifier, cacher, ou supprimer quoi que ce soit à tout moment. Lorsque vous corrigez l'application, ce n'est pas une petite préférence ; c'est la leçon la plus importante que le système apprend.",
+      "eyebrow": "Confidentialité Totale",
+      "title": "Vos réflexions restent sur votre appareil, de manière totalement privée.",
+      "body": "Vos peurs, vos pensées de nuits blanches et vos confidences privées sont profondément personnelles. Miravelys est conçu pour garder vos données locales et sécurisées. L'application ne vous diagnostiquera jamais ni n'utilisera vos entrées pour vous étiqueter. Vous avez le pouvoir absolu de modifier, masquer ou supprimer définitivement tout ce que vous écrivez.",
       "bullets": [
         "Votre expérience reste sur votre appareil par défaut",
-        "Le support cloud n'est là que si vous le désirez",
-        "Nous ne posons jamais de diagnostic ni ne mettons d'étiquettes",
-        "Les perspectives sont offertes avec douceur, uniquement basées sur ce que vous partagez",
-        "Vos corrections ont toujours la priorité sur les suggestions de l'application",
+        "Le support cloud n'est là que si vous le souhaitez",
+        "Nous ne vous diagnostiquons jamais et ne vous étiquetons pas",
+        "Les pistes de réflexion sont offertes doucement, basées uniquement sur ce que vous partagez",
+        "Vos corrections l'emportent toujours sur les suggestions de l'application",
         "Vous pouvez faire une pause, adoucir, modifier ou supprimer quoi que ce soit, à tout moment"
       ]
     },
@@ -1368,13 +1367,13 @@ export const siteCopy = {
       "origin": "कहानी"
     },
     "hero": {
-      "eyebrow": "आपके सबसे कठिन पलों के लिए एक कोमल जगह",
+      "eyebrow": "आपके सबसे कठिन पलों के लिए एक निजी जगह",
       "title": "Miravelys",
-      "subtitle": "जब कोई एक साधारण पल आपके भीतर एक भारी कहानी में बदल जाए, तो Miravelys उसे सुलझाने में आपकी मदद करता है। धीरे-धीरे अलग करें कि क्या हुआ था, आपने क्या महसूस किया, आपका शरीर क्या सह रहा है, और आपके मन ने इसमें क्या जोड़ा है।",
-      "body": "कोई उम्मीदें नहीं। कोई निदान नहीं। बस धीमे होने, साँस लेने और खुद की ओर वापस लौटने के लिए एक शांत, निजी जगह।",
-      "primary": "एक स्पष्ट पल के साथ शुरू करें",
-      "secondary": "हमारा गोपनीयता का वादा पढ़ें",
-      "visualLabel": "Miravelys उस पल, आपकी भावनाओं, आपके शरीर की प्रतिक्रिया, आपके मन की कहानियों, छिपे हुए विश्वासों, और जो अनजाना है, उसे सुलझाने में मदद करता है।"
+      "subtitle": "जब कोई चिंताजनक विचार या मुश्किल भावना हावी हो जाती है, तो मिरावेलिस आपको इसे सुलझाने में मदद करता है। यह एक गाइडेड जर्नलिंग ऐप है जो आपको वास्तव में क्या हुआ था और आपके दिमाग की गढ़ी हुई कहानियों के बीच अंतर करने में मदद करता है।",
+      "body": "कोई एल्गोरिदम आपको डायग्नोस नहीं करता। सकारात्मक होने का कोई दबाव नहीं। अपने शरीर को शांत करने और अपने मन को समझने के लिए बस एक शांत, सुरक्षित जगह।",
+      "primary": "अपने विचारों को सुलझाना शुरू करें",
+      "secondary": "हमारा गोपनीयता वादा पढ़ें",
+      "visualLabel": "मिरावेलिस आपको एक भारी पल को हिस्सों में बांटने में मदद करता है: आपकी भावनाएं, आपकी शारीरिक प्रतिक्रियाएं, आपके दिमाग की धारणाएं और आपके छिपे हुए विश्वास।"
     },
     "mockups": {
       "eyebrow": "एक झलक",
@@ -1414,109 +1413,109 @@ export const siteCopy = {
       "legalNavAria": "कानूनी विवरण और समर्थन"
     },
     "what": {
-      "eyebrow": "यह क्या है?",
-      "title": "एक शांत जगह जहाँ एक ईमानदार वाक्य साँस लेने के लिए जगह बना सकता है।",
+      "eyebrow": "मिरावेलिस क्या है?",
+      "title": "एक गाइडेड जर्नल जो आपको तब स्पष्टता खोजने में मदद करता है जब आप अभिभूत होते हैं।",
       "paragraphs": [
-        "Miravelys बिल्कुल वहीं से शुरू होता है जहाँ आप हैं: बस एक अधूरे, बिखरे हुए वाक्य के साथ कि आपको किस बात ने चोट पहुँचाई, किसने आपको अभिभूत किया, या क्या आपके दिमाग में गूँजता रहता है। आपको शांत, स्पष्ट, या सब कुछ समझने की ज़रूरत नहीं है। हम आपका स्वागत मानवीय गर्मजोशी के साथ करते हैं, किसी क्लिनिकल चेकलिस्ट से नहीं।",
-        "ऐप धीरे-धीरे उस पल को सुलझाने में आपकी मदद करता है: असल में क्या हुआ था, आपने क्या महसूस किया, आपके शरीर ने कहाँ तनाव रखा था, आपके मन ने कौन सी कहानियाँ बुनीं, नीचे कौन से शांत विश्वास छिपे थे, और वे चीजें जो आप अभी तक नहीं जानते हैं। आप हमेशा नियंत्रण में होते हैं — आप प्रतिबिंब को नरम कर सकते हैं, इसे सही कर सकते हैं, रुक सकते हैं, या बस कह सकते हैं, 'यह मुझ जैसा नहीं लगता।'",
-        "समय के साथ, Miravelys यह ध्यान देना शुरू कर देता है कि वास्तव में आपको क्या शांति देता है, आपको आराम करने में क्या मदद करता है, या आपको किसी दर्दनाक सोच को चुनौती देने की अनुमति देता है। यह आपको किसी पहचान में कैद नहीं करता। इसके बजाय, यह आपकी आंतरिक दुनिया का एक कोमल, जीवित नक्शा बनाता है — जिसे आप जब चाहें फिर से लिख सकते हैं।"
+        "आपको एक आदर्श डायरी एंट्री लिखने की आवश्यकता नहीं है। इस बात पर एक उलझे हुए, ईमानदार वाक्य से शुरू करें कि आपको किस बात ने परेशान किया या क्या चीज़ आपको जगाए हुए है। मिरावेलिस आपको वहीं मिलता है।",
+        "ऐप आपको स्थिति के तथ्यों को आपके शरीर के शारीरिक तनाव और आपके दिमाग की चिंतित कहानियों से अलग करने में मदद करने के लिए कोमल प्रश्न पूछता है। आप हमेशा नियंत्रण में होते हैं - आप प्रश्नों को छोड़ सकते हैं, अपने उत्तरों को संपादित कर सकते हैं, या किसी भी समय रुक सकते हैं।",
+        "समय के साथ, ऐप एक दर्पण के रूप में कार्य करता है, जो आपको आवर्ती भावनात्मक लूप और सुरक्षात्मक आदतों को पहचानने में मदद करता है, ताकि आप अपने विचारों के साथ एक स्वस्थ संबंध बना सकें।"
       ],
-      "callout": "Miravelys आपके दिमाग के साथ बहस करने के लिए यहाँ नहीं है। यह शोर को कम करने में आपकी मदद करने के लिए है, ताकि आप देख सकें कि क्या वास्तविक है, क्या एक रक्षा तंत्र है, और किसे केवल आराम के एक पल की आवश्यकता है।"
+      "callout": "मिरावेलिस यहां आपके दिमाग से बहस करने के लिए नहीं है। यह यहां शोर को धीमा करने में आपकी मदद करने के लिए है, ताकि आप देख सकें कि क्या वास्तविक है, क्या एक रक्षा तंत्र है, और किसे केवल आराम की आवश्यकता है।"
     },
     "works": {
-      "eyebrow": "यह कैसे मदद करता है",
-      "title": "देखें कैसे एक ईमानदार सोच एक शांतिपूर्ण अगले कदम में बदल जाती है।",
-      "intro": "जब कोई उड़ती हुई नज़र अस्वीकृति जैसी लगती है, जब मौन आपके डर का प्रमाण लगता है, या जब कोई गलती ऐसी लगती है जैसे वह आपकी पहचान तय करती है, तो Miravelys चीजों को धीमा करने के लिए यहाँ है। आप वह लिखते हैं जो आपको सच लगता है, ऐप इसे सुलझाने में मदद करता है, और फिर आप तय करते हैं कि आपको सबसे ज़्यादा किस चीज़ की ज़रूरत है: शांति, स्पष्टता, आराम, या आगे बढ़ने के लिए एक कोमल प्रश्न।",
+      "eyebrow": "ऐप कैसे काम करता है",
+      "title": "एक अभिभूत करने वाले विचार से एक स्पष्ट अगले कदम तक।",
+      "intro": "मिरावेलिस आपको अपनी गति से कठिन पलों को संसाधित करने में मदद करने के लिए प्रतिबिंब और शांत अभ्यासों का एक टूलकिट प्रदान करता है।",
       "steps": [
         {
-          "title": "Home आपसे वहीं मिलता है जहाँ आप हैं",
-          "body": "Home बस यह पूछता है कि अभी क्या सच लगता है, यह पहचानते हुए कि क्या आपको खुद को शांत करने, आराम करने, किसी सवाल का जवाब देने, या गहराई से देखने की ज़रूरत है।"
+          "title": "होम आपके अनुकूल हो जाता है",
+          "body": "ऐप बस पूछता है कि आपको अभी क्या चाहिए - चाहे वह शांत होना हो, अपनी निराशा व्यक्त करना हो, या सोना हो।"
         },
         {
-          "title": "\"स्पष्ट रेखा\" उलझन को सुलझाती है",
-          "body": "\"स्पष्ट रेखा\" एक भारी विचार को लेता है और धीरे से इसे अलग करता है कि क्या हुआ, आपने क्या महसूस किया, आपके शरीर ने क्या अनुभव किया, वह कहानी जो आपने खुद को बताई, उसके नीचे का विश्वास, और क्या अनजाना है।"
+          "title": "स्पष्टता (Get Clear) इसे तोड़ती है",
+          "body": "एक भी भारी विचार लें और उसे टुकड़ों में बाँट लें: घटना, भावना, आपके शरीर की प्रतिक्रिया, वह कहानी जो आपने खुद को बताई, और अज्ञात।"
         },
         {
-          "title": "Calm Now आपकी शांति की रक्षा करता है",
-          "body": "जब आपका दिमाग तेज़ दौड़ रहा हो, तो Miravelys आपको विश्लेषण करने के लिए मजबूर नहीं करेगा। यह आपको साँस लेने, नरम होने, अपना संतुलन खोजने, या बस पीछे हटने के लिए आमंत्रित करता है।"
+          "title": "शांत (Calm Now) आपके शरीर को आराम देता है",
+          "body": "जब आपका दिमाग तेजी से दौड़ रहा होता है, तो हम आपके नर्वस सिस्टम को शांत करने में मदद करने के लिए गाइडेड ब्रीदिंग और ध्यान प्रदान करते हैं, इससे पहले कि आप कुछ भी विश्लेषण करने की कोशिश करें।"
         },
         {
-          "title": "Sleep Now आपके आराम का सम्मान करता है",
-          "body": "जैसे-जैसे रात गहरी होती है, ऐप आपके साथ शांत हो जाता है। यह भारी सवालों को अलग रख देता है, सुखद विचार, हल्की आवाज़ें, और वे बातें पेश करता है जिन्हें कल के लिए बचा कर रखना बेहतर है।"
+          "title": "नींद (Sleep Now) आपको आराम करने में मदद करती है",
+          "body": "जब रात में चिंता सताती है, तो ऐप भारी सवालों को किनारे रख देता है और आपको सोने में मदद करने के लिए शांत करने वाली आवाज़ें पेश करता है।"
         },
         {
-          "title": "\"दर्पण\" देखभाल के साथ दर्शाता है",
-          "body": "पैटर्न आपके साथ धीरे से साझा किए जाते हैं, और केवल तभी जब पर्याप्त सबूत हों। हम आपको कभी भी लेबल नहीं करते। सब कुछ एक सुझाव के रूप में प्रस्तुत किया जाता है, जिसे आप सुधार सकते हैं।"
+          "title": "साप्ताहिक दर्पण (Weekly Mirror) आपके पैटर्न दिखाता है",
+          "body": "ऐप कोमलता से उन आवर्ती विषयों या मान्यताओं की ओर इशारा करता है जिनके बारे में आपने लिखा है, जिससे आपको बिना किसी फैसले के उन पर विचार करने का मौका मिलता है।"
         },
         {
-          "title": "आपकी आवाज़ यात्रा को आकार देती है",
-          "body": "हर बार जब आप ऐप को सही करते हैं — इसे अधिक कोमल होने के लिए कहना, कि कोई विचार आपका नहीं है, या किसी अनुमान को हटाना — यह आपका बेहतर समर्थन करना सीखता है।"
+          "title": "आप नियंत्रण में हैं",
+          "body": "आप हमेशा ऐप को सही कर सकते हैं, प्रविष्टियाँ हटा सकते हैं, और यह तय कर सकते हैं कि यह आपका समर्थन कैसे करता है।"
         }
       ]
     },
     "depths": {
-      "eyebrow": "आप गति निर्धारित करते हैं",
-      "title": "प्रतिबिंबित करने के तीन तरीके, आपकी सुरक्षा के लिए एक अटूट प्रतिबद्धता।",
-      "intro": "Miravelys आपकी ज़रूरत के अनुसार अपना लहज़ा अपनाता है, लेकिन इसकी नैतिकता कभी नहीं बदलती। यह आपको कभी अपमानित नहीं करेगा, आपको डायग्नोस नहीं करेगा, या परम सत्य जानने का दावा नहीं करेगा। यह केवल उतना ही गहरा जाता है जितना आप इसे आमंत्रित करते हैं।",
+      "eyebrow": "अपना प्रतिबिंब मोड चुनें",
+      "title": "मार्गदर्शन के तीन स्तर, इस पर निर्भर करता है कि आप आज क्या संभाल सकते हैं।",
+      "intro": "मिरावेलिस आपकी ज़रूरत के अनुसार अपने स्वर को अपनाता है, लेकिन इसकी नैतिकता कभी नहीं बदलती। यह आपको कभी नीचा नहीं दिखाएगा, आपका निदान नहीं करेगा, या पूर्ण सत्य जानने का दावा नहीं करेगा। यह केवल उतना ही गहराई में जाता है जितना आप इसे अनुमति देते हैं।",
       "items": [
         {
-          "title": "Calm Mirror",
+          "title": "Calm Mirror (शांत दर्पण)",
           "tag": "कोमल",
-          "body": "आपके सबसे नाजुक पलों के लिए। ऐप आपके शब्दों को गहरी देखभाल के साथ दर्शाता है, एक बार में केवल एक छोटा प्रश्न पूछता है, और आपको सुरक्षित महसूस कराने को प्राथमिकता देता है।"
+          "body": "आपके सबसे नाजुक पलों के लिए। ऐप एक बार में केवल एक छोटा प्रश्न पूछता है और पूरी तरह से आपको सुरक्षित और स्थिर महसूस करने में मदद करने पर केंद्रित है।"
         },
         {
-          "title": "Direct Inquiry",
+          "title": "Direct Inquiry (सीधी पूछताछ)",
           "tag": "स्पष्ट",
-          "body": "उन पलों के लिए जब आपको कम कुशनिंग की आवश्यकता होती है। प्रश्न अधिक तेज़ और केंद्रित हो जाते हैं, जबकि वे गर्म, सहायक और सुधार के लिए खुले रहते हैं।"
+          "body": "जब आपको व्यावहारिक स्पष्टता की आवश्यकता होती है। प्रश्न सीधे होते हैं और तथ्यों को आपकी भावनाओं से अलग करने में मदद करने पर केंद्रित होते हैं।"
         },
         {
-          "title": "Bold Clarity",
+          "title": "Bold Clarity (साहसी स्पष्टता)",
           "tag": "चुनौतीपूर्ण",
-          "body": "उन बार-बार आने वाले चक्रों के लिए जो आपको धोखा देते रहते हैं। ऐप धीरे-धीरे अतिशयोक्ति, बचाव और सुरक्षात्मक कहानियों का विरोध करता है — हमेशा आपकी सुरक्षा को आपकी पहुँच में रखते हुए।"
+          "body": "आवर्ती मानसिक लूप से बाहर निकलने के लिए। ऐप धीरे-धीरे आपकी अतिशयोक्तियों को चुनौती देता है और आपको अपने अंधे धब्बों को करीब से देखने के लिए कहता है।"
         }
       ]
     },
     "moments": {
-      "eyebrow": "स्पष्टता पाना",
-      "title": "छोटे बदलाव जो बदलते हैं कि आपका दिन कैसा लगता है।",
+      "eyebrow": "फ़ायदे",
+      "title": "प्रतिबिंब के छोटे पल स्थायी मानसिक स्पष्टता पैदा करते हैं।",
       "items": [
         {
-          "title": "आप तथ्यों को अपने दिमाग द्वारा बनाई गई कहानियों से अलग करना सीखते हैं।",
-          "body": "एक भारी सोच अब तूफान जैसी महसूस नहीं होती और ऐसी चीज़ बन जाती है जिसे आप बस देख सकते हैं।"
+          "title": "तथ्यों को चिंता से अलग करें।",
+          "body": "वास्तव में क्या हुआ और आपका दिमाग किस बात से डरता है, इसके बीच का अंतर देखना सीखें।"
         },
         {
-          "title": "आप खोजते हैं कि वास्तव में आपके शरीर को क्या शांति देता है।",
-          "body": "इससे पहले कि आपका दिमाग सब कुछ ठीक करने की कोशिश करे, आपके तंत्रिका तंत्र को शांति का क्षण मिलता है।"
+          "title": "अपने नर्वस सिस्टम को शांत करें।",
+          "body": "समस्या को सुलझाने की कोशिश करने से पहले अपने शरीर को सांस लेने और स्थिर होने के लिए एक पल दें।"
         },
         {
-          "title": "आप किसी एक भावना को यह तय नहीं करने देते कि आप कौन हैं।",
-          "body": "एक सोच जो पूर्ण सत्य की तरह महसूस हुई, अचानक ऐसी चीज़ बन जाती है जिस पर आप सवाल उठा सकते हैं।"
+          "title": "अपने विश्वासों पर सवाल उठाएं।",
+          "body": "ऐसा विचार लें जो पूर्ण सत्य जैसा लगता हो और महसूस करें कि यह सिर्फ एक धारणा है जिसे आप छोड़ सकते हैं।"
         },
         {
-          "title": "आप बिना भारी नाटक के अपने पैटर्न को पहचानते हैं।",
-          "body": "भोर तक उनसे जूझने के बजाय, देर रात की चिंताओं को धीरे से एक तरफ रख दिया जाता है।"
+          "title": "अपने पैटर्न पर ध्यान दें।",
+          "body": "अपने भावनात्मक ट्रिगर्स से लड़ने के बजाय उन्हें कोमलता से देखें।"
         },
         {
-          "title": "आप अगला कदम खोजते हैं जो छोटा, दयालु और गहराई से ईमानदार लगता है।",
-          "body": "आप अपने बार-बार होने वाले संघर्षों को निर्णय के बजाय करुणा और स्पष्टता के साथ देखते हैं।"
+          "title": "एक छोटा, दयालु अगला कदम खोजें।",
+          "body": "निर्णय के बजाय अपने आवर्ती संघर्षों को करुणा और स्पष्टता के साथ देखें।"
         },
         {
-          "title": "अनुभव आपके साथ बढ़ता है, जो आपके स्वयं के सत्य द्वारा आकार लेता है।",
-          "body": "आपके द्वारा किया गया हर सुधार ऐप को सिखाता है कि आपके लिए एक बेहतर, सच्चा साथी कैसे बनें।"
+          "title": "अनुभव आपके साथ बढ़ता है।",
+          "body": "आपके द्वारा किया गया हर सुधार ऐप को यह सिखाता है कि आपके लिए एक बेहतर, अधिक सच्चा साथी कैसे बनें।"
         }
       ]
     },
     "privacy": {
-      "eyebrow": "गोपनीयता और नियंत्रण",
-      "title": "आपकी आंतरिक दुनिया आपकी है, किसी एल्गोरिथम की नहीं।",
-      "body": "Miravelys को पहले स्थानीय (local-first) बनाया गया है क्योंकि आपकी बातें — आपके डर, आपकी बेचैन रातें, आपके सुधार, और वे शांत चीजें जो आप शायद ही कभी जोर से कहते हैं — गहराई से व्यक्तिगत हैं। ऐप आपके विचारों को सम्मान के साथ मानता है। आप किसी भी समय कुछ भी रोक सकते हैं, नरम कर सकते हैं, संपादित कर सकते हैं, छिपा सकते हैं या हटा सकते हैं। जब आप ऐप को सही करते हैं, तो यह एक मामूली प्राथमिकता नहीं है; यह वह सबसे महत्वपूर्ण सबक है जो सिस्टम सीखता है।",
+      "eyebrow": "पूर्ण गोपनीयता",
+      "title": "आपके प्रतिबिंब आपके डिवाइस पर, पूरी तरह से निजी रहते हैं।",
+      "body": "आपके डर, नींद से वंचित आपके विचार और आपकी निजी भड़ास बहुत ही व्यक्तिगत हैं। मिरावेलिस आपके डेटा को स्थानीय और सुरक्षित रखने के लिए बनाया गया है। ऐप आपको कभी भी डायग्नोस नहीं करेगा या आपको लेबल करने के लिए आपकी प्रविष्टियों का उपयोग नहीं करेगा। आपके पास जो कुछ भी आप लिखते हैं उसे संपादित करने, छिपाने या स्थायी रूप से हटाने की पूरी शक्ति है।",
       "bullets": [
-        "आपका अनुभव डिफ़ॉल्ट रूप से आपके डिवाइस पर ही रहता है",
-        "क्लाउड सपोर्ट केवल तभी है जब आप इसे चाहते हैं",
-        "हम कभी भी आपका निदान नहीं करते या आप पर कोई ठप्पा नहीं लगाते",
-        "सुझाव बहुत नरमी से दिए जाते हैं, और केवल उसी पर आधारित होते हैं जो आप साझा करते हैं",
-        "आपके सुधार हमेशा ऐप के सुझावों पर हावी रहते हैं",
-        "आप किसी भी समय, कुछ भी रोक सकते हैं, नरम कर सकते हैं, संपादित कर सकते हैं या हटा सकते हैं"
+        "आपका अनुभव डिफ़ॉल्ट रूप से आपके डिवाइस पर रहता है",
+        "क्लाउड समर्थन तभी है जब आप इसे चाहते हैं",
+        "हम कभी भी आपको डायग्नोस नहीं करते या आपको लेबल नहीं करते",
+        "सुझाव केवल उसी के आधार पर कोमलता से दिए जाते हैं जो आप साझा करते हैं",
+        "आपके सुधार हमेशा ऐप के सुझावों को ओवरराइड करते हैं",
+        "आप किसी भी समय कुछ भी रोक सकते हैं, नरम कर सकते हैं, संपादित कर सकते हैं या हटा सकते हैं"
       ]
     },
     "faq": {
@@ -1690,13 +1689,13 @@ export const siteCopy = {
       "origin": "品牌故事"
     },
     "hero": {
-      "eyebrow": "给你最艰难的时刻，一个温柔的避风港",
+      "eyebrow": "为您最艰难的时刻提供一个私密空间",
       "title": "Miravelys",
-      "subtitle": "当一个微小的瞬间在内心演变成一场风暴，Miravelys 在这里帮你解开它。温柔地分离出：发生的事实、你的感受、身体的反应，以及大脑为你加上去的剧情。",
-      "body": "没有期待，没有诊断。只有一处安静、私密的角落，让你慢下来，深呼吸，找回真正的自己。",
-      "primary": "从一个清晰的时刻开始",
+      "subtitle": "当焦虑的想法或艰难的情绪占据上风时，Miravelys 可以帮助您将其分解。这是一款引导式日记应用程序，可以帮助您区分实际发生的事情与您大脑编造的故事。",
+      "body": "没有诊断您的算法。没有强迫您保持积极的压力。只是一个安静、安全的地方，让您平静身体、了解自己的思想。",
+      "primary": "开始理清您的思绪",
       "secondary": "阅读我们的隐私承诺",
-      "visualLabel": "Miravelys 帮你解开瞬间的纠结，分离出情感、身体的反应、大脑的故事、隐藏的信念，以及那些尚未知晓的部分。"
+      "visualLabel": "Miravelys 帮助您分解令人不知所措的时刻：您的情绪、您的身体反应、您大脑的假设以及您隐藏的信念。"
     },
     "mockups": {
       "eyebrow": "功能预览",
@@ -1736,109 +1735,109 @@ export const siteCopy = {
       "legalNavAria": "法律细节与支持"
     },
     "what": {
-      "eyebrow": "它是什么？",
-      "title": "一个安静的空间，只需一句坦诚的话，就能让你松一口气。",
+      "eyebrow": "Miravelys 是什么？",
+      "title": "一款引导式日记，帮助您在不知所措时找到清晰感。",
       "paragraphs": [
-        "Miravelys 的起点，就在你此刻所在的地方：哪怕只是半句凌乱的话，写下什么刺痛了你，什么让你喘不过气，或者什么在你的脑海中挥之不去。你不需要保持冷静、条理清晰或完全想通。我们用人性的温暖迎接你，而不是冰冷的临床清单。",
-        "这款应用会帮你温柔地解开那个瞬间：究竟发生了什么，你感觉如何，身体哪里感到了紧绷，大脑急于编织什么故事，背后隐藏着什么沉默的信念，以及你目前还不知道的事情。你始终掌控着一切 — 你可以软化它的回应，纠正它，暂停，或者干脆说：“这感觉不像我。”",
-        "随着时间的推移，Miravelys 会开始注意到什么能真正给你带来平静，什么能帮你安睡，或者什么能让你鼓起勇气去质疑一个痛苦的循环念头。它不会把你框在某种身份里。相反，它会为你建立一张温柔且鲜活的内心世界地图 — 你可以随时根据需要重写它。"
+        "您不需要写一篇完美的日记。只需从一句诚实但可能有些混乱的话开始，描述是什么触发了您，或者是什么让您彻夜难眠。Miravelys 就在那里迎接您。",
+        "该应用程序会向您提出温和的问题，帮助您将事件的事实与您身体的紧张感和大脑焦虑的故事分离开来。您始终掌控一切——您可以随时跳过问题、编辑答案或暂停。",
+        "随着时间的推移，该应用程序会像一面镜子一样，帮助您发现反复出现的情绪循环和防御习惯，从而让您与自己的思想建立更健康的关系。"
       ],
-      "callout": "Miravelys 不是来和你的大脑争辩的。它在这里帮你调低脑海中的噪音，让你看清什么是真实的，什么是防御机制，以及什么只是需要片刻的休息。"
+      "callout": "Miravelys 不是来与您的思想争辩的。它的存在是为了帮助您放慢噪音，这样您就可以看清什么是真实的、什么是防御机制，以及什么只是需要片刻的休息。"
     },
     "works": {
-      "eyebrow": "如何引导你",
-      "title": "看一个坦诚的想法，如何化作平静的下一步。",
-      "intro": "当匆匆一瞥感觉像是否定，当沉默感觉像证实了你的恐惧，或者当一个错误感觉像是定义了你时，Miravelys 在这里帮你慢下来。你写下让你觉得真实的东西，应用帮你理清它，然后由你决定你最需要什么：是平静、清晰、休息，还是一个温柔的问题来推动你前进。",
+      "eyebrow": "应用程序如何工作",
+      "title": "从一个不知所措的想法到一个清晰的下一步。",
+      "intro": "Miravelys 提供了一套反思和镇静练习工具，帮助您按照自己的节奏处理艰难的时刻。",
       "steps": [
         {
-          "title": "Home 在你所在的地方遇见你",
-          "body": "Home 只是问你现在觉得什么是真实的，并感知你是否需要脚踏实地、休息、回答一个温和的提示，还是更深入地探索。"
+          "title": "Home 适应您",
+          "body": "应用程序只是询问您现在需要什么——无论是平静下来、发泄挫折还是睡觉。"
         },
         {
-          "title": "\"清晰线索\" 理清混乱",
-          "body": "\"清晰线索\" 会捕捉一个压倒性的想法，并温柔地将它分离为：发生的事实、你的感受、你身体的体验、你告诉自己的故事、背后的信念，以及未知。"
+          "title": "理清一下 (Get Clear) 将其分解",
+          "body": "把一个沉重的想法分成几个部分：事件、情感、身体的反应、你告诉自己的故事以及未知的事物。"
         },
         {
-          "title": "Calm Now 守护你的平静",
-          "body": "当你的大脑飞速运转时，Miravelys 不会逼你分析。它邀请你深呼吸，放松下来，找回重心，或者干脆先退后一步。"
+          "title": "Calm Now 抚慰您的身体",
+          "body": "当您思绪万千时，我们会提供引导式呼吸和冥想，帮助您的神经系统在您尝试分析任何事情之前安定下来。"
         },
         {
-          "title": "Sleep Now 尊重你的休息",
-          "body": "夜幕降临时，应用也会和你一起安静下来。它会把沉重的问题放在一边，提供舒缓的反思、柔和的声音，以及那些最好留到明天再想的念头。"
+          "title": "Sleep Now 帮助您休息",
+          "body": "当焦虑在夜间袭来时，该应用程序会搁置沉重的问题，并提供平静的声景以帮助您入睡。"
         },
         {
-          "title": "\"镜子\" 带着关怀去映射",
-          "body": "只有在有足够证据时，才会温柔地与你分享你的模式。我们从不给你贴标签。一切都只是作为建议提供，随时准备接受你的修正。"
+          "title": "每周镜子显示您的模式",
+          "body": "该应用程序会温和地指出您所写的反复出现的主题或信念，让您有机会在不加评判的情况下反思它们。"
         },
         {
-          "title": "你的声音塑造了这段旅程",
-          "body": "每次你纠正应用 — 告诉它再温柔一点，指出某个想法不是你的，或者删除一个假设 — 它都会学习如何更好地支持你。"
+          "title": "您尽在掌握",
+          "body": "您随时可以纠正应用程序、删除记录并调整它支持您的方式。"
         }
       ]
     },
     "depths": {
-      "eyebrow": "节奏由你定",
-      "title": "三种反思方式，以及对你安全的坚定承诺。",
-      "intro": "Miravelys 会根据你的需要调整语调，但它的道德准则永远不变。它永远不会羞辱你，不会给你下诊断，也不会声称知道绝对的真相。你让它探索多深，它就探索多深。",
+      "eyebrow": "选择您的反思模式",
+      "title": "三个级别的指导，取决于您今天能承受什么。",
+      "intro": "Miravelys 会根据您的需求调整其语气，但其伦理标准永远不会改变。它永远不会羞辱您、诊断您或声称知道绝对的真相。它只会在您允许的深度内进行。",
       "items": [
         {
           "title": "Calm Mirror",
-          "tag": "温柔",
-          "body": "为你最脆弱的时刻准备。应用会充满关怀地映照出你的话语，一次只问一个小问题，并将让你感到安全放在首位。"
+          "tag": "温和",
+          "body": "适合您最脆弱的时刻。该应用程序一次只问一个小问题，完全专注于帮助您感到安全和脚踏实地。"
         },
         {
           "title": "Direct Inquiry",
           "tag": "清晰",
-          "body": "当你想少一些缓冲时。问题会变得更尖锐、更聚焦，同时保持温暖、支持，并接受你的纠正。"
+          "body": "当您需要实用的清晰度时。这些问题直截了当，重点是帮助您将事实与感受分开。"
         },
         {
           "title": "Bold Clarity",
           "tag": "挑战",
-          "body": "针对那些不断欺骗你的循环模式。应用会温柔地指出你的夸大其词、逃避和防御性故事 — 同时始终确保安全控制触手可及。"
+          "body": "为了打破反复出现的精神循环。该应用程序温和地挑战您的夸大其词，并要求您仔细观察自己的盲点。"
         }
       ]
     },
     "moments": {
-      "eyebrow": "寻找清晰",
-      "title": "微小的改变，改变你一天的感受。",
+      "eyebrow": "益处",
+      "title": "短暂的反思时刻可以创造持久的思想清晰度。",
       "items": [
         {
-          "title": "你学会了将事实与大脑创造的故事分开。",
-          "body": "一个压倒性的想法不再像一场风暴，而变成了你可以平静观察的事物。"
+          "title": "将事实与焦虑分开。",
+          "body": "学会区分实际发生的事情和您大脑所害怕的事情。"
         },
         {
-          "title": "你发现了什么能真正给你的身体带来平静。",
-          "body": "在你的大脑试图修复一切之前，你的神经系统获得了片刻的宁静。"
+          "title": "平静您的神经系统。",
+          "body": "在尝试解决问题之前，给您的身体一点时间呼吸和安定。"
         },
         {
-          "title": "你不再让单一的感受定义你是谁。",
-          "body": "一个感觉像是绝对真理的想法，突然变成了你可以质疑的东西。"
+          "title": "质疑您的信念。",
+          "body": "拿一个感觉像绝对真理的想法，意识到它只是一个你可以放弃的假设。"
         },
         {
-          "title": "你能在没有沉重戏剧性的情况下认清自己的模式。",
-          "body": "那些深夜的焦虑被温柔地放在一旁，而不是让你一直挣扎到天明。"
+          "title": "注意您的模式。",
+          "body": "温和地观察您的情绪触发点，而不是与它们搏斗。"
         },
         {
-          "title": "你会找到一个更小、更友善、也更诚实的下一步。",
-          "body": "你开始用同情和清晰的眼光看待你反复出现的挣扎，而不是评判。"
+          "title": "找到更小、更友善的下一步。",
+          "body": "以同情心和清晰度看待你反复出现的挣扎，而不是评判。"
         },
         {
-          "title": "这份体验会与你一同成长，由你自己的真实来塑造。",
-          "body": "你所做的每一次纠正，都在教导这款应用如何成为你更好、更真实的伴侣。"
+          "title": "经验与您共同成长。",
+          "body": "您所做的每一次纠正都教会了应用程序如何成为您更好、更真实的伴侣。"
         }
       ]
     },
     "privacy": {
-      "eyebrow": "隐私与控制",
-      "title": "你的内心世界属于你，而不是算法。",
-      "body": "Miravelys 采用“本地优先”的设计，因为你的素材 — 你的恐惧、你无眠的夜晚、你的纠正，以及那些你很少大声说出的安静话语 — 是极其私人的。这款应用以敬畏之心对待你的想法。你可以随时暂停、软化语气、编辑、隐藏或删除任何内容。当你纠正这款应用时，这不仅仅是一个微小的偏好；这是系统学到的最重要的功课。",
+      "eyebrow": "完全的隐私",
+      "title": "您的反思将保留在您的设备上，完全私密。",
+      "body": "您的恐惧、您因睡眠不足而产生的想法以及您的私密发泄都属于极度个人化的内容。Miravelys 的设计旨在确保您的数据留在本地并安全。该应用程序永远不会诊断您，也不会使用您的记录给您贴标签。您拥有编辑、隐藏或永久删除您所写任何内容的最终权力。",
       "bullets": [
-        "默认情况下，所有体验数据都留在你的设备上",
-        "云端支持仅在你需要时才会开启",
-        "我们从不为你下诊断，也不给你贴标签",
-        "仅基于你的分享，提供温柔的洞察",
-        "你的修正永远优先于应用程序的建议",
-        "你可以随时暂停、软化语气、编辑或删除任何内容"
+        "默认情况下，您的体验会保留在您的设备上",
+        "仅在您需要时才提供云端支持",
+        "我们从不对您进行诊断或贴标签",
+        "洞察力是温和地提供的，仅基于您分享的内容",
+        "您的修改始终优先于应用程序的建议",
+        "您可以随时暂停、柔化、编辑或删除任何内容"
       ]
     },
     "faq": {
@@ -2012,13 +2011,13 @@ export const siteCopy = {
       "origin": "Die Geschichte"
     },
     "hero": {
-      "eyebrow": "Ein sanfter Raum für deine schwersten Momente",
+      "eyebrow": "Ein privater Raum für Ihre schwersten Momente",
       "title": "Miravelys",
-      "subtitle": "Wenn sich ein einziger Moment zu einer überwältigenden Geschichte ausweitet, ist Miravelys hier, um dir zu helfen, sie zu entwirren. Trenne sanft, was passiert ist, von dem, was du gefühlt hast, was dein Körper trägt und was dein Verstand hinzugefügt hat.",
-      "body": "Keine Erwartungen. Keine Diagnosen. Nur ein ruhiger, privater Ort, um langsamer zu werden, zu atmen und den Weg zurück zu dir selbst zu finden.",
-      "primary": "Beginne mit einem einzigen Moment",
-      "secondary": "Lies unser Datenschutzversprechen",
-      "visualLabel": "Miravelys hilft dir, den Moment, deine Emotionen, die Reaktion deines Körpers, die Geschichten, die du dir erzählst, verborgene Überzeugungen und das Unbekannte zu entwirren."
+      "subtitle": "Wenn ein ängstlicher Gedanke oder ein schwieriges Gefühl überhandnimmt, hilft Ihnen Miravelys, ihn aufzuschlüsseln. Es ist eine angeleitete Tagebuch-App, die Ihnen hilft, das, was wirklich passiert ist, von den Geschichten zu trennen, die Ihr Verstand erfindet.",
+      "body": "Keine Algorithmen, die Sie diagnostizieren. Kein Druck, positiv zu sein. Nur ein ruhiger, sicherer Ort, um Ihren Körper zu beruhigen und Ihren Verstand zu verstehen.",
+      "primary": "Beginnen Sie, Ihre Gedanken zu entwirren",
+      "secondary": "Lesen Sie unser Datenschutzversprechen",
+      "visualLabel": "Miravelys hilft Ihnen, einen überwältigenden Moment in seine Bestandteile zu zerlegen: Ihre Gefühle, Ihre körperlichen Reaktionen, die Annahmen Ihres Verstandes und Ihre verborgenen Überzeugungen."
     },
     "mockups": {
       "eyebrow": "Ein Blick hinein",
@@ -2058,109 +2057,109 @@ export const siteCopy = {
       "legalNavAria": "Rechtliche Details und Support"
     },
     "what": {
-      "eyebrow": "Was ist es?",
-      "title": "Ein ruhiger Raum, in dem ein einziger ehrlicher Satz Platz zum Atmen schaffen kann.",
+      "eyebrow": "Was ist Miravelys?",
+      "title": "Ein angeleitetes Tagebuch, das Ihnen hilft, Klarheit zu finden, wenn Sie überwältigt sind.",
       "paragraphs": [
-        "Miravelys beginnt genau da, wo du bist: mit nur einem unordentlichen, unfertigen Satz darüber, was wehgetan hat, was dich überwältigt hat oder was in deinem Kopf nachhallt. Du musst nicht ruhig oder wortgewandt sein oder alles verstanden haben. Wir begegnen dir mit menschlicher Wärme, nicht mit einer klinischen Checkliste.",
-        "Die App hilft dir, diesen Moment sanft zu entwirren: was tatsächlich passiert ist, was du gefühlt hast, wo dein Körper die Anspannung gehalten hat, die Geschichten, die dein Verstand voreilig erzählt hat, die stillen Überzeugungen, die sich darunter verbergen, und die Dinge, die du einfach noch nicht weißt. Du behältst immer die Kontrolle — du kannst die Reflexion abmildern, korrigieren, pausieren oder einfach sagen: 'Das fühlt sich nicht nach mir an.'",
-        "Mit der Zeit beginnt Miravelys zu bemerken, was dir wirklich Frieden bringt, dir hilft, dich auszuruhen, oder es dir ermöglicht, einen schmerzhaften, wiederkehrenden Gedanken infrage zu stellen. Es zwängt dich nicht in eine Identität. Stattdessen erstellt es eine sanfte, lebendige Karte deiner inneren Welt — eine, die du jederzeit umschreiben kannst, wenn du es brauchst."
+        "Sie müssen keinen perfekten Tagebucheintrag schreiben. Beginnen Sie mit einem unordentlichen, ehrlichen Satz darüber, was Sie ausgelöst hat oder was Sie wach hält. Miravelys holt Sie dort ab.",
+        "Die App stellt Ihnen sanfte Fragen, die Ihnen helfen, die Fakten der Situation von der körperlichen Anspannung und den ängstlichen Geschichten Ihres Verstandes zu trennen. Sie haben immer die Kontrolle – Sie können Fragen überspringen, Ihre Antworten bearbeiten oder jederzeit pausieren.",
+        "Im Laufe der Zeit fungiert die App als Spiegel und hilft Ihnen, wiederkehrende emotionale Schleifen und Schutzgewohnheiten zu erkennen, damit Sie eine gesündere Beziehung zu Ihren eigenen Gedanken aufbauen können."
       ],
-      "callout": "Miravelys ist nicht hier, um mit deinem Verstand zu streiten. Es ist hier, um dir zu helfen, den Lärm zu reduzieren, damit du sehen kannst, was real ist, was ein Abwehrmechanismus ist und was einfach nur einen Moment der Ruhe braucht."
+      "callout": "Miravelys ist nicht hier, um mit Ihrem Verstand zu streiten. Es ist hier, um Ihnen zu helfen, den Lärm zu verlangsamen, damit Sie sehen können, was real ist, was ein Abwehrmechanismus ist und was einfach einen Moment der Ruhe braucht."
     },
     "works": {
-      "eyebrow": "Wie es dich führt",
-      "title": "Sieh zu, wie ein ehrlicher Gedanke zu einem friedlichen nächsten Schritt wird.",
-      "intro": "Wenn sich ein flüchtiger Blick wie Ablehnung anfühlt, wenn sich Schweigen wie ein Beweis für deine Ängste anfühlt oder wenn sich ein Fehler anfühlt, als würde er dich definieren, ist Miravelys hier, um die Dinge zu verlangsamen. Du schreibst, was sich wahr anfühlt, die App hilft dir, es zu entwirren, und dann entscheidest du, was du am meisten brauchst: Ruhe, Klarheit, Schlaf oder eine sanfte Frage, um voranzukommen.",
+      "eyebrow": "Wie die App funktioniert",
+      "title": "Von einem überwältigenden Gedanken zu einem klaren nächsten Schritt.",
+      "intro": "Miravelys bietet eine Reihe von Reflexions- und Beruhigungsübungen, mit denen Sie schwierige Momente in Ihrem eigenen Tempo verarbeiten können.",
       "steps": [
         {
-          "title": "Home holt dich da ab, wo du bist",
-          "body": "Home fragt einfach, was sich gerade jetzt wahr anfühlt, und erkennt, ob du dich erden, ausruhen, auf eine sanfte Aufforderung antworten oder tiefer blicken musst."
+          "title": "Home passt sich Ihnen an",
+          "body": "Die App fragt einfach, was Sie gerade brauchen – ob es darum geht, sich zu beruhigen, Ihrem Frust Luft zu machen oder zu schlafen."
         },
         {
-          "title": "\"Klare Linie\" entwirrt das Chaos",
-          "body": "\"Klare Linie\" nimmt einen einzigen überwältigenden Gedanken und trennt ihn sanft in das, was passiert ist, was du gefühlt hast, was dein Körper erlebt hat, die Geschichte, die du dir erzählt hast, die Überzeugung darunter und das, was unbekannt bleibt."
+          "title": "Klarer sehen (Get Clear) schlüsselt es auf",
+          "body": "Nehmen Sie einen einzelnen schweren Gedanken und zerlegen Sie ihn in seine Teile: das Ereignis, die Emotion, die Reaktion Ihres Körpers, die Geschichte, die Sie sich erzählt haben, und das Unbekannte."
         },
         {
-          "title": "Calm Now schützt deinen Frieden",
-          "body": "Wenn deine Gedanken rasen, wird Miravelys dich nicht zur Analyse drängen. Es lädt dich ein zu atmen, weicher zu werden, deinen Halt zu finden oder einfach einen Schritt zurückzutreten."
+          "title": "Calm Now beruhigt Ihren Körper",
+          "body": "Wenn Ihre Gedanken rasen, bieten wir geführte Atemübungen und Meditation an, damit sich Ihr Nervensystem beruhigen kann, bevor Sie versuchen, etwas zu analysieren."
         },
         {
-          "title": "Sleep Now respektiert deine Ruhe",
-          "body": "Wenn die Nacht tiefer wird, wird die App mit dir leiser. Sie legt schwere Fragen beiseite und bietet beruhigende Reflexionen, sanfte Klänge und Gedanken, die man besser für morgen aufhebt."
+          "title": "Sleep Now hilft Ihnen beim Ausruhen",
+          "body": "Wenn nachts Angst aufkommt, stellt die App schwere Fragen zurück und bietet beruhigende Klanglandschaften, die Ihnen beim Einschlafen helfen."
         },
         {
-          "title": "\"Spiegel\" reflektiert mit Sorgfalt",
-          "body": "Muster werden dir sanft mitgeteilt, und nur, wenn es genügend Beweise gibt. Wir etikettieren dich nie. Alles wird als Vorschlag angeboten, bereit für deine Korrektur."
+          "title": "Der Wöchentliche Spiegel zeigt Ihre Muster",
+          "body": "Die App weist sanft auf wiederkehrende Themen oder Überzeugungen hin, über die Sie geschrieben haben, und gibt Ihnen die Möglichkeit, diese ohne Wertung zu reflektieren."
         },
         {
-          "title": "Deine Stimme formt die Reise",
-          "body": "Jedes Mal, wenn du die App korrigierst — ihr sagst, sie soll sanfter sein, dass ein Gedanke nicht deiner ist, oder eine Annahme löschst —, lernt sie, dich besser zu unterstützen."
+          "title": "Sie haben die Kontrolle",
+          "body": "Sie können die App jederzeit korrigieren, Einträge löschen und mitgestalten, wie sie Sie unterstützt."
         }
       ]
     },
     "depths": {
-      "eyebrow": "Du bestimmst das Tempo",
-      "title": "Drei Wege der Reflexion, ein unerschütterliches Bekenntnis zu deiner Sicherheit.",
-      "intro": "Miravelys passt seinen Ton an das an, was du brauchst, aber seine Ethik ändert sich nie. Es wird dich niemals demütigen, diagnostizieren oder behaupten, die absolute Wahrheit zu kennen. Es geht nur so tief, wie du es einlädst.",
+      "eyebrow": "Wählen Sie Ihren Reflexionsmodus",
+      "title": "Drei Ebenen der Anleitung, je nachdem, was Sie heute bewältigen können.",
+      "intro": "Miravelys passt seinen Ton an Ihre Bedürfnisse an, aber seine Ethik ändert sich nie. Es wird Sie niemals demütigen, diagnostizieren oder behaupten, die absolute Wahrheit zu kennen. Es geht nur so tief, wie Sie es zulassen.",
       "items": [
         {
           "title": "Calm Mirror",
           "tag": "Sanft",
-          "body": "Für deine zerbrechlichsten Momente. Die App reflektiert deine Worte mit großer Sorgfalt, stellt nur eine kleine Frage nach der anderen und legt Priorität darauf, dass du dich sicher fühlst."
+          "body": "Für Ihre zerbrechlichsten Momente. Die App stellt immer nur eine kleine Frage auf einmal und konzentriert sich ganz darauf, Ihnen zu helfen, sich sicher und geerdet zu fühlen."
         },
         {
           "title": "Direct Inquiry",
           "tag": "Klar",
-          "body": "Für Momente, in denen du etwas weniger Polsterung brauchst. Die Fragen werden schärfer und fokussierter, bleiben aber warm, unterstützend und offen für Korrekturen."
+          "body": "Für die Momente, in denen Sie praktische Klarheit brauchen. Die Fragen sind direkt und darauf ausgerichtet, Ihnen zu helfen, die Fakten von Ihren Gefühlen zu trennen."
         },
         {
           "title": "Bold Clarity",
           "tag": "Herausfordernd",
-          "body": "Für die wiederkehrenden Schleifen, die dich immer wieder austricksen. Die App wehrt sich sanft gegen Übertreibungen, Vermeidung und schützende Geschichten — wobei deine Sicherheitskontrollen immer in Reichweite bleiben."
+          "body": "Zum Ausbrechen aus wiederkehrenden Gedankenschleifen. Die App hinterfragt sanft Ihre Übertreibungen und bittet Sie, Ihre blinden Flecken genauer zu betrachten."
         }
       ]
     },
     "moments": {
-      "eyebrow": "Klarheit finden",
-      "title": "Die winzigen Verschiebungen, die verändern, wie sich dein Tag anfühlt.",
+      "eyebrow": "Die Vorteile",
+      "title": "Kleine Momente der Reflexion schaffen dauerhafte geistige Klarheit.",
       "items": [
         {
-          "title": "Du lernst, die Fakten von den Geschichten zu trennen, die dein Verstand erschafft.",
-          "body": "Ein überwältigender Gedanke fühlt sich nicht mehr wie ein Sturm an und wird zu etwas, das du einfach beobachten kannst."
+          "title": "Trennen Sie Fakten von Angst.",
+          "body": "Lernen Sie, den Unterschied zwischen dem, was tatsächlich passiert ist, und dem, was Ihr Verstand befürchtet, zu sehen."
         },
         {
-          "title": "Du entdeckst, was deinem Körper wirklich Frieden bringt.",
-          "body": "Dein Nervensystem bekommt einen Moment der Ruhe, bevor dein Verstand versucht, alles zu reparieren."
+          "title": "Beruhigen Sie Ihr Nervensystem.",
+          "body": "Geben Sie Ihrem Körper einen Moment Zeit zum Atmen und zur Ruhe zu kommen, bevor Sie versuchen, das Problem zu lösen."
         },
         {
-          "title": "Du hörst auf, ein einziges Gefühl definieren zu lassen, wer du bist.",
-          "body": "Ein Gedanke, der sich wie die absolute Wahrheit anfühlte, wird plötzlich zu etwas, das du infrage stellen kannst."
+          "title": "Hinterfragen Sie Ihre Überzeugungen.",
+          "body": "Nehmen Sie einen Gedanken, der sich wie die absolute Wahrheit anfühlt, und erkennen Sie, dass es nur eine Annahme ist, die Sie loslassen können."
         },
         {
-          "title": "Du erkennst deine Muster ohne das schwere Drama.",
-          "body": "Diese nächtlichen Ängste werden sanft beiseitegelegt, anstatt bis zum Morgengrauen mit ihnen zu ringen."
+          "title": "Beachten Sie Ihre Muster.",
+          "body": "Beobachten Sie sanft Ihre emotionalen Auslöser, anstatt mit ihnen zu kämpfen."
         },
         {
-          "title": "Du findest einen nächsten Schritt, der sich kleiner, freundlicher und zutiefst ehrlich anfühlt.",
-          "body": "Du betrachtest deine wiederkehrenden Kämpfe mit Mitgefühl und Klarheit, anstatt mit Verurteilung."
+          "title": "Finden Sie einen kleineren, freundlicheren nächsten Schritt.",
+          "body": "Betrachten Sie Ihre wiederkehrenden Kämpfe mit Mitgefühl und Klarheit, anstatt sie zu verurteilen."
         },
         {
-          "title": "Die Erfahrung wächst mit dir, geformt von deiner eigenen Wahrheit.",
-          "body": "Jede Korrektur, die du vornimmst, lehrt die App, ein besserer, wahrerer Begleiter für dich zu sein."
+          "title": "Die Erfahrung wächst mit Ihnen.",
+          "body": "Jede Korrektur, die Sie vornehmen, lehrt die App, wie sie ein besserer, wahrerer Begleiter für Sie sein kann."
         }
       ]
     },
     "privacy": {
-      "eyebrow": "Privatsphäre & Kontrolle",
-      "title": "Deine innere Welt gehört dir, nicht einem Algorithmus.",
-      "body": "Miravelys ist 'local-first' aufgebaut, weil dein Rohmaterial — deine Ängste, deine ruhelosen Nächte, deine Korrekturen und die stillen Dinge, die du selten laut aussprichst — zutiefst persönlich ist. Die App behandelt deine Gedanken mit Ehrfurcht. Du kannst jederzeit alles pausieren, abmildern, bearbeiten, verbergen oder löschen. Wenn du die App korrigierst, ist das keine unbedeutende Präferenz; es ist die wichtigste Lektion, die das System lernt.",
+      "eyebrow": "Absolute Privatsphäre",
+      "title": "Ihre Reflexionen bleiben auf Ihrem Gerät, völlig privat.",
+      "body": "Ihre Ängste, Ihre von Schlafmangel geprägten Gedanken und Ihr privates Luftmachen sind zutiefst persönlich. Miravelys wurde entwickelt, um Ihre Daten lokal und sicher aufzubewahren. Die App wird Sie niemals diagnostizieren oder Ihre Einträge verwenden, um Sie abzustempeln. Sie haben die uneingeschränkte Macht, alles, was Sie schreiben, zu bearbeiten, auszublenden oder dauerhaft zu löschen.",
       "bullets": [
-        "Deine Erfahrung bleibt standardmäßig auf deinem Gerät",
-        "Cloud-Support gibt es nur, wenn du ihn möchtest",
-        "Wir stellen keine Diagnosen oder etikettieren dich",
-        "Erkenntnisse werden sanft angeboten, basierend nur auf dem, was du teilst",
-        "Deine Korrekturen überschreiben immer die Vorschläge der App",
-        "Du kannst jederzeit alles pausieren, abmildern, bearbeiten oder löschen"
+        "Ihre Erfahrung bleibt standardmäßig auf Ihrem Gerät",
+        "Cloud-Unterstützung gibt es nur, wenn Sie es wünschen",
+        "Wir stellen niemals Diagnosen oder verpassen Ihnen Etiketten",
+        "Einsichten werden sanft angeboten, basierend nur auf dem, was Sie teilen",
+        "Ihre Korrekturen überschreiben immer die Vorschläge der App",
+        "Sie können alles jederzeit pausieren, abschwächen, bearbeiten oder löschen"
       ]
     },
     "faq": {
@@ -2334,13 +2333,13 @@ export const siteCopy = {
       "origin": "ストーリー"
     },
     "hero": {
-      "eyebrow": "あなたの一番苦しい瞬間のための、優しい空間",
+      "eyebrow": "最も辛い瞬間のためのプライベートな空間",
       "title": "Miravelys",
-      "subtitle": "ささいな瞬間が、あなたの中で重すぎる物語になってしまった時、Miravelysはそれを紐解くお手伝いをします。何が起きたのか、何を感じたのか、体がどう反応したのか、そして心が何を付け加えたのかを、優しく分けていきましょう。",
-      "body": "何の期待も、診断もありません。ただ立ち止まり、息をつき、自分自身に戻るための、静かでプライベートな場所です。",
-      "primary": "ひとつの明確な瞬間から始める",
-      "secondary": "プライバシーの約束を読む",
-      "visualLabel": "Miravelysは、その瞬間、感情、体の反応、心が作り出した物語、隠れた思い込み、そしてまだ分からないことを解きほぐすサポートをします。"
+      "subtitle": "不安な考えや困難な感情に押しつぶされそうになったとき、Miravelysはそれを整理するお手伝いをします。実際に起こったことと、心が作り出した物語を切り離すための、ガイド付きジャーナリングアプリです。",
+      "body": "あなたを診断するアルゴリズムはありません。ポジティブになるようにプレッシャーをかけることもありません。ただ、体を落ち着かせ、心を理解するための、静かで安全な場所です。",
+      "primary": "思考の整理を始める",
+      "secondary": "私たちのプライバシーの約束を読む",
+      "visualLabel": "Miravelysは、感情、身体の反応、心の思い込み、そして隠れた信念など、圧倒されるような瞬間を分解するお手伝いをします。"
     },
     "mockups": {
       "eyebrow": "アプリの中を見る",
@@ -2380,109 +2379,109 @@ export const siteCopy = {
       "legalNavAria": "法的詳細とサポート"
     },
     "what": {
-      "eyebrow": "これは何？",
-      "title": "ひとつの正直な言葉が、息をする余白を作ってくれる、静かな空間。",
+      "eyebrow": "Miravelysとは何ですか？",
+      "title": "圧倒されているときに明確さを見つけるのに役立つ、ガイド付きジャーナルです。",
       "paragraphs": [
-        "Miravelysは、まさに今のあなたがいる場所から始まります。何があなたを傷つけたのか、何があなたを圧倒したのか、何が頭から離れないのかについて、たった一つのまとまらない、未完成な言葉から。冷静である必要も、理路整然としている必要も、すべてを理解している必要もありません。私たちは臨床的なチェックリストではなく、人間としての温かさであなたを迎えます。",
-        "アプリは、その瞬間を優しく解きほぐすのを手伝います：実際に何が起こったのか、何を感じたのか、体のどこが緊張したのか、心が焦って作り出した物語、その下に隠れた静かな思い込み、そして、まだ分からないこと。主導権は常にあなたにあります — 振り返りの言葉を和らげたり、修正したり、止めたり、あるいは単に「これは私らしくない」と言ったりすることができます。",
-        "時間が経つにつれ、Miravelysは、何が本当にあなたに平和をもたらすのか、休むのを助けてくれるのか、あるいは苦しい繰り返しの思考を疑う勇気をくれるのかに気づき始めます。あなたを一つの枠に押し込めることはしません。代わりに、あなたの内なる世界の優しく生き生きとした地図を作り上げます — それは、必要な時にいつでも書き換えられる地図です。"
+        "完璧な日記を書く必要はありません。何が引き金になったのか、何が原因で眠れないのかについて、まとまりがなくても正直な一文から始めてください。Miravelysはそのままのあなたを受け入れます。",
+        "アプリは、状況の事実を、身体の緊張や心の不安な物語から切り離すのに役立つ、優しい質問を投げかけます。質問をスキップしたり、答えを編集したり、いつでも一時停止したりと、常にあなたがコントロールできます。",
+        "時間の経過とともに、アプリは鏡として機能し、繰り返される感情のループや防衛的な習慣に気づくのを助け、自分の考えとより健康的な関係を築くことができるようにします。"
       ],
-      "callout": "Miravelysは、あなたの心と言い争うためにここにあるのではありません。何が現実で、何が防衛本能で、何がただ少しの休息を必要としているのかを見えるように、ノイズを静めるのを手伝うためにあります。"
+      "callout": "Miravelysは、あなたの心と議論するためにここにあるのではありません。何が現実で、何が防衛機制で、何が単に休息を必要としているのかを見ることができるように、心のノイズをスローダウンさせるためにここにあります。"
     },
     "works": {
-      "eyebrow": "どう導くのか",
-      "title": "正直な考えが、穏やかな次の一歩に変わるのを見てください。",
-      "intro": "ふとした視線が拒絶のように感じられる時、沈黙が不安の証拠のように思える時、または一つの失敗が自分自身を定義しているように感じる時、Miravelysは物事を少し遅らせるためにここにいます。あなたが真実だと感じることを書き、アプリがそれを解きほぐすのを手伝い、そして、今一番必要なもの — 落ち着き、明確さ、休息、あるいは前に進むための優しい問いかけ — をあなた自身が選びます。",
+      "eyebrow": "アプリの仕組み",
+      "title": "圧倒的な思考から、明確な次のステップへ。",
+      "intro": "Miravelysは、ご自身のペースで困難な瞬間を処理するのに役立つ、内省と落ち着きのためのツールのセットを提供します。",
       "steps": [
         {
-          "title": "Homeは今のあなたを受け入れます",
-          "body": "Homeはただ、今何が真実だと感じるかを尋ね、あなたが地に足をつける必要があるか、休む必要があるか、優しい問いに答える必要があるか、あるいはより深く見る必要があるかを感じ取ります。"
+          "title": "Homeはあなたに適応します",
+          "body": "落ち着きたいのか、不満を吐き出したいのか、眠りたいのか、アプリは今あなたが必要としていることをシンプルに尋ねます。"
         },
         {
-          "title": "\"明確なライン\"が絡まりを解く",
-          "body": "\"明確なライン\"は、圧倒的な一つの考えを受け取り、何が起きたか、何を感じたか、体がどう反応したか、自分に語った物語、その奥の思い込み、そして未知のものへと、優しく分けていきます。"
+          "title": "クリアにする (Get Clear) で分解する",
+          "body": "一つの重い思考を取り上げ、それを要素に分けます：出来事、感情、身体の反応、自分に言い聞かせた物語、そして未知のもの。"
         },
         {
-          "title": "Calm Nowがあなたの平穏を守る",
-          "body": "思考がぐるぐると回っている時、Miravelysはあなたに分析を強要しません。息をし、力を抜き、自分を取り戻すか、ただ一歩下がるように誘います。"
+          "title": "Calm Nowで体を落ち着かせる",
+          "body": "心が落ち着かないとき、何かを分析しようとする前に神経系を落ち着かせるための、ガイド付きの呼吸法や瞑想を提供します。"
         },
         {
-          "title": "Sleep Nowは休息を尊重する",
-          "body": "夜が深まると、アプリもあなたと一緒に静かになります。重い問いかけを避け、心地よい振り返り、優しい音、そして明日まで取っておくべき考えを提案します。"
+          "title": "Sleep Nowで休息を助ける",
+          "body": "夜に不安に襲われたとき、アプリは重い質問を脇に置き、眠りにつくのを助ける落ち着いた音の風景を提供します。"
         },
         {
-          "title": "\"ミラー\"は気遣いとともに映し出す",
-          "body": "パターンは優しく、十分な証拠がある場合にのみ共有されます。私たちは決してあなたを決めつけません。すべては提案として提供され、いつでも修正できます。"
+          "title": "ウィークリーミラーがパターンを示します",
+          "body": "アプリは、あなたが書き留めた繰り返されるテーマや信念を優しく指摘し、批判することなくそれらについて振り返る機会を与えてくれます。"
         },
         {
-          "title": "あなたの声が旅を形作る",
-          "body": "アプリを修正するたびに — 「もっと優しく」「これは私の考えではない」「この推測を消して」と伝えるたびに — アプリはあなたをより良くサポートする方法を学びます。"
+          "title": "あなたがコントロールします",
+          "body": "いつでもアプリを修正し、エントリを削除し、アプリがあなたをどのようにサポートするかを形作ることができます。"
         }
       ]
     },
     "depths": {
-      "eyebrow": "ペースはあなたが決める",
-      "title": "振り返るための3つの方法と、安全への揺るぎない約束。",
-      "intro": "Miravelysはあなたの必要に応じてトーンを変えますが、その倫理観が変わることはありません。あなたを辱めたり、診断したり、絶対的な真実を知っていると主張したりすることは決してありません。あなたが招き入れた深さまでしか行きません。",
+      "eyebrow": "リフレクションのモードを選択する",
+      "title": "今日あなたが対応できる内容に応じた、3つのレベルのガイダンス。",
+      "intro": "Miravelysは、あなたが必要としていることにトーンを合わせますが、その倫理が変わることは決してありません。あなたを辱めたり、診断したり、絶対的な真実を知っていると主張したりすることは決してありません。あなたが招き入れた深さにだけ到達します。",
       "items": [
         {
           "title": "Calm Mirror",
-          "tag": "優しく",
-          "body": "最も繊細な瞬間に。アプリは深い配慮をもってあなたの言葉を映し出し、一度に小さな質問を一つだけ投げかけ、あなたが安全だと感じられることを最優先します。"
+          "tag": "優しい",
+          "body": "最も傷つきやすい瞬間に。アプリは一度に小さな質問を一つだけ投げかけ、あなたが安全で落ち着いていると感じられるようにすることに完全に集中します。"
         },
         {
           "title": "Direct Inquiry",
-          "tag": "明確に",
-          "body": "少しクッションが少なくていいと感じる時に。質問はより鋭く焦点が絞られますが、温かく、サポート的で、修正を受け入れる姿勢は変わりません。"
+          "tag": "明確",
+          "body": "実践的な明確さが必要なときに。事実を感情から切り離すのに役立つことに焦点を当てた、率直な質問です。"
         },
         {
           "title": "Bold Clarity",
-          "tag": "挑戦",
-          "body": "あなたを欺き続ける繰り返しのループに。アプリは誇張や回避、自己防衛の物語に優しく問いかけます — 常に安全のコントロールはあなたの手の届くところに置いたままで。"
+          "tag": "挑戦的",
+          "body": "繰り返される思考のループから抜け出すために。アプリはあなたの誇張に優しく異議を唱え、自分の盲点をより詳しく見るように求めます。"
         }
       ]
     },
     "moments": {
-      "eyebrow": "明確さを探す",
-      "title": "一日の感じ方を変える、ささいな変化。",
+      "eyebrow": "得られるもの",
+      "title": "小さな内省の時間が、永続的な心の明確さを生み出します。",
       "items": [
         {
-          "title": "事実と、心が作り出した物語を区別できるようになります。",
-          "body": "圧倒的な考えが嵐のようには感じられなくなり、ただ観察できるものに変わります。"
+          "title": "事実と不安を切り離す。",
+          "body": "実際に起こったことと、あなたの心が恐れていることの違いを見分けることを学びます。"
         },
         {
-          "title": "何が本当に体に安らぎをもたらすかを発見します。",
-          "body": "心がすべてを解決しようとする前に、神経系が少しの静寂を得ることができます。"
+          "title": "神経系を落ち着かせる。",
+          "body": "問題を解決しようとする前に、体に呼吸をし、落ち着く時間を与えてください。"
         },
         {
-          "title": "一つの感情に、自分が誰であるかを決めさせないようになります。",
-          "body": "絶対的な真実のように感じていた考えが、突然、疑うことができるものに変わります。"
+          "title": "自分の信念に疑問を持つ。",
+          "body": "絶対的な真実のように感じられる思考を取り上げ、それが手放すことができる単なる思い込みであることに気づきましょう。"
         },
         {
-          "title": "重いドラマなしに、自分のパターンを認識できるようになります。",
-          "body": "夜更けの不安は、夜明けまで格闘するのではなく、優しく脇に置くことができます。"
+          "title": "自分のパターンに気づく。",
+          "body": "感情の引き金と戦うのではなく、優しく観察してください。"
         },
         {
-          "title": "より小さく、優しく、深く正直な次の一歩を見つけることができます。",
-          "body": "繰り返す葛藤を、裁きではなく、思いやりと明確さを持って見ることができるようになります。"
+          "title": "より小さく、より優しい次のステップを見つける。",
+          "body": "繰り返される葛藤を、批判ではなく、思いやりと明確さをもって見つめましょう。"
         },
         {
-          "title": "体験はあなた自身の真実に形作られ、あなたと共に成長します。",
-          "body": "あなたが行う一つひとつの修正が、アプリがあなたにとってより良く、より真の相棒になる方法を教えてくれます。"
+          "title": "経験はあなたと共に成長します。",
+          "body": "あなたが行う修正の一つ一つが、アプリに、あなたにとってより良い、より真のパートナーになる方法を教えます。"
         }
       ]
     },
     "privacy": {
-      "eyebrow": "プライバシーとコントロール",
-      "title": "あなたの内なる世界はあなたのものであり、アルゴリズムのものではありません。",
-      "body": "Miravelysが「ローカルファースト」で作られているのは、あなたの生の素材 — 恐れ、眠れない夜、修正、声に出して言うことの少ない静かな言葉たち — が深く個人的なものだからです。アプリはあなたの考えを敬意を持って扱います。いつでも、立ち止まり、和らげ、編集し、隠し、削除することができます。あなたがアプリを修正するとき、それはささいな好みではありません。それはシステムが学ぶ最も重要な教訓なのです。",
+      "eyebrow": "完全なプライバシー",
+      "title": "あなたの内省はデバイス上に残り、完全にプライベートです。",
+      "body": "あなたの恐怖、睡眠不足の思考、そして個人的な不満の吐露は、非常に個人的なものです。Miravelysは、あなたのデータをローカルかつ安全に保つように構築されています。アプリがあなたを診断したり、エントリを使用してあなたにラベルを貼ったりすることはありません。書いたものを編集、非表示、または完全に削除する絶対的な権限はあなたにあります。",
       "bullets": [
-        "あなたの体験はデフォルトでデバイスに留まります",
-        "クラウドサポートは、あなたが望む場合のみ機能します",
-        "私たちは決して診断を下したり、あなたを決めつけたりしません",
+        "あなたの体験は、デフォルトでデバイス上に保存されます",
+        "クラウドサポートは、あなたが望む場合にのみ提供されます",
+        "私たちは決してあなたを診断したり、レッテルを貼ったりしません",
         "洞察は、あなたが共有したことにのみ基づいて、優しく提供されます",
-        "あなたの修正は、常にアプリの提案よりも優先されます",
-        "いつでも、立ち止まったり、和らげたり、編集したり、削除したりできます"
+        "あなたの修正は常にアプリの提案よりも優先されます",
+        "いつでも一時停止、表現の緩和、編集、削除が可能です"
       ]
     },
     "faq": {
@@ -2656,13 +2655,13 @@ export const siteCopy = {
       "origin": "La Historia"
     },
     "hero": {
-      "eyebrow": "Un espacio suave para tus momentos más difíciles",
+      "eyebrow": "Un espacio privado para tus momentos más difíciles",
       "title": "Miravelys",
-      "subtitle": "Cuando un simple momento se convierte en una historia abrumadora, Miravelys está aquí para ayudarte a desenredarlo. Separa con suavidad lo que pasó de lo que sentiste, lo que tu cuerpo carga y lo que tu mente añadió.",
-      "body": "Sin expectativas. Sin diagnósticos. Solo un lugar tranquilo y privado para bajar el ritmo, respirar y encontrar tu camino de vuelta a ti mismo.",
-      "primary": "Comienza con un momento de claridad",
+      "subtitle": "Cuando un pensamiento ansioso o una emoción difícil toman el control, Miravelys te ayuda a desglosarlos. Es una aplicación de diario guiado que te ayuda a separar lo que realmente sucedió de las historias que tu mente está inventando.",
+      "body": "Sin algoritmos que te diagnostiquen. Sin presión para ser positivo. Solo un lugar tranquilo y seguro para calmar tu cuerpo y entender tu mente.",
+      "primary": "Empieza a desenredar tus pensamientos",
       "secondary": "Lee nuestra promesa de privacidad",
-      "visualLabel": "Miravelys te ayuda a desenredar el momento, tus emociones, la respuesta de tu cuerpo, las historias que te cuentas, las creencias ocultas y lo que sigue siendo desconocido."
+      "visualLabel": "Miravelys te ayuda a desglosar un momento abrumador: tus emociones, tus reacciones físicas, las suposiciones de tu mente y tus creencias ocultas."
     },
     "mockups": {
       "eyebrow": "Un vistazo dentro",
@@ -2702,109 +2701,109 @@ export const siteCopy = {
       "legalNavAria": "Detalles legales y soporte"
     },
     "what": {
-      "eyebrow": "¿Qué es?",
-      "title": "Un espacio tranquilo donde una sola frase honesta puede crear espacio para respirar.",
+      "eyebrow": "¿Qué es Miravelys?",
+      "title": "Un diario guiado que te ayuda a encontrar claridad cuando te sientes abrumado.",
       "paragraphs": [
-        "Miravelys empieza exactamente donde estás: con solo una frase desordenada e inacabada sobre qué dolió, qué te abrumó o qué sigue resonando en tu mente. No necesitas estar calmado, ser elocuente o tenerlo todo claro. Te recibimos con calidez humana, no con un cuestionario clínico.",
-        "La aplicación te ayuda a desenredar suavemente ese momento: lo que pasó realmente, lo que sentiste, dónde retuvo la tensión tu cuerpo, las historias que tu mente se apresuró a contar, las creencias silenciosas escondidas debajo y las cosas que simplemente aún no sabes. Tú siempre tienes el control — puedes suavizar el reflejo, corregirlo, pausar, o simplemente decir: 'Eso no me suena a mí'.",
-        "Con el tiempo, Miravelys empieza a notar qué te trae paz de verdad, qué te ayuda a descansar o te permite cuestionar un pensamiento doloroso y recurrente. No te encasilla en una identidad. En cambio, construye un mapa suave y vivo de tu mundo interior — uno que puedes reescribir siempre que lo necesites."
+        "No necesitas escribir una entrada de diario perfecta. Comienza con una oración desordenada y honesta sobre lo que te desencadenó o lo que te mantiene despierto. Miravelys te encuentra allí.",
+        "La aplicación te hace preguntas amables para ayudarte a separar los hechos de la situación de la tensión física de tu cuerpo y las historias ansiosas de tu mente. Siempre tienes el control: puedes saltarte preguntas, editar tus respuestas o hacer una pausa en cualquier momento.",
+        "Con el tiempo, la aplicación actúa como un espejo, ayudándote a detectar bucles emocionales recurrentes y hábitos de protección, para que puedas construir una relación más saludable con tus propios pensamientos."
       ],
-      "callout": "Miravelys no está aquí para discutir con tu mente. Está aquí para ayudarte a bajar el ruido, para que puedas ver qué es real, qué es un mecanismo de defensa y qué simplemente necesita un momento de descanso."
+      "callout": "Miravelys no está aquí para discutir con tu mente. Está aquí para ayudarte a reducir el ruido, para que puedas ver qué es real, qué es un mecanismo de defensa y qué simplemente necesita un momento de descanso."
     },
     "works": {
-      "eyebrow": "Cómo te guía",
-      "title": "Mira cómo un pensamiento honesto se convierte en un próximo paso tranquilo.",
-      "intro": "Cuando una mirada fugaz se siente como rechazo, cuando el silencio parece confirmar tus miedos o cuando un error parece definirte, Miravelys está aquí para bajar el ritmo. Escribes lo que se siente verdadero, la aplicación te ayuda a desenredarlo, y luego decides qué necesitas más: calma, claridad, descanso o una pregunta suave para seguir adelante.",
+      "eyebrow": "Cómo funciona la aplicación",
+      "title": "De un pensamiento abrumador a un próximo paso claro.",
+      "intro": "Miravelys ofrece un conjunto de herramientas de reflexión y ejercicios de calma para ayudarte a procesar los momentos difíciles a tu propio ritmo.",
       "steps": [
         {
-          "title": "Home te encuentra donde estás",
-          "body": "Home simplemente pregunta qué se siente verdadero ahora, reconociendo si necesitas conectarte contigo mismo, descansar, responder a una indicación suave o mirar más profundamente."
+          "title": "Home se adapta a ti",
+          "body": "La aplicación simplemente te pregunta qué necesitas en este momento, ya sea calmarte, desahogarte o dormir."
         },
         {
-          "title": "\"Línea clara\" desenreda el lío",
-          "body": "\"Línea clara\" toma un pensamiento abrumador y lo separa suavemente en lo que pasó, lo que sentiste, lo que tu cuerpo experimentó, la historia que te contaste, la creencia debajo y lo que sigue siendo desconocido."
+          "title": "Aclarar (Get Clear) lo desglosa",
+          "body": "Toma un solo pensamiento pesado y sepáralo en partes: el evento, la emoción, la reacción de tu cuerpo, la historia que te contaste y lo desconocido."
         },
         {
-          "title": "Calm Now protege tu paz",
-          "body": "Cuando tu mente va a mil por hora, Miravelys no te empujará a analizar. Te invita a respirar, suavizarte, encontrar tu equilibrio o simplemente dar un paso atrás."
+          "title": "Calm Now tranquiliza tu cuerpo",
+          "body": "Cuando tu mente está acelerada, ofrecemos respiración guiada y meditación para ayudar a que tu sistema nervioso se asiente antes de que intentes analizar algo."
         },
         {
-          "title": "Sleep Now respeta tu descanso",
-          "body": "A medida que la noche avanza, la aplicación se aquieta contigo. Deja a un lado las preguntas pesadas, ofreciendo reflexiones relajantes, sonidos suaves y pensamientos que es mejor guardar para mañana."
+          "title": "Sleep Now te ayuda a descansar",
+          "body": "Cuando la ansiedad ataca por la noche, la aplicación deja a un lado las preguntas pesadas y ofrece paisajes sonoros relajantes para ayudarte a dormir."
         },
         {
-          "title": "\"Espejo\" refleja con cuidado",
-          "body": "Los patrones se comparten contigo con delicadeza, y solo cuando hay pruebas suficientes. Nunca te etiquetamos. Todo se ofrece como una sugerencia, lista para tu corrección."
+          "title": "El Espejo Semanal muestra tus patrones",
+          "body": "La aplicación señala suavemente los temas o creencias recurrentes sobre los que has escrito, dándote la oportunidad de reflexionar sobre ellos sin ser juzgado."
         },
         {
-          "title": "Tu voz da forma al viaje",
-          "body": "Cada vez que corriges a la aplicación — diciéndole que sea más suave, que un pensamiento no es tuyo o que borre una suposición — aprende a apoyarte mejor."
+          "title": "Tú tienes el control",
+          "body": "Siempre puedes corregir la aplicación, eliminar entradas y dar forma a cómo te apoya."
         }
       ]
     },
     "depths": {
-      "eyebrow": "Tú marcas el ritmo",
-      "title": "Tres formas de reflexionar, un compromiso inquebrantable con tu seguridad.",
-      "intro": "Miravelys adapta su tono a lo que necesitas, pero su ética nunca cambia. Nunca te humillará, te diagnosticará ni afirmará conocer la verdad absoluta. Solo profundiza hasta donde tú lo invitas.",
+      "eyebrow": "Elige tu modo de reflexión",
+      "title": "Tres niveles de orientación, dependiendo de lo que puedas manejar hoy.",
+      "intro": "Miravelys adapta su tono a lo que necesitas, pero su ética nunca cambia. Nunca te humillará, te diagnosticará ni pretenderá saber la verdad absoluta. Solo profundiza tanto como tú se lo permitas.",
       "items": [
         {
           "title": "Calm Mirror",
-          "tag": "Suave",
-          "body": "Para tus momentos más frágiles. La aplicación refleja tus palabras con mucho cuidado, hace solo una pequeña pregunta a la vez y prioriza ayudarte a sentirte seguro."
+          "tag": "Amable",
+          "body": "Para tus momentos más frágiles. La aplicación hace solo una pequeña pregunta a la vez y se enfoca completamente en ayudarte a sentirte seguro y arraigado."
         },
         {
           "title": "Direct Inquiry",
           "tag": "Claro",
-          "body": "Para cuando necesitas un poco menos de colchón. Las preguntas se vuelven más incisivas y enfocadas, sin dejar de ser cálidas, de apoyo y abiertas a correcciones."
+          "body": "Para cuando necesitas claridad práctica. Las preguntas son directas y se enfocan en ayudarte a desenredar los hechos de tus sentimientos."
         },
         {
           "title": "Bold Clarity",
           "tag": "Desafiante",
-          "body": "Para esos bucles recurrentes que siguen engañándote. La aplicación cuestiona suavemente las exageraciones, la evitación y las historias protectoras — manteniendo siempre tus controles de seguridad a mano."
+          "body": "Para romper con los bucles mentales recurrentes. La aplicación desafía suavemente tus exageraciones y te pide que mires más de cerca tus puntos ciegos."
         }
       ]
     },
     "moments": {
-      "eyebrow": "Encontrando claridad",
-      "title": "Los pequeños cambios que transforman cómo se siente tu día.",
+      "eyebrow": "Los beneficios",
+      "title": "Los pequeños momentos de reflexión crean una claridad mental duradera.",
       "items": [
         {
-          "title": "Aprendes a separar los hechos de las historias que tu mente crea.",
-          "body": "Un pensamiento abrumador deja de sentirse como una tormenta y se convierte en algo que simplemente puedes observar."
+          "title": "Separa los hechos de la ansiedad.",
+          "body": "Aprende a ver la diferencia entre lo que realmente sucedió y lo que tu mente teme."
         },
         {
-          "title": "Descubres lo que realmente le trae paz a tu cuerpo.",
-          "body": "Tu sistema nervioso tiene un momento de silencio antes de que tu mente intente arreglarlo todo."
+          "title": "Calma tu sistema nervioso.",
+          "body": "Dale a tu cuerpo un momento para respirar y asentarse antes de intentar resolver el problema."
         },
         {
-          "title": "Dejas de permitir que un solo sentimiento defina quién eres.",
-          "body": "Un pensamiento que parecía una verdad absoluta de repente se convierte en algo que puedes cuestionar."
+          "title": "Cuestiona tus creencias.",
+          "body": "Toma un pensamiento que se siente como una verdad absoluta y date cuenta de que es solo una suposición que puedes dejar ir."
         },
         {
-          "title": "Reconoces tus patrones sin tanto drama.",
-          "body": "Esas ansiedades nocturnas se dejan suavemente a un lado, en lugar de pelear con ellas hasta el amanecer."
+          "title": "Nota tus patrones.",
+          "body": "Observa suavemente tus desencadenantes emocionales en lugar de luchar contra ellos."
         },
         {
-          "title": "Encuentras un próximo paso que se siente más pequeño, más amable y profundamente honesto.",
-          "body": "Ves tus luchas recurrentes con compasión y claridad, en lugar de juicio."
+          "title": "Encuentra un próximo paso más pequeño y amable.",
+          "body": "Mira tus luchas recurrentes con compasión y claridad, en lugar de juzgarlas."
         },
         {
-          "title": "La experiencia crece contigo, moldeada por tu propia verdad.",
-          "body": "Cada corrección que haces le enseña a la aplicación cómo ser una mejor y más verdadera compañera para ti."
+          "title": "La experiencia crece contigo.",
+          "body": "Cada corrección que haces le enseña a la aplicación cómo ser un compañero mejor y más verdadero para ti."
         }
       ]
     },
     "privacy": {
-      "eyebrow": "Privacidad y Control",
-      "title": "Tu mundo interior te pertenece, no a un algoritmo.",
-      "body": "Miravelys se construye primero en local porque tu material en bruto — tus miedos, tus noches sin dormir, tus correcciones y las cosas silenciosas que rara vez dices en voz alta — es profundamente personal. La aplicación trata tus pensamientos con reverencia. Puedes pausar, suavizar, editar, ocultar o borrar cualquier cosa en cualquier momento. Cuando corriges la aplicación, no es una preferencia menor; es la lección más importante que aprende el sistema.",
+      "eyebrow": "Privacidad Total",
+      "title": "Tus reflexiones se quedan en tu dispositivo, completamente privadas.",
+      "body": "Tus miedos, tus pensamientos privados de sueño y tus desahogos privados son profundamente personales. Miravelys está diseñado para mantener tus datos locales y seguros. La aplicación nunca te diagnosticará ni usará tus entradas para etiquetarte. Tienes el poder absoluto de editar, ocultar o eliminar permanentemente cualquier cosa que escribas.",
       "bullets": [
         "Tu experiencia se queda en tu dispositivo por defecto",
-        "El soporte en la nube solo está si tú lo deseas",
-        "Nunca te diagnosticamos ni te ponemos etiquetas",
-        "Las reflexiones se ofrecen suavemente, basadas solo en lo que compartes",
-        "Tus correcciones siempre prevalecen sobre las sugerencias de la aplicación",
-        "Puedes pausar, suavizar, editar o borrar cualquier cosa, en cualquier momento"
+        "El soporte en la nube solo está ahí si lo deseas",
+        "Nunca te diagnosticamos ni te etiquetamos",
+        "Las ideas se ofrecen suavemente, basadas solo en lo que compartes",
+        "Tus correcciones siempre anulan las sugerencias de la aplicación",
+        "Puedes pausar, suavizar, editar o eliminar cualquier cosa, en cualquier momento"
       ]
     },
     "faq": {
@@ -2978,13 +2977,13 @@ export const siteCopy = {
       "origin": "A História"
     },
     "hero": {
-      "eyebrow": "Um espaço gentil para os teus momentos mais difíceis",
+      "eyebrow": "Um espaço privado para os seus momentos mais difíceis",
       "title": "Miravelys",
-      "subtitle": "Quando um simples momento se transforma numa história avassaladora, o Miravelys está aqui para te ajudar a desembaraçá-la. Separa suavemente o que aconteceu do que sentiste, do que o teu corpo carrega e do que a tua mente acrescentou.",
-      "body": "Sem expectativas. Sem diagnósticos. Apenas um lugar tranquilo e privado para abrandar, respirar e encontrar o caminho de volta para ti mesmo.",
-      "primary": "Começa com um único momento de clareza",
-      "secondary": "Lê a nossa promessa de privacidade",
-      "visualLabel": "O Miravelys ajuda-te a desembaraçar o momento, as tuas emoções, a resposta do teu corpo, as histórias que contas a ti mesmo, as crenças ocultas e o que permanece desconhecido."
+      "subtitle": "Quando um pensamento ansioso ou uma emoção difícil toma conta, o Miravelys ajuda a decompô-lo. É um aplicativo de diário guiado que ajuda você a separar o que realmente aconteceu das histórias que a sua mente está inventando.",
+      "body": "Sem algoritmos para diagnosticá-lo. Sem pressão para ser positivo. Apenas um lugar tranquilo e seguro para acalmar o seu corpo e entender a sua mente.",
+      "primary": "Comece a desembaraçar os seus pensamentos",
+      "secondary": "Leia a nossa promessa de privacidade",
+      "visualLabel": "O Miravelys ajuda-o a decompor um momento avassalador: as suas emoções, as suas reações físicas, as suposições da sua mente e as suas crenças ocultas."
     },
     "mockups": {
       "eyebrow": "Um olhar por dentro",
@@ -3024,109 +3023,109 @@ export const siteCopy = {
       "legalNavAria": "Detalhes legais e suporte"
     },
     "what": {
-      "eyebrow": "O que é?",
-      "title": "Um espaço tranquilo onde uma única frase honesta pode criar espaço para respirar.",
+      "eyebrow": "O que é o Miravelys?",
+      "title": "Um diário guiado que o ajuda a encontrar clareza quando se sente sobrecarregado.",
       "paragraphs": [
-        "O Miravelys começa exatamente onde estás: com apenas uma frase desorganizada e inacabada sobre o que doeu, o que te sufocou ou o que continua a ecoar na tua mente. Não precisas de estar calmo, de ser eloquente ou de ter tudo resolvido. Recebemos-te com calor humano, não com um questionário clínico.",
-        "A aplicação ajuda-te a desembaraçar suavemente esse momento: o que realmente aconteceu, o que sentiste, onde o teu corpo guardou a tensão, as histórias que a tua mente se apressou a contar, as crenças silenciosas escondidas por baixo e as coisas que simplesmente ainda não sabes. Tu tens sempre o controlo — podes suavizar o reflexo, corrigi-lo, pausar ou simplesmente dizer: 'Isso não me parece meu'.",
-        "Com o tempo, o Miravelys começa a notar o que te traz verdadeira paz, o que te ajuda a descansar ou o que te permite questionar um pensamento doloroso e recorrente. Não te fecha numa identidade. Em vez disso, constrói um mapa suave e vivo do teu mundo interior — um mapa que podes reescrever sempre que precisares."
+        "Não precisa escrever uma entrada de diário perfeita. Comece com uma frase confusa e honesta sobre o que o desencadeou ou o que o mantém acordado. O Miravelys encontra-o aí.",
+        "O aplicativo faz perguntas gentis para ajudá-lo a separar os fatos da situação da tensão física do seu corpo e das histórias ansiosas da sua mente. Você está sempre no controle: pode pular perguntas, editar as suas respostas ou fazer uma pausa a qualquer momento.",
+        "Com o tempo, o aplicativo atua como um espelho, ajudando-o a detectar ciclos emocionais recorrentes e hábitos de proteção, para que possa construir uma relação mais saudável com os seus próprios pensamentos."
       ],
-      "callout": "O Miravelys não está aqui para discutir com a tua mente. Está aqui para te ajudar a diminuir o ruído, para que possas ver o que é real, o que é um mecanismo de defesa e o que simplesmente precisa de um momento de descanso."
+      "callout": "O Miravelys não está aqui para discutir com a sua mente. Ele está aqui para ajudá-lo a desacelerar o ruído, para que possa ver o que é real, o que é um mecanismo de defesa e o que simplesmente precisa de um momento de descanso."
     },
     "works": {
-      "eyebrow": "Como te guia",
-      "title": "Vê como um pensamento honesto se torna num passo tranquilo.",
-      "intro": "Quando um olhar fugaz parece rejeição, quando o silêncio parece confirmar os teus medos, ou quando um erro parece definir-te, o Miravelys está aqui para abrandar as coisas. Tu escreves o que sentes ser verdade, a aplicação ajuda-te a desembaraçar as pontas, e depois tu decides do que precisas mais: calma, clareza, descanso ou uma pergunta suave para seguir em frente.",
+      "eyebrow": "Como o aplicativo funciona",
+      "title": "De um pensamento avassalador para um próximo passo claro.",
+      "intro": "O Miravelys fornece um conjunto de ferramentas de reflexão e exercícios de calma para ajudá-lo a processar momentos difíceis no seu próprio ritmo.",
       "steps": [
         {
-          "title": "O Home encontra-te onde estás",
-          "body": "O Home simplesmente pergunta o que sentes ser verdade neste momento, reconhecendo se precisas de te conectar com o chão, descansar, responder a um pequeno estímulo ou olhar mais fundo."
+          "title": "O Home adapta-se a você",
+          "body": "O aplicativo simplesmente pergunta do que você precisa agora - seja para se acalmar, desabafar ou dormir."
         },
         {
-          "title": "\"Linha clara\" desembaraça a confusão",
-          "body": "O \"Linha clara\" pega num único pensamento avassalador e separa-o suavemente entre o que aconteceu, o que sentiste, o que o teu corpo experienciou, a história que contaste a ti mesmo, a crença por baixo disso e o que permanece desconhecido."
+          "title": "Esclarecer (Get Clear) decompõe",
+          "body": "Pegue num único pensamento pesado e separe-o em partes: o evento, a emoção, a reação do seu corpo, a história que contou a si mesmo e o desconhecido."
         },
         {
-          "title": "Calm Now protege a tua paz",
-          "body": "Quando a tua mente está a mil à hora, o Miravelys não te vai pressionar a analisar. Convida-te a respirar, a suavizar, a encontrar o teu equilíbrio ou simplesmente a dar um passo atrás."
+          "title": "Calm Now acalma o seu corpo",
+          "body": "Quando a sua mente está a mil, oferecemos respiração guiada e meditação para ajudar o seu sistema nervoso a se estabelecer antes que tente analisar qualquer coisa."
         },
         {
-          "title": "Sleep Now respeita o teu descanso",
-          "body": "À medida que a noite cai, a aplicação aquieta-se contigo. Põe de lado as perguntas pesadas, oferecendo reflexões relaxantes, sons suaves e pensamentos que é melhor guardar para amanhã."
+          "title": "Sleep Now ajuda-o a descansar",
+          "body": "Quando a ansiedade ataca à noite, o aplicativo deixa de lado as perguntas pesadas e oferece paisagens sonoras calmantes para ajudá-lo a dormir."
         },
         {
-          "title": "\"Espelho\" reflete com cuidado",
-          "body": "Os padrões são partilhados contigo de forma delicada, e apenas quando há provas suficientes. Nunca te rotulamos. Tudo é oferecido como uma sugestão, pronta para a tua correção."
+          "title": "O Espelho Semanal mostra os seus padrões",
+          "body": "O aplicativo aponta gentilmente temas ou crenças recorrentes sobre as quais você escreveu, dando a chance de refletir sobre elas sem julgamento."
         },
         {
-          "title": "A tua voz molda a jornada",
-          "body": "Sempre que corriges a aplicação — dizendo-lhe para ser mais suave, que um pensamento não é teu, ou para apagar uma suposição — ela aprende a apoiar-te melhor."
+          "title": "Você está no controle",
+          "body": "Pode sempre corrigir o aplicativo, excluir entradas e moldar como ele o apoia."
         }
       ]
     },
     "depths": {
-      "eyebrow": "Tu defines o ritmo",
-      "title": "Três formas de refletir, um compromisso inabalável com a tua segurança.",
-      "intro": "O Miravelys adapta o seu tom ao que precisas, mas a sua ética nunca muda. Nunca te humilhará, não te diagnosticará nem afirmará conhecer a verdade absoluta. Só vai tão fundo quanto tu o convidares a ir.",
+      "eyebrow": "Escolha o seu modo de reflexão",
+      "title": "Três níveis de orientação, dependendo do que você consegue lidar hoje.",
+      "intro": "O Miravelys adapta o seu tom ao que você precisa, mas a sua ética nunca muda. Ele nunca o humilhará, não o diagnosticará ou alegará saber a verdade absoluta. Ele só vai tão fundo quanto você permitir.",
       "items": [
         {
           "title": "Calm Mirror",
-          "tag": "Suave",
-          "body": "Para os teus momentos mais frágeis. A aplicação reflete as tuas palavras com grande cuidado, faz apenas uma pequena pergunta de cada vez e foca-se em ajudar-te a sentir seguro."
+          "tag": "Gentil",
+          "body": "Para os seus momentos mais frágeis. O aplicativo faz apenas uma pequena pergunta de cada vez e concentra-se inteiramente em ajudá-lo a sentir-se seguro e ancorado."
         },
         {
           "title": "Direct Inquiry",
           "tag": "Claro",
-          "body": "Para quando precisas de um pouco menos de amortecimento. As perguntas tornam-se mais precisas e focadas, mantendo-se calorosas, de apoio e abertas a correções."
+          "body": "Para quando precisa de clareza prática. As perguntas são diretas e concentradas em ajudá-lo a desembaraçar os fatos dos seus sentimentos."
         },
         {
           "title": "Bold Clarity",
-          "tag": "Desafiante",
-          "body": "Para os ciclos recorrentes que continuam a enganar-te. A aplicação questiona suavemente os exageros, as fugas e as histórias de proteção — mantendo sempre os teus controlos de segurança à mão."
+          "tag": "Desafiador",
+          "body": "Para romper com ciclos mentais recorrentes. O aplicativo desafia gentilmente os seus exageros e pede que você olhe mais de perto para os seus pontos cegos."
         }
       ]
     },
     "moments": {
-      "eyebrow": "Encontrando clareza",
-      "title": "As pequenas mudanças que transformam como o teu dia se sente.",
+      "eyebrow": "Os benefícios",
+      "title": "Pequenos momentos de reflexão criam uma clareza mental duradoura.",
       "items": [
         {
-          "title": "Aprendes a separar os factos das histórias que a tua mente cria.",
-          "body": "Um pensamento avassalador deixa de parecer uma tempestade e torna-se algo que podes simplesmente observar."
+          "title": "Separe os fatos da ansiedade.",
+          "body": "Aprenda a ver a diferença entre o que realmente aconteceu e o que a sua mente teme."
         },
         {
-          "title": "Descobres o que realmente traz paz ao teu corpo.",
-          "body": "O teu sistema nervoso tem um momento de silêncio antes que a tua mente tente consertar tudo."
+          "title": "Acalme o seu sistema nervoso.",
+          "body": "Dê ao seu corpo um momento para respirar e se estabelecer antes de tentar resolver o problema."
         },
         {
-          "title": "Deixas de permitir que um único sentimento defina quem és.",
-          "body": "Um pensamento que parecia uma verdade absoluta torna-se de repente algo que podes questionar."
+          "title": "Questione as suas crenças.",
+          "body": "Pegue um pensamento que parece uma verdade absoluta e perceba que é apenas uma suposição da qual você pode abrir mão."
         },
         {
-          "title": "Reconheces os teus padrões sem aquele drama todo.",
-          "body": "Essas ansiedades noturnas são deixadas suavemente de lado, em vez de lutares contra elas até ao amanhecer."
+          "title": "Observe os seus padrões.",
+          "body": "Observe gentilmente os seus gatilhos emocionais em vez de lutar contra eles."
         },
         {
-          "title": "Encontras um próximo passo que parece menor, mais amável e profundamente honesto.",
-          "body": "Vês as tuas lutas recorrentes com compaixão e clareza, em vez de julgamento."
+          "title": "Encontre um próximo passo menor e mais gentil.",
+          "body": "Olhe para as suas lutas recorrentes com compaixão e clareza, em vez de julgamento."
         },
         {
-          "title": "A experiência cresce contigo, moldada pela tua própria verdade.",
-          "body": "Cada correção que fazes ensina a aplicação a ser um companheiro melhor e mais verdadeiro para ti."
+          "title": "A experiência cresce com você.",
+          "body": "Cada correção que você faz ensina o aplicativo a ser um companheiro melhor e mais verdadeiro para você."
         }
       ]
     },
     "privacy": {
-      "eyebrow": "Privacidade e Controlo",
-      "title": "O teu mundo interior pertence a ti, não a um algoritmo.",
-      "body": "O Miravelys é construído com foco no teu dispositivo ('local-first') porque o teu material bruto — os teus medos, as tuas noites sem dormir, as tuas correções e as coisas silenciosas que raramente dizes em voz alta — é profundamente pessoal. A aplicação trata os teus pensamentos com reverência. Podes pausar, suavizar, editar, esconder ou apagar qualquer coisa a qualquer momento. Quando corriges a aplicação, não é uma preferência secundária; é a lição mais importante que o sistema aprende.",
+      "eyebrow": "Privacidade Total",
+      "title": "As suas reflexões permanecem no seu dispositivo, completamente privadas.",
+      "body": "Os seus medos, os seus pensamentos de noites mal dormidas e os seus desabafos privados são profundamente pessoais. O Miravelys é construído para manter os seus dados locais e seguros. O aplicativo nunca o diagnosticará ou usará as suas entradas para rotulá-lo. Você tem o poder absoluto de editar, ocultar ou excluir permanentemente qualquer coisa que escrever.",
       "bullets": [
-        "A tua experiência fica no teu dispositivo por predefinição",
-        "O suporte na cloud só existe se o desejares",
-        "Nunca te diagnosticamos nem te colocamos rótulos",
-        "As perspetivas são oferecidas suavemente, baseadas apenas no que partilhas",
-        "As tuas correções sobrepõem-se sempre às sugestões da aplicação",
-        "Podes pausar, suavizar, editar ou apagar qualquer coisa, a qualquer momento"
+        "A sua experiência permanece no seu dispositivo por padrão",
+        "O suporte na nuvem só existe se você quiser",
+        "Nós nunca o diagnosticamos ou o rotulamos",
+        "Os insights são oferecidos gentilmente, com base apenas no que você compartilha",
+        "As suas correções sempre anulam as sugestões do aplicativo",
+        "Pode pausar, suavizar, editar ou excluir qualquer coisa, a qualquer momento"
       ]
     },
     "faq": {
