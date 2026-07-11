@@ -14,7 +14,9 @@ const fallbackLanguage = 'en';
 const DOC_BY_PATH = {
   '/legal-notice': 'legalNotice',
   '/user-agreement': 'userAgreement',
+  '/terms': 'userAgreement',
   '/privacy-policy': 'privacyPolicy',
+  '/privacy': 'privacyPolicy',
   '/cookies': 'cookies',
 };
 

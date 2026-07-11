@@ -64,7 +64,7 @@
 }
 
 @media (min-width: 48rem) {
-  .screenshot-placeholder:not(.screenshot-placeholder--visible) {
+  .screenshot-placeholder:not(.screenshot-placeholder--visible):not(.screenshot-placeholder--phone) {
     display: none;
   }
 }

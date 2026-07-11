@@ -249,7 +249,7 @@
   :root {
     --story-phone-width: min(
       clamp(220px, 32vw, 340px),
-      calc(var(--story-phone-max-height) * 390 / 844)
+      calc(var(--story-phone-max-height) * 420 / 874)
     );
   }
 }
@@ -297,7 +297,7 @@
     --story-phone-available: calc(var(--story-sticky-height) - var(--story-progress-block));
     --story-phone-width: min(
       clamp(260px, 24vw, 390px),
-      calc(var(--story-phone-available) * 390 / 844)
+      calc(var(--story-phone-available) * 420 / 874)
     );
     --phone-width-desktop: var(--story-phone-width);
     --iphone13-width-desktop: var(--story-phone-width);
@@ -308,7 +308,7 @@
   :root {
     --story-phone-width: min(
       clamp(240px, 22vw, 390px),
-      calc(var(--story-phone-available) * 390 / 844)
+      calc(var(--story-phone-available) * 420 / 874)
     );
     --phone-width-desktop: var(--story-phone-width);
     --iphone13-width-desktop: var(--story-phone-width);

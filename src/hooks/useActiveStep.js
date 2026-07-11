@@ -40,8 +40,8 @@ export function useActiveStep(stepCount) {
         }
       },
       {
-        threshold: [0.35, 0.5, 0.65],
-        rootMargin: '-24% 0px -24% 0px',
+        threshold: [0.1, 0.35, 0.5, 0.65, 0.9],
+        rootMargin: '-15% 0px -15% 0px',
       }
     );
 

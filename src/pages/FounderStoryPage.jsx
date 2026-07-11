@@ -40,13 +40,15 @@ export default function FounderStoryPage() {
   }, [origin.meta, t.meta.locale]);
 
   return (
-    <MarketingPageShell lang={lang} skipLinkTarget="#origin">
+    <MarketingPageShell lang={lang}
+        t={t} skipLinkTarget="#origin">
       <MarketingTopNav
         variant="legal"
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
         onNavClick={onNavClick}
         lang={lang}
+        t={t}
         setLang={setLang}
         t={t}
         experience={experience}
@@ -54,6 +56,7 @@ export default function FounderStoryPage() {
 
       <OriginStorySection
         lang={lang}
+        t={t}
         onNavClick={onNavClick}
         onEarlyAccessClick={waitlist.openEarlyAccess}
       />
@@ -64,6 +67,7 @@ export default function FounderStoryPage() {
         open={waitlist.earlyAccessOpen}
         onClose={waitlist.closeEarlyAccess}
         lang={lang}
+        t={t}
         experience={experience}
         waitlistEmail={waitlist.waitlistEmail}
         setWaitlistEmail={waitlist.setWaitlistEmail}

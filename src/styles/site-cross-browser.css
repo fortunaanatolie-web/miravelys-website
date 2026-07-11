@@ -48,7 +48,7 @@ body {
 .glass-panel-strong,
 .glass-subtle,
 .nav-glass,
-.cookie-banner,
+.cookie-pill,
 .sticky-cta {
   -webkit-backdrop-filter: blur(24px) saturate(160%);
 }
@@ -65,7 +65,7 @@ body {
     background: rgba(14, 19, 36, 0.94);
   }
 
-  .cookie-banner,
+  .cookie-pill,
   .sticky-cta {
     background: rgba(8, 14, 32, 0.96);
   }
@@ -77,7 +77,7 @@ body {
   .glass-card,
   .signature-card,
   .lifestyle-frame,
-  .cookie-banner,
+  .cookie-pill,
   .sticky-cta {
     border-width: 0.5px;
   }
@@ -171,7 +171,7 @@ textarea {
 .grain-layer,
 .scroll-progress,
 .sticky-cta,
-.cookie-banner {
+.cookie-pill {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -182,7 +182,7 @@ textarea {
   .grain-layer,
   .scroll-progress,
   .sticky-cta,
-  .cookie-banner,
+  .cookie-pill,
   .top-nav {
     display: none !important;
   }

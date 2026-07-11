@@ -2,9 +2,9 @@
  * Dev-only iPhone 13 Pro sticky-phone screenshot diagnostics.
  * Logical viewport: 390×844 — ratio 0.462 (acceptable 0.455–0.470).
  */
-export const IPHONE13_SCREEN_RATIO = 390 / 844;
+export const IPHONE13_SCREEN_RATIO = 402 / 874;
 export const IPHONE13_RATIO_MIN = 0.455;
-export const IPHONE13_RATIO_MAX = 0.470;
+export const IPHONE13_RATIO_MAX = 0.465;
 
 /**
  * @returns {boolean} true when aspect ratio is acceptable for screen-only mode

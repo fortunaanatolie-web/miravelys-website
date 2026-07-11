@@ -332,7 +332,7 @@ html {
 .site-shell .download-actions,
 .site-shell .hero-actions,
 .site-shell .mockup-panel-actions,
-.site-shell .cookie-banner-actions {
+.site-shell .cookie-pill-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;

@@ -66,7 +66,7 @@ function PhoneScreenImage({ screen, isActive, eager, assetMode = 'screen-only' }
               : 'missing file / image failed to load',
           }
         }
-        className={`screenshot-placeholder--phone${isActive ? ' is-active' : ''}`}
+        className={`screenshot-placeholder--phone screenshot-placeholder--visible${isActive ? ' is-active' : ''}`}
       />
     ) : (
       <div
@@ -83,12 +83,12 @@ function PhoneScreenImage({ screen, isActive, eager, assetMode = 'screen-only' }
     sizes: 'min(430px, 72vw)',
     alt: alt || screen.alt || 'Miravelys app screen',
     loading: eager ? 'eager' : 'lazy',
-    fetchPriority: eager ? 'high' : undefined,
   });
 
   return (
     <img
       {...imageProps}
+      fetchpriority={eager ? 'high' : undefined}
       onLoad={handleLoad}
       className={[
         'iphone13-screen-image',

@@ -41,6 +41,7 @@
 
   width: min(26vw, 132px);
   max-width: 132px;
+  aspect-ratio: 420 / 874;
 }
 
 .product-story__landscape-cards .story-step__index {
@@ -85,7 +86,7 @@
   --landscape-stage-height: calc(var(--safe-viewport-height, var(--vvh, 100svh)) - var(--landscape-header-offset) - 20px);
   --landscape-phone-height: min(var(--landscape-stage-height), 72svh, 320px);
   --landscape-phone-width: min(
-    calc(var(--landscape-phone-height) * 390 / 844),
+    calc(var(--landscape-phone-height) * 420 / 874),
     30vw
   );
 
@@ -137,20 +138,18 @@
 .product-story__landscape .landscape-story__stage .phone-mockup--landscape-stage,
 .product-story__landscape .landscape-story__stage .iphone13-frame--landscape {
   --iphone13-width: auto;
+  --actual-phone-width: calc(var(--landscape-phone-height) * 420 / 874);
 
   width: auto !important;
   height: var(--landscape-phone-height) !important;
   max-height: calc(var(--landscape-stage-height) - 12px) !important;
   max-width: 30vw !important;
-  aspect-ratio: 390 / 844;
+  aspect-ratio: 420 / 874;
   flex: 0 0 auto;
   margin-inline: auto;
-  border-radius: clamp(20px, 11%, 44px);
-  padding: clamp(4px, 1vw, 7px);
 }
 
 .product-story__landscape .landscape-story__stage .iphone13-rim {
-  border-radius: clamp(16px, 9.5%, 38px);
 }
 
 .product-story__landscape .landscape-story__steps {

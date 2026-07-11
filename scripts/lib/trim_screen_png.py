@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
-"""Trim uniform dark margins from a screen-only mockup PNG and fit to 780×1688."""
+"""Trim uniform dark margins from a screen-only mockup PNG and fit to target size."""
 from __future__ import annotations
 
+import os
 import sys
 from pathlib import Path
 
 from PIL import Image
 
-TARGET_WIDTH = 780
-TARGET_HEIGHT = 1688
+TARGET_WIDTH = int(os.environ.get("MIRAVELYS_TRIM_WIDTH", "780"))
+TARGET_HEIGHT = int(os.environ.get("MIRAVELYS_TRIM_HEIGHT", "1688"))
 TARGET_ASPECT = TARGET_WIDTH / TARGET_HEIGHT
 EDGE_SHAVE_PX = 4
 MAX_EDGE_SHAVE_PX = 48

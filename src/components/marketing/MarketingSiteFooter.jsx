@@ -16,6 +16,7 @@ export default function MarketingSiteFooter({ t }) {
         <Link to={marketingRoutes.userAgreement}>{t.footer.userAgreement}</Link>
         <Link to={marketingRoutes.privacyPolicy}>{t.footer.privacyPolicy}</Link>
         <Link to={marketingRoutes.cookies}>{t.footer.cookies}</Link>
+        <Link to={marketingRoutes.support}>Support</Link>
         <a href={SUPPORT_MAILTO}>
           <Mail size={15} aria-hidden="true" />
           {SUPPORT_EMAIL}

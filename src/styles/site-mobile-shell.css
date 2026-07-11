@@ -212,7 +212,7 @@
   }
 
   /* Cookie — compact bottom sheet */
-  .cookie-banner {
+  .cookie-pill {
     left: 12px;
     right: 12px;
     bottom: max(12px, env(safe-area-inset-bottom, 0px));
@@ -227,12 +227,12 @@
     z-index: var(--z-cookie, 70);
   }
 
-  .cookie-banner p {
+  .cookie-pill p {
     font-size: 0.88rem;
     line-height: 1.42;
   }
 
-  .cookie-banner-actions {
+  .cookie-pill-actions {
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
@@ -240,14 +240,14 @@
     margin-top: 10px;
   }
 
-  .cookie-banner-actions .primary-action {
+  .cookie-pill-actions .primary-action {
     width: 100%;
     min-height: 44px;
     justify-content: center;
     flex: none;
     font-size: 0.92rem;
   }
-  .cookie-banner-actions .secondary-action {
+  .cookie-pill-actions .secondary-action {
     flex: 1 1 auto;
     min-height: 44px;
     justify-content: center;
@@ -259,11 +259,11 @@
     z-index: var(--z-sticky-cta, 35);
   }
 
-  body:has(.cookie-banner) .sticky-cta--visible {
+  body:has(.cookie-pill) .sticky-cta--visible {
     bottom: calc(72px + env(safe-area-inset-bottom, 0px));
   }
 
-  body.site-menu-open .cookie-banner {
+  body.site-menu-open .cookie-pill {
     display: none;
   }
 

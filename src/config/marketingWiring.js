@@ -22,6 +22,7 @@ export const marketingRoutes = {
   cookies: '/cookies',
   home: '/',
   story: '/story',
+  support: '/support',
 };
 
 export const headerNavItems = [

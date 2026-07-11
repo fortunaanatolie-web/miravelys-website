@@ -32,6 +32,7 @@ import './styles/site-beauty.css';
 import './styles/site-appearance.css';
 import './styles/site-origin.css';
 import './styles/site-typography.css';
+import './styles/site-brand-meaning.css';
 import SiteRouter from './SiteRouter';
 
 createRoot(document.getElementById('root')).render(

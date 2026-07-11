@@ -6,27 +6,28 @@
 
 .iphone13-frame,
 .phone-mockup.iphone13-frame {
-  --iphone13-width: var(--iphone13-width-desktop, auto);
+  --iphone13-width: var(--iphone13-width-desktop, 320px);
+  --actual-phone-width: var(--iphone13-width);
 
   position: relative;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  aspect-ratio: 390 / 844;
-  width: var(--iphone13-width);
+  aspect-ratio: 420 / 874;
+  width: var(--actual-phone-width);
   height: auto;
   margin: 0;
-  padding: clamp(7px, 0.8vw, 10px);
+  padding: calc(var(--actual-phone-width) * 0.0357);
   flex-shrink: 0;
   border: none;
-  border-radius: clamp(40px, 4.8vw, 58px);
-  background:
-    linear-gradient(145deg, rgba(42, 46, 50, 1) 0%, rgba(15, 17, 20, 1) 46%, rgba(5, 6, 8, 1) 100%);
+  border-radius: calc(var(--actual-phone-width) * 0.119);
+  background: linear-gradient(145deg, #444347 0%, #29282b 30%, #151416 70%, #302f33 100%);
   box-shadow:
-    0 34px 82px rgba(0, 0, 0, 0.22),
-    0 12px 30px rgba(0, 0, 0, 0.16),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
-    inset 0 -14px 28px rgba(0, 0, 0, 0.24);
+    0 34px 82px rgba(0, 0, 0, 0.3),
+    0 12px 30px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.15),
+    inset 0 0 4px rgba(255, 255, 255, 0.1),
+    inset 0 -14px 28px rgba(0, 0, 0, 0.4);
   overflow: hidden;
 }
 
@@ -39,9 +40,9 @@
   pointer-events: none;
   z-index: 5;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.13), transparent 24%),
-    linear-gradient(315deg, rgba(255, 255, 255, 0.045), transparent 28%);
-  opacity: 0.42;
+    linear-gradient(135deg, rgba(255, 255, 255, 0.25), transparent 20%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.08), transparent 30%);
+  opacity: 0.8;
 }
 
 /* No notch overlay — screenshots include iOS status bar spacing */
@@ -51,7 +52,7 @@
   flex: 1 1 auto;
   width: 100%;
   min-height: 0;
-  border-radius: clamp(33px, 4.1vw, 49px);
+  border-radius: calc(var(--actual-phone-width) * 0.095);
   background: #090b0e;
   overflow: hidden;
   box-shadow:
@@ -97,7 +98,16 @@
 .iphone13-screen-image--loading {
   position: absolute;
   inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
   background: linear-gradient(165deg, #1c2125 0%, #0d1215 48%, #14191d 100%);
+}
+
+.iphone13-screen-image--loading.is-active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
 }
 
 .iphone13-screen-image {
@@ -108,12 +118,12 @@
   margin: 0;
   padding: 0;
   opacity: 0;
-  transform: scale(1.008);
-  filter: blur(5px);
-  transition:
-    opacity 520ms ease,
-    transform 700ms ease,
-    filter 520ms ease;
+  visibility: hidden;
+  transform: scale(1);
+  filter: none;
+  z-index: 1;
+  /* Smooth crossfades for dynamic cycling */
+  transition: opacity 0.4s ease, visibility 0.4s;
   pointer-events: none;
 }
 
@@ -129,9 +139,11 @@
 
 .iphone13-screen-image.is-active {
   opacity: 1;
+  visibility: visible;
   transform: scale(1);
-  filter: blur(0);
+  filter: none;
   z-index: 2;
+  transition: opacity 0.4s ease, visibility 0.4s;
 }
 
 .screenshot-placeholder--phone {
@@ -167,20 +179,19 @@
 .iphone13-frame--mobile-card,
 .phone-mockup--mobile-card.iphone13-frame {
   --iphone13-width: var(--iphone13-width-mobile-card);
-  width: var(--iphone13-width-mobile-card);
+  --actual-phone-width: var(--iphone13-width);
+  width: var(--actual-phone-width);
   max-width: 85vw;
-  border-radius: clamp(22px, 12%, 48px);
-  padding: clamp(5px, 1.1vw, 8px);
 }
 
 .iphone13-frame--mobile-card .iphone13-rim,
 .phone-mockup--mobile-card .iphone13-rim {
-  border-radius: clamp(18px, 10.5%, 42px);
 }
 
 .iphone13-frame--mobile-stage,
 .phone-mockup.phone-mockup--mobile-stage.iphone13-frame {
   --iphone13-width: auto;
+  --actual-phone-width: calc(var(--iphone13-height-mobile-stage) * 420 / 874);
   width: auto;
   height: var(--iphone13-height-mobile-stage);
   max-width: 72vw;
@@ -188,13 +199,10 @@
   max-height: var(--iphone13-height-mobile-stage);
   flex: 0 0 auto;
   align-self: center;
-  border-radius: clamp(22px, 12%, 48px);
-  padding: clamp(5px, 1.1vw, 8px);
 }
 
 .iphone13-frame--mobile-stage .iphone13-rim,
 .phone-mockup--mobile-stage .iphone13-rim {
-  border-radius: clamp(18px, 10.5%, 42px);
 }
 
 /* Landscape frame base — height/width sizing lives in ProductStoryLandscape.css */
@@ -206,7 +214,6 @@
 
 .iphone13-frame--landscape .iphone13-rim,
 .phone-mockup--landscape-stage .iphone13-rim {
-  border-radius: clamp(18px, 10.5%, 42px);
 }
 
 .sticky-story .phone-mockup--scroll-story {
@@ -220,7 +227,7 @@
   :root {
     --iphone13-width-tablet: min(
       clamp(250px, 36vw, 350px),
-      calc((100svh - 130px) * 390 / 844)
+      calc((100svh - 130px) * 420 / 874)
     );
   }
 

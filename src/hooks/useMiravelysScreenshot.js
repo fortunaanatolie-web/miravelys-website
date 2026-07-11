@@ -70,12 +70,6 @@ export function useMiravelysScreenshot(screen, lang) {
     async function resolve() {
       const { locale, group, code, legacyAsset, publicPath } = descriptor;
 
-      const cached = legacyAsset ? resolveLegacyScreenshotUrl(locale, legacyAsset) : '';
-      if (cached) {
-        finish({ src: cached, status: 'legacy-fallback', missing: null });
-        return;
-      }
-
       if (!publicPath && !legacyAsset) {
         finish({ src: '', status: 'missing', missing: { group, code, locale, expected: '' } });
         return;

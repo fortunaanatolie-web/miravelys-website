@@ -73,7 +73,8 @@
 
 .sticky-story--desktop .phone-mockup--scroll-story,
 .sticky-story--tablet .phone-mockup--scroll-story {
-  width: min(var(--phone-width), calc(var(--story-phone-max-stack) * 390 / 844));
+  --actual-phone-width: min(var(--phone-width), calc(var(--story-phone-max-stack) * 420 / 874));
+  width: var(--actual-phone-width);
   max-width: 100%;
   max-height: var(--story-phone-max-stack);
   height: auto !important;

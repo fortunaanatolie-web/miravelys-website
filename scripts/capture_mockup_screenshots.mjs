@@ -22,7 +22,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const webRoot = path.resolve(__dirname, '..');
 const mockupHtml = path.resolve(
   webRoot,
-  '../Miravelys_Marketing_Presentation_Package/web/mockups/miravelys-redesign-v5/index.html',
+  '../Miravelys /Miravelys/web/mockups/miravelys-redesign-v5/index.html',
 );
 const outDir = path.resolve(webRoot, 'src/assets/mockups/en');
 const trimScript = path.resolve(__dirname, 'lib/trim_screen_png.py');

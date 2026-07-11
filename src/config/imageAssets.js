@@ -16,7 +16,7 @@ export const lifestyleImages = {
 /** Screen-only mockup dimensions (2× v5 logical 390×844) */
 export const mockupImageDimensions = { width: 780, height: 1688 };
 
-export const mockupScreenDisplayDimensions = { width: 390, height: 844 };
+export const mockupScreenDisplayDimensions = { width: 402, height: 874 };
 
 /** Typical rendered widths for lifestyle photography */
 export const lifestyleImageSizes = {

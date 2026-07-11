@@ -160,9 +160,9 @@
   --story-phone-available: calc(var(--story-sticky-height) - var(--story-progress-block));
   --story-phone-width: min(
     clamp(270px, 24vw, 390px),
-    calc(var(--story-phone-available) * 390 / 844)
+    calc(var(--story-phone-available) * 420 / 874)
   );
-  --story-phone-max-height: calc(var(--story-phone-width) * 844 / 390);
+  --story-phone-max-height: calc(var(--story-phone-width) * 874 / 420);
   --story-step-min: clamp(520px, 86svh, 920px);
   --story-title: var(--keynote-section);
   --story-body: var(--keynote-sub);
@@ -170,11 +170,11 @@
   /* iPhone 13 Pro mockup sizing — 390×844 logical viewport */
   --iphone13-width-desktop: min(
     clamp(270px, 24vw, 390px),
-    calc((100svh - 220px) * 390 / 844)
+    calc((100svh - 220px) * 420 / 874)
   );
   --iphone13-width-tablet: min(
     clamp(250px, 36vw, 350px),
-    calc((100svh - 190px) * 390 / 844)
+    calc((100svh - 190px) * 420 / 874)
   );
   --iphone13-width-mobile-card: min(72vw, 300px);
   --iphone13-height-mobile-stage: min(34svh, 300px);
@@ -196,7 +196,7 @@
         100svh - var(--site-header-height) - var(--story-phone-gap-top) -
           var(--story-phone-gap-bottom) - var(--story-progress-block) -
           env(safe-area-inset-bottom, 0px)
-      ) * 390 / 844
+      ) * 420 / 874
     )
   );
   --phone-width-landscape-scale: 1;

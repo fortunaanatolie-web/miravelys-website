@@ -631,3 +631,7 @@ html:lang(pt) .site-shell--keynote .reveal-step__headline {
     --keynote-section: 2.5rem;
   }
 }
+
+.site-shell h1, .site-shell h2, .site-shell h3 {
+  letter-spacing: -0.02em;
+}

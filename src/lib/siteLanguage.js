@@ -7,8 +7,14 @@ const fallbackLanguage = 'en';
 
 export function getSiteLanguage() {
   if (typeof window === 'undefined') return fallbackLanguage;
+  
+  const pathSegments = window.location.pathname.split('/').filter(Boolean);
+  const urlLang = pathSegments[0];
+  if (urlLang && siteCopy[urlLang]) return urlLang;
+
   const saved = window.localStorage.getItem(SITE_LANGUAGE_KEY);
   if (saved && siteCopy[saved]) return saved;
+  
   const browserLanguage = window.navigator.language?.slice(0, 2);
   return siteCopy[browserLanguage] ? browserLanguage : fallbackLanguage;
 }

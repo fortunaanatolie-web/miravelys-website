@@ -27,16 +27,16 @@ export default function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <aside className="cookie-banner" role="dialog" aria-modal="false" aria-label={t.footer.cookies}>
+    <aside className="cookie-pill" role="dialog" aria-modal="false" aria-label={t.footer.cookies}>
       <p>{t.footer.cookieBanner}</p>
-      <div className="cookie-banner-actions">
-        <Link to="/privacy-policy" className="secondary-action">
+      <div className="cookie-pill-actions">
+        <Link to="/privacy-policy" className="cookie-pill-link">
           {t.footer.privacyPolicy}
         </Link>
-        <Link to="/cookies" className="secondary-action">
+        <Link to="/cookies" className="cookie-pill-link">
           {t.footer.cookies}
         </Link>
-        <button type="button" className="primary-action" onClick={accept}>
+        <button type="button" className="cookie-pill-accept" onClick={accept}>
           {t.footer.cookieAccept}
         </button>
       </div>

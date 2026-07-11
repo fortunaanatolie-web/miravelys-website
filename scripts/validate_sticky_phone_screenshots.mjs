@@ -1,6 +1,6 @@
 /**
  * Validates sticky-phone screenshot assets: existence, locale folders, aspect ratio.
- * Also checks legacy PNG fallbacks used until .webp uploads exist.
+ * Primary format: PNG in public/miravelys-screenshots/sticky-phone/.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -31,7 +31,7 @@ const stickyPhoneLegacyAssets = {
 };
 
 function getScreenshotPath(locale, code) {
-  return `/miravelys-screenshots/sticky-phone/${locale}/${code}.webp`;
+  return `/miravelys-screenshots/sticky-phone/${locale}/${code}.png`;
 }
 
 const errors = [];
@@ -157,19 +157,19 @@ for (const locale of locales) {
 
   for (const code of codes) {
     const expected = getScreenshotPath(locale, code);
-    const webpPath = path.join(publicRoot, locale, `${code}.webp`);
+    const pngPath = path.join(publicRoot, locale, `${code}.png`);
     const legacyName = stickyPhoneLegacyAssets[code];
     const legacyPath = path.join(legacyRoot, locale, `${legacyName}.png`);
     const enLegacyPath = path.join(legacyRoot, 'en', `${legacyName}.png`);
 
-    if (fs.existsSync(webpPath)) {
-      const dims = readImageDimensions(webpPath);
+    if (fs.existsSync(pngPath)) {
+      const dims = readImageDimensions(pngPath);
       validateAsset({
         ...dims,
         locale,
         code,
         file: expected,
-        source: 'webp',
+        source: 'png',
       });
     } else {
       warn(`Missing upload: ${expected}`);
@@ -185,7 +185,7 @@ for (const locale of locales) {
           source: 'legacy-png',
         });
       } else {
-        errors.push(`No webp or legacy PNG for sticky-phone/${locale}/${code}`);
+        errors.push(`No png or legacy PNG for sticky-phone/${locale}/${code}`);
       }
     }
   }

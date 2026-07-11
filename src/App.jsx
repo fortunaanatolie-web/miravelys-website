@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { siteCopy } from './i18n/siteCopy';
 import { resolveExperience } from './i18n/experienceCopy';
+import { resolveMarketingCopy } from './i18n/marketingCopy';
 import { preloadMiravelysScreenshots } from './lib/miravelysScreenshots';
 import { useSiteLanguage } from './hooks/useSiteLanguage';
 import { useWaitlist } from './hooks/useWaitlist';
@@ -9,9 +10,13 @@ import MarketingTopNav from './components/marketing/MarketingTopNav';
 import MarketingSiteFooter from './components/marketing/MarketingSiteFooter';
 import EarlyAccessModal from './components/marketing/EarlyAccessModal';
 import HeroSection from './components/marketing/sections/HeroSection';
+import ProblemBridgeSection from './components/marketing/sections/ProblemBridgeSection';
 import StickyPhoneStory from './components/marketing/sections/StickyPhoneStory';
-import StoryTeaserSection from './components/marketing/sections/StoryTeaserSection';
+import ModesSection from './components/marketing/sections/ModesSection';
+import TrustSection from './components/marketing/sections/TrustSection';
+import OriginStorySection from './components/marketing/sections/OriginStorySection';
 import DownloadSection from './components/marketing/sections/DownloadSection';
+import BrandMeaningSection from './components/marketing/sections/BrandMeaningSection';
 import MarketingStickyCta from './components/marketing/MarketingStickyCta';
 import { handleInPageNav } from './lib/scrollToSection';
 import { setDocumentMeta } from './lib/documentMeta';
@@ -22,6 +27,7 @@ function App() {
   const [lang, setLang] = useSiteLanguage();
   const t = useMemo(() => siteCopy[lang] || siteCopy[fallbackLanguage], [lang]);
   const experience = useMemo(() => resolveExperience(lang), [lang]);
+  const marketing = useMemo(() => resolveMarketingCopy(lang), [lang]);
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = useCallback(() => setMenuOpen(false), []);
   const waitlist = useWaitlist(lang);
@@ -46,13 +52,15 @@ function App() {
   }, [t.meta, t.hero.body]);
 
   return (
-    <MarketingPageShell lang={lang} skipLinkTarget="#works">
+    <MarketingPageShell lang={lang}
+        t={t} skipLinkTarget="#works">
       <MarketingTopNav
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
         onNavClick={onNavClick}
         onEarlyAccessClick={waitlist.openEarlyAccess}
         lang={lang}
+        t={t}
         setLang={setLang}
         t={t}
         experience={experience}
@@ -65,18 +73,41 @@ function App() {
         onEarlyAccessClick={waitlist.openEarlyAccess}
       />
 
-      <StickyPhoneStory lang={lang} t={t} />
+      <ProblemBridgeSection
+        marketing={marketing}
+        experience={experience}
+        onNavClick={onNavClick}
+      />
 
-      <StoryTeaserSection lang={lang} />
+      <StickyPhoneStory lang={lang}
+        t={t} t={t} />
+
+      <ModesSection t={t} />
+
+      <TrustSection
+        t={t}
+        lang={lang}
+        t={t}
+        experience={experience}
+        onNavClick={onNavClick}
+      />
+
+      <OriginStorySection
+        lang={lang}
+        t={t}
+        onNavClick={onNavClick}
+        onEarlyAccessClick={waitlist.openEarlyAccess}
+      />
 
       <DownloadSection
         lang={lang}
+        t={t}
         experience={experience}
         onNavClick={onNavClick}
         onEarlyAccessClick={waitlist.openEarlyAccess}
       />
 
-
+      <BrandMeaningSection lang={lang} />
 
       <MarketingSiteFooter t={t} />
 
@@ -90,6 +121,7 @@ function App() {
         open={waitlist.earlyAccessOpen}
         onClose={waitlist.closeEarlyAccess}
         lang={lang}
+        t={t}
         experience={experience}
         waitlistEmail={waitlist.waitlistEmail}
         setWaitlistEmail={waitlist.setWaitlistEmail}

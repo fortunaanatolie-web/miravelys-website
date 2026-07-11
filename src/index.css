@@ -831,10 +831,10 @@ button.secondary-action {
   width: min(720px, calc(100% - 24px));
   padding: 16px 18px;
   border-radius: 20px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(8, 18, 32, .94);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 24px 60px rgba(0,0,0,.35);
+  border: 1px solid var(--mira-glass-border, rgba(244, 239, 230, 0.08));
+  background: var(--mira-glass-bg-strong, rgba(8, 6, 14, 0.82));
+  backdrop-filter: blur(32px) saturate(180%);
+  box-shadow: var(--mira-glass-shadow, 0 24px 64px rgba(0, 0, 0, 0.48)), inset 0 1px 0 rgba(255,255,255,.05);
   display: grid;
   gap: 12px;
 }
@@ -2243,20 +2243,21 @@ html { scroll-behavior: smooth; }
 }
 .sticky-cta {
   position: fixed;
-  z-index: 40;
+  z-index: var(--z-sticky-cta, 40);
   left: 50%;
-  bottom: 16px;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
   transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 5px;
-  max-width: min(400px, calc(100% - 28px));
+  padding: 6px;
+  max-width: min(400px, calc(100% - 32px));
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(5,11,27,.72);
-  backdrop-filter: blur(24px) saturate(160%);
-  box-shadow: 0 12px 40px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.08);
+  border: 1px solid var(--mira-glass-border, rgba(244, 239, 230, 0.08));
+  background: var(--mira-glass-bg-strong, rgba(8, 6, 14, 0.82));
+  backdrop-filter: blur(32px) saturate(180%);
+  box-shadow: var(--mira-glass-shadow, 0 24px 64px rgba(0, 0, 0, 0.48)), inset 0 1px 0 rgba(255,255,255,.05);
+  transition: transform var(--mira-duration-fast) var(--mira-ease-cinematic), opacity var(--mira-duration-fast) var(--mira-ease-cinematic);
 }
 .sticky-cta .primary-action {
   box-shadow: 0 4px 14px rgba(102, 215, 197, .14);
