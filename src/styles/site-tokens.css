@@ -163,7 +163,7 @@
     calc(var(--story-phone-available) * 420 / 874)
   );
   --story-phone-max-height: calc(var(--story-phone-width) * 874 / 420);
-  --story-step-min: clamp(520px, 86svh, 920px);
+  --story-step-min: clamp(320px, 50svh, 600px);
   --story-title: var(--keynote-section);
   --story-body: var(--keynote-sub);
 
