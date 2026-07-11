@@ -26,21 +26,33 @@ export function useActiveStep(stepCount) {
     const nodes = stepRefs.current.filter(Boolean);
     if (!nodes.length) return undefined;
 
+    const ratios = new Map();
+
     const observer = new IntersectionObserver(
       entries => {
-        const visible = entries
-          .filter(entry => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        entries.forEach(entry => {
+          ratios.set(entry.target, entry.intersectionRatio);
+        });
 
-        if (!visible) return;
+        let maxRatio = 0;
+        let maxNode = null;
 
-        const index = Number(visible.target.getAttribute('data-step-index'));
-        if (!Number.isNaN(index)) {
-          setActiveIndex(Math.max(0, Math.min(index, stepCount - 1)));
+        for (const [node, ratio] of ratios.entries()) {
+          if (ratio > maxRatio) {
+            maxRatio = ratio;
+            maxNode = node;
+          }
+        }
+
+        if (maxNode && maxRatio > 0.05) {
+          const index = Number(maxNode.getAttribute('data-step-index'));
+          if (!Number.isNaN(index)) {
+            setActiveIndex(Math.max(0, Math.min(index, stepCount - 1)));
+          }
         }
       },
       {
-        threshold: [0.1, 0.35, 0.5, 0.65, 0.9],
+        threshold: [0.1, 0.25, 0.5, 0.75, 0.9],
         rootMargin: '-15% 0px -15% 0px',
       }
     );
