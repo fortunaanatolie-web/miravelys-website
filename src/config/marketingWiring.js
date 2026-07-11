@@ -17,8 +17,8 @@ export const marketingCtas = {
 
 export const marketingRoutes = {
   legalNotice: '/legal-notice',
-  userAgreement: '/user-agreement',
-  privacyPolicy: '/privacy-policy',
+  userAgreement: '/terms',
+  privacyPolicy: '/privacy',
   cookies: '/cookies',
   home: '/',
   story: '/story',

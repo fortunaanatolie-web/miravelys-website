@@ -53,7 +53,7 @@ export const legalCopy = {
     },
     "userAgreement": {
       "title": "Terms of Service (EULA)",
-      "updated": "June 2026",
+      "updated": "July 2026",
       "intro": "By downloading or using Miravelys, you agree to these Terms. If you do not agree, please do not use the App.",
       "sections": [
         {
@@ -63,9 +63,12 @@ export const legalCopy = {
           ]
         },
         {
-          "title": "2. Subscription Terms",
+          "title": "2. Subscription Terms & Payments",
           "paragraphs": [
-            "We offer auto-renewing subscriptions and a Lifetime option. Subscriptions automatically renew unless canceled 24 hours before the end of the period. Manage cancellations through your App Store settings. Refunds are handled exclusively by Apple."
+            "We offer auto-renewing subscriptions (e.g., monthly or yearly) and a one-time lifetime option. Payment is charged to your Apple ID through the App Store at confirmation of purchase.",
+            "Subscriptions automatically renew unless you cancel at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period.",
+            "Manage or cancel auto-renewable subscriptions in your Apple ID settings: Settings → Apple ID → Subscriptions. Refunds are handled exclusively by Apple.",
+            "Restore Purchases is available in the app for previously purchased entitlements on the same Apple ID."
           ]
         },
         {
@@ -84,20 +87,22 @@ export const legalCopy = {
     },
     "privacyPolicy": {
       "title": "Privacy Policy",
-      "updated": "June 2026",
+      "updated": "July 2026",
       "intro": "Welcome to Miravelys. We are committed to protecting your privacy and ensuring your personal reflections remain strictly confidential.",
       "sections": [
         {
-          "title": "1. Data We Do NOT Collect (Local & Private Data)",
+          "title": "1. Local & Private Data",
           "paragraphs": [
-            "Miravelys is built with a \"Privacy-First\" architecture. All journal entries and reflections are stored strictly locally on your device and synced securely via your Apple iCloud. We do not host this data on our servers, and we have no access to read or analyze it.",
+            "Miravelys is built with a \"Privacy-First\" architecture. All journal entries and reflections are stored strictly locally on your device by default (Local encrypted storage). We do not host this data on our servers, and we have no access to read or analyze it.",
             "Audio for breathing exercises is processed locally in real-time. It is never recorded, saved, transmitted, or shared."
           ]
         },
         {
-          "title": "2. Information We Do Collect & How It Is Used",
+          "title": "2. Information Processing",
           "paragraphs": [
-            "If you create an account, we collect your email solely for account recovery. We use RevenueCat for anonymous subscription management. With your explicit permission, we may log \"Mindfulness Minutes\" to Apple HealthKit (this data is never sold). We also collect anonymized crash reports to improve the app."
+            "Miravelys does not require you to create an account or provide an email address. The app is designed for local, anonymous use.",
+            "Apple handles payments and entitlements via StoreKit 2 in-app purchases. We do not receive or store your full payment card number.",
+            "With your explicit permission, we may log \"Mindfulness Minutes\" to Apple HealthKit (this data is never sold). We also collect anonymized crash reports to improve the app."
           ]
         },
         {
@@ -107,9 +112,10 @@ export const legalCopy = {
           ]
         },
         {
-          "title": "4. Third-Party Services & Your Rights",
+          "title": "4. Your Controls & Rights",
           "paragraphs": [
-            "We share minimal data with trusted services (Apple and RevenueCat) strictly to operate the app. Depending on your jurisdiction (e.g., GDPR, CCPA), you have the right to access, rectify, or erase your data. You can delete your account directly in the app or by emailing us."
+            "You can export your data or completely delete your local data anytime directly from the Privacy settings within the app.",
+            "Because data is primarily stored on your device, processing happens where you use the app. Depending on your jurisdiction, you have the right to access or erase your data, which can be accomplished using the app's built-in local controls."
           ]
         }
       ]
