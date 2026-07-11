@@ -14,7 +14,6 @@ import ProblemBridgeSection from './components/marketing/sections/ProblemBridgeS
 import StickyPhoneStory from './components/marketing/sections/StickyPhoneStory';
 import ModesSection from './components/marketing/sections/ModesSection';
 import TrustSection from './components/marketing/sections/TrustSection';
-import OriginStorySection from './components/marketing/sections/OriginStorySection';
 import DownloadSection from './components/marketing/sections/DownloadSection';
 import BrandMeaningSection from './components/marketing/sections/BrandMeaningSection';
 import MarketingStickyCta from './components/marketing/MarketingStickyCta';
@@ -88,13 +87,6 @@ function App() {
         lang={lang}
         experience={experience}
         onNavClick={onNavClick}
-      />
-
-      <OriginStorySection
-        lang={lang}
-        t={t}
-        onNavClick={onNavClick}
-        onEarlyAccessClick={waitlist.openEarlyAccess}
       />
 
       <DownloadSection

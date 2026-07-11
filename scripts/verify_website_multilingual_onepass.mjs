@@ -53,7 +53,7 @@ const phone = fs.readFileSync(new URL('../src/components/marketing/primitives/Ph
 
 if (!app.includes('StickyPhoneStory')) fail('Marketing site must use StickyPhoneStory scroll presentation.');
 if (app.includes('MockupsSection') || app.includes('ScreenStorySection') || app.includes('OriginStorySection')) fail('Main page still contains legacy competing marketing sections.');
-if (!router.includes('path="/story"')) fail('Story route missing.');
+if (!router.includes("path: '/story'") && !router.includes('path="/story"')) fail('Story route missing.');
 if (!stickyLayout.includes('PhoneMockup') || !stickyLayout.includes('activeIndex={activeIndex}')) fail('Sticky story must use one PhoneMockup synchronized to activeIndex.');
 if (!storyPortrait.includes('useNearestStep')) fail('Portrait mobile product story must use nearest-step scroll sync.');
 if (!storyLandscape.includes('landscape-story')) fail('Landscape mobile product story must use dedicated layout region.');
