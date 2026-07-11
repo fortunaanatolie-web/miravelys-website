@@ -60,7 +60,6 @@ function App() {
         onNavClick={onNavClick}
         onEarlyAccessClick={waitlist.openEarlyAccess}
         lang={lang}
-        t={t}
         setLang={setLang}
         t={t}
         experience={experience}
@@ -80,14 +79,13 @@ function App() {
       />
 
       <StickyPhoneStory lang={lang}
-        t={t} t={t} />
+        t={t} />
 
       <ModesSection t={t} />
 
       <TrustSection
         t={t}
         lang={lang}
-        t={t}
         experience={experience}
         onNavClick={onNavClick}
       />

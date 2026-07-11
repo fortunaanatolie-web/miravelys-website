@@ -48,7 +48,6 @@ export default function FounderStoryPage() {
         setMenuOpen={setMenuOpen}
         onNavClick={onNavClick}
         lang={lang}
-        t={t}
         setLang={setLang}
         t={t}
         experience={experience}
