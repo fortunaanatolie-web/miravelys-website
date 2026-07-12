@@ -212,3 +212,42 @@
   content-visibility: auto;
   contain-intrinsic-size: auto 720px;
 }
+
+/* Day mode overrides for Legal, Support, and FAQ pages */
+[data-appearance='day'] .site-shell--keynote .gold-wordmark.legal-document-title {
+  background: none;
+  color: var(--mira-ivory);
+  -webkit-text-fill-color: var(--mira-ivory);
+  filter: none;
+  text-shadow: none;
+}
+
+[data-appearance='day'] .site-shell--keynote .legal-document-header .eyebrow {
+  color: var(--mira-gold);
+}
+
+[data-appearance='day'] .site-shell--keynote .legal-document-meta,
+[data-appearance='day'] .site-shell--keynote .legal-document-meta span,
+[data-appearance='day'] .site-shell--keynote .legal-document-back {
+  color: var(--mira-text-muted);
+}
+
+[data-appearance='day'] .site-shell--keynote .legal-document-back:hover {
+  color: var(--mira-gold);
+}
+
+[data-appearance='day'] .site-shell--keynote .legal-document-card {
+  background: var(--mira-glass-bg-strong);
+  border-color: var(--mira-glass-border);
+  box-shadow: var(--mira-shadow-soft);
+}
+
+[data-appearance='day'] .site-shell--keynote .legal-document-card h2,
+[data-appearance='day'] .site-shell--keynote .legal-document-card h3 {
+  color: var(--mira-ivory);
+}
+
+[data-appearance='day'] .site-shell--keynote .legal-document-card p,
+[data-appearance='day'] .site-shell--keynote .legal-document-governing {
+  color: var(--mira-text-secondary);
+}
