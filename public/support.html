@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support — Miravelys</title>
+  <meta name="description" content="Get help with Miravelys: subscriptions, privacy, restore purchases, and contact." />
+  <style>
+    :root {
+      --bg: #040608;
+      --deep: #061818;
+      --text: #f2efe9;
+      --muted: rgba(242, 239, 233, 0.62);
+      --dim: rgba(242, 239, 233, 0.38);
+      --glass: #42e0d4;
+      --card: rgba(10, 18, 20, 0.78);
+      --border: rgba(255, 255, 255, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+      background: radial-gradient(ellipse 80% 40% at 50% 0%, rgba(66,224,212,0.08), transparent 55%),
+                  linear-gradient(180deg, #0e2224 0%, var(--deep) 40%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 48px 22px 80px; }
+    a { color: var(--glass); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .brand { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dim); margin-bottom: 18px; }
+    h1 { font-size: 2rem; font-weight: 600; line-height: 1.2; margin: 0 0 8px; }
+    .meta { color: var(--muted); font-size: 0.95rem; margin-bottom: 28px; }
+    h2 { font-size: 1.15rem; margin: 28px 0 10px; }
+    p, li { color: var(--muted); }
+    ul { padding-left: 1.2rem; }
+    li { margin: 0.35rem 0; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px 18px;
+      margin: 18px 0;
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: rgba(14, 48, 48, 0.92);
+      border: 1px solid rgba(66, 224, 212, 0.48);
+      color: var(--text);
+      font-weight: 600;
+    }
+    .nav { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="brand"><a href="https://miravelys.com">Miravelys</a></div>
+    <h1>Support</h1>
+    <p class="meta">We’re here to help with Miravelys — calmly and clearly.</p>
+
+    <div class="card">
+      <p style="margin:0 0 12px;color:var(--text)"><strong>Email us</strong></p>
+      <p style="margin:0">For account, subscription, privacy, or bug reports:</p>
+      <p><a class="cta" href="mailto:support@miravelys.com">support@miravelys.com</a></p>
+      <p style="margin:12px 0 0;font-size:0.9rem">Please include your device model, iOS version, and a short description of what happened. Do not send sensitive journal content unless you choose to.</p>
+    </div>
+
+    <h2>Subscriptions &amp; Restore</h2>
+    <ul>
+      <li>Buy Premium in the app via Apple. Prices come from the App Store for your region.</li>
+      <li>Use <strong>Restore Purchases</strong> on the Premium screen or in Settings if you reinstalled or switched devices (same Apple ID).</li>
+      <li>Cancel or change auto-renew in <strong>iPhone Settings → [your name] → Subscriptions</strong>.</li>
+      <li>Refunds are handled by Apple: <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</li>
+    </ul>
+
+    <h2>Privacy &amp; data</h2>
+    <ul>
+      <li>Your reflections stay on your device by default. See the <a href="https://miravelys.com/privacy">Privacy Policy</a>.</li>
+      <li>Export and delete controls live under Privacy in Miravelys Settings and are always free.</li>
+      <li>Local-only mode keeps assistance on-device when you prefer that.</li>
+    </ul>
+
+    <h2>If you need urgent help</h2>
+    <p>Miravelys is not a crisis service. If you or someone else is in immediate danger, contact local emergency services. In the app, crisis / safety resources remain reachable without Premium.</p>
+
+    <h2>Legal</h2>
+    <ul>
+      <li><a href="https://miravelys.com/privacy">Privacy Policy</a></li>
+      <li><a href="https://miravelys.com/terms">Terms of Use</a></li>
+    </ul>
+
+    <nav class="nav">
+      <a href="https://miravelys.com">Home</a>
+      <a href="https://miravelys.com/privacy">Privacy</a>
+      <a href="https://miravelys.com/terms">Terms</a>
+    </nav>
+  </main>
+</body>
+</html>
