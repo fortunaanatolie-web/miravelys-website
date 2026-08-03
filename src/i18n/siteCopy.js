@@ -90,7 +90,7 @@ export const siteCopy = {
     "mockups": {
       "eyebrow": "A look inside",
       "title": "Watch a tangled moment find its clarity.",
-      "intro": "Explore how Miravelys guides you: pour out what feels overwhelming, untangle the emotional layers, soothe your nervous system, find rest at night, and gently recognize the patterns holding you back. Choose your language, and the experience adapts with you.",
+      "intro": "I’ve been studying neural agents and working closely with them since they first emerged. My initial fascination wasn't with code, but with language and psychology—how these models process information and interact with human thought. It was only this year that I dove into programming, spending many hours a day developing iOS apps to turn those concepts into reality.\n\nI set out to build a complex system. I spent months on architecture, game mechanics, and dashboards because I was convinced: the smarter the system, the more useful it would be.\n\nBut the longer I worked on it, the clearer the opposite became. In a moment of anxiety, a person rarely needs another dashboard, an achievement badge, or an algorithm explaining what's happening to them. More often, they just need to pause, name what just happened, and ask themselves one precise question.\n\nMy interest in philosophy led me to the idea of spiritual autolysis—a radical examination of one's own beliefs. The essence of the method is to question one assumption after another until you can clearly see what you actually know, versus what you only assume to be true.\n\nThe original approach was quite harsh. I didn't want to bring that harshness into Miravelys. So I kept the rigorous demand on the thought process, but removed the cruelty toward the person.",
       "hint": "Tap any screen to preview it in your preferred language — each one connects to a step in the journey above."
     },
     "trust": {
@@ -388,7 +388,15 @@ export const siteCopy = {
     "mockups": {
       "eyebrow": "Взгляд изнутри",
       "title": "Посмотрите, как запутанный момент обретает ясность.",
-      "intro": "Узнайте, как Miravelys направляет вас: выплесните то, что переполняет, распутайте слои эмоций, успокойте нервную систему, найдите отдых ночью и мягко осознайте шаблоны, которые вас держат. Выберите свой язык — и опыт адаптируется под вас.",
+      "intro": "Я изучаю нейроагенты и тесно с ними работаю с момента их появления. Сначала меня увлекал не код, а язык и психология — то, как эти модели обрабатывают информацию и взаимодействуют с человеческим мышлением. И только в этом году я с головой ушел в программирование, проводя по много часов в день за разработкой iOS-приложений, чтобы воплотить эти концепции в реальность.
+
+Я решил построить сложную систему. Я потратил месяцы на архитектуру, игровые механики и дашборды, потому что был уверен: чем умнее система, тем больше пользы она принесёт.
+
+Но чем дольше я над ней работал, тем яснее видел обратное. В момент тревоги человеку редко нужен ещё один дашборд, награда или алгоритм, объясняющий, что с ним происходит. Чаще ему нужно остановиться, назвать случившееся и задать себе один точный вопрос.
+
+Мой интерес к философии привёл меня к идее духовного автолизиса — радикальной проверки собственных убеждений. Смысл метода в том, чтобы подвергать сомнению одно предположение за другим, пока не станет видно, что вы действительно знаете, а что только считаете правдой.
+
+Оригинальный подход был довольно суровым. Я не хотел переносить эту суровость в Miravelys. Поэтому сохранил требовательность к мысли, но убрал жестокость к человеку.",
       "hint": "Нажмите на экран, чтобы посмотреть его на вашем родном языке — каждый из них связан с шагом вашего пути."
     },
     "trust": {
@@ -698,7 +706,7 @@ export const siteCopy = {
     "mockups": {
       "eyebrow": "O privire în interior",
       "title": "Urmărește cum un moment încurcat își găsește claritatea.",
-      "intro": "Explorează cum te ghidează Miravelys: varsă ceea ce simți că te copleșește, descurcă straturile emoționale, liniștește-ți sistemul nervos, găsește odihnă noaptea și recunoaște cu blândețe tiparele care te rețin. Alege-ți limba, iar experiența se adaptează odată cu tine.",
+      "intro": "Studiez agenții neuronali și lucrez îndeaproape cu ei încă de la apariția lor. Fascinarea mea inițială nu a fost pentru cod, ci pentru limbaj și psihologie — cum procesează aceste modele informația și cum interacționează cu gândirea umană. Abia anul acesta m-am cufundat în programare, petrecând multe ore pe zi dezvoltând aplicații iOS pentru a transforma aceste concepte în realitate.\n\nMi-am propus să construiesc un sistem complex. Am petrecut luni întregi lucrând la arhitectură, mecanici de joc și dashboard-uri, fiind convins că: cu cât sistemul e mai inteligent, cu atât va fi mai util.\n\nDar cu cât lucram mai mult la el, cu atât realizam exact opusul. Într-un moment de anxietate, un om are rareori nevoie de încă un dashboard, de o insignă virtuală sau de un algoritm care să-i explice ce i se întâmplă. Cel mai des are nevoie doar să se oprească, să numească ceea ce tocmai s-a întâmplat și să-și pună o singură întrebare precisă.\n\nInteresul meu pentru filosofie m-a condus la ideea de autoliză spirituală — o verificare radicală a propriilor convingeri. Esența metodei este să pui la îndoială fiecare presupunere, rând pe rând, până când devine clar ce știi cu adevărat, față de ceea ce doar crezi că este adevărat.\n\nAbordarea originală era destul de dură. Nu am vrut să aduc acea duritate în Miravelys. Așa că am păstrat exigența față de procesul de gândire, dar am eliminat asprimea față de om.",
       "hint": "Atinge orice ecran pentru a-l previzualiza în limba ta preferată — fiecare se conectează la un pas din călătoria de mai sus."
     },
     "trust": {
@@ -996,7 +1004,7 @@ export const siteCopy = {
     "mockups": {
       "eyebrow": "Un regard à l'intérieur",
       "title": "Regardez un moment confus trouver sa clarté.",
-      "intro": "Découvrez comment Miravelys vous guide : déposez ce qui vous submerge, démêlez vos couches émotionnelles, apaisez votre système nerveux, trouvez le repos la nuit, et reconnaissez avec douceur les schémas qui vous retiennent. Choisissez votre langue, et l'expérience s'adapte avec vous.",
+      "intro": "J'étudie les agents neuronaux et je travaille en étroite collaboration avec eux depuis leur apparition. Ma fascination initiale ne portait pas sur le code, mais sur le langage et la psychologie — comment ces modèles traitent l'information et interagissent avec la pensée humaine. Ce n'est que cette année que je me suis plongé dans la programmation, passant de nombreuses heures par jour à développer des applications iOS pour concrétiser ces concepts.\n\nJ'ai entrepris de construire un système complexe. J'ai passé des mois sur l'architecture, les mécaniques de jeu et les tableaux de bord, convaincu que plus le système serait intelligent, plus il serait utile.\n\nMais plus j'y travaillais, plus l'inverse devenait évident. Dans un moment d'anxiété, une personne a rarement besoin d'un tableau de bord de plus, d'une récompense virtuelle ou d'un algorithme lui expliquant ce qui lui arrive. Le plus souvent, elle a simplement besoin de s'arrêter, de nommer ce qui vient de se passer et de se poser une seule question précise.\n\nMon intérêt pour la philosophie m'a conduit à l'idée de l'autolyse spirituelle — un examen radical de ses propres croyances. L'essence de la méthode est de remettre en question une hypothèse après l'autre, jusqu'à ce qu'il devienne clair ce que vous savez vraiment, par opposition à ce que vous croyez seulement être vrai.\n\nL'approche originale était assez rude. Je ne voulais pas transposer cette rudesse dans Miravelys. J'ai donc conservé l'exigence envers la pensée, tout en supprimant la cruauté envers la personne.",
       "hint": "Touchez un écran pour le prévisualiser dans la langue de votre choix — chacun est lié à une étape de votre parcours ci-dessus."
     },
     "trust": {
@@ -1294,7 +1302,7 @@ export const siteCopy = {
     "mockups": {
       "eyebrow": "एक झलक",
       "title": "देखें कैसे एक उलझा हुआ पल स्पष्ट होता है।",
-      "intro": "जानिए Miravelys आपका मार्गदर्शन कैसे करता है: जो भारी लग रहा है उसे बाहर निकालें, अपनी भावनाओं को सुलझाएं, अपने तंत्रिका तंत्र को शांत करें, रात में आराम पाएं, और आपको रोक रही आदतों को धीरे से पहचानें। अपनी भाषा चुनें, और अनुभव आपके अनुसार ढल जाएगा।",
+      "intro": "मैं न्यूरल एजेंटों का अध्ययन कर रहा हूँ और जब से वे पहली बार सामने आए हैं, तब से उनके साथ निकटता से काम कर रहा हूँ। मेरा प्रारंभिक आकर्षण कोड के प्रति नहीं था, बल्कि भाषा और मनोविज्ञान के प्रति था—कि ये मॉडल कैसे जानकारी को संसाधित करते हैं और मानवीय सोच के साथ कैसे बातचीत करते हैं। केवल इसी वर्ष मैंने प्रोग्रामिंग में कदम रखा, और इन अवधारणाओं को हकीकत में बदलने के लिए हर दिन कई घंटे iOS ऐप्स विकसित करने में बिताए।\n\nमैंने एक जटिल सिस्टम बनाने का लक्ष्य रखा। मैंने वास्तुकला, गेम मैकेनिक्स और डैशबोर्ड पर महीनों बिताए क्योंकि मुझे विश्वास था: सिस्टम जितना स्मार्ट होगा, उतना ही उपयोगी होगा।\n\nलेकिन जितना अधिक मैंने इस पर काम किया, उतना ही विपरीत स्पष्ट होता गया। चिंता के क्षण में, किसी व्यक्ति को शायद ही कभी एक और डैशबोर्ड, एक उपलब्धि बैज, या यह समझाने वाले एल्गोरिदम की आवश्यकता होती है कि उसके साथ क्या हो रहा है। अक्सर, उन्हें बस रुकने, यह पहचानने कि अभी क्या हुआ, और खुद से एक सटीक प्रश्न पूछने की आवश्यकता होती है।\n\nदर्शनशास्त्र में मेरी रुचि मुझे आध्यात्मिक ऑटोलिसिस के विचार तक ले गई — अपनी स्वयं की मान्यताओं की एक कट्टरपंथी परीक्षा। इस पद्धति का सार यह है कि एक के बाद एक धारणा पर तब तक सवाल उठाया जाए, जब तक कि आप स्पष्ट रूप से यह न देख सकें कि आप वास्तव में क्या जानते हैं, बनाम आप क्या केवल सच मानते हैं।\n\nमूल दृष्टिकोण काफी कठोर था। मैं उस कठोरता को Miravelys में नहीं लाना चाहता था। इसलिए मैंने विचार प्रक्रिया पर कड़ी मांग तो रखी, लेकिन व्यक्ति के प्रति क्रूरता को हटा दिया।",
       "hint": "अपनी पसंदीदा भाषा में पूर्वावलोकन देखने के लिए किसी भी स्क्रीन पर टैप करें — प्रत्येक ऊपर की यात्रा के एक कदम से जुड़ता है।"
     },
     "trust": {
@@ -1592,7 +1600,7 @@ export const siteCopy = {
     "mockups": {
       "eyebrow": "功能预览",
       "title": "看纠结的思绪如何变得清晰。",
-      "intro": "探索 Miravelys 是如何引导你的：倾吐那些让你不堪重负的感受，理清情绪的层次，安抚紧绷的神经系统，在夜晚找到安宁，并温柔地觉察那些束缚你的模式。选择你的语言，体验也会随之改变。",
+      "intro": "自从神经代理（neural agents）出现以来，我就一直在研究它们并与它们密切合作。我最初的着迷点不在于代码，而在于语言和心理学——这些模型如何处理信息并与人类思维互动。直到今年，我才全身心投入到编程中，每天花许多小时开发iOS应用程序，将这些概念变成现实。\n\n我着手构建一个复杂的系统。我花了几个月的时间研究架构、游戏机制和仪表板，因为我坚信：系统越智能，就越有用。\n\n但我研究的时间越长，相反的情况就越明显。在焦虑的时刻，一个人很少需要另一个仪表板、一个成就徽章或一个解释他们正在发生什么情况的算法。更多时候，他们只需要停下来，说出刚刚发生了什么，然后问自己一个确切的问题。\n\n我对哲学的兴趣让我萌生了精神自溶的想法——一种对自己信仰的彻底审视。这种方法的本质是一次又一次地质疑假设，直到你能清楚地看到你真正知道什么，而不是你只认为什么是真实的。\n\n最初的方法相当严厉。我不想把这种严厉带入Miravelys。所以我保留了对思维过程的严格要求，但消除了对人的残酷。",
       "hint": "点击任意屏幕即可用你偏好的语言预览 — 每一个屏幕都对应着上方旅程中的一个步骤。"
     },
     "trust": {
@@ -1890,7 +1898,7 @@ export const siteCopy = {
     "mockups": {
       "eyebrow": "Ein Blick hinein",
       "title": "Sieh, wie ein verworrener Moment Klarheit findet.",
-      "intro": "Entdecke, wie Miravelys dich führt: Schütte aus, was dich überwältigt, entwirre die emotionalen Schichten, beruhige dein Nervensystem, finde nachts Ruhe und erkenne sanft die Muster, die dich zurückhalten. Wähle deine Sprache, und die Erfahrung passt sich an.",
+      "intro": "Ich studiere neuronale Agenten und arbeite eng mit ihnen zusammen, seit sie zum ersten Mal aufgetaucht sind. Meine anfängliche Faszination galt nicht dem Code, sondern der Sprache und der Psychologie – wie diese Modelle Informationen verarbeiten und mit dem menschlichen Denken interagieren. Erst in diesem Jahr bin ich in die Programmierung eingetaucht und habe viele Stunden am Tag damit verbracht, iOS-Apps zu entwickeln, um diese Konzepte in die Realität umzusetzen.\n\nIch nahm mir vor, ein komplexes System aufzubauen. Ich habe Monate mit Architektur, Spielmechaniken und Dashboards verbracht, weil ich überzeugt war: Je intelligenter das System, desto nützlicher wäre es.\n\nAber je länger ich daran arbeitete, desto klarer wurde das Gegenteil. In einem Moment der Angst braucht ein Mensch selten ein weiteres Dashboard, ein Abzeichen für eine Leistung oder einen Algorithmus, der ihm erklärt, was gerade passiert. Viel öfter müssen sie einfach innehalten, benennen, was gerade passiert ist, und sich selbst eine präzise Frage stellen.\n\nMein Interesse an der Philosophie führte mich zur Idee der spirituellen Autolyse – einer radikalen Überprüfung der eigenen Überzeugungen. Die Essenz der Methode besteht darin, eine Annahme nach der anderen zu hinterfragen, bis man klar sehen kann, was man tatsächlich weiß, im Gegensatz zu dem, was man nur für wahr hält.\n\nDer ursprüngliche Ansatz war ziemlich hart. Diese Härte wollte ich nicht in Miravelys einbringen. Also behielt ich den strengen Anspruch an den Denkprozess bei, nahm aber die Grausamkeit gegenüber der Person heraus.",
       "hint": "Tippe auf einen Bildschirm, um ihn in deiner bevorzugten Sprache in der Vorschau anzuzeigen — jeder ist mit einem Schritt der obigen Reise verbunden."
     },
     "trust": {
@@ -2188,7 +2196,7 @@ export const siteCopy = {
     "mockups": {
       "eyebrow": "アプリの中を見る",
       "title": "絡まった瞬間が、どう明確になるか見てみましょう。",
-      "intro": "Miravelysがどう導くのかを体験してください：圧倒される感情を吐き出し、感情の層を紐解き、神経系を落ち着かせ、夜には休息を見つけ、あなたを縛るパターンに優しく気づく。言語を選べば、体験もあなたに合わせて変わります。",
+      "intro": "私はニューラルエージェントが初めて登場して以来、それらを研究し、密接に関わってきました。私の最初の関心はコードではなく、言語と心理学——これらのモデルがどのように情報を処理し、人間の思考と相互作用するのか——にありました。私がプログラミングに没頭し始めたのは今年に入ってからのことで、これらの概念を現実のものにするため、毎日何時間もiOSアプリの開発に費やしました。\n\n私は複雑なシステムを構築しようとしました。システムが賢ければ賢いほど役立つと確信していたため、アーキテクチャ、ゲームメカニクス、ダッシュボードに何か月も費やしました。\n\nしかし、作業を長く続けるほど、その逆が明らかになってきました。不安を感じている瞬間に、人は別のダッシュボードや達成バッジ、または自分に何が起きているのかを説明するアルゴリズムを必要とすることは滅多にありません。多くの場合、人はただ立ち止まり、今起きたことに名前をつけ、自分自身に一つの正確な問いを投げかける必要があるだけなのです。\n\n哲学への関心から、私は精神的自己溶解（スピリチュアル・オートリシス）というアイデアにたどり着きました。それは、自分自身の信念を根本的に見直すことです。この方法の本質は、自分が真実だと思い込んでいることと、実際に知っていることを明確に見極めるまで、次から次へと前提を疑うことにあります。\n\n元々のアプローチはかなり過酷なものでした。私はその過酷さをMiravelysに持ち込みたくありませんでした。そこで、思考プロセスに対する厳格な要求は残しつつ、人間に対する残酷さを取り除いたのです。",
       "hint": "お好きな言語でプレビューを見るには、画面をタップしてください — それぞれが上の旅のステップに繋がっています。"
     },
     "trust": {
@@ -2486,7 +2494,7 @@ export const siteCopy = {
     "mockups": {
       "eyebrow": "Un vistazo dentro",
       "title": "Mira cómo un momento confuso encuentra su claridad.",
-      "intro": "Explora cómo te guía Miravelys: desahoga lo que te abruma, desenreda las capas emocionales, calma tu sistema nervioso, encuentra descanso nocturno y reconoce suavemente los patrones que te frenan. Elige tu idioma y la experiencia se adapta contigo.",
+      "intro": "He estado estudiando agentes neuronales y trabajando estrechamente con ellos desde que aparecieron por primera vez. Mi fascinación inicial no fue con el código, sino con el lenguaje y la psicología: cómo estos modelos procesan la información e interactúan con el pensamiento humano. Fue apenas este año que me sumergí en la programación, pasando muchas horas al día desarrollando aplicaciones para iOS para convertir esos conceptos en realidad.\n\nMe propuse construir un sistema complejo. Pasé meses trabajando en la arquitectura, mecánicas de juego y paneles de control, convencido de que: cuanto más inteligente fuera el sistema, más útil sería.\n\nPero cuanto más trabajaba en él, más evidente me resultaba lo contrario. En un momento de ansiedad, una persona rara vez necesita otro panel de control, una insignia de logro o un algoritmo que le explique lo que le está sucediendo. La mayoría de las veces, solo necesita detenerse, nombrar lo que acaba de pasar y hacerse a sí misma una pregunta precisa.\n\nMi interés por la filosofía me llevó a la idea de la autólisis espiritual: un examen radical de las propias creencias. La esencia del método es cuestionar una suposición tras otra, hasta que puedas ver claramente lo que realmente sabes, frente a lo que solo asumes como cierto.\n\nEl enfoque original era bastante duro. No quería trasladar esa dureza a Miravelys. Así que mantuve la exigencia rigurosa sobre el proceso de pensamiento, pero eliminé la crueldad hacia la persona.",
       "hint": "Toca cualquier pantalla para verla en tu idioma preferido — cada una se conecta con un paso del viaje de arriba."
     },
     "trust": {
@@ -2784,7 +2792,7 @@ export const siteCopy = {
     "mockups": {
       "eyebrow": "Um olhar por dentro",
       "title": "Vê como um momento confuso encontra a sua clareza.",
-      "intro": "Explora como o Miravelys te guia: desabafa o que te sufoca, desembaraça as camadas emocionais, acalma o teu sistema nervoso, encontra descanso à noite e reconhece suavemente os padrões que te prendem. Escolhe o teu idioma, e a experiência adapta-se a ti.",
+      "intro": "Tenho estudado agentes neurais e trabalhado de perto com eles desde que surgiram. Minha fascinação inicial não era pelo código, mas pela linguagem e psicologia — como esses modelos processam informações e interagem com o pensamento humano. Foi apenas este ano que mergulhei na programação, passando muitas horas por dia desenvolvendo aplicativos para iOS para transformar esses conceitos em realidade.\n\nPropus-me a construir um sistema complexo. Passei meses trabalhando na arquitetura, mecânicas de jogo e painéis de controle, convencido de que: quanto mais inteligente fosse o sistema, mais útil ele seria.\n\nMas quanto mais eu trabalhava nisso, mais claro o oposto se tornava. Em um momento de ansiedade, uma pessoa raramente precisa de outro painel de controle, de um distintivo de conquista ou de um algoritmo explicando o que está acontecendo com ela. Na maioria das vezes, ela só precisa fazer uma pausa, nomear o que acabou de acontecer e fazer a si mesma uma pergunta precisa.\n\nMeu interesse pela filosofia me levou à ideia da autólise espiritual — um exame radical das próprias crenças. A essência do método é questionar uma suposição após a outra até que você possa ver claramente o que realmente sabe, em vez do que apenas assume ser verdade.\n\nA abordagem original era bastante dura. Eu não queria trazer essa dureza para o Miravelys. Então, mantive a exigência rigorosa sobre o processo de pensamento, mas removi a crueldade em relação à pessoa.",
       "hint": "Toca em qualquer ecrã para veres uma prévia no teu idioma preferido — cada um liga-se a um passo da jornada acima."
     },
     "trust": {
