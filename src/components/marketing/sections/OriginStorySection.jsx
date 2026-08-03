@@ -1,6 +1,28 @@
 import React from 'react';
 import RevealOnScroll from '../primitives/RevealOnScroll';
 
+const renderText = (text) => {
+  if (!text) return null;
+  return text.split('\n\n').map((para, i) => (
+    <p key={i} className="origin-block__paragraph" style={{ marginBottom: '1rem' }}>
+      {para.split('\n').map((line, j) => {
+        const parts = line.split(/(\*\*.*?\*\*)/g);
+        return (
+          <React.Fragment key={j}>
+            {parts.map((part, k) => {
+              if (part.startsWith('**') && part.endsWith('**')) {
+                return <strong key={k} style={{ color: 'var(--mira-ivory)' }}>{part.slice(2, -2)}</strong>;
+              }
+              return part;
+            })}
+            {j < para.split('\n').length - 1 && <br />}
+          </React.Fragment>
+        );
+      })}
+    </p>
+  ));
+};
+
 export default function OriginStorySection({ t, onNavClick, onEarlyAccessClick }) {
   if (!t || !t.explanation) return null;
   const origin = t.explanation;
@@ -19,7 +41,7 @@ export default function OriginStorySection({ t, onNavClick, onEarlyAccessClick }
             {origin.title}
           </h2>
           <div className="origin-story__lead">
-            <p>{origin.intro}</p>
+            {renderText(origin.intro)}
           </div>
         </RevealOnScroll>
       </div>
@@ -39,7 +61,7 @@ export default function OriginStorySection({ t, onNavClick, onEarlyAccessClick }
               <RevealOnScroll className="origin-block__copy" variant="soft" delay={index * 80}>
                 <div className="origin-block__content">
                   <h3 className="origin-block__chapter" style={{color: 'var(--mira-ivory)', fontSize: '1.2rem', marginBottom: '0.5rem', textTransform: 'none', letterSpacing: 'normal'}}>{block.title}</h3>
-                  <p className="origin-block__paragraph">{block.body}</p>
+                  {renderText(block.body)}
                 </div>
               </RevealOnScroll>
             </article>
