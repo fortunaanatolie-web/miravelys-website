@@ -264,38 +264,30 @@ export const siteCopy = {
       "watch": "Designed for Apple Watch"
     },
     "explanation": {
-      "eyebrow": "Looking deeper",
-      "title": "What Miravelys is, why we built it, and how it's meant to help.",
-      "intro": "Miravelys was created for those ordinary moments that suddenly become too loud: a passing comment that replays on a loop, a text message that feels like an attack, a quiet evening ruined by a spiraling thought, or a 2 a.m. anxiety that sounds undeniably true. The app isn't here to force positivity, 'fix' you, or tell you who you are. It is simply here to help you step back into reality with a little more tenderness, a little more clarity, and a little more choice.",
+      "eyebrow": "The Story",
+      "title": "How it all began",
+      "intro": "I’ve been developing iOS apps for a long time. Over the last year, I was building a particularly complex system. In one scenario, a single action could trigger up to 57 requests to various neural networks.\n\nI spent months on architecture, game mechanics, and dashboards because I was convinced: the smarter the system, the more useful it would be.\n\nBut the longer I worked on it, the clearer the opposite became. In a moment of anxiety, a person rarely needs another dashboard, an achievement badge, or an algorithm explaining what's happening to them. More often, they just need to pause, name what just happened, and ask themselves one precise question.\n\nMy interest in philosophy led me to the idea of spiritual autolysis—a radical examination of one's own beliefs. The essence of the method is to question one assumption after another until you can clearly see what you actually know, versus what you only assume to be true.\n\nThe original approach was quite harsh. I didn't want to bring that harshness into Miravelys. So I kept the rigorous demand on the thought process, but removed the cruelty toward the person.",
       "blocks": [
         {
-          "title": "A Private Sanctuary",
-          "body": "Process what's happening inside before you react. Miravelys invites you to pause, pour out the messy version of your moment, and untangle it securely on your own device."
+          "title": "We all walk in circles sometimes",
+          "body": "An unanswered message. A harsh tone of voice. A mistake at work. The event itself might take a few seconds, but its internal continuation can last the whole day.\n\nThe emotions involved are real. Anxiety, resentment, or anger—they aren't made up. But they don't prove why the other person acted the way they did.\n\nThe loop begins when the event, the feeling, the assumption, and an old belief all merge into one undeniable version of reality.\n\nMiravelys helps you pull them apart again."
         },
         {
-          "title": "Untangling the Knot",
-          "body": "So much of our pain comes from treating a fleeting feeling like an absolute fact. We help you separate the undeniable events from the stories your mind invented."
+          "title": "What is Miravelys",
+          "body": "Miravelys is not your typical mood tracker, nor is it a digital therapist. It doesn't diagnose you, it doesn't decide for you, and it doesn't present an algorithmic formula as the absolute truth.\n\nYou bring in one difficult moment, and the app helps you see it in pieces:\n• What actually happened?\n• What did you feel?\n• How did your body react?\n• What did you decide this meant?\n• What belief is hiding behind that thought?\n• What is it that you simply don't know yet?\n\nMiravelys offers questions, observations, and practices. But any hypothesis can be corrected, rejected, or deleted. You always have the final word.\n\nYour personal entries are stored on your device. The fully local mode ensures there is no external processing. Optional cloud backup, should you choose to use it, is turned on separately and can be disabled at any time."
         },
         {
-          "title": "Calm Before Clarity",
-          "body": "When your nervous system is in distress, trying to analyze thoughts creates another spiral. We help you soothe your body first, so you can return to your thoughts with a steady heart."
+          "title": "How it looks in practice",
+          "body": "You sent an important message. A day has passed, but there's no reply.\n\n**Known:** The message was sent, there is no reply yet.\n**Feeling:** Anxiety.\n**Assumption:** \"They're ignoring me on purpose,\" \"I wrote something wrong,\" \"I don't matter.\"\n**Unknown:** Why the person hasn't answered.\n\nMiravelys doesn't claim that your assumptions are wrong. It helps you see that they are not yet confirmed, and keeps you from accepting the very first anxious thought as the only possible reality.\n\nPerhaps the anxiety won't disappear immediately. But a little bit of space will open up between the event and your automatic reaction. And with it—the ability to choose what to do next."
         },
         {
-          "title": "A Mirror, Not a Judge",
-          "body": "Miravelys learns by listening to your corrections, not by pretending it has you figured out. It simply reflects your patterns with humility, giving you the power to shape your truth."
+          "title": "What happens over time",
+          "body": "A single entry helps you see a specific moment more clearly. Several entries can reveal what keeps repeating.\n\nSilence is once again perceived as rejection. A mistake—as proof of your own inadequacy. Uncertainty—as danger.\n\nMiravelys reflects your own words back to you and helps you notice a potential pattern. Not as a diagnosis, and not as a description of your personality, but as a hypothesis that you can confirm, correct, or delete.\n\nThe goal isn't for the app to know you better than you know yourself. The goal is for you to notice a familiar loop sooner."
+        },
+        {
+          "title": "Our aim",
+          "body": "Miravelys doesn't promise to rid you of heavy emotions or lead you to the absolute truth.\n\nIts task is simpler: to help you see a single moment more accurately, to separate the known from the assumed, and to catch the automatic thought before it becomes the only version of reality again.\n\nNot a new version of yourself. Just a little less autopilot."
         }
-      ],
-      "purposeTitle": "Our deepest hope for you",
-      "purposeBody": "Our greatest hope is that Miravelys helps you build a relationship with your own mind that feels less automatic and less overwhelming. Instead of instantly believing the loudest, most anxious thought, you begin to find a little bit of space. And in that space, your body can settle, the painful stories can loosen their grip, the truth can become clear, and a much kinder reality can begin to emerge.",
-      "featureTitle": "What Miravelys can offer you",
-      "featureList": [
-        "Transform a messy, overwhelmed thought into clear, manageable pieces without ever feeling judged.",
-        "Gently guide you toward clarity, calm, rest, or reflection based on what you need in the moment.",
-        "Provide gentle, focused, or bolder reflection modes, always keeping you in the driver's seat.",
-        "Remember every correction you make, ensuring the app grows more attuned to your unique needs.",
-        "Offer a quiet, sleep-safe space for the nights when your mind won't stop racing.",
-        "Reflect your weekly patterns with evidence and care, avoiding dramatic labels or identity claims.",
-        "Keep your most private reflections securely on your device, respecting your privacy above all else."
       ]
     },
     "marketingExplanation": {
@@ -880,38 +872,30 @@ export const siteCopy = {
       "watch": "Proiectat pentru Apple Watch"
     },
     "explanation": {
-      "eyebrow": "Privind mai adânc",
-      "title": "Ce este Miravelys, de ce l-am construit și cum este menit să ajute.",
-      "intro": "Miravelys a fost creat pentru acele momente obișnuite care devin brusc prea zgomotoase: un comentariu trecător care se repetă în buclă, un mesaj text care se simte ca un atac, o seară liniștită distrusă de un gând în spirală sau o anxietate la 2 a.m. care sună incontestabil a adevăr. Aplicația nu este aici pentru a forța pozitivitatea, pentru a te 'repara' sau pentru a-ți spune cine ești. Este pur și simplu aici pentru a te ajuta să faci un pas înapoi în realitate cu puțin mai multă tandrețe, puțin mai multă claritate și puțin mai multă alegere.",
+      "eyebrow": "Povestea",
+      "title": "Cum a început totul",
+      "intro": "Dezvolt aplicații pentru iOS de multă vreme. În ultimul an, construiam un sistem deosebit de complex. Într-un singur scenariu, o simplă acțiune putea declanșa până la 57 de cereri către diverse rețele neuronale.\n\nAm petrecut luni întregi lucrând la arhitectură, mecanici de joc și dashboard-uri, fiind convins că: cu cât sistemul e mai inteligent, cu atât va fi mai util.\n\nDar cu cât lucram mai mult la el, cu atât realizam exact opusul. Într-un moment de anxietate, un om are rareori nevoie de încă un dashboard, de o insignă virtuală sau de un algoritm care să-i explice ce i se întâmplă. Cel mai des are nevoie doar să se oprească, să numească ceea ce tocmai s-a întâmplat și să-și pună o singură întrebare precisă.\n\nInteresul meu pentru filosofie m-a condus la ideea de autoliză spirituală — o verificare radicală a propriilor convingeri. Esența metodei este să pui la îndoială fiecare presupunere, rând pe rând, până când devine clar ce știi cu adevărat, față de ceea ce doar crezi că este adevărat.\n\nAbordarea originală era destul de dură. Nu am vrut să aduc acea duritate în Miravelys. Așa că am păstrat exigența față de procesul de gândire, dar am eliminat asprimea față de om.",
       "blocks": [
         {
-          "title": "Adevăratul nostru scop",
-          "body": "Miravelys oferă un sanctuar privat pentru a procesa ceea ce se întâmplă în interior înainte de a reacționa din panică, rușine, furie, singurătate sau pură epuizare. Te invită să pui pe pauză, să verși versiunea dezordonată, nefiltrată a momentului tău și să-l descurci încet: ce s-a întâmplat de fapt, ce simte corpul tău, emoția care îl conduce, povestea pe care mintea ta a țesut-o, convingerea ascunsă dedesubt și curajul de a admite ceea ce pur și simplu nu știi."
+          "title": "Cu toții ne învârtim în cerc uneori",
+          "body": "Un mesaj la care nu s-a răspuns. Un ton străin. O greșeală la muncă. Evenimentul în sine poate dura câteva secunde, dar ecoul său interior se poate prelungi toată ziua.\n\nEmoțiile implicate sunt reale. Anxietatea, resentimentul sau furia — nu sunt inventate. Dar ele nu dovedesc de ce cealaltă persoană a procedat așa cum a făcut-o.\n\nBucla începe atunci când evenimentul, sentimentul, presupunerea și o veche convingere se contopesc într-o singură versiune incontestabilă a realității.\n\nMiravelys te ajută să le separi din nou."
         },
         {
-          "title": "Experiența de bază",
-          "body": "Inima lui Miravelys este simplă: ne aduci un gând încurcat, iar noi te ajutăm să slăbești nodul. Nu trebuie să scrii o intrare perfectă în jurnal. Îmbrățișăm jumătăți de propoziție, izbucniri emoționale și contradicții. Aplicația răspunde cu întrebări blânde și te ajută să vezi momentul dintr-o perspectivă mai calmă, fără a te grăbi spre o concluzie ordonată."
+          "title": "Ce este Miravelys",
+          "body": "Miravelys nu este un simplu jurnal de stări și nici un psiholog digital. Nu îți pune diagnostice, nu decide în locul tău și nu prezintă o formulare propusă de un algoritm ca fiind adevărul absolut.\n\nTu aduci un moment dificil, iar aplicația te ajută să-l vezi pe bucăți:\n• Ce s-a întâmplat cu adevărat?\n• Ce ai simțit?\n• Cum a reacționat corpul tău?\n• Ce ai decis că înseamnă asta?\n• Ce convingere se ascunde în spatele acestui gând?\n• Ce anume încă nu știi?\n\nMiravelys îți oferă întrebări, observații și practici. Dar orice ipoteză poate fi corectată, respinsă sau ștearsă. Ultimul cuvânt îți aparține întotdeauna.\n\nNotițele tale personale sunt stocate pe dispozitiv. Modul complet local exclude orice procesare externă. Sincronizarea opțională în cloud, dacă decizi să o folosești, se activează separat și poate fi dezactivată oricând."
         },
         {
-          "title": "Descurcarea faptelor, poveștilor și convingerilor",
-          "body": "O mare parte din durerea noastră provine din tratarea unui sentiment trecător ca pe un fapt absolut sau lăsând un moment prost să ne definească întreaga identitate. Miravelys te ajută să separi piesele fără a te face să te simți greșit. 'Faptul' este ceea ce s-a spus. 'Povestea' este ceea ce a decis mintea ta că înseamnă. 'Sentimentul' ar putea fi o tristețe bruscă. 'Convingerea' ar putea fi 'Întotdeauna stric lucrurile'. Iar 'Necunoscut' este aplicația fiind suficient de onestă pentru a spune: hai să lăsăm asta deschis pentru moment."
+          "title": "Cum arată în practică",
+          "body": "Ai trimis un mesaj important. A trecut o zi, dar nu ai primit niciun răspuns.\n\n**Cunoscut:** Mesajul a fost trimis, încă nu există un răspuns.\n**Sentiment:** Anxietate.\n**Presupunere:** „Mă ignoră intenționat”, „Am scris ceva greșit”, „Nu contez”.\n**Necunoscut:** De ce nu a răspuns persoana respectivă.\n\nMiravelys nu susține că presupunerile tale sunt greșite. Te ajută doar să vezi că ele nu sunt încă confirmate, și să nu accepți prima versiune anxioasă ca fiind singura realitate posibilă.\n\nPoate că anxietatea nu va dispărea imediat. Dar se va deschide un pic de spațiu între eveniment și reacția ta automată. Și odată cu el — posibilitatea de a alege ce să faci mai departe."
         },
         {
-          "title": "Găsirea calmului înainte de a căuta răspunsuri",
-          "body": "Când corpul tău este în modul de luptă sau fugi, încercarea de a-ți analiza gândurile creează adesea doar o altă spirală. Miravelys este atent, observând când s-ar putea să ai nevoie să te ancorezi mai întâi. Funcția noastră 'Calm Now' nu este doar un temporizator de respirație — este o parte esențială a procesului de claritate, ajutându-te să-ți liniștești corpul, astfel încât să poți reveni la gândurile tale cu o inimă mai stabilă."
+          "title": "Ce se întâmplă în timp",
+          "body": "O singură notiță te ajută să vezi un moment specific mai clar. Mai multe notițe pot scoate la iveală ceea ce se tot repetă.\n\nTăcerea este percepută din nou ca o respingere. O greșeală — ca o dovadă a propriei incompetențe. Incertitudinea — ca un pericol.\n\nMiravelys îți reflectă propriile tale cuvinte și te ajută să observi un posibil tipar. Nu ca pe un diagnostic, și nu ca pe o descriere a personalității tale, ci ca pe o ipoteză pe care o poți confirma, corecta sau șterge.\n\nScopul nu este ca aplicația să te cunoască mai bine decât te cunoști tu. Scopul este ca tu să observi o buclă familiară mai devreme."
+        },
+        {
+          "title": "Scopul nostru",
+          "body": "Miravelys nu promite să te scape de emoțiile grele sau să te conducă la adevărul absolut.\n\nSarcina sa este mai simplă: să te ajute să vezi un singur moment mai clar, să separi ceea ce e cunoscut de ceea ce presupui și să surprinzi gândul automat înainte ca acesta să devină din nou singura versiune a realității.\n\nNu o nouă versiune a ta. Doar un pic mai puțin pilot automat."
         }
-      ],
-      "purposeTitle": "Cea mai profundă speranță a noastră pentru tine",
-      "purposeBody": "Cea mai mare speranță a noastră este că Miravelys te ajută să construiești o relație cu propria ta minte care să se simtă mai puțin automată și mai puțin copleșitoare. În loc să crezi instantaneu cel mai zgomotos și mai anxios gând, începi să găsești puțin spațiu. Și în acel spațiu, corpul tău se poate liniști, poveștile dureroase își pot slăbi strânsoarea, adevărul poate deveni clar și o realitate mult mai blândă poate începe să apară.",
-      "featureTitle": "Ce îți poate oferi Miravelys",
-      "featureList": [
-        "Transformă un gând dezordonat și copleșit în piese clare, ușor de gestionat, fără să te simți vreodată judecat.",
-        "Te ghidează cu blândețe către claritate, calm, odihnă sau reflecție, pe baza a ceea ce ai nevoie în acel moment.",
-        "Oferă moduri de reflecție blânde, concentrate sau mai îndrăznețe, menținându-te mereu la conducere.",
-        "Își amintește fiecare corectură pe care o faci, asigurându-se că aplicația devine mai adaptată la nevoile tale unice.",
-        "Oferă un spațiu liniștit, sigur pentru somn, pentru nopțile în care mintea ta nu se oprește din alergat.",
-        "Reflectă tiparele tale săptămânale cu dovezi și grijă, evitând etichetele dramatice sau pretențiile de identitate.",
-        "Păstrează cele mai private reflecții ale tale în siguranță pe dispozitivul tău, respectându-ți intimitatea mai presus de orice."
       ]
     },
     "marketingExplanation": {
@@ -1186,38 +1170,30 @@ export const siteCopy = {
       "watch": "Conçu pour l'Apple Watch"
     },
     "explanation": {
-      "eyebrow": "Aller plus en profondeur",
-      "title": "Ce qu'est Miravelys, pourquoi nous l'avons construit, et comment il est censé aider.",
-      "intro": "Miravelys a été créé pour ces moments ordinaires qui deviennent soudainement trop bruyants : un commentaire en passant qui tourne en boucle, un SMS qui ressemble à une attaque, une soirée calme gâchée par une pensée qui s'emballe, ou une anxiété à 2h du matin qui semble indéniablement vraie. L'application n'est pas là pour forcer la positivité, pour vous 'réparer', ou pour vous dire qui vous êtes. Elle est simplement là pour vous aider à revenir à la réalité avec un peu plus de tendresse, un peu plus de clarté, et un peu plus de choix.",
+      "eyebrow": "L'histoire",
+      "title": "Comment tout a commencé",
+      "intro": "Je développe des applications iOS depuis longtemps. Au cours de la dernière année, je construisais un système particulièrement complexe. Dans un seul scénario, une simple action pouvait déclencher jusqu'à 57 requêtes vers divers réseaux de neurones.\n\nJ'ai passé des mois sur l'architecture, les mécaniques de jeu et les tableaux de bord, convaincu que plus le système serait intelligent, plus il serait utile.\n\nMais plus j'y travaillais, plus l'inverse devenait évident. Dans un moment d'anxiété, une personne a rarement besoin d'un tableau de bord de plus, d'une récompense virtuelle ou d'un algorithme lui expliquant ce qui lui arrive. Le plus souvent, elle a simplement besoin de s'arrêter, de nommer ce qui vient de se passer et de se poser une seule question précise.\n\nMon intérêt pour la philosophie m'a conduit à l'idée de l'autolyse spirituelle — un examen radical de ses propres croyances. L'essence de la méthode est de remettre en question une hypothèse après l'autre, jusqu'à ce qu'il devienne clair ce que vous savez vraiment, par opposition à ce que vous croyez seulement être vrai.\n\nL'approche originale était assez rude. Je ne voulais pas transposer cette rudesse dans Miravelys. J'ai donc conservé l'exigence envers la pensée, tout en supprimant la cruauté envers la personne.",
       "blocks": [
         {
-          "title": "Notre véritable but",
-          "body": "Miravelys offre un sanctuaire privé pour traiter ce qui se passe à l'intérieur avant de réagir sous le coup de la panique, de la honte, de la colère, de la solitude ou de la fatigue. Il vous invite à faire une pause, à verser la version brouillonne et non filtrée de votre moment, et à la démêler lentement : ce qui s'est réellement passé, ce que ressent votre corps, l'émotion qui vous anime, l'histoire que votre esprit a tissée, la croyance cachée en dessous, et le courage d'admettre ce que vous ne savez tout simplement pas."
+          "title": "Nous tournons tous en rond parfois",
+          "body": "Un message resté sans réponse. Un ton de voix dur. Une erreur au travail. L'événement en lui-même peut ne durer que quelques secondes, mais sa résonance intérieure peut se prolonger toute la journée.\n\nLes émotions ressenties sont réelles. L'anxiété, la rancœur ou la colère ne sont pas inventées. Mais elles ne prouvent pas pourquoi l'autre personne a agi ainsi.\n\nLa boucle commence lorsque l'événement, le sentiment, la supposition et une vieille croyance fusionnent en une seule version indiscutable de la réalité.\n\nMiravelys vous aide à les séparer à nouveau."
         },
         {
-          "title": "L'expérience de base",
-          "body": "Le cœur de Miravelys est simple : vous nous apportez une pensée emmêlée, et nous vous aidons à desserrer le nœud. Vous n'avez pas besoin d'écrire une entrée de journal parfaite. Nous acceptons les demi-phrases, les débordements émotionnels et les contradictions. L'application répond par des questions douces et vous aide à voir le moment sous un angle plus calme, sans vous précipiter vers une conclusion bien ordonnée."
+          "title": "Ce qu'est Miravelys",
+          "body": "Miravelys n'est pas un simple journal d'humeur, ni un psychologue numérique. Il ne pose pas de diagnostic, il ne décide pas à votre place, et il ne présente pas une formule algorithmique comme la vérité absolue.\n\nVous apportez un moment difficile, et l'application vous aide à le décomposer :\n• Que s'est-il réellement passé ?\n• Qu'avez-vous ressenti ?\n• Comment votre corps a-t-il réagi ?\n• Qu'avez-vous décidé que cela signifiait ?\n• Quelle croyance se cache derrière cette pensée ?\n• Qu'est-ce que vous ne savez tout simplement pas encore ?\n\nMiravelys propose des questions, des observations et des pratiques. Mais toute hypothèse peut être corrigée, rejetée ou supprimée. Le dernier mot vous appartient toujours.\n\nVos notes personnelles sont stockées sur votre appareil. Le mode entièrement local exclut tout traitement externe. La sauvegarde optionnelle sur le cloud, si vous décidez de l'utiliser, s'active séparément et peut être désactivée à tout moment."
         },
         {
-          "title": "Démêler les faits, les histoires et les croyances",
-          "body": "Une grande partie de notre douleur vient du fait de traiter un sentiment passager comme un fait absolu, ou de laisser un mauvais moment définir toute notre identité. Miravelys vous aide à séparer les éléments sans vous faire vous sentir en faute. Le 'fait', c'est ce qui a été dit. L''histoire', c'est ce que votre esprit a décidé que cela signifiait. Le 'sentiment' pourrait être une tristesse soudaine. La 'croyance' pourrait être 'Je gâche toujours tout'. Et 'L'Inconnu', c'est l'application qui est assez honnête pour dire : laissons cela ouvert pour l'instant."
+          "title": "Comment cela se présente en pratique",
+          "body": "Vous avez envoyé un message important. Une journée s'est écoulée, sans réponse.\n\n**Connu :** Le message a été envoyé, il n'y a pas encore de réponse.\n**Ressenti :** Anxiété.\n**Supposition :** « On m'ignore exprès », « J'ai écrit quelque chose de mal », « Je n'ai pas d'importance ».\n**Inconnu :** Pourquoi la personne n'a pas répondu.\n\nMiravelys ne prétend pas que vos suppositions sont fausses. Il vous aide simplement à voir qu'elles ne sont pas encore confirmées, et à ne pas accepter la première pensée anxieuse comme la seule réalité possible.\n\nPeut-être que l'anxiété ne disparaîtra pas immédiatement. Mais un peu d'espace s'ouvrira entre l'événement et votre réaction automatique. Et avec lui — la possibilité de choisir ce qu'il faut faire ensuite."
         },
         {
-          "title": "Trouver le calme avant de chercher des réponses",
-          "body": "Lorsque votre corps est en mode 'combat ou fuite', essayer d'analyser vos pensées crée souvent une nouvelle spirale. Miravelys fait attention, remarquant quand vous pourriez avoir besoin de vous ancrer d'abord. Notre fonction 'Calm Now' n'est pas seulement un minuteur de respiration — c'est une partie essentielle du processus de clarté, vous aidant à apaiser votre corps pour pouvoir revenir à vos pensées avec un cœur plus stable."
+          "title": "Ce qui se passe avec le temps",
+          "body": "Une seule note vous aide à voir un moment précis plus clairement. Plusieurs notes peuvent révéler ce qui se répète sans cesse.\n\nLe silence est à nouveau perçu comme un rejet. Une erreur — comme la preuve de votre propre incompétence. L'incertitude — comme un danger.\n\nMiravelys vous renvoie vos propres mots et vous aide à remarquer un motif éventuel. Non pas comme un diagnostic, ni comme une description de votre personnalité, mais comme une hypothèse que vous pouvez confirmer, corriger ou supprimer.\n\nLe but n'est pas que l'application vous connaisse mieux que vous-même. Le but est que vous remarquiez plus tôt une boucle familière."
+        },
+        {
+          "title": "Notre but",
+          "body": "Miravelys ne promet pas de vous débarrasser de vos émotions lourdes ou de vous conduire à la vérité absolue.\n\nSa tâche est plus simple : vous aider à voir un seul moment avec plus de précision, à séparer ce qui est connu de ce qui est supposé, et à saisir la pensée automatique avant qu'elle ne redevienne la seule version de la réalité.\n\nPas une nouvelle version de vous-même. Juste un peu moins de pilote automatique."
         }
-      ],
-      "purposeTitle": "Notre espoir le plus profond pour vous",
-      "purposeBody": "Notre plus grand espoir est que Miravelys vous aide à construire une relation avec votre propre esprit qui vous semble moins automatique et moins envahissante. Au lieu de croire instantanément la pensée la plus bruyante et la plus anxieuse, vous commencez à trouver un peu d'espace. Et dans cet espace, votre corps peut s'apaiser, les histoires douloureuses peuvent relâcher leur emprise, la vérité peut devenir claire, et une réalité beaucoup plus douce peut commencer à émerger.",
-      "featureTitle": "Ce que Miravelys peut vous offrir",
-      "featureList": [
-        "Transformer une pensée brouillonne et envahissante en morceaux clairs et gérables sans jamais vous sentir jugé.",
-        "Vous guider avec douceur vers la clarté, le calme, le repos ou la réflexion en fonction de ce dont vous avez besoin sur le moment.",
-        "Fournir des modes de réflexion doux, concentrés ou plus audacieux, en vous gardant toujours aux commandes.",
-        "Mémoriser chaque correction que vous apportez, en veillant à ce que l'application soit toujours plus à l'écoute de vos besoins uniques.",
-        "Offrir un espace calme et sûr pour les nuits où votre esprit n'arrête pas de courir.",
-        "Refléter vos schémas hebdomadaires avec des preuves et du soin, en évitant les étiquettes dramatiques ou les affirmations sur votre identité.",
-        "Garder vos réflexions les plus intimes en sécurité sur votre appareil, en respectant votre vie privée par-dessus tout."
       ]
     },
     "marketingExplanation": {
@@ -1492,38 +1468,30 @@ export const siteCopy = {
       "watch": "Apple Watch के लिए डिज़ाइन किया गया"
     },
     "explanation": {
-      "eyebrow": "गहराई से देखना",
-      "title": "Miravelys क्या है, हमने इसे क्यों बनाया, और यह कैसे मदद करने वाला है।",
-      "intro": "Miravelys उन सामान्य पलों के लिए बनाया गया है जो अचानक बहुत तेज़ हो जाते हैं: एक गुज़रती टिप्पणी जो दिमाग में गूँजती रहती है, एक संदेश जो हमले जैसा लगता है, एक शांत शाम जो एक उलझी हुई सोच से बर्बाद हो जाती है, या रात 2 बजे की चिंता जो निर्विवाद रूप से सच लगती है। ऐप आपको सकारात्मक बनाने, आपको 'ठीक' करने, या आपको यह बताने के लिए यहाँ नहीं है कि आप कौन हैं। यह बस आपको थोड़ी अधिक कोमलता, थोड़ी अधिक स्पष्टता और थोड़ी अधिक पसंद के साथ वास्तविकता में वापस कदम रखने में मदद करने के लिए है।",
+      "eyebrow": "कहानी",
+      "title": "यह सब कैसे शुरू हुआ",
+      "intro": "मैं लंबे समय से iOS ऐप्स विकसित कर रहा हूँ। पिछले एक साल से, मैं एक विशेष रूप से जटिल सिस्टम बना रहा था। एक परिदृश्य में, एक ही क्रिया विभिन्न न्यूरल नेटवर्क को 57 अनुरोध तक ट्रिगर कर सकती थी।\n\nमैंने वास्तुकला, गेम मैकेनिक्स और डैशबोर्ड पर महीनों बिताए क्योंकि मुझे विश्वास था: सिस्टम जितना स्मार्ट होगा, उतना ही उपयोगी होगा।\n\nलेकिन जितना अधिक मैंने इस पर काम किया, उतना ही विपरीत स्पष्ट होता गया। चिंता के क्षण में, किसी व्यक्ति को शायद ही कभी एक और डैशबोर्ड, एक उपलब्धि बैज, या यह समझाने वाले एल्गोरिदम की आवश्यकता होती है कि उसके साथ क्या हो रहा है। अक्सर, उन्हें बस रुकने, यह पहचानने कि अभी क्या हुआ, और खुद से एक सटीक प्रश्न पूछने की आवश्यकता होती है।\n\nदर्शनशास्त्र में मेरी रुचि मुझे आध्यात्मिक ऑटोलिसिस के विचार तक ले गई — अपनी स्वयं की मान्यताओं की एक कट्टरपंथी परीक्षा। इस पद्धति का सार यह है कि एक के बाद एक धारणा पर तब तक सवाल उठाया जाए, जब तक कि आप स्पष्ट रूप से यह न देख सकें कि आप वास्तव में क्या जानते हैं, बनाम आप क्या केवल सच मानते हैं।\n\nमूल दृष्टिकोण काफी कठोर था। मैं उस कठोरता को Miravelys में नहीं लाना चाहता था। इसलिए मैंने विचार प्रक्रिया पर कड़ी मांग तो रखी, लेकिन व्यक्ति के प्रति क्रूरता को हटा दिया।",
       "blocks": [
         {
-          "title": "हमारा सच्चा उद्देश्य",
-          "body": "Miravelys यह प्रक्रिया करने के लिए एक निजी अभयारण्य प्रदान करता है कि आपके घबराहट, शर्म, क्रोध, अकेलेपन, या सरासर थकावट से प्रतिक्रिया करने से पहले अंदर क्या हो रहा है। यह आपको रुकने, अपने पल के उलझे हुए, अनफ़िल्टर्ड संस्करण को बाहर निकालने और धीरे-धीरे इसे सुलझाने के लिए आमंत्रित करता है: वास्तव में क्या हुआ था, आपका शरीर क्या महसूस करता है, इसे चलाने वाली भावना क्या है, आपके मन ने जो कहानी बुनी, उसके नीचे छिपा विश्वास, और उस चीज़ को स्वीकार करने का साहस जो आप बस नहीं जानते हैं।"
+          "title": "हम सभी कभी-कभी एक ही चक्र में घूमते हैं",
+          "body": "एक अनुत्तरित संदेश। बातचीत का एक कठोर लहजा। काम पर एक गलती। घटना स्वयं कुछ सेकंड ले सकती है, लेकिन इसकी आंतरिक निरंतरता पूरे दिन चल सकती है।\n\nइसमें शामिल भावनाएं वास्तविक हैं। चिंता, आक्रोश, या क्रोध — वे मनगढ़ंत नहीं हैं। लेकिन वे यह साबित नहीं करते कि दूसरे व्यक्ति ने ऐसा व्यवहार क्यों किया।\n\nलूप तब शुरू होता है जब घटना, भावना, धारणा, और एक पुरानी मान्यता सभी वास्तविकता के एक निर्विवाद संस्करण में विलीन हो जाते हैं।\n\nMiravelys आपको उन्हें फिर से अलग करने में मदद करता है।"
         },
         {
-          "title": "मुख्य अनुभव",
-          "body": "Miravelys का दिल सरल है: आप हमारे पास एक उलझा हुआ विचार लाते हैं, और हम गाँठ को ढीला करने में आपकी मदद करते हैं। आपको एक आदर्श जर्नल प्रविष्टि लिखने की आवश्यकता नहीं है। हम आधे-अधूरे वाक्यों, भावनात्मक विस्फोटों और विरोधाभासों को अपनाते हैं। ऐप कोमल प्रश्नों के साथ प्रतिक्रिया करता है और आपको एक साफ-सुथरे निष्कर्ष पर पहुँचाने में जल्दबाजी किए बिना, पल को शांत दृष्टिकोण से देखने में मदद करता है।"
+          "title": "Miravelys क्या है",
+          "body": "Miravelys आपका सामान्य मूड ट्रैकर नहीं है, और न ही यह एक डिजिटल थेरेपिस्ट है। यह आपका निदान नहीं करता है, यह आपके लिए निर्णय नहीं लेता है, और यह पूर्ण सत्य के रूप में एक एल्गोरिथम फॉर्मूला प्रस्तुत नहीं करता है।\n\nआप एक कठिन क्षण लाते हैं, और ऐप आपको इसे टुकड़ों में देखने में मदद करता है:\n• वास्तव में क्या हुआ?\n• आपने क्या महसूस किया?\n• आपके शरीर ने कैसे प्रतिक्रिया दी?\n• आपने इसका क्या अर्थ निकाला?\n• उस विचार के पीछे कौन सी मान्यता छिपी है?\n• ऐसा क्या है जो आप अभी तक नहीं जानते हैं?\n\nMiravelys प्रश्न, अवलोकन और अभ्यास प्रदान करता है। लेकिन किसी भी परिकल्पना को सुधारा, अस्वीकार या हटाया जा सकता है। अंतिम शब्द हमेशा आपका होता है।\n\nआपकी व्यक्तिगत प्रविष्टियाँ आपके डिवाइस पर संग्रहीत की जाती हैं। पूरी तरह से स्थानीय मोड यह सुनिश्चित करता है कि कोई बाहरी प्रसंस्करण न हो। वैकल्पिक क्लाउड बैकअप, यदि आप इसका उपयोग करना चुनते हैं, तो अलग से चालू किया जाता है और इसे किसी भी समय अक्षम किया जा सकता है।"
         },
         {
-          "title": "तथ्यों, कहानियों और विश्वासों को सुलझाना",
-          "body": "हमारा बहुत सा दर्द एक क्षणभंगुर भावना को पूर्ण तथ्य मानने से आता है, या एक बुरे क्षण को हमारी पूरी पहचान तय करने देने से आता है। Miravelys आपको गलत महसूस कराए बिना टुकड़ों को अलग करने में मदद करता है। 'तथ्य' वह है जो बोला गया था। 'कहानी' वह है जो आपके मन ने तय किया कि इसका मतलब क्या है। 'भावना' अचानक उदासी हो सकती है। 'विश्वास' यह हो सकता है 'मैं हमेशा चीजें बर्बाद कर देता हूँ।' और 'अनजान' यह कहने के लिए ऐप का पर्याप्त ईमानदार होना है: आइए इसे अभी के लिए खुला छोड़ दें।"
+          "title": "व्यवहार में यह कैसा दिखता है",
+          "body": "आपने एक महत्वपूर्ण संदेश भेजा। एक दिन बीत चुका है, लेकिन कोई उत्तर नहीं आया।\n\n**ज्ञात:** संदेश भेजा गया था, अभी तक कोई उत्तर नहीं आया है।\n**भावना:** चिंता।\n**धारणा:** \"वे जानबूझकर मुझे नज़रअंदाज़ कर रहे हैं,\" \"मैंने कुछ गलत लिखा,\" \"मैं मायने नहीं रखता।\"\n**अज्ञात:** उस व्यक्ति ने उत्तर क्यों नहीं दिया।\n\nMiravelys यह दावा नहीं करता कि आपकी धारणाएँ गलत हैं। यह आपको यह देखने में मदद करता है कि वे अभी तक पुष्ट नहीं हुए हैं, और आपको पहली ही चिंतित सोच को एकमात्र संभावित वास्तविकता मानने से रोकता है।\n\nशायद चिंता तुरंत गायब न हो। लेकिन घटना और आपकी स्वचालित प्रतिक्रिया के बीच थोड़ी सी जगह खुल जाएगी। और इसके साथ — यह चुनने की क्षमता कि आगे क्या करना है।"
         },
         {
-          "title": "जवाब खोजने से पहले शांति खोजना",
-          "body": "जब आपका शरीर लड़ाई-या-उड़ान मोड (fight-or-flight) में होता है, तो अपने विचारों का विश्लेषण करने की कोशिश अक्सर एक और चक्र बनाती है। Miravelys ध्यान देता है, यह देखते हुए कि आपको पहले खुद को शांत करने की आवश्यकता हो सकती है। हमारी 'Calm Now' सुविधा केवल एक साँस लेने का टाइमर नहीं है — यह स्पष्टता प्रक्रिया का एक अनिवार्य हिस्सा है, जो आपको अपने शरीर को शांत करने में मदद करता है ताकि आप स्थिर हृदय के साथ अपने विचारों पर लौट सकें。"
+          "title": "समय के साथ क्या होता है",
+          "body": "एक प्रविष्टि आपको एक विशिष्ट क्षण को अधिक स्पष्ट रूप से देखने में मदद करती है। कई प्रविष्टियाँ यह प्रकट कर सकती हैं कि क्या बार-बार दोहराया जा रहा है।\n\nचुप्पी को फिर से अस्वीकृति के रूप में माना जाता है। एक गलती — अपनी खुद की अपर्याप्तता के प्रमाण के रूप में। अनिश्चितता — खतरे के रूप में।\n\nMiravelys आपके अपने शब्दों को आपके सामने दर्शाता है और आपको एक संभावित पैटर्न देखने में मदद करता है। निदान के रूप में नहीं, और न ही आपके व्यक्तित्व के वर्णन के रूप में, बल्कि एक परिकल्पना के रूप में जिसकी आप पुष्टि, सुधार या उसे हटा सकते हैं।\n\nलक्ष्य यह नहीं है कि ऐप आपको आपसे बेहतर जाने। लक्ष्य यह है कि आप एक परिचित चक्र को जल्द ही नोटिस करें।"
+        },
+        {
+          "title": "हमारा उद्देश्य",
+          "body": "Miravelys आपको भारी भावनाओं से छुटकारा दिलाने या आपको पूर्ण सत्य तक ले जाने का वादा नहीं करता है।\n\nइसका कार्य सरल है: आपको एक क्षण को अधिक सटीक रूप से देखने में मदद करना, ज्ञात को अनुमानित से अलग करना, और स्वचालित विचार को वास्तविकता का एकमात्र संस्करण बनने से पहले पकड़ना।\n\nस्वयं का कोई नया संस्करण नहीं। बस थोड़ा कम ऑटोपायलट।"
         }
-      ],
-      "purposeTitle": "आपके लिए हमारी सबसे गहरी उम्मीद",
-      "purposeBody": "हमारी सबसे बड़ी उम्मीद यह है कि Miravelys आपके अपने दिमाग के साथ एक ऐसा रिश्ता बनाने में मदद करता है जो कम स्वचालित और कम भारी लगता है। तुरंत सबसे तेज़, सबसे चिंतित विचार पर विश्वास करने के बजाय, आप थोड़ी सी जगह खोजना शुरू करते हैं। और उस जगह में, आपका शरीर स्थिर हो सकता है, दर्दनाक कहानियाँ अपनी पकड़ ढीली कर सकती हैं, सच्चाई स्पष्ट हो सकती है, और एक बहुत ही दयालु वास्तविकता उभरने लग सकती है।",
-      "featureTitle": "Miravelys आपको क्या दे सकता है",
-      "featureList": [
-        "एक उलझे हुए, भारी विचार को कभी भी आंका हुआ महसूस किए बिना स्पष्ट, प्रबंधनीय टुकड़ों में बदलें।",
-        "उस पल में आपको क्या चाहिए, इसके आधार पर स्पष्टता, शांति, आराम या प्रतिबिंब की ओर आपको धीरे से निर्देशित करें।",
-        "हमेशा आपको ड्राइवर की सीट पर रखते हुए कोमल, केंद्रित या साहसिक प्रतिबिंब मोड प्रदान करें।",
-        "आपके द्वारा किए गए हर सुधार को याद रखें, यह सुनिश्चित करते हुए कि ऐप आपकी अनूठी जरूरतों के प्रति अधिक अभ्यस्त हो जाए।",
-        "उन रातों के लिए एक शांत, नींद-सुरक्षित स्थान प्रदान करें जब आपका दिमाग दौड़ना बंद नहीं करेगा।",
-        "नाटकीय लेबल या पहचान के दावों से बचते हुए, साक्ष्य और देखभाल के साथ अपने साप्ताहिक पैटर्न को प्रतिबिंबित करें।",
-        "गोपनीयता का सम्मान करते हुए, अपने सबसे निजी प्रतिबिंबों को अपने डिवाइस पर सुरक्षित रखें।"
       ]
     },
     "marketingExplanation": {
@@ -1798,38 +1766,30 @@ export const siteCopy = {
       "watch": "为 Apple Watch 设计"
     },
     "explanation": {
-      "eyebrow": "深入探索",
-      "title": "Miravelys 是什么，我们为什么要创造它，以及它将如何帮助你。",
-      "intro": "Miravelys 是为那些突然变得嘈杂的平凡时刻而生的：一句在脑海中循环播放的随口之言、一条感觉像是在攻击你的短信、一个被螺旋上升的思绪毁掉的宁静夜晚，或者凌晨 2 点听起来无比真实的焦虑。这款应用不是为了强迫你积极向上，不是为了“修复”你，也不是为了告诉你你是谁。它只是为了帮助你以多一点温柔、多一点清晰、多一点选择的姿态，退回到现实中。",
+      "eyebrow": "故事",
+      "title": "这一切是如何开始的",
+      "intro": "我开发iOS应用程序已经很长时间了。在过去的一年里，我正在构建一个特别复杂的系统。在一种情况下，一个简单的操作可能会触发多达57次对各种神经网络的请求。\n\n我花了几个月的时间研究架构、游戏机制和仪表板，因为我坚信：系统越智能，就越有用。\n\n但我研究的时间越长，相反的情况就越明显。在焦虑的时刻，一个人很少需要另一个仪表板、一个成就徽章或一个解释他们正在发生什么情况的算法。更多时候，他们只需要停下来，说出刚刚发生了什么，然后问自己一个确切的问题。\n\n我对哲学的兴趣让我萌生了精神自溶的想法——一种对自己信仰的彻底审视。这种方法的本质是一次又一次地质疑假设，直到你能清楚地看到你真正知道什么，而不是你只认为什么是真实的。\n\n最初的方法相当严厉。我不想把这种严厉带入Miravelys。所以我保留了对思维过程的严格要求，但消除了对人的残酷。",
       "blocks": [
         {
-          "title": "我们真正的初衷",
-          "body": "Miravelys 提供了一个私密的避难所，让你在出于恐慌、羞耻、愤怒、孤独或纯粹的疲惫而做出反应之前，先处理一下内心正在发生的事情。它邀请你停下来，倾吐出那个瞬间最凌乱、未经修饰的版本，然后慢慢解开它：究竟发生了什么，你的身体感觉如何，驱使它的是什么情绪，你的大脑编织了什么故事，隐藏在背后的信念是什么，以及承认你目前还不知道的事情的勇气。"
+          "title": "我们有时都会原地打转",
+          "body": "一条未回复的消息。刺耳的语气。工作中的失误。事件本身可能只需要几秒钟，但它在内心的延续可能会持续一整天。\n\n所涉及的情绪是真实的。焦虑、怨恨或愤怒——这些都不是编造的。但这并不能证明为什么另一个人会那样做。\n\n当事件、感觉、假设和旧有信念全部融合为一个不可否认的现实版本时，循环就开始了。\n\nMiravelys帮助你再次将它们拆解。"
         },
         {
-          "title": "核心体验",
-          "body": "Miravelys 的核心非常简单：你带着一个纠结的念头来到这里，我们帮你松开这个结。你不需要写一篇完美的日记。我们接纳半句话、情绪的爆发和矛盾。应用会以温柔的问题作为回应，并帮助你以更平静的视角来看待这个瞬间，而不会催促你得出一个整洁的结论。"
+          "title": "什么是Miravelys",
+          "body": "Miravelys不是你典型的的情绪追踪器，也不是数字心理治疗师。它不为你诊断，它不为你做决定，它也不把算法公式作为绝对真理呈现。\n\n你带来一个困难的时刻，应用程序会帮助你将其拆解来看：\n• 究竟发生了什么？\n• 你感觉如何？\n• 你的身体有何反应？\n• 你认为这意味着什么？\n• 那个想法背后隐藏着什么信念？\n• 有什么是你根本还不知道的？\n\nMiravelys提供问题、观察和练习。但任何假设都可以被纠正、拒绝或删除。你始终拥有最终决定权。\n\n你的个人记录存储在你的设备上。完全本地模式确保没有外部处理。可选的云备份（如果你选择使用的话）是单独开启的，并且可以随时禁用。"
         },
         {
-          "title": "理清事实、故事与信念",
-          "body": "我们的很多痛苦，来自于把转瞬即逝的感受当作绝对的事实，或者让一个糟糕的时刻定义了我们的全部身份。Miravelys 帮你把这些部分分开，而不会让你觉得自己做错了。“事实”是所说的话。“故事”是你的大脑决定它意味着什么。“感受”可能是突如其来的悲伤。“信念”可能是“我总是把事情搞砸”。而“未知”则是应用足够诚实地说：我们暂时先把它放一边。"
+          "title": "在实践中它是怎样的",
+          "body": "你发送了一条重要消息。一天过去了，但没有回复。\n\n**已知：** 消息已发送，目前还没有回复。\n**感觉：** 焦虑。\n**假设：** “他们故意不理我”，“我写错了什么”，“我不重要”。\n**未知：** 为什么那个人没有回答。\n\nMiravelys并不声称你的假设是错误的。它帮助你看到它们尚未得到证实，并阻止你接受最初的焦虑想法作为唯一可能的现实。\n\n也许焦虑不会立即消失。但事件和你的自动反应之间会开启一点空间。随之而来的——是选择下一步该怎么做的能力。"
         },
         {
-          "title": "在寻找答案前，先找到平静",
-          "body": "当你的身体处于“战斗或逃跑”模式时，试图分析你的想法往往只会制造另一个螺旋。Miravelys 会注意到这一点，察觉到你何时可能需要先稳住自己。我们的“Calm Now”功能不仅仅是一个呼吸计时器 — 它是清晰过程中至关重要的一部分，帮助你安抚身体，以便你能带着更平稳的心回到你的思绪中。"
+          "title": "随着时间的推移会发生什么",
+          "body": "单次记录可以帮助你更清晰地看清特定时刻。多次记录可以揭示不断重复出现的问题。\n\n沉默再次被视为拒绝。错误——被视为你自身能力不足的证明。不确定性——被视为危险。\n\nMiravelys将你自己的话反射给你，并帮助你注意到一个潜在的模式。不是作为诊断，也不是作为对你性格的描述，而是作为你可以确认、纠正或删除的假设。\n\n目的不是让应用程序比你更了解你自己。目的是让你更快地注意到熟悉的循环。"
+        },
+        {
+          "title": "我们的目标",
+          "body": "Miravelys不承诺让你摆脱沉重的情绪或引导你走向绝对的真理。\n\n它的任务更简单：帮助你更准确地看清每一个瞬间，将已知与假设分开，并在自动产生的想法再次成为现实的唯一版本之前抓住它。\n\n不是一个新版本的你。只是少一点自动驾驶。"
         }
-      ],
-      "purposeTitle": "我们对你最深的期许",
-      "purposeBody": "我们最大的希望是，Miravelys 能帮你建立一种与自己大脑的联系，让这种联系不再那么机械化，也不再那么令人窒息。你不再瞬间相信那个最吵闹、最焦虑的想法，而是开始找到一点点空间。在那个空间里，你的身体可以安定下来，痛苦的故事可以松开它们的抓地力，真相可以变得清晰，一个更加善意的现实便可以开始显现。",
-      "featureTitle": "Miravelys 能为你提供什么",
-      "featureList": [
-        "将一个凌乱、压倒性的想法转化为清晰、可控的片段，而永远不会让你感到被评判。",
-        "根据你当下的需要，温柔地引导你走向清晰、平静、休息或反思。",
-        "提供温柔、专注或更大胆的反思模式，始终让你掌握主动权。",
-        "记住你做出的每一次修正，确保应用越来越契合你独特的需求。",
-        "在你的大脑无法停止飞速运转的夜晚，为你提供一个安静、适合睡眠的空间。",
-        "以证据和关怀反映你每周的模式，避免戏剧性的标签或对身份的断言。",
-        "将你最私密的反思安全地留在你的设备上，将尊重你的隐私置于首位。"
       ]
     },
     "marketingExplanation": {
@@ -2104,38 +2064,30 @@ export const siteCopy = {
       "watch": "Entwickelt für die Apple Watch"
     },
     "explanation": {
-      "eyebrow": "Tiefer blicken",
-      "title": "Was Miravelys ist, warum wir es entwickelt haben und wie es helfen soll.",
-      "intro": "Miravelys wurde für diese gewöhnlichen Momente geschaffen, die plötzlich zu laut werden: ein beiläufiger Kommentar, der in Dauerschleife abgespielt wird, eine Textnachricht, die sich wie ein Angriff anfühlt, ein ruhiger Abend, der durch einen eskalierenden Gedanken ruiniert wird, oder eine Angst um 2 Uhr morgens, die unbestreitbar wahr klingt. Die App ist nicht dazu da, Positivität zu erzwingen, dich zu 'reparieren' oder dir zu sagen, wer du bist. Sie ist einfach dazu da, dir zu helfen, mit ein wenig mehr Zärtlichkeit, ein wenig mehr Präzision und ein wenig mehr Wahlmöglichkeit in die Realität zurückzukehren.",
+      "eyebrow": "Die Geschichte",
+      "title": "Wie alles begann",
+      "intro": "Ich entwickle schon lange iOS-Apps. Im letzten Jahr habe ich ein besonders komplexes System gebaut. In einem Szenario konnte eine einzige Aktion bis zu 57 Anfragen an verschiedene neuronale Netze auslösen.\n\nIch habe Monate mit Architektur, Spielmechaniken und Dashboards verbracht, weil ich überzeugt war: Je intelligenter das System, desto nützlicher wäre es.\n\nAber je länger ich daran arbeitete, desto klarer wurde das Gegenteil. In einem Moment der Angst braucht ein Mensch selten ein weiteres Dashboard, ein Abzeichen für eine Leistung oder einen Algorithmus, der ihm erklärt, was gerade passiert. Viel öfter müssen sie einfach innehalten, benennen, was gerade passiert ist, und sich selbst eine präzise Frage stellen.\n\nMein Interesse an der Philosophie führte mich zur Idee der spirituellen Autolyse – einer radikalen Überprüfung der eigenen Überzeugungen. Die Essenz der Methode besteht darin, eine Annahme nach der anderen zu hinterfragen, bis man klar sehen kann, was man tatsächlich weiß, im Gegensatz zu dem, was man nur für wahr hält.\n\nDer ursprüngliche Ansatz war ziemlich hart. Diese Härte wollte ich nicht in Miravelys einbringen. Also behielt ich den strengen Anspruch an den Denkprozess bei, nahm aber die Grausamkeit gegenüber der Person heraus.",
       "blocks": [
         {
-          "title": "Unser wahrer Zweck",
-          "body": "Miravelys bietet einen privaten Zufluchtsort, um zu verarbeiten, was im Inneren passiert, bevor du aus Panik, Scham, Wut, Einsamkeit oder purer Erschöpfung reagierst. Es lädt dich ein, innezuhalten, die unordentliche, ungefilterte Version deines Moments auszuschütten und sie langsam zu entwirren: was tatsächlich passiert ist, was dein Körper fühlt, die Emotion, die das antreibt, die Geschichte, die dein Verstand gesponnen hat, die verborgene Überzeugung darunter und der Mut zuzugeben, was du einfach noch nicht weißt."
+          "title": "Wir alle drehen uns manchmal im Kreis",
+          "body": "Eine unbeantwortete Nachricht. Ein harscher Tonfall. Ein Fehler bei der Arbeit. Das Ereignis selbst dauert vielleicht nur ein paar Sekunden, aber seine innere Fortsetzung kann den ganzen Tag andauern.\n\nDie damit verbundenen Emotionen sind real. Angst, Groll oder Wut – sie sind nicht ausgedacht. Aber sie beweisen nicht, warum die andere Person so gehandelt hat.\n\nDie Schleife beginnt, wenn das Ereignis, das Gefühl, die Annahme und ein alter Glaubenssatz zu einer unbestreitbaren Version der Realität verschmelzen.\n\nMiravelys hilft dir, sie wieder voneinander zu trennen."
         },
         {
-          "title": "Das Kernerlebnis",
-          "body": "Das Herzstück von Miravelys ist einfach: Du bringst uns einen verworrenen Gedanken, und wir helfen dir, den Knoten zu lösen. Du musst keinen perfekten Tagebucheintrag schreiben. Wir begrüßen Halbsätze, emotionale Ausbrüche und Widersprüche. Die App reagiert mit sanften Fragen und hilft dir, den Moment aus einer ruhigeren Perspektive zu betrachten, ohne dich zu einem ordentlichen Fazit zu drängen."
+          "title": "Was ist Miravelys",
+          "body": "Miravelys ist nicht dein typischer Mood-Tracker und auch kein digitaler Therapeut. Es diagnostiziert dich nicht, es entscheidet nicht für dich und es präsentiert keine algorithmische Formel als die absolute Wahrheit.\n\nDu bringst einen schwierigen Moment mit, und die App hilft dir, ihn in Einzelteilen zu betrachten:\n• Was ist tatsächlich passiert?\n• Was hast du gefühlt?\n• Wie hat dein Körper reagiert?\n• Was hast du beschlossen, was das bedeutet?\n• Welcher Glaubenssatz verbirgt sich hinter diesem Gedanken?\n• Was ist es, das du einfach noch nicht weißt?\n\nMiravelys bietet Fragen, Beobachtungen und Übungen an. Aber jede Hypothese kann korrigiert, abgelehnt oder gelöscht werden. Du hast immer das letzte Wort.\n\nDeine persönlichen Einträge werden auf deinem Gerät gespeichert. Der vollständig lokale Modus stellt sicher, dass keine externe Verarbeitung stattfindet. Das optionale Cloud-Backup, falls du es nutzen möchtest, wird separat aktiviert und kann jederzeit deaktiviert werden."
         },
         {
-          "title": "Fakten, Geschichten und Überzeugungen entwirren",
-          "body": "Ein großer Teil unseres Schmerzes entsteht dadurch, dass wir ein flüchtiges Gefühl wie eine absolute Tatsache behandeln oder zulassen, dass ein schlechter Moment unsere gesamte Identität definiert. Miravelys hilft dir, die Teile zu trennen, ohne dir das Gefühl zu geben, falsch zu liegen. Der 'Fakt' ist das, was gesagt wurde. Die 'Geschichte' ist das, was dein Verstand daraus gemacht hat. Das 'Gefühl' könnte plötzliche Traurigkeit sein. Die 'Überzeugung' könnte lauten: 'Ich ruiniere immer alles.' Und 'Unbekannt' bedeutet, dass die App ehrlich genug ist zu sagen: Lass uns das für den Moment offenlassen."
+          "title": "Wie es in der Praxis aussieht",
+          "body": "Du hast eine wichtige Nachricht gesendet. Ein Tag ist vergangen, aber es gibt keine Antwort.\n\n**Bekannt:** Die Nachricht wurde gesendet, es gibt noch keine Antwort.\n**Gefühl:** Angst.\n**Annahme:** „Sie ignorieren mich absichtlich“, „Ich habe etwas Falsches geschrieben“, „Ich bin nicht wichtig“.\n**Unbekannt:** Warum die Person nicht geantwortet hat.\n\nMiravelys behauptet nicht, dass deine Annahmen falsch sind. Es hilft dir zu sehen, dass sie noch nicht bestätigt sind, und hält dich davon ab, den allerersten ängstlichen Gedanken als die einzig mögliche Realität zu akzeptieren.\n\nVielleicht verschwindet die Angst nicht sofort. Aber es öffnet sich ein kleiner Raum zwischen dem Ereignis und deiner automatischen Reaktion. Und damit – die Fähigkeit zu wählen, was als Nächstes zu tun ist."
         },
         {
-          "title": "Ruhe finden, bevor man nach Antworten sucht",
-          "body": "Wenn sich dein Körper im Kampf-oder-Flucht-Modus befindet, führt der Versuch, deine Gedanken zu analysieren, oft nur zu einer weiteren Spirale. Miravelys achtet darauf und bemerkt, wenn du dich vielleicht erst erden musst. Unsere 'Calm Now'-Funktion ist nicht nur ein Atem-Timer — sie ist ein wesentlicher Bestandteil des Klarheits-Prozesses und hilft dir, deinen Körper zu beruhigen, damit du mit einem beständigeren Herzen zu deinen Gedanken zurückkehren kannst."
+          "title": "Was im Laufe der Zeit passiert",
+          "body": "Ein einziger Eintrag hilft dir, einen bestimmten Moment klarer zu sehen. Mehrere Einträge können aufzeigen, was sich ständig wiederholt.\n\nSchweigen wird erneut als Ablehnung empfunden. Ein Fehler – als Beweis für die eigene Unzulänglichkeit. Ungewissheit – als Gefahr.\n\nMiravelys spiegelt dir deine eigenen Worte wider und hilft dir, ein mögliches Muster zu erkennen. Nicht als Diagnose und nicht als Beschreibung deiner Persönlichkeit, sondern als Hypothese, die du bestätigen, korrigieren oder löschen kannst.\n\nDas Ziel ist nicht, dass die App dich besser kennt als du dich selbst. Das Ziel ist es, dass du eine vertraute Schleife früher bemerkst."
+        },
+        {
+          "title": "Unser Ziel",
+          "body": "Miravelys verspricht nicht, dich von schweren Emotionen zu befreien oder dich zur absoluten Wahrheit zu führen.\n\nSeine Aufgabe ist einfacher: Dir zu helfen, einen einzelnen Moment genauer zu betrachten, das Bekannte vom Angenommenen zu trennen und den automatischen Gedanken einzufangen, bevor er wieder zur einzigen Version der Realität wird.\n\nKeine neue Version von dir selbst. Nur ein bisschen weniger Autopilot."
         }
-      ],
-      "purposeTitle": "Unsere tiefste Hoffnung für dich",
-      "purposeBody": "Unsere größte Hoffnung ist, dass Miravelys dir hilft, eine Beziehung zu deinem eigenen Verstand aufzubauen, die sich weniger automatisch und weniger überwältigend anfühlt. Anstatt sofort dem lautesten, ängstlichsten Gedanken zu glauben, beginnst du, ein wenig Raum zu finden. Und in diesem Raum kann sich dein Körper beruhigen, die schmerzhaften Geschichten können ihren Griff lockern, die Wahrheit kann klar werden und eine viel freundlichere Realität kann beginnen aufzutauchen.",
-      "featureTitle": "Was Miravelys dir bieten kann",
-      "featureList": [
-        "Verwandle einen unordentlichen, überwältigenden Gedanken in klare, handhabbare Teile, ohne dich jemals verurteilt zu fühlen.",
-        "Dich sanft zu Klarheit, Ruhe, Erholung oder Reflexion führen, je nachdem, was du in dem Moment brauchst.",
-        "Sanfte, fokussierte oder kühnere Reflexionsmodi anbieten, wobei du immer die Kontrolle behältst.",
-        "Sich an jede Korrektur erinnern, die du vornimmst, um sicherzustellen, dass die App immer besser auf deine einzigartigen Bedürfnisse abgestimmt ist.",
-        "Biete einen ruhigen, schlafsicheren Raum für die Nächte, in denen dein Verstand nicht aufhört zu rasen.",
-        "Reflektiere deine wöchentlichen Muster mit Beweisen und Sorgfalt und vermeide dramatische Etiketten oder Identitätsansprüche.",
-        "Bewahre deine privatesten Reflexionen sicher auf deinem Gerät auf und respektiere deine Privatsphäre über alles."
       ]
     },
     "marketingExplanation": {
@@ -2410,38 +2362,30 @@ export const siteCopy = {
       "watch": "Apple Watchのためにデザイン"
     },
     "explanation": {
-      "eyebrow": "さらに深く見る",
-      "title": "Miravelysとは何か、なぜ私たちが作ったのか、そしてどのように役立つのか。",
-      "intro": "Miravelysは、突然うるさくなる日常の瞬間たちのために作られました。頭の中で繰り返される何気ない一言、攻撃のように感じられるメッセージ、連鎖する思考に台無しにされた静かな夜、または否定できないほど真実に聞こえる午前2時の不安。このアプリは、あなたを無理にポジティブにしたり、「直したり」、あなたが誰であるかを教えたりするためにあるのではありません。ただ、もう少しの優しさ、もう少しの明確さ、そしてもう少しの選択肢を持って、あなたを現実に戻すのを助けるためにあるのです。",
+      "eyebrow": "ストーリー",
+      "title": "すべてはここから始まった",
+      "intro": "私は長い間iOSアプリを開発してきました。この1年間、私は特に複雑なシステムを構築していました。あるシナリオでは、1つのアクションが様々なニューラルネットワークに対する最大57の要求を引き起こす可能性がありました。\n\nシステムが賢ければ賢いほど役立つと確信していたため、私はアーキテクチャ、ゲームメカニクス、ダッシュボードに何ヶ月も費やしました。\n\nしかし、作業を長く続けるほど、その逆が明らかになってきました。不安を感じている瞬間に、人は別のダッシュボードや達成バッジ、または自分に何が起きているのかを説明するアルゴリズムを必要とすることは滅多にありません。多くの場合、人はただ立ち止まり、今起きたことに名前をつけ、自分自身に一つの正確な問いを投げかける必要があるだけなのです。\n\n哲学への関心から、私は精神的自己溶解（スピリチュアル・オートリシス）というアイデアにたどり着きました。それは、自分自身の信念を根本的に見直すことです。この方法の本質は、自分が真実だと思い込んでいることと、実際に知っていることを明確に見極めるまで、次から次へと前提を疑うことにあります。\n\n元々のアプローチはかなり過酷なものでした。私はその過酷さをMiravelysに持ち込みたくありませんでした。そこで、思考プロセスに対する厳格な要求は残しつつ、人間に対する残酷さを取り除いたのです。",
       "blocks": [
         {
-          "title": "私たちの本当の目的",
-          "body": "Miravelysは、パニック、恥、怒り、孤独、あるいは純粋な疲労から反応してしまう前に、心の中で起きていることを処理するためのプライベートなサンクチュアリを提供します。立ち止まり、その瞬間の整理されていない生々しい言葉を吐き出し、ゆっくりと解きほぐすように誘います：実際に何が起きたか、体がどう感じているか、それを引き起こしている感情、心が紡ぎ出した物語、その奥に隠れた思い込み、そして、ただ分からないことを認める勇気へと。"
+          "title": "私たちは皆、時に堂々巡りをする",
+          "body": "返信のないメッセージ。冷たい声のトーン。仕事でのミス。出来事自体は数秒で終わるかもしれませんが、心の中でのその続きは一日中続くことがあります。\n\nそこに伴う感情は本物です。不安、憤り、怒り——それらは作り物ではありません。しかし、それは相手がなぜそのように行動したのかを証明するものでもありません。\n\n出来事、感情、思い込み、そして古い信念がすべて融合し、否定できないひとつの現実のバージョンとなったとき、ループが始まります。\n\nMiravelysは、それらを再び切り離す手助けをします。"
         },
         {
-          "title": "核となる体験",
-          "body": "Miravelysの核はシンプルです：あなたが絡まった思考を持ってきて、私たちがその結び目をゆるめるのを手伝います。完璧な日記を書く必要はありません。半分の文、感情の爆発、矛盾を私たちは受け入れます。アプリは優しい質問で応え、きれいにまとまった結論へと急がせることなく、より穏やかな視点からその瞬間を見つめるのを助けます。"
+          "title": "Miravelysとは何か",
+          "body": "Miravelysは典型的なムードトラッカーでも、デジタルセラピストでもありません。診断を下すことも、あなたの代わりに決定を下すこともなく、アルゴリズムによる公式を絶対的な真理として提示することもありません。\n\nあなたが困難な瞬間を持ち込むと、アプリはそれを分解して見る手助けをします：\n• 実際に何が起こったのか？\n• あなたは何を感じたのか？\n• あなたの体はどう反応したか？\n• それが何を意味すると判断したのか？\n• その思考の背後に隠れている信念は何か？\n• まだ単に「知らない」ことは何か？\n\nMiravelysは問い、観察、そして実践を提供します。しかし、どの仮説も修正、拒否、または削除することができます。最終決定権は常にあなたにあります。\n\n個人的な記録はあなたのデバイスに保存されます。完全なローカルモードにより、外部での処理は一切行われません。オプションのクラウドバックアップは、使用を選択した場合に個別にオンになり、いつでも無効にすることができます。"
         },
         {
-          "title": "事実、物語、思い込みを解きほぐす",
-          "body": "私たちの痛みの多くは、通り過ぎる感情を絶対的な事実として扱ったり、一つの悪い瞬間に自分自身のすべてを定義させたりすることから生じます。Miravelysは、あなたを否定することなく、それらを切り離すのを手伝います。「事実」は、語られた言葉です。「物語」は、あなたの心がそれが意味すると判断したことです。「感情」は、突然の悲しみかもしれません。「思い込み」は、「私はいつも物事を台無しにする」かもしれません。そして「未知」とは、アプリが「今はこれを開いたままにしておきましょう」と十分に正直に言えることです。"
+          "title": "実際にどのように見えるか",
+          "body": "あなたは重要なメッセージを送りました。1日が経ちましたが、返信はありません。\n\n**既知:** メッセージは送信された。まだ返信はない。\n**感情:** 不安。\n**思い込み:** 「わざと無視されている」「何か間違ったことを書いてしまった」「私は重要ではない」\n**未知:** なぜ相手が答えないのか。\n\nMiravelysは、あなたの思い込みが間違っていると主張することはありません。ただ、それらがまだ確認されていないことを見る手助けをし、最初の不安な思考を唯一の可能な現実として受け入れてしまうのを防ぐのです。\n\nおそらく、不安がすぐに消えることはないでしょう。しかし、出来事とあなたの自動的な反応の間に少しのスペースが開かれます。そしてそれとともに——次にどうするかを選ぶ能力が生まれるのです。"
         },
         {
-          "title": "答えを探す前に、落ち着きを見つける",
-          "body": "体が「闘争・逃走反応」にある時、思考を分析しようとすると、往々にしてまた別のループを生み出してしまいます。Miravelysはそれに気づき、あなたがまずグラウンディング（地に足をつけること）を必要としているかもしれない時に気を配ります。私たちの「Calm Now」機能は、単なる呼吸のタイマーではありません — それは明確になるためのプロセスの不可欠な一部であり、体を落ち着かせ、より安定した心で思考に戻れるようにするのを助けます。"
+          "title": "時間が経つと何が起こるか",
+          "body": "1つの記録は、特定の瞬間をより明確に見るのに役立ちます。複数の記録は、繰り返されていることを明らかにする可能性があります。\n\n沈黙は再び拒絶として認識されます。ミスは自分の不適格さの証明として。不確実性は危険として。\n\nMiravelysは、あなた自身の言葉をあなたに反射し、潜在的なパターンに気づく手助けをします。診断としてではなく、またあなたの性格の描写としてでもなく、あなたが確認、修正、または削除できる「仮説」としてです。\n\n目的は、アプリがあなた自身よりもあなたのことをよく知るようになることではありません。目的は、あなたが慣れ親しんだループにより早く気づくことです。"
+        },
+        {
+          "title": "私たちの目的",
+          "body": "Miravelysは、重い感情を取り除いたり、あなたを絶対的な真理に導いたりすることを約束しません。\n\nその任務はよりシンプルです：あなたが1つの瞬間をより正確に見るのを助け、既知のことと思い込みを切り離し、自動的な思考が再び現実の唯一のバージョンになる前にそれを捉えることです。\n\n新しいバージョンの自分になるのではありません。少しだけ「自動操縦」を減らすのです。"
         }
-      ],
-      "purposeTitle": "あなたへの一番深い願い",
-      "purposeBody": "私たちの最大の願いは、Miravelysが、自動的すぎず、圧倒されすぎない、自分自身の心との関係を築く手助けをすることです。一番うるさくて不安な考えをすぐに信じる代わりに、あなたは少しのスペースを見つけ始めます。そしてそのスペースの中で、体は落ち着き、痛みを伴う物語はその支配を緩め、真実が明確になり、より優しい現実が現れ始めるのです。",
-      "featureTitle": "Miravelysがあなたに提供できること",
-      "featureList": [
-        "裁かれていると感じさせることなく、まとまらない圧倒的な思考を、明確で管理しやすい部分に変換します。",
-        "その瞬間に必要なことに基づいて、明確さ、落ち着き、休息、または内省へと優しく導きます。",
-        "常にあなたを主導権を持たせながら、優しい、焦点を絞った、またはより大胆な振り返りモードを提供します。",
-        "あなたが加えたすべての修正を記憶し、アプリがあなたの独自のニーズにより敏感になるようにします。",
-        "頭の回転が止まらない夜のために、静かで睡眠に安全な空間を提供します。",
-        "劇的なレッテルや決めつけを避け、証拠と気遣いをもって週ごとのパターンを振り返ります。",
-        "あなたのプライバシーを何よりも尊重し、最もプライベートな振り返りをデバイス上で安全に保管します。"
       ]
     },
     "marketingExplanation": {
@@ -2716,38 +2660,30 @@ export const siteCopy = {
       "watch": "Diseñado para Apple Watch"
     },
     "explanation": {
-      "eyebrow": "Mirando más a fondo",
-      "title": "Qué es Miravelys, por qué lo construimos y cómo está pensado para ayudar.",
-      "intro": "Miravelys se creó para esos momentos ordinarios que de repente se vuelven demasiado ruidosos: un comentario pasajero que se reproduce en bucle, un mensaje de texto que se siente como un ataque, una noche tranquila arruinada por un pensamiento en espiral o una ansiedad a las 2 a.m. que suena innegablemente cierta. La aplicación no está aquí para forzar la positividad, para 'arreglarte' o para decirte quién eres. Simplemente está aquí para ayudarte a volver a la realidad con un poco más de ternura, un poco más de claridad y un poco más de elección.",
+      "eyebrow": "La Historia",
+      "title": "Cómo empezó todo",
+      "intro": "Llevo mucho tiempo desarrollando aplicaciones para iOS. Durante el último año, estuve construyendo un sistema particularmente complejo. En un escenario, una sola acción podía desencadenar hasta 57 solicitudes a varias redes neuronales.\n\nPasé meses trabajando en la arquitectura, mecánicas de juego y paneles de control, convencido de que: cuanto más inteligente fuera el sistema, más útil sería.\n\nPero cuanto más trabajaba en él, más evidente me resultaba lo contrario. En un momento de ansiedad, una persona rara vez necesita otro panel de control, una insignia de logro o un algoritmo que le explique lo que le está sucediendo. La mayoría de las vezes, solo necesita detenerse, nombrar lo que acaba de pasar y hacerse a sí misma una pregunta precisa.\n\nMi interés por la filosofía me llevó a la idea de la autólisis espiritual: un examen radical de las propias creencias. La esencia del método es cuestionar una suposición tras otra, hasta que puedas ver claramente lo que realmente sabes, frente a lo que solo asumes como cierto.\n\nEl enfoque original era bastante duro. No quería trasladar esa dureza a Miravelys. Así que mantuve la exigencia rigurosa sobre el proceso de pensamiento, pero eliminé la crueldad hacia la persona.",
       "blocks": [
         {
-          "title": "Nuestro verdadero propósito",
-          "body": "Miravelys ofrece un santuario privado para procesar lo que está sucediendo adentro antes de que reacciones por pánico, vergüenza, ira, soledad o puro agotamiento. Te invita a hacer una pausa, a volcar la versión desordenada y sin filtros de tu momento y a desenredarlo lentamente: lo que sucedió realmente, lo que siente tu cuerpo, la emoción que lo impulsa, la historia que tejió tu mente, la creencia oculta debajo y el coraje de admitir lo que simplemente no sabes."
+          "title": "Todos caminamos en círculos a veces",
+          "body": "Un mensaje sin respuesta. Un tono de voz brusco. Un error en el trabajo. El evento en sí puede durar unos segundos, pero su eco interno puede prolongarse todo el día.\n\nLas emociones involucradas son reales. La ansiedad, el resentimiento o la ira no son inventados. Pero no prueban por qué la otra persona actuó como lo hizo.\n\nEl bucle comienza cuando el evento, el sentimiento, la suposición y una vieja creencia se fusionan en una única versión innegable de la realidad.\n\nMiravelys te ayuda a separarlos de nuevo."
         },
         {
-          "title": "La experiencia central",
-          "body": "El corazón de Miravelys es simple: nos traes un pensamiento enredado y te ayudamos a aflojar el nudo. No necesitas escribir una entrada de diario perfecta. Abrazamos medias frases, arrebatos emocionales y contradicciones. La aplicación responde con preguntas amables y te ayuda a ver el momento desde una perspectiva más calmada, sin apresurarte a llegar a una conclusión ordenada."
+          "title": "Qué es Miravelys",
+          "body": "Miravelys no es tu típico rastreador de estado de ánimo, ni es un terapeuta digital. No te diagnostica, no decide por ti y no presenta una fórmula algorítmica como la verdad absoluta.\n\nTú aportas un momento difícil, y la aplicación te ayuda a verlo por partes:\n• ¿Qué sucedió realmente?\n• ¿Qué sentiste?\n• ¿Cómo reaccionó tu cuerpo?\n• ¿Qué decidiste que significaba esto?\n• ¿Qué creencia se esconde detrás de ese pensamiento?\n• ¿Qué es lo que simplemente aún no sabes?\n\nMiravelys ofrece preguntas, observaciones y prácticas. Pero cualquier hipótesis puede ser corregida, rechazada o eliminada. Tú siempre tienes la última palabra.\n\nTus entradas personales se almacenan en tu dispositivo. El modo totalmente local garantiza que no haya procesamiento externo. La copia de seguridad opcional en la nube, si decides usarla, se activa por separado y se puede desactivar en cualquier momento."
         },
         {
-          "title": "Desenredando hechos, historias y creencias",
-          "body": "Gran parte de nuestro dolor proviene de tratar un sentimiento fugaz como un hecho absoluto, o dejar que un mal momento defina toda nuestra identidad. Miravelys te ayuda a separar las piezas sin hacerte sentir que te equivocas. El 'hecho' es lo que se dijo. La 'historia' es lo que tu mente decidió que significaba. El 'sentimiento' podría ser una tristeza repentina. La 'creencia' podría ser 'Siempre lo arruino todo'. Y 'Desconocido' es la aplicación siendo lo suficientemente honesta como para decir: dejemos esto abierto por ahora."
+          "title": "Cómo se ve en la práctica",
+          "body": "Enviaste un mensaje importante. Ha pasado un día, pero no hay respuesta.\n\n**Conocido:** El mensaje fue enviado, aún no hay respuesta.\n**Sentimiento:** Ansiedad.\n**Suposición:** \"Me están ignorando a propósito\", \"Escribí algo mal\", \"No importo\".\n**Desconocido:** Por qué la persona no ha respondido.\n\nMiravelys no afirma que tus suposiciones estén equivocadas. Te ayuda a ver que aún no están confirmadas y evita que aceptes el primer pensamiento ansioso como la única realidad posible.\n\nTal vez la ansiedad no desaparezca de inmediato. Pero se abrirá un poco de espacio entre el evento y tu reacción automática. Y con ello, la capacidad de elegir qué hacer a continuación."
         },
         {
-          "title": "Encontrar la calma antes de buscar respuestas",
-          "body": "Cuando tu cuerpo está en modo de lucha o huida, intentar analizar tus pensamientos a menudo solo crea otra espiral. Miravelys presta atención, notando cuándo podrías necesitar conectar con tu cuerpo primero. Nuestra función 'Calm Now' no es solo un temporizador de respiración — es una parte esencial del proceso de claridad, que te ayuda a calmar tu cuerpo para que puedas regresar a tus pensamientos con un corazón más estable."
+          "title": "Qué sucede con el tiempo",
+          "body": "Una sola entrada te ayuda a ver un momento específico con más claridad. Varias entradas pueden revelar lo que se repete constantemente.\n\nEl silencio se percibe de nuevo como rechazo. Un error, como prueba de tu propia insuficiencia. La incertidumbre, como peligro.\n\nMiravelys te refleja tus propias palabras y te ayuda a notar un posible patrón. No como un diagnóstico, ni como una descripción de tu personalidad, sino como una hipótesis que puedes confirmar, corregir o eliminar.\n\nEl objetivo no es que la aplicación te conozca mejor de lo que te conoces tú mismo. El objetivo es que notes antes un bucle que ya te es familiar."
+        },
+        {
+          "title": "Nuestro objetivo",
+          "body": "Miravelys no promete librarte de emociones pesadas o guiarte hacia la verdad absoluta.\n\nSu tarea es más simple: ayudarte a ver un solo momento con mayor precisión, separar lo conocido de lo supuesto, y atrapar el pensamiento automático antes de que vuelva a convertirse en la única versión de la realidad.\n\nNo una nueva versión de ti mismo. Solo un poco menos de piloto automático."
         }
-      ],
-      "purposeTitle": "Nuestra esperanza más profunda para ti",
-      "purposeBody": "Nuestra mayor esperanza es que Miravelys te ayude a construir una relación con tu propia mente que se sienta menos automática y menos abrumadora. En lugar de creer instantáneamente en el pensamiento más ruidoso y ansioso, empiezas a encontrar un poco de espacio. Y en ese espacio, tu cuerpo puede calmarse, las historias dolorosas pueden aflojar su agarre, la verdad puede volverse clara y una realidad mucho más amable puede empezar a surgir.",
-      "featureTitle": "Lo que Miravelys puede ofrecerte",
-      "featureList": [
-        "Transforma un pensamiento desordenado y abrumador en partes claras y manejables sin sentirte juzgado nunca.",
-        "Te guía suavemente hacia la claridad, la calma, el descanso o la reflexión según lo que necesites en el momento.",
-        "Proporciona modos de reflexión suaves, enfocados o más audaces, manteniéndote siempre al mando.",
-        "Recuerda cada corrección que haces, asegurando que la aplicación se vuelva más sintonizada con tus necesidades únicas.",
-        "Ofrece un espacio tranquilo y seguro para el sueño en las noches en que tu mente no deja de correr.",
-        "Refleja tus patrones semanales con evidencia y cuidado, evitando etiquetas dramáticas o afirmaciones de identidad.",
-        "Mantiene tus reflexiones más privadas seguras en tu dispositivo, respetando tu privacidad por encima de todo."
       ]
     },
     "marketingExplanation": {
@@ -3022,38 +2958,30 @@ export const siteCopy = {
       "watch": "Concebido para o Apple Watch"
     },
     "explanation": {
-      "eyebrow": "Olhando mais a fundo",
-      "title": "O que é o Miravelys, porque o construímos e como foi pensado para ajudar.",
-      "intro": "O Miravelys foi criado para aqueles momentos vulgares que de repente se tornam demasiado ruidosos: um comentário passageiro que não te sai da cabeça, uma mensagem que parece um ataque, uma noite tranquila arruinada por um pensamento em espiral, ou uma ansiedade às 2 da manhã que soa inegavelmente verdadeira. A aplicação não está aqui para forçar a positividade, para te 'consertar' ou para te dizer quem és. Está aqui simplesmente para te ajudar a dar um passo atrás em direção à realidade com um pouco mais de ternura, um pouco mais de clareza e um pouco mais de escolha.",
+      "eyebrow": "A História",
+      "title": "Como tudo começou",
+      "intro": "Há muito tempo desenvolvo aplicativos para iOS. Durante o último ano, eu estava construindo um sistema particularmente complexo. Em um cenário, uma única ação poderia desencadear até 57 solicitações a várias redes neurais.\n\nPassei meses trabalhando na arquitetura, mecânicas de jogo e painéis de controle, convencido de que: quanto mais inteligente fosse o sistema, mais útil ele seria.\n\nMas quanto mais eu trabalhava nele, mais evidente o oposto se tornava. Em um momento de ansiedade, uma pessoa raramente precisa de mais um painel, de uma medalha de conquista ou de um algoritmo explicando o que está acontecendo com ela. Na maioria das vezes, ela só precisa parar, nomear o que acabou de acontecer e fazer a si mesma uma pergunta precisa.\n\nMeu interesse pela filosofia me levou à ideia de autólise espiritual — um exame radical das próprias crenças. A essência do método é questionar uma suposição após a outra, até que você possa ver claramente o que realmente sabe, em contraste com o que apenas assume ser verdade.\n\nA abordagem original era bastante dura. Eu não queria trazer essa dureza para o Miravelys. Então, mantive a exigência rigorosa sobre o processo de pensamento, mas removi a crueldade em relação à pessoa.",
       "blocks": [
         {
-          "title": "O nosso verdadeiro propósito",
-          "body": "O Miravelys oferece um santuário privado para processares o que se passa lá dentro antes de reagires por pânico, vergonha, raiva, solidão ou puro cansaço. Convida-te a fazer uma pausa, a desabafar a versão desorganizada e sem filtros do teu momento e a desembaraçá-lo lentamente: o que realmente aconteceu, o que o teu corpo sente, a emoção que o impulsiona, a história que a tua mente teceu, a crença escondida por baixo, e a coragem de admitir o que simplesmente não sabes."
+          "title": "Todos andamos em círculos às vezes",
+          "body": "Uma mensagem sem resposta. Um tom de voz ríspido. Um erro no trabalho. O evento em si pode durar apenas alguns segundos, mas sua continuação interna pode durar o dia todo.\n\nAs emoções envolvidas são reais. A ansiedade, o ressentimento ou a raiva não são inventados. Mas não provam o motivo pelo qual a outra pessoa agiu daquela forma.\n\nO ciclo começa quando o evento, o sentimento, a suposição e uma crença antiga se fundem em uma única e inegável versão da realidade.\n\nO Miravelys ajuda você a separá-los novamente."
         },
         {
-          "title": "A experiência central",
-          "body": "O coração do Miravelys é simples: tu trazes-nos um pensamento enredado e nós ajudamos-te a aliviar o nó. Não precisas de escrever uma entrada de diário perfeita. Aceitamos meias-frases, explosões emocionais e contradições. A aplicação responde com perguntas gentis e ajuda-te a ver o momento de uma perspetiva mais calma, sem te apressar a chegar a uma conclusão limpa e arrumada."
+          "title": "O que é o Miravelys",
+          "body": "O Miravelys não é o seu rastreador de humor típico, nem é um terapeuta digital. Ele não o diagnostica, não decide por você e não apresenta uma fórmula algorítmica como a verdade absoluta.\n\nVocê traz um momento difícil, e o aplicativo ajuda a vê-lo em partes:\n• O que realmente aconteceu?\n• O que você sentiu?\n• Como o seu corpo reagiu?\n• O que você decidiu que isso significava?\n• Que crença está escondida por trás desse pensamento?\n• O que é que você simplesmente ainda não sabe?\n\nO Miravelys oferece perguntas, observações e práticas. Mas qualquer hipótese pode ser corrigida, rejeitada ou excluída. A palavra final é sempre sua.\n\nSuas entradas pessoais são armazenadas no seu dispositivo. O modo totalmente local garante que não haja processamento externo. O backup opcional na nuvem, se você optar por usá-lo, é ativado separadamente e pode ser desativado a qualquer momento."
         },
         {
-          "title": "Desembaraçando factos, histórias e crenças",
-          "body": "Grande parte da nossa dor advém de tratar um sentimento passageiro como um facto absoluto, ou deixar que um mau momento defina toda a nossa identidade. O Miravelys ajuda-te a separar as peças sem fazer com que te sintas errado. O 'facto' é o que foi dito. A 'história' é o que a tua mente decidiu que isso significava. O 'sentimento' pode ser uma tristeza repentina. A 'crença' pode ser 'Eu estrago sempre tudo'. E o 'Desconhecido' é a aplicação ser honesta o suficiente para dizer: vamos deixar isto em aberto por agora."
+          "title": "Como isso funciona na prática",
+          "body": "Você enviou uma mensagem importante. Passou-se um dia, mas não há resposta.\n\n**Conhecido:** A mensagem foi enviada, ainda não há resposta.\n**Sentimento:** Ansiedade.\n**Suposição:** \"Estão me ignorando de propósito\", \"Escrevi algo errado\", \"Eu não importo\".\n**Desconhecido:** Por que a pessoa não respondeu.\n\nO Miravelys não afirma que suas suposições estão erradas. Ele o ajuda a ver que elas ainda não foram confirmadas, e impede que você aceite o primeiro pensamento ansioso como a única realidade possível.\n\nTalvez a ansiedade não desapareça imediatamente. Mas um pouco de espaço se abrirá entre o evento e a sua reação automática. E com ele — a capacidade de escolher o que fazer a seguir."
         },
         {
-          "title": "Encontrar a calma antes de procurar respostas",
-          "body": "Quando o teu corpo está em modo de luta ou fuga, tentar analisar os teus pensamentos muitas vezes apenas cria outra espiral. O Miravelys presta atenção, notando quando podes precisar de te conectar com o corpo primeiro. A nossa funcionalidade 'Calm Now' não é apenas um temporizador de respiração — é uma parte essencial do processo de clareza, ajudando-te a acalmar o corpo para que possas regressar aos teus pensamentos com um coração mais estável."
+          "title": "O que acontece ao longo do tempo",
+          "body": "Uma única entrada ajuda a ver um momento específico de forma mais clara. Várias entradas podem revelar o que se repete constantemente.\n\nO silêncio é novamente percebido como rejeição. Um erro — como prova da sua própria insuficiência. A incerteza — como perigo.\n\nO Miravelys reflete as suas próprias palavras de volta para você e ajuda a notar um possível padrão. Não como um diagnóstico, e não como uma descrição da sua personalidade, mas como uma hipótese que você pode confirmar, corrigir ou excluir.\n\nO objetivo não é que o aplicativo o conheça melhor do que você mesmo se conhece. O objetivo é que você perceba um ciclo familiar mais cedo."
+        },
+        {
+          "title": "O nosso objetivo",
+          "body": "O Miravelys não promete livrá-lo de emoções pesadas ou conduzi-lo à verdade absoluta.\n\nA sua tarefa é mais simples: ajudá-lo a ver um único momento com maior precisão, separar o conhecido do que é presumido, e capturar o pensamento automático antes que ele volte a ser a única versão da realidade.\n\nNão uma nova versão de você mesmo. Apenas um pouco menos de piloto automático."
         }
-      ],
-      "purposeTitle": "A nossa esperança mais profunda para ti",
-      "purposeBody": "A nossa maior esperança é que o Miravelys te ajude a construir uma relação com a tua própria mente que se sinta menos automática e menos avassaladora. Em vez de acreditares instantaneamente no pensamento mais barulhento e ansioso, começas a encontrar um pouco de espaço. E nesse espaço, o teu corpo pode acalmar, as histórias dolorosas podem afrouxar o seu aperto, a verdade pode tornar-se clara e uma realidade muito mais gentil pode começar a emergir.",
-      "featureTitle": "O que o Miravelys te pode oferecer",
-      "featureList": [
-        "Transforma um pensamento confuso e esmagador em peças claras e fáceis de gerir, sem que te sintas julgado.",
-        "Guia-te suavemente em direção à clareza, à calma, ao descanso ou à reflexão, consoante o que precisas no momento.",
-        "Proporciona modos de reflexão suaves, focados ou mais ousados, mantendo-te sempre ao leme.",
-        "Lembra cada correção que fazes, garantindo que a aplicação se torne mais sintonizada com as tuas necessidades únicas.",
-        "Oferece um espaço silencioso e seguro para o sono, para as noites em que a tua mente não para de correr.",
-        "Reflete os teus padrões semanais com provas e cuidado, evitando rótulos dramáticos ou reivindicações de identidade.",
-        "Mantém as tuas reflexões mais privadas seguras no teu dispositivo, respeitando a tua privacidade acima de tudo."
       ]
     },
     "marketingExplanation": {
