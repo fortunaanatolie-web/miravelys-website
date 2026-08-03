@@ -336,68 +336,74 @@ export const legalCopy = {
       ]
     },
     "userAgreement": {
-      "title": "Termeni de Utilizare (EULA)",
-      "updated": "Iunie 2026",
-      "intro": "Prin descărcarea și utilizarea Miravelys, acceptați acești Termeni.",
+      "title": "Termeni de utilizare (EULA)",
+      "updated": "Iulie 2026",
+      "intro": "Prin descărcarea sau utilizarea Miravelys, sunteți de acord cu acești Termeni. Dacă nu sunteți de acord, vă rugăm să nu utilizați aplicația.",
       "sections": [
-        {
-          "title": "1. Declinarea responsabilității medicale",
-          "paragraphs": [
-            "Miravelys nu înlocuiește sfatul psihologic sau medical profesionist. Instrumentele sunt doar pentru auto-ajutor. Vă asumați toate riscurile. În caz de criză, contactați imediat serviciile de urgență."
-          ]
-        },
-        {
-          "title": "2. Termenii Abonamentului",
-          "paragraphs": [
-            "Abonamentele se reînnoiesc automat, cu excepția cazului în care sunt anulate cu 24 de ore înainte. Gestionați anulările prin App Store. Rambursările sunt procesate exclusiv de Apple."
-          ]
-        },
-        {
-          "title": "3. Proprietate Intelectuală",
-          "paragraphs": [
-            "Este interzisă ingineria inversă. Sunetele și metodologiile aparțin Miravelys. Dvs. dețineți drepturile depline asupra notițelor din jurnal."
-          ]
-        },
-        {
-          "title": "4. Limitarea Răspunderii",
-          "paragraphs": [
-            "Aplicația este furnizată „AȘA CUM ESTE”. În limita maximă permisă de lege, Miravelys nu este responsabilă pentru daune indirecte."
-          ]
-        }
+            {
+                  "title": "1. Declinarea responsabilității medicale și psihologice (CRITIC)",
+                  "paragraphs": [
+                        "Miravelys nu este un dispozitiv medical și nu înlocuiește sfatul profesional psihologic, psihiatric sau medical. Instrumentele sunt doar pentru auto-ajutor și mindfulness. Vă asumați toate riscurile asociate cu bunăstarea dvs. Într-o situație de criză, contactați imediat serviciile de urgență."
+                  ]
+            },
+            {
+                  "title": "2. Termenii abonamentului și plăți",
+                  "paragraphs": [
+                        "Oferim abonamente cu reînnoire automată (de ex., lunar sau anual) și o opțiune unică pe viață. Plata este debitată din contul dvs. Apple ID prin App Store la confirmarea achiziției.",
+                        "Abonamentele se reînnoiesc automat, cu excepția cazului în care le anulați cu cel puțin 24 de ore înainte de sfârșitul perioadei curente. Contul dvs. va fi taxat pentru reînnoire cu 24 de ore înainte de sfârșitul perioadei curente.",
+                        "Gestionați sau anulați abonamentele cu reînnoire automată din setările Apple ID: Configurări → Apple ID → Abonamente. Rambursările sunt gestionate exclusiv de Apple.",
+                        "Opțiunea de Restaurare a achizițiilor este disponibilă în aplicație pentru drepturile cumpărate anterior pe același Apple ID."
+                  ]
+            },
+            {
+                  "title": "3. Conduita utilizatorului și Proprietatea Intelectuală",
+                  "paragraphs": [
+                        "Nu aveți voie să faceți inginerie inversă a aplicației sau să o utilizați ilegal. Tot conținutul audio, metodologiile și designul sunt proprietatea intelectuală a Miravelys. Păstrați dreptul de proprietate deplin asupra notițelor din jurnal."
+                  ]
+            },
+            {
+                  "title": "4. Limitarea răspunderii",
+                  "paragraphs": [
+                        "Aplicația este furnizată „CA ATARE”. În măsura maximă permisă de lege, Miravelys nu este responsabilă pentru daunele indirecte sau accidentale care decurg din utilizarea aplicației."
+                  ]
+            }
       ]
-    },
+},
     "privacyPolicy": {
-      "title": "Politica de Confidențialitate",
-      "updated": "Iunie 2026",
-      "intro": "Bun venit la Miravelys. Ne angajăm să vă protejăm confidențialitatea și să ne asigurăm că reflecțiile dvs. rămân strict confidențiale.",
+      "title": "Politica de confidențialitate",
+      "updated": "Iulie 2026",
+      "intro": "Bun venit la Miravelys. Ne angajăm să vă protejăm confidențialitatea și să ne asigurăm că reflecțiile dvs. personale rămân strict confidențiale.",
       "sections": [
-        {
-          "title": "1. Date pe care NU le colectăm",
-          "paragraphs": [
-            "Toate jurnalele sunt stocate strict local pe dispozitiv și sincronizate prin iCloud. Nu avem acces să le citim sau să le analizăm.",
-            "Audio-ul pentru exercițiile de respirație este procesat local în timp real. Nu este niciodată înregistrat, salvat sau transmis."
-          ]
-        },
-        {
-          "title": "2. Informații pe care le colectăm",
-          "paragraphs": [
-            "Dacă creați un cont, colectăm email-ul doar pentru recuperare. Folosim RevenueCat pentru gestionarea anonimă a abonamentelor. Cu permisiunea dvs., putem adăuga minute în Apple HealthKit (datele nu sunt vândute). Colectăm și rapoarte de erori anonime."
-          ]
-        },
-        {
-          "title": "3. Confidențialitatea copiilor (COPPA, GDPR)",
-          "paragraphs": [
-            "Aplicația este 12+. Nu colectăm date de la copii sub 13 ani (SUA) sau 16 ani (UE) fără consimțământ parental verificabil. Contact: support@miravelys.com."
-          ]
-        },
-        {
-          "title": "4. Terțe părți și drepturile dvs.",
-          "paragraphs": [
-            "Partajăm date minime cu Apple și RevenueCat strict pentru funcționare. Aveți dreptul (GDPR, CCPA) să vă accesați, rectificați sau ștergeți datele. Puteți șterge contul direct din aplicație."
-          ]
-        }
+            {
+                  "title": "1. Date locale și private",
+                  "paragraphs": [
+                        "Miravelys este construită cu o arhitectură „Privacy-First” (Confidențialitate în primul rând). Toate notițele de jurnal și reflecțiile sunt stocate strict local pe dispozitivul dvs. în mod implicit (Stocare locală criptată). Nu găzduim aceste date pe serverele noastre și nu avem acces pentru a le citi sau analiza.",
+                        "Sistemul audio pentru exercițiile de respirație este procesat local în timp real. Acesta nu este niciodată înregistrat, salvat, transmis sau partajat."
+                  ]
+            },
+            {
+                  "title": "2. Procesarea informațiilor",
+                  "paragraphs": [
+                        "Miravelys nu vă cere să creați un cont sau să furnizați o adresă de e-mail. Aplicația este concepută pentru utilizare locală și anonimă.",
+                        "Apple gestionează plățile și drepturile de acces prin achizițiile în aplicație StoreKit 2. Nu primim și nu stocăm numărul complet al cardului dvs. de plată.",
+                        "Cu permisiunea dvs. explicită, putem înregistra „Minute de Mindfulness” în Apple HealthKit (aceste date nu sunt vândute niciodată). Colectăm, de asemenea, rapoarte de eroare anonimizate pentru a îmbunătăți aplicația."
+                  ]
+            },
+            {
+                  "title": "3. Confidențialitatea copiilor (COPPA și GDPR)",
+                  "paragraphs": [
+                        "Aplicația este evaluată 12+. Nu colectăm cu bună știință informații personale de la copii sub 13 ani (SUA) sau 16 ani (UE) fără consimțământul verificabil al părinților. Contactați support@miravelys.com dacă credeți că un minor a furnizat date."
+                  ]
+            },
+            {
+                  "title": "4. Controale și Drepturile dvs.",
+                  "paragraphs": [
+                        "Vă puteți exporta datele sau puteți șterge complet datele locale în orice moment, direct din setările de Confidențialitate din aplicație.",
+                        "Deoarece datele sunt stocate în principal pe dispozitivul dvs., procesarea are loc acolo unde utilizați aplicația. În funcție de jurisdicția dvs., aveți dreptul de a vă accesa sau șterge datele, ceea ce se poate realiza folosind controalele locale încorporate ale aplicației."
+                  ]
+            }
       ]
-    },
+},
     "cookies": {
       "title": "Cookie-uri și stocare",
       "updated": "Iunie 2026",
@@ -445,68 +451,74 @@ export const legalCopy = {
       ]
     },
     "userAgreement": {
-      "title": "Conditions de Service (EULA)",
-      "updated": "Juin 2026",
-      "intro": "En utilisant Miravelys, vous acceptez ces Conditions.",
+      "title": "Conditions d'utilisation (CLUF)",
+      "updated": "Juillet 2026",
+      "intro": "En téléchargeant ou en utilisant Miravelys, vous acceptez ces Conditions. Si vous n'êtes pas d'accord, veuillez ne pas utiliser l'application.",
       "sections": [
-        {
-          "title": "1. Avertissement Médical (CRITIQUE)",
-          "paragraphs": [
-            "Miravelys ne remplace pas un avis médical ou psychologique professionnel. Outils d'auto-assistance uniquement. En cas de crise, contactez les urgences."
-          ]
-        },
-        {
-          "title": "2. Abonnements",
-          "paragraphs": [
-            "Les abonnements se renouvellent automatiquement sauf annulation 24h avant. Géré via l'App Store. Apple gère les remboursements."
-          ]
-        },
-        {
-          "title": "3. Propriété Intellectuelle",
-          "paragraphs": [
-            "Ne rétro-concevez pas l'Application. L'audio et les méthodologies appartiennent à Miravelys. Vous possédez vos entrées de journal."
-          ]
-        },
-        {
-          "title": "4. Limite de Responsabilité",
-          "paragraphs": [
-            "Fourni « TEL QUEL ». Nous déclinons toute responsabilité pour les dommages indirects liés à l'utilisation."
-          ]
-        }
+            {
+                  "title": "1. Avis médical et psychologique (CRITIQUE)",
+                  "paragraphs": [
+                        "Miravelys n'est pas un dispositif médical et ne remplace pas un avis professionnel psychologique, psychiatrique ou médical. Les outils sont uniquement destinés à l'auto-assistance et à la pleine conscience. Vous assumez tous les risques liés à votre bien-être. En cas de crise, contactez immédiatement les services d'urgence."
+                  ]
+            },
+            {
+                  "title": "2. Conditions d'abonnement et paiements",
+                  "paragraphs": [
+                        "Nous proposons des abonnements auto-renouvelables (par ex., mensuels ou annuels) et une option à vie unique. Le paiement est facturé sur votre identifiant Apple via l'App Store lors de la confirmation de l'achat.",
+                        "Les abonnements se renouvellent automatiquement sauf annulation au moins 24 heures avant la fin de la période en cours. Votre compte sera facturé pour le renouvellement dans les 24 heures précédant la fin de la période en cours.",
+                        "Gérez ou annulez les abonnements auto-renouvelables dans les paramètres de votre identifiant Apple : Réglages → Identifiant Apple → Abonnements. Les remboursements sont gérés exclusivement par Apple.",
+                        "L'option Restaurer les achats est disponible dans l'application pour les droits précédemment achetés sur le même identifiant Apple."
+                  ]
+            },
+            {
+                  "title": "3. Conduite de l'utilisateur et Propriété Intellectuelle",
+                  "paragraphs": [
+                        "Vous ne pouvez pas rétroconcevoir l'application ou l'utiliser illégalement. L'ensemble de l'audio, des méthodologies et du design sont la propriété intellectuelle de Miravelys. Vous conservez l'entière propriété de vos entrées de journal."
+                  ]
+            },
+            {
+                  "title": "4. Limitation de responsabilité",
+                  "paragraphs": [
+                        "L'application est fournie « TELLE QUELLE ». Dans toute la mesure permise par la loi, Miravelys n'est pas responsable des dommages indirecte ou accessoires découlant de votre utilisation de l'application."
+                  ]
+            }
       ]
-    },
+},
     "privacyPolicy": {
-      "title": "Politique de Confidentialité",
-      "updated": "Juin 2026",
-      "intro": "Bienvenue sur Miravelys. Nous nous engageons à protéger votre vie privée et à garantir que vos réflexions restent confidentielles.",
+      "title": "Politique de confidentialité",
+      "updated": "Juillet 2026",
+      "intro": "Bienvenue sur Miravelys. Nous nous engageons à protéger votre vie privée et à garantir que vos réflexions personnelles restent strictement confidentielles.",
       "sections": [
-        {
-          "title": "1. Données que nous NE collectons PAS",
-          "paragraphs": [
-            "Vos journaux sont stockés localement sur votre appareil et synchronisés via votre iCloud. Nous n'y avons aucun accès.",
-            "L'audio pour les exercices respiratoires est traité localement. Il n'est jamais enregistré, sauvegardé ou transmis."
-          ]
-        },
-        {
-          "title": "2. Informations que nous collectons",
-          "paragraphs": [
-            "L'email (si compte créé) sert uniquement à la récupération. Les abonnements sont gérés via RevenueCat de manière anonyme. Avec votre accord, nous utilisons Apple HealthKit. Nous collectons aussi des rapports de bugs anonymisés."
-          ]
-        },
-        {
-          "title": "3. Vie privée des enfants",
-          "paragraphs": [
-            "Classification 12+. Nous ne collectons pas les données des moins de 13 ans (USA) ou 16 ans (UE) sans accord parental. Contact : support@miravelys.com."
-          ]
-        },
-        {
-          "title": "4. Vos droits (RGPD, CCPA)",
-          "paragraphs": [
-            "Nous partageons un minimum de données avec Apple et RevenueCat. Vous pouvez accéder, modifier ou supprimer vos données et votre compte via l'application."
-          ]
-        }
+            {
+                  "title": "1. Données locales et privées",
+                  "paragraphs": [
+                        "Miravelys est construite avec une architecture axée sur la confidentialité. Toutes les entrées de journal et les réflexions sont stockées strictement localement sur votre appareil par défaut (Stockage local crypté). Nous n'hébergeons pas ces données sur nos serveurs, et nous n'avons aucun accès pour les lire ou les analyser.",
+                        "L'audio des exercices de respiration est traité localement en temps réel. Il n'est jamais enregistré, sauvegardé, transmis ou partagé."
+                  ]
+            },
+            {
+                  "title": "2. Traitement des informations",
+                  "paragraphs": [
+                        "Miravelys ne vous oblige pas à créer un compte ou à fournir une adresse e-mail. L'application est conçue pour une utilisation locale et anonyme.",
+                        "Apple gère les paiements et les droits via les achats intégrés StoreKit 2. Nous ne recevons ni ne stockons votre numéro de carte de paiement complet.",
+                        "Avec votre autorisation explicite, nous pouvons enregistrer des « Minutes de pleine conscience » dans Apple HealthKit (ces données ne sont jamais vendues). Nous collectons également des rapports de plantage anonymisés pour améliorer l'application."
+                  ]
+            },
+            {
+                  "title": "3. Vie privée des enfants (COPPA & RGPD)",
+                  "paragraphs": [
+                        "L'application est classée 12+. Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants de moins de 13 ans (États-Unis) ou 16 ans (UE) sans un consentement parental vérifiable. Contactez support@miravelys.com si vous pensez qu'un mineur a fourni des données."
+                  ]
+            },
+            {
+                  "title": "4. Vos contrôles et vos droits",
+                  "paragraphs": [
+                        "Vous pouvez exporter vos données ou supprimer complètement vos données locales à tout moment directement depuis les paramètres de Confidentialité de l'application.",
+                        "Étant donné que les données sont principalement stockées sur votre appareil, le traitement a lieu là où vous utilisez l'application. Selon votre juridiction, vous avez le droit d'accéder à vos données ou de les effacer, ce qui peut être accompli en utilisant les contrôles locaux intégrés de l'application."
+                  ]
+            }
       ]
-    },
+},
     "cookies": {
       "title": "Cookies et stockage",
       "updated": "Juin 2026",
@@ -543,67 +555,73 @@ export const legalCopy = {
     },
     "userAgreement": {
       "title": "सेवा की शर्तें (EULA)",
-      "updated": "जून 2026",
-      "intro": "Miravelys का उपयोग करके, आप इन शर्तों से सहमत हैं।",
+      "updated": "जुलाई 2026",
+      "intro": "Miravelys को डाउनलोड या उपयोग करके, आप इन शर्तों से सहमत होते हैं। यदि आप सहमत नहीं हैं, तो कृपया ऐप का उपयोग न करें।",
       "sections": [
-        {
-          "title": "1. चिकित्सा अस्वीकरण (महत्वपूर्ण)",
-          "paragraphs": [
-            "Miravelys पेशेवर मनोवैज्ञानिक या चिकित्सा सलाह का विकल्प नहीं है। यह केवल स्वयं सहायता के लिए है। संकट की स्थिति में, आपातकालीन सेवाओं से संपर्क करें।"
-          ]
-        },
-        {
-          "title": "2. सदस्यता शर्तें",
-          "paragraphs": [
-            "सदस्यता स्वतः-नवीनीकृत होती है जब तक कि 24 घंटे पहले रद्द न की जाए। ऐप स्टोर सेटिंग्स के माध्यम से रद्द करें। रिफंड Apple द्वारा संभाले जाते हैं।"
-          ]
-        },
-        {
-          "title": "3. बौद्धिक संपदा",
-          "paragraphs": [
-            "ऑडियो और कार्यप्रणाली Miravelys की संपत्ति हैं। आप अपनी जर्नल प्रविष्टियों के पूर्ण स्वामी हैं।"
-          ]
-        },
-        {
-          "title": "4. दायित्व की सीमा",
-          "paragraphs": [
-            "ऐप \"जैसा है\" प्रदान किया जाता है। Miravelys अप्रत्यक्ष नुकसान के लिए उत्तरदायी नहीं है।"
-          ]
-        }
+            {
+                  "title": "1. चिकित्सा और मनोवैज्ञानिक अस्वीकरण (महत्वपूर्ण)",
+                  "paragraphs": [
+                        "Miravelys कोई चिकित्सा उपकरण नहीं है या पेशेवर मनोवैज्ञानिक, मनोरोग, या चिकित्सा सलाह का विकल्प नहीं है। उपकरण केवल स्वयं सहायता और माइंडफुलनेस के लिए हैं। आप अपने स्वास्थ्य से जुड़े सभी जोखिमों को मानते हैं। संकट की स्थिति में, तुरंत आपातकालीन सेवाओं से संपर्क करें।"
+                  ]
+            },
+            {
+                  "title": "2. सदस्यता शर्तें और भुगतान",
+                  "paragraphs": [
+                        "हम स्वतः-नवीनीकरण सदस्यता (जैसे, मासिक या वार्षिक) और एक बार के आजीवन विकल्प की पेशकश करते हैं। खरीदारी की पुष्टि होने पर आपके Apple ID पर App Store के माध्यम से शुल्क लिया जाता है।",
+                        "जब तक आप वर्तमान अवधि के अंत से कम से कम 24 घंटे पहले रद्द नहीं करते, सदस्यता स्वचालित रूप से नवीनीकृत हो जाती है। वर्तमान अवधि के अंत से 24 घंटे के भीतर नवीनीकरण के लिए आपके खाते से शुल्क लिया जाएगा।",
+                        "अपनी Apple ID सेटिंग्स में स्वतः-नवीनीकरण सदस्यताओं का प्रबंधन या रद्दीकरण करें: सेटिंग्स → Apple ID → सदस्यताएँ। धनवापसी विशेष रूप से Apple द्वारा नियंत्रित की जाती है।",
+                        "उसी Apple ID पर पहले से खरीदे गए अधिकारों के लिए ऐप में 'खरीदारी पुनर्स्थापित करें' उपलब्ध है।"
+                  ]
+            },
+            {
+                  "title": "3. उपयोगकर्ता आचरण और बौद्धिक संपदा",
+                  "paragraphs": [
+                        "आप ऐप को रिवर्स इंजीनियर नहीं कर सकते या इसका अवैध रूप से उपयोग नहीं कर सकते। सभी ऑडियो, कार्यप्रणाली और डिज़ाइन Miravelys की बौद्धिक संपदा हैं। आप अपनी जर्नल प्रविष्टियों का पूर्ण स्वामित्व बनाए रखते हैं।"
+                  ]
+            },
+            {
+                  "title": "4. दायित्व की सीमा",
+                  "paragraphs": [
+                        "ऐप \"जैसी है\" प्रदान की जाती है। कानून द्वारा अनुमत अधिकतम सीमा तक, Miravelys आपके ऐप के उपयोग से उत्पन्न होने वाले अप्रत्यक्ष या आकस्मिक नुकसान के लिए उत्तरदायी नहीं है।"
+                  ]
+            }
       ]
-    },
+},
     "privacyPolicy": {
       "title": "गोपनीयता नीति",
-      "updated": "जून 2026",
-      "intro": "Miravelys में आपका स्वागत है। हम आपकी गोपनीयता की रक्षा के लिए प्रतिबद्ध हैं।",
+      "updated": "जुलाई 2026",
+      "intro": "Miravelys में आपका स्वागत है। हम आपकी गोपनीयता की रक्षा करने और यह सुनिश्चित करने के लिए प्रतिबद्ध हैं कि आपके व्यक्तिगत विचार पूरी तरह से गोपनीय रहें।",
       "sections": [
-        {
-          "title": "1. डेटा जो हम एकत्र नहीं करते हैं",
-          "paragraphs": [
-            "सभी जर्नल प्रविष्टियां आपके डिवाइस पर स्थानीय रूप से संग्रहीत होती हैं और आपके iCloud के माध्यम से सिंक होती हैं। हम उन्हें पढ़ या एक्सेस नहीं कर सकते।",
-            "सांस लेने के व्यायाम के लिए ऑडियो को डिवाइस पर ही प्रोसेस किया जाता है और कभी भी रिकॉर्ड या साझा नहीं किया जाता।"
-          ]
-        },
-        {
-          "title": "2. हम जो जानकारी एकत्र करते हैं",
-          "paragraphs": [
-            "ईमेल (वैकल्पिक) केवल खाता रिकवरी के लिए उपयोग किया जाता है। RevenueCat सदस्यता प्रबंधन के लिए है। हम आपकी अनुमति से Apple HealthKit का उपयोग कर सकते हैं।"
-          ]
-        },
-        {
-          "title": "3. बच्चों की गोपनीयता",
-          "paragraphs": [
-            "आयु रेटिंग 12+। हम माता-पिता की सहमति के बिना 13 (USA) या 16 (EU) से कम उम्र के बच्चों का डेटा एकत्र नहीं करते हैं।"
-          ]
-        },
-        {
-          "title": "4. आपके अधिकार",
-          "paragraphs": [
-            "आप ऐप में अपना डेटा या खाता सीधे एक्सेस और हटा सकते हैं। हम न्यूनतम डेटा Apple और RevenueCat के साथ साझा करते हैं।"
-          ]
-        }
+            {
+                  "title": "1. स्थानीय और निजी डेटा",
+                  "paragraphs": [
+                        "Miravelys को \"गोपनीयता-प्रथम\" वास्तुकला के साथ बनाया गया है। सभी जर्नल प्रविष्टियाँ और विचार डिफ़ॉल्ट रूप से आपके डिवाइस पर पूरी तरह से स्थानीय रूप से संग्रहीत किए जाते हैं (स्थानीय एन्क्रिप्टेड स्टोरेज)। हम इस डेटा को अपने सर्वर पर होस्ट नहीं करते हैं, और हमें इसे पढ़ने या विश्लेषण करने की कोई पहुँच नहीं है।",
+                        "सांस लेने के व्यायाम के लिए ऑडियो को वास्तविक समय में स्थानीय रूप से संसाधित किया जाता है। इसे कभी भी रिकॉर्ड, सहेजा, प्रसारित या साझा नहीं किया जाता है।"
+                  ]
+            },
+            {
+                  "title": "2. सूचना प्रसंस्करण",
+                  "paragraphs": [
+                        "Miravelys को आपको खाता बनाने या ईमेल पता प्रदान करने की आवश्यकता नहीं है। ऐप स्थानीय, गुमनाम उपयोग के लिए डिज़ाइन किया गया है।",
+                        "Apple, StoreKit 2 इन-ऐप खरीदारी के माध्यम से भुगतान और अधिकारों को संभालता है। हम आपका पूरा भुगतान कार्ड नंबर प्राप्त या संग्रहीत नहीं करते हैं।",
+                        "आपकी स्पष्ट अनुमति के साथ, हम Apple HealthKit में \"माइंडफुलनेस मिनट्स\" लॉग कर सकते हैं (यह डेटा कभी नहीं बेचा जाता है)। हम ऐप को बेहतर बनाने के लिए अनाम क्रैश रिपोर्ट भी एकत्र करते हैं।"
+                  ]
+            },
+            {
+                  "title": "3. बच्चों की गोपनीयता (COPPA और GDPR)",
+                  "paragraphs": [
+                        "ऐप को 12+ रेटिंग दी गई है। हम 13 (USA) या 16 (EU) वर्ष से कम उम्र के बच्चों से सत्यापन योग्य माता-पिता की सहमति के बिना जानबूझकर व्यक्तिगत जानकारी एकत्र नहीं करते हैं। यदि आपको लगता है कि किसी नाबालिग ने डेटा प्रदान किया है तो support@miravelys.com पर संपर्क करें।"
+                  ]
+            },
+            {
+                  "title": "4. आपके नियंत्रण और अधिकार",
+                  "paragraphs": [
+                        "आप ऐप के भीतर गोपनीयता सेटिंग्स से सीधे अपना डेटा निर्यात कर सकते हैं या किसी भी समय अपना स्थानीय डेटा पूरी तरह से हटा सकते हैं।",
+                        "चूंकि डेटा मुख्य रूप से आपके डिवाइस पर संग्रहीत होता है, इसलिए प्रसंस्करण वहीं होता है जहां आप ऐप का उपयोग करते हैं। आपके अधिकार क्षेत्र के आधार पर, आपको अपने डेटा तक पहुँचने या उसे मिटाने का अधिकार है, जिसे ऐप के अंतर्निहित स्थानीय नियंत्रणों का उपयोग करके पूरा किया जा सकता है।"
+                  ]
+            }
       ]
-    },
+},
     "cookies": {
       "title": "कुकीज़ और स्टोरेज",
       "updated": "जून 2026",
@@ -640,67 +658,73 @@ export const legalCopy = {
     },
     "userAgreement": {
       "title": "服务条款 (EULA)",
-      "updated": "2026年6月",
-      "intro": "下载或使用 Miravelys，即表示您同意本条款。",
+      "updated": "2026年7月",
+      "intro": "通过下载或使用 Miravelys，您同意这些条款。如果您不同意，请不要使用本应用程序。",
       "sections": [
-        {
-          "title": "1. 医疗与心理免责声明 (重要)",
-          "paragraphs": [
-            "Miravelys 不能替代专业的医疗、心理或精神诊断与治疗。仅用于自我帮助和正念。遇到心理危机时，请立即联系紧急服务部门。"
-          ]
-        },
-        {
-          "title": "2. 订阅条款",
-          "paragraphs": [
-            "订阅将自动续订，除非在期满前 24 小时取消。请通过 App Store 设置管理。退款由 Apple 处理。"
-          ]
-        },
-        {
-          "title": "3. 知识产权与用户行为",
-          "paragraphs": [
-            "禁止对应用进行逆向工程。应用内的音频、方法和设计属 Miravelys 所有。您保留日记的完整所有权。"
-          ]
-        },
-        {
-          "title": "4. 责任限制",
-          "paragraphs": [
-            "应用“按原样”提供。Miravelys 对因使用本应用而产生的间接损害不承担任何责任。"
-          ]
-        }
+            {
+                  "title": "1. 医疗和心理免责声明（重要）",
+                  "paragraphs": [
+                        "Miravelys 不是医疗设备，也不能替代专业的心理、精神或医疗建议。这些工具仅用于自助和正念。您承担与您的福祉相关的所有风险。在危机情况下，请立即联系紧急服务部门。"
+                  ]
+            },
+            {
+                  "title": "2. 订阅条款和付款",
+                  "paragraphs": [
+                        "我们提供自动续订的订阅（例如，按月或按年）以及一次性终身选项。在确认购买时，将通过 App Store 向您的 Apple ID 收费。",
+                        "除非您在当前订阅期结束前至少 24 小时取消，否则订阅会自动续订。您的帐户将在当前订阅期结束前 24 小时内被收取续订费用。",
+                        "在您的 Apple ID 设置中管理或取消自动续订订阅：设置 → Apple ID → 订阅。退款完全由 Apple 处理。",
+                        "您可以在应用程序中使用“恢复购买”来恢复之前在同一 Apple ID 上购买的权益。"
+                  ]
+            },
+            {
+                  "title": "3. 用户行为和知识产权",
+                  "paragraphs": [
+                        "您不得对应用程序进行逆向工程或非法使用它。所有音频、方法和设计都是 Miravelys 的知识产权。您保留对您的日记条目的完全所有权。"
+                  ]
+            },
+            {
+                  "title": "4. 责任限制",
+                  "paragraphs": [
+                        "应用程序按“原样”提供。在法律允许的最大范围内，Miravelys 不对因您使用本应用程序而引起的间接或附带损害负责。"
+                  ]
+            }
       ]
-    },
+},
     "privacyPolicy": {
       "title": "隐私政策",
-      "updated": "2026年6月",
+      "updated": "2026年7月",
       "intro": "欢迎来到 Miravelys。我们致力于保护您的隐私并确保您的个人反思绝对保密。",
       "sections": [
-        {
-          "title": "1. 我们不收集的数据",
-          "paragraphs": [
-            "所有日记条目都严格存储在您的本地设备上，并通过您的 Apple iCloud 安全同步。我们无法访问或读取它们。",
-            "用于呼吸练习的音频在本地实时处理。它绝不会被记录、保存或传输。"
-          ]
-        },
-        {
-          "title": "2. 我们收集的信息",
-          "paragraphs": [
-            "如果您创建帐户，您的电子邮件仅用于帐户恢复。我们使用 RevenueCat 匿名管理订阅。经您允许，我们会使用 Apple HealthKit，且绝不出售该数据。"
-          ]
-        },
-        {
-          "title": "3. 儿童隐私 (COPPA & GDPR)",
-          "paragraphs": [
-            "年龄分级：12+。未经父母同意，我们不会收集 13 岁（美国）或 16 岁（欧盟）以下儿童的个人信息。"
-          ]
-        },
-        {
-          "title": "4. 您的权利",
-          "paragraphs": [
-            "您可以直接在应用程序中访问、修改或删除您的帐户和数据。我们仅为了运营应用程序与 Apple 和 RevenueCat 共享最低限度的数据。"
-          ]
-        }
+            {
+                  "title": "1. 本地和私人数据",
+                  "paragraphs": [
+                        "Miravelys 采用“隐私至上”的架构构建。默认情况下，所有日记条目和反思都严格本地存储在您的设备上（本地加密存储）。我们不会在我们的服务器上托管此数据，也没有权限读取或分析它。",
+                        "用于呼吸练习的音频在本地实时处理。它绝不会被记录、保存、传输或共享。"
+                  ]
+            },
+            {
+                  "title": "2. 信息处理",
+                  "paragraphs": [
+                        "Miravelys 不需要您创建帐户或提供电子邮件地址。该应用程序专为本地、匿名使用而设计。",
+                        "Apple 通过 StoreKit 2 应用内购买处理付款和权益。我们不会接收或存储您的完整支付卡号。",
+                        "在您明确允许的情况下，我们可能会将“正念分钟数”记录到 Apple HealthKit（这些数据绝不会被出售）。我们还会收集匿名的崩溃报告以改进应用程序。"
+                  ]
+            },
+            {
+                  "title": "3. 儿童隐私 (COPPA & GDPR)",
+                  "paragraphs": [
+                        "该应用程序的分级为 12+。在没有可验证的父母同意的情况下，我们不会有意收集 13 岁（美国）或 16 岁（欧盟）以下儿童的个人信息。如果您认为未成年人提供了数据，请联系 support@miravelys.com。"
+                  ]
+            },
+            {
+                  "title": "4. 您的控制权和权利",
+                  "paragraphs": [
+                        "您可以随时直接从应用程序内的隐私设置中导出您的数据或完全删除您的本地数据。",
+                        "由于数据主要存储在您的设备上，因此处理会在您使用应用程序的地方进行。根据您所在的司法管辖区，您有权访问或删除您的数据，这可以使用应用程序内置的本地控制功能来完成。"
+                  ]
+            }
       ]
-    },
+},
     "cookies": {
       "title": "Cookie 与存储",
       "updated": "2026年6月",
@@ -737,67 +761,73 @@ export const legalCopy = {
     },
     "userAgreement": {
       "title": "Nutzungsbedingungen (EULA)",
-      "updated": "Juni 2026",
-      "intro": "Durch die Nutzung von Miravelys stimmen Sie diesen Bedingungen zu.",
+      "updated": "Juli 2026",
+      "intro": "Durch das Herunterladen oder die Nutzung von Miravelys stimmen Sie diesen Bedingungen zu. Wenn Sie nicht zustimmen, nutzen Sie die App bitte nicht.",
       "sections": [
-        {
-          "title": "1. Medizinischer Haftungsausschluss (WICHTIG)",
-          "paragraphs": [
-            "Miravelys ist kein Ersatz für professionelle medizinische oder psychologische Behandlung. Wenden Sie sich in Krisensituationen an den Notruf."
-          ]
-        },
-        {
-          "title": "2. Abonnementbedingungen",
-          "paragraphs": [
-            "Abonnements verlängern sich automatisch, wenn sie nicht 24 Stunden vorher gekündigt werden. Rückerstattungen werden ausschließlich von Apple abgewickelt."
-          ]
-        },
-        {
-          "title": "3. Geistiges Eigentum",
-          "paragraphs": [
-            "Audio und Methodik sind Eigentum von Miravelys. Sie behalten das volle Eigentum an Ihren Tagebucheinträgen."
-          ]
-        },
-        {
-          "title": "4. Haftungsbeschränkung",
-          "paragraphs": [
-            "Die App wird \"WIE BESEHEN\" bereitgestellt. Wir haften nicht für indirekte Schäden, die aus der Nutzung der App entstehen."
-          ]
-        }
+            {
+                  "title": "1. Medizinischer & psychologischer Haftungsausschluss (WICHTIG)",
+                  "paragraphs": [
+                        "Miravelys ist kein medizinisches Gerät und kein Ersatz für professionelle psychologische, psychiatrische oder medizinische Beratung. Die Werkzeuge dienen nur der Selbsthilfe und Achtsamkeit. Sie übernehmen alle Risiken, die mit Ihrem Wohlbefinden verbunden sind. In einer Krise wenden Sie sich sofort an den Notdienst."
+                  ]
+            },
+            {
+                  "title": "2. Abonnementbedingungen & Zahlungen",
+                  "paragraphs": [
+                        "Wir bieten sich automatisch verlängernde Abonnements (z. B. monatlich oder jährlich) und eine einmalige Lifetime-Option an. Die Zahlung wird bei der Kaufbestätigung über den App Store von Ihrer Apple-ID abgebucht.",
+                        "Abonnements verlängern sich automatisch, es sei denn, Sie kündigen mindestens 24 Stunden vor Ablauf des aktuellen Zeitraums. Ihr Konto wird innerhalb von 24 Stunden vor Ablauf des aktuellen Zeitraums für die Verlängerung belastet.",
+                        "Verwalten oder kündigen Sie sich automatisch verlängernde Abonnements in Ihren Apple-ID-Einstellungen: Einstellungen → Apple-ID → Abonnements. Rückerstattungen werden ausschließlich von Apple abgewickelt.",
+                        "Käufe wiederherstellen ist in der App für zuvor auf derselben Apple-ID erworbene Berechtigungen verfügbar."
+                  ]
+            },
+            {
+                  "title": "3. Benutzerverhalten & Geistiges Eigentum",
+                  "paragraphs": [
+                        "Sie dürfen die App nicht zurückentwickeln oder illegal nutzen. Alle Audioinhalte, Methoden und Designs sind geistiges Eigentum von Miravelys. Sie behalten das volle Eigentum an Ihren Tagebucheinträgen."
+                  ]
+            },
+            {
+                  "title": "4. Haftungsbeschränkung",
+                  "paragraphs": [
+                        "Die App wird \"WIE BESEHEN\" bereitgestellt. Soweit gesetzlich zulässig, haftet Miravelys nicht für indirekte oder zufällige Schäden, die aus Ihrer Nutzung der App entstehen."
+                  ]
+            }
       ]
-    },
+},
     "privacyPolicy": {
       "title": "Datenschutzerklärung",
-      "updated": "Juni 2026",
-      "intro": "Willkommen bei Miravelys. Wir verpflichten uns, Ihre Privatsphäre zu schützen und Ihre Daten vertraulich zu behandeln.",
+      "updated": "Juli 2026",
+      "intro": "Willkommen bei Miravelys. Wir verpflichten uns, Ihre Privatsphäre zu schützen und sicherzustellen, dass Ihre persönlichen Reflexionen streng vertraulich bleiben.",
       "sections": [
-        {
-          "title": "1. Daten, die wir NICHT erfassen",
-          "paragraphs": [
-            "Alle Tagebucheinträge werden lokal auf Ihrem Gerät gespeichert und über iCloud synchronisiert. Wir haben keinen Zugriff darauf.",
-            "Audio für Atemübungen wird lokal in Echtzeit verarbeitet. Es wird niemals aufgezeichnet, gespeichert oder übertragen."
-          ]
-        },
-        {
-          "title": "2. Informationen, die wir erfassen",
-          "paragraphs": [
-            "E-Mails (optional) dienen nur der Kontowiederherstellung. Abonnements werden anonym über RevenueCat verwaltet. HealthKit-Daten werden nur mit Ihrer Erlaubnis verwendet."
-          ]
-        },
-        {
-          "title": "3. Privatsphäre von Kindern (DSGVO)",
-          "paragraphs": [
-            "Die App ist ab 12 Jahren freigegeben. Wir erfassen wissentlich keine Daten von Kindern unter 16 Jahren (EU) ohne elterliche Zustimmung. Kontakt: support@miravelys.com."
-          ]
-        },
-        {
-          "title": "4. Ihre Rechte",
-          "paragraphs": [
-            "Sie haben das Recht auf Auskunft, Löschung und Berichtigung Ihrer Daten. Sie können Ihr Konto direkt in der App löschen."
-          ]
-        }
+            {
+                  "title": "1. Lokale & private Daten",
+                  "paragraphs": [
+                        "Miravelys wurde mit einer \"Privacy-First\"-Architektur entwickelt. Alle Tagebucheinträge und Reflexionen werden standardmäßig streng lokal auf Ihrem Gerät gespeichert (lokal verschlüsselter Speicher). Wir hosten diese Daten nicht auf unseren Servern und haben keinen Zugriff darauf, sie zu lesen oder zu analysieren.",
+                        "Audio für Atemübungen wird lokal in Echtzeit verarbeitet. Es wird niemals aufgezeichnet, gespeichert, übertragen oder geteilt."
+                  ]
+            },
+            {
+                  "title": "2. Informationsverarbeitung",
+                  "paragraphs": [
+                        "Miravelys verlangt nicht, dass Sie ein Konto erstellen oder eine E-Mail-Adresse angeben. Die App ist für die lokale, anonyme Nutzung konzipiert.",
+                        "Apple wickelt Zahlungen und Berechtigungen über StoreKit 2 In-App-Käufe ab. Wir erhalten oder speichern Ihre vollständige Zahlungskartennummer nicht.",
+                        "Mit Ihrer ausdrücklichen Erlaubnis können wir \"Achtsamkeitsminuten\" in Apple HealthKit protokollieren (diese Daten werden niemals verkauft). Wir sammeln auch anonymisierte Absturzberichte, um die App zu verbessern."
+                  ]
+            },
+            {
+                  "title": "3. Privatsphäre von Kindern (COPPA & DSGVO)",
+                  "paragraphs": [
+                        "Die App ist ab 12 Jahren freigegeben. Wir erfassen wissentlich keine personenbezogenen Daten von Kindern unter 13 Jahren (USA) oder 16 Jahren (EU) ohne nachweisbare elterliche Zustimmung. Kontaktieren Sie support@miravelys.com, wenn Sie glauben, dass ein Minderjähriger Daten bereitgestellt hat."
+                  ]
+            },
+            {
+                  "title": "4. Ihre Kontrollen & Rechte",
+                  "paragraphs": [
+                        "Sie können Ihre Daten jederzeit exportieren oder Ihre lokalen Daten vollständig löschen, direkt über die Datenschutzeinstellungen in der App.",
+                        "Da die Daten hauptsächlich auf Ihrem Gerät gespeichert werden, findet die Verarbeitung dort statt, wo Sie die App nutzen. Abhängig von Ihrer Gerichtsbarkeit haben Sie das Recht auf Zugriff auf oder Löschung Ihrer Daten, was über die integrierten lokalen Steuerelemente der App erfolgen kann."
+                  ]
+            }
       ]
-    },
+},
     "cookies": {
       "title": "Cookies & Speicher",
       "updated": "Juni 2026",
@@ -834,67 +864,73 @@ export const legalCopy = {
     },
     "userAgreement": {
       "title": "利用規約 (EULA)",
-      "updated": "2026年6月",
-      "intro": "Miravelys をダウンロードまたは使用することにより、これらの利用規約に同意したものとみなされます。",
+      "updated": "2026年7月",
+      "intro": "Miravelysをダウンロードまたは使用することにより、あなたはこれらの規約に同意したことになります。同意しない場合は、アプリを使用しないでください。",
       "sections": [
-        {
-          "title": "1. 医療および心理学的な免責事項 (重要)",
-          "paragraphs": [
-            "Miravelys は医療機器ではなく、専門的な心理学的、精神医学的、または医学的なアドバイスの代わりになるものではありません。危機の際は直ちに緊急サービスに連絡してください。"
-          ]
-        },
-        {
-          "title": "2. サブスクリプション規約",
-          "paragraphs": [
-            "サブスクリプションは、期間終了の24時間前にキャンセルされない限り自動更新されます。App Storeの設定から管理してください。返金は Apple が対応します。"
-          ]
-        },
-        {
-          "title": "3. ユーザーの行動と知的財産",
-          "paragraphs": [
-            "アプリをリバースエンジニアリングしないでください。音声やデザインは Miravelys の知的財産です。ジャーナルの完全な所有権はあなたにあります。"
-          ]
-        },
-        {
-          "title": "4. 責任の制限",
-          "paragraphs": [
-            "アプリは「現状有姿」で提供されます。法律で認められる最大限の範囲で、Miravelys は間接的な損害について責任を負いません。"
-          ]
-        }
+            {
+                  "title": "1. 医学的および心理学的免責事項（重要）",
+                  "paragraphs": [
+                        "Miravelysは医療機器ではなく、専門的な心理学、精神医学、または医学的なアドバイスの代わりになるものではありません。ツールはセルフヘルプとマインドフルネスのためだけのものです。あなたは自身の健康に関連するすべてのリスクを負います。危機的な状況では、直ちに緊急サービスに連絡してください。"
+                  ]
+            },
+            {
+                  "title": "2. サブスクリプション規約と支払い",
+                  "paragraphs": [
+                        "自動更新サブスクリプション（月額や年額など）と1回限りの買い切り（ライフタイム）オプションを提供しています。購入確認時にApp Storeを通じてあなたのApple IDに課金されます。",
+                        "現在の期間が終了する少なくとも24時間前にキャンセルしない限り、サブスクリプションは自動的に更新されます。現在の期間が終了する前の24時間以内に更新料金がアカウントに請求されます。",
+                        "Apple IDの設定で自動更新サブスクリプションを管理またはキャンセルできます：設定 → Apple ID → サブスクリプション。返金はすべてAppleによって処理されます。",
+                        "以前に同じApple IDで購入した権利を復元するには、アプリ内で「購入の復元」をご利用いただけます。"
+                  ]
+            },
+            {
+                  "title": "3. ユーザーの行動と知的財産",
+                  "paragraphs": [
+                        "アプリをリバースエンジニアリングしたり、違法に使用したりすることはできません。すべての音声、方法論、デザインはMiravelysの知的財産です。あなたはジャーナルエントリの完全な所有権を保持します。"
+                  ]
+            },
+            {
+                  "title": "4. 責任の制限",
+                  "paragraphs": [
+                        "アプリは「現状有姿」で提供されます。法律で認められる最大限の範囲で、Miravelysはアプリの使用から生じる間接的または偶発的な損害について責任を負いません。"
+                  ]
+            }
       ]
-    },
+},
     "privacyPolicy": {
       "title": "プライバシーポリシー",
-      "updated": "2026年6月",
-      "intro": "Miravelys へようこそ。私たちはあなたのプライバシーを保護し、個人的な反射を機密に保つことをお約束します。",
+      "updated": "2026年7月",
+      "intro": "Miravelysへようこそ。私たちはあなたのプライバシーを保護し、個人的な反省が厳格に機密に保たれることを保証することをお約束します。",
       "sections": [
-        {
-          "title": "1. 収集しないデータ (ローカルおよびプライベートデータ)",
-          "paragraphs": [
-            "すべてのジャーナルエントリはデバイスのローカルに厳密に保存され、Apple iCloud 経由で安全に同期されます。私たちはこのデータを読み取ったり分析したりすることはありません。",
-            "呼吸法のための音声はリアルタイムでローカルに処理されます。記録、保存、送信されることはありません。"
-          ]
-        },
-        {
-          "title": "2. 収集する情報とその使用方法",
-          "paragraphs": [
-            "アカウントを作成した場合、メールアドレスはアカウント復旧のためのみに使用されます。サブスクリプションは RevenueCat で匿名管理されます。Apple HealthKit データは許可を得てのみ使用されます。"
-          ]
-        },
-        {
-          "title": "3. 子供のプライバシー",
-          "paragraphs": [
-            "アプリの対象年齢は12歳以上です。保護者の同意なしに13歳または16歳未満の子供から個人情報を意図的に収集することはありません。"
-          ]
-        },
-        {
-          "title": "4. あなたの権利",
-          "paragraphs": [
-            "アプリ内でアカウントやデータを直接削除できます。私たちはアプリの運営に必要な最小限のデータのみを Apple および RevenueCat と共有します。"
-          ]
-        }
+            {
+                  "title": "1. ローカルおよびプライベートデータ",
+                  "paragraphs": [
+                        "Miravelysは「プライバシーファースト」のアーキテクチャで構築されています。すべてのジャーナルエントリと反省は、デフォルトであなたのデバイスのローカルに厳密に保存されます（ローカル暗号化ストレージ）。私たちはこのデータをサーバーでホストせず、読み取ったり分析したりするアクセス権を持ちません。",
+                        "呼吸法のための音声はリアルタイムでローカルに処理されます。記録、保存、送信、または共有されることは決してありません。"
+                  ]
+            },
+            {
+                  "title": "2. 情報処理",
+                  "paragraphs": [
+                        "Miravelysはアカウントの作成やメールアドレスの提供を必要としません。アプリはローカルで匿名の使用を目的として設計されています。",
+                        "AppleはStoreKit 2のアプリ内課金を通じて支払いと権利を処理します。私たちはあなたの完全な支払いカード番号を受け取ったり保存したりすることはありません。",
+                        "あなたの明示的な許可を得て、Apple HealthKitに「マインドフルネス時間」を記録する場合があります（このデータが販売されることはありません）。また、アプリを改善するために匿名化されたクラッシュレポートを収集します。"
+                  ]
+            },
+            {
+                  "title": "3. 子供のプライバシー (COPPA & GDPR)",
+                  "paragraphs": [
+                        "アプリの対象年齢は12歳以上です。検証可能な保護者の同意なしに、13歳（米国）または16歳（EU）未満の子供から個人情報を意図的に収集することはありません。未成年者がデータを提供したと思われる場合は、support@miravelys.comまでご連絡ください。"
+                  ]
+            },
+            {
+                  "title": "4. あなたの管理と権利",
+                  "paragraphs": [
+                        "アプリ内のプライバシー設定からいつでもデータをエクスポートしたり、ローカルデータを完全に削除したりできます。",
+                        "データは主にあなたのデバイスに保存されるため、処理はあなたがアプリを使用する場所で行われます。あなたの管轄区域に応じて、データにアクセスまたはデータを消去する権利があり、これはアプリに組み込まれたローカルコントロールを使用して実行できます。"
+                  ]
+            }
       ]
-    },
+},
     "cookies": {
       "title": "Cookie と保存",
       "updated": "2026年6月",
@@ -931,67 +967,73 @@ export const legalCopy = {
     },
     "userAgreement": {
       "title": "Términos de Servicio (EULA)",
-      "updated": "Junio 2026",
-      "intro": "Al usar Miravelys, acepta estos Términos.",
+      "updated": "Julio 2026",
+      "intro": "Al descargar o usar Miravelys, aceptas estos Términos. Si no estás de acuerdo, no utilices la Aplicación.",
       "sections": [
-        {
-          "title": "1. Descargo de responsabilidad médica (CRÍTICO)",
-          "paragraphs": [
-            "Miravelys no sustituye el asesoramiento médico o psicológico profesional. Las herramientas son solo para autoayuda. En caso de crisis, comuníquese con los servicios de emergencia de inmediato."
-          ]
-        },
-        {
-          "title": "2. Términos de suscripción",
-          "paragraphs": [
-            "Las suscripciones se renuevan automáticamente a menos que se cancelen 24 horas antes. Administre esto a través de la App Store. Los reembolsos son manejados por Apple."
-          ]
-        },
-        {
-          "title": "3. Propiedad intelectual",
-          "paragraphs": [
-            "No puede aplicar ingeniería inversa a la aplicación. El audio y la metodología son propiedad de Miravelys. Usted conserva la propiedad total de sus diarios."
-          ]
-        },
-        {
-          "title": "4. Limitación de responsabilidad",
-          "paragraphs": [
-            "La aplicación se proporciona \"TAL CUAL\". En la medida máxima permitida por la ley, Miravelys no es responsable por daños indirectos."
-          ]
-        }
+            {
+                  "title": "1. Descargo de responsabilidad médico y psicológico (CRÍTICO)",
+                  "paragraphs": [
+                        "Miravelys no es un dispositivo médico ni sustituye el asesoramiento psicológico, psiquiátrico o médico profesional. Las herramientas son solo para autoayuda y atención plena. Tú asumes todos los riesgos asociados con tu bienestar. En caso de crisis, contacta a los servicios de emergencia de inmediato."
+                  ]
+            },
+            {
+                  "title": "2. Términos de suscripción y pagos",
+                  "paragraphs": [
+                        "Ofrecemos suscripciones que se renuevan automáticamente (por ejemplo, mensuales o anuales) y una opción de por vida de un solo pago. El pago se cargará a tu ID de Apple a través de la App Store al confirmar la compra.",
+                        "Las suscripciones se renuevan automáticamente a menos que las canceles al menos 24 horas antes del final del período actual. Se cobrará a tu cuenta la renovación dentro de las 24 horas anteriores al final del período actual.",
+                        "Gestiona o cancela las suscripciones autorrenovables en la configuración de tu ID de Apple: Configuración → ID de Apple → Suscripciones. Los reembolsos son manejados exclusivamente por Apple.",
+                        "La opción Restaurar Compras está disponible en la aplicación para los derechos adquiridos previamente con el mismo ID de Apple."
+                  ]
+            },
+            {
+                  "title": "3. Conducta del usuario y Propiedad Intelectual",
+                  "paragraphs": [
+                        "No puedes aplicar ingeniería inversa a la Aplicación ni usarla ilegalmente. Todo el audio, las metodologías y el diseño son propiedad intelectual de Miravelys. Conservas la plena propiedad de las entradas de tu diario."
+                  ]
+            },
+            {
+                  "title": "4. Limitación de responsabilidad",
+                  "paragraphs": [
+                        "La Aplicación se proporciona \"TAL CUAL\". En la medida máxima permitida por la ley, Miravelys no es responsable de los daños indirectos o incidentales que surjan de tu uso de la Aplicación."
+                  ]
+            }
       ]
-    },
+},
     "privacyPolicy": {
       "title": "Política de Privacidad",
-      "updated": "Junio 2026",
-      "intro": "Bienvenido a Miravelys. Nos comprometemos a proteger su privacidad y garantizar que sus reflexiones sigan siendo confidenciales.",
+      "updated": "Julio 2026",
+      "intro": "Bienvenido a Miravelys. Nos comprometemos a proteger tu privacidad y asegurar que tus reflexiones personales se mantengan estrictamente confidenciales.",
       "sections": [
-        {
-          "title": "1. Datos que NO recopilamos",
-          "paragraphs": [
-            "Todos los diarios se almacenan estrictamente localmente en su dispositivo y se sincronizan a través de su iCloud. No tenemos acceso para leerlos ni analizarlos.",
-            "El audio para los ejercicios de respiración se procesa localmente en tiempo real. Nunca se graba, guarda ni transmite."
-          ]
-        },
-        {
-          "title": "2. Información que recopilamos",
-          "paragraphs": [
-            "El correo electrónico (opcional) se usa solo para recuperación de cuenta. Usamos RevenueCat para la gestión anónima de suscripciones. Con su permiso, podemos enviar datos a Apple HealthKit (nunca se venden)."
-          ]
-        },
-        {
-          "title": "3. Privacidad infantil (COPPA y GDPR)",
-          "paragraphs": [
-            "Clasificación 12+. No recopilamos datos de niños menores de 13 años (EE. UU.) o 16 años (UE) sin consentimiento de los padres. Contacto: support@miravelys.com."
-          ]
-        },
-        {
-          "title": "4. Sus derechos",
-          "paragraphs": [
-            "Tiene derecho (GDPR, CCPA) a acceder, rectificar o eliminar sus datos. Puede eliminar su cuenta directamente en la aplicación."
-          ]
-        }
+            {
+                  "title": "1. Datos locales y privados",
+                  "paragraphs": [
+                        "Miravelys está construido con una arquitectura enfocada en la privacidad. Por defecto, todas las entradas de diario y reflexiones se almacenan estrictamente de forma local en tu dispositivo (almacenamiento local encriptado). No alojamos estos datos en nuestros servidores y no tenemos acceso para leerlos ni analizarlos.",
+                        "El audio para los ejercicios de respiración se procesa localmente en tiempo real. Nunca se graba, guarda, transmite ni comparte."
+                  ]
+            },
+            {
+                  "title": "2. Procesamiento de información",
+                  "paragraphs": [
+                        "Miravelys no requiere que crees una cuenta ni proporciones una dirección de correo electrónico. La aplicación está diseñada para uso local y anónimo.",
+                        "Apple maneja los pagos y derechos a través de compras dentro de la aplicación StoreKit 2. No recibimos ni almacenamos el número completo de tu tarjeta de pago.",
+                        "Con tu permiso explícito, podemos registrar \"Minutos de Atención Plena\" en Apple HealthKit (estos datos nunca se venden). También recopilamos informes de fallos anonimizados para mejorar la aplicación."
+                  ]
+            },
+            {
+                  "title": "3. Privacidad infantil (COPPA y GDPR)",
+                  "paragraphs": [
+                        "La aplicación tiene una clasificación de edad de 12+. No recopilamos a sabiendas información personal de niños menores de 13 años (EE. UU.) o 16 años (UE) sin el consentimiento verificable de los padres. Contacta a support@miravelys.com si crees que un menor ha proporcionado datos."
+                  ]
+            },
+            {
+                  "title": "4. Tus controles y derechos",
+                  "paragraphs": [
+                        "Puedes exportar tus datos o eliminar completamente tus datos locales en cualquier momento directamente desde la configuración de Privacidad dentro de la aplicación.",
+                        "Debido a que los datos se almacenan principalmente en tu dispositivo, el procesamiento ocurre donde usas la aplicación. Dependiendo de tu jurisdicción, tienes derecho a acceder o borrar tus datos, lo cual se puede lograr utilizando los controles locales integrados de la aplicación."
+                  ]
+            }
       ]
-    },
+},
     "cookies": {
       "title": "Cookies y almacenamiento",
       "updated": "Junio 2026",
@@ -1028,67 +1070,73 @@ export const legalCopy = {
     },
     "userAgreement": {
       "title": "Termos de Serviço (EULA)",
-      "updated": "Junho 2026",
-      "intro": "Ao usar o Miravelys, você concorda com estes Termos.",
+      "updated": "Julho 2026",
+      "intro": "Ao baixar ou usar o Miravelys, você concorda com estes Termos. Se não concordar, não use o Aplicativo.",
       "sections": [
-        {
-          "title": "1. Isenção de Responsabilidade Médica (CRÍTICO)",
-          "paragraphs": [
-            "O Miravelys não substitui o aconselhamento médico ou psicológico profissional. As ferramentas são apenas para autoajuda. Em caso de crise, contate os serviços de emergência imediatamente."
-          ]
-        },
-        {
-          "title": "2. Termos de Assinatura",
-          "paragraphs": [
-            "As assinaturas são renovadas automaticamente a menos que sejam canceladas com 24 horas de antecedência. Os reembolsos são tratados exclusivamente pela Apple."
-          ]
-        },
-        {
-          "title": "3. Propriedade Intelectual",
-          "paragraphs": [
-            "Você não pode fazer engenharia reversa do Aplicativo. O áudio e o design são propriedade intelectual do Miravelys. Você retém a propriedade total de seus diários."
-          ]
-        },
-        {
-          "title": "4. Limitação de Responsabilidade",
-          "paragraphs": [
-            "O Aplicativo é fornecido \"COMO ESTÁ\". Na extensão máxima permitida por lei, o Miravelys não se responsabiliza por danos indiretos resultantes do seu uso do Aplicativo."
-          ]
-        }
+            {
+                  "title": "1. Aviso Médico e Psicológico (CRÍTICO)",
+                  "paragraphs": [
+                        "O Miravelys não é um dispositivo médico nem substitui o aconselhamento profissional psicológico, psiquiátrico ou médico. As ferramentas destinam-se apenas à autoajuda e atenção plena. Você assume todos os riscos associados ao seu bem-estar. Em uma crise, entre em contato com os serviços de emergência imediatamente."
+                  ]
+            },
+            {
+                  "title": "2. Termos de Assinatura e Pagamentos",
+                  "paragraphs": [
+                        "Oferecemos assinaturas com renovação automática (ex: mensais ou anuais) e uma opção vitalícia de pagamento único. O pagamento será cobrado no seu ID Apple por meio da App Store no momento da confirmação da compra.",
+                        "As assinaturas são renovadas automaticamente, a menos que você as cancele pelo menos 24 horas antes do final do período atual. A renovação será cobrada em sua conta dentro de 24 horas antes do final do período atual.",
+                        "Gerencie ou cancele assinaturas com renovação automática nos ajustes do seu ID Apple: Ajustes → ID Apple → Assinaturas. Os reembolsos são tratados exclusivamente pela Apple.",
+                        "A opção Restaurar Compras está disponível no aplicativo para os direitos adquiridos anteriormente no mesmo ID Apple."
+                  ]
+            },
+            {
+                  "title": "3. Conduta do Usuário e Propriedade Intelectual",
+                  "paragraphs": [
+                        "Você não pode fazer engenharia reversa do Aplicativo ou usá-lo ilegalmente. Todo o áudio, metodologias e design são propriedade intelectual do Miravelys. Você retém a propriedade total de suas entradas de diário."
+                  ]
+            },
+            {
+                  "title": "4. Limitação de Responsabilidade",
+                  "paragraphs": [
+                        "O Aplicativo é fornecido \"COMO ESTÁ\". Na extensão máxima permitida por lei, o Miravelys não se responsabiliza por danos indiretos ou incidentais decorrentes do uso do Aplicativo."
+                  ]
+            }
       ]
-    },
+},
     "privacyPolicy": {
       "title": "Política de Privacidade",
-      "updated": "Junho 2026",
-      "intro": "Bem-vindo ao Miravelys. Estamos comprometidos em proteger sua privacidade.",
+      "updated": "Julho 2026",
+      "intro": "Bem-vindo ao Miravelys. Estamos comprometidos em proteger sua privacidade e garantir que suas reflexões pessoais permaneçam estritamente confidenciais.",
       "sections": [
-        {
-          "title": "1. Dados que NÃO coletamos",
-          "paragraphs": [
-            "Todos os diários são armazenados estritamente localmente no seu dispositivo e sincronizados via seu iCloud. Não temos acesso para lê-los ou analisá-los.",
-            "O áudio para os exercícios de respiração é processado localmente em tempo real. Nunca é gravado, salvo ou transmitido."
-          ]
-        },
-        {
-          "title": "2. Informações que coletamos",
-          "paragraphs": [
-            "O e-mail (opcional) é usado apenas para recuperação de conta. Usamos o RevenueCat para gerenciamento anônimo de assinaturas. O Apple HealthKit é usado apenas com permissão."
-          ]
-        },
-        {
-          "title": "3. Privacidade Infantil (COPPA, LGPD)",
-          "paragraphs": [
-            "Classificação 12+. Não coletamos dados de crianças menores de 13 (EUA) ou 16 (UE) sem consentimento dos pais. Contato: support@miravelys.com."
-          ]
-        },
-        {
-          "title": "4. Seus Direitos (LGPD, CCPA, GDPR)",
-          "paragraphs": [
-            "Você tem o direito de acessar, retificar ou excluir seus dados. Pode excluir a conta diretamente no aplicativo."
-          ]
-        }
+            {
+                  "title": "1. Dados Locais e Privados",
+                  "paragraphs": [
+                        "O Miravelys é construído com uma arquitetura \"Privacy-First\" (Privacidade em Primeiro Lugar). Todas as entradas de diário e reflexões são armazenadas estritamente localmente em seu dispositivo por padrão (Armazenamento local criptografado). Não hospedamos esses dados em nossos servidores e não temos acesso para lê-los ou analisá-los.",
+                        "O áudio para os exercícios de respiração é processado localmente em tempo real. Ele nunca é gravado, salvo, transmitido ou compartilhado."
+                  ]
+            },
+            {
+                  "title": "2. Processamento de Informações",
+                  "paragraphs": [
+                        "O Miravelys não exige que você crie uma conta ou forneça um endereço de e-mail. O aplicativo foi projetado para uso local e anônimo.",
+                        "A Apple lida com pagamentos e direitos por meio de compras no aplicativo StoreKit 2. Não recebemos nem armazenamos o número completo do seu cartão de pagamento.",
+                        "Com sua permissão explícita, podemos registrar \"Minutos de Atenção Plena\" no Apple HealthKit (esses dados nunca são vendidos). Também coletamos relatórios de falhas anonimizados para melhorar o aplicativo."
+                  ]
+            },
+            {
+                  "title": "3. Privacidade Infantil (COPPA e GDPR)",
+                  "paragraphs": [
+                        "O aplicativo tem classificação 12+. Não coletamos intencionalmente informações pessoais de crianças menores de 13 anos (EUA) ou 16 anos (UE) sem consentimento verificável dos pais. Entre em contato com support@miravelys.com se você acredita que um menor forneceu dados."
+                  ]
+            },
+            {
+                  "title": "4. Seus Controles e Direitos",
+                  "paragraphs": [
+                        "Você pode exportar seus dados ou excluir completamente seus dados locais a qualquer momento diretamente nas configurações de Privacidade do aplicativo.",
+                        "Como os dados são armazenados principalmente no seu dispositivo, o processamento acontece onde você usa o aplicativo. Dependendo da sua jurisdição, você tem o direito de acessar ou apagar seus dados, o que pode ser feito usando os controles locais integrados do aplicativo."
+                  ]
+            }
       ]
-    },
+},
     "cookies": {
       "title": "Cookies e armazenamento",
       "updated": "Junho 2026",
