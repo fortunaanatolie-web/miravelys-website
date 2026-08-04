@@ -1,79 +1,81 @@
-import React from 'react';
+import { ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { resolveWebsiteScreenshot } from '../../../lib/miravelysScreenshots';
+import MarketingCta from '../primitives/MarketingCta';
+import PhoneMockup from '../primitives/PhoneMockup';
 import RevealOnScroll from '../primitives/RevealOnScroll';
 
-const renderText = (text) => {
-  if (!text) return null;
-  return text.split('\n\n').map((para, i) => (
-    <p key={i} className="origin-block__paragraph" style={{ marginBottom: '1rem' }}>
-      {para.split('\n').map((line, j) => {
-        const parts = line.split(/(\*\*.*?\*\*)/g);
-        return (
-          <React.Fragment key={j}>
-            {parts.map((part, k) => {
-              if (part.startsWith('**') && part.endsWith('**')) {
-                return <strong key={k} style={{ color: 'var(--mira-ivory)' }}>{part.slice(2, -2)}</strong>;
-              }
-              return part;
-            })}
-            {j < para.split('\n').length - 1 && <br />}
-          </React.Fragment>
-        );
-      })}
-    </p>
-  ));
-};
-
-export default function OriginStorySection({ t, onNavClick, onEarlyAccessClick }) {
-  if (!t || !t.explanation) return null;
-  const origin = t.explanation;
+export default function OriginStorySection({ lang, copy, earlyAccess, onNavClick, onEarlyAccessClick }) {
+  const homePath = lang && lang !== 'en' ? `/${lang}` : '/';
+  const screenshot = resolveWebsiteScreenshot({
+    locale: lang,
+    group: 'sticky-phone',
+    code: 'write',
+    mockupId: 'clear',
+  });
+  const screen = {
+    id: 'founder-write',
+    ...screenshot,
+    lang,
+    alt: copy.screenCaption || screenshot.alt,
+  };
 
   return (
-    <section id="origin" className="origin-story content-section" aria-labelledby="origin-story-title">
-      <div className="origin-story__atmosphere" aria-hidden="true">
-        <div className="origin-story__glow origin-story__glow--gold" />
-        <div className="origin-story__glow origin-story__glow--rose" />
-      </div>
+    <section id="origin" className="founder-essay" aria-labelledby="founder-essay-title">
+      <div className="founder-essay__atmosphere" aria-hidden="true" />
+      <div className="founder-essay__inner">
+        <RevealOnScroll className="founder-essay__heading" variant="blur-in">
+          <Link to={homePath} className="loop-back-link">
+            <ArrowLeft size={15} aria-hidden="true" />
+            Miravelys
+          </Link>
+          <p className="loop-kicker">{copy.eyebrow}</p>
+          <h1 id="founder-essay-title">{copy.title}</h1>
+          <p>{copy.intro}</p>
+          {copy.languageFallback ? (
+            <p className="founder-essay__translation-note" lang={lang}>
+              {copy.languageFallback}
+            </p>
+          ) : null}
+        </RevealOnScroll>
 
-      <div className="origin-story__intro">
-        <RevealOnScroll variant="blur-in">
-          <p className="origin-story__eyebrow">{origin.eyebrow}</p>
-          <h2 id="origin-story-title" className="origin-story__title">
-            {origin.title}
-          </h2>
-          <div className="origin-story__lead">
-            {renderText(origin.intro)}
-          </div>
+        <div className="founder-essay__opening">
+          <RevealOnScroll className="founder-essay__quote" variant="soft">
+            <span aria-hidden="true">“</span>
+            <blockquote>{copy.quote}</blockquote>
+          </RevealOnScroll>
+          <RevealOnScroll className="founder-essay__device" variant="rise" delay={100}>
+            <PhoneMockup
+              screens={[screen]}
+              activeIndex={0}
+              variant="mobile-card"
+              assetMode="screen-only"
+              className="loop-phone founder-essay__phone"
+              ariaLabel={screen.alt}
+            />
+            <p>{copy.screenCaption}</p>
+          </RevealOnScroll>
+        </div>
+
+        <div className="founder-essay__chapters">
+          {copy.chapters.map((chapter, index) => (
+            <RevealOnScroll key={chapter.label} as="article" className="founder-chapter" variant="soft" delay={index * 70}>
+              <p className="founder-chapter__label">{chapter.label}</p>
+              <h2>{chapter.title}</h2>
+              {chapter.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+            </RevealOnScroll>
+          ))}
+        </div>
+
+        <RevealOnScroll className="founder-essay__cta" variant="soft">
+          <MarketingCta
+            role="primary"
+            earlyAccess={earlyAccess}
+            onNavClick={onNavClick}
+            onEarlyAccessClick={onEarlyAccessClick}
+          />
         </RevealOnScroll>
       </div>
-
-      <div className="origin-story__bento-grid">
-        {origin.blocks.map((block, index) => {
-          const isFeatured = index === 0;
-          const blockClass = [
-            'origin-block',
-            isFeatured ? 'origin-block--featured' : '',
-            'origin-block--prose',
-          ].filter(Boolean).join(' ');
-
-          return (
-            <article key={block.title} className={blockClass} data-origin-block={index}>
-              <div className="origin-block__backdrop" aria-hidden="true" />
-              <RevealOnScroll className="origin-block__copy" variant="soft" delay={index * 80}>
-                <div className="origin-block__content">
-                  <h3 className="origin-block__chapter" style={{color: 'var(--mira-ivory)', fontSize: '1.2rem', marginBottom: '0.5rem', textTransform: 'none', letterSpacing: 'normal'}}>{block.title}</h3>
-                  {renderText(block.body)}
-                </div>
-              </RevealOnScroll>
-            </article>
-          );
-        })}
-      </div>
-
-      <RevealOnScroll className="origin-story__cta" variant="soft">
-        <button type="button" className="keynote-cta keynote-cta--primary" onClick={onEarlyAccessClick}>
-          {t.hero.primary || 'Begin your journey'}
-        </button>
-      </RevealOnScroll>
     </section>
   );
 }

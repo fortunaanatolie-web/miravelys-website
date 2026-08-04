@@ -4,34 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#f7f3ed" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#060b1d" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f7f3ed" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="description" content="Miravelys. Find focus, calm your mind, and reclaim your time with an elegant, immersive wellness companion." />
+    <meta name="description" content="A private place to name what happened, what you feel, and the story your mind has added—so the next step does not have to come from an old loop." />
+    <link rel="canonical" href="https://miravelys.com/" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://miravelys.com/" />
-    <meta property="og:title" content="Miravelys — Reclaim Your Time" />
-    <meta property="og:description" content="Find focus, calm your mind, and reclaim your time with an elegant, immersive wellness companion." />
-    <meta property="og:image" content="https://miravelys.com/og-image.jpg" />
+    <meta property="og:title" content="Miravelys — Step out of the loop" />
+    <meta property="og:description" content="A private place to name what happened, what you feel, and the story your mind has added—so the next step does not have to come from an old loop." />
+    <meta property="og:image" content="https://miravelys.com/og-miravelys.jpg" />
+    <meta property="og:image:alt" content="Miravelys — a private place to return to what is true" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://miravelys.com/" />
-    <meta name="twitter:title" content="Miravelys — Reclaim Your Time" />
-    <meta name="twitter:description" content="Find focus, calm your mind, and reclaim your time with an elegant, immersive wellness companion." />
-    <meta name="twitter:image" content="https://miravelys.com/og-image.jpg" />
+    <meta name="twitter:title" content="Miravelys — Step out of the loop" />
+    <meta name="twitter:description" content="A private place to name what happened, what you feel, and the story your mind has added—so the next step does not have to come from an old loop." />
+    <meta name="twitter:image" content="https://miravelys.com/og-miravelys.jpg" />
+    <meta name="twitter:image:alt" content="Miravelys — a private place to return to what is true" />
 
-    <!-- Apple Smart App Banner & Web App -->
-    <meta name="apple-itunes-app" content="app-id=123456789" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -56,10 +53,34 @@
         document.documentElement.style.colorScheme = mode === 'day' ? 'light' : 'dark';
       })();
     </script>
-    <title>Miravelys</title>
+    <title>Miravelys — Step out of the loop</title>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <style>
+        .miravelys-noscript {
+          box-sizing: border-box;
+          min-height: 100vh;
+          padding: 12vh max(24px, 8vw);
+          color: #f2efe9;
+          background: radial-gradient(circle at 78% 18%, rgba(66, 224, 212, .16), transparent 34%), #061818;
+          font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+        .miravelys-noscript * { box-sizing: border-box; }
+        .miravelys-noscript p { max-width: 42rem; margin: 0 0 1.25rem; }
+        .miravelys-noscript h1 { max-width: 15ch; margin: 0 0 1.25rem; font: 500 clamp(3rem, 8vw, 5.5rem)/.95 Georgia, serif; letter-spacing: -.045em; }
+        .miravelys-noscript a { display: inline-block; margin: .5rem 1rem .5rem 0; color: #061818; background: #42e0d4; border-radius: 999px; padding: .7rem 1rem; font-weight: 700; text-decoration: none; }
+        .miravelys-noscript a + a { color: #f2efe9; background: transparent; border: 1px solid rgba(242, 239, 233, .42); }
+      </style>
+      <main class="miravelys-noscript">
+        <p>Miravelys</p>
+        <h1>We all get caught in loops. You can step out of one.</h1>
+        <p>Miravelys is a private place to name what happened, what you feel, and the story your mind has added. JavaScript is needed for the interactive site.</p>
+        <a href="mailto:support@miravelys.com">Contact support</a>
+        <a href="/privacy">Read the privacy policy</a>
+      </main>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

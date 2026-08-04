@@ -1,6 +1,6 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import { ChevronDown, Languages } from 'lucide-react';
-import { languages, siteCopy } from '../../i18n/siteCopy';
+import { isSupportedPublicLanguage, languages } from '../../i18n/publicSiteCopy';
 
 export default function MarketingLanguageSwitcher({
   lang,
@@ -18,19 +18,15 @@ export default function MarketingLanguageSwitcher({
   const handleLanguageChange = (event) => {
     const newLang = event.target.value;
     setLang(newLang);
-    
-    // Update the URL to include the new language prefix
+
+    // Keep English at the canonical unprefixed route; all other languages use
+    // the same route beneath their locale prefix.
     const pathSegments = location.pathname.split('/').filter(Boolean);
     const currentLang = pathSegments[0];
-    
-    if (currentLang && siteCopy[currentLang]) {
-      // Replace existing language prefix
-      pathSegments[0] = newLang;
-      navigate('/' + pathSegments.join('/') + location.hash);
-    } else {
-      // Prepend new language prefix
-      navigate('/' + newLang + location.pathname + location.hash);
-    }
+    const routeSegments = currentLang && isSupportedPublicLanguage(currentLang) ? pathSegments.slice(1) : pathSegments;
+    const route = routeSegments.length ? `/${routeSegments.join('/')}` : '/';
+    const target = newLang === 'en' ? route : `/${newLang}${route}`;
+    navigate(`${target}${location.search}${location.hash}`);
   };
 
   return (

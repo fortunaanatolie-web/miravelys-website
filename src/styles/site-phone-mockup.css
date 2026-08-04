@@ -110,6 +110,12 @@
   z-index: 2;
 }
 
+.iphone13-screen-picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
 .iphone13-screen-image {
   position: absolute;
   inset: 0;

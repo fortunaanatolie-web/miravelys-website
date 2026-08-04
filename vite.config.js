@@ -7,6 +7,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   plugins: [react()],
+  // Source captures live in /public for the capture workflow. Only the curated,
+  // responsive deployment set belongs in the production build.
+  publicDir: 'public-site',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { siteCopy } from '../i18n/siteCopy';
-import { resolveExperience } from '../i18n/experienceCopy';
-import { resolveOriginCopy } from '../i18n/originCopy';
+import { useNavigate } from 'react-router-dom';
+import { languages, resolvePublicSiteCopy } from '../i18n/publicSiteCopy';
+import { resolveFounderStoryCopy } from '../i18n/loopStoryCopy';
 import { useSiteLanguage } from '../hooks/useSiteLanguage';
 import { useWaitlist } from '../hooks/useWaitlist';
 import MarketingPageShell from '../components/marketing/MarketingPageShell';
@@ -11,14 +11,17 @@ import EarlyAccessModal from '../components/marketing/EarlyAccessModal';
 import OriginStorySection from '../components/marketing/sections/OriginStorySection';
 import { handleInPageNav } from '../lib/scrollToSection';
 import { setDocumentMeta } from '../lib/documentMeta';
-
-const fallbackLanguage = 'en';
+import { localizeRoute } from '../lib/localizeRoute';
 
 export default function FounderStoryPage() {
   const [lang, setLang] = useSiteLanguage();
-  const t = useMemo(() => siteCopy[lang] || siteCopy[fallbackLanguage], [lang]);
-  const experience = useMemo(() => resolveExperience(lang), [lang]);
-  const origin = useMemo(() => resolveOriginCopy(lang), [lang]);
+  const navigate = useNavigate();
+  const t = useMemo(() => resolvePublicSiteCopy(lang), [lang]);
+  const founderStory = useMemo(() => resolveFounderStoryCopy(lang), [lang]);
+  const founderAlternates = useMemo(
+    () => languages.filter(language => !resolveFounderStoryCopy(language.code).languageFallback),
+    [],
+  );
   const waitlist = useWaitlist(lang);
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = useCallback(() => setMenuOpen(false), []);
@@ -30,14 +33,21 @@ export default function FounderStoryPage() {
       return;
     }
     event?.preventDefault?.();
-    window.location.href = `/#${id || 'works'}`;
-  }, [closeMenu]);
+    navigate(`${localizeRoute('/', lang)}#${id || 'works'}`);
+  }, [closeMenu, lang, navigate]);
 
   useEffect(() => {
     document.documentElement.lang = t.meta.locale;
     document.documentElement.dir = 'ltr';
-    setDocumentMeta(origin.meta);
-  }, [origin.meta, t.meta.locale]);
+    setDocumentMeta({
+      title: `${founderStory.eyebrow} — Miravelys`,
+      description: founderStory.intro,
+      ogTitle: founderStory.title,
+      ogDescription: founderStory.intro,
+      noIndex: Boolean(founderStory.languageFallback),
+      alternateLanguages: founderAlternates,
+    });
+  }, [founderAlternates, founderStory, t.meta.locale]);
 
   return (
     <MarketingPageShell lang={lang}
@@ -50,27 +60,32 @@ export default function FounderStoryPage() {
         lang={lang}
         setLang={setLang}
         t={t}
-        experience={experience}
+        earlyAccess={waitlist.copy}
       />
 
-      <OriginStorySection
-        lang={lang}
-        t={t}
-        onNavClick={onNavClick}
-        onEarlyAccessClick={waitlist.openEarlyAccess}
-      />
+      <main id="main-content">
+        <OriginStorySection
+          lang={lang}
+          copy={founderStory}
+          earlyAccess={waitlist.copy}
+          onNavClick={onNavClick}
+          onEarlyAccessClick={waitlist.openEarlyAccess}
+        />
+      </main>
 
-      <MarketingSiteFooter t={t} />
+      <MarketingSiteFooter t={t} lang={lang} />
 
       <EarlyAccessModal
         open={waitlist.earlyAccessOpen}
         onClose={waitlist.closeEarlyAccess}
         lang={lang}
         t={t}
-        experience={experience}
+        copy={waitlist.copy}
         waitlistEmail={waitlist.waitlistEmail}
         setWaitlistEmail={waitlist.setWaitlistEmail}
         waitlistJoined={waitlist.waitlistJoined}
+        waitlistDraftReady={waitlist.waitlistDraftReady}
+        waitlistDraftNotice={waitlist.waitlistDraftNotice}
         waitlistError={waitlist.waitlistError}
         setWaitlistError={waitlist.setWaitlistError}
         handleWaitlistSubmit={waitlist.handleWaitlistSubmit}

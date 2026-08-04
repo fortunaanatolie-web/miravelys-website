@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Miravelys — Step out of the loop">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061817"/>
+      <stop offset="0.58" stop-color="#0b2926"/>
+      <stop offset="1" stop-color="#163d38"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f5d7ab" stop-opacity=".92"/>
+      <stop offset=".45" stop-color="#e5b47f" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#e5b47f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#42e0d4" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#42e0d4" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#42e0d4" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="960" cy="135" r="330" fill="url(#sun)"/>
+  <path d="M-90 490 C210 330 500 640 820 466 C972 382 1085 402 1290 236" fill="none" stroke="#b8d7d1" stroke-opacity=".16" stroke-width="1.4"/>
+  <path d="M-70 528 C250 366 512 654 852 500 C1012 426 1130 438 1300 290" fill="none" stroke="#b8d7d1" stroke-opacity=".1" stroke-width="1.4"/>
+  <rect x="76" y="72" width="1048" height="1" fill="url(#line)"/>
+  <text x="78" y="142" fill="#f2efe9" font-family="Georgia, serif" font-size="42" letter-spacing="-1.4">Miravelys</text>
+  <text x="78" y="276" fill="#42e0d4" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3.2">A PRIVATE PLACE TO RETURN TO WHAT IS TRUE</text>
+  <text x="78" y="370" fill="#f2efe9" font-family="Georgia, serif" font-size="70" letter-spacing="-3.5">Step out of the loop.</text>
+  <text x="80" y="434" fill="#b8d7d1" font-family="Arial, sans-serif" font-size="27">Name what happened. Notice what your mind added.</text>
+  <circle cx="1080" cy="515" r="6" fill="#42e0d4"/>
+  <circle cx="1048" cy="515" r="6" fill="#f2efe9" fill-opacity=".7"/>
+  <circle cx="1016" cy="515" r="6" fill="#f2efe9" fill-opacity=".36"/>
+</svg>

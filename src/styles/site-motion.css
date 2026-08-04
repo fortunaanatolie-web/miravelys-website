@@ -4,32 +4,35 @@
 
 /* —— Reveal variants —— */
 .reveal {
-  opacity: 0;
   transition:
     opacity 1s var(--mira-ease-cinematic),
     transform 1s var(--mira-ease-cinematic),
     filter 0.8s var(--mira-ease-soft);
+}
+
+.js .reveal {
+  opacity: 0;
   will-change: opacity, transform, filter;
 }
 
-.reveal--rise {
+.js .reveal--rise {
   transform: translateY(40px);
 }
 
-.reveal--blur-in {
+.js .reveal--blur-in {
   transform: translateY(24px);
   filter: blur(10px);
 }
 
-.reveal--soft {
+.js .reveal--soft {
   transform: translateY(20px) scale(0.988);
 }
 
-.reveal--fade {
+.js .reveal--fade {
   transform: none;
 }
 
-.reveal--visible {
+.js .reveal--visible {
   opacity: 1;
   transform: none;
   filter: none;

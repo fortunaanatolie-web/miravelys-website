@@ -21,7 +21,7 @@ function resolveAssetMode(screen, componentMode) {
 
 function PhoneScreenImage({ screen, isActive, eager, assetMode = 'screen-only' }) {
   const mode = resolveAssetMode(screen, assetMode);
-  const { src, status, missing, isDev, alt } = useMiravelysScreenshot(screen, screen.lang ?? screen.locale);
+  const { src, status, missing, isDev, responsiveSources, handleError } = useMiravelysScreenshot(screen, screen.lang ?? screen.locale);
   const isFramed = mode === 'already-framed';
   const [ratioInvalid, setRatioInvalid] = useState(false);
 
@@ -81,24 +81,30 @@ function PhoneScreenImage({ screen, isActive, eager, assetMode = 'screen-only' }
     width: mockupScreenDisplayDimensions.width,
     height: mockupScreenDisplayDimensions.height,
     sizes: 'min(430px, 72vw)',
-    alt: alt || screen.alt || 'Miravelys app screen',
+    srcSet: responsiveSources?.fallbackSrcSet,
+    alt: '',
     loading: eager ? 'eager' : 'lazy',
+    fetchPriority: eager ? 'high' : undefined,
   });
 
   return (
-    <img
-      {...imageProps}
-      fetchpriority={eager ? 'high' : undefined}
-      onLoad={handleLoad}
-      className={[
-        'iphone13-screen-image',
-        isFramed ? 'iphone13-screen-image--framed' : 'iphone13-screen-image--screen-only',
-        isActive ? 'is-active' : '',
-      ]
-        .filter(Boolean)
-        .join(' ')}
-      aria-hidden={!isActive}
-    />
+    <picture className="iphone13-screen-picture" aria-hidden="true">
+      {responsiveSources?.avifSrcSet ? (
+        <source type="image/avif" srcSet={responsiveSources.avifSrcSet} sizes={imageProps.sizes} />
+      ) : null}
+      <img
+        {...imageProps}
+        onLoad={handleLoad}
+        onError={handleError}
+        className={[
+          'iphone13-screen-image',
+          isFramed ? 'iphone13-screen-image--framed' : 'iphone13-screen-image--screen-only',
+          isActive ? 'is-active' : '',
+        ]
+          .filter(Boolean)
+          .join(' ')}
+      />
+    </picture>
   );
 }
 
@@ -113,6 +119,7 @@ export default function PhoneMockup({
   assetMode = SCREENSHOT_ASSET_MODE,
   className = '',
   ariaLabel = 'Miravelys app',
+  priority = false,
 }) {
   const safeIndex =
     Number.isFinite(activeIndex) && activeIndex >= 0 && activeIndex < screens.length
@@ -155,7 +162,7 @@ export default function PhoneMockup({
               key={screen.id}
               screen={screen}
               isActive={index === safeIndex}
-              eager={index === 0 || index === safeIndex}
+              eager={priority && index === safeIndex}
               assetMode={assetMode}
             />
           ))}

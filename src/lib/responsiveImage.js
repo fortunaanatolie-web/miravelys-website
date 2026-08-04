@@ -9,6 +9,7 @@ export function buildResponsiveImageProps({
   width,
   height,
   sizes = '100vw',
+  srcSet,
   loading = 'lazy',
   fetchPriority,
   alt = '',
@@ -23,7 +24,9 @@ export function buildResponsiveImageProps({
     decoding: 'async',
   };
 
-  if (width && height) {
+  if (srcSet) {
+    props.srcSet = srcSet;
+  } else if (width && height) {
     props.srcSet = `${src} ${width}w`;
   }
 

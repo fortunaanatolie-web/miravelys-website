@@ -24,6 +24,12 @@
     background: transparent;
   }
 
+  .site-shell--keynote > .site-header {
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+  }
+
   .top-nav__bar {
     min-height: var(--header-bar-height);
     gap: 8px;

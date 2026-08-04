@@ -1,15 +1,13 @@
 import { useEffect, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ShieldCheck } from 'lucide-react';
-import { siteCopy } from '../i18n/siteCopy';
-import { legalCopy, legalDocuments } from '../i18n/legalCopy';
+import { languages, resolvePublicSiteCopy } from '../i18n/publicSiteCopy';
+import { resolvePublicLegalDocument } from '../i18n/publicLegalCopy';
 import { useSiteLanguage } from '../hooks/useSiteLanguage';
 import MarketingPageShell from '../components/marketing/MarketingPageShell';
 import MarketingTopNav from '../components/marketing/MarketingTopNav';
 import MarketingSiteFooter from '../components/marketing/MarketingSiteFooter';
 import { setDocumentMeta } from '../lib/documentMeta';
-
-const fallbackLanguage = 'en';
 
 const DOC_BY_PATH = {
   '/legal-notice': 'legalNotice',
@@ -22,12 +20,26 @@ const DOC_BY_PATH = {
 
 export default function LegalDocumentPage() {
   const { pathname } = useLocation();
-  const docId = DOC_BY_PATH[pathname];
   const [lang, setLang] = useSiteLanguage();
+  const normalizedPath = pathname.replace(/^\/[a-z]{2}(?=\/)/, '');
+  const docId = DOC_BY_PATH[normalizedPath];
 
-  const t = useMemo(() => siteCopy[lang] || siteCopy[fallbackLanguage], [lang]);
-  const legal = useMemo(() => legalCopy[lang] || legalCopy[fallbackLanguage], [lang]);
-  const legalDoc = docId && legalDocuments.includes(docId) ? legal[docId] : null;
+  const t = useMemo(() => resolvePublicSiteCopy(lang), [lang]);
+  const legalDoc = useMemo(
+    () => (docId ? resolvePublicLegalDocument(lang, docId) : null),
+    [lang, docId],
+  );
+  const legalMeta = useMemo(
+    () => legalDoc?.meta ?? resolvePublicLegalDocument(lang, 'legalNotice')?.meta,
+    [lang, legalDoc],
+  );
+  const legalAlternates = useMemo(
+    () => docId
+      ? languages.filter(language => !resolvePublicLegalDocument(language.code, docId)?.languageFallback)
+      : [],
+    [docId],
+  );
+  const homePath = lang && lang !== 'en' ? `/${lang}` : '/';
 
   useEffect(() => {
     document.documentElement.lang = t.meta.locale;
@@ -36,67 +48,74 @@ export default function LegalDocumentPage() {
       description: legalDoc?.intro ?? t.footer.line,
       ogTitle: legalDoc ? `${legalDoc.title} — Miravelys` : 'Miravelys',
       ogDescription: legalDoc?.intro ?? t.footer.line,
+      noIndex: Boolean(legalDoc?.languageFallback),
+      alternateLanguages: legalAlternates,
     });
-  }, [t.meta.locale, legalDoc]);
+  }, [t.meta.locale, legalAlternates, legalDoc]);
 
   if (!legalDoc) {
     return (
-      <MarketingPageShell skipLinkTarget="#legal-main">
+      <MarketingPageShell lang={lang} skipLinkTarget="#legal-main">
         <MarketingTopNav variant="legal" lang={lang} setLang={setLang} t={t} />
-        <section id="legal-main" className="content-section legal-document-section">
-          <article className="glass-card legal-document-card">
+        <main id="legal-main" className="public-info-page public-info-page--paper">
+          <article className="public-info-page__inner legal-paper legal-paper--missing">
             <h1>Miravelys</h1>
-            <Link to="/" className="secondary-action legal-document-back">
-              {legal.meta.backToSite}
+            <Link to={homePath} className="loop-text-link">
+              {legalMeta?.backToSite}
             </Link>
           </article>
-        </section>
-        <MarketingSiteFooter t={t} />
+        </main>
+        <MarketingSiteFooter t={t} lang={lang} />
       </MarketingPageShell>
     );
   }
 
   return (
-    <MarketingPageShell skipLinkTarget="#legal-main">
+    <MarketingPageShell lang={lang} skipLinkTarget="#legal-main">
       <MarketingTopNav variant="legal" lang={lang} setLang={setLang} t={t} />
 
-      <section id="legal-main" className="content-section legal-document-section">
-        <div className="section-header legal-document-header">
-          <p className="eyebrow">
+      <main id="legal-main" className="public-info-page public-info-page--paper">
+        <div className="public-info-page__inner">
+          <header className="public-info-page__header">
+            <p className="loop-kicker">
             <ShieldCheck size={16} />
             {t.footer.legalNotice}
           </p>
-          <h1 className="gold-wordmark legal-document-title">
-            {legalDoc.title}
-          </h1>
-          <p className="legal-document-meta">
-            <Link to="/" className="legal-document-back">
-              {legal.meta.backToSite}
-            </Link>
-            <span aria-hidden="true"> · </span>
-            <span>
-              {legal.meta.updatedLabel}: {legalDoc.updated}
-            </span>
-          </p>
+            <h1>{legalDoc.title}</h1>
+            <p className="public-info-page__meta">
+              <Link to={homePath}>
+              {legalMeta?.backToSite}
+              </Link>
+              <span aria-hidden="true"> · </span>
+              <span>
+                {legalMeta?.updatedLabel}: {legalDoc.updated}
+              </span>
+            </p>
+          </header>
+
+          <article className="legal-paper" lang={legalDoc.language}>
+            {legalDoc.languageFallback ? (
+              <p className="legal-paper__translation-note" lang="en">
+                {legalDoc.languageFallback}
+              </p>
+            ) : null}
+            <p className="legal-paper__intro">{legalDoc.intro}</p>
+
+            {legalDoc.sections.map(section => (
+              <section key={section.title} className="legal-paper__section">
+                <h2>{section.title}</h2>
+                {section.paragraphs.map(paragraph => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </section>
+            ))}
+
+            <p className="legal-paper__governing">{legalMeta?.governingNote}</p>
+          </article>
         </div>
+      </main>
 
-        <article className="glass-card legal-document-card">
-          <p className="legal-document-intro">{legalDoc.intro}</p>
-
-          {legalDoc.sections.map(section => (
-            <section key={section.title} className="legal-document-section-block">
-              <h2>{section.title}</h2>
-              {section.paragraphs.map(paragraph => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </section>
-          ))}
-
-          <p className="legal-document-governing">{legal.meta.governingNote}</p>
-        </article>
-      </section>
-
-      <MarketingSiteFooter t={t} />
+      <MarketingSiteFooter t={t} lang={lang} />
     </MarketingPageShell>
   );
 }

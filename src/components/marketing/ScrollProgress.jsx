@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function ScrollProgress() {
-  const [progress, setProgress] = useState(0);
   const [reduceMotion, setReduceMotion] = useState(false);
+  const barRef = useRef(null);
 
   useEffect(() => {
     const media = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -12,17 +12,29 @@ export default function ScrollProgress() {
     syncMotion();
     media.addEventListener('change', syncMotion);
 
-    function onScroll() {
+    let animationFrame = null;
+
+    function paint() {
+      animationFrame = null;
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      setProgress(docHeight > 0 ? Math.min(scrollTop / docHeight, 1) : 0);
+      const progress = docHeight > 0 ? Math.min(scrollTop / docHeight, 1) : 0;
+      barRef.current?.style.setProperty('--scroll-progress', progress);
     }
 
-    onScroll();
+    function onScroll() {
+      if (animationFrame) return;
+      animationFrame = window.requestAnimationFrame(paint);
+    }
+
+    paint();
     window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
     return () => {
       media.removeEventListener('change', syncMotion);
       window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      if (animationFrame) window.cancelAnimationFrame(animationFrame);
     };
   }, []);
 
@@ -30,7 +42,7 @@ export default function ScrollProgress() {
 
   return (
     <div className="scroll-progress" aria-hidden="true">
-      <div className="scroll-progress__bar" style={{ transform: `scaleX(${progress})` }} />
+      <div ref={barRef} className="scroll-progress__bar" />
     </div>
   );
 }

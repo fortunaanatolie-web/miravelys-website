@@ -1,26 +1,30 @@
-import { siteCopy } from '../i18n/siteCopy';
+import { isSupportedPublicLanguage } from '../i18n/publicSiteCopy';
 
 export const SITE_LANGUAGE_KEY = 'miravelys.site.language';
 export const SITE_LANGUAGE_EVENT = 'miravelys:language-change';
 
 const fallbackLanguage = 'en';
 
+export function getLanguageFromPath(pathname) {
+  const urlLang = pathname?.split('/').filter(Boolean)[0];
+  return urlLang && isSupportedPublicLanguage(urlLang) ? urlLang : null;
+}
+
 export function getSiteLanguage() {
   if (typeof window === 'undefined') return fallbackLanguage;
   
-  const pathSegments = window.location.pathname.split('/').filter(Boolean);
-  const urlLang = pathSegments[0];
-  if (urlLang && siteCopy[urlLang]) return urlLang;
+  const pathLanguage = getLanguageFromPath(window.location.pathname);
+  if (pathLanguage) return pathLanguage;
 
   const saved = window.localStorage.getItem(SITE_LANGUAGE_KEY);
-  if (saved && siteCopy[saved]) return saved;
+  if (saved && isSupportedPublicLanguage(saved)) return saved;
   
   const browserLanguage = window.navigator.language?.slice(0, 2);
-  return siteCopy[browserLanguage] ? browserLanguage : fallbackLanguage;
+  return isSupportedPublicLanguage(browserLanguage) ? browserLanguage : fallbackLanguage;
 }
 
 export function setSiteLanguage(code) {
-  if (!siteCopy[code]) return;
+  if (!isSupportedPublicLanguage(code)) return;
   window.localStorage.setItem(SITE_LANGUAGE_KEY, code);
   window.dispatchEvent(new CustomEvent(SITE_LANGUAGE_EVENT, { detail: code }));
 }

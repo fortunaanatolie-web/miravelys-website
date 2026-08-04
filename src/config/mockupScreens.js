@@ -1,10 +1,11 @@
 /**
  * Localized marketing screen mockups.
  *
- * Reference-grade captures from miravelys-redesign-v5 (see scripts/lib/mockup_screen_profiles.mjs).
- * npm run build:mockups — capture EN, trim, distribute to all language folders.
+ * The live site uses optimized public assets generated from the source captures.
+ * Keeping source captures outside Vite's import graph prevents retired fallback
+ * images from turning into dozens of production chunks.
  */
-import { languages } from '../i18n/siteCopy.js';
+import { languages } from '../i18n/publicSiteCopy.js';
 import { mockupImageDimensions } from './imageAssets.js';
 
 export { mockupImageDimensions };
@@ -19,43 +20,34 @@ export const mockupScreens = [
   { id: 'mirror', copyKey: 'mirror', asset: 'screen-mirror' },
 ];
 
-const lazyModules = import.meta.glob('../assets/mockups/**/*.png');
-const cache = new Map();
 const canonicalLang = 'en';
+const screenshotCodeByAsset = {
+  'screen-welcome': 'welcome',
+  'screen-today': 'overview',
+  'screen-clear': 'write',
+  'screen-truth': 'layers',
+  'screen-calm': 'body',
+  'screen-rest': 'sounds',
+  'screen-mirror': 'patterns',
+};
 
 function resolveLangCode(lang) {
   return languages.some(item => item.code === lang) ? lang : canonicalLang;
 }
 
-function cacheKey(lang, asset) {
-  return `${resolveLangCode(lang)}/${asset}`;
+function optimizedPublicPath(lang, asset) {
+  const code = screenshotCodeByAsset[asset];
+  if (!code) return '';
+  return `/miravelys-screenshots/sticky-phone/${resolveLangCode(lang)}/${code}-780.jpg?v=1`;
 }
 
-/** Cached URL only — empty until loadMockupScreenImage resolves. */
+/** Compatibility bridge for retired components; active screens use the shared manifest. */
 export function resolveMockupScreenImage(lang, asset) {
-  return cache.get(cacheKey(lang, asset)) ?? '';
+  return optimizedPublicPath(lang, asset);
 }
 
 export async function loadMockupScreenImage(lang, asset) {
-  const key = cacheKey(lang, asset);
-  if (cache.has(key)) return cache.get(key);
-
-  const code = resolveLangCode(lang);
-  const candidates = [
-    `../assets/mockups/${code}/${asset}.png`,
-    `../assets/mockups/${canonicalLang}/${asset}.png`,
-  ];
-
-  for (const path of candidates) {
-    const loader = lazyModules[path];
-    if (!loader) continue;
-    const mod = await loader();
-    const url = mod.default;
-    cache.set(key, url);
-    return url;
-  }
-
-  return '';
+  return optimizedPublicPath(lang, asset);
 }
 
 /** Warm the current language set (7 screens) without loading all 10 languages up front. */

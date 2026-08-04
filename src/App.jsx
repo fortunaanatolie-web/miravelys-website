@@ -1,8 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { siteCopy } from './i18n/siteCopy';
-import { resolveExperience } from './i18n/experienceCopy';
-import { resolveMarketingCopy } from './i18n/marketingCopy';
-import { preloadMiravelysScreenshots } from './lib/miravelysScreenshots';
+import { resolvePublicSiteCopy } from './i18n/publicSiteCopy';
+import { resolveLoopStoryCopy } from './i18n/loopStoryCopy';
 import { useSiteLanguage } from './hooks/useSiteLanguage';
 import { useWaitlist } from './hooks/useWaitlist';
 import MarketingPageShell from './components/marketing/MarketingPageShell';
@@ -10,23 +8,20 @@ import MarketingTopNav from './components/marketing/MarketingTopNav';
 import MarketingSiteFooter from './components/marketing/MarketingSiteFooter';
 import EarlyAccessModal from './components/marketing/EarlyAccessModal';
 import HeroSection from './components/marketing/sections/HeroSection';
-import ProblemBridgeSection from './components/marketing/sections/ProblemBridgeSection';
-import StickyPhoneStory from './components/marketing/sections/StickyPhoneStory';
-import ModesSection from './components/marketing/sections/ModesSection';
+import LoopMethodSection from './components/marketing/sections/LoopMethodSection';
+import SupportSection from './components/marketing/sections/SupportSection';
 import TrustSection from './components/marketing/sections/TrustSection';
 import DownloadSection from './components/marketing/sections/DownloadSection';
-import BrandMeaningSection from './components/marketing/sections/BrandMeaningSection';
-import MarketingStickyCta from './components/marketing/MarketingStickyCta';
+import FounderTeaserSection from './components/marketing/sections/FounderTeaserSection';
 import { handleInPageNav } from './lib/scrollToSection';
 import { setDocumentMeta } from './lib/documentMeta';
-
-const fallbackLanguage = 'en';
+import { resolveHomeMeta } from './lib/publicRouteMeta';
 
 function App() {
   const [lang, setLang] = useSiteLanguage();
-  const t = useMemo(() => siteCopy[lang] || siteCopy[fallbackLanguage], [lang]);
-  const experience = useMemo(() => resolveExperience(lang), [lang]);
-  const marketing = useMemo(() => resolveMarketingCopy(lang), [lang]);
+  const t = useMemo(() => resolvePublicSiteCopy(lang), [lang]);
+  const loopStory = useMemo(() => resolveLoopStoryCopy(lang), [lang]);
+  const homeMeta = useMemo(() => resolveHomeMeta(lang), [lang]);
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = useCallback(() => setMenuOpen(false), []);
   const waitlist = useWaitlist(lang);
@@ -36,19 +31,10 @@ function App() {
   }, [closeMenu]);
 
   useEffect(() => {
-    preloadMiravelysScreenshots(lang);
-  }, [lang]);
-
-  useEffect(() => {
     document.documentElement.lang = t.meta.locale;
     document.documentElement.dir = 'ltr';
-    setDocumentMeta({
-      title: t.meta.title ?? 'Miravelys',
-      description: t.meta.description ?? t.hero.body,
-      ogTitle: t.meta.ogTitle ?? t.meta.title ?? 'Miravelys',
-      ogDescription: t.meta.ogDescription ?? t.meta.description ?? t.hero.body,
-    });
-  }, [t.meta, t.hero.body]);
+    setDocumentMeta(homeMeta);
+  }, [homeMeta, t.meta.locale]);
 
   return (
     <MarketingPageShell lang={lang}
@@ -61,61 +47,50 @@ function App() {
         lang={lang}
         setLang={setLang}
         t={t}
-        experience={experience}
+        earlyAccess={waitlist.copy}
       />
 
-      <HeroSection
-        t={t}
-        experience={experience}
-        onNavClick={onNavClick}
-        onEarlyAccessClick={waitlist.openEarlyAccess}
-      />
+      <main id="main-content">
+        <HeroSection
+          lang={lang}
+          copy={loopStory}
+          earlyAccess={waitlist.copy}
+          onNavClick={onNavClick}
+          onEarlyAccessClick={waitlist.openEarlyAccess}
+        />
 
-      <ProblemBridgeSection
-        marketing={marketing}
-        experience={experience}
-        onNavClick={onNavClick}
-      />
+        <LoopMethodSection lang={lang} copy={loopStory} />
 
-      <StickyPhoneStory lang={lang}
-        t={t} />
+        <SupportSection lang={lang} copy={loopStory} />
 
-      <ModesSection t={t} />
+        <TrustSection
+          lang={lang}
+          copy={loopStory}
+        />
 
-      <TrustSection
-        t={t}
-        lang={lang}
-        experience={experience}
-        onNavClick={onNavClick}
-      />
+        <FounderTeaserSection lang={lang} copy={loopStory} />
 
-      <DownloadSection
-        lang={lang}
-        t={t}
-        experience={experience}
-        onNavClick={onNavClick}
-        onEarlyAccessClick={waitlist.openEarlyAccess}
-      />
+        <DownloadSection
+          copy={loopStory}
+          earlyAccess={waitlist.copy}
+          onNavClick={onNavClick}
+          onEarlyAccessClick={waitlist.openEarlyAccess}
+        />
+      </main>
 
-      <BrandMeaningSection lang={lang} />
-
-      <MarketingSiteFooter t={t} />
-
-      <MarketingStickyCta
-        experience={experience}
-        onNavClick={onNavClick}
-        onEarlyAccessClick={waitlist.openEarlyAccess}
-      />
+      <MarketingSiteFooter t={t} lang={lang} />
 
       <EarlyAccessModal
         open={waitlist.earlyAccessOpen}
         onClose={waitlist.closeEarlyAccess}
         lang={lang}
         t={t}
-        experience={experience}
+        copy={waitlist.copy}
         waitlistEmail={waitlist.waitlistEmail}
         setWaitlistEmail={waitlist.setWaitlistEmail}
         waitlistJoined={waitlist.waitlistJoined}
+        waitlistDraftReady={waitlist.waitlistDraftReady}
+        waitlistDraftNotice={waitlist.waitlistDraftNotice}
         waitlistError={waitlist.waitlistError}
         setWaitlistError={waitlist.setWaitlistError}
         handleWaitlistSubmit={waitlist.handleWaitlistSubmit}

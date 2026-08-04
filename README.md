@@ -1,68 +1,32 @@
-# Miravelys Lifestyle Website
+# Miravelys public website
 
-This website is the public multilingual presence for Miravelys: a calm, private, intelligent companion for self-inquiry and emotional clarity.
+The public site is the marketing companion for Miravelys: a private place to slow down, separate what happened from what the mind added, and notice recurring patterns. It is not positioned as therapy, diagnosis, or an AI authority.
 
-## Implemented
+## Public contract
 
-- Premium one-page lifestyle website with deep navy background, gold glowing Miravelys treatment, cyan/gold accents, glassmorphism cards, and premium foreground lifestyle imagery.
-- Stable navigation anchors independent of language, so navigation works correctly in every locale.
-- Smooth language switcher in the top navigation, mockup section, and language showcase.
-- Language preference persistence through `localStorage`.
-- Automatic `document.documentElement.lang` updates for accessibility and SEO.
-- Full translated website copy for 10 languages:
-  - English
-  - Russian
-  - Romanian
-  - French
-  - Hindi
-  - Chinese Simplified
-  - German
-  - Japanese
-  - Spanish
-  - Portuguese
-- Fully translated app mockups for 10 languages covering:
-  - Home
-  - Get Clear / Truth Line
-  - Calm Now
-  - Sleep Now
-  - Weekly Mirror
-- Detailed app explanation sections:
-  - Hero
-  - Product idea
-  - Signature connected app flow
-  - Inquiry modes
-  - Emotional outcomes
-  - Translated app mockups
-  - Trust and privacy
-  - Language availability
-- Inquiry mode explanation for:
-  - Calm Mirror
-  - Direct Inquiry
-  - Aggressive clarity
-- Safety-forward positioning:
-  - Local-first
-  - Correctable
-  - Not therapy
-  - Never diagnosis
-  - Evidence-backed patterns
-  - User corrections override model outputs
+- The homepage follows one story: a recurring loop, the unanswered-message example, the three-part reflection method, support for settling, privacy, and a modest invitation.
+- Entries are described as local-first by default. Optional cloud or provider help is always presented as a separate, deliberate choice.
+- English lives at canonical unprefixed URLs; the other supported languages live beneath their locale prefix.
+- The founder story is authored in English and Russian. Other locale routes disclose the English fallback rather than pretending the story is translated.
 
-## Key files
+## Architecture
 
-- `src/App.jsx` — page structure, language switching, responsive layout.
-- `src/i18n/siteCopy.js` — full translated marketing and explanatory website copy.
-- `src/i18n/mockupCopy.js` — translated copy shown inside app mockups.
-- `src/index.css` — Miravelys visual system, responsive website styling, glassmorphism, gold glow, mockups.
-- `src/assets/` — lifestyle imagery used across the website.
+- `src/App.jsx` contains the active home journey.
+- `src/i18n/loopStoryCopy.js` owns the public product story; `src/i18n/earlyAccessCopy.js` owns the truthful early-access flow.
+- `src/styles/site-loop-journey.css` owns the active visual system. Retired presentation and sticky-story styles are no longer imported by the live route.
+- `public/` holds source app captures for the internal capture workflow.
+- `public-site/` is the curated deployment payload: responsive AVIF app screens, compact JPEG fallbacks, legal/static files, and the social card.
+- `scripts/prerender_public_routes.mjs` emits static HTML route shells with canonical URLs, locale alternates, and social metadata after every production build.
 
-## Validation
+## Early access
 
-The website build was validated with:
+Set `VITE_WAITLIST_ENDPOINT` to receive `POST` requests containing `email`, `source`, and `language`. Without an endpoint, the website deliberately prepares a `mailto:` request instead of claiming that the visitor has already joined a list.
+
+## Commands
 
 ```bash
-npm ci
 npm run build
+npm run verify:public-contract
 ```
 
-A copy completeness check confirmed all 10 languages include the required website sections and mockup text.
-# Miravelys
+The verification checks every deployed locale/route shell, responsive screenshot family, canonical/hreflang/social metadata, and the hero asset budget.

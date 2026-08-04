@@ -15,6 +15,7 @@ export default function MarketingTopNav({
   lang,
   setLang,
   t,
+  earlyAccess,
   experience,
 }) {
   const panelId = useId();
@@ -80,12 +81,17 @@ export default function MarketingTopNav({
     closeMenu();
   };
 
+  const localizeRoute = route => {
+    if (!lang || lang === 'en') return route;
+    return route === '/' ? `/${lang}` : `/${lang}${route}`;
+  };
+
   if (variant === 'legal') {
     return (
       <header className="site-header site-header--legal">
         <nav className="top-nav top-nav--legal" aria-label={headerCopy.menuLabel}>
           <div className="top-nav__bar">
-            <Link to="/" className="brand-mini" aria-label={headerCopy.homeLabel}>
+            <Link to={localizeRoute('/')} className="brand-mini" aria-label={headerCopy.homeLabel}>
               Miravelys
             </Link>
             <div className="top-nav__actions">
@@ -119,7 +125,7 @@ export default function MarketingTopNav({
           <div className="top-nav__links nav-links" aria-label={headerCopy.menuLabel}>
             {headerNavItems.map(item =>
               item.route ? (
-                <Link key={item.route} to={item.route}>
+                <Link key={item.route} to={localizeRoute(item.route)}>
                   {t.nav[item.key]}
                 </Link>
               ) : (
@@ -140,6 +146,7 @@ export default function MarketingTopNav({
             />
             <MarketingCta
               role="primary"
+              earlyAccess={earlyAccess}
               experience={experience}
               onNavClick={onNavClick}
               onEarlyAccessClick={onEarlyAccessClick}
@@ -197,7 +204,7 @@ export default function MarketingTopNav({
             {mobileNavItems.map(item => (
               <li key={item.route ?? item.id}>
                 {item.route ? (
-                  <Link to={item.route} onClick={closeMenu}>
+                  <Link to={localizeRoute(item.route)} onClick={closeMenu}>
                     {t.nav[item.key]}
                   </Link>
                 ) : (
@@ -212,6 +219,7 @@ export default function MarketingTopNav({
           <div className="top-nav__panel-actions mobile-menu-panel__actions">
             <MarketingCta
               role="primary"
+              earlyAccess={earlyAccess}
               experience={experience}
               onNavClick={handleNavClick}
               onEarlyAccessClick={() => {

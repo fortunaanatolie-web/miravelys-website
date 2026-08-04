@@ -1,10 +1,15 @@
 import { useCallback, useEffect, useState } from 'react';
-import { getSiteLanguage, setSiteLanguage, subscribeSiteLanguage } from '../lib/siteLanguage';
+import { useLocation } from 'react-router-dom';
+import { getLanguageFromPath, setSiteLanguage } from '../lib/siteLanguage';
 
 export function useSiteLanguage() {
-  const [lang, setLangState] = useState(getSiteLanguage);
+  const location = useLocation();
+  const routeLanguage = getLanguageFromPath(location.pathname) ?? 'en';
+  const [lang, setLangState] = useState(routeLanguage);
 
-  useEffect(() => subscribeSiteLanguage(setLangState), []);
+  useEffect(() => {
+    setLangState(routeLanguage);
+  }, [routeLanguage]);
 
   const setLang = useCallback(code => {
     setSiteLanguage(code);

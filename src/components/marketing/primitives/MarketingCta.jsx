@@ -6,6 +6,7 @@ import { marketingCtas } from '../../../config/marketingWiring';
  */
 export default function MarketingCta({
   role,
+  earlyAccess,
   experience,
   onNavClick,
   onEarlyAccessClick,
@@ -16,7 +17,7 @@ export default function MarketingCta({
   const config = marketingCtas[role];
   if (!config) return null;
 
-  const label = children ?? experience?.sticky?.[config.labelKey];
+  const label = children ?? earlyAccess?.cta ?? experience?.sticky?.[config.labelKey];
   if (!label) return null;
 
   const variantClass =

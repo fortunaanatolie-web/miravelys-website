@@ -1,27 +1,28 @@
 /**
  * Miravelys website screenshot manifest — single source for all mockup image paths.
- * Upload PNG files to public/miravelys-screenshots/{group}/{locale}/{code}.png
+ * The deployed site serves responsive AVIF sources with a compact JPEG fallback.
  */
-import { languages } from '../i18n/siteCopy.js';
+import { languages } from '../i18n/publicSiteCopy.js';
 import { productSceneOrder } from '../config/productScenes.js';
 import { originBlockOrder } from '../config/originBlocks.js';
 import { resolveScreenshotAlt } from '../i18n/screenshotAltCopy.js';
-import { loadMockupScreenImage, resolveMockupScreenImage } from '../config/mockupScreens.js';
 
 /** Sticky-phone screenshots are screen-only app captures (1170×2532 @3x, 390×844 logical). */
 export const SCREENSHOT_ASSET_MODE = 'screen-only';
 
 /** @typedef {'screen-only' | 'already-framed'} ScreenshotAssetMode */
 export const SCREENSHOT_BASE = '/miravelys-screenshots';
-export const SCREENSHOT_EXTENSION = 'png';
+export const SCREENSHOT_EXTENSION = 'jpg';
+export const SCREENSHOT_VERSION = '1';
 export const CANONICAL_LOCALE = 'en';
+export const PHONE_SCREEN_WIDTHS = [390, 780, 1206];
 
 export const supportedLocales = languages.map(language => language.code);
 
 /** @typedef {'sticky-phone'|'hero'|'story-page'|'grounding'|'privacy'|'final-cta'|'secondary'} ScreenshotGroup */
 
 export const screenshotGroups = {
-  'sticky-phone': ['overview', 'write', 'layers', 'patterns', 'body', 'sounds', 'welcome'],
+  'sticky-phone': ['overview', 'write', 'layers', 'patterns', 'body', 'sounds', 'settings', 'welcome'],
   hero: ['main'],
   'story-page': ['writing', 'grounding', 'reflection'],
   grounding: ['breathe', 'meditate', 'sleep', 'align', 'player'],
@@ -49,6 +50,7 @@ export const stickyPhoneLegacyAssets = {
   patterns: 'screen-mirror',
   body: 'screen-calm',
   sounds: 'screen-rest',
+  settings: 'screen-welcome',
   welcome: 'screen-welcome',
 };
 
@@ -119,8 +121,23 @@ export function resolveLocale(locale) {
 }
 
 export function getScreenshotPath(locale, group, code) {
+  return getScreenshotAssetPath(locale, group, code, 780, SCREENSHOT_EXTENSION);
+}
+
+export function getScreenshotAssetPath(locale, group, code, width = 780, extension = SCREENSHOT_EXTENSION) {
   const safeLocale = resolveLocale(locale);
-  return `${SCREENSHOT_BASE}/${group}/${safeLocale}/${code}.${SCREENSHOT_EXTENSION}?v=5`;
+  return `${SCREENSHOT_BASE}/${group}/${safeLocale}/${code}-${width}.${extension}?v=${SCREENSHOT_VERSION}`;
+}
+
+export function getResponsiveScreenshotSources(locale, group, code) {
+  if (group !== 'sticky-phone') return null;
+  const safeLocale = resolveLocale(locale);
+  return {
+    avifSrcSet: PHONE_SCREEN_WIDTHS
+      .map(width => `${getScreenshotAssetPath(safeLocale, group, code, width, 'avif')} ${width}w`)
+      .join(', '),
+    fallbackSrcSet: `${getScreenshotAssetPath(safeLocale, group, code, 780, 'jpg')} 780w`,
+  };
 }
 
 export function getLegacyAssetForScreenshot(group, code) {
@@ -146,7 +163,7 @@ export function resolveWebsiteScreenshot({ locale, group, code, mockupId }) {
     code,
     locale: safeLocale,
     publicPath: getScreenshotPath(safeLocale, group, code),
-    legacyAsset: getLegacyAssetForScreenshot(group, code),
+    legacyAsset: null,
     alt: resolveScreenshotAlt(safeLocale, group, code),
     mockupId,
   };
@@ -186,10 +203,10 @@ export function resolveMockupGalleryScreenshot(mockupId, locale) {
 }
 
 export function resolveTrustScreenshot(locale) {
-  return resolveWebsiteScreenshot({ locale, group: 'sticky-phone', code: 'welcome', mockupId: 'welcome' });
+  return resolveWebsiteScreenshot({ locale, group: 'sticky-phone', code: 'settings', mockupId: 'settings' });
 }
 
-/** Preload sticky-phone public PNGs for a locale (plus legacy fallbacks). */
+/** Preload compact fallback assets for retired, opt-in story surfaces. */
 export function preloadMiravelysScreenshots(locale) {
   const safeLocale = resolveLocale(locale);
   const urls = new Set();
@@ -200,13 +217,6 @@ export function preloadMiravelysScreenshots(locale) {
       urls.add(getScreenshotPath(CANONICAL_LOCALE, 'sticky-phone', code));
     }
   }
-
-  Object.values(stickyPhoneLegacyAssets).forEach(asset => {
-    urls.add(resolveMockupScreenImage(safeLocale, asset));
-    if (safeLocale !== CANONICAL_LOCALE) {
-      urls.add(resolveMockupScreenImage(CANONICAL_LOCALE, asset));
-    }
-  });
 
   return Promise.all(
     [...urls].map(
@@ -222,17 +232,15 @@ export function preloadMiravelysScreenshots(locale) {
 }
 
 /**
- * Resolve display URL: public PNG path (primary) with legacy PNG loaded async via hook.
- * Sync legacy cache for immediate fallback.
+ * Legacy source imports are deliberately not part of the production fallback path.
+ * A localized optimized asset falls back to the English optimized asset instead.
  */
 export function resolveLegacyScreenshotUrl(locale, legacyAsset) {
-  if (!legacyAsset) return '';
-  return resolveMockupScreenImage(locale, legacyAsset);
+  return '';
 }
 
 export async function loadLegacyScreenshotUrl(locale, legacyAsset) {
-  if (!legacyAsset) return '';
-  return loadMockupScreenImage(locale, legacyAsset);
+  return '';
 }
 
 /** English public path for production fallback */
@@ -253,5 +261,5 @@ export const websiteScreenshotReferences = [
       code: originBlockScreenshotMap[block.key].code,
       source: `OriginStorySection (${block.key})`,
     })),
-  { group: 'sticky-phone', code: 'welcome', source: 'TrustSection' },
+  { group: 'sticky-phone', code: 'settings', source: 'TrustSection' },
 ];

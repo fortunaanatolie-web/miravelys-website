@@ -5,6 +5,7 @@
 export const marketingAnchors = {
   top: 'top',
   works: 'works',
+  privacy: 'privacy',
   download: 'download',
 };
 
@@ -23,10 +24,12 @@ export const marketingRoutes = {
   home: '/',
   story: '/story',
   support: '/support',
+  faq: '/faq',
 };
 
 export const headerNavItems = [
   { id: 'works', key: 'works' },
+  { id: 'privacy', key: 'privacy' },
   { route: '/story', key: 'origin' },
 ];
 

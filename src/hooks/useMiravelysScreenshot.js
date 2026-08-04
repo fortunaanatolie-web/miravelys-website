@@ -1,32 +1,34 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   CANONICAL_LOCALE,
   getEnglishScreenshotPath,
+  getResponsiveScreenshotSources,
   getScreenshotPath,
-  loadLegacyScreenshotUrl,
-  resolveLegacyScreenshotUrl,
 } from '../lib/miravelysScreenshots.js';
 
 const isDev = import.meta.env.DEV;
 
 function resolveInitialState(descriptor) {
   if (!descriptor) {
-    return { src: '', status: 'missing', missing: null };
+    return { src: '', status: 'missing', missing: null, source: 'missing', assetLocale: null };
   }
 
-  const { locale, legacyAsset } = descriptor;
-  if (legacyAsset) {
-    const cached = resolveLegacyScreenshotUrl(locale, legacyAsset);
-    if (cached) {
-      return { src: cached, status: 'legacy-fallback', missing: null };
-    }
+  if (descriptor.publicPath) {
+    return {
+      src: descriptor.publicPath,
+      status: 'ready',
+      missing: null,
+      source: 'public',
+      assetLocale: descriptor.locale,
+    };
   }
 
-  return { src: '', status: 'loading', missing: null };
+  return { src: '', status: 'missing', missing: null, source: 'missing', assetLocale: null };
 }
 
 /**
- * Resolves a Miravelys website screenshot with .webp primary + legacy PNG fallback.
+ * Use the deployed optimized screenshot first. A missing localized capture falls back
+ * to the canonical English capture; retired bundled PNGs never enter the live bundle.
  */
 export function useMiravelysScreenshot(screen, lang) {
   const descriptor = useMemo(() => {
@@ -34,106 +36,55 @@ export function useMiravelysScreenshot(screen, lang) {
     const locale = screen.lang ?? lang;
     const group = screen.group;
     const code = screen.code;
-    const legacyAsset = screen.legacyAsset ?? screen.asset ?? null;
     const publicPath =
       screen.publicPath ?? (group && code ? getScreenshotPath(locale, group, code) : '');
 
-    return { locale, group, code, legacyAsset, publicPath, alt: screen.alt ?? '' };
+    return { locale, group, code, publicPath, alt: screen.alt ?? '' };
   }, [screen, lang]);
 
   const descriptorKey = descriptor
-    ? `${descriptor.locale}:${descriptor.group}:${descriptor.code}:${descriptor.legacyAsset ?? ''}`
+    ? `${descriptor.locale}:${descriptor.group}:${descriptor.code}`
     : '';
 
   const [state, setState] = useState(() => resolveInitialState(descriptor));
-  const resolvedKeyRef = useRef('');
 
   useEffect(() => {
     if (!descriptor) {
-      setState({ src: '', status: 'missing', missing: null });
-      resolvedKeyRef.current = '';
+      setState({ src: '', status: 'missing', missing: null, source: 'missing', assetLocale: null });
       return undefined;
-    }
-
-    if (resolvedKeyRef.current === descriptorKey) {
-      return undefined;
-    }
-
-    let cancelled = false;
-
-    function finish(nextState) {
-      if (cancelled) return;
-      resolvedKeyRef.current = descriptorKey;
-      setState(nextState);
-    }
-
-    async function resolve() {
-      const { locale, group, code, legacyAsset, publicPath } = descriptor;
-
-      if (!publicPath && !legacyAsset) {
-        finish({ src: '', status: 'missing', missing: { group, code, locale, expected: '' } });
-        return;
-      }
-
-      const legacyPromise = legacyAsset
-        ? loadLegacyScreenshotUrl(locale, legacyAsset)
-        : Promise.resolve('');
-
-      const webpPromise = publicPath
-        ? new Promise(resolveWebp => {
-            const img = new Image();
-            img.onload = () => resolveWebp(publicPath);
-            img.onerror = () => resolveWebp('');
-            img.src = publicPath;
-          })
-        : Promise.resolve('');
-
-      const enWebpPromise =
-        publicPath && locale !== CANONICAL_LOCALE && group && code
-          ? new Promise(resolveWebp => {
-              const enPath = getEnglishScreenshotPath(group, code);
-              const img = new Image();
-              img.onload = () => resolveWebp(enPath);
-              img.onerror = () => resolveWebp('');
-              img.src = enPath;
-            })
-          : Promise.resolve('');
-
-      const [legacySrc, webpSrc, enWebpSrc] = await Promise.all([
-        legacyPromise,
-        webpPromise,
-        enWebpPromise,
-      ]);
-
-      if (cancelled) return;
-
-      const src = webpSrc || enWebpSrc || legacySrc || '';
-      if (src) {
-        if (isDev && !webpSrc && enWebpSrc) {
-          console.warn(`[MiravelysScreenshots] Missing localized screenshot: ${publicPath}. Falling back to English (${enWebpSrc}).`);
-        }
-        finish({
-          src,
-          status: webpSrc ? 'ready' : enWebpSrc ? 'en-fallback' : 'legacy-fallback',
-          missing: null,
-        });
-        return;
-      }
-
-      finish({
-        src: '',
-        status: 'missing',
-        missing: { group, code, locale, expected: publicPath },
-      });
     }
 
     setState(resolveInitialState(descriptor));
-    resolve();
-
-    return () => {
-      cancelled = true;
-    };
   }, [descriptor, descriptorKey]);
 
-  return { ...state, isDev, alt: descriptor?.alt ?? '' };
+  const handleError = useCallback(() => {
+    if (!descriptor || state.source === 'missing') return;
+
+    const { locale, group, code, publicPath } = descriptor;
+    if (state.source === 'public' && locale !== CANONICAL_LOCALE && group && code) {
+      const englishPath = getEnglishScreenshotPath(group, code);
+      if (isDev) {
+        console.warn(`[MiravelysScreenshots] Missing localized screenshot: ${publicPath}. Falling back to English (${englishPath}).`);
+      }
+      setState({ src: englishPath, status: 'en-fallback', missing: null, source: 'english', assetLocale: CANONICAL_LOCALE });
+      return;
+    }
+
+    setState({
+      src: '',
+      status: 'missing',
+      missing: { group, code, locale, expected: publicPath },
+      source: 'missing',
+      assetLocale: null,
+    });
+  }, [descriptor, state.source]);
+
+  const responsiveSources = useMemo(
+    () => (state.assetLocale && descriptor?.group && descriptor?.code
+      ? getResponsiveScreenshotSources(state.assetLocale, descriptor.group, descriptor.code)
+      : null),
+    [descriptor?.code, descriptor?.group, state.assetLocale],
+  );
+
+  return { ...state, responsiveSources, handleError, isDev, alt: descriptor?.alt ?? '' };
 }

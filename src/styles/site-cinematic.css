@@ -15,9 +15,11 @@
 }
 
 .scroll-progress__bar {
+  --scroll-progress: 0;
   height: 100%;
   width: 100%;
   transform-origin: left center;
+  transform: scaleX(var(--scroll-progress));
   background: linear-gradient(90deg, var(--mira-progress-start) 0%, var(--mira-progress-mid) 55%, var(--mira-progress-end) 100%);
   box-shadow: 0 0 14px var(--mira-gold-glow);
   transition: transform 0.1s linear;

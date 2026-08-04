@@ -1,5 +1,5 @@
 import { useEffect, useId, useRef } from 'react';
-import { X } from 'lucide-react';
+import { Mail, X } from 'lucide-react';
 import { resolveHeaderCopy } from '../../i18n/headerCopy';
 
 function getFocusableElements(container) {
@@ -13,10 +13,12 @@ export default function EarlyAccessModal({
   open,
   onClose,
   lang,
-  experience,
+  copy,
   waitlistEmail,
   setWaitlistEmail,
   waitlistJoined,
+  waitlistDraftReady,
+  waitlistDraftNotice,
   waitlistError,
   setWaitlistError,
   handleWaitlistSubmit,
@@ -25,12 +27,16 @@ export default function EarlyAccessModal({
   const titleId = useId();
   const dialogRef = useRef(null);
   const closeButtonRef = useRef(null);
+  const previouslyFocusedRef = useRef(null);
   const headerCopy = resolveHeaderCopy(lang);
   const closeLabel = headerCopy.closeModal ?? headerCopy.closeMenu;
 
   useEffect(() => {
     if (!open) return undefined;
 
+    previouslyFocusedRef.current = document.activeElement instanceof HTMLElement
+      ? document.activeElement
+      : null;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     closeButtonRef.current?.focus();
@@ -63,7 +69,10 @@ export default function EarlyAccessModal({
     return () => {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener('keydown', onKeyDown);
-      returnFocusRef?.current?.focus?.();
+      const returnTarget = returnFocusRef?.current ?? previouslyFocusedRef.current;
+      if (returnTarget && document.contains(returnTarget)) {
+        returnTarget.focus({ preventScroll: true });
+      }
     };
   }, [open, onClose, returnFocusRef]);
 
@@ -96,12 +105,16 @@ export default function EarlyAccessModal({
         </button>
 
         <div className="early-access-modal__content">
-          <h2 id={titleId}>{experience.beta.button}</h2>
-          <p className="early-access-modal__intro">{experience.beta.body}</p>
+          <h2 id={titleId}>{copy.title}</h2>
+          <p className="early-access-modal__intro">{copy.body}</p>
+          <p className="early-access-modal__route-note">
+            <Mail size={15} aria-hidden="true" />
+            {copy.note}
+          </p>
 
           <form className="early-access-modal__form beta-form" onSubmit={handleWaitlistSubmit}>
             <label>
-              <span className="sr-only">{experience.beta.placeholder}</span>
+              <span className="sr-only">{copy.placeholder}</span>
               <input
                 type="email"
                 name="email"
@@ -112,22 +125,23 @@ export default function EarlyAccessModal({
                   setWaitlistEmail(event.target.value);
                   if (waitlistError) setWaitlistError('');
                 }}
-                placeholder={experience.beta.placeholder}
-                aria-label={experience.beta.placeholder}
+                placeholder={copy.placeholder}
+                aria-label={copy.placeholder}
                 aria-invalid={waitlistError ? 'true' : undefined}
                 disabled={waitlistJoined}
               />
             </label>
             <button type="submit" className="primary-action" disabled={waitlistJoined}>
-              {experience.beta.button}
+              {copy.submit}
             </button>
             {waitlistError ? (
               <p className="beta-form-error" role="alert">
                 {waitlistError}
               </p>
             ) : null}
-            {waitlistJoined ? <small className="beta-success">{experience.beta.success}</small> : null}
-            <small>{experience.beta.privacy}</small>
+            {waitlistDraftReady ? <small className="beta-success" role="status">{waitlistDraftNotice}</small> : null}
+            {waitlistJoined ? <small className="beta-success" role="status">{copy.success}</small> : null}
+            <small>{copy.privacy}</small>
           </form>
         </div>
       </div>

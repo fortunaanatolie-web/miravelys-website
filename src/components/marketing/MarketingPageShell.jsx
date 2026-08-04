@@ -12,7 +12,7 @@ export default function MarketingPageShell({ children, lang = 'en', skipLinkTarg
   }, [appearance]);
 
   return (
-    <main className={`site-shell site-shell--keynote site-shell--${appearance}`}>
+    <div className={`site-shell site-shell--keynote site-shell--${appearance}`}>
       <div className="cinematic-atmosphere" aria-hidden="true">
         <div className="cinematic-atmosphere__base" />
         <div className="cinematic-atmosphere__glow cinematic-atmosphere__glow--gold" />
@@ -28,6 +28,6 @@ export default function MarketingPageShell({ children, lang = 'en', skipLinkTarg
         {header.skipToContent}
       </a>
       {children}
-    </main>
+    </div>
   );
 }

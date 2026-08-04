@@ -1,68 +1,53 @@
-import { ChevronRight, LockKeyhole, ShieldCheck } from 'lucide-react';
+import { Check, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { marketingRoutes } from '../../../config/marketingWiring';
-import { resolvePresentation } from '../../../i18n/presentationCopy';
 import { resolveTrustScreenshot } from '../../../lib/miravelysScreenshots';
 import PhoneMockup from '../primitives/PhoneMockup';
 import RevealOnScroll from '../primitives/RevealOnScroll';
+import { localizeRoute } from '../../../lib/localizeRoute';
 
-const trustIcons = [LockKeyhole, ShieldCheck, LockKeyhole, ShieldCheck, LockKeyhole, ShieldCheck];
-
-export default function TrustSection({ t, lang, experience, onNavClick }) {
-  const presentation = resolvePresentation(lang);
+export default function TrustSection({ lang, copy }) {
   const screenshot = resolveTrustScreenshot(lang);
-  const mockupAlt = screenshot.alt || presentation.trust.title;
+  const privacyPath = localizeRoute(marketingRoutes.privacyPolicy, lang);
+  const screen = {
+    id: 'privacy-settings',
+    ...screenshot,
+    lang,
+    alt: copy.trust.deviceLabel || screenshot.alt,
+  };
 
   return (
-    <section id="privacy" className="trust-section content-section trust-section--presentation trust-section--split">
-      <div className="trust-section__layout">
-        <RevealOnScroll className="trust-section__copy" variant="soft">
-          <div className="trust-icon">
-            <LockKeyhole size={34} />
-          </div>
-          <p className="eyebrow">
-            <ShieldCheck size={16} />
-            {presentation.trust.eyebrow}
+    <section id="privacy" className="loop-trust" aria-labelledby="loop-trust-title">
+      <div className="loop-trust__inner">
+        <RevealOnScroll className="loop-trust__copy" variant="soft">
+          <p className="loop-kicker">
+            <ShieldCheck size={15} aria-hidden="true" />
+            {copy.trust.eyebrow}
           </p>
-          <h2 className="trust-section__title">{presentation.trust.title}</h2>
-          <p className="trust-section__lead">{presentation.trust.body}</p>
-          <p className="trust-section__safety">{presentation.trust.notTherapy}</p>
-          <p className="trust-section__detail">{t.privacy.body}</p>
-          <div className="trust-grid">
-            {t.privacy.bullets.map((item, index) => {
-              const Icon = trustIcons[index] || ShieldCheck;
-              return (
-                <span key={item}>
-                  <Icon size={18} aria-hidden="true" />
-                  {item}
-                </span>
-              );
-            })}
-          </div>
-          <div className="trust-section__actions">
-            <Link to={marketingRoutes.privacyPolicy} className="keynote-link">
-              {experience.sticky.privacy}
-              <ChevronRight size={14} aria-hidden="true" />
-            </Link>
-          </div>
+          <h2 id="loop-trust-title">{copy.trust.title}</h2>
+          <p className="loop-trust__lead">{copy.trust.body}</p>
+          <ul className="loop-trust__facts">
+            {copy.trust.facts.map(fact => (
+              <li key={fact}>
+                <Check size={16} aria-hidden="true" />
+                {fact}
+              </li>
+            ))}
+          </ul>
+          <p className="loop-trust__safety">{copy.trust.safety}</p>
+          <Link to={privacyPath} className="loop-text-link">
+            {copy.trust.link}
+          </Link>
         </RevealOnScroll>
 
-        <RevealOnScroll className="trust-section__device" variant="rise" delay={90}>
+        <RevealOnScroll className="loop-trust__device" variant="rise" delay={100}>
           <PhoneMockup
-            screens={[
-              {
-                id: 'welcome',
-                ...screenshot,
-                lang,
-                alt: mockupAlt,
-              },
-            ]}
-            size="chapter"
-            mood="trust"
-            atmosphere
-            reflection
-            floorShadow
-            ariaLabel={mockupAlt}
+            screens={[screen]}
+            activeIndex={0}
+            variant="mobile-card"
+            assetMode="screen-only"
+            className="loop-phone loop-trust__phone"
+            ariaLabel={screen.alt}
           />
         </RevealOnScroll>
       </div>
