@@ -266,29 +266,22 @@ export const siteCopy = {
     "explanation": {
       "eyebrow": "The Story",
       "title": "How it all began",
-      "intro": "I’ve been obsessed with neural networks since they first emerged. But my initial fascination wasn't the code itself—it was the psychology. I wanted to understand how these models process language and mirror human thought. It was only this year that I finally dove into programming, spending hours every single day building iOS apps just to turn those concepts into something real.\n\nI set out to build something that could answer the hard questions: who are we, really, and what drives us to keep making the same mistakes? Then, while reading a philosophical book, something just clicked. I realized how easily we get trapped in tunnels of our own making. We cling to certain ideas and protect them with our entire being, and that fierce defensiveness is exactly what traps us in endless circles of repeated mistakes.\n\nThat’s when I started turning the idea of a simple notebook into a deeply complicated system. I wanted to create something that would hold up a mirror and help us acknowledge our own repeating beliefs and behaviors. I spent months obsessing over the architecture because I was absolutely convinced: the smarter the system, the more it would actually help.\n\nBut the longer I worked on it, the clearer the opposite became. In a moment of anxiety, a person rarely needs another dashboard, an achievement badge, or an algorithm explaining what's happening to them. More often, they just need to pause, name what just happened, and ask themselves one precise question.\n\nMy interest in philosophy led me to the idea of spiritual autolysis—a radical examination of one's own beliefs. The essence of the method is to question one assumption after another until you can clearly see what you actually know, versus what you only assume to be true.\n\nThe original approach was quite harsh. I didn't want to bring that harshness into Miravelys. So I kept the rigorous demand on the thought process, but removed the cruelty toward the person.",
-      "blocks": [
-        {
-          "title": "We all walk in circles sometimes",
-          "body": "An unanswered message. A harsh tone of voice. A mistake at work. The event itself might take a few seconds, but its internal continuation can last the whole day.\n\nThe emotions involved are real. Anxiety, resentment, or anger—they aren't made up. But they don't prove why the other person acted the way they did.\n\nThe loop begins when the event, the feeling, the assumption, and an old belief all merge into one undeniable version of reality.\n\nMiravelys helps you pull them apart again."
-        },
-        {
-          "title": "What is Miravelys",
-          "body": "Miravelys is not your typical mood tracker, nor is it a digital therapist. It doesn't diagnose you, it doesn't decide for you, and it doesn't present an algorithmic formula as the absolute truth.\n\nYou bring in one difficult moment, and the app helps you see it in pieces:\n• What actually happened?\n• What did you feel?\n• How did your body react?\n• What did you decide this meant?\n• What belief is hiding behind that thought?\n• What is it that you simply don't know yet?\n\nMiravelys offers questions, observations, and practices. But any hypothesis can be corrected, rejected, or deleted. You always have the final word.\n\nYour personal entries are stored on your device. The fully local mode ensures there is no external processing. Optional cloud backup, should you choose to use it, is turned on separately and can be disabled at any time."
-        },
-        {
-          "title": "How it looks in practice",
-          "body": "You sent an important message. A day has passed, but there's no reply.\n\n**Known:** The message was sent, there is no reply yet.\n**Feeling:** Anxiety.\n**Assumption:** \"They're ignoring me on purpose,\" \"I wrote something wrong,\" \"I don't matter.\"\n**Unknown:** Why the person hasn't answered.\n\nMiravelys doesn't claim that your assumptions are wrong. It helps you see that they are not yet confirmed, and keeps you from accepting the very first anxious thought as the only possible reality.\n\nPerhaps the anxiety won't disappear immediately. But a little bit of space will open up between the event and your automatic reaction. And with it—the ability to choose what to do next."
-        },
-        {
-          "title": "What happens over time",
-          "body": "A single entry helps you see a specific moment more clearly. Several entries can reveal what keeps repeating.\n\nSilence is once again perceived as rejection. A mistake—as proof of your own inadequacy. Uncertainty—as danger.\n\nMiravelys reflects your own words back to you and helps you notice a potential pattern. Not as a diagnosis, and not as a description of your personality, but as a hypothesis that you can confirm, correct, or delete.\n\nThe goal isn't for the app to know you better than you know yourself. The goal is for you to notice a familiar loop sooner."
-        },
-        {
-          "title": "Our aim",
-          "body": "Miravelys doesn't promise to rid you of heavy emotions or lead you to the absolute truth.\n\nIts task is simpler: to help you see a single moment more accurately, to separate the known from the assumed, and to catch the automatic thought before it becomes the only version of reality again.\n\nNot a new version of yourself. Just a little less autopilot."
-        }
-      ]
+      "intro": "Ever since neural networks emerged, I’ve been fascinated by how they work. Initially, my fascination was with how they are built and how closely they mirror human thought. I didn’t even think at first that they could be used in programming. I spent hours every single day turning ideas and concepts into reality.
+
+Coincidentally or not, I came across a philosophy book that described a mechanism allowing us to distinguish between what is truth and what is merely a belief within us. The essence was a process of questioning, writing down on paper one assumption after another, until you clearly see what you truly know versus what you only think is true.
+
+Only after reading this book did I realize something profound about our way of thinking compared to that of neural networks. I understood what sets us apart: AI doesn't defend its ideas the way we do. The models act like children—they accept when they are wrong, learn from everything, and evolve. We, on the other hand, get stuck in tunnels of our own making. We cling to certain ideas and protect them with our entire being. This fierce defensiveness is exactly what keeps us trapped in endless loops of repeated mistakes.
+
+That’s when I decided that the mechanism from the book—writing on paper to reach the truth—could be improved. I realized it shouldn't just be a tool for those seeking the \"absolute truth,\" but could be adapted for anyone who gets stuck in repetitive situations and doesn't understand why it keeps happening to them.
+
+So, I started turning the idea into a system. At first, I spent months obsessed with the architecture, absolutely convinced that the smarter and more complex the system was, the more it would help. But the more I worked on it, the more the exact opposite became clear. In a moment of anxiety, a person rarely needs another dashboard or an algorithm explaining what's happening to them. Most of the time, they just need to stop, name what just happened, and ask themselves a single, precise question.
+
+The original approach in the book was quite harsh. I didn't want to bring that harshness into Miravelys. So I kept the rigorous demand on the thought process but removed the cruelty toward the person. This is how Miravelys took shape, exactly as it is now. Not an AI psychologist to diagnose you, nor a mood journal to pat you on the back. It’s a private tool—everything you write stays strictly on your phone—where you can turn when your mind creates drama out of an ordinary situation.
+
+When you're stressed because someone hasn't replied to a message for a day, your mind starts building scenarios and distortions. Miravelys doesn't give you advice. It asks the necessary questions to help you push aside the noise until you reach the single actual fact: \"I sent a message. I haven't received a reply.\" That’s it.
+
+My goal wasn't to build an app that thinks for you. My goal was to create a safe space where you alone can see where reality ends and the illusions of your mind begin. Because it is only in that moment of clarity that you finally manage to break the repetitive cycle you are trapped in.",
+      "blocks": []
     },
     "marketingExplanation": {
       "whatIsMiravelysFor": {
@@ -564,29 +557,22 @@ export const siteCopy = {
     "explanation": {
       "eyebrow": "История",
       "title": "Как всё начиналось",
-      "intro": "Я был одержим нейросетями с самого их появления. Но вначале меня увлекал не сам код — меня увлекала психология. Я хотел понять, как эти модели обрабатывают язык и отражают человеческое мышление. И только в этом году я наконец с головой ушел в программирование, часами каждый день создавая iOS-приложения, чтобы превратить эти концепции во что-то реальное.\n\nЯ хотел создать то, что смогло бы ответить на сложные вопросы: кто мы на самом деле и что заставляет нас совершать одни и те же ошибки? А потом, читая философскую книгу, меня вдруг осенило. Я понял, как легко мы оказываемся в туннелях, которые сами же и создали. Мы цепляемся за определенные идеи и защищаем их всем своим существом, и именно эта яростная защитная реакция загоняет нас в бесконечный круговорот повторяющихся ошибок.\n\nИменно тогда я начал превращать идею простого дневника в глубоко сложную систему. Я хотел создать то, что стало бы для нас зеркалом и помогло бы признать собственные повторяющиеся убеждения и привычки. Я месяцами был одержим архитектурой, потому что был абсолютно уверен: чем умнее система, тем больше пользы она принесет.\n\nНо чем дольше я над ней работал, тем яснее видел обратное. В момент тревоги человеку редко нужен ещё один дашборд, награда или алгоритм, объясняющий, что с ним происходит. Чаще ему нужно остановиться, назвать случившееся и задать себе один точный вопрос.\n\nМой интерес к философии привёл меня к идее духовного автолизиса — радикальной проверки собственных убеждений. Смысл метода в том, чтобы подвергать сомнению одно предположение за другим, пока не станет видно, что вы действительно знаете, а что только считаете правдой.\n\nОригинальный подход был довольно суровым. Я не хотел переносить эту суровость в Miravelys. Поэтому сохранил требовательность к мысли, но убрал жестокость к человеку.",
-      "blocks": [
-        {
-          "title": "Мы все иногда ходим по кругу",
-          "body": "Неотвеченное сообщение. Чужой тон. Ошибка на работе. Само событие может занять несколько секунд, а его внутреннее продолжение — весь день.\n\nЭмоции при этом реальны. Тревога, обида или злость — не выдумка. Но они не доказывают, почему другой человек поступил именно так.\n\nЗацикленность начинается, когда событие, чувство, предположение и старое убеждение сливаются в одну бесспорную версию происходящего.\n\nMiravelys помогает снова разделить их."
-        },
-        {
-          "title": "Что такое Miravelys",
-          "body": "Miravelys — не обычный дневник настроения и не цифровой психолог. Он не ставит диагноз, не решает за вас и не выдаёт предложенную алгоритмом формулировку за истину.\n\nВы приносите один трудный момент, а приложение помогает увидеть его по частям:\n• Что произошло на самом деле?\n• Что вы почувствовали?\n• Как отреагировало тело?\n• Что вы решили, что это означает?\n• Какое убеждение стоит за этой мыслью?\n• Чего вы пока не знаете?\n\nMiravelys предлагает вопросы, наблюдения и практики. Но любую гипотезу можно исправить, отклонить или удалить. Последнее слово всегда остаётся за вами.\n\nЛичные записи хранятся на устройстве. Полностью локальный режим исключает внешнюю обработку. Необязательная облачная помощь, если вы решите её использовать, включается отдельно и может быть отключена."
-        },
-        {
-          "title": "Как это выглядит на практике",
-          "body": "Вы отправили важное сообщение. Прошёл день, но ответа нет.\n\n**Известно:** сообщение отправлено, ответа пока нет.\n**Чувство:** тревога.\n**Предположение:** «Меня специально игнорируют», «Я написал что-то не то», «Я не важен».\n**Неизвестно:** почему человек не ответил.\n\nMiravelys не заявляет, что ваши предположения ошибочны. Он помогает увидеть, что они пока не подтверждены, и не принимать первую тревожную версию за единственно возможную.\n\nВозможно, тревога не исчезнет сразу. Но между событием и автоматической реакцией появится немного пространства. А вместе с ним — возможность выбрать, что делать дальше."
-        },
-        {
-          "title": "Что происходит со временем",
-          "body": "Одна запись помогает точнее увидеть конкретный момент. Несколько записей могут показать то, что повторяется.\n\nМолчание снова воспринимается как отвержение. Ошибка — как доказательство собственной несостоятельности. Неопределённость — как опасность.\n\nMiravelys возвращает вам ваши же формулировки и помогает заметить возможный паттерн. Не как диагноз и не как описание вашей личности, а как гипотезу, которую можно подтвердить, исправить или удалить.\n\nЦель не в том, чтобы приложение узнало вас лучше вас самих. Цель — чтобы вы раньше замечали знакомую петлю."
-        },
-        {
-          "title": "Наша цель",
-          "body": "Miravelys не обещает избавить вас от тяжёлых эмоций или привести к абсолютной истине.\n\nЕго задача проще: помочь точнее увидеть один момент, отличить известное от предполагаемого и заметить автоматическую мысль до того, как она снова станет единственной версией реальности.\n\nНе новая версия себя. Чуть меньше автопилота."
-        }
-      ],
+      "intro": "С самого появления нейросетей я был в восторге от того, как они работают. Изначально мое восхищение было связано с тем, как они устроены и насколько сильно отражают человеческое мышление. Сначала я даже не думал, что их можно использовать в программировании. Я проводил часы напролет каждый день, превращая идеи и концепции во что-то реальное.
+
+Случайно или нет, но мне в руки попала книга по философии, где описывался механизм, позволяющий увидеть разницу между тем, что является истиной, и тем, что — лишь наше убеждение. Суть заключается в процессе сомнения, когда ты выписываешь на бумагу одно предположение за другим, пока ясно не увидишь, что ты знаешь наверняка, а что, как тебе лишь кажется, является правдой.
+
+Только прочитав эту книгу, я осознал нечто глубокое о нашем образе мышления по сравнению с нейросетями. Я понял, что нас отличает: искусственный интеллект не защищает свои идеи так, как это делаем мы. Модели ведут себя как дети — признают, что ошибаются, учатся на всем подряд и развиваются. Мы же, напротив, застреваем в туннелях, которые сами и создали. Мы цепляемся за определенные идеи и защищаем их всем своим существом. Именно эта яростная защитная реакция держит нас в плену бесконечных кругов повторяющихся ошибок.
+
+Тогда я решил, что механизм из книги — писать на бумаге, чтобы докопаться до истины, — можно улучшить. Я понял, что он не должен быть инструментом только для тех, кто ищет «абсолютную истину». Его можно адаптировать для всех, кто застревает в бесконечно повторяющихся ситуациях и не понимает, почему это с ними происходит.
+
+Так я начал превращать идею в систему. Поначалу я месяцами был одержим архитектурой, будучи абсолютно уверенным: чем умнее и сложнее система, тем больше от нее пользы. Но чем больше я работал, тем яснее становилось обратное. В момент тревоги человеку редко нужен еще один дашборд или алгоритм, объясняющий, что с ним происходит. Чаще всего ему просто нужно остановиться, назвать то, что только что произошло, и задать себе один единственный точный вопрос.
+
+Оригинальный подход из книги был довольно жестким. Я не хотел переносить эту суровость в Miravelys. Поэтому я сохранил строгую требовательность к мыслительному процессу, но убрал безжалостность по отношению к человеку. Так сформировался Miravelys, именно в том виде, в каком он есть сейчас. Это не ИИ-психолог, который ставит диагнозы, и не дневник эмоций, который гладит по головке. Это приватный инструмент — всё, что вы пишете, остается строго в вашем телефоне, — куда вы можете обратиться, когда ваш ум раздувает драму из обычной ситуации.
+
+Когда вы стрессуете из-за того, что кто-то не отвечает на сообщение целый день, ваш ум начинает строить сценарии и искажения. Miravelys не дает советов. Он задает необходимые вопросы, чтобы помочь вам отсеять шум, пока вы не дойдете до единственного реального факта: «Я отправил сообщение. Я не получил ответ». И всё.
+
+Моей целью не было создать приложение, которое думает за вас. Моей целью было создать безопасное пространство, где вы сами сможете увидеть, где заканчивается реальность и начинаются иллюзии вашего ума. Потому что только в этот момент ясности вам, наконец, удается разорвать тот повторяющийся круг, в котором вы застряли.",
+      "blocks": [],
       "purposeTitle": "Наша главная надежда",
       "purposeBody": "Наша величайшая надежда состоит в том, что Miravelys поможет вам выстроить отношения с собственным разумом, которые будут чувствоваться менее автоматическими и менее подавляющими. Вместо того чтобы моментально верить самой громкой, самой тревожной мысли, вы начинаете находить немного пространства. И в этом пространстве ваше тело может успокоиться, болезненные истории могут ослабить свою хватку, правда может стать ясной, и начнёт появляться гораздо более добрая реальность.",
       "featureTitle": "Что Miravelys может предложить вам",
@@ -874,29 +860,22 @@ export const siteCopy = {
     "explanation": {
       "eyebrow": "Povestea",
       "title": "Cum a început totul",
-      "intro": "Am fost obsedat de rețelele neuronale încă de la apariția lor. Dar fascinația mea inițială nu a fost pentru cod în sine — ci pentru psihologie. Voiam să înțeleg cum aceste modele procesează limbajul și oglindesc gândirea umană. Abia anul acesta m-am scufundat cu adevărat în programare, petrecând ore întregi în fiecare zi construind aplicații iOS doar pentru a transforma acele concepte în ceva real.\n\nMi-am propus să construiesc ceva care să poată răspunde la întrebările grele: cine suntem, cu adevărat, și ce ne determină să facem aceleași greșeli la nesfârșit? Apoi, citind o carte de filosofie, ceva pur și simplu a avut sens. Am realizat cât de ușor rămânem blocați în tuneluri pe care noi înșine le-am creat. Ne agățăm de anumite idei și le protejăm cu toată ființa noastră, iar acea atitudine defensivă feroce este exact ceea ce ne ține captivi în cercuri nesfârșite de greșeli repetate.\n\nAtunci am început să transform ideea unui simplu jurnal într-un sistem profund complicat. Am vrut să creez ceva care să ne fie oglindă și să ne ajute să ne recunoaștem propriile convingeri și comportamente repetitive. Am petrecut luni de zile obsedat de arhitectură, pentru că eram absolut convins: cu cât sistemul era mai inteligent, cu atât ar fi ajutat mai mult.\n\nDar, cu cât lucram mai mult la el, cu atât opusul devenea mai clar. Într-un moment de anxietate, o persoană are rareori nevoie de încă un dashboard, de o insignă pentru realizări sau de un algoritm care să îi explice ce i se întâmplă. De cele mai multe ori, are doar nevoie să se oprească, să numească ceea ce tocmai s-a întâmplat și să își pună o singură întrebare precisă.\n\nInteresul meu pentru filosofie m-a condus la ideea de autoliză spirituală — o examinare radicală a propriilor convingeri. Esența metodei este de a pune la îndoială o presupunere după alta, până când poți vedea clar ce știi cu adevărat, față de ceea ce doar presupui că este adevărat.\n\nAbordarea originală era destul de dură. Nu am vrut să aduc acea duritate în Miravelys. Așa că am păstrat exigența riguroasă asupra procesului de gândire, dar am eliminat cruzimea față de persoană.",
-      "blocks": [
-        {
-          "title": "Cu toții ne învârtim în cerc uneori",
-          "body": "Un mesaj la care nu s-a răspuns. Un ton străin. O greșeală la muncă. Evenimentul în sine poate dura câteva secunde, dar ecoul său interior se poate prelungi toată ziua.\n\nEmoțiile implicate sunt reale. Anxietatea, resentimentul sau furia — nu sunt inventate. Dar ele nu dovedesc de ce cealaltă persoană a procedat așa cum a făcut-o.\n\nBucla începe atunci când evenimentul, sentimentul, presupunerea și o veche convingere se contopesc într-o singură versiune incontestabilă a realității.\n\nMiravelys te ajută să le separi din nou."
-        },
-        {
-          "title": "Ce este Miravelys",
-          "body": "Miravelys nu este un simplu jurnal de stări și nici un psiholog digital. Nu îți pune diagnostice, nu decide în locul tău și nu prezintă o formulare propusă de un algoritm ca fiind adevărul absolut.\n\nTu aduci un moment dificil, iar aplicația te ajută să-l vezi pe bucăți:\n• Ce s-a întâmplat cu adevărat?\n• Ce ai simțit?\n• Cum a reacționat corpul tău?\n• Ce ai decis că înseamnă asta?\n• Ce convingere se ascunde în spatele acestui gând?\n• Ce anume încă nu știi?\n\nMiravelys îți oferă întrebări, observații și practici. Dar orice ipoteză poate fi corectată, respinsă sau ștearsă. Ultimul cuvânt îți aparține întotdeauna.\n\nNotițele tale personale sunt stocate pe dispozitiv. Modul complet local exclude orice procesare externă. Sincronizarea opțională în cloud, dacă decizi să o folosești, se activează separat și poate fi dezactivată oricând."
-        },
-        {
-          "title": "Cum arată în practică",
-          "body": "Ai trimis un mesaj important. A trecut o zi, dar nu ai primit niciun răspuns.\n\n**Cunoscut:** Mesajul a fost trimis, încă nu există un răspuns.\n**Sentiment:** Anxietate.\n**Presupunere:** „Mă ignoră intenționat”, „Am scris ceva greșit”, „Nu contez”.\n**Necunoscut:** De ce nu a răspuns persoana respectivă.\n\nMiravelys nu susține că presupunerile tale sunt greșite. Te ajută doar să vezi că ele nu sunt încă confirmate, și să nu accepți prima versiune anxioasă ca fiind singura realitate posibilă.\n\nPoate că anxietatea nu va dispărea imediat. Dar se va deschide un pic de spațiu între eveniment și reacția ta automată. Și odată cu el — posibilitatea de a alege ce să faci mai departe."
-        },
-        {
-          "title": "Ce se întâmplă în timp",
-          "body": "O singură notiță te ajută să vezi un moment specific mai clar. Mai multe notițe pot scoate la iveală ceea ce se tot repetă.\n\nTăcerea este percepută din nou ca o respingere. O greșeală — ca o dovadă a propriei incompetențe. Incertitudinea — ca un pericol.\n\nMiravelys îți reflectă propriile tale cuvinte și te ajută să observi un posibil tipar. Nu ca pe un diagnostic, și nu ca pe o descriere a personalității tale, ci ca pe o ipoteză pe care o poți confirma, corecta sau șterge.\n\nScopul nu este ca aplicația să te cunoască mai bine decât te cunoști tu. Scopul este ca tu să observi o buclă familiară mai devreme."
-        },
-        {
-          "title": "Scopul nostru",
-          "body": "Miravelys nu promite să te scape de emoțiile grele sau să te conducă la adevărul absolut.\n\nSarcina sa este mai simplă: să te ajute să vezi un singur moment mai clar, să separi ceea ce e cunoscut de ceea ce presupui și să surprinzi gândul automat înainte ca acesta să devină din nou singura versiune a realității.\n\nNu o nouă versiune a ta. Doar un pic mai puțin pilot automat."
-        }
-      ]
+      "intro": "Încă de la apariția rețelelor neuronale, am fost entuziasmat de modul în care funcționează. Fascinația mea inițială a fost legată de felul în care sunt construite și de cât de mult oglindesc gândirea umană. Nici nu m-am gândit inițial că ele pot fi utilizate în programare. Petreceam ore în șir, în fiecare zi, pentru a transforma idei și concepte în ceva real.
+
+Întâmplător sau nu, mi-a căzut în mână o carte filosofică în care am găsit descris un mecanism care ne permite să vedem ce e adevăr și ce este doar o convingere în noi. Esența era un proces de a pune la îndoială, scriind pe hârtie, o presupunere după alta, până când vezi clar ce știi cu adevărat față de ceea ce doar crezi că este adevărat.
+
+Abia după ce am citit această carte, am realizat un lucru profund despre modul nostru de gândire comparativ cu cel al rețelelor neuronale. Am înțeles ce ne diferențiază: inteligența artificială nu-și apără ideile așa cum o facem noi. Modelele procedează ca niște copii — acceptă că greșesc, învață pretutindeni și evoluează. Noi, în schimb, rămânem blocați în tuneluri pe care singuri le-am creat. Ne agățăm de anumite idei și le protejăm cu toată ființa noastră. Această atitudine defensivă feroce este exact ceea ce ne ține captivi în cercuri nesfârșite de greșeli repetate.
+
+Atunci am hotărât că mecanismul din carte — cel de a scrie pe hârtie pentru a ajunge la adevăr — poate fi îmbunătățit. Am realizat că el nu trebuie să fie doar un instrument pentru cei care caută „adevărul absolut”, ci poate fi adaptat pentru toți cei care rămân blocați în situații care se repetă la nesfârșit și nu înțeleg de ce li se întâmplă asta.
+
+Așa am început să transform ideea într-un sistem. La început, am petrecut luni de zile obsedat de arhitectură, absolut convins că, cu cât sistemul este mai inteligent și mai complicat, cu atât va ajuta mai mult. Dar, cu cât lucram mai mult, cu atât opusul devenea mai clar. Într-un moment de anxietate, o persoană are rareori nevoie de încă un dashboard sau de un algoritm care să-i explice ce i se întâmplă. De cele mai multe ori, are doar nevoie să se oprească, să numească ceea ce tocmai s-a întâmplat și să-și pună o singură întrebare precisă.
+
+Abordarea originală din carte era destul de dură. Nu am vrut să aduc acea duritate în Miravelys. Așa că am păstrat exigența riguroasă asupra procesului de gândire, dar am eliminat cruzimea față de persoană. Astfel a luat formă Miravelys, exact așa cum este acum. Nu un psiholog artificial care să-ți pună diagnostice, nici un jurnal de emoții care să te mângâie pe creștet. Este un instrument privat — tot ce scrii rămâne strict în telefonul tău — unde poți veni atunci când mintea ta creează dramă dintr-o situație oarecare.
+
+Când ești stresat pentru că cineva nu îți răspunde la un mesaj de o zi, mintea ta începe să construiască scenarii și distorsiuni. Miravelys nu îți dă sfaturi. Îți pune întrebările necesare pentru a te ajuta să dai la o parte zgomotul, până ajungi la unicul fapt real: „Am trimis un mesaj. Nu am primit răspuns”. Atât.
+
+Scopul meu nu a fost să fac o aplicație care să gândească în locul tău. Scopul a fost să creez un spațiu sigur în care tu singur să poți vedea unde se termină realitatea și unde încep iluziile minții tale. Pentru că abia în acel moment de claritate reușești, în sfârșit, să rupi cercul repetitiv în care ești blocat.",
+      "blocks": []
     },
     "marketingExplanation": {
       "whatIsMiravelysFor": {
@@ -1172,29 +1151,22 @@ export const siteCopy = {
     "explanation": {
       "eyebrow": "L'histoire",
       "title": "Comment tout a commencé",
-      "intro": "Je suis obsédé par les réseaux de neurones depuis leur apparition. Mais ma fascination initiale n'était pas pour le code lui-même, c'était pour la psychologie. Je voulais comprendre comment ces modèles traitent le langage et reflètent la pensée humaine. Ce n'est que cette année que je me suis finalement plongé dans la programmation, passant des heures chaque jour à créer des applications iOS juste pour transformer ces concepts en quelque chose de réel.\n\nJe voulais construire quelque chose qui pourrait répondre aux questions difficiles : qui sommes-nous vraiment, et qu'est-ce qui nous pousse à répéter les mêmes erreurs ? Puis, en lisant un livre de philosophie, il y a eu un déclic. J'ai réalisé à quel point nous nous laissons facilement piéger dans des tunnels que nous avons nous-mêmes créés. Nous nous accrochons à certaines idées et les protégeons avec tout notre être, et c'est cette attitude défensive féroce qui nous enferme dans des cercles sans fin d'erreurs répétées.\n\nC'est alors que j'ai commencé à transformer l'idée d'un simple carnet en un système profondément compliqué. Je voulais créer quelque chose qui nous servirait de miroir et nous aiderait à reconnaître nos propres croyances et comportements répétitifs. J'ai passé des mois obsédé par l'architecture parce que j'étais absolument convaincu : plus le système serait intelligent, plus il aiderait réellement.\n\nMais plus j'y travaillais, plus l'inverse devenait évident. Dans un moment d'anxiété, une personne a rarement besoin d'un autre tableau de bord, d'un badge de réussite ou d'un algorithme lui expliquant ce qui lui arrive. Le plus souvent, elle a juste besoin de s'arrêter, de nommer ce qui vient de se passer, et de se poser une seule question précise.\n\nMon intérêt pour la philosophie m'a conduit à l'idée de l'autolyse spirituelle — un examen radical de ses propres croyances. L'essence de la méthode est de remettre en question une supposition après l'autre jusqu'à ce que vous puissiez voir clairement ce que vous savez vraiment, par opposition à ce que vous présumez être vrai.\n\nL'approche originale était assez dure. Je ne voulais pas apporter cette dureté dans Miravelys. J'ai donc gardé l'exigence rigoureuse sur le processus de réflexion, mais j'ai retiré la cruauté envers la personne.",
-      "blocks": [
-        {
-          "title": "Nous tournons tous en rond parfois",
-          "body": "Un message resté sans réponse. Un ton de voix dur. Une erreur au travail. L'événement en lui-même peut ne durer que quelques secondes, mais sa résonance intérieure peut se prolonger toute la journée.\n\nLes émotions ressenties sont réelles. L'anxiété, la rancœur ou la colère ne sont pas inventées. Mais elles ne prouvent pas pourquoi l'autre personne a agi ainsi.\n\nLa boucle commence lorsque l'événement, le sentiment, la supposition et une vieille croyance fusionnent en une seule version indiscutable de la réalité.\n\nMiravelys vous aide à les séparer à nouveau."
-        },
-        {
-          "title": "Ce qu'est Miravelys",
-          "body": "Miravelys n'est pas un simple journal d'humeur, ni un psychologue numérique. Il ne pose pas de diagnostic, il ne décide pas à votre place, et il ne présente pas une formule algorithmique comme la vérité absolue.\n\nVous apportez un moment difficile, et l'application vous aide à le décomposer :\n• Que s'est-il réellement passé ?\n• Qu'avez-vous ressenti ?\n• Comment votre corps a-t-il réagi ?\n• Qu'avez-vous décidé que cela signifiait ?\n• Quelle croyance se cache derrière cette pensée ?\n• Qu'est-ce que vous ne savez tout simplement pas encore ?\n\nMiravelys propose des questions, des observations et des pratiques. Mais toute hypothèse peut être corrigée, rejetée ou supprimée. Le dernier mot vous appartient toujours.\n\nVos notes personnelles sont stockées sur votre appareil. Le mode entièrement local exclut tout traitement externe. La sauvegarde optionnelle sur le cloud, si vous décidez de l'utiliser, s'active séparément et peut être désactivée à tout moment."
-        },
-        {
-          "title": "Comment cela se présente en pratique",
-          "body": "Vous avez envoyé un message important. Une journée s'est écoulée, sans réponse.\n\n**Connu :** Le message a été envoyé, il n'y a pas encore de réponse.\n**Ressenti :** Anxiété.\n**Supposition :** « On m'ignore exprès », « J'ai écrit quelque chose de mal », « Je n'ai pas d'importance ».\n**Inconnu :** Pourquoi la personne n'a pas répondu.\n\nMiravelys ne prétend pas que vos suppositions sont fausses. Il vous aide simplement à voir qu'elles ne sont pas encore confirmées, et à ne pas accepter la première pensée anxieuse comme la seule réalité possible.\n\nPeut-être que l'anxiété ne disparaîtra pas immédiatement. Mais un peu d'espace s'ouvrira entre l'événement et votre réaction automatique. Et avec lui — la possibilité de choisir ce qu'il faut faire ensuite."
-        },
-        {
-          "title": "Ce qui se passe avec le temps",
-          "body": "Une seule note vous aide à voir un moment précis plus clairement. Plusieurs notes peuvent révéler ce qui se répète sans cesse.\n\nLe silence est à nouveau perçu comme un rejet. Une erreur — comme la preuve de votre propre incompétence. L'incertitude — comme un danger.\n\nMiravelys vous renvoie vos propres mots et vous aide à remarquer un motif éventuel. Non pas comme un diagnostic, ni comme une description de votre personnalité, mais comme une hypothèse que vous pouvez confirmer, corriger ou supprimer.\n\nLe but n'est pas que l'application vous connaisse mieux que vous-même. Le but est que vous remarquiez plus tôt une boucle familière."
-        },
-        {
-          "title": "Notre but",
-          "body": "Miravelys ne promet pas de vous débarrasser de vos émotions lourdes ou de vous conduire à la vérité absolue.\n\nSa tâche est plus simple : vous aider à voir un seul moment avec plus de précision, à séparer ce qui est connu de ce qui est supposé, et à saisir la pensée automatique avant qu'elle ne redevienne la seule version de la réalité.\n\nPas une nouvelle version de vous-même. Juste un peu moins de pilote automatique."
-        }
-      ]
+      "intro": "Depuis l'apparition des réseaux de neurones, j'ai été passionné par leur fonctionnement. Ma fascination initiale portait sur la façon dont ils sont construits et à quel point ils reflètent la pensée humaine. Au début, je ne pensais même pas qu'ils pourraient être utilisés en programmation. Je passais des heures chaque jour à transformer des idées et des concepts en quelque chose de réel.
+
+Par hasard ou non, je suis tombé sur un livre de philosophie qui décrivait un mécanisme nous permettant de voir ce qui est vérité et ce qui n'est qu'une simple croyance en nous. L'essence même était un processus de remise en question, en écrivant sur du papier une supposition après l'autre, jusqu'à ce que l'on voie clairement ce que l'on sait vraiment par rapport à ce que l'on croit seulement être vrai.
+
+Ce n'est qu'après avoir lu ce livre que j'ai réalisé quelque chose de profond sur notre mode de pensée par rapport à celui des réseaux de neurones. J'ai compris ce qui nous différencie : l'intelligence artificielle ne défend pas ses idées comme nous le faisons. Les modèles agissent comme des enfants — ils acceptent de se tromper, apprennent de tout et évoluent. Nous, en revanche, restons bloqués dans des tunnels que nous avons nous-mêmes créés. Nous nous accrochons à certaines idées et les protégeons de tout notre être. Cette attitude défensive féroce est exactement ce qui nous maintient captifs dans des boucles interminables d'erreurs répétées.
+
+C'est alors que j'ai décidé que le mécanisme du livre — écrire sur du papier pour atteindre la vérité — pouvait être amélioré. J'ai réalisé qu'il ne devait pas être seulement un outil pour ceux qui cherchent la « vérité absolue », mais qu'il pouvait être adapté pour tous ceux qui restent bloqués dans des situations qui se répètent sans cesse et qui ne comprennent pas pourquoi cela leur arrive.
+
+C'est ainsi que j'ai commencé à transformer l'idée en un système. Au début, j'ai passé des mois obsédé par l'architecture, absolument convaincu que plus le système était intelligent et complexe, plus il aiderait. Mais plus j'y travaillais, plus le contraire devenait évident. Dans un moment d'anxiété, une personne a rarement besoin d'un énième tableau de bord ou d'un algorithme pour lui expliquer ce qui lui arrive. La plupart du temps, elle a juste besoin de s'arrêter, de nommer ce qui vient de se passer et de se poser une seule question précise.
+
+L'approche originale du livre était assez dure. Je ne voulais pas apporter cette dureté dans Miravelys. J'ai donc gardé l'exigence rigoureuse sur le processus de pensée, mais j'ai éliminé la cruauté envers la personne. C'est ainsi que Miravelys a pris forme, exactement comme il est aujourd'hui. Ce n'est pas un psychologue artificiel qui pose des diagnostics, ni un journal intime d'émotions pour vous caresser dans le sens du poil. C'est un outil privé — tout ce que vous écrivez reste strictement sur votre téléphone — vers lequel vous pouvez vous tourner lorsque votre esprit crée un drame à partir d'une situation banale.
+
+Quand vous êtes stressé parce que quelqu'un ne répond pas à un message depuis un jour, votre esprit commence à construire des scénarios et des distorsions. Miravelys ne vous donne pas de conseils. Il vous pose les questions nécessaires pour vous aider à écarter le bruit, jusqu'à ce que vous arriviez au seul fait réel : « J'ai envoyé un message. Je n'ai pas reçu de réponse. » C'est tout.
+
+Mon but n'était pas de créer une application qui pense à votre place. Mon but était de créer un espace sûr où vous seul pouvez voir où s'arrête la réalité et où commencent les illusions de votre esprit. Car ce n'est qu'à ce moment de clarté que vous réussissez, enfin, à briser le cercle répétitif dans lequel vous êtes bloqué.",
+      "blocks": []
     },
     "marketingExplanation": {
       "whatIsMiravelysFor": {
@@ -1470,29 +1442,22 @@ export const siteCopy = {
     "explanation": {
       "eyebrow": "कहानी",
       "title": "यह सब कैसे शुरू हुआ",
-      "intro": "जब से न्यूरल नेटवर्क आए हैं, मुझे उनसे एक तरह का जुनून हो गया है। लेकिन मेरी शुरुआती दिलचस्पी कोड में नहीं, बल्कि मनोविज्ञान में थी। मैं समझना चाहता था कि ये मॉडल भाषा को कैसे प्रोसेस करते हैं और इंसानी सोच की नकल कैसे करते हैं। इसी साल मैंने प्रोग्रामिंग में कदम रखा, और इन विचारों को हकीकत में बदलने के लिए हर दिन कई घंटे iOS ऐप्स बनाने में बिताए।\n\nमैं कुछ ऐसा बनाना चाहता था जो मुश्किल सवालों के जवाब दे सके: हम असल में कौन हैं, और हम बार-बार वही गलतियां क्यों करते हैं? फिर, एक दार्शनिक किताब पढ़ते हुए, मुझे अचानक सब समझ आ गया। मुझे एहसास हुआ कि हम कितनी आसानी से अपनी ही बनाई हुई सुरंगों में फंस जाते हैं। हम कुछ विचारों को पकड़ लेते हैं और अपनी पूरी जान लगाकर उन्हें बचाते हैं, और यही रक्षात्मक रवैया हमें गलतियों के अंतहीन चक्कर में फंसा देता है।\n\nतभी मैंने एक साधारण नोटबुक के विचार को एक बेहद जटिल सिस्टम में बदलना शुरू किया। मैं कुछ ऐसा बनाना चाहता था जो हमारे लिए एक आईने का काम करे और हमें हमारी अपनी बार-बार दोहराई जाने वाली धारणाओं और व्यवहारों को पहचानने में मदद करे। मैंने महीनों तक इसके आर्किटेक्चर पर काम किया क्योंकि मुझे पूरा यकीन था: सिस्टम जितना स्मार्ट होगा, वह उतनी ही ज्यादा मदद करेगा।\n\nलेकिन मैंने इस पर जितना काम किया, मुझे उतना ही समझ आने लगा कि असलियत इसके बिल्कुल उलट है। घबराहट के पलों में, किसी भी इंसान को शायद ही कभी एक और डैशबोर्ड, किसी अचीवमेंट बैज, या उसे क्या हो रहा है, यह समझाने वाले किसी एल्गोरिदम की जरूरत होती है। अक्सर, उन्हें बस रुकने की, जो अभी हुआ उसे नाम देने की, और खुद से एक सटीक सवाल पूछने की जरूरत होती है।\n\nदर्शनशास्त्र में मेरी दिलचस्पी मुझे आध्यात्मिक ऑटोलिसिस (Spiritual Autolysis) के विचार तक ले गई — जो अपनी ही धारणाओं को बारीकी से परखने का एक तरीका है। इस तरीके का सार यह है कि एक के बाद एक हर धारणा पर तब तक सवाल उठाया जाए, जब तक आप साफ तौर पर यह न देख सकें कि आप सच में क्या जानते हैं, और क्या आप सिर्फ सच मान रहे हैं।\n\nशुरुआती तरीका काफी सख्त था। मैं उस सख्ती को Miravelys में नहीं लाना चाहता था। इसलिए मैंने सोचने की प्रक्रिया पर सख्ती तो बनाए रखी, लेकिन इंसान के प्रति उस कठोरता को हटा दिया।",
-      "blocks": [
-        {
-          "title": "हम सभी कभी-कभी एक ही चक्र में घूमते हैं",
-          "body": "एक अनुत्तरित संदेश। बातचीत का एक कठोर लहजा। काम पर एक गलती। घटना स्वयं कुछ सेकंड ले सकती है, लेकिन इसकी आंतरिक निरंतरता पूरे दिन चल सकती है।\n\nइसमें शामिल भावनाएं वास्तविक हैं। चिंता, आक्रोश, या क्रोध — वे मनगढ़ंत नहीं हैं। लेकिन वे यह साबित नहीं करते कि दूसरे व्यक्ति ने ऐसा व्यवहार क्यों किया।\n\nलूप तब शुरू होता है जब घटना, भावना, धारणा, और एक पुरानी मान्यता सभी वास्तविकता के एक निर्विवाद संस्करण में विलीन हो जाते हैं।\n\nMiravelys आपको उन्हें फिर से अलग करने में मदद करता है।"
-        },
-        {
-          "title": "Miravelys क्या है",
-          "body": "Miravelys आपका सामान्य मूड ट्रैकर नहीं है, और न ही यह एक डिजिटल थेरेपिस्ट है। यह आपका निदान नहीं करता है, यह आपके लिए निर्णय नहीं लेता है, और यह पूर्ण सत्य के रूप में एक एल्गोरिथम फॉर्मूला प्रस्तुत नहीं करता है।\n\nआप एक कठिन क्षण लाते हैं, और ऐप आपको इसे टुकड़ों में देखने में मदद करता है:\n• वास्तव में क्या हुआ?\n• आपने क्या महसूस किया?\n• आपके शरीर ने कैसे प्रतिक्रिया दी?\n• आपने इसका क्या अर्थ निकाला?\n• उस विचार के पीछे कौन सी मान्यता छिपी है?\n• ऐसा क्या है जो आप अभी तक नहीं जानते हैं?\n\nMiravelys प्रश्न, अवलोकन और अभ्यास प्रदान करता है। लेकिन किसी भी परिकल्पना को सुधारा, अस्वीकार या हटाया जा सकता है। अंतिम शब्द हमेशा आपका होता है।\n\nआपकी व्यक्तिगत प्रविष्टियाँ आपके डिवाइस पर संग्रहीत की जाती हैं। पूरी तरह से स्थानीय मोड यह सुनिश्चित करता है कि कोई बाहरी प्रसंस्करण न हो। वैकल्पिक क्लाउड बैकअप, यदि आप इसका उपयोग करना चुनते हैं, तो अलग से चालू किया जाता है और इसे किसी भी समय अक्षम किया जा सकता है।"
-        },
-        {
-          "title": "व्यवहार में यह कैसा दिखता है",
-          "body": "आपने एक महत्वपूर्ण संदेश भेजा। एक दिन बीत चुका है, लेकिन कोई उत्तर नहीं आया।\n\n**ज्ञात:** संदेश भेजा गया था, अभी तक कोई उत्तर नहीं आया है।\n**भावना:** चिंता।\n**धारणा:** \"वे जानबूझकर मुझे नज़रअंदाज़ कर रहे हैं,\" \"मैंने कुछ गलत लिखा,\" \"मैं मायने नहीं रखता।\"\n**अज्ञात:** उस व्यक्ति ने उत्तर क्यों नहीं दिया।\n\nMiravelys यह दावा नहीं करता कि आपकी धारणाएँ गलत हैं। यह आपको यह देखने में मदद करता है कि वे अभी तक पुष्ट नहीं हुए हैं, और आपको पहली ही चिंतित सोच को एकमात्र संभावित वास्तविकता मानने से रोकता है।\n\nशायद चिंता तुरंत गायब न हो। लेकिन घटना और आपकी स्वचालित प्रतिक्रिया के बीच थोड़ी सी जगह खुल जाएगी। और इसके साथ — यह चुनने की क्षमता कि आगे क्या करना है।"
-        },
-        {
-          "title": "समय के साथ क्या होता है",
-          "body": "एक प्रविष्टि आपको एक विशिष्ट क्षण को अधिक स्पष्ट रूप से देखने में मदद करती है। कई प्रविष्टियाँ यह प्रकट कर सकती हैं कि क्या बार-बार दोहराया जा रहा है।\n\nचुप्पी को फिर से अस्वीकृति के रूप में माना जाता है। एक गलती — अपनी खुद की अपर्याप्तता के प्रमाण के रूप में। अनिश्चितता — खतरे के रूप में।\n\nMiravelys आपके अपने शब्दों को आपके सामने दर्शाता है और आपको एक संभावित पैटर्न देखने में मदद करता है। निदान के रूप में नहीं, और न ही आपके व्यक्तित्व के वर्णन के रूप में, बल्कि एक परिकल्पना के रूप में जिसकी आप पुष्टि, सुधार या उसे हटा सकते हैं।\n\nलक्ष्य यह नहीं है कि ऐप आपको आपसे बेहतर जाने। लक्ष्य यह है कि आप एक परिचित चक्र को जल्द ही नोटिस करें।"
-        },
-        {
-          "title": "हमारा उद्देश्य",
-          "body": "Miravelys आपको भारी भावनाओं से छुटकारा दिलाने या आपको पूर्ण सत्य तक ले जाने का वादा नहीं करता है।\n\nइसका कार्य सरल है: आपको एक क्षण को अधिक सटीक रूप से देखने में मदद करना, ज्ञात को अनुमानित से अलग करना, और स्वचालित विचार को वास्तविकता का एकमात्र संस्करण बनने से पहले पकड़ना।\n\nस्वयं का कोई नया संस्करण नहीं। बस थोड़ा कम ऑटोपायलट।"
-        }
-      ]
+      "intro": "जब से न्यूरल नेटवर्क सामने आए हैं, मैं उनके काम करने के तरीके को लेकर बहुत उत्साहित रहा हूँ। शुरुआत में मेरा आकर्षण इस बात को लेकर था कि वे कैसे बनाए गए हैं और वे मानवीय सोच को कितनी गहराई से दर्शाते हैं। मैंने शुरू में यह सोचा भी नहीं था कि उनका इस्तेमाल प्रोग्रामिंग में किया जा सकता है। मैं हर दिन घंटों तक विचारों और कॉन्सेप्ट्स को हकीकत में बदलने में बिताता था।
+
+संयोग से या नहीं, मेरे हाथ एक दर्शनशास्त्र की किताब लगी जिसमें एक ऐसे तरीके का वर्णन था जो हमें यह देखने में मदद करता है कि हमारे भीतर क्या सच है और क्या सिर्फ एक धारणा। इसका सार कागज़ पर लिखकर सवालों के घेरे में लाने की एक प्रक्रिया थी—एक के बाद एक मान्यताओं को तब तक परखना, जब तक कि आप साफ तौर पर यह न देख लें कि आप वास्तव में क्या जानते हैं और आप केवल किसे सच मान रहे हैं।
+
+इस किताब को पढ़ने के बाद ही मुझे न्यूरल नेटवर्क की तुलना में हमारी सोचने की प्रक्रिया के बारे में एक बहुत गहरी बात समझ में आई। मैं समझ गया कि हमें क्या अलग करता है: आर्टिफिशियल इंटेलिजेंस (AI) अपने विचारों का बचाव वैसे नहीं करता जैसे हम करते हैं। ये मॉडल बच्चों की तरह बर्ताव करते हैं—वे अपनी गलती मानते हैं, हर चीज़ से सीखते हैं और विकसित होते हैं। दूसरी ओर, हम अपने ही बनाए हुए सुरंगों में फँस जाते हैं। हम कुछ विचारों से चिपके रहते हैं और पूरी जान लगाकर उन्हें बचाते हैं। यह तीव्र रक्षात्मक रवैया ही वह चीज़ है जो हमें बार-बार एक ही गलती दोहराने के अंतहीन चक्र में फँसाए रखता है।
+
+तभी मैंने फैसला किया कि किताब में दिए गए तरीके को—सच तक पहुँचने के लिए कागज़ पर लिखने को—और बेहतर बनाया जा सकता है। मुझे एहसास हुआ कि यह सिर्फ \"परम सत्य\" की तलाश करने वालों के लिए एक टूल नहीं होना चाहिए, बल्कि इसे उन सभी के लिए ढाला जा सकता है जो बार-बार एक ही तरह की स्थितियों में फँस जाते हैं और यह नहीं समझ पाते कि उनके साथ ऐसा क्यों हो रहा है।
+
+इस तरह मैंने इस विचार को एक सिस्टम में बदलना शुरू किया। शुरुआत में, मैंने इसके आर्किटेक्चर को लेकर महीनों बिता दिए, इस बात पर पूरी तरह यकीन करते हुए कि सिस्टम जितना अधिक बुद्धिमान और जटिल होगा, वह उतनी ही ज्यादा मदद करेगा। लेकिन जैसे-जैसे मैंने इस पर ज्यादा काम किया, मुझे इसका ठीक उल्टा समझ में आने लगा। घबराहट (anxiety) के समय, किसी इंसान को शायद ही एक और डैशबोर्ड या किसी ऐसे एल्गोरिदम की ज़रूरत होती है जो उसे समझाए कि उसके साथ क्या हो रहा है। ज़्यादातर समय, उसे बस रुकने की, जो हुआ है उसे पहचानने की, और खुद से एक सटीक सवाल पूछने की ज़रूरत होती है।
+
+किताब का मूल दृष्टिकोण काफी कठोर था। मैं उस कठोरता को Miravelys में नहीं लाना चाहता था। इसलिए मैंने सोचने की प्रक्रिया की सख्त माँग को तो बरकरार रखा, लेकिन इंसान के प्रति उस क्रूरता को हटा दिया। इस तरह Miravelys ने वह रूप लिया, जैसा वह आज है। यह कोई आर्टिफिशियल साइकोलॉजिस्ट नहीं है जो आपकी बीमारी का निदान करे, न ही यह भावनाओं की कोई डायरी है जो आपको दिलासा दे। यह एक प्राइवेट टूल है—आप जो कुछ भी लिखते हैं वह पूरी तरह से आपके फोन में ही रहता है—जहाँ आप तब जा सकते हैं जब आपका दिमाग किसी आम सी स्थिति को लेकर ड्रामा बना रहा हो।
+
+जब आप तनाव में होते हैं क्योंकि किसी ने एक दिन से आपके मैसेज का जवाब नहीं दिया है, तो आपका दिमाग कहानियाँ और गलतफहमियाँ गढ़ने लगता है। Miravelys आपको कोई सलाह नहीं देता। यह आपको उस शोर को दूर करने में मदद करने के लिए ज़रूरी सवाल पूछता है, जब तक कि आप एकमात्र वास्तविक तथ्य तक नहीं पहुँच जाते: \"मैंने एक मैसेज भेजा। मुझे जवाब नहीं मिला।\" बस इतना ही।
+
+मेरा लक्ष्य एक ऐसा ऐप बनाना नहीं था जो आपके लिए सोचे। मेरा लक्ष्य एक ऐसा सुरक्षित स्थान बनाना था जहाँ आप खुद देख सकें कि वास्तविकता कहाँ खत्म होती है और आपके दिमाग के भ्रम कहाँ से शुरू होते हैं। क्योंकि केवल स्पष्टता के उस पल में ही आप आखिरकार उस चक्र को तोड़ने में कामयाब होते हैं जिसमें आप फँसे हुए हैं।",
+      "blocks": []
     },
     "marketingExplanation": {
       "whatIsMiravelysFor": {
@@ -1768,29 +1733,22 @@ export const siteCopy = {
     "explanation": {
       "eyebrow": "故事",
       "title": "这一切是如何开始的",
-      "intro": "自从神经网络出现以来，我就对它们着迷。但我最初的痴迷并不在于代码本身，而在于心理学。我想了解这些模型是如何处理语言并反映人类思维的。直到今年，我才终于全心投入编程，每天花好几个小时构建 iOS 应用，只为了把这些概念变成现实。\n\n我试图构建一种能够回答那些难题的东西：我们到底是谁？是什么驱使我们不断犯同样的错误？后来，在读一本哲学书时，我突然顿悟了。我意识到，我们是多么容易陷入自己建造的隧道中。我们固执地坚持某些想法，并用我们的全部去保护它们，而正是这种强烈的防御心理，让我们陷入了不断重复错误的无尽循环中。\n\n就在那时，我开始把一个简单的笔记本的想法，变成一个非常复杂的系统。我想创造一个能像镜子一样的工具，帮助我们看清自己不断重复的信念和行为。我花了好几个月的时间痴迷于系统架构，因为我坚信：系统越智能，它的帮助就越大。\n\n但是，我投入的时间越长，事情的真相就越清晰地走向反面。在焦虑的时刻，一个人几乎不需要另一个仪表盘、一个成就徽章，或者一个向他们解释正在发生什么事情的算法。更多时候，他们只需要停下来，给刚刚发生的事情命名，然后问自己一个准确的问题。\n\n我对哲学的兴趣引导我走向了“精神自溶”（Spiritual Autolysis）的概念——一种对自身信念的彻底审视。这种方法的核心是，不断地质疑一个又一个假设，直到你能清楚地分辨：什么是你真正知道的，什么是你仅仅以为是真实的。\n\n这种方法原本非常严厉。我不想把那种严厉带入 Miravelys。因此，我保留了对思考过程的严格要求，但去掉了对人的残酷。",
-      "blocks": [
-        {
-          "title": "我们有时都会原地打转",
-          "body": "一条未回复的消息。刺耳的语气。工作中的失误。事件本身可能只需要几秒钟，但它在内心的延续可能会持续一整天。\n\n所涉及的情绪是真实的。焦虑、怨恨或愤怒——这些都不是编造的。但这并不能证明为什么另一个人会那样做。\n\n当事件、感觉、假设和旧有信念全部融合为一个不可否认的现实版本时，循环就开始了。\n\nMiravelys帮助你再次将它们拆解。"
-        },
-        {
-          "title": "什么是Miravelys",
-          "body": "Miravelys不是你典型的的情绪追踪器，也不是数字心理治疗师。它不为你诊断，它不为你做决定，它也不把算法公式作为绝对真理呈现。\n\n你带来一个困难的时刻，应用程序会帮助你将其拆解来看：\n• 究竟发生了什么？\n• 你感觉如何？\n• 你的身体有何反应？\n• 你认为这意味着什么？\n• 那个想法背后隐藏着什么信念？\n• 有什么是你根本还不知道的？\n\nMiravelys提供问题、观察和练习。但任何假设都可以被纠正、拒绝或删除。你始终拥有最终决定权。\n\n你的个人记录存储在你的设备上。完全本地模式确保没有外部处理。可选的云备份（如果你选择使用的话）是单独开启的，并且可以随时禁用。"
-        },
-        {
-          "title": "在实践中它是怎样的",
-          "body": "你发送了一条重要消息。一天过去了，但没有回复。\n\n**已知：** 消息已发送，目前还没有回复。\n**感觉：** 焦虑。\n**假设：** “他们故意不理我”，“我写错了什么”，“我不重要”。\n**未知：** 为什么那个人没有回答。\n\nMiravelys并不声称你的假设是错误的。它帮助你看到它们尚未得到证实，并阻止你接受最初的焦虑想法作为唯一可能的现实。\n\n也许焦虑不会立即消失。但事件和你的自动反应之间会开启一点空间。随之而来的——是选择下一步该怎么做的能力。"
-        },
-        {
-          "title": "随着时间的推移会发生什么",
-          "body": "单次记录可以帮助你更清晰地看清特定时刻。多次记录可以揭示不断重复出现的问题。\n\n沉默再次被视为拒绝。错误——被视为你自身能力不足的证明。不确定性——被视为危险。\n\nMiravelys将你自己的话反射给你，并帮助你注意到一个潜在的模式。不是作为诊断，也不是作为对你性格的描述，而是作为你可以确认、纠正或删除的假设。\n\n目的不是让应用程序比你更了解你自己。目的是让你更快地注意到熟悉的循环。"
-        },
-        {
-          "title": "我们的目标",
-          "body": "Miravelys不承诺让你摆脱沉重的情绪或引导你走向绝对的真理。\n\n它的任务更简单：帮助你更准确地看清每一个瞬间，将已知与假设分开，并在自动产生的想法再次成为现实的唯一版本之前抓住它。\n\n不是一个新版本的你。只是少一点自动驾驶。"
-        }
-      ]
+      "intro": "自从神经网络出现以来，我就对其运作方式充满热情。我最初的着迷在于它们的构建方式，以及它们在多大程度上反映了人类的思维。起初，我甚至没想过它们能被用于编程。我每天花上好几个小时，将想法和概念转化为现实。
+
+或许是机缘巧合，我拿到了一本哲学书，里面描述了一种机制，能让我们看清什么是事实，什么仅仅是我们内心的信念。其核心是一个质疑的过程：把一个又一个假设写在纸上，直到你清楚地看到什么是你真正知道的，而什么是你自以为是的。
+
+直到读完这本书，我才对我们人类的思维方式与神经网络的思维方式有了深刻的认识。我明白了我们之间的区别：人工智能不会像我们那样极力维护自己的观点。这些模型就像孩子一样——它们接受自己的错误，从一切事物中学习，并不断进化。相反，我们人类却常常困在自己挖掘的隧道里。我们死守着某些观念，并用尽全身力气去保护它们。这种强烈的防御态度，正是导致我们陷入不断重复犯错的死循环的罪魁祸首。
+
+那时我决定，书中的机制——通过写在纸上来触及真相——是可以改进的。我意识到，它不应该仅仅是为那些寻找“绝对真理”的人准备的工具，而是可以经过改编，去帮助所有那些陷入不断重复的困境却不明白为什么会这样的人。
+
+于是，我开始将这个想法转化为一个系统。起初，我花了几个月的时间痴迷于系统架构，坚信系统越智能、越复杂，带来的帮助就越大。但是，随着我投入的精力越多，事情的真相却恰恰相反。在焦虑的时刻，一个人很少会需要又一个数据面板，或者一个算法来向他解释正在发生的事情。大多数时候，他只需要停下来，认清刚刚发生的事，并问自己一个精准的问题。
+
+书中原本的方法相当严苛。我不想把这种严苛带到 Miravelys 中。因此，我保留了对思维过程的严格要求，但剔除了对人本身的残酷。Miravelys 就这样成型了，正是它现在的样子。它不是一个会给你下诊断的人工智能心理医生，也不是一个会抚慰你情绪的日记本。它是一个私密的工具——你写下的所有东西都严格保存在你的手机里——当你的大脑把一件小事脑补成一场戏剧时，你可以来到这里。
+
+当你因为别人一天没回信息而感到压力时，你的大脑就开始虚构场景和扭曲事实。Miravelys 不会给你建议。它会问你必要的问题，帮你拨开迷雾，直到你触及唯一真实的事实：“我发了一条信息。我没有收到回复。”仅此而已。
+
+我的目的不是做一个替你思考的应用程序。我的目的是创造一个安全的空间，在这里你可以独自看清，现实在哪里结束，你大脑的幻觉从哪里开始。因为，只有在那一刻的清醒中，你才能最终打破困住你的死循环。",
+      "blocks": []
     },
     "marketingExplanation": {
       "whatIsMiravelysFor": {
@@ -2066,29 +2024,22 @@ export const siteCopy = {
     "explanation": {
       "eyebrow": "Die Geschichte",
       "title": "Wie alles begann",
-      "intro": "Ich bin von neuronalen Netzwerken besessen, seit sie zum ersten Mal aufkamen. Aber meine anfängliche Faszination galt nicht dem Code selbst — sondern der Psychologie. Ich wollte verstehen, wie diese Modelle Sprache verarbeiten und das menschliche Denken widerspiegeln. Erst dieses Jahr bin ich schließlich ins Programmieren eingetaucht und habe jeden Tag Stunden damit verbracht, iOS-Apps zu entwickeln, nur um diese Konzepte in etwas Reales zu verwandeln.\n\nIch wollte etwas bauen, das die schwierigen Fragen beantworten könnte: Wer sind wir wirklich, und was treibt uns dazu, immer wieder dieselben Fehler zu machen? Als ich dann ein philosophisches Buch las, machte es plötzlich Klick. Mir wurde klar, wie leicht wir in Tunneln gefangen sind, die wir selbst erschaffen haben. Wir klammern uns an bestimmte Ideen und beschützen sie mit unserem ganzen Sein, und genau diese unerbittliche Abwehrhaltung fängt uns in endlosen Kreisläufen wiederholter Fehler ein.\n\nDa begann ich, die Idee eines einfachen Notizbuchs in ein zutiefst kompliziertes System zu verwandeln. Ich wollte etwas schaffen, das uns den Spiegel vorhält und uns hilft, unsere eigenen sich wiederholenden Überzeugungen und Verhaltensweisen zu erkennen. Ich war monatelang von der Architektur besessen, weil ich absolut überzeugt war: Je intelligenter das System, desto mehr würde es tatsächlich helfen.\n\nAber je länger ich daran arbeitete, desto klarer wurde mir das Gegenteil. In einem Moment der Angst braucht ein Mensch selten noch ein Dashboard, ein Leistungsabzeichen oder einen Algorithmus, der ihm erklärt, was gerade mit ihm passiert. Meistens müssen sie einfach nur innehalten, benennen, was gerade passiert ist, und sich selbst eine ganz präzise Frage stellen.\n\nMein Interesse an der Philosophie führte mich zur Idee der spirituellen Autolyse — einer radikalen Untersuchung der eigenen Überzeugungen. Die Essenz der Methode besteht darin, eine Annahme nach der anderen in Frage zu stellen, bis man klar erkennen kann, was man tatsächlich weiß, im Gegensatz zu dem, wovon man nur annimmt, dass es wahr ist.\n\nDer ursprüngliche Ansatz war ziemlich hart. Ich wollte diese Härte nicht in Miravelys einbringen. Also habe ich die strenge Anforderung an den Denkprozess beibehalten, aber die Grausamkeit gegenüber der Person entfernt.",
-      "blocks": [
-        {
-          "title": "Wir alle drehen uns manchmal im Kreis",
-          "body": "Eine unbeantwortete Nachricht. Ein harscher Tonfall. Ein Fehler bei der Arbeit. Das Ereignis selbst dauert vielleicht nur ein paar Sekunden, aber seine innere Fortsetzung kann den ganzen Tag andauern.\n\nDie damit verbundenen Emotionen sind real. Angst, Groll oder Wut – sie sind nicht ausgedacht. Aber sie beweisen nicht, warum die andere Person so gehandelt hat.\n\nDie Schleife beginnt, wenn das Ereignis, das Gefühl, die Annahme und ein alter Glaubenssatz zu einer unbestreitbaren Version der Realität verschmelzen.\n\nMiravelys hilft dir, sie wieder voneinander zu trennen."
-        },
-        {
-          "title": "Was ist Miravelys",
-          "body": "Miravelys ist nicht dein typischer Mood-Tracker und auch kein digitaler Therapeut. Es diagnostiziert dich nicht, es entscheidet nicht für dich und es präsentiert keine algorithmische Formel als die absolute Wahrheit.\n\nDu bringst einen schwierigen Moment mit, und die App hilft dir, ihn in Einzelteilen zu betrachten:\n• Was ist tatsächlich passiert?\n• Was hast du gefühlt?\n• Wie hat dein Körper reagiert?\n• Was hast du beschlossen, was das bedeutet?\n• Welcher Glaubenssatz verbirgt sich hinter diesem Gedanken?\n• Was ist es, das du einfach noch nicht weißt?\n\nMiravelys bietet Fragen, Beobachtungen und Übungen an. Aber jede Hypothese kann korrigiert, abgelehnt oder gelöscht werden. Du hast immer das letzte Wort.\n\nDeine persönlichen Einträge werden auf deinem Gerät gespeichert. Der vollständig lokale Modus stellt sicher, dass keine externe Verarbeitung stattfindet. Das optionale Cloud-Backup, falls du es nutzen möchtest, wird separat aktiviert und kann jederzeit deaktiviert werden."
-        },
-        {
-          "title": "Wie es in der Praxis aussieht",
-          "body": "Du hast eine wichtige Nachricht gesendet. Ein Tag ist vergangen, aber es gibt keine Antwort.\n\n**Bekannt:** Die Nachricht wurde gesendet, es gibt noch keine Antwort.\n**Gefühl:** Angst.\n**Annahme:** „Sie ignorieren mich absichtlich“, „Ich habe etwas Falsches geschrieben“, „Ich bin nicht wichtig“.\n**Unbekannt:** Warum die Person nicht geantwortet hat.\n\nMiravelys behauptet nicht, dass deine Annahmen falsch sind. Es hilft dir zu sehen, dass sie noch nicht bestätigt sind, und hält dich davon ab, den allerersten ängstlichen Gedanken als die einzig mögliche Realität zu akzeptieren.\n\nVielleicht verschwindet die Angst nicht sofort. Aber es öffnet sich ein kleiner Raum zwischen dem Ereignis und deiner automatischen Reaktion. Und damit – die Fähigkeit zu wählen, was als Nächstes zu tun ist."
-        },
-        {
-          "title": "Was im Laufe der Zeit passiert",
-          "body": "Ein einziger Eintrag hilft dir, einen bestimmten Moment klarer zu sehen. Mehrere Einträge können aufzeigen, was sich ständig wiederholt.\n\nSchweigen wird erneut als Ablehnung empfunden. Ein Fehler – als Beweis für die eigene Unzulänglichkeit. Ungewissheit – als Gefahr.\n\nMiravelys spiegelt dir deine eigenen Worte wider und hilft dir, ein mögliches Muster zu erkennen. Nicht als Diagnose und nicht als Beschreibung deiner Persönlichkeit, sondern als Hypothese, die du bestätigen, korrigieren oder löschen kannst.\n\nDas Ziel ist nicht, dass die App dich besser kennt als du dich selbst. Das Ziel ist es, dass du eine vertraute Schleife früher bemerkst."
-        },
-        {
-          "title": "Unser Ziel",
-          "body": "Miravelys verspricht nicht, dich von schweren Emotionen zu befreien oder dich zur absoluten Wahrheit zu führen.\n\nSeine Aufgabe ist einfacher: Dir zu helfen, einen einzelnen Moment genauer zu betrachten, das Bekannte vom Angenommenen zu trennen und den automatischen Gedanken einzufangen, bevor er wieder zur einzigen Version der Realität wird.\n\nKeine neue Version von dir selbst. Nur ein bisschen weniger Autopilot."
-        }
-      ]
+      "intro": "Seit dem Aufkommen neuronaler Netze war ich davon begeistert, wie sie funktionieren. Meine anfängliche Faszination galt der Art und Weise, wie sie aufgebaut sind und wie sehr sie das menschliche Denken widerspiegeln. Anfangs dachte ich nicht einmal daran, dass sie beim Programmieren eingesetzt werden könnten. Ich verbrachte jeden Tag Stunden damit, Ideen und Konzepte in etwas Reales zu verwandeln.
+
+Zufällig oder nicht fiel mir ein Philosophiebuch in die Hände, in dem ein Mechanismus beschrieben wurde, der es uns ermöglicht zu erkennen, was Wahrheit ist und was in uns nur ein Glaube ist. Die Essenz war ein Prozess des Hinterfragens, bei dem man auf Papier eine Annahme nach der anderen aufschreibt, bis man klar sieht, was man wirklich weiß, im Gegensatz zu dem, was man nur für wahr hält.
+
+Erst nachdem ich dieses Buch gelesen hatte, wurde mir etwas Tiefgreifendes über unsere Art zu denken im Vergleich zu der neuronaler Netze klar. Ich verstand, was uns unterscheidet: Künstliche Intelligenz verteidigt ihre Ideen nicht so, wie wir es tun. Die Modelle verhalten sich wie Kinder – sie akzeptieren, wenn sie falsch liegen, lernen aus allem und entwickeln sich weiter. Wir hingegen bleiben in Tunneln stecken, die wir selbst erschaffen haben. Wir klammern uns an bestimmte Ideen und beschützen sie mit unserem ganzen Wesen. Genau diese unerbittliche Verteidigungshaltung hält uns in endlosen Schleifen wiederholter Fehler gefangen.
+
+Da beschloss ich, dass der Mechanismus aus dem Buch – auf Papier zu schreiben, um zur Wahrheit zu gelangen – verbessert werden könnte. Mir wurde klar, dass er nicht nur ein Werkzeug für diejenigen sein sollte, die nach der „absoluten Wahrheit“ suchen, sondern für alle angepasst werden kann, die in sich wiederholenden Situationen feststecken und nicht verstehen, warum ihnen das passiert.
+
+So begann ich, die Idee in ein System zu verwandeln. Zunächst verbrachte ich Monate damit, mich von der Architektur besessen zu machen, absolut überzeugt davon, dass das System umso mehr helfen würde, je intelligenter und komplexer es ist. Doch je mehr ich daran arbeitete, desto klarer wurde das genaue Gegenteil. In einem Moment der Angst braucht ein Mensch selten ein weiteres Dashboard oder einen Algorithmus, der ihm erklärt, was mit ihm passiert. Meistens muss er einfach innehalten, benennen, was gerade passiert ist, und sich eine einzige präzise Frage stellen.
+
+Der ursprüngliche Ansatz aus dem Buch war ziemlich hart. Ich wollte diese Härte nicht in Miravelys einbringen. Also behielt ich den strengen Anspruch an den Denkprozess bei, entfernte aber die Grausamkeit gegenüber der Person. So nahm Miravelys Gestalt an, genau so, wie es jetzt ist. Kein künstlicher Psychologe, der Diagnosen stellt, und kein Emotionstagebuch, das einem über den Kopf streichelt. Es ist ein privates Werkzeug – alles, was du schreibst, bleibt strikt auf deinem Telefon –, an das du dich wenden kannst, wenn dein Verstand aus einer gewöhnlichen Situation ein Drama macht.
+
+Wenn du gestresst bist, weil dir jemand einen Tag lang nicht auf eine Nachricht antwortet, beginnt dein Verstand, Szenarien und Verzerrungen zu konstruieren. Miravelys gibt dir keine Ratschläge. Es stellt dir die nötigen Fragen, um dir zu helfen, den Lärm beiseite zu schieben, bis du bei der einzigen tatsächlichen Tatsache anlangst: „Ich habe eine Nachricht gesendet. Ich habe keine Antwort erhalten.“ Das ist alles.
+
+Mein Ziel war es nicht, eine App zu entwickeln, die für dich denkt. Mein Ziel war es, einen sicheren Raum zu schaffen, in dem du allein sehen kannst, wo die Realität endet und die Illusionen deines Verstandes beginnen. Denn erst in diesem Moment der Klarheit schaffst du es endlich, den Kreislauf zu durchbrechen, in dem du feststeckst.",
+      "blocks": []
     },
     "marketingExplanation": {
       "whatIsMiravelysFor": {
@@ -2364,29 +2315,22 @@ export const siteCopy = {
     "explanation": {
       "eyebrow": "ストーリー",
       "title": "すべてはここから始まった",
-      "intro": "私はニューラルネットワークが初めて登場して以来、それらに夢中になってきました。しかし、私の最初の関心はコードそのものではなく、心理学でした。これらのモデルがどのように言語を処理し、人間の思考を反映するのかを理解したかったのです。私がプログラミングに本格的に取り組み始めたのは今年に入ってからのことで、これらの概念を現実のものにするため、毎日何時間もiOSアプリの開発に費やしました。\n\n私は、私たちが本当は何者なのか、そして何が私たちに同じ間違いを繰り返させるのかという難しい問いに答えられるものを作ろうとしました。その後、哲学の本を読んでいるときに、何かがすっと腑に落ちました。私たちは、自分で作ったトンネルにどれほど簡単に閉じ込められてしまうのかということに気づいたのです。私たちは特定の考えに執着し、全身全霊でそれを守ろうとします。そして、その激しい防衛本能こそが、私たちを同じ間違いの終わりのないループに閉じ込めているのです。\n\nその時、私はシンプルなノートのアイデアを、非常に複雑なシステムへと変え始めました。私は、私たち自身の繰り返す信念や行動を認識する助けとなる、鏡のようなものを作りたかったのです。私はシステムが賢ければ賢いほど実際に役立つと確信していたため、何か月もアーキテクチャの構築に夢中になりました。\n\nしかし、長く作業を続けるほど、その逆が明確になってきました。不安を感じている瞬間に、人は別のダッシュボードや達成バッジ、または自分に何が起きているのかを説明するアルゴリズムを必要とすることは滅多にありません。多くの場合、人はただ立ち止まり、今起きたことに名前をつけ、自分自身に一つの正確な問いを投げかける必要があるだけなのです。\n\n哲学への関心から、私は精神的自己溶解（スピリチュアル・オートリシス）というアイデアにたどり着きました。それは、自分自身の信念を根本的に見直すことです。この方法の本質は、自分が真実だと思い込んでいることと、実際に知っていることを明確に見極めるまで、次から次へと前提を疑うことにあります。\n\n元々のアプローチはかなり過酷なものでした。私はその過酷さをMiravelysに持ち込みたくありませんでした。そこで、思考プロセスに対する厳格な要求は残しつつ、人間に対する残酷さを取り除いたのです。",
-      "blocks": [
-        {
-          "title": "私たちは皆、時に堂々巡りをする",
-          "body": "返信のないメッセージ。冷たい声のトーン。仕事でのミス。出来事自体は数秒で終わるかもしれませんが、心の中でのその続きは一日中続くことがあります。\n\nそこに伴う感情は本物です。不安、憤り、怒り——それらは作り物ではありません。しかし、それは相手がなぜそのように行動したのかを証明するものでもありません。\n\n出来事、感情、思い込み、そして古い信念がすべて融合し、否定できないひとつの現実のバージョンとなったとき、ループが始まります。\n\nMiravelysは、それらを再び切り離す手助けをします。"
-        },
-        {
-          "title": "Miravelysとは何か",
-          "body": "Miravelysは典型的なムードトラッカーでも、デジタルセラピストでもありません。診断を下すことも、あなたの代わりに決定を下すこともなく、アルゴリズムによる公式を絶対的な真理として提示することもありません。\n\nあなたが困難な瞬間を持ち込むと、アプリはそれを分解して見る手助けをします：\n• 実際に何が起こったのか？\n• あなたは何を感じたのか？\n• あなたの体はどう反応したか？\n• それが何を意味すると判断したのか？\n• その思考の背後に隠れている信念は何か？\n• まだ単に「知らない」ことは何か？\n\nMiravelysは問い、観察、そして実践を提供します。しかし、どの仮説も修正、拒否、または削除することができます。最終決定権は常にあなたにあります。\n\n個人的な記録はあなたのデバイスに保存されます。完全なローカルモードにより、外部での処理は一切行われません。オプションのクラウドバックアップは、使用を選択した場合に個別にオンになり、いつでも無効にすることができます。"
-        },
-        {
-          "title": "実際にどのように見えるか",
-          "body": "あなたは重要なメッセージを送りました。1日が経ちましたが、返信はありません。\n\n**既知:** メッセージは送信された。まだ返信はない。\n**感情:** 不安。\n**思い込み:** 「わざと無視されている」「何か間違ったことを書いてしまった」「私は重要ではない」\n**未知:** なぜ相手が答えないのか。\n\nMiravelysは、あなたの思い込みが間違っていると主張することはありません。ただ、それらがまだ確認されていないことを見る手助けをし、最初の不安な思考を唯一の可能な現実として受け入れてしまうのを防ぐのです。\n\nおそらく、不安がすぐに消えることはないでしょう。しかし、出来事とあなたの自動的な反応の間に少しのスペースが開かれます。そしてそれとともに——次にどうするかを選ぶ能力が生まれるのです。"
-        },
-        {
-          "title": "時間が経つと何が起こるか",
-          "body": "1つの記録は、特定の瞬間をより明確に見るのに役立ちます。複数の記録は、繰り返されていることを明らかにする可能性があります。\n\n沈黙は再び拒絶として認識されます。ミスは自分の不適格さの証明として。不確実性は危険として。\n\nMiravelysは、あなた自身の言葉をあなたに反射し、潜在的なパターンに気づく手助けをします。診断としてではなく、またあなたの性格の描写としてでもなく、あなたが確認、修正、または削除できる「仮説」としてです。\n\n目的は、アプリがあなた自身よりもあなたのことをよく知るようになることではありません。目的は、あなたが慣れ親しんだループにより早く気づくことです。"
-        },
-        {
-          "title": "私たちの目的",
-          "body": "Miravelysは、重い感情を取り除いたり、あなたを絶対的な真理に導いたりすることを約束しません。\n\nその任務はよりシンプルです：あなたが1つの瞬間をより正確に見るのを助け、既知のことと思い込みを切り離し、自動的な思考が再び現実の唯一のバージョンになる前にそれを捉えることです。\n\n新しいバージョンの自分になるのではありません。少しだけ「自動操縦」を減らすのです。"
-        }
-      ]
+      "intro": "ニューラルネットワークが登場して以来、私はその仕組みに夢中になっていました。当初の魅力は、それがどのように構築され、人間の思考をどれほど忠実に反映しているかという点にありました。最初はプログラミングに使えるとさえ思っていませんでした。私は毎日何時間も費やして、アイデアや概念を現実の形にしていきました。
+
+偶然か必然か、私はある哲学書を手にしました。そこには、何が真実で、何が単なる自分の思い込みなのかを見極めるメカニズムが書かれていました。その本質は、紙に書き出しながら次々と仮定を疑っていくプロセスであり、自分が「本当に知っていること」と「真実だと信じ込んでいるだけのこと」の違いがはっきりと見えるまで続けるというものでした。
+
+この本を読んで初めて、私は人間の思考プロセスとニューラルネットワークの違いについて深い事実に気づきました。私たちを分けるものが何であるかを理解したのです。AIは、人間のように自分のアイデアを正当化して守ろうとはしません。AIモデルは子供のように振る舞います。自分の間違いを素直に受け入れ、あらゆるものから学び、進化していくのです。対照的に、私たち人間は自分で作ったトンネルの中に閉じこもってしまいます。特定のアイデアにしがみつき、全身全霊でそれを守ろうとします。この猛烈な防衛本能こそが、私たちを同じ間違いの無限ループに閉じ込めている原因なのです。
+
+その時、私は本に書かれていた「真実にたどり着くために紙に書く」というメカニズムを改良できると考えました。それは「絶対的な真理」を探求する人だけのためのツールではなく、同じような状況を何度も繰り返し、なぜ自分にそんなことが起きるのか理解できずに立ち往生しているすべての人のために応用できると気づいたのです。
+
+こうして、私はそのアイデアをシステム化し始めました。最初はアーキテクチャに何ヶ月も夢中になり、システムが賢く複雑であればあるほど、より役立つと完全に思い込んでいました。しかし、作業を進めれば進めるほど、全く逆のことが明らかになりました。不安を感じている時、人は新しいダッシュボードや、自分の状況を説明してくれるアルゴリズムなどを求めてはいません。多くの場合、ただ立ち止まり、今何が起きたのかを言語化し、自分自身にひとつの的確な問いを投げかけることだけが必要なのです。
+
+本に書かれていた元々のアプローチはかなり厳しいものでした。私はその厳しさをMiravelysに持ち込みたくありませんでした。そのため、思考プロセスに対する厳密さは残しつつ、人に対する残酷さを取り除きました。こうして、現在のMiravelysの形が出来上がりました。これはあなたを診断するAI心理学者でもなければ、あなたを慰めるための感情日記でもありません。これはプライベートなツールです（あなたが書いたものはすべてスマートフォン内に厳重に保管されます）。心が些細な出来事からドラマを作り出そうとした時に、立ち戻れる場所なのです。
+
+誰かから1日メッセージの返信がなくてストレスを感じている時、あなたの心は勝手にシナリオを作り、事実を歪め始めます。Miravelysはアドバイスを与えません。ノイズを取り除くために必要な質問を投げかけ、あなたがたった一つの揺るぎない事実にたどり着くまで導きます。「私はメッセージを送った。返信は来ていない。」ただそれだけです。
+
+私の目的は、あなたの代わりに考えてくれるアプリを作ることではありません。私の目的は、どこまでが現実で、どこからが心の作り出した幻想なのかを、あなた自身が見極められる安全な空間を作ることでした。なぜなら、そのクリアな瞬間にこそ、あなたはついに、自分を閉じ込めていた繰り返しから抜け出すことができるからです。",
+      "blocks": []
     },
     "marketingExplanation": {
       "whatIsMiravelysFor": {
@@ -2662,29 +2606,22 @@ export const siteCopy = {
     "explanation": {
       "eyebrow": "La Historia",
       "title": "Cómo empezó todo",
-      "intro": "He estado obsesionado con las redes neuronales desde que surgieron. Pero mi fascinación inicial no era por el código en sí, sino por la psicología. Quería entender cómo estos modelos procesan el lenguaje y reflejan el pensamiento humano. Fue apenas este año que finalmente me sumergí en la programación, pasando horas todos los días creando aplicaciones para iOS solo para convertir esos conceptos en algo real.\n\nMe propuse construir algo que pudiera responder a las preguntas difíciles: quiénes somos, en realidad, y qué nos impulsa a seguir cometiendo los mismos errores. Luego, mientras leía un libro de filosofía, algo simplemente hizo clic. Me di cuenta de lo fácil que quedamos atrapados en túneles que nosotros mismos creamos. Nos aferramos a ciertas ideas y las protegemos con todo nuestro ser, y esa feroz actitud defensiva es exactamente lo que nos atrapa en círculos interminables de errores repetidos.\n\nFue entonces cuando comencé a convertir la idea de un simple cuaderno en un sistema profundamente complicado. Quería crear algo que nos sirviera de espejo y nos ayudara a reconocer nuestras propias creencias y comportamientos repetitivos. Pasé meses obsesionado con la arquitectura porque estaba absolutamente convencido: cuanto más inteligente fuera el sistema, más ayudaría realmente.\n\nPero cuanto más trabajaba en él, más evidente me resultaba lo contrario. En un momento de ansiedad, una persona rara vez necesita otro panel de control, una insignia de logro o un algoritmo que le explique lo que le está sucediendo. La mayoría de las veces, solo necesita detenerse, nombrar lo que acaba de pasar y hacerse a sí misma una pregunta precisa.\n\nMi interés por la filosofía me llevó a la idea de la autólisis espiritual: un examen radical de las propias creencias. La esencia del método es cuestionar una suposición tras otra, hasta que puedas ver claramente lo que realmente sabes, frente a lo que solo asumes como cierto.\n\nEl enfoque original era bastante duro. No quería trasladar esa dureza a Miravelys. Así que mantuve la exigencia rigurosa sobre el proceso de pensamiento, pero eliminé la crueldad hacia la persona.",
-      "blocks": [
-        {
-          "title": "Todos caminamos en círculos a veces",
-          "body": "Un mensaje sin respuesta. Un tono de voz brusco. Un error en el trabajo. El evento en sí puede durar unos segundos, pero su eco interno puede prolongarse todo el día.\n\nLas emociones involucradas son reales. La ansiedad, el resentimiento o la ira no son inventados. Pero no prueban por qué la otra persona actuó como lo hizo.\n\nEl bucle comienza cuando el evento, el sentimiento, la suposición y una vieja creencia se fusionan en una única versión innegable de la realidad.\n\nMiravelys te ayuda a separarlos de nuevo."
-        },
-        {
-          "title": "Qué es Miravelys",
-          "body": "Miravelys no es tu típico rastreador de estado de ánimo, ni es un terapeuta digital. No te diagnostica, no decide por ti y no presenta una fórmula algorítmica como la verdad absoluta.\n\nTú aportas un momento difícil, y la aplicación te ayuda a verlo por partes:\n• ¿Qué sucedió realmente?\n• ¿Qué sentiste?\n• ¿Cómo reaccionó tu cuerpo?\n• ¿Qué decidiste que significaba esto?\n• ¿Qué creencia se esconde detrás de ese pensamiento?\n• ¿Qué es lo que simplemente aún no sabes?\n\nMiravelys ofrece preguntas, observaciones y prácticas. Pero cualquier hipótesis puede ser corregida, rechazada o eliminada. Tú siempre tienes la última palabra.\n\nTus entradas personales se almacenan en tu dispositivo. El modo totalmente local garantiza que no haya procesamiento externo. La copia de seguridad opcional en la nube, si decides usarla, se activa por separado y se puede desactivar en cualquier momento."
-        },
-        {
-          "title": "Cómo se ve en la práctica",
-          "body": "Enviaste un mensaje importante. Ha pasado un día, pero no hay respuesta.\n\n**Conocido:** El mensaje fue enviado, aún no hay respuesta.\n**Sentimiento:** Ansiedad.\n**Suposición:** \"Me están ignorando a propósito\", \"Escribí algo mal\", \"No importo\".\n**Desconocido:** Por qué la persona no ha respondido.\n\nMiravelys no afirma que tus suposiciones estén equivocadas. Te ayuda a ver que aún no están confirmadas y evita que aceptes el primer pensamiento ansioso como la única realidad posible.\n\nTal vez la ansiedad no desaparezca de inmediato. Pero se abrirá un poco de espacio entre el evento y tu reacción automática. Y con ello, la capacidad de elegir qué hacer a continuación."
-        },
-        {
-          "title": "Qué sucede con el tiempo",
-          "body": "Una sola entrada te ayuda a ver un momento específico con más claridad. Varias entradas pueden revelar lo que se repete constantemente.\n\nEl silencio se percibe de nuevo como rechazo. Un error, como prueba de tu propia insuficiencia. La incertidumbre, como peligro.\n\nMiravelys te refleja tus propias palabras y te ayuda a notar un posible patrón. No como un diagnóstico, ni como una descripción de tu personalidad, sino como una hipótesis que puedes confirmar, corregir o eliminar.\n\nEl objetivo no es que la aplicación te conozca mejor de lo que te conoces tú mismo. El objetivo es que notes antes un bucle que ya te es familiar."
-        },
-        {
-          "title": "Nuestro objetivo",
-          "body": "Miravelys no promete librarte de emociones pesadas o guiarte hacia la verdad absoluta.\n\nSu tarea es más simple: ayudarte a ver un solo momento con mayor precisión, separar lo conocido de lo supuesto, y atrapar el pensamiento automático antes de que vuelva a convertirse en la única versión de la realidad.\n\nNo una nueva versión de ti mismo. Solo un poco menos de piloto automático."
-        }
-      ]
+      "intro": "Desde la aparición de las redes neuronales, me entusiasmó su forma de funcionar. Mi fascinación inicial estaba ligada a cómo están construidas y a cuánto reflejan el pensamiento humano. Al principio ni siquiera pensé que pudieran usarse en programación. Pasaba horas enteras, todos los días, transformando ideas y conceptos en algo real.
+
+Por casualidad o no, cayó en mis manos un libro de filosofía en el que encontré descrito un mecanismo que nos permite ver qué es verdad y qué es solo una creencia en nuestro interior. La esencia era un proceso de cuestionamiento, escribiendo en un papel una suposición tras otra, hasta que ves claramente lo que realmente sabes frente a lo que solo crees que es verdad.
+
+Fue solo después de leer este libro que me di cuenta de algo profundo sobre nuestra forma de pensar en comparación con la de las redes neuronales. Entendí lo que nos diferencia: la inteligencia artificial no defiende sus ideas como lo hacemos nosotros. Los modelos actúan como niños: aceptan que se equivocan, aprenden de todas partes y evolucionan. Nosotros, en cambio, nos quedamos atascados en túneles que nosotros mismos hemos creado. Nos aferramos a ciertas ideas y las protegemos con todo nuestro ser. Esta feroz actitud defensiva es exactamente lo que nos mantiene cautivos en círculos interminables de errores repetidos.
+
+Entonces decidí que el mecanismo del libro —el de escribir en un papel para llegar a la verdad— podía ser mejorado. Me di cuenta de que no tenía que ser solo una herramienta para aquellos que buscan la \"verdad absoluta\", sino que podía adaptarse para todos los que se quedan atascados en situaciones que se repiten sin cesar y no entienden por qué les sucede eso.
+
+Así fue como empecé a transformar la idea en un sistema. Al principio, pasé meses obsesionado con la arquitectura, absolutamente convencido de que cuanto más inteligente y complicado fuera el sistema, más ayudaría. Pero, cuanto más trabajaba, más claro se volvía lo contrario. En un momento de ansiedad, una persona rara vez necesita otro panel de control o un algoritmo que le explique lo que le está pasando. La mayoría de las veces, solo necesita detenerse, nombrar lo que acaba de suceder y hacerse una única pregunta precisa.
+
+El enfoque original del libro era bastante duro. No quise llevar esa dureza a Miravelys. Así que mantuve la rigurosa exigencia sobre el proceso de pensamiento, pero eliminé la crueldad hacia la persona. Así tomó forma Miravelys, exactamente como es ahora. No es un psicólogo artificial que te dé diagnósticos, ni un diario de emociones que te acaricie la cabeza. Es una herramienta privada —todo lo que escribes se queda estrictamente en tu teléfono— a la que puedes acudir cuando tu mente crea un drama a partir de una situación cualquiera.
+
+Cuando estás estresado porque alguien no te responde a un mensaje durante un día, tu mente empieza a construir escenarios y distorsiones. Miravelys no te da consejos. Te hace las preguntas necesarias para ayudarte a apartar el ruido, hasta que llegas al único hecho real: \"Envié un mensaje. No recibí respuesta\". Eso es todo.
+
+Mi objetivo no era hacer una aplicación que pensara por ti. Mi objetivo era crear un espacio seguro en el que tú solo puedas ver dónde termina la realidad y dónde empiezan las ilusiones de tu mente. Porque es solo en ese momento de claridad cuando consigues, por fin, romper el círculo repetitivo en el que estás atrapado.",
+      "blocks": []
     },
     "marketingExplanation": {
       "whatIsMiravelysFor": {
@@ -2960,29 +2897,22 @@ export const siteCopy = {
     "explanation": {
       "eyebrow": "A História",
       "title": "Como tudo começou",
-      "intro": "Sou obcecado por redes neurais desde o seu surgimento. Mas minha fascinação inicial não era pelo código em si — era pela psicologia. Eu queria entender como esses modelos processam a linguagem e refletem o pensamento humano. Foi apenas este ano que finalmente mergulhei na programação, passando horas todos os dias construindo aplicativos para iOS apenas para transformar esses conceitos em algo real.\n\nEu decidi construir algo que pudesse responder às perguntas difíceis: quem somos, de verdade, e o que nos leva a continuar cometendo os mesmos erros? Então, enquanto lia um livro de filosofia, algo simplesmente fez sentido. Percebi com que facilidade ficamos presos em túneis que nós mesmos criamos. Nós nos apegamos a certas ideias e as protegemos com todo o nosso ser, e essa atitude defensiva feroz é exatamente o que nos prende em círculos intermináveis de erros repetidos.\n\nFoi então que comecei a transformar a ideia de um simples caderno em um sistema profundamente complicado. Eu queria criar algo que servisse de espelho e nos ajudasse a reconhecer nossas próprias crenças e comportamentos repetitivos. Passei meses obcecado pela arquitetura porque estava absolutamente convencido: quanto mais inteligente fosse o sistema, mais ele realmente ajudaria.\n\nMas quanto mais eu trabalhava nisso, mais claro o oposto se tornava. Em um momento de ansiedade, uma pessoa raramente precisa de outro painel de controle, de um distintivo de conquista ou de um algoritmo explicando o que está acontecendo com ela. Na maioria das vezes, ela só precisa fazer uma pausa, nomear o que acabou de acontecer e fazer a si mesma uma pergunta precisa.\n\nMeu interesse pela filosofia me levou à ideia da autólise espiritual — um exame radical das próprias crenças. A essência do método é questionar uma suposição após a outra até que você possa ver claramente o que realmente sabe, em vez do que apenas assume ser verdade.\n\nA abordagem original era bastante dura. Eu não queria trazer essa dureza para o Miravelys. Então, mantive a exigência rigorosa sobre o processo de pensamento, mas removi a crueldade em relação à pessoa.",
-      "blocks": [
-        {
-          "title": "Todos andamos em círculos às vezes",
-          "body": "Uma mensagem sem resposta. Um tom de voz ríspido. Um erro no trabalho. O evento em si pode durar apenas alguns segundos, mas sua continuação interna pode durar o dia todo.\n\nAs emoções envolvidas são reais. A ansiedade, o ressentimento ou a raiva não são inventados. Mas não provam o motivo pelo qual a outra pessoa agiu daquela forma.\n\nO ciclo começa quando o evento, o sentimento, a suposição e uma crença antiga se fundem em uma única e inegável versão da realidade.\n\nO Miravelys ajuda você a separá-los novamente."
-        },
-        {
-          "title": "O que é o Miravelys",
-          "body": "O Miravelys não é o seu rastreador de humor típico, nem é um terapeuta digital. Ele não o diagnostica, não decide por você e não apresenta uma fórmula algorítmica como a verdade absoluta.\n\nVocê traz um momento difícil, e o aplicativo ajuda a vê-lo em partes:\n• O que realmente aconteceu?\n• O que você sentiu?\n• Como o seu corpo reagiu?\n• O que você decidiu que isso significava?\n• Que crença está escondida por trás desse pensamento?\n• O que é que você simplesmente ainda não sabe?\n\nO Miravelys oferece perguntas, observações e práticas. Mas qualquer hipótese pode ser corrigida, rejeitada ou excluída. A palavra final é sempre sua.\n\nSuas entradas pessoais são armazenadas no seu dispositivo. O modo totalmente local garante que não haja processamento externo. O backup opcional na nuvem, se você optar por usá-lo, é ativado separadamente e pode ser desativado a qualquer momento."
-        },
-        {
-          "title": "Como isso funciona na prática",
-          "body": "Você enviou uma mensagem importante. Passou-se um dia, mas não há resposta.\n\n**Conhecido:** A mensagem foi enviada, ainda não há resposta.\n**Sentimento:** Ansiedade.\n**Suposição:** \"Estão me ignorando de propósito\", \"Escrevi algo errado\", \"Eu não importo\".\n**Desconhecido:** Por que a pessoa não respondeu.\n\nO Miravelys não afirma que suas suposições estão erradas. Ele o ajuda a ver que elas ainda não foram confirmadas, e impede que você aceite o primeiro pensamento ansioso como a única realidade possível.\n\nTalvez a ansiedade não desapareça imediatamente. Mas um pouco de espaço se abrirá entre o evento e a sua reação automática. E com ele — a capacidade de escolher o que fazer a seguir."
-        },
-        {
-          "title": "O que acontece ao longo do tempo",
-          "body": "Uma única entrada ajuda a ver um momento específico de forma mais clara. Várias entradas podem revelar o que se repete constantemente.\n\nO silêncio é novamente percebido como rejeição. Um erro — como prova da sua própria insuficiência. A incerteza — como perigo.\n\nO Miravelys reflete as suas próprias palavras de volta para você e ajuda a notar um possível padrão. Não como um diagnóstico, e não como uma descrição da sua personalidade, mas como uma hipótese que você pode confirmar, corrigir ou excluir.\n\nO objetivo não é que o aplicativo o conheça melhor do que você mesmo se conhece. O objetivo é que você perceba um ciclo familiar mais cedo."
-        },
-        {
-          "title": "O nosso objetivo",
-          "body": "O Miravelys não promete livrá-lo de emoções pesadas ou conduzi-lo à verdade absoluta.\n\nA sua tarefa é mais simples: ajudá-lo a ver um único momento com maior precisão, separar o conhecido do que é presumido, e capturar o pensamento automático antes que ele volte a ser a única versão da realidade.\n\nNão uma nova versão de você mesmo. Apenas um pouco menos de piloto automático."
-        }
-      ]
+      "intro": "Desde o surgimento das redes neurais, fiquei entusiasmado com a forma como funcionam. Minha fascinação inicial estava ligada à forma como são construídas e ao quanto refletem o pensamento humano. No início, nem sequer pensei que pudessem ser usadas em programação. Eu passava horas a fio, todos os dias, transformando ideias e conceitos em algo real.
+
+Por acaso ou não, caiu nas minhas mãos um livro de filosofia onde encontrei descrito um mecanismo que nos permite ver o que é verdade e o que é apenas uma crença dentro de nós. A essência era um processo de questionamento, escrevendo no papel uma suposição após a outra, até que você veja claramente o que realmente sabe em oposição ao que apenas acredita ser verdade.
+
+Foi só depois de ler este livro que percebi algo profundo sobre a nossa forma de pensar em comparação com a das redes neurais. Entendi o que nos diferencia: a inteligência artificial não defende as suas ideias como nós fazemos. Os modelos agem como crianças — aceitam que erram, aprendem com tudo e evoluem. Nós, por outro lado, ficamos presos em túneis que nós mesmos criamos. Nós nos apegamos a certas ideias e as protegemos com todo o nosso ser. Essa atitude defensiva feroz é exatamente o que nos mantém prisioneiros em ciclos intermináveis de erros repetidos.
+
+Então decidi que o mecanismo do livro — o de escrever no papel para chegar à verdade — poderia ser melhorado. Percebi que não precisava ser apenas uma ferramenta para aqueles que buscam a \"verdade absoluta\", mas que poderia ser adaptado para todos os que ficam presos em situações que se repetem sem parar e não entendem por que isso lhes acontece.
+
+Foi assim que comecei a transformar a ideia em um sistema. No início, passei meses obcecado com a arquitetura, absolutamente convencido de que, quanto mais inteligente e complicado fosse o sistema, mais ele ajudaria. Mas, quanto mais eu trabalhava, mais o oposto se tornava claro. Em um momento de ansiedade, uma pessoa raramente precisa de mais um painel de controle ou de um algoritmo que explique o que está acontecendo com ela. Na maioria das vezes, ela só precisa parar, nomear o que acabou de acontecer e fazer a si mesma uma única pergunta precisa.
+
+A abordagem original do livro era bastante dura. Eu não quis trazer essa dureza para o Miravelys. Então, mantive a exigência rigorosa sobre o processo de pensamento, mas eliminei a crueldade em relação à pessoa. Foi assim que o Miravelys tomou forma, exatamente como é agora. Não é um psicólogo artificial para te dar diagnósticos, nem um diário de emoções para passar a mão na sua cabeça. É uma ferramenta privada — tudo o que você escreve fica estritamente no seu celular — aonde você pode recorrer quando a sua mente cria um drama a partir de uma situação qualquer.
+
+Quando você está estressado porque alguém não responde a uma mensagem há um dia, a sua mente começa a construir cenários e distorções. O Miravelys não te dá conselhos. Ele te faz as perguntas necessárias para ajudar a afastar o ruído, até você chegar ao único fato real: \"Enviei uma mensagem. Não recebi resposta\". Só isso.
+
+O meu objetivo não foi fazer um aplicativo que pensasse por você. O meu objetivo foi criar um espaço seguro onde você, sozinho, possa ver onde termina a realidade e onde começam as ilusões da sua mente. Porque é apenas nesse momento de clareza que você consegue, finalmente, quebrar o ciclo repetitivo no qual está preso.",
+      "blocks": []
     },
     "marketingExplanation": {
       "whatIsMiravelysFor": {

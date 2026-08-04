@@ -1627,6 +1627,9 @@ html { scroll-behavior: smooth; }
   margin-bottom: 34px;
 }
 .explanation-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
   font-size: var(--type-body-relaxed, 1rem);
   line-height: 1.65;
   color: rgba(232, 241, 250, .74);
