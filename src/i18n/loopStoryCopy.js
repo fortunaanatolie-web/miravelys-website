@@ -736,74 +736,422 @@ export function resolveLoopStoryCopy(lang) {
 }
 
 const founderStories = {
-  en: {
-    eyebrow: 'How it began',
-    title: 'I built a complicated system. The hard moments needed something simpler.',
-    intro: 'Miravelys started as a correction to my own instinct to make everything more intelligent, more automated, and more elaborate.',
-    quote: '“At one point, a single task could pass through 57 calls to different neural networks.”',
-    screenCaption: 'The product begins with one question, not a verdict.',
-    chapters: [
+  "ru": {
+    "eyebrow": "История основателя",
+    "title": "Как всё начиналось",
+    "intro": "С самого появления нейросетей я был заворожён тем, как они работают. Я мог проводить с ними часы каждый день, проверяя самые разные идеи, задавая вопросы, споря с ответами и наблюдая, как из чего-то совсем сырого и едва уловимого постепенно рождается ясная мысль.",
+    "quote": "«Между тем, что произошло, и тем, что мы об этом думаем, почти всегда возникает целая история. Иногда настолько убедительная, что мы перестаём замечать: это уже не сама реальность, а наше объяснение реальности.»",
+    "screenCaption": "Продукт начинается с одного точного вопроса, а не с вердикта.",
+    "chapters": [
       {
-        label: '01 — Too much system',
-        title: 'I thought technology had to do more.',
-        paragraphs: [
-          'For years I have built iOS apps. Last year I poured time, money, and months of architecture into a complex system, convinced that more layers would make it more helpful.',
-          'But while I was continually refining it, a plain fact became hard to ignore: dashboards, game mechanics, and technical cleverness do not help much when a person is already overwhelmed.',
-        ],
+        "label": "01 — Защита и нейросети",
+        "title": "Мы защищаем не только свои идеи, но и самих себя.",
+        "paragraphs": [
+          "Но больше всего меня поражали даже не возможности самих нейросетей. Меня поражало то, насколько отчётливо рядом с ними становились видны особенности человеческого мышления.",
+          "Примерно в это же время, случайно или нет, мне в руки попала книга по философии. В ней описывался механизм, позволяющий отделить то, что мы действительно знаем, от того, во что мы просто верим.",
+          "На первый взгляд всё было довольно просто: нужно было выписывать на бумагу одну мысль за другой, одно предположение за другим. Не пытаться поскорее найти удобный ответ. Не доказывать самому себе, что ты прав. Не заменять неприятную мысль более приятной. А просто смотреть глубже.",
+          "Именно тогда я осознал нечто важное о человеческом разуме. Мы защищаем не только свои идеи. Вместе с ними мы защищаем своё прошлое, свои решения, свои страхи, надежды и представление о том, кто мы есть. У нейросети нет такой необходимости: когда появляются другие данные, она может изменить ответ.",
+          "Человеку намного сложнее. Не потому, что с нами что-то не так — наш разум просто пытается защитить нас. Но иногда тот же самый механизм начинает работать против нас, заставляя годами ходить по одному и тому же кругу."
+        ]
       },
       {
-        label: '02 — The turn',
-        title: 'A philosophical practice gave the product its direction.',
-        paragraphs: [
-          'In a book I encountered spiritual autolysis: a rigorous practice of questioning assumptions until you can tell what is known, what is felt, and what remains unknown.',
-          'I did not want to bring its harshness into an app. I wanted to keep the central move — return to reality — while treating the person doing that work with care.',
-        ],
+        "label": "02 — От сложности к бережности",
+        "title": "В момент тревоги человеку нужен не алгоритм, а бережная остановка.",
+        "paragraphs": [
+          "Тогда меня озарило: механизм из книги можно развить. Его можно сделать доступным каждому человеку, который устал снова и снова оказываться в одних и тех же болезненных ситуациях.",
+          "Первые месяцы я был практически одержим архитектурой системы. Я хотел построить систему, которая поймёт всё. Но чем глубже я погружался в работу, тем очевиднее становилось обратное.",
+          "В момент, когда человека захлёстывает тревога, ему редко нужен ещё один дашборд. Ему не нужен холодный алгоритм, который разложит его состояние на части и объяснит, что с ним не так. В такие моменты мы и без того перегружены.",
+          "Иногда человеку нужно совсем немного: просто остановиться, назвать своими именами то, что только что произошло, и задать себе один-единственный, но действительно точный вопрос.",
+          "Оригинальный подход из книги был довольно жёстким, почти клиническим. Я наотрез отказался переносить эту холодность в Miravelys. Мне было важно сохранить ясность, но убрать жестокость: не бороться с человеком, не стыдить его и не обесценивать его переживания."
+        ]
       },
       {
-        label: '03 — What remains',
-        title: 'The app should not do the seeing for you.',
-        paragraphs: [
-          'Miravelys does not tell you what your experience means. It makes room to name the event, the feeling, the story, the belief, and what is still unknown.',
-          'That distinction does not make fear disappear. It can make the next action less automatic. For me, that small space is where freedom starts.',
-        ],
-      },
+        "label": "03 — Пространство выбора",
+        "title": "Разделяя факт и предположение, вы возвращаете себе выбор.",
+        "paragraphs": [
+          "Так постепенно сформировался Miravelys — не ИИ-психолог и не обычный дневник настроения, а глубоко личное пространство, куда можно уйти, когда внутри становится слишком шумно.",
+          "Представьте, что вы отправили близкому человеку сообщение. Прошёл день, ответа нет. Сам по себе этот факт почти не содержит информации, но разум начинает заполнять пустоту историями: «Я не нужен», «Меня игнорируют», «Всё закончилось».",
+          "Miravelys задаёт вопросы, помогающие пробиться сквозь шум и увидеть факт: «Я отправил сообщение. Я ещё не получил ответа.» Вот и всё.",
+          "Между фактом и предположением существует пространство. И именно в нём появляется выбор — не отправлять десять сообщений подряд, не разрушать отношения раньше времени, не принимать решений из страха.",
+          "Моей целью было создать безопасное и тихое пространство. Потому что настоящее изменение начинается в тот короткий момент, когда история, которую вы повторяли себе сотни раз, внезапно перестаёт выглядеть единственно возможной. Именно ради этого пространства появился Miravelys."
+        ]
+      }
     ],
-    cta: 'Join early access',
+    "cta": "Ранний доступ"
   },
-  ru: {
-    eyebrow: 'Как всё начиналось',
-    title: 'Я строил сложную систему. А в трудный момент нужен оказался более простой инструмент.',
-    intro: 'Miravelys появился как поправка к моей привычке делать всё умнее, автоматизированнее и сложнее.',
-    quote: '«В какой-то момент одна задача проходила через 57 вызовов разных нейросетей.»',
-    screenCaption: 'Продукт начинается с одного вопроса, а не с вердикта.',
-    chapters: [
+  "en": {
+    "eyebrow": "Founder's Story",
+    "title": "How it all began",
+    "intro": "Ever since neural networks emerged, I’ve been fascinated by how they work. I could spend hours with them every single day, testing a wide range of ideas, asking questions, arguing with their answers, and watching how a clear thought gradually takes shape out of something incredibly raw and elusive.",
+    "quote": "“Between what actually happened and what we think about it, there almost always emerges a whole story. Sometimes it’s so convincing that we stop noticing: this is no longer reality itself, but our explanation of reality.”",
+    "screenCaption": "The product begins with one precise question, not a verdict.",
+    "chapters": [
       {
-        label: '01 — Слишком много системы',
-        title: 'Я думал, что технологии должны делать больше.',
-        paragraphs: [
-          'Я давно разрабатываю приложения для iOS. Последний год я вложил силы, средства и месяцы архитектуры в сложную систему — мне казалось, что дополнительные слои сделают её полезнее.',
-          'Но, постоянно дорабатывая продукт, я увидел простую вещь: дашборды, игровые механики и техническая сложность почти не помогают, когда человек уже захвачен тревогой.',
-        ],
+        "label": "01 — Defense and Neural Networks",
+        "title": "We don't just defend our ideas; we defend our very selves.",
+        "paragraphs": [
+          "But what amazed me most wasn't even the capabilities of neural networks themselves. What amazed me was how clearly the distinct quirks of human thinking stood out in comparison to them.",
+          "Around this time, by chance or not, I came across a philosophy book. It described a mechanism that allows us to separate what we truly know from what we merely believe.",
+          "At first glance, it was quite simple: write down one thought after another on paper, one assumption after another. Not trying to quickly find a comfortable answer. Not trying to prove to yourself that you are right. Not replacing an unpleasant thought with a more pleasant one. But simply looking deeper.",
+          "That is when I realized something incredibly important about the human mind. We don't just defend our ideas. Along with them, we defend our past, our decisions, our fears, our hopes, and our entire sense of who we are. A neural network has no such need: when new data arrives, it can simply change its answer.",
+          "For humans, it is much harder. Not because there is something wrong with us—our mind is just trying to protect us. But sometimes, this exact same mechanism starts working against us, trapping us in the same circles for years."
+        ]
       },
       {
-        label: '02 — Поворот',
-        title: 'Направление подсказала философская практика.',
-        paragraphs: [
-          'В одной книге я встретил идею духовного автолизиса: строгой практики, в которой проверяешь одно предположение за другим, пока не остаётся то, что действительно известно, почувствовано или ещё неясно.',
-          'Я не хотел переносить эту жесткость в приложение. Мне было важно сохранить главное движение — возвращение к реальности, — но сделать его бережным к человеку, который его проходит.',
-        ],
+        "label": "02 — From Complexity to Gentleness",
+        "title": "In a moment of anxiety, a person doesn't need an algorithm, but a gentle pause.",
+        "paragraphs": [
+          "Then it hit me: the mechanism from the book could be evolved. It could be made accessible to anyone who is tired of finding themselves in the same painful situations again and again.",
+          "For the first few months, I was practically obsessed with its architecture. I wanted to build a system that would understand everything. But the deeper I immersed myself in the work, the more obvious the exact opposite became.",
+          "In a moment when a person is overwhelmed by anxiety, they rarely need another dashboard. They don't need a cold algorithm to dissect their state of mind and explain what is wrong with them. In moments like that, we are already overloaded enough.",
+          "Sometimes, a person needs very little: just to stop, to call what just happened by its real name, and to ask themselves a single, but truly precise question.",
+          "The original approach from the book was quite harsh, almost clinical. I flatly refused to bring that coldness into Miravelys. It was vital to me to preserve the clarity, but remove the cruelty: not to fight the person, not to shame them, and not to invalidate their feelings."
+        ]
       },
       {
-        label: '03 — Что осталось',
-        title: 'Приложение не должно делать эту работу вместо вас.',
-        paragraphs: [
-          'Miravelys не говорит, что значит ваш опыт. Он помогает назвать событие, чувство, историю, убеждение и то, что пока остаётся неизвестным.',
-          'Это различие не обязано сразу убрать страх. Но оно может сделать следующий шаг менее автоматическим. Для меня именно в этом небольшом пространстве начинается свобода.',
-        ],
-      },
+        "label": "03 — The Space of Choice",
+        "title": "By separating fact from assumption, you reclaim your choice.",
+        "paragraphs": [
+          "That is how Miravelys slowly took shape—not an AI psychologist or a typical mood journal, but a profoundly private space where you can retreat when things get too loud inside.",
+          "Imagine you sent a message to someone close to you. A day passes, still no reply. This fact alone contains almost no information, but the mind begins filling the void with stories: 'They don't need me', 'I am being ignored', 'It's over'.",
+          "Miravelys asks questions that help you push through the noise and see the fact: 'I sent a message. I haven't received a reply yet.' That's it.",
+          "Between a fact and an assumption, there is a space. And it is precisely in this space that a choice appears—not to send ten messages in a row, not to destroy a relationship prematurely, not to make decisions out of fear.",
+          "My goal was to create a safe and quiet space. Because real change begins in that brief moment when the story you’ve repeated to yourself a hundred times suddenly stops looking like the only possible reality. It is precisely for the sake of this space that Miravelys came to be."
+        ]
+      }
     ],
-    cta: 'Ранний доступ',
+    "cta": "Join early access"
   },
+  "ro": {
+    "eyebrow": "Povestea fondatorului",
+    "title": "Cum a început totul",
+    "intro": "Încă de la apariția rețelelor neuronale, am fost fascinat de modul în care funcționează. Puteam petrece ore în șir cu ele în fiecare zi, testând tot felul de idei, punând întrebări, contrazicând răspunsurile și observând cum, dintr-o formă crudă și greu de prins, se naște treptat o gândire clară.",
+    "quote": "„Între ceea ce s-a întâmplat de fapt și ceea ce credem noi despre acel lucru, se naște aproape întotdeauna o întreagă poveste. Uneori este atât de convingătoare, încât încetăm să mai observăm: aceea nu mai este realitatea, ci propria noastră explicație a realității.”",
+    "screenCaption": "Produsul începe cu o singură întrebare precisă, nu cu un verdict.",
+    "chapters": [
+      {
+        "label": "01 — Apărarea și rețelele neuronale",
+        "title": "Nu ne apărăm doar ideile; ne apărăm pe noi înșine.",
+        "paragraphs": [
+          "Dar cel mai mult m-au uimit nu posibilitățile rețelelor neuronale în sine. M-a uimit cât de evident au scos la lumină particularitățile gândirii noastre umane.",
+          "Cam în aceeași perioadă, întâmplător sau nu, mi-a căzut în mână o carte de filosofie. În ea era descris un mecanism care ne permitea să separăm ceea ce știm cu adevărat de ceea ce doar credem că știm.",
+          "La prima vedere, totul era destul de simplu: trebuia să scrii pe hârtie un gând după altul, o presupunere după alta. Să nu încerci să găsești repede un răspuns comod. Să nu încerci să-ți demonstrezi ție însuți că ai dreptate. Ci pur și simplu să privești mai adânc.",
+          "Acela a fost momentul în care am realizat ceva vital despre mintea umană. Noi nu ne apărăm doar ideile. Odată cu ele, ne apărăm trecutul, deciziile, fricile, speranțele și însăși imaginea pe care o avem despre cine suntem. O rețea neuronală nu are o asemenea nevoie: când primește date noi, își poate schimba pur și simplu răspunsul.",
+          "Pentru om, este mult mai greu. Nu pentru că ar fi ceva în neregulă cu noi — mintea noastră încearcă doar să ne protejeze. Dar uneori, exact acest mecanism începe să lucreze împotriva noastră."
+        ]
+      },
+      {
+        "label": "02 — De la complexitate la blândețe",
+        "title": "În clipa de anxietate, omul nu are nevoie de un algoritm, ci de o oprire blândă.",
+        "paragraphs": [
+          "Atunci mi-a venit revelația: mecanismul din acea carte putea fi dezvoltat. Putea deveni accesibil fiecărui om obosit să se regăsească iar și iar în aceleași situații dureroase.",
+          "În primele luni, am fost practic obsedat de arhitectura sistemului. Îmi doream să construiesc un sistem care să înțeleagă totul. Dar cu cât mă scufundam mai adânc în muncă, cu atât mai evident devenea exact opusul.",
+          "În clipa în care un om este copleșit de anxietate, rareori are nevoie de încă un panou de control. Nu are nevoie de un algoritm rece care să-i disece starea. În astfel de momente, suntem oricum suficient de supraîncărcați.",
+          "Uneori, un om are nevoie de foarte puțin: doar să se oprească, să numească ceea ce tocmai s-a întâmplat pe numele său real, și să-și pună o singură întrebare, dar una cu adevărat precisă.",
+          "Abordarea originală din carte era destul de dură, aproape clinică. Am refuzat categoric să aduc acea răceală în Miravelys. A fost vital pentru mine să păstrez claritatea, dar să elimin cruzimea: să nu mă lupt cu omul, să nu-l fac să-i fie rușine și să nu-i devalorizez suferința."
+        ]
+      },
+      {
+        "label": "03 — Spațiul alegerii",
+        "title": "Separând faptul de presupunere, îți recapeți libertatea de a alege.",
+        "paragraphs": [
+          "Așa a prins contur Miravelys — nu un psiholog IA și nici un jurnal obișnuit, ci un spațiu profund intim unde te poți retrage când înăuntru devine prea zgomotos.",
+          "Imaginează-ți că ai trimis un mesaj cuiva drag. Trece o zi, niciun răspuns. Acest fapt în sine nu conține informație, dar mintea umple golul cu scenarii: «Nu mai are nevoie de mine», «Mă ignoră», «S-a terminat».",
+          "Miravelys îți pune întrebări care te ajută să vezi faptul: «Am trimis un mesaj. Nu am primit încă răspuns.» Atât.",
+          "Între un fapt și o presupunere există un spațiu. Știi că tocmai în acel spațiu apare alegerea — de a nu trimite zece mesaje la rând, de a nu distruge o relație înainte de vreme, de a nu lua decizii din frică.",
+          "Am vrut să creez un spațiu sigur și liniștit. Pentru că adevărata schimbare începe în acel scurt moment în care povestea pe care ți-ai repetat-o de sute de ori încetează să mai pară singura realitate posibila."
+        ]
+      }
+    ],
+    "cta": "Acces timpuriu"
+  },
+  "fr": {
+    "eyebrow": "L’histoire du fondateur",
+    "title": "Comment tout a commencé",
+    "intro": "Depuis l'apparition des réseaux de neurones, j'ai été fasciné par leur fonctionnement. Je pouvais passer des heures chaque jour avec eux, testant les idées les plus diverses, posant des questions et regardant une pensée claire prendre forme.",
+    "quote": "« Entre ce qui s'est réellement passé et ce que nous en pensons, il s'intercale presque toujours toute une histoire. Parfois si convaincante que nous ne réalisons plus : ce n'est plus la réalité, mais notre explication de la réalité. »",
+    "screenCaption": "Le produit commence par une question précise, pas par un verdict.",
+    "chapters": [
+      {
+        "label": "01 — Défense et réseaux de neurones",
+        "title": "Nous ne défendons pas seulement nos idées, mais notre être tout entier.",
+        "paragraphs": [
+          "Mais ce qui me frappait le plus, c'était la clarté avec laquelle les particularités de la pensée humaine ressortaient en comparaison des réseaux de neurones.",
+          "À cette époque, je suis tombé sur un livre de philosophie décrivant un mécanisme pour séparer ce que nous savons vraiment de ce que nous croyons simplement.",
+          "À première vue, c'était simple : écrire sur papier une pensée après l'autre, sans chercher de réponse confortable ni prouver qu'on a raison, mais en regardant plus profondément.",
+          "C'est là que j'ai compris une chose essentielle : nous défendons aussi notre passé, nos peur et notre identité. Une IA n'a pas ce besoin : face à de nouvelles données, elle change sa réponse.",
+          "Pour l'être humain, c'est plus difficile. Notre esprit cherche à nous protéger, mais parfois ce mécanisme se retourne contre nous."
+        ]
+      },
+      {
+        "label": "02 — De la complexité à la douceur",
+        "title": "Dans l'anxiété, on n'a pas besoin d'un algorithme, mais d'une pause bienveillante.",
+        "paragraphs": [
+          "J'ai compris que ce mécanisme pouvait être développé pour toute personne fatiguée de retomber dans les mêmes situations douloureuses.",
+          "Au début, j'étais obsédé par la complexité de l'architecture. Mais plus j'avançais, plus l'inverse devenait évident : dans l'anxiété, on n'a pas besoin d'un énième tableau de bord ou d'un algorithme froid.",
+          "Parfois, on a juste besoin de s'arrêter, de nommer ce qui vient de se passer et de se poser une question vraiment précise.",
+          "J'ai refusé la froideur clinique de la méthode originale : il fallait préserver la clarté tout en enlevant la cruauté et la honte."
+        ]
+      },
+      {
+        "label": "03 — L'espace du choix",
+        "title": "En séparant les faits des suppositions, vous retrouvez le choix.",
+        "paragraphs": [
+          "C'est ainsi qu me est né Miravelys : un espace intime où se retirer quand tout devient trop bruyant à l'intérieur.",
+          "Si un message reste sans réponse, l'esprit invente une histoire (« il s'en fiche », « c'est fini »). Miravelys vous aide à revenir au fait brut : « J'ai envoyé un message. Je n'ai pas encore eu de réponse. »",
+          "Entre le fait et la supposition existe un espace. C'est dans cet espace que naît le choix de ne pas agir sous le coup de la peur.",
+          "Miravelys existe pour créer cet espace de liberté et de clarté."
+        ]
+      }
+    ],
+    "cta": "Accès anticipé"
+  },
+  "es": {
+    "eyebrow": "La historia del fundador",
+    "title": "Cómo empezó todo",
+    "intro": "Desde la aparición de las redes neuronales, me ha fascinado cómo funcionan. Podía pasar horas con ellas todos los días, probando las más diversas ideas y observando cómo nacía poco a poco un pensamiento claro.",
+    "quote": "«Entre lo que realmente ocurrió y lo que pensamos al respecto, casi siempre surge toda una historia. A veces tan convincente que dejamos de darnos cuenta: ya no es la realidad, sino nuestra explicación de ella.»",
+    "screenCaption": "El producto empieza con una pregunta precisa, no con un veredicto.",
+    "chapters": [
+      {
+        "label": "01 — Defensa y redes neuronales",
+        "title": "No solo defendemos nuestras ideas, sino a nosotros mismos.",
+        "paragraphs": [
+          "Lo que más me asombraba era la claridad con la que resaltaban las peculiaridades del pensamiento humano frente a las redes neuronales.",
+          "Un libro de filosofía me enseñó un mecanismo para separar lo que realmente sabemos de lo que solo creemos.",
+          "Escribir pensamiento tras pensamiento, sin buscar respuestas cómodas ni intentar tener razón, sino simplemente mirando más a fondo.",
+          "Ahí entendí que defendemos nuestro pasado, nuestros miedos y nuestra identidad. Una IA no tiene esa necesidad; ante nuevos datos, simplemente cambia su respuesta.",
+          "Para el ser humano es más difícil porque nuestra mente intenta protegernos, pero a veces ese mecanismo trabaja en nuestra contra."
+        ]
+      },
+      {
+        "label": "02 — De la complejidad a la amabilidad",
+        "title": "En el momento de ansiedad, no necesitas un algoritmo, sino una pausa amable.",
+        "paragraphs": [
+          "Decidí desarrollar ese mecanismo para cualquier persona cansada de repetir las mismas situaciones dolorosas.",
+          "Al principio me obsesioné con crear una arquitectura compleja. Pero entendí que en momentos de ansiedad no necesitamos dashboards ni algoritmos fríos.",
+          "A veces solo necesitamos detenernos, llamar a las cosas por su nombre y hacernos una pregunta precisa.",
+          "Eliminé la frialdad clínica del método original para mantener la claridad sin crueldad ni juicios."
+        ]
+      },
+      {
+        "label": "03 — El espacio de la elección",
+        "title": "Al separar el hecho de la suposición, recuperas tu elección.",
+        "paragraphs": [
+          "Así nació Miravelys: un espacio íntimo al que acudir cuando todo se vuelve demasiado ruidoso dentro.",
+          "Si un mensaje no tiene respuesta, la mente crea historias catastróficas. Miravelys te ayuda a ver el hecho: «Envié un mensaje. Aún no hay respuesta.»",
+          "Entre el hecho y la suposición hay un espacio. Es ahí donde nace la elección consciente.",
+          "Miravelys existe para proteger ese espacio de claridad y libertad."
+        ]
+      }
+    ],
+    "cta": "Acceso anticipado"
+  },
+  "de": {
+    "eyebrow": "Die Geschichte des Gründers",
+    "title": "Wie alles begann",
+    "intro": "Seit dem Aufkommen neuronaler Netze war ich davon fasziniert, wie sie funktionieren. Ich konnte jeden Tag Stunden mit ihnen verbringen und beobachten, wie aus etwas Rohem ein klarer Gedanke entstand.",
+    "quote": "„Zwischen dem, was tatsächlich passiert ist, und dem, was wir darüber denken, entsteht fast immer eine ganze Geschichte. Manchmal so überzeugend, dass wir nicht mehr bemerken: Das ist nicht die Realität, sondern unsere Erklärung der Realität.“",
+    "screenCaption": "Das Produkt beginnt mit einer präzisen Frage, nicht mit einem Urteil.",
+    "chapters": [
+      {
+        "label": "01 — Selbstschutz und KI",
+        "title": "Wir verteidigen nicht nur Ideen, sondern unser gesamtes Selbst.",
+        "paragraphs": [
+          "Mich faszinierte, wie deutlich die Eigenarten des menschlichen Denkens im Vergleich zu KI hervortraten.",
+          "Ein Philosophiebuch zeigte mir einen Mechanismus, um Wissen von bloßem Glauben zu trennen.",
+          "Gedanke für Gedanke aufschreiben, ohne schnell bequeme Antworten zu suchen oder recht haben zu wollen.",
+          "Wir verteidigen unsere Vergangenheit, Ängste und Identität. Eine KI muss kein Gesicht wahren; bei neuen Daten ändert sie einfach die Antwort.",
+          "Für Menschen ist das schwerer, weil unser Verstand uns schützen will – doch manchmal arbeitet dieser Schutz gegen uns."
+        ]
+      },
+      {
+        "label": "02 — Von Komplexität zu Behutsamkeit",
+        "title": "In Momenten der Angst braucht man keinen Algorithmus, sondern ein behutsames Innehalten.",
+        "paragraphs": [
+          "Ich wollte diesen Mechanismus für jeden zugänglich machen, der in schmerzhaften Mustern feststeckt.",
+          "Zuerst war ich von komplexer Architektur besessen. Doch bei Angst hilft kein kaltes Dashboard.",
+          "Manchmal braucht man nur Innehalten, Benennen des Erlebten und eine präzise Frage.",
+          "Ich habe die klinische Härte der ursprünglichen Methode entfernt: Klarheit ohne Grausamkeit."
+        ]
+      },
+      {
+        "label": "03 — Der Raum der Entscheidung",
+        "title": "Wer Tatsachen von Annahmen trennt, gewinnt seine Wahlfreiheit zurück.",
+        "paragraphs": [
+          "So entstand Miravelys: Ein privater Rückzugsort, wenn es innerlich zu laut wird.",
+          "Bei einer unbeantworteten Nachricht baut der Kopf Katastrophengeschichten. Miravelys führt zurück zur Tatsache: „Ich habe eine Nachricht geschickt. Ich habe noch keine Antwort.“",
+          "Zwischen Tatsache und Annahme liegt ein Raum. Genau dort entsteht die bewusste Entscheidung.",
+          "Für genau diesen Raum der Klarheit existiert Miravelys."
+        ]
+      }
+    ],
+    "cta": "Früher Zugang"
+  },
+  "pt": {
+    "eyebrow": "A história do fundador",
+    "title": "Como tudo começou",
+    "intro": "Desde o surgimento das redes neurais, fiquei fascinado pela forma como funcionam. Podia passar horas a testar ideias e a ver um pensamento claro nascer de algo bruto.",
+    "quote": "«Entre o que aconteceu de facto e o que pensamos sobre isso, surge quase sempre toda uma história. Por vezes tão convincente que deixamos de reparar: já não é a realidade, mas a nossa explicação dela.»",
+    "screenCaption": "O produto começa com uma pergunta precisa, não com um veredito.",
+    "chapters": [
+      {
+        "label": "01 — Defesa e redes neurais",
+        "title": "Não defendemos apenas ideias; defendemos quem somos.",
+        "paragraphs": [
+          "Impressionava-me como as peculiaridades do pensamento humano se tornavam evidentes ao lado da IA.",
+          "Um livro de filosofia revelou um mecanismo para separar o que realmente sabemos do que apenas julgamos saber.",
+          "Escrever pensamento após pensamento, sem procurar respostas confortáveis nem tentar ter razão.",
+          "Defendemos o nosso passado, medos e identidade. Uma IA não tem essa necessidade; com novos dados, muda a resposta.",
+          "Para o ser humano é mais difícil porque a mente tenta proteger-nos, mas por vezes esse mecanismo trabalha contra nós."
+        ]
+      },
+      {
+        "label": "02 — Da complexidade à delicadeza",
+        "title": "Na ansiedade, não precisamos de um algoritmo, mas de uma pausa delicada.",
+        "paragraphs": [
+          "Quis tornar esse mecanismo acessível a quem está cansado de repetir as mesmas dores.",
+          "No início fiquei obcecado com sistemas complexos. Mas na ansiedade ninguém precisa de dashboards frios.",
+          "Por vezes basta parar, dar o nome verdadeiro ao que aconteceu e fazer uma pergunta precisa.",
+          "Eliminei a frieza clínica do método original para manter a clareza sem crueldade."
+        ]
+      },
+      {
+        "label": "03 — O espaço da escolha",
+        "title": "Ao separar o facto da suposição, recupera a sua capacidade de escolha.",
+        "paragraphs": [
+          "Assim nasceu o Miravelys: um espaço íntimo para quando tudo fica demasiado barulhento por dentro.",
+          "Perante o silêncio de uma mensagem, a mente cria histórias. O Miravelys ajuda a ver o facto: «Enviei uma mensagem. Ainda não obtive resposta.»",
+          "Entre o facto e a suposição existe um espaço. É aí que surge a escolha consciente.",
+          "O Miravelys existe para proteger esse espaço de liberdade."
+        ]
+      }
+    ],
+    "cta": "Acesso antecipado"
+  },
+  "hi": {
+    "eyebrow": "संस्थापक की कहानी",
+    "title": "शुरुआत कैसे हुई",
+    "intro": "जब से न्यूरल नेटवर्क सामने आए हैं, मैं उनके काम करने के तरीके से रोमांचित रहा हूँ। मैं हर दिन घंटों उनके साथ बिताकर विचारों को स्पष्ट सोच में बदलते देख सकता था।",
+    "quote": "“घटना और हमारी सोच के बीच लगभग हमेशा एक पूरी कहानी बन जाती है। कभी-कभी यह इतनी पक्की लगती है कि हम भूल जाते हैं: यह असलियत नहीं, हमारी व्याख्या है。”",
+    "screenCaption": "उत्पाद एक सटीक सवाल से शुरू होता है, किसी फैसले से नहीं।",
+    "chapters": [
+      {
+        "label": "01 — सुरक्षा और न्यूरल नेटवर्क",
+        "title": "हम सिर्फ विचारों का नहीं, अपनी पहचान का बचाव करते हैं।",
+        "paragraphs": [
+          "मुझे सबसे ज्यादा हैरानी इंसानी सोच की खासियतों को AI के सामने साफ देखने पर हुई।",
+          "दर्शनशास्त्र की एक किताब ने मुझे सच और केवल मान्यताओं को अलग करने का तरीका दिखाया।",
+          "कागज़ पर विचार लिखना, जल्दी में आरामदायक जवाब न खोजना और खुद को सही साबित न करना।",
+          "हम अपने अतीत, डर और पहचान की रक्षा करते हैं। AI को मान-सम्मान नहीं बचाना पड़ता; नया डेटा आते ही वह जवाब बदल लेता है।",
+          "इंसान के लिए यह कठिन है क्योंकि हमारा दिमाग हमारी रक्षा की कोशिश करता है, लेकिन कभी-कभी यही हमारे खिलाफ काम करने लगता है।"
+        ]
+      },
+      {
+        "label": "02 — जटिलता से संवेदनशीलता तक",
+        "title": "घबराहट के पल में एल्गोरिदम नहीं, एक संवेदनशील ठहराव चाहिए।",
+        "paragraphs": [
+          "मैंने इस तरीके को हर उस व्यक्ति के लिए सुलभ बनाने का फैसला किया जो एक ही दर्दनाक चक्र से थक चुका है।",
+          "शुरुआत में मैं जटिल आर्किटेक्चर के पीछे पड़ा था। लेकिन चिंता के पलों में ठंडे डैशबोर्ड काम नहीं आते।",
+          "कभी-कभी बस रुकने, घटना को उसका सही नाम देने और एक सटीक सवाल पूछने की ज़रूरत होती है।",
+          "मैंने मूल तरीके के रूखेपन को हटा दिया ताकि बिना कठोरता के स्पष्टता बनी रहे।"
+        ]
+      },
+      {
+        "label": "03 — चुनाव का स्थान",
+        "title": "तथ्य और अनुमान को अलग करके आप अपना चुनाव वापस पाते हैं।",
+        "paragraphs": [
+          "ऐसे Miravelys का जन्म हुआ: एक निजी स्थान जहाँ अंदर शोर होने पर आप पनाह ले सकते हैं।",
+          "मैसेज का जवाब न आने पर दिमाग कहानियाँ गढ़ता है। Miravelys आपको तथ्य दिखाता है: 'मैंने मैसेज भेजा। जवाब अभी नहीं आया।'",
+          "तथ्य और अनुमान के बीच एक जगह होती है। वहीं से समझदारी भरा फैसला जन्म लेता है।",
+          "Miravelys इसी स्पष्टता और स्वतंत्रता की जगह को बचाने के लिए बना है।"
+        ]
+      }
+    ],
+    "cta": "शुरुआती पहुँच"
+  },
+  "zh": {
+    "eyebrow": "创始人的故事",
+    "title": "一切是如何开始的",
+    "intro": "自从神经网络出现以来，我就对其运作方式深深着迷。我每天可以花上几个小时与它们对话，看着模糊的想法逐渐孕育出清晰的思考。",
+    "quote": "“在实际发生的事与我们的看法之间，几乎总是会衍生出一整套故事。有时这故事如此逼真，以至于我们不再察觉：那已不是现实，而是我们的解释。”",
+    "screenCaption": "产品始于一个精准的提问，而非冷酷的判定。",
+    "chapters": [
+      {
+        "label": "01 — 防御与神经网络",
+        "title": "我们不仅在捍卫想法，更是在捍卫自我。",
+        "paragraphs": [
+          "神经网络让我看清了人类思维的独特性：我们总在试图证明自己是对的。",
+          "一本哲学书启发了我：将事实与我们盲目相信的假设分离开来。",
+          "在纸上逐条写下想法，不急于寻找舒服的答案，也不去强行辩解，只是看得更深。",
+          "人类习惯捍卫过去、恐惧和自我认知；而 AI 没有这种包袱，遇到新数据就能直接修正答案。",
+          "这并非我们有缺陷，大脑只是想保护我们，但有时这种保护机制反而将我们困在死循环中。"
+        ]
+      },
+      {
+        "label": "02 — 从复杂走向温和",
+        "title": "在焦虑时刻，人需要的不是算法，而是一次温和的暂停。",
+        "paragraphs": [
+          "我决定开发这个系统，帮助每一个厌倦了重复痛苦境遇的人。",
+          "起初我执着于构建复杂的系统架构，但后来意识到：被焦虑淹没时，没人需要冷冰冰的数据图表。",
+          "有时人需要的极少：停下来，给刚刚发生的事叫出真正的名字，并问自己一个精准的问题。",
+          "我剔除了原始哲学方法中的冷酷与严苛，保留清晰，注入温和与尊重。"
+        ]
+      },
+      {
+        "label": "03 — 选择的空间",
+        "title": "区分事实与假设，你就能重获选择权。",
+        "paragraphs": [
+          "Miravelys 应运而生：当内心过于喧嚣时，这里是一个可以退避的极私密空间。",
+          "面对没有回复的消息，大脑会编造悲观故事。Miravelys 帮你回归事实：“我发了消息，目前尚未收到回复。”",
+          "在事实与假设之间存在一个空间，清醒的选择正是由此诞生。",
+          "Miravelys 的存在，正是为了守护这片通往自由与清醒的空间。"
+        ]
+      }
+    ],
+    "cta": "早期体验"
+  },
+  "ja": {
+    "eyebrow": "創業者ストーリー",
+    "title": "すべての始まり",
+    "intro": "ニューラルネットワークが登場して以来、私はその仕組みに魅了されてきました。毎日何時間もアイデアを試し、明確な思考が形作られていく過程を観察していました。",
+    "quote": "「実際に起きたことと、それに対する自分の考えの間には、ほぼ常に『物語』が生まれます。時にはそれが現実そのものではなく、単なる解釈であることに気づけなくなるほどです。」",
+    "screenCaption": "プロダクトは判定ではなく、ひとつの確かな質問から始まります。",
+    "chapters": [
+      {
+        "label": "01 — 自我防衛とAI",
+        "title": "私たちは考えだけでなく、自分自身を守ろうとしています。",
+        "paragraphs": [
+          "AIと対比することで、人間の思考の癖がいかに鮮明に浮かび上がるかに驚かされました。",
+          "ある哲学書で、事実と単なる思い込みを分離するメカニズムに出会いました。",
+          "思考を紙に書き出し、安易な答えに逃げず、自分が正しいと証明しようとせず、ただ深く見つめること。",
+          "私たちは過去や恐れ、アイデンティティを守ろうとします。AIにはその必要がなく、新しいデータがあれば答えを変えられます。",
+          "人間にとってそれが難しいのは心が自分を守ろうとしているからですが、時にその仕組みが自分を追い詰めます。"
+        ]
+      },
+      {
+        "label": "02 — 複雑さから優しさへ",
+        "title": "不安な瞬間に必要なのはアルゴリズムではなく、優しい立ち止まりです。",
+        "paragraphs": [
+          "同じ苦しいパターンを繰り返す全ての人に、この手法を届けたいと考えました。",
+          "最初は複雑なシステム設計に執着しましたが、不安な時に冷たいダッシュボードは役に立ちません。",
+          "必要なのは、立ち止まり、起きたことに本当の名前をつけ、的確な問いをひとつ自分に投げかけることです。",
+          "元の手法の冷酷さを取り除き、厳しさではなく優しさと明確さを大切にしました。"
+        ]
+      },
+      {
+        "label": "03 — 選択の空間",
+        "title": "事実と思い込みを分けることで、選択肢を取り戻せます。",
+        "paragraphs": [
+          "こうしてMiravelysが誕生しました。心の中が騒がしい時に静かに逃げ込めるプライベートな空間です。",
+          "返信がない時、心は悲観的な物語を紡ぎます。Miravelysは『メッセージを送った。まだ返信はない。』という事実へ連れ戻します。",
+          "事実と思い込みの間には空間があり、そこにこそ意識的な選択が生まれます。",
+          "Miravelysは、その自由な選択の空間を守るために存在しています。"
+        ]
+      }
+    ],
+    "cta": "早期アクセス"
+  }
 };
 
 function buildFounderFallback() {
