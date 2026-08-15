@@ -10,10 +10,10 @@ export const marketingAnchors = {
 };
 
 export const marketingCtas = {
-  primary: { modal: true, labelKey: 'earlyAccess', variant: 'primary' },
+  primary: { external: true, labelKey: 'appStore', variant: 'primary', modalFallback: false },
   secondary: { anchor: 'works', labelKey: 'mockups', variant: 'link' },
   works: { anchor: 'works', labelKey: 'mockups', variant: 'link' },
-  appStore: { external: true, labelKey: 'appStore', variant: 'primary', modalFallback: true },
+  appStore: { external: true, labelKey: 'appStore', variant: 'primary', modalFallback: false },
 };
 
 export const marketingRoutes = {

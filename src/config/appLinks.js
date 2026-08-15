@@ -6,7 +6,7 @@
  * Until the public listing exists, App Store CTAs intentionally route to
  * early access instead of sending visitors to an irrelevant search page.
  */
-const configuredUrl = (import.meta.env.VITE_APP_STORE_URL || '').trim();
+const configuredUrl = (import.meta.env.VITE_APP_STORE_URL || 'https://apps.apple.com/app/id6787681485').trim();
 
 export const APP_STORE_URL = configuredUrl;
 export const APP_STORE_AVAILABLE = Boolean(configuredUrl);
