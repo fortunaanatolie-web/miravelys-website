@@ -10,6 +10,12 @@ const canonicalRoutePaths = new Set([
   '/terms',
   '/privacy',
   '/cookies',
+  '/products',
+  '/mirascribe',
+  '/mirascribe/support',
+  '/mirascribe/privacy',
+  '/mirascribe/legal',
+  '/mirascribe/acknowledgements',
 ]);
 
 function upsertMeta(selector, attributes) {

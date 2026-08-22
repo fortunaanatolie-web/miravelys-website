@@ -20,6 +20,7 @@ import './styles/site-beauty.css';
 import './styles/site-appearance.css';
 import './styles/site-typography.css';
 import './styles/site-loop-journey.css';
+import './styles/site-mirascribe.css';
 import SiteRouter from './SiteRouter';
 
 document.documentElement.classList.add('js');

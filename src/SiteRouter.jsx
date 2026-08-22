@@ -8,6 +8,12 @@ const FounderStoryPage = lazy(() => import('./pages/FounderStoryPage'));
 const SupportPage = lazy(() => import('./pages/SupportPage'));
 const FAQPage = lazy(() => import('./pages/FAQPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
+const ProductsPage = lazy(() => import('./pages/ProductsPage'));
+const MiraScribePage = lazy(() => import('./pages/mirascribe/MiraScribePage'));
+const MiraScribeSupportPage = lazy(() => import('./pages/mirascribe/MiraScribeSupportPage'));
+const MiraScribePrivacyPage = lazy(() => import('./pages/mirascribe/MiraScribePrivacyPage'));
+const MiraScribeLegalPage = lazy(() => import('./pages/mirascribe/MiraScribeLegalPage'));
+const MiraScribeAcknowledgementsPage = lazy(() => import('./pages/mirascribe/MiraScribeAcknowledgementsPage'));
 
 const routes = [
   { path: '/', element: <App /> },
@@ -22,6 +28,20 @@ const routes = [
   { path: '/privacy', element: <LegalDocumentPage /> },
   { path: '/cookies', element: <LegalDocumentPage /> },
 ];
+
+/**
+ * MiraScribe routes are intentionally NOT in the localized /:lang/* tree.
+ * These are canonical App Store URLs that must never redirect unexpectedly.
+ */
+const mirascribeRoutes = [
+  { path: '/products', element: <ProductsPage /> },
+  { path: '/mirascribe', element: <MiraScribePage /> },
+  { path: '/mirascribe/support', element: <MiraScribeSupportPage /> },
+  { path: '/mirascribe/privacy', element: <MiraScribePrivacyPage /> },
+  { path: '/mirascribe/legal', element: <MiraScribeLegalPage /> },
+  { path: '/mirascribe/acknowledgements', element: <MiraScribeAcknowledgementsPage /> },
+];
+
 
 function LocalizedRoute({ children }) {
   const { lang } = useParams();
@@ -47,9 +67,14 @@ export default function SiteRouter() {
               element={<LocalizedRoute>{r.element}</LocalizedRoute>}
             />
           ))}
+          {/* MiraScribe canonical routes — no language prefix, never redirected */}
+          {mirascribeRoutes.map(r => (
+            <Route key={`ms-${r.path}`} path={r.path} element={r.element} />
+          ))}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
   );
 }
+

@@ -176,8 +176,84 @@ function outputFile(path) {
   return join(distDir, path.replace(/^\//, ''), 'index.html');
 }
 
+const standaloneRoutes = [
+  {
+    path: '/products',
+    title: 'Products — Miravelys',
+    description: 'Thoughtful software built around attention, clarity, privacy, and human agency. The Miravelys family of products.',
+    priority: '0.8',
+    frequency: 'monthly',
+  },
+  {
+    path: '/mirascribe',
+    title: 'MiraScribe — Private transcription for Mac',
+    description: 'Turn recordings into clear, editable text — locally on your Mac. MiraScribe uses a bundled speech model so your audio never leaves your machine.',
+    priority: '0.9',
+    frequency: 'weekly',
+  },
+  {
+    path: '/mirascribe/support',
+    title: 'MiraScribe Support',
+    description: 'Get help with MiraScribe for Mac. Contact support or find answers to common questions about transcription, permissions, exports, and more.',
+    priority: '0.7',
+    frequency: 'monthly',
+  },
+  {
+    path: '/mirascribe/privacy',
+    title: 'Privacy Policy — MiraScribe',
+    description: 'MiraScribe privacy policy. Transcription runs locally on your Mac. Audio and transcripts are not uploaded to a remote service.',
+    priority: '0.6',
+    frequency: 'yearly',
+  },
+  {
+    path: '/mirascribe/legal',
+    title: 'Legal — MiraScribe',
+    description: 'Legal information for MiraScribe: end user license, copyright, trademark, and disclaimer.',
+    priority: '0.4',
+    frequency: 'yearly',
+  },
+  {
+    path: '/mirascribe/acknowledgements',
+    title: 'Acknowledgements — MiraScribe',
+    description: 'Third-party software and model license notices for MiraScribe.',
+    priority: '0.4',
+    frequency: 'yearly',
+  },
+];
+
+function withStandaloneHead(template, route) {
+  const canonical = urlFor(route.path);
+  const head = [
+    `<title>${escapeHtml(route.title)}</title>`,
+    `<meta name="description" content="${escapeHtml(route.description)}">`,
+    `<link rel="canonical" href="${canonical}">`,
+    `<meta property="og:type" content="website">`,
+    `<meta property="og:site_name" content="Miravelys">`,
+    `<meta property="og:url" content="${canonical}">`,
+    `<meta property="og:title" content="${escapeHtml(route.title)}">`,
+    `<meta property="og:description" content="${escapeHtml(route.description)}">`,
+    `<meta property="og:image" content="${siteUrl}/og-miravelys.jpg">`,
+    `<meta name="twitter:card" content="summary_large_image">`,
+    `<meta name="twitter:url" content="${canonical}">`,
+    `<meta name="twitter:title" content="${escapeHtml(route.title)}">`,
+    `<meta name="twitter:description" content="${escapeHtml(route.description)}">`,
+    `<meta name="twitter:image" content="${siteUrl}/og-miravelys.jpg">`,
+  ].join('\n    ');
+
+  const withoutManagedHead = template
+    .replace(/<title>[\s\S]*?<\/title>\s*/i, '')
+    .replace(/\s*<meta\s+(?:name|property)="(?:description|twitter:[^"]+|og:[^"]+)"[^>]*>/gi, '')
+    .replace(/\s*<link\s+rel="canonical"[^>]*>/gi, '');
+
+  return withoutManagedHead
+    .replace('<html lang="en">', '<html lang="en">')
+    .replace('</head>', `    ${head}\n  </head>`)
+    .replace(/<noscript>[\s\S]*?<\/noscript>/i, noScriptMarkup('en', route.title, route.description, { href: route.path, label: route.title }))
+    .replace('data-prerender-path=""', `data-prerender-path="${route.path}"`);
+}
+
 function sitemapXml() {
-  const entries = languages.flatMap(language => routes
+  const localizedEntries = languages.flatMap(language => routes
     .filter(route => !getPageMeta(language.code, route).noIndex)
     .map(route => {
     const path = localizedPath(language.code, route.path);
@@ -186,7 +262,11 @@ function sitemapXml() {
       return `  <url>\n    <loc>${urlFor(path)}</loc>\n    <changefreq>${frequency}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
     }));
 
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries.join('\n')}\n</urlset>\n`;
+  const standaloneEntries = standaloneRoutes.map(route => {
+    return `  <url>\n    <loc>${urlFor(route.path)}</loc>\n    <changefreq>${route.frequency}</changefreq>\n    <priority>${route.priority}</priority>\n  </url>`;
+  });
+
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...localizedEntries, ...standaloneEntries].join('\n')}\n</urlset>\n`;
 }
 
 const template = await readFile(join(distDir, 'index.html'), 'utf8');
@@ -200,6 +280,13 @@ for (const language of languages) {
   }
 }
 
+for (const route of standaloneRoutes) {
+  const output = outputFile(route.path);
+  await mkdir(dirname(output), { recursive: true });
+  await writeFile(output, withStandaloneHead(template, route));
+}
+
 await writeFile(join(distDir, 'sitemap.xml'), sitemapXml());
 await writeFile(join(publicSiteDir, 'sitemap.xml'), sitemapXml());
 await writeFile(join(distDir, '404.html'), withNotFoundHead(template));
+

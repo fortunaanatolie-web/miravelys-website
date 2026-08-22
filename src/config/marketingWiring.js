@@ -25,7 +25,12 @@ export const marketingRoutes = {
   story: '/story',
   support: '/support',
   faq: '/faq',
+  products: '/products',
+  mirascribe: '/mirascribe',
+  mirascribeSupport: '/mirascribe/support',
+  mirascribePrivacy: '/mirascribe/privacy',
 };
+
 
 export const headerNavItems = [
   { id: 'works', key: 'works' },

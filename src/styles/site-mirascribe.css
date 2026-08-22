@@ -1,0 +1,756 @@
+/**
+ * MiraScribe design tokens and page styles.
+ * Separate from Miravelys cinematic palette — intentionally cool, precise, Mac-native.
+ * Blue / indigo spectrum. No gold, no lavender, no grain.
+ */
+
+/* ── MiraScribe token scope ─────────────────────────────────────────────── */
+.ms-shell {
+  /* Core blue/indigo palette */
+  --ms-blue:          #3B82F6;
+  --ms-blue-mid:      #2563EB;
+  --ms-blue-deep:     #1D4ED8;
+  --ms-indigo:        #6366F1;
+  --ms-indigo-soft:   rgba(99, 102, 241, 0.14);
+  --ms-indigo-wash:   rgba(99, 102, 241, 0.07);
+  --ms-blue-glow:     rgba(59, 130, 246, 0.18);
+
+  /* Neutral dark base — not Miravelys midnight */
+  --ms-bg:            #0d0f14;
+  --ms-surface:       #13161e;
+  --ms-surface-raised:#191d27;
+  --ms-border:        rgba(255, 255, 255, 0.08);
+  --ms-border-subtle: rgba(255, 255, 255, 0.05);
+
+  /* Text */
+  --ms-text:          rgba(240, 243, 255, 0.93);
+  --ms-text-secondary:rgba(200, 210, 235, 0.72);
+  --ms-text-muted:    rgba(170, 182, 210, 0.50);
+  --ms-text-accent:   var(--ms-blue);
+
+  /* Accent strip */
+  --ms-accent-gradient: linear-gradient(135deg, var(--ms-blue) 0%, var(--ms-indigo) 100%);
+
+  /* Shared radius / shadow */
+  --ms-radius-sm:     10px;
+  --ms-radius-md:     16px;
+  --ms-radius-lg:     24px;
+  --ms-shadow-card:   0 8px 32px rgba(0, 0, 0, 0.40);
+  --ms-shadow-nav:    0 1px 0 rgba(255, 255, 255, 0.06), 0 4px 24px rgba(0, 0, 0, 0.32);
+
+  /* Motion */
+  --ms-ease:          cubic-bezier(0.25, 1, 0.4, 1);
+  --ms-duration-fast: 0.22s;
+  --ms-duration-mid:  0.44s;
+}
+
+/* ── Shell reset ────────────────────────────────────────────────────────── */
+.ms-shell {
+  min-height: 100dvh;
+  background: var(--ms-bg);
+  color: var(--ms-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Compact nav ────────────────────────────────────────────────────────── */
+.ms-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(13, 15, 20, 0.88);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  border-bottom: 1px solid var(--ms-border);
+  box-shadow: var(--ms-shadow-nav);
+}
+
+.ms-nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 32px);
+  height: 52px;
+}
+
+.ms-nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.ms-nav__wordmark {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ms-text);
+  line-height: 1;
+}
+
+.ms-nav__family {
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--ms-text-muted);
+  line-height: 1;
+  border-left: 1px solid var(--ms-border);
+  padding-left: 10px;
+  white-space: nowrap;
+}
+
+.ms-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ms-nav__links a {
+  font-size: 0.875rem;
+  font-weight: 450;
+  color: var(--ms-text-secondary);
+  text-decoration: none;
+  transition: color var(--ms-duration-fast) var(--ms-ease);
+}
+
+.ms-nav__links a:hover,
+.ms-nav__links a:focus-visible {
+  color: var(--ms-text);
+}
+
+.ms-nav__links a[aria-current="page"] {
+  color: var(--ms-blue);
+}
+
+@media (max-width: 600px) {
+  .ms-nav__family { display: none; }
+  .ms-nav__links { gap: 16px; }
+  .ms-nav__links a { font-size: 0.8125rem; }
+}
+
+@media (max-width: 400px) {
+  .ms-nav__links li:nth-child(n+3) { display: none; }
+}
+
+/* ── Page layout ────────────────────────────────────────────────────────── */
+.ms-page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: clamp(48px, 8vw, 96px) clamp(16px, 4vw, 32px) clamp(64px, 10vw, 128px);
+}
+
+.ms-page--wide {
+  max-width: 1100px;
+}
+
+.ms-page--narrow {
+  max-width: 680px;
+}
+
+/* ── Product hero ───────────────────────────────────────────────────────── */
+.ms-hero {
+  padding: clamp(56px, 10vw, 112px) 0 clamp(48px, 8vw, 80px);
+  text-align: center;
+}
+
+.ms-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ms-blue);
+  margin-bottom: 20px;
+}
+
+.ms-hero__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--ms-blue);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.ms-hero__heading {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  color: var(--ms-text);
+  margin: 0 0 20px;
+}
+
+.ms-hero__sub {
+  font-size: clamp(1.0625rem, 2vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--ms-text-secondary);
+  max-width: 54ch;
+  margin: 0 auto 32px;
+}
+
+.ms-hero__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ── Waveform visual ────────────────────────────────────────────────────── */
+.ms-waveform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  height: 48px;
+  margin: 0 0 32px;
+  aria-hidden: true;
+}
+
+.ms-waveform__bar {
+  width: 3px;
+  border-radius: 2px;
+  background: var(--ms-accent-gradient);
+  opacity: 0.7;
+  animation: ms-wave var(--ms-wv-dur, 1.4s) var(--ms-wv-delay, 0s) ease-in-out infinite alternate;
+}
+
+@keyframes ms-wave {
+  0%   { transform: scaleY(0.25); }
+  100% { transform: scaleY(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ms-waveform__bar { animation: none; transform: scaleY(0.6); }
+}
+
+/* ── Feature grid ───────────────────────────────────────────────────────── */
+.ms-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1px;
+  background: var(--ms-border);
+  border-radius: var(--ms-radius-lg);
+  overflow: hidden;
+  margin: 0 0 clamp(40px, 6vw, 72px);
+}
+
+.ms-feature {
+  background: var(--ms-surface);
+  padding: clamp(20px, 3vw, 28px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ms-feature__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--ms-indigo-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ms-blue);
+  flex-shrink: 0;
+  margin-bottom: 4px;
+}
+
+.ms-feature__title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ms-text);
+  margin: 0;
+}
+
+.ms-feature__body {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--ms-text-secondary);
+  margin: 0;
+}
+
+/* ── Privacy badge ──────────────────────────────────────────────────────── */
+.ms-privacy-badge {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px 24px;
+  border: 1px solid var(--ms-indigo-soft);
+  border-radius: var(--ms-radius-md);
+  background: var(--ms-indigo-wash);
+  margin: 0 0 clamp(40px, 6vw, 72px);
+}
+
+.ms-privacy-badge__icon {
+  flex-shrink: 0;
+  color: var(--ms-blue);
+  margin-top: 2px;
+}
+
+.ms-privacy-badge__title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ms-text);
+  margin: 0 0 4px;
+}
+
+.ms-privacy-badge__body {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--ms-text-secondary);
+  margin: 0;
+}
+
+/* ── CTA button ─────────────────────────────────────────────────────────── */
+.ms-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: var(--ms-radius-sm);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: opacity var(--ms-duration-fast) var(--ms-ease), transform var(--ms-duration-fast) var(--ms-ease), box-shadow var(--ms-duration-fast) var(--ms-ease);
+}
+
+.ms-btn:hover   { opacity: 0.88; transform: translateY(-1px); }
+.ms-btn:active  { opacity: 0.92; transform: translateY(0); }
+.ms-btn:focus-visible {
+  outline: 2px solid var(--ms-blue);
+  outline-offset: 3px;
+}
+
+.ms-btn--primary {
+  background: var(--ms-accent-gradient);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.28);
+}
+
+.ms-btn--secondary {
+  background: var(--ms-surface-raised);
+  color: var(--ms-text-secondary);
+  border: 1px solid var(--ms-border);
+}
+
+/* ── Legal / policy content ─────────────────────────────────────────────── */
+.ms-legal {
+  color: var(--ms-text-secondary);
+}
+
+.ms-legal h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--ms-text);
+  margin: 0 0 8px;
+}
+
+.ms-legal__meta {
+  font-size: 0.875rem;
+  color: var(--ms-text-muted);
+  margin: 0 0 40px;
+}
+
+.ms-legal h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--ms-text);
+  margin: 2.5em 0 0.6em;
+}
+
+.ms-legal p,
+.ms-legal ul,
+.ms-legal ol {
+  font-size: 0.9375rem;
+  line-height: 1.68;
+  max-width: 68ch;
+  margin: 0 0 1em;
+}
+
+.ms-legal ul,
+.ms-legal ol {
+  padding-left: 1.5em;
+}
+
+.ms-legal li {
+  margin-bottom: 0.4em;
+}
+
+.ms-legal a {
+  color: var(--ms-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ms-legal a:hover {
+  opacity: 0.82;
+}
+
+.ms-legal strong {
+  font-weight: 600;
+  color: var(--ms-text);
+}
+
+/* ── Placeholder notice ─────────────────────────────────────────────────── */
+.ms-placeholder-notice {
+  padding: 14px 18px;
+  border: 1px dashed rgba(99, 102, 241, 0.3);
+  border-radius: var(--ms-radius-sm);
+  font-size: 0.875rem;
+  color: var(--ms-text-muted);
+  font-style: italic;
+  margin: 0 0 1em;
+}
+
+/* ── Support category cards ─────────────────────────────────────────────── */
+.ms-support-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 0 0 clamp(32px, 5vw, 56px);
+}
+
+.ms-support-item {
+  padding: 16px 18px;
+  border: 1px solid var(--ms-border);
+  border-radius: var(--ms-radius-md);
+  background: var(--ms-surface);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ms-text-secondary);
+}
+
+.ms-support-item__label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ms-text);
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+.ms-support-item p {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--ms-text-muted);
+}
+
+/* ── Contact card ───────────────────────────────────────────────────────── */
+.ms-contact-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px 28px;
+  border: 1px solid rgba(59, 130, 246, 0.22);
+  border-radius: var(--ms-radius-md);
+  background: rgba(59, 130, 246, 0.06);
+  margin: 0 0 clamp(32px, 5vw, 56px);
+}
+
+.ms-contact-card__icon {
+  flex-shrink: 0;
+  color: var(--ms-blue);
+  margin-top: 3px;
+}
+
+.ms-contact-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ms-contact-card__title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ms-text);
+  margin: 0;
+}
+
+.ms-contact-card__email {
+  font-size: 0.9375rem;
+  color: var(--ms-blue);
+  text-decoration: none;
+}
+
+.ms-contact-card__email:hover {
+  text-decoration: underline;
+}
+
+.ms-contact-card__note {
+  font-size: 0.8125rem;
+  color: var(--ms-text-muted);
+  margin: 0;
+}
+
+/* ── Section headers ────────────────────────────────────────────────────── */
+.ms-section-title {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ms-text);
+  margin: 0 0 16px;
+}
+
+.ms-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ms-blue);
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* ── Ack table ──────────────────────────────────────────────────────────── */
+.ms-ack-entry {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--ms-border-subtle);
+}
+
+.ms-ack-entry:last-child {
+  border-bottom: none;
+}
+
+.ms-ack-entry__name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ms-text);
+  margin: 0 0 4px;
+}
+
+.ms-ack-entry__meta {
+  font-size: 0.8125rem;
+  color: var(--ms-text-muted);
+  margin: 0 0 8px;
+}
+
+.ms-ack-entry__license {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--ms-indigo-soft);
+  color: var(--ms-indigo);
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.ms-ack-entry__license--warning {
+  background: rgba(234, 179, 8, 0.14);
+  color: #D97706;
+}
+
+.ms-ack-entry__notice {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--ms-text-secondary);
+  margin: 0;
+}
+
+.ms-ack-entry__notice code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8125em;
+  background: var(--ms-surface-raised);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+/* ── Products family page ───────────────────────────────────────────────── */
+.ms-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 0 0 clamp(40px, 6vw, 72px);
+}
+
+.ms-product-card {
+  padding: clamp(24px, 3vw, 32px);
+  border: 1px solid var(--ms-border);
+  border-radius: var(--ms-radius-lg);
+  background: var(--ms-surface);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-decoration: none;
+  transition: border-color var(--ms-duration-fast) var(--ms-ease), background var(--ms-duration-fast) var(--ms-ease);
+}
+
+.ms-product-card:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  background: var(--ms-surface-raised);
+}
+
+.ms-product-card__name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ms-text);
+  margin: 0;
+}
+
+.ms-product-card__tagline {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--ms-text-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+.ms-product-card__body {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--ms-text-secondary);
+  margin: 0;
+  flex: 1;
+}
+
+.ms-product-card__cta {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ms-blue);
+  margin-top: auto;
+}
+
+/* ── Footer ─────────────────────────────────────────────────────────────── */
+.ms-footer {
+  border-top: 1px solid var(--ms-border);
+  padding: clamp(32px, 5vw, 48px) clamp(16px, 4vw, 32px);
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.ms-footer__inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.ms-footer__family {
+  font-size: 0.8125rem;
+  color: var(--ms-text-muted);
+}
+
+.ms-footer__family a {
+  color: var(--ms-text-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ms-footer__family a:hover {
+  color: var(--ms-text-secondary);
+}
+
+.ms-footer__links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ms-footer__links a {
+  font-size: 0.8125rem;
+  color: var(--ms-text-muted);
+  text-decoration: none;
+  transition: color var(--ms-duration-fast) var(--ms-ease);
+}
+
+.ms-footer__links a:hover,
+.ms-footer__links a:focus-visible {
+  color: var(--ms-text-secondary);
+}
+
+/* ── Screenshot slot ────────────────────────────────────────────────────── */
+.ms-screenshot-slot {
+  aspect-ratio: 16 / 10;
+  border-radius: var(--ms-radius-lg);
+  border: 1px solid var(--ms-border);
+  background: var(--ms-surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 0 clamp(40px, 6vw, 72px);
+  overflow: hidden;
+  position: relative;
+}
+
+.ms-screenshot-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.ms-screenshot-slot__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--ms-text-muted);
+  font-size: 0.875rem;
+}
+
+/* ── Focus / accessibility ──────────────────────────────────────────────── */
+.ms-shell *:focus-visible {
+  outline: 2px solid var(--ms-blue);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Responsive helpers ─────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .ms-hero { text-align: left; }
+  .ms-hero__actions { justify-content: flex-start; }
+  .ms-hero__sub { margin-left: 0; margin-right: 0; }
+  .ms-features { grid-template-columns: 1fr; }
+  .ms-products-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Miravelys footer: "Products" quiet addition ────────────────────────── */
+.site-footer-nav .site-footer-nav__family {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  font-size: 0.8125rem;
+  color: var(--mira-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.site-footer-nav .site-footer-nav__family a {
+  color: var(--mira-text-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.site-footer-nav .site-footer-nav__family a:hover {
+  color: var(--mira-text-secondary);
+}

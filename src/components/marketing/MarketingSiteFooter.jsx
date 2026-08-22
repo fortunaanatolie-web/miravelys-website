@@ -23,7 +23,14 @@ export default function MarketingSiteFooter({ t, lang = 'en' }) {
           <Mail size={15} aria-hidden="true" />
           {SUPPORT_EMAIL}
         </a>
+
+        {/* Quiet family link — subordinate to all product-specific nav */}
+        <span className="site-footer-nav__family" aria-label="More from the Miravelys family">
+          More from Miravelys:&nbsp;
+          <Link to={marketingRoutes.products}>Products</Link>
+        </span>
       </nav>
     </footer>
   );
 }
+
