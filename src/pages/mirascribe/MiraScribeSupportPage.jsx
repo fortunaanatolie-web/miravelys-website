@@ -4,7 +4,7 @@
  *
  * Content verified against: AppStoreSubmission/Web/mirascribe-support.html
  * Support email: support.mirascribe@miravelys.com (confirmed)
- * Legal operator: [LEGAL_OPERATOR_REQUIRED] — do not publish before deciding
+ * Legal operator: Anatolie Furtuna, sole proprietor, Moldova.
  */
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -142,12 +142,12 @@ export default function MiraScribeSupportPage() {
           <h2 className="ms-section-title">Developer</h2>
           <div className="ms-legal">
             <p>
-              MiraScribe is developed and distributed by{' '}
-              <strong>[LEGAL_OPERATOR_REQUIRED]</strong>.
+              MiraScribe is developed and distributed by <strong>Anatolie Furtuna</strong> as a
+              sole proprietor.
             </p>
-            <p className="ms-placeholder-notice">
-              Legal operator name and address to be added before App Store submission. Contact{' '}
-              <a href={SUPPORT_MAILTO}>{SUPPORT_EMAIL}</a> in the meantime.
+            <p>
+              Business address: Alexandru cel Bun 36, ap 47, 3100 Balti, Moldova.<br />
+              Governing jurisdiction: Republic of Moldova.
             </p>
             <p>
               Support contact:{' '}

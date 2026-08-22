@@ -55,12 +55,11 @@ export default function MiraScribeLegalPage() {
           {/* ── Copyright ── */}
           <h2>Copyright</h2>
           <p>
-            © 2026 MiraScribe / Miravelys. All rights reserved.
+            © 2026 Miravelys. MiraScribe is developed and distributed by Anatolie Furtuna.
           </p>
-          <p className="ms-placeholder-notice">
-            Legal entity name to be confirmed. This notice will be updated before App Store submission
-            to reflect the registered developer name. Contact{' '}
-            <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> with questions.
+          <p>
+            Developer: Anatolie Furtuna, sole proprietor.<br />
+            Business address: Alexandru cel Bun 36, ap 47, 3100 Balti, Moldova.
           </p>
 
           {/* ── Trademark ── */}
@@ -97,9 +96,9 @@ export default function MiraScribeLegalPage() {
 
           {/* ── Governing law ── */}
           <h2>Governing Law</h2>
-          <p className="ms-placeholder-notice">
-            Governing law jurisdiction to be confirmed based on the registered developer location.
-            Update before App Store submission.
+          <p>
+            This notice and the use of MiraScribe are governed by the laws of the Republic of Moldova,
+            subject to any mandatory consumer protections that apply in your place of residence.
           </p>
 
           {/* ── Privacy and support links ── */}

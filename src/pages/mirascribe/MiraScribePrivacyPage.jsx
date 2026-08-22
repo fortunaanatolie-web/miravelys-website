@@ -49,6 +49,10 @@ export default function MiraScribePrivacyPage() {
               It does not cover the Miravelys mindfulness application, the Miravelys.com website
               (which has its own <Link to="/privacy">privacy policy</Link>), or any other product.
             </p>
+            <p>
+              MiraScribe is developed and distributed by Anatolie Furtuna as a sole proprietor at
+              Alexandru cel Bun 36, ap 47, 3100 Balti, Moldova.
+            </p>
           </header>
 
           {/* ── 1. Scope ── */}
