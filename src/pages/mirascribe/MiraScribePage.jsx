@@ -23,12 +23,8 @@ export default function MiraScribePage() {
           <p className="mira-mkt__eyebrow">A Miravelys product</p>
           <h1 className="mira-mkt__hero-title">Stop replaying recordings. Start reading them.</h1>
           <p className="mira-mkt__lead">MiraScribe turns audio and video into clear, editable text — privately on your Mac.</p>
-          <p className="mira-mkt__lead" style={{ maxWidth: '42rem' }}>
-            Drop in a lecture, an interview, a video, or a late-night voice memo. MiraScribe transcribes it locally and gives you searchable text with timestamps back to the original recording.
-          </p>
-          <p className="mira-mkt__lead" style={{ maxWidth: '42rem' }}>
-            No cloud transcription. No upload queue. No subscription. Just your recording and the words inside it.
-          </p>
+          <p className="mira-mkt__lead" style={{ maxWidth: '42rem' }}>Drop in a lecture, an interview, a video, or a late-night voice memo. MiraScribe transcribes it locally and gives you searchable text with timestamps back to the original recording.</p>
+          <p className="mira-mkt__lead" style={{ maxWidth: '42rem' }}>No cloud transcription. No upload queue. No subscription. Just your recording and the words inside it.</p>
           <div className="mira-mkt__hero-actions flex flex-col items-start gap-4">
             <a href={APP_STORE_URL} className="ms-btn ms-btn--primary" target="_blank" rel="noopener noreferrer">Download MiraScribe for Mac</a>
             <span className="text-sm text-muted-foreground">Available on the Mac App Store.</span>
@@ -72,10 +68,8 @@ export default function MiraScribePage() {
               <p className="mira-mkt__lead !mb-4">Search for the line you remember, use its timestamp to return to the source, and export SRT or VTT when you need subtitles.</p>
               <p className="mira-mkt__lead">MiraScribe doesn't replace your editing software. It helps you find the words inside the footage.</p>
             </div>
-            <figure className="mira-mkt__device-art mira-mkt__device-art--filmmaker rounded-2xl overflow-hidden shadow-lg border border-glass-border">
-              <img src="/images/mirascribe/filmmaker-composite.png" alt="Video editor using MiraScribe while working with recorded footage." className="mira-mkt__device-art-base" loading="lazy" decoding="async" />
-              <img src="/images/mirascribe/01-transcript-complete.png" alt="" aria-hidden="true" className="mira-mkt__embedded-ui mira-mkt__embedded-ui--filmmaker-monitor" loading="lazy" decoding="async" />
-              <img src="/images/mirascribe/02-library.png" alt="" aria-hidden="true" className="mira-mkt__embedded-ui mira-mkt__embedded-ui--filmmaker-laptop" loading="lazy" decoding="async" />
+            <figure className="mira-mkt__human-art mira-mkt__human-art--filmmaker rounded-2xl overflow-hidden shadow-lg border border-glass-border">
+              <img src="/images/mirascribe/filmmaker-composite.png" alt="Video editor working with recorded footage in a home editing studio." className="w-full h-full object-cover block" loading="lazy" decoding="async" />
             </figure>
           </div>
 
