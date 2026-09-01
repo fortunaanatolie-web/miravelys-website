@@ -24,6 +24,62 @@ async function waitForLoadedImage(page, selector) {
   );
 }
 
+async function fullyLoadMarketingImages(page) {
+  const images = page.locator('.mira-mkt img');
+  const count = await images.count();
+  const states = [];
+
+  for (let index = 0; index < count; index += 1) {
+    const image = images.nth(index);
+    await image.scrollIntoViewIfNeeded();
+    await image.waitFor({ state: 'visible' });
+    await image.evaluate(async element => {
+      if (!(element instanceof HTMLImageElement)) return;
+      if (!element.complete || element.naturalWidth === 0) {
+        await new Promise((resolve, reject) => {
+          const timeout = setTimeout(() => reject(new Error(`Image load timeout: ${element.currentSrc || element.src}`)), 30_000);
+          const finish = () => {
+            clearTimeout(timeout);
+            resolve();
+          };
+          element.addEventListener('load', finish, { once: true });
+          element.addEventListener('error', () => {
+            clearTimeout(timeout);
+            reject(new Error(`Image failed: ${element.currentSrc || element.src}`));
+          }, { once: true });
+        });
+      }
+      if (typeof element.decode === 'function') {
+        await element.decode().catch(() => {});
+      }
+    });
+
+    const state = await image.evaluate(element => {
+      const rect = element.getBoundingClientRect();
+      return {
+        src: element.getAttribute('src'),
+        currentSrc: element.currentSrc,
+        complete: element.complete,
+        naturalWidth: element.naturalWidth,
+        naturalHeight: element.naturalHeight,
+        renderedWidth: rect.width,
+        renderedHeight: rect.height,
+        loading: element.loading,
+      };
+    });
+    assert(state.complete && state.naturalWidth > 0, `Marketing image did not load: ${state.src}`);
+    states.push(state);
+  }
+
+  await page.evaluate(async () => {
+    if (document.fonts?.ready) await document.fonts.ready;
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  });
+  await page.waitForTimeout(150);
+
+  return states;
+}
+
 await mkdir(artifactDir, { recursive: true });
 const browser = await chromium.launch({ headless: true });
 const results = [];
@@ -113,6 +169,8 @@ try {
       const ctaBox = await cta.boundingBox();
       assert(ctaBox && ctaBox.height >= 44, `${viewport.name}: final CTA is below the 44px interaction target`);
 
+      const marketingImages = await fullyLoadMarketingImages(page);
+
       const finalOverflow = await page.evaluate(() => ({
         viewport: window.innerWidth,
         documentWidth: document.documentElement.scrollWidth,
@@ -134,6 +192,7 @@ try {
         viewport,
         heroImageState,
         libraryState,
+        marketingImages,
         initialOverflow,
         finalOverflow,
         ctaHeight: ctaBox.height,
