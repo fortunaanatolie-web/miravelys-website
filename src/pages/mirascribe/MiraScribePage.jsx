@@ -1,10 +1,7 @@
 import { useEffect } from 'react';
 import MiraScribeShell from '../../components/mirascribe/MiraScribeShell';
-import ProductJsonLd from '../../components/mira-family/ProductJsonLd';
-import { APP_IDENTITY_ASSETS } from '../../config/appIdentityAssets';
 import { setDocumentMeta } from '../../lib/documentMeta';
 
-const icon = APP_IDENTITY_ASSETS.mirascribe.icon192;
 const APP_STORE_URL = 'https://apps.apple.com/md/app/mirascribe/id6803891486?mt=12';
 
 export default function MiraScribePage() {
@@ -15,24 +12,16 @@ export default function MiraScribePage() {
       description: 'Turn audio and video into searchable, editable text locally on your Mac. MiraScribe works offline and exports TXT, Markdown, SRT, VTT and timestamped JSON.',
       ogTitle: 'MiraScribe — Private Offline Transcription for Mac',
       ogDescription: 'Turn audio and video into searchable, editable text locally on your Mac. MiraScribe works offline and exports TXT, Markdown, SRT, VTT and timestamped JSON.',
-      ogImageAlt: 'MiraScribe — private transcription for Mac',
       alternateLanguages: [],
     });
   }, []);
 
   return (
     <MiraScribeShell skipTo="#ms-overview-main">
-      <ProductJsonLd productId="mirascribe" />
       <main id="ms-overview-main" className="ms-page ms-page--wide mira-mkt" aria-label="MiraScribe overview">
         {/* HERO SECTION */}
         <section className="mira-mkt__hero" aria-label="Product introduction">
           <p className="mira-mkt__eyebrow">A Miravelys product</p>
-          <img
-            src={icon}
-            alt=""
-            decoding="async"
-            style={{ width: 72, height: 72, borderRadius: 18, marginBottom: 28, display: 'block' }}
-          />
           <h1 className="mira-mkt__hero-title">
             Stop replaying recordings. Start reading them.
           </h1>
