@@ -33,7 +33,7 @@ export default function MiraScribePage() {
             <span className="text-sm text-muted-foreground">Available on the Mac App Store.</span>
           </div>
           <figure className="mira-mkt__hero-human" aria-label="MiraScribe being used on a MacBook">
-            <img src="/images/mirascribe/hero-human-realui-v2.png" alt="Video editor using MiraScribe on a MacBook with the MiraScribe interface visible on the computer screen." loading="eager" fetchPriority="high" decoding="async" />
+            <img src="/images/mirascribe/hero-human-realui-v3.webp" alt="Video editor using MiraScribe on a MacBook with the MiraScribe interface visible on the computer screen." loading="eager" fetchPriority="high" decoding="async" />
             <figcaption>
               <strong>See the words while you work.</strong>
               <span>The product stays in context: MiraScribe running on the Mac, not a detached oversized interface screenshot.</span>
