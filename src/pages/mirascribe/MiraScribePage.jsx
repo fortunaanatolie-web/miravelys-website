@@ -74,11 +74,19 @@ export default function MiraScribePage() {
 
           {/* STUDENT */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-32">
-            <div className="order-2 md:order-1 rounded-2xl overflow-hidden shadow-lg border border-glass-border">
+            <div className="mira-mkt__screen-composite mira-mkt__screen-composite--student order-2 md:order-1 rounded-2xl overflow-hidden shadow-lg border border-glass-border">
               <img
                 src="/images/mirascribe/student-composite.png"
-                alt="Student reviewing a timestamped lecture transcript in MiraScribe on a MacBook."
-                className="w-full h-auto object-cover block"
+                alt="Student working with MiraScribe on a MacBook while reviewing lecture notes."
+                className="mira-mkt__screen-composite-base w-full h-auto object-cover block"
+                loading="lazy"
+                decoding="async"
+              />
+              <img
+                src="/images/mirascribe/01-transcript-complete.png"
+                alt=""
+                aria-hidden="true"
+                className="mira-mkt__screen-overlay mira-mkt__screen-overlay--student"
                 loading="lazy"
                 decoding="async"
               />
@@ -102,11 +110,27 @@ export default function MiraScribePage() {
               <p className="mira-mkt__lead !mb-4">Search for the line you remember, use its timestamp to return to the source, and export SRT or VTT when you need subtitles.</p>
               <p className="mira-mkt__lead">MiraScribe doesn't replace your editing software. It helps you find the words inside the footage.</p>
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-lg border border-glass-border">
+            <div className="mira-mkt__screen-composite mira-mkt__screen-composite--filmmaker rounded-2xl overflow-hidden shadow-lg border border-glass-border">
               <img
                 src="/images/mirascribe/filmmaker-composite.png"
-                alt="Video editor searching dialogue in a MiraScribe transcript beside an editing timeline."
-                className="w-full h-auto object-cover block"
+                alt="Video editor using MiraScribe on a laptop and external display while working with recorded footage."
+                className="mira-mkt__screen-composite-base w-full h-auto object-cover block"
+                loading="lazy"
+                decoding="async"
+              />
+              <img
+                src="/images/mirascribe/01-transcript-complete.png"
+                alt=""
+                aria-hidden="true"
+                className="mira-mkt__screen-overlay mira-mkt__screen-overlay--filmmaker-monitor"
+                loading="lazy"
+                decoding="async"
+              />
+              <img
+                src="/images/mirascribe/02-library.png"
+                alt=""
+                aria-hidden="true"
+                className="mira-mkt__screen-overlay mira-mkt__screen-overlay--filmmaker-laptop"
                 loading="lazy"
                 decoding="async"
               />
