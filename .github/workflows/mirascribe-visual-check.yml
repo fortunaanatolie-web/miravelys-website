@@ -7,6 +7,7 @@ on:
       - 'src/styles/site-mirascribe*.css'
       - 'src/main.jsx'
       - 'public/images/mirascribe/**'
+      - 'scripts/verify_mirascribe_visual_contract.mjs'
       - 'package.json'
       - 'package-lock.json'
       - '.github/workflows/mirascribe-visual-check.yml'
@@ -18,7 +19,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,3 +38,31 @@ jobs:
 
       - name: Verify public contract
         run: npm run verify:public-contract
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Start production preview
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4173 > /tmp/mirascribe-preview.log 2>&1 &
+          echo $! > /tmp/mirascribe-preview.pid
+          for attempt in {1..30}; do
+            if curl -fsS http://127.0.0.1:4173/mirascribe > /dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/mirascribe-preview.log
+          exit 1
+
+      - name: Verify rendered visual contract
+        run: node scripts/verify_mirascribe_visual_contract.mjs
+
+      - name: Upload rendered evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mirascribe-visual-contract
+          path: artifacts/mirascribe-visual-contract/
+          if-no-files-found: ignore
+          retention-days: 14
