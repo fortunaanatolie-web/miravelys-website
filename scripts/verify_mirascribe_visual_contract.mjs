@@ -38,7 +38,7 @@ async function loadAllMarketingImages(page) {
     if (document.fonts?.ready) await document.fonts.ready;
     window.scrollTo({ top: 0, behavior: 'instant' });
   });
-  await page.waitForTimeout(150);
+  await page.waitForTimeout(180);
 }
 
 await mkdir(artifactDir, { recursive: true });
@@ -60,30 +60,30 @@ try {
       await page.getByRole('heading', { level: 1, name: 'Stop replaying recordings. Start reading them.' }).waitFor({ state: 'visible' });
 
       const detachedProductScreens = await page.locator([
-        '.mira-mkt img[src$="/01-transcript-complete.png"]:not(.mira-mkt__embedded-ui)',
-        '.mira-mkt img[src$="/02-library.png"]:not(.mira-mkt__embedded-ui)',
+        '.mira-mkt img[src$="/01-transcript-complete.png"]',
+        '.mira-mkt img[src$="/02-library.png"]',
         '.mira-mkt img[src$="/03-settings-transcription.png"]',
         '.mira-mkt img[src$="/05-settings-privacy.png"]',
         '.mira-mkt img[src$="/03-settings-general.png"]',
       ].join(',')).count();
       assert(detachedProductScreens === 0, `${viewport.name}: detached product screenshots remain on the page`);
 
-      const embeddedUi = page.locator('.mira-mkt__device-art .mira-mkt__embedded-ui');
-      assert(await embeddedUi.count() === 1, `${viewport.name}: expected exactly one real UI screenshot embedded in a physical computer`);
-      assert(await page.locator('.mira-mkt__human-art--filmmaker .mira-mkt__embedded-ui').count() === 0, `${viewport.name}: filmmaker artwork contains a detached UI overlay`);
+      const heroArtwork = page.locator('.mira-mkt__hero-human img');
+      assert(await heroArtwork.count() === 1, `${viewport.name}: rich hero artwork is missing`);
+
+      const audienceArtwork = page.locator('.mira-mkt__human-art img');
+      assert(await audienceArtwork.count() >= 2, `${viewport.name}: expected human student and filmmaker artwork`);
 
       await loadAllMarketingImages(page);
 
-      const geometry = await embeddedUi.evaluate(element => {
-        const rect = element.getBoundingClientRect();
-        const parent = element.closest('.mira-mkt__device-art')?.getBoundingClientRect();
-        return {
-          width: rect.width,
-          height: rect.height,
-          insideParent: Boolean(parent) && rect.left >= parent.left - 2 && rect.top >= parent.top - 2 && rect.right <= parent.right + 2 && rect.bottom <= parent.bottom + 2,
-        };
-      });
-      assert(geometry.width > 40 && geometry.height > 40 && geometry.insideParent, `${viewport.name}: embedded MiraScribe UI escapes the student's computer artwork`);
+      const heroBox = await page.locator('.mira-mkt__hero-human').boundingBox();
+      assert(heroBox && heroBox.width >= (viewport.name === 'desktop' ? 360 : 280) && heroBox.height >= 300, `${viewport.name}: hero artwork collapsed`);
+
+      const workflowCards = await page.locator('.mira-mkt__workflow-grid > article').count();
+      assert(workflowCards === 4, `${viewport.name}: workflow must contain four visible steps`);
+
+      const privacyCards = await page.locator('.mira-mkt__privacy-proof > article').count();
+      assert(privacyCards === 3, `${viewport.name}: privacy proof should contain three benefit cards`);
 
       const overflow = await page.evaluate(() => ({ viewport: window.innerWidth, documentWidth: document.documentElement.scrollWidth, bodyWidth: document.body.scrollWidth }));
       assert(overflow.documentWidth <= overflow.viewport + 1 && overflow.bodyWidth <= overflow.viewport + 1, `${viewport.name}: horizontal overflow detected (${JSON.stringify(overflow)})`);
@@ -106,4 +106,4 @@ try {
   await browser.close();
 }
 
-console.log(JSON.stringify({ status: 'PASS', route: '/mirascribe', contract: 'no-detached-product-screens' }, null, 2));
+console.log(JSON.stringify({ status: 'PASS', route: '/mirascribe', contract: 'human-led-no-detached-product-screens' }, null, 2));
