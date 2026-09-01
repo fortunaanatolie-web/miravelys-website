@@ -46,24 +46,17 @@ const browser = await chromium.launch({ headless: true });
 
 try {
   for (const viewport of viewports) {
-    const context = await browser.newContext({
-      viewport: { width: viewport.width, height: viewport.height },
-      deviceScaleFactor: 1,
-      reducedMotion: 'reduce',
-    });
+    const context = await browser.newContext({ viewport: { width: viewport.width, height: viewport.height }, deviceScaleFactor: 1, reducedMotion: 'reduce' });
     const page = await context.newPage();
     const runtimeErrors = [];
 
     page.on('pageerror', error => runtimeErrors.push(`pageerror: ${error.message}`));
-    page.on('console', message => {
-      if (message.type() === 'error') runtimeErrors.push(`console: ${message.text()}`);
-    });
+    page.on('console', message => { if (message.type() === 'error') runtimeErrors.push(`console: ${message.text()}`); });
 
     try {
       const response = await page.goto(`${baseUrl}/mirascribe`, { waitUntil: 'networkidle', timeout: 30_000 });
       assert(response?.ok(), `${viewport.name}: /mirascribe returned ${response?.status()}`);
       assert((await page.title()).includes('MiraScribe'), `${viewport.name}: document title is not MiraScribe`);
-
       await page.getByRole('heading', { level: 1, name: 'Stop replaying recordings. Start reading them.' }).waitFor({ state: 'visible' });
 
       const detachedProductScreens = await page.locator([
@@ -76,18 +69,12 @@ try {
       assert(detachedProductScreens === 0, `${viewport.name}: detached product screenshots remain on the page`);
 
       const embeddedUi = page.locator('.mira-mkt__device-art .mira-mkt__embedded-ui');
-      assert(await embeddedUi.count() === 3, `${viewport.name}: expected exactly 3 device-embedded UI screenshots`);
-
-      const studentArt = page.locator('.mira-mkt__device-art--student');
-      const filmmakerArt = page.locator('.mira-mkt__device-art--filmmaker');
-      await studentArt.scrollIntoViewIfNeeded();
-      await studentArt.waitFor({ state: 'visible' });
-      await filmmakerArt.scrollIntoViewIfNeeded();
-      await filmmakerArt.waitFor({ state: 'visible' });
+      assert(await embeddedUi.count() === 1, `${viewport.name}: expected exactly one real UI screenshot embedded in a physical computer`);
+      assert(await page.locator('.mira-mkt__human-art--filmmaker .mira-mkt__embedded-ui').count() === 0, `${viewport.name}: filmmaker artwork contains a detached UI overlay`);
 
       await loadAllMarketingImages(page);
 
-      const overlayGeometry = await embeddedUi.evaluateAll(elements => elements.map(element => {
+      const geometry = await embeddedUi.evaluate(element => {
         const rect = element.getBoundingClientRect();
         const parent = element.closest('.mira-mkt__device-art')?.getBoundingClientRect();
         return {
@@ -95,14 +82,10 @@ try {
           height: rect.height,
           insideParent: Boolean(parent) && rect.left >= parent.left - 2 && rect.top >= parent.top - 2 && rect.right <= parent.right + 2 && rect.bottom <= parent.bottom + 2,
         };
-      }));
-      assert(overlayGeometry.every(item => item.width > 40 && item.height > 40 && item.insideParent), `${viewport.name}: an embedded UI screen escapes its computer artwork`);
+      });
+      assert(geometry.width > 40 && geometry.height > 40 && geometry.insideParent, `${viewport.name}: embedded MiraScribe UI escapes the student's computer artwork`);
 
-      const overflow = await page.evaluate(() => ({
-        viewport: window.innerWidth,
-        documentWidth: document.documentElement.scrollWidth,
-        bodyWidth: document.body.scrollWidth,
-      }));
+      const overflow = await page.evaluate(() => ({ viewport: window.innerWidth, documentWidth: document.documentElement.scrollWidth, bodyWidth: document.body.scrollWidth }));
       assert(overflow.documentWidth <= overflow.viewport + 1 && overflow.bodyWidth <= overflow.viewport + 1, `${viewport.name}: horizontal overflow detected (${JSON.stringify(overflow)})`);
 
       const cta = page.getByRole('link', { name: 'Download MiraScribe for Mac' }).last();
@@ -123,4 +106,4 @@ try {
   await browser.close();
 }
 
-console.log(JSON.stringify({ status: 'PASS', route: '/mirascribe', contract: 'product-ui-inside-computers-only' }, null, 2));
+console.log(JSON.stringify({ status: 'PASS', route: '/mirascribe', contract: 'no-detached-product-screens' }, null, 2));
