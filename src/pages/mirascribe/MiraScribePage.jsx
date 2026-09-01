@@ -29,11 +29,11 @@ export default function MiraScribePage() {
             <a href={APP_STORE_URL} className="ms-btn ms-btn--primary" target="_blank" rel="noopener noreferrer">Download MiraScribe for Mac</a>
             <span className="text-sm text-muted-foreground">Available on the Mac App Store.</span>
           </div>
-          <figure className="mira-mkt__hero-human" aria-label="A person working with recorded information">
-            <img src="/images/mirascribe/journalist.jpg" alt="Person reviewing recorded material and notes in a quiet workspace." loading="eager" fetchPriority="high" decoding="async" />
+          <figure className="mira-mkt__hero-human" aria-label="MiraScribe being used on a MacBook">
+            <img src="/images/mirascribe/hero-human-realui.webp" alt="Video editor using MiraScribe on a MacBook with the MiraScribe interface visible on the computer screen." loading="eager" fetchPriority="high" decoding="async" />
             <figcaption>
-              <strong>Local on your Mac.</strong>
-              <span>Your recordings do not need to leave your computer.</span>
+              <strong>See the words while you work.</strong>
+              <span>MiraScribe stays on the Mac in front of you — searchable, editable, and connected to the recording.</span>
             </figcaption>
           </figure>
         </section>
