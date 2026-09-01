@@ -1,0 +1,674 @@
+/*
+ * MiraScribe marketing page — editorial product visual system.
+ * Scoped to .mira-mkt so support/privacy/legal MiraScribe pages remain untouched.
+ * The page intentionally uses real app screenshots and human-context composites.
+ */
+
+.mira-mkt {
+  --mira-mkt-ink: rgba(243, 247, 255, 0.97);
+  --mira-mkt-copy: rgba(220, 228, 241, 0.78);
+  --mira-mkt-muted: rgba(196, 207, 225, 0.58);
+  --mira-mkt-line: rgba(176, 194, 222, 0.13);
+  --mira-mkt-line-strong: rgba(185, 205, 235, 0.22);
+  --mira-mkt-surface: rgba(13, 21, 37, 0.7);
+  --mira-mkt-surface-strong: rgba(10, 17, 31, 0.9);
+  --mira-mkt-blue: #77b7ff;
+  --mira-mkt-violet: #a58cff;
+  --mira-mkt-mint: #8fe2d2;
+  --mira-mkt-warm: #f3c58e;
+  --mira-mkt-radius: 32px;
+  --mira-mkt-radius-sm: 22px;
+
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  padding-bottom: clamp(5rem, 8vw, 9rem);
+}
+
+.mira-mkt::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: -10rem -20vw auto;
+  height: 62rem;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 68% 22%, rgba(91, 137, 255, 0.17), transparent 34%),
+    radial-gradient(circle at 30% 8%, rgba(152, 116, 255, 0.12), transparent 30%),
+    radial-gradient(circle at 52% 48%, rgba(67, 212, 192, 0.07), transparent 32%);
+  filter: saturate(112%);
+}
+
+.mira-mkt::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.32;
+  background-image: linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(to bottom, black, transparent 54rem);
+}
+
+/* ---------- Hero ---------- */
+
+.mira-mkt__hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(32rem, 1.18fr);
+  grid-template-rows: auto;
+  column-gap: clamp(3rem, 6vw, 7rem);
+  align-items: center;
+  min-height: min(760px, calc(100svh - 100px));
+  padding: clamp(4rem, 7vw, 7rem) 0 clamp(5rem, 8vw, 8.5rem);
+}
+
+.mira-mkt__hero > :not(figure) {
+  grid-column: 1;
+}
+
+.mira-mkt__hero > figure {
+  grid-column: 2;
+  grid-row: 1 / span 8;
+  align-self: center;
+  position: relative;
+  margin: 0 !important;
+  overflow: visible !important;
+  border: 0 !important;
+  border-radius: var(--mira-mkt-radius) !important;
+  background: transparent;
+  box-shadow: none !important;
+  perspective: 1400px;
+}
+
+.mira-mkt__hero > figure::before {
+  content: "LOCAL • PRIVATE • OFFLINE";
+  position: absolute;
+  z-index: 3;
+  top: -1rem;
+  right: clamp(1rem, 3vw, 2.5rem);
+  padding: 0.62rem 0.85rem;
+  border: 1px solid rgba(173, 211, 255, 0.24);
+  border-radius: 999px;
+  color: rgba(236, 246, 255, 0.86);
+  background: rgba(10, 18, 32, 0.76);
+  box-shadow: 0 10px 30px rgba(3, 8, 18, 0.28);
+  backdrop-filter: blur(18px) saturate(135%);
+  -webkit-backdrop-filter: blur(18px) saturate(135%);
+  font: 600 0.67rem/1 var(--font-sans, Inter, system-ui, sans-serif);
+  letter-spacing: 0.16em;
+}
+
+.mira-mkt__hero > figure::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 10% -7% -12% 8%;
+  border-radius: 48px;
+  background:
+    radial-gradient(circle at 65% 40%, rgba(91, 150, 255, 0.28), transparent 43%),
+    radial-gradient(circle at 32% 70%, rgba(149, 111, 255, 0.19), transparent 46%);
+  filter: blur(50px);
+  opacity: 0.9;
+}
+
+.mira-mkt__hero > figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(210, 225, 249, 0.2);
+  border-radius: var(--mira-mkt-radius) !important;
+  box-shadow:
+    0 42px 90px rgba(0, 0, 0, 0.42),
+    0 12px 28px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transform: rotateY(-3.5deg) rotateX(1deg) translateZ(0);
+  transform-origin: 54% 50%;
+}
+
+.mira-mkt__eyebrow {
+  margin: 0 0 1.15rem;
+  color: rgba(166, 196, 236, 0.72);
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.mira-mkt__hero > img {
+  width: 76px !important;
+  height: 76px !important;
+  margin: 0 0 1.5rem !important;
+  border-radius: 20px !important;
+  box-shadow: 0 20px 45px rgba(40, 90, 180, 0.2), 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+.mira-mkt__hero-title {
+  max-width: 10.6ch;
+  margin: 0 0 1.5rem;
+  color: var(--mira-mkt-ink);
+  font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+  font-size: clamp(3.25rem, 5.9vw, 6.35rem);
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.mira-mkt__lead {
+  max-width: 44rem;
+  color: var(--mira-mkt-copy);
+  font-size: clamp(1.02rem, 1.3vw, 1.19rem);
+  line-height: 1.72;
+  letter-spacing: -0.012em;
+}
+
+.mira-mkt__hero .mira-mkt__lead {
+  margin: 0 0 0.88rem;
+  max-width: 38rem !important;
+}
+
+.mira-mkt__hero .mira-mkt__lead:first-of-type {
+  color: rgba(236, 243, 255, 0.9);
+  font-size: clamp(1.18rem, 1.55vw, 1.4rem);
+  line-height: 1.55;
+}
+
+.mira-mkt__hero-actions {
+  margin-top: 1.35rem;
+}
+
+.mira-mkt__hero .ms-btn--primary,
+.mira-mkt__cta-band .ms-btn--primary {
+  min-height: 52px;
+  padding-inline: 1.35rem;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: linear-gradient(135deg, rgba(104, 172, 255, 0.98), rgba(123, 112, 245, 0.96));
+  box-shadow: 0 16px 40px rgba(50, 91, 200, 0.3), inset 0 1px 0 rgba(255,255,255,0.22);
+  color: #fff;
+  font-weight: 650;
+  transform: translateZ(0);
+  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+}
+
+.mira-mkt__hero .ms-btn--primary:hover,
+.mira-mkt__cta-band .ms-btn--primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 22px 46px rgba(50, 91, 200, 0.36), inset 0 1px 0 rgba(255,255,255,0.24);
+}
+
+/* ---------- Editorial statement ---------- */
+
+.mira-mkt section[aria-labelledby="ms-needle-heading"] {
+  position: relative;
+  max-width: 72rem !important;
+  margin-top: clamp(5rem, 10vw, 10rem) !important;
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 6vw, 6rem);
+  border-block: 1px solid var(--mira-mkt-line);
+}
+
+.mira-mkt section[aria-labelledby="ms-needle-heading"]::before {
+  content: "";
+  position: absolute;
+  inset: 12% 16%;
+  z-index: -1;
+  background: radial-gradient(circle, rgba(91, 140, 255, 0.09), transparent 66%);
+  filter: blur(26px);
+}
+
+.mira-mkt__heading {
+  color: var(--mira-mkt-ink);
+  font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+  font-size: clamp(2.5rem, 4.7vw, 5rem);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+#ms-needle-heading {
+  max-width: 12ch;
+  margin-bottom: 2.1rem;
+}
+
+#ms-needle-heading + .mira-mkt__lead {
+  color: rgba(237, 243, 255, 0.9);
+  font-size: clamp(1.2rem, 1.7vw, 1.48rem);
+}
+
+/* Hide the generic divider; editorial sections already create rhythm. */
+.mira-mkt > .w-full.h-px.bg-border {
+  opacity: 0;
+  margin-block: clamp(3rem, 6vw, 6rem) !important;
+}
+
+/* ---------- Use cases ---------- */
+
+.mira-mkt section[aria-labelledby="ms-audience-heading"] {
+  max-width: 76rem !important;
+}
+
+#ms-audience-heading {
+  margin-bottom: clamp(2rem, 5vw, 4.5rem) !important;
+  color: rgba(181, 199, 226, 0.58) !important;
+  font-size: 0.74rem !important;
+  letter-spacing: 0.22em !important;
+}
+
+.mira-mkt section[aria-labelledby="ms-audience-heading"] > .grid {
+  position: relative;
+  gap: clamp(2.5rem, 5vw, 5.4rem) !important;
+  margin-bottom: clamp(3rem, 7vw, 6.5rem) !important;
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  border: 1px solid var(--mira-mkt-line);
+  border-radius: var(--mira-mkt-radius);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.034), transparent 44%),
+    rgba(10, 18, 32, 0.42);
+  box-shadow: 0 24px 72px rgba(0,0,0,0.12);
+}
+
+.mira-mkt section[aria-labelledby="ms-audience-heading"] > .grid:nth-of-type(2) {
+  background:
+    radial-gradient(circle at 90% 20%, rgba(105, 113, 244, 0.08), transparent 34%),
+    linear-gradient(145deg, rgba(255,255,255,0.03), transparent 44%),
+    rgba(10, 18, 32, 0.45);
+}
+
+.mira-mkt section[aria-labelledby="ms-audience-heading"] > .grid:nth-of-type(3) {
+  background:
+    radial-gradient(circle at 8% 80%, rgba(94, 202, 183, 0.07), transparent 34%),
+    linear-gradient(145deg, rgba(255,255,255,0.03), transparent 44%),
+    rgba(10, 18, 32, 0.45);
+}
+
+.mira-mkt section[aria-labelledby="ms-audience-heading"] > .grid > div {
+  min-width: 0;
+}
+
+.mira-mkt section[aria-labelledby="ms-audience-heading"] > .grid > div:has(> img),
+.mira-mkt section[aria-labelledby="ms-audience-heading"] > .grid > div.grid {
+  border: 0 !important;
+  border-radius: calc(var(--mira-mkt-radius) - 8px) !important;
+  box-shadow: none !important;
+}
+
+.mira-mkt section[aria-labelledby="ms-audience-heading"] > .grid img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  border: 1px solid rgba(221, 232, 248, 0.13);
+  border-radius: calc(var(--mira-mkt-radius) - 8px);
+  box-shadow: 0 28px 62px rgba(0,0,0,0.28);
+}
+
+.mira-mkt section[aria-labelledby="ms-audience-heading"] > .grid:nth-of-type(1) img,
+.mira-mkt section[aria-labelledby="ms-audience-heading"] > .grid:nth-of-type(2) img {
+  aspect-ratio: 4 / 3;
+}
+
+.mira-mkt section[aria-labelledby="ms-audience-heading"] > .grid h3 {
+  margin-bottom: 1rem !important;
+  color: var(--mira-mkt-ink);
+  font-size: clamp(2.15rem, 3.2vw, 3.5rem) !important;
+  font-weight: 500 !important;
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+}
+
+.mira-mkt section[aria-labelledby="ms-audience-heading"] > .grid h4 {
+  margin-bottom: 1.5rem !important;
+  color: rgba(154, 186, 231, 0.72) !important;
+  font-size: clamp(1.05rem, 1.5vw, 1.26rem) !important;
+  letter-spacing: -0.01em;
+}
+
+.mira-mkt__essays {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: clamp(4rem, 8vw, 7rem) !important;
+  padding-top: 0 !important;
+  overflow: hidden;
+  border: 1px solid var(--mira-mkt-line) !important;
+  border-radius: var(--mira-mkt-radius);
+  background: var(--mira-mkt-line);
+}
+
+.mira-mkt__essay {
+  min-height: 100%;
+  padding: clamp(2rem, 3.4vw, 3.3rem);
+  background: rgba(10, 18, 32, 0.77);
+}
+
+.mira-mkt__essay h3 {
+  margin: 0 0 1rem;
+  color: var(--mira-mkt-ink);
+  font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+  font-size: clamp(1.55rem, 2.2vw, 2.15rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.mira-mkt__essay p {
+  margin: 0;
+  color: var(--mira-mkt-copy);
+  font-size: 0.98rem;
+  line-height: 1.72;
+}
+
+/* ---------- How it works ---------- */
+
+.mira-mkt section[aria-labelledby="ms-how-heading"] {
+  position: relative;
+  max-width: 76rem !important;
+  margin-top: clamp(6rem, 11vw, 11rem) !important;
+  padding: clamp(2rem, 4vw, 4rem);
+  border: 1px solid var(--mira-mkt-line);
+  border-radius: calc(var(--mira-mkt-radius) + 8px);
+  background:
+    radial-gradient(circle at 15% 10%, rgba(92, 148, 255, 0.08), transparent 28%),
+    rgba(8, 15, 28, 0.6);
+}
+
+#ms-how-heading {
+  margin-bottom: clamp(3rem, 6vw, 5rem) !important;
+}
+
+.mira-mkt section[aria-labelledby="ms-how-heading"] > .grid {
+  gap: clamp(2.5rem, 5vw, 5rem) !important;
+}
+
+.mira-mkt section[aria-labelledby="ms-how-heading"] h3 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.6rem !important;
+  color: var(--mira-mkt-ink);
+  font-family: var(--font-sans, Inter, system-ui, sans-serif);
+  font-size: clamp(1.25rem, 1.8vw, 1.55rem) !important;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+}
+
+.mira-mkt section[aria-labelledby="ms-how-heading"] figure {
+  overflow: visible !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.mira-mkt section[aria-labelledby="ms-how-heading"] figure img {
+  width: 100%;
+  border: 1px solid rgba(215, 228, 248, 0.16);
+  border-radius: var(--mira-mkt-radius-sm);
+  box-shadow: 0 30px 65px rgba(0,0,0,0.34);
+}
+
+.mira-mkt section[aria-labelledby="ms-how-heading"] ul li::marker {
+  color: var(--mira-mkt-blue);
+}
+
+/* ---------- Privacy ---------- */
+
+.mira-mkt section[aria-labelledby="ms-privacy-heading"] {
+  position: relative;
+  max-width: 76rem !important;
+  margin-top: clamp(6rem, 11vw, 11rem) !important;
+  padding: clamp(4rem, 8vw, 7.5rem) clamp(1.5rem, 7vw, 7rem);
+  overflow: hidden;
+  border: 1px solid rgba(151, 193, 237, 0.16);
+  border-radius: calc(var(--mira-mkt-radius) + 10px);
+  background:
+    radial-gradient(circle at 50% 118%, rgba(77, 186, 174, 0.18), transparent 34%),
+    radial-gradient(circle at 82% 10%, rgba(83, 132, 243, 0.16), transparent 29%),
+    linear-gradient(150deg, rgba(10, 24, 39, 0.96), rgba(7, 13, 26, 0.97));
+  box-shadow: 0 42px 90px rgba(0,0,0,0.24);
+}
+
+.mira-mkt section[aria-labelledby="ms-privacy-heading"]::before {
+  content: "ON-DEVICE";
+  display: inline-flex;
+  margin-bottom: 1.4rem;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid rgba(137, 225, 209, 0.2);
+  border-radius: 999px;
+  color: rgba(164, 234, 221, 0.8);
+  background: rgba(74, 191, 174, 0.07);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+#ms-privacy-heading {
+  max-width: 13ch;
+  margin-bottom: 2rem;
+}
+
+.mira-mkt section[aria-labelledby="ms-privacy-heading"] .mira-mkt__lead {
+  max-width: 49rem;
+}
+
+.mira-mkt section[aria-labelledby="ms-privacy-heading"] figure {
+  position: relative;
+  margin-top: clamp(2rem, 5vw, 4rem);
+  overflow: visible !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.mira-mkt section[aria-labelledby="ms-privacy-heading"] figure img {
+  width: 100%;
+  border: 1px solid rgba(210, 230, 247, 0.16);
+  border-radius: var(--mira-mkt-radius-sm);
+  box-shadow: 0 28px 70px rgba(0,0,0,0.38);
+}
+
+/* ---------- Dictation ---------- */
+
+.mira-mkt section[aria-labelledby="ms-dictation-heading"] {
+  max-width: 76rem !important;
+  margin-top: clamp(6rem, 11vw, 11rem) !important;
+  padding: clamp(2rem, 4vw, 4rem);
+  border: 1px solid var(--mira-mkt-line);
+  border-radius: calc(var(--mira-mkt-radius) + 4px);
+  background:
+    radial-gradient(circle at 10% 90%, rgba(241, 185, 119, 0.08), transparent 32%),
+    rgba(13, 20, 34, 0.52);
+}
+
+.mira-mkt section[aria-labelledby="ms-dictation-heading"] > .grid {
+  gap: clamp(2.5rem, 5vw, 5rem) !important;
+}
+
+.mira-mkt section[aria-labelledby="ms-dictation-heading"] figure {
+  overflow: visible !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.mira-mkt section[aria-labelledby="ms-dictation-heading"] figure img {
+  width: 100%;
+  border: 1px solid rgba(220, 229, 243, 0.15);
+  border-radius: var(--mira-mkt-radius-sm);
+  box-shadow: 0 28px 64px rgba(0,0,0,0.32);
+}
+
+.mira-mkt section[aria-labelledby="ms-dictation-heading"] kbd {
+  border: 1px solid rgba(205, 218, 239, 0.16);
+  background: rgba(255,255,255,0.07) !important;
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,0.08);
+}
+
+/* ---------- Final CTA ---------- */
+
+.mira-mkt__cta-band {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
+  max-width: 76rem;
+  margin: clamp(6rem, 11vw, 11rem) auto 0 !important;
+  padding: clamp(2.4rem, 5vw, 4.5rem);
+  overflow: hidden;
+  border: 1px solid rgba(174, 200, 240, 0.18);
+  border-radius: calc(var(--mira-mkt-radius) + 8px);
+  background:
+    radial-gradient(circle at 90% 20%, rgba(115, 120, 248, 0.18), transparent 38%),
+    radial-gradient(circle at 12% 90%, rgba(93, 177, 255, 0.11), transparent 38%),
+    linear-gradient(145deg, rgba(15, 28, 48, 0.94), rgba(8, 15, 28, 0.95));
+  box-shadow: 0 34px 90px rgba(0,0,0,0.24);
+}
+
+.mira-mkt__cta-band h2 {
+  color: var(--mira-mkt-ink);
+  font-size: clamp(2.5rem, 4.7vw, 4.9rem) !important;
+  font-weight: 500 !important;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.mira-mkt__cta-band h3 {
+  color: rgba(192, 210, 239, 0.65) !important;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1050px) {
+  .mira-mkt__hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 4rem;
+  }
+
+  .mira-mkt__hero > :not(figure),
+  .mira-mkt__hero > figure {
+    grid-column: 1;
+  }
+
+  .mira-mkt__hero > figure {
+    grid-row: auto;
+    margin-top: 3.5rem !important;
+    max-width: 58rem;
+  }
+
+  .mira-mkt__hero > figure img {
+    transform: none;
+  }
+
+  .mira-mkt__hero-title {
+    max-width: 13ch;
+    font-size: clamp(3.4rem, 9vw, 5.7rem);
+  }
+}
+
+@media (max-width: 820px) {
+  .mira-mkt {
+    --mira-mkt-radius: 26px;
+    --mira-mkt-radius-sm: 18px;
+  }
+
+  .mira-mkt::after {
+    display: none;
+  }
+
+  .mira-mkt__hero {
+    padding-top: 3.2rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .mira-mkt__hero > figure::before {
+    top: -0.8rem;
+    right: 0.75rem;
+    font-size: 0.61rem;
+  }
+
+  .mira-mkt section[aria-labelledby="ms-audience-heading"] > .grid,
+  .mira-mkt section[aria-labelledby="ms-how-heading"] > .grid,
+  .mira-mkt section[aria-labelledby="ms-dictation-heading"] > .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .mira-mkt section[aria-labelledby="ms-audience-heading"] > .grid {
+    padding: 1rem;
+  }
+
+  .mira-mkt section[aria-labelledby="ms-audience-heading"] > .grid img {
+    min-height: 260px;
+  }
+
+  .mira-mkt__essays {
+    grid-template-columns: 1fr;
+  }
+
+  .mira-mkt__cta-band {
+    grid-template-columns: 1fr;
+  }
+
+  .mira-mkt__cta-band > div:last-child {
+    align-items: flex-start !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .mira-mkt__hero-title {
+    font-size: clamp(2.9rem, 13.5vw, 4.15rem);
+  }
+
+  .mira-mkt__hero > img {
+    width: 64px !important;
+    height: 64px !important;
+    border-radius: 17px !important;
+  }
+
+  .mira-mkt__hero > figure::before {
+    content: "LOCAL • OFFLINE";
+  }
+
+  .mira-mkt section[aria-labelledby="ms-needle-heading"],
+  .mira-mkt section[aria-labelledby="ms-privacy-heading"] {
+    padding-inline: 1.1rem;
+  }
+
+  .mira-mkt section[aria-labelledby="ms-how-heading"],
+  .mira-mkt section[aria-labelledby="ms-dictation-heading"] {
+    padding: 1.1rem;
+  }
+
+  .mira-mkt__essay {
+    padding: 1.6rem;
+  }
+
+  .mira-mkt__cta-band {
+    padding: 1.7rem;
+  }
+
+  .mira-mkt__hero .ms-btn--primary,
+  .mira-mkt__cta-band .ms-btn--primary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mira-mkt *,
+  .mira-mkt *::before,
+  .mira-mkt *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .mira-mkt__hero > figure img,
+  .mira-mkt__hero .ms-btn--primary,
+  .mira-mkt__cta-band .ms-btn--primary {
+    transform: none !important;
+  }
+}
