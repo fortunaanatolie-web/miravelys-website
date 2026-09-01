@@ -29,11 +29,11 @@ export default function MiraScribePage() {
             <a href={APP_STORE_URL} className="ms-btn ms-btn--primary" target="_blank" rel="noopener noreferrer">Download MiraScribe for Mac</a>
             <span className="text-sm text-muted-foreground">Available on the Mac App Store.</span>
           </div>
-          <figure className="mira-mkt__hero-human" aria-label="MiraScribe being used on a MacBook">
-            <img src="/images/mirascribe/hero-human-realui.webp" alt="Video editor using MiraScribe on a MacBook with the MiraScribe interface visible on the computer screen." loading="eager" fetchPriority="high" decoding="async" />
+          <figure className="mira-mkt__hero-human" aria-label="Research and interview work on a Mac">
+            <img src="/images/mirascribe/journalist.jpg" alt="Professional reviewing recorded material and notes at a desk." loading="eager" fetchPriority="high" decoding="async" />
             <figcaption>
-              <strong>See the words while you work.</strong>
-              <span>MiraScribe stays on the Mac in front of you — searchable, editable, and connected to the recording.</span>
+              <strong>Turn the recording into something you can work with.</strong>
+              <span>Read first. Search for what matters. Return to the original recording when context matters.</span>
             </figcaption>
           </figure>
         </section>
@@ -54,7 +54,7 @@ export default function MiraScribePage() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-32">
             <figure className="mira-mkt__human-art mira-mkt__human-art--student order-2 md:order-1 rounded-2xl overflow-hidden shadow-lg border border-glass-border">
-              <img src="/images/mirascribe/student-composite.png" alt="Student studying beside a MacBook after recording a lecture." loading="lazy" decoding="async" />
+              <img src="/images/mirascribe/student-composite.png" alt="Student studying while MiraScribe is open on the MacBook in front of her." loading="lazy" decoding="async" />
             </figure>
             <div className="order-1 md:order-2">
               <p className="mira-mkt__usecase-kicker">Study</p>
