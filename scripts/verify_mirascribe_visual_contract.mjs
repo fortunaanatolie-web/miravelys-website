@@ -74,10 +74,39 @@ try {
       const audienceArtwork = page.locator('.mira-mkt__human-art img');
       assert(await audienceArtwork.count() >= 2, `${viewport.name}: expected human student and filmmaker artwork`);
 
+      const productInUse = page.locator('.mira-mkt__human-art--product-in-use');
+      assert(await productInUse.count() === 1, `${viewport.name}: expected exactly one product-in-use artwork`);
+
       await loadAllMarketingImages(page);
 
       const heroBox = await page.locator('.mira-mkt__hero-human').boundingBox();
       assert(heroBox && heroBox.width >= (viewport.name === 'desktop' ? 360 : 280) && heroBox.height >= 300, `${viewport.name}: hero artwork collapsed`);
+
+      const productProof = await productInUse.evaluate(async element => {
+        const style = getComputedStyle(element);
+        const rect = element.getBoundingClientRect();
+        const backgroundImage = style.backgroundImage || '';
+        const match = backgroundImage.match(/url\(["']?(.*?)["']?\)/);
+        const imageUrl = match?.[1] || '';
+        let loaded = false;
+        let naturalWidth = 0;
+        let naturalHeight = 0;
+        if (imageUrl) {
+          const image = new Image();
+          loaded = await new Promise(resolve => {
+            const timeout = setTimeout(() => resolve(false), 30_000);
+            image.onload = () => { clearTimeout(timeout); resolve(true); };
+            image.onerror = () => { clearTimeout(timeout); resolve(false); };
+            image.src = imageUrl;
+          });
+          naturalWidth = image.naturalWidth;
+          naturalHeight = image.naturalHeight;
+        }
+        return { backgroundImage, imageUrl, loaded, naturalWidth, naturalHeight, width: rect.width, height: rect.height };
+      });
+      assert(productProof.backgroundImage.includes('hero-human-realui.webp'), `${viewport.name}: integrated MiraScribe artwork is not the visible filmmaker surface`);
+      assert(productProof.loaded && productProof.naturalWidth > 0 && productProof.naturalHeight > 0, `${viewport.name}: integrated MiraScribe artwork failed to load`);
+      assert(productProof.width >= (viewport.name === 'desktop' ? 360 : 280) && productProof.height >= 260, `${viewport.name}: product-in-use artwork collapsed`);
 
       const workflowCards = await page.locator('.mira-mkt__workflow-grid > article').count();
       assert(workflowCards === 4, `${viewport.name}: workflow must contain four visible steps`);
@@ -106,4 +135,4 @@ try {
   await browser.close();
 }
 
-console.log(JSON.stringify({ status: 'PASS', route: '/mirascribe', contract: 'human-led-no-detached-product-screens' }, null, 2));
+console.log(JSON.stringify({ status: 'PASS', route: '/mirascribe', contract: 'human-led-with-one-integrated-product-in-use-proof' }, null, 2));
