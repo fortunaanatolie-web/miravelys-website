@@ -1,15 +1,11 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import MiraScribeShell from '../../components/mirascribe/MiraScribeShell';
 import ProductJsonLd from '../../components/mira-family/ProductJsonLd';
 import { APP_IDENTITY_ASSETS } from '../../config/appIdentityAssets';
-import { productCapabilities, productPageMeta } from '../../config/productCapabilities';
 import { setDocumentMeta } from '../../lib/documentMeta';
 
-const scribe = productCapabilities.mirascribe;
-const meta = productPageMeta.mirascribe;
 const icon = APP_IDENTITY_ASSETS.mirascribe.icon192;
-const APP_STORE_URL = "https://apps.apple.com/md/app/mirascribe/id6803891486?mt=12";
+const APP_STORE_URL = 'https://apps.apple.com/md/app/mirascribe/id6803891486?mt=12';
 
 export default function MiraScribePage() {
   useEffect(() => {
@@ -28,11 +24,15 @@ export default function MiraScribePage() {
     <MiraScribeShell skipTo="#ms-overview-main">
       <ProductJsonLd productId="mirascribe" />
       <main id="ms-overview-main" className="ms-page ms-page--wide mira-mkt" aria-label="MiraScribe overview">
-        
         {/* HERO SECTION */}
         <section className="mira-mkt__hero" aria-label="Product introduction">
           <p className="mira-mkt__eyebrow">A Miravelys product</p>
-          <img src={icon} alt="" style={{ width: 72, height: 72, borderRadius: 18, marginBottom: 28, display: 'block' }} />
+          <img
+            src={icon}
+            alt=""
+            decoding="async"
+            style={{ width: 72, height: 72, borderRadius: 18, marginBottom: 28, display: 'block' }}
+          />
           <h1 className="mira-mkt__hero-title">
             Stop replaying recordings. Start reading them.
           </h1>
@@ -45,7 +45,7 @@ export default function MiraScribePage() {
           <p className="mira-mkt__lead" style={{ maxWidth: '42rem' }}>
             No cloud transcription. No upload queue. No subscription. Just your recording and the words inside it.
           </p>
-          
+
           <div className="mira-mkt__hero-actions flex flex-col items-start gap-4">
             <a href={APP_STORE_URL} className="ms-btn ms-btn--primary" target="_blank" rel="noopener noreferrer">
               Download MiraScribe for Mac
@@ -54,7 +54,14 @@ export default function MiraScribePage() {
           </div>
 
           <figure className="mt-16 w-full rounded-2xl overflow-hidden shadow-2xl border border-glass-border">
-            <img src="/images/mirascribe/01-transcript-complete.png" alt="MiraScribe main interface showing a timestamped transcript" className="w-full h-auto block" />
+            <img
+              src="/images/mirascribe/01-transcript-complete.png"
+              alt="MiraScribe main interface showing a timestamped transcript"
+              className="w-full h-auto block"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+            />
           </figure>
         </section>
 
@@ -75,11 +82,17 @@ export default function MiraScribePage() {
           <h2 className="text-sm font-semibold tracking-widest uppercase text-muted-foreground mb-16 text-center" id="ms-audience-heading">
             Built for people who work with spoken information
           </h2>
-          
+
           {/* STUDENT */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-32">
             <div className="order-2 md:order-1 rounded-2xl overflow-hidden shadow-lg border border-glass-border">
-              <img src="/images/mirascribe/student-composite.png" alt="Student reviewing a timestamped lecture transcript in MiraScribe on a MacBook." className="w-full h-auto object-cover block" />
+              <img
+                src="/images/mirascribe/student-composite.png"
+                alt="Student reviewing a timestamped lecture transcript in MiraScribe on a MacBook."
+                className="w-full h-auto object-cover block"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div className="order-1 md:order-2">
               <h3 className="text-3xl font-serif font-semibold mb-6">Students</h3>
@@ -101,19 +114,37 @@ export default function MiraScribePage() {
               <p className="mira-mkt__lead">MiraScribe doesn't replace your editing software. It helps you find the words inside the footage.</p>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-lg border border-glass-border">
-              <img src="/images/mirascribe/filmmaker-composite.png" alt="Video editor searching dialogue in a MiraScribe transcript beside an editing timeline." className="w-full h-auto object-cover block" />
+              <img
+                src="/images/mirascribe/filmmaker-composite.png"
+                alt="Video editor searching dialogue in a MiraScribe transcript beside an editing timeline."
+                className="w-full h-auto object-cover block"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </div>
 
           {/* JOURNALIST */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-32">
             <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-2xl overflow-hidden shadow-lg border border-glass-border">
-                  <img src="/images/mirascribe/journalist.jpg" alt="Researcher reviewing notes" className="w-full h-full object-cover block" />
-                </div>
-                <div className="rounded-2xl overflow-hidden shadow-lg border border-glass-border">
-                  <img src="/images/mirascribe/02-library.png" alt="Researcher reviewing a timestamped interview transcript in MiraScribe." className="w-full h-full object-cover object-left-top block" />
-                </div>
+              <div className="rounded-2xl overflow-hidden shadow-lg border border-glass-border">
+                <img
+                  src="/images/mirascribe/journalist.jpg"
+                  alt="Journalist reviewing interview notes"
+                  className="w-full h-full object-cover block"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-lg border border-glass-border">
+                <img
+                  src="/images/mirascribe/02-library.png"
+                  alt="Timestamped interview transcripts in MiraScribe's library."
+                  className="w-full h-full object-cover object-left-top block"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             </div>
             <div>
               <h3 className="text-3xl font-serif font-semibold mb-6">Journalists and interviewers</h3>
@@ -123,7 +154,7 @@ export default function MiraScribePage() {
               <p className="mira-mkt__lead">And the recording doesn't need to be sent to a cloud transcription service.</p>
             </div>
           </div>
-          
+
           {/* RESEARCHERS / TEACHERS / WRITERS */}
           <div className="mira-mkt__essays mt-16 pt-16 border-t border-border">
             <article className="mira-mkt__essay">
@@ -144,23 +175,35 @@ export default function MiraScribePage() {
         {/* HOW IT WORKS */}
         <section aria-labelledby="ms-how-heading" className="mt-32 max-w-6xl mx-auto">
           <h2 className="mira-mkt__heading text-center mb-16" id="ms-how-heading">From recording to usable text</h2>
-          
+
           <div className="grid md:grid-cols-2 gap-16 mb-24 items-center">
             <div>
               <h3 className="text-2xl font-semibold mb-4">1. Add it</h3>
               <p className="mira-mkt__lead !mb-12">Choose a supported audio or video file from your Mac.</p>
-              
+
               <h3 className="text-2xl font-semibold mb-4">2. Transcribe it</h3>
               <p className="mira-mkt__lead">Choose Fast or Best Quality. Select the spoken language or let MiraScribe detect it. The transcription happens locally on your Mac.</p>
             </div>
             <figure className="rounded-2xl overflow-hidden shadow-xl border border-glass-border">
-              <img src="/images/mirascribe/03-settings-transcription.png" alt="Transcription settings in MiraScribe" className="w-full h-auto block" />
+              <img
+                src="/images/mirascribe/03-settings-transcription.png"
+                alt="Transcription settings in MiraScribe"
+                className="w-full h-auto block"
+                loading="lazy"
+                decoding="async"
+              />
             </figure>
           </div>
 
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <figure className="order-2 md:order-1 rounded-2xl overflow-hidden shadow-xl border border-glass-border">
-              <img src="/images/mirascribe/01-transcript-complete.png" alt="Working with words in MiraScribe" className="w-full h-auto block" />
+              <img
+                src="/images/mirascribe/01-transcript-complete.png"
+                alt="Working with words in MiraScribe"
+                className="w-full h-auto block"
+                loading="lazy"
+                decoding="async"
+              />
             </figure>
             <div className="order-1 md:order-2">
               <h3 className="text-2xl font-semibold mb-4">3. Work with the words</h3>
@@ -171,7 +214,7 @@ export default function MiraScribePage() {
                 <li>Play the original recording while you review it.</li>
                 <li>Use timestamps to get back to the part you need.</li>
               </ul>
-              
+
               <h3 className="text-2xl font-semibold mb-4">4. Take it somewhere else</h3>
               <p className="mira-mkt__lead !mb-4">Export as:</p>
               <ul className="mira-mkt__lead font-medium space-y-2 list-none">
@@ -192,9 +235,15 @@ export default function MiraScribePage() {
           <p className="mira-mkt__lead mx-auto">An unpublished interview. A classroom discussion. Research material. A work conversation. A draft idea you haven't shared yet.</p>
           <p className="mira-mkt__lead mx-auto">MiraScribe performs transcription locally on your Mac using bundled speech-recognition models.</p>
           <p className="mira-mkt__lead mx-auto !mb-16">Your recording does not need to be uploaded to a transcription service. Transcription works offline.</p>
-          
+
           <figure className="max-w-2xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-glass-border">
-            <img src="/images/mirascribe/05-settings-privacy.png" alt="Privacy settings in MiraScribe" className="w-full h-auto block" />
+            <img
+              src="/images/mirascribe/05-settings-privacy.png"
+              alt="Privacy settings in MiraScribe"
+              className="w-full h-auto block"
+              loading="lazy"
+              decoding="async"
+            />
           </figure>
         </section>
 
@@ -209,7 +258,13 @@ export default function MiraScribePage() {
               <p className="mira-mkt__lead !text-left">Useful for notes, drafts, messages, and those moments when speaking is simply faster than typing.</p>
             </div>
             <figure className="rounded-2xl overflow-hidden shadow-xl border border-glass-border">
-              <img src="/images/mirascribe/03-settings-general.png" alt="General settings showing dictation shortcut" className="w-full h-auto block" />
+              <img
+                src="/images/mirascribe/03-settings-general.png"
+                alt="General settings showing dictation shortcut"
+                className="w-full h-auto block"
+                loading="lazy"
+                decoding="async"
+              />
             </figure>
           </div>
         </section>
@@ -233,7 +288,6 @@ export default function MiraScribePage() {
             <span className="text-xs text-muted-foreground">Available on the Mac App Store.</span>
           </div>
         </section>
-
       </main>
     </MiraScribeShell>
   );
