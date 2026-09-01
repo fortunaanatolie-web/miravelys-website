@@ -58,3 +58,5 @@
     transition: none !important;
   }
 }
+
+/* Keep this file in the PR visual-check path: artwork changes require browser evidence. */
