@@ -50,7 +50,6 @@
   filter: brightness(0.92) contrast(0.98) saturate(0.88);
 }
 
-/* The single real MiraScribe screenshot is embedded in the student's physical MacBook display. */
 .mira-mkt__device-art--student .mira-mkt__embedded-ui--student {
   left: 6.4%;
   top: 49.2%;
@@ -63,23 +62,19 @@
 .mira-mkt__human-art { min-height: 420px; }
 .mira-mkt__human-art > img { min-height: 420px; }
 
-/*
- * The filmmaker source contains unusable baked green display placeholders.
- * Do not fake-replace them in CSS. Crop the photograph to the clean editor/
- * studio context so none of those display surfaces are visible.
- */
+/* The filmmaker source contains unusable baked green display placeholders. Crop them fully out. */
 .mira-mkt__human-art--filmmaker {
   aspect-ratio: 4 / 3;
 }
 
 .mira-mkt__human-art--filmmaker > img {
-  width: 142% !important;
-  height: 142% !important;
+  width: 190% !important;
+  height: 190% !important;
   max-width: none !important;
   min-height: 0 !important;
   object-fit: cover !important;
-  object-position: 9% 52% !important;
-  transform: translate(-4%, -7%);
+  object-position: 0% 50% !important;
+  transform: translate(-2%, -18%);
   transform-origin: left center;
 }
 
@@ -128,9 +123,9 @@
   .mira-mkt__device-art, .mira-mkt__human-art { min-height: 0; }
   .mira-mkt__human-art > img { min-height: 0; aspect-ratio: 4 / 3; }
   .mira-mkt__human-art--filmmaker > img {
-    width: 150% !important;
-    height: 150% !important;
-    transform: translate(-5%, -9%);
+    width: 205% !important;
+    height: 205% !important;
+    transform: translate(-2%, -21%);
   }
 }
 
