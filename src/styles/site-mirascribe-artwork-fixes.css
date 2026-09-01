@@ -46,15 +46,19 @@
   pointer-events: none;
 }
 
-/* Student: keep the student/desk context and push the flawed laptop display out of frame. */
+/* Student: zoom toward the learner on the right; the flawed laptop display exits the crop. */
 .mira-mkt section[aria-labelledby="ms-audience-heading"] .mira-mkt__screen-composite--student .mira-mkt__screen-composite-base {
-  object-position: 79% center !important;
+  object-position: 82% center !important;
+  transform: scale(1.34);
+  transform-origin: right center;
 }
 
-/* Filmmaker: keep the editor, controls and studio; crop away the right-side green displays. */
+/* Filmmaker: zoom toward the editor on the left; the green monitor/laptop exit the crop. */
 .mira-mkt section[aria-labelledby="ms-audience-heading"] .mira-mkt__screen-composite--filmmaker .mira-mkt__screen-composite-base {
   grid-row: 1 / span 2;
-  object-position: 20% center !important;
+  object-position: 18% center !important;
+  transform: scale(1.36);
+  transform-origin: left center;
 }
 
 /*
@@ -134,11 +138,15 @@
   }
 
   .mira-mkt section[aria-labelledby="ms-audience-heading"] .mira-mkt__screen-composite--student .mira-mkt__screen-composite-base {
-    object-position: 76% center !important;
+    object-position: 86% center !important;
+    transform: scale(1.52);
+    transform-origin: right center;
   }
 
   .mira-mkt section[aria-labelledby="ms-audience-heading"] .mira-mkt__screen-composite--filmmaker .mira-mkt__screen-composite-base {
-    object-position: 18% center !important;
+    object-position: 14% center !important;
+    transform: scale(1.46);
+    transform-origin: left center;
   }
 
   .mira-mkt section[aria-labelledby="ms-audience-heading"] .mira-mkt__screen-overlay {
