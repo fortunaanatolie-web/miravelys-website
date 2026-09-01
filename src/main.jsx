@@ -25,7 +25,6 @@ import './styles/site-mirascribe-marketing.css';
 import './styles/site-mirascribe-marketing-fixes.css';
 import './styles/site-mirascribe-artwork-fixes.css';
 import './styles/site-mirascribe-recovery-tweaks.css';
-import './styles/site-mirascribe-hero-proof.css';
 import './styles/site-mirascribe-device-proof.css';
 import SiteRouter from './SiteRouter';
 
