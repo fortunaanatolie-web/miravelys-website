@@ -1,5 +1,28 @@
 /* Final recovery polish, loaded after the MiraScribe artwork layer. */
 
+/* Keep the integrated human + real MiraScribe Mac screen visible as the hero artwork. */
+.mira-mkt__hero--human .mira-mkt__hero-human > img {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  mix-blend-mode: normal !important;
+  filter: saturate(0.92) contrast(1.03) brightness(0.96) !important;
+}
+
+/* Keep the lower caption readable without burying the working Mac screen. */
+.mira-mkt__hero--human .mira-mkt__hero-human::after {
+  z-index: 2 !important;
+  height: 34% !important;
+  background: linear-gradient(to top, rgba(5, 11, 21, 0.82), rgba(5, 11, 21, 0)) !important;
+}
+
 /* Remove the remaining defective laptop-screen edge from the student photograph. */
 .mira-mkt__human-art--student > img {
   object-position: 90% center !important;
@@ -35,6 +58,10 @@
 }
 
 @media (max-width: 560px) {
+  .mira-mkt__hero--human .mira-mkt__hero-human > img {
+    object-position: 54% center !important;
+  }
+
   .mira-mkt__human-art--student > img {
     object-position: 94% center !important;
     transform: scale(1.72) !important;
