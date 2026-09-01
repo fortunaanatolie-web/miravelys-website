@@ -58,7 +58,7 @@
   filter: brightness(0.92) contrast(0.98) saturate(0.88);
 }
 
-/* Student MacBook screen. Keep the real UI entirely inside the physical display. */
+/* Student MacBook screen. */
 .mira-mkt__device-art--student .mira-mkt__embedded-ui--student {
   left: 6.4%;
   top: 49.2%;
@@ -68,24 +68,27 @@
   transform: none !important;
 }
 
-/* Filmmaker external display. */
+/*
+ * Filmmaker artwork: these bounds are intentionally tight. They correspond
+ * to the physical green display surfaces in the source photograph, not to
+ * the surrounding desk/monitor frame.
+ */
 .mira-mkt__device-art--filmmaker .mira-mkt__embedded-ui--filmmaker-monitor {
-  right: 0.3%;
-  top: 17.2%;
-  width: 46.6% !important;
-  height: 39.8% !important;
-  clip-path: polygon(7% 0, 100% 0, 100% 100%, 0 91%);
+  left: 68.4%;
+  top: 17.6%;
+  width: 31.4% !important;
+  height: 39.0% !important;
+  clip-path: polygon(5% 4%, 100% 0, 100% 100%, 0 94%);
   transform: none !important;
   filter: brightness(0.79) contrast(1.01) saturate(0.82);
 }
 
-/* Filmmaker laptop display. */
 .mira-mkt__device-art--filmmaker .mira-mkt__embedded-ui--filmmaker-laptop {
-  left: 34.0%;
-  top: 45.2%;
-  width: 34.5% !important;
-  height: 31.5% !important;
-  clip-path: polygon(9% 0, 100% 8%, 94% 100%, 0 84%);
+  left: 46.6%;
+  top: 46.2%;
+  width: 27.2% !important;
+  height: 28.0% !important;
+  clip-path: polygon(8% 0, 100% 8%, 94% 100%, 0 84%);
   transform: none !important;
 }
 
