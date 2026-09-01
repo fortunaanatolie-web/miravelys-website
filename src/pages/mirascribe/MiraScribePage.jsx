@@ -29,11 +29,11 @@ export default function MiraScribePage() {
             <a href={APP_STORE_URL} className="ms-btn ms-btn--primary" target="_blank" rel="noopener noreferrer">Download MiraScribe for Mac</a>
             <span className="text-sm text-muted-foreground">Available on the Mac App Store.</span>
           </div>
-          <figure className="mira-mkt__hero-human" aria-label="Research and interview work on a Mac">
-            <img src="/images/mirascribe/journalist.jpg" alt="Professional reviewing recorded material and notes at a desk." loading="eager" fetchPriority="high" decoding="async" />
+          <figure className="mira-mkt__hero-human" aria-label="MiraScribe being used on a MacBook">
+            <img src="/images/mirascribe/hero-human-realui.webp" alt="Video editor using MiraScribe on a MacBook with the MiraScribe interface visible on the computer screen." loading="eager" fetchPriority="high" decoding="async" />
             <figcaption>
-              <strong>Turn the recording into something you can work with.</strong>
-              <span>Read first. Search for what matters. Return to the original recording when context matters.</span>
+              <strong>See the words while you work.</strong>
+              <span>The product stays in context: MiraScribe running on the Mac, not a detached oversized interface screenshot.</span>
             </figcaption>
           </figure>
         </section>
@@ -76,8 +76,8 @@ export default function MiraScribePage() {
               <p className="mira-mkt__lead !mb-4">Search for the line you remember, use its timestamp to return to the source, and export SRT or VTT when you need subtitles.</p>
               <p className="mira-mkt__lead">MiraScribe doesn't replace your editing software. It helps you find the words inside the footage.</p>
             </div>
-            <figure className="mira-mkt__human-art mira-mkt__human-art--filmmaker mira-mkt__human-art--product-in-use rounded-2xl overflow-hidden shadow-lg border border-glass-border">
-              <img src="/images/mirascribe/hero-human-realui.webp" alt="Video editor using MiraScribe on a MacBook with the MiraScribe interface visible on the computer screen." loading="lazy" decoding="async" />
+            <figure className="mira-mkt__human-art mira-mkt__human-art--filmmaker rounded-2xl overflow-hidden shadow-lg border border-glass-border">
+              <img src="/images/mirascribe/filmmaker-composite.png" alt="Video editor working with recorded footage in a home editing studio." loading="lazy" decoding="async" />
             </figure>
           </div>
 
