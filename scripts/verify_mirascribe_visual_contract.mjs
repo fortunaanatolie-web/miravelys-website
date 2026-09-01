@@ -140,7 +140,7 @@ try {
         `${viewport.name}: horizontal overflow detected before scrolling (${JSON.stringify(initialOverflow)})`,
       );
 
-      const librarySelector = 'img[src$="/02-library.png"]';
+      const librarySelector = 'img[src$="/02-library.png"]:not([aria-hidden="true"])';
       const libraryScreenshot = page.locator(librarySelector);
       await libraryScreenshot.scrollIntoViewIfNeeded();
       await libraryScreenshot.waitFor({ state: 'visible' });
@@ -170,6 +170,8 @@ try {
       assert(ctaBox && ctaBox.height >= 44, `${viewport.name}: final CTA is below the 44px interaction target`);
 
       const marketingImages = await fullyLoadMarketingImages(page);
+      const artworkUiOverlays = page.locator('.mira-mkt__screen-overlay');
+      assert(await artworkUiOverlays.count() === 3, `${viewport.name}: expected 3 real-UI artwork overlays`);
 
       const finalOverflow = await page.evaluate(() => ({
         viewport: window.innerWidth,
@@ -193,6 +195,7 @@ try {
         heroImageState,
         libraryState,
         marketingImages,
+        artworkUiOverlayCount: await artworkUiOverlays.count(),
         initialOverflow,
         finalOverflow,
         ctaHeight: ctaBox.height,
