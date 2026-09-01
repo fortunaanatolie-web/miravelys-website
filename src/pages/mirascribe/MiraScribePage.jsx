@@ -1,9 +1,7 @@
 import { useEffect } from 'react';
 import MiraScribeShell from '../../components/mirascribe/MiraScribeShell';
 import { setDocumentMeta } from '../../lib/documentMeta';
-import { APP_IDENTITY_ASSETS } from '../../config/appIdentityAssets';
 
-const icon = APP_IDENTITY_ASSETS.mirascribe.icon192;
 const APP_STORE_URL = 'https://apps.apple.com/md/app/mirascribe/id6803891486?mt=12';
 
 export default function MiraScribePage() {
@@ -23,7 +21,6 @@ export default function MiraScribePage() {
       <main id="ms-overview-main" className="ms-page ms-page--wide mira-mkt" aria-label="MiraScribe overview">
         <section className="mira-mkt__hero mira-mkt__hero--human" aria-label="Product introduction">
           <p className="mira-mkt__eyebrow">A Miravelys product</p>
-          <img src={icon} alt="" style={{ width: 72, height: 72, borderRadius: 18, marginBottom: 28, display: 'block' }} />
           <h1 className="mira-mkt__hero-title">Stop replaying recordings. Start reading them.</h1>
           <p className="mira-mkt__lead">MiraScribe turns audio and video into clear, editable text — privately on your Mac.</p>
           <p className="mira-mkt__lead" style={{ maxWidth: '42rem' }}>Drop in a lecture, an interview, a video, or a late-night voice memo. MiraScribe transcribes it locally and gives you searchable text with timestamps back to the original recording.</p>
