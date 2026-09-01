@@ -91,8 +91,8 @@ try {
           height: rect.height,
         };
       });
-      assert(heroProof.src.includes('/images/mirascribe/hero-human-realui.webp'), `${viewport.name}: the required MiraScribe-on-Mac artwork is not the hero image`);
-      assert(heroProof.naturalWidth >= 700 && heroProof.naturalHeight >= 500, `${viewport.name}: hero artwork is not the verified 730×520 in-use asset`);
+      assert(heroProof.src.includes('/images/mirascribe/hero-human-realui-v3.webp'), `${viewport.name}: the approved MiraScribe-on-Mac artwork is not the hero image`);
+      assert(heroProof.naturalWidth >= 800 && heroProof.naturalHeight >= 450, `${viewport.name}: approved hero artwork failed to load at expected dimensions`);
       assert(heroProof.opacity > 0.9 && heroProof.visibility !== 'hidden' && heroProof.display !== 'none', `${viewport.name}: in-use hero artwork is visually suppressed`);
       assert(heroProof.width >= (viewport.name === 'desktop' ? 360 : 280) && heroProof.height >= 300, `${viewport.name}: in-use hero artwork collapsed`);
 
