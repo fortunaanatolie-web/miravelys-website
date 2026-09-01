@@ -1,1 +1,1 @@
-placeholder
+visual-contract-trigger: in-use hero proof
