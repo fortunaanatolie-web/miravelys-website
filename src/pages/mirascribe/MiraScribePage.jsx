@@ -54,7 +54,7 @@ export default function MiraScribePage() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-32">
             <figure className="mira-mkt__human-art mira-mkt__human-art--student order-2 md:order-1 rounded-2xl overflow-hidden shadow-lg border border-glass-border">
-              <img src="/images/mirascribe/student-composite.png" alt="Student studying while MiraScribe is open on the MacBook in front of her." loading="lazy" decoding="async" />
+              <img src="/images/mirascribe/student-composite.png" alt="Student studying beside a MacBook after recording a lecture." loading="lazy" decoding="async" />
             </figure>
             <div className="order-1 md:order-2">
               <p className="mira-mkt__usecase-kicker">Study</p>
@@ -76,8 +76,8 @@ export default function MiraScribePage() {
               <p className="mira-mkt__lead !mb-4">Search for the line you remember, use its timestamp to return to the source, and export SRT or VTT when you need subtitles.</p>
               <p className="mira-mkt__lead">MiraScribe doesn't replace your editing software. It helps you find the words inside the footage.</p>
             </div>
-            <figure className="mira-mkt__human-art mira-mkt__human-art--filmmaker rounded-2xl overflow-hidden shadow-lg border border-glass-border">
-              <img src="/images/mirascribe/filmmaker-composite.png" alt="Video editor working with recorded footage in a home editing studio." loading="lazy" decoding="async" />
+            <figure className="mira-mkt__human-art mira-mkt__human-art--filmmaker mira-mkt__human-art--product-in-use rounded-2xl overflow-hidden shadow-lg border border-glass-border">
+              <img src="/images/mirascribe/hero-human-realui.webp" alt="Video editor using MiraScribe on a MacBook with the MiraScribe interface visible on the computer screen." loading="lazy" decoding="async" />
             </figure>
           </div>
 
