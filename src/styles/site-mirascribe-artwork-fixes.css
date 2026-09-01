@@ -1,0 +1,59 @@
+/*
+ * Final device-screen alignment for MiraScribe human-context artwork.
+ * Coordinates are derived from rendered browser evidence of the physical
+ * display areas, not from decorative guesses. Loaded after the general
+ * marketing fixes so it can safely override the first-pass transforms.
+ */
+
+.mira-mkt section[aria-labelledby="ms-audience-heading"] .mira-mkt__screen-overlay--student {
+  left: 12.1%;
+  top: 46.0%;
+  width: 33.0% !important;
+  height: 35.0% !important;
+  transform: none !important;
+  transform-origin: center center;
+  clip-path: polygon(0 18%, 79% 0, 100% 69%, 25% 100%);
+  object-fit: fill !important;
+  object-position: center !important;
+  border-radius: 0 !important;
+  filter: brightness(0.9) contrast(0.97) saturate(0.86);
+}
+
+.mira-mkt section[aria-labelledby="ms-audience-heading"] .mira-mkt__screen-overlay--filmmaker-monitor {
+  right: 0;
+  top: 18.0%;
+  width: 18.2% !important;
+  height: 40.0% !important;
+  transform: none !important;
+  transform-origin: center center;
+  clip-path: polygon(7% 0, 100% 0, 100% 100%, 0 91%);
+  object-fit: fill !important;
+  object-position: center !important;
+  border-radius: 0 !important;
+  filter: brightness(0.72) contrast(1.03) saturate(0.8);
+}
+
+.mira-mkt section[aria-labelledby="ms-audience-heading"] .mira-mkt__screen-overlay--filmmaker-laptop {
+  left: 68.7%;
+  top: 43.5%;
+  width: 18.2% !important;
+  height: 28.5% !important;
+  transform: none !important;
+  transform-origin: center center;
+  clip-path: polygon(7% 0, 100% 8%, 95% 100%, 0 84%);
+  object-fit: fill !important;
+  object-position: center !important;
+  border-radius: 0 !important;
+  filter: brightness(0.87) contrast(0.98) saturate(0.84);
+}
+
+/*
+ * The composited screens are visual evidence inside the photograph, not
+ * additional document content. Keep them non-interactive and prevent generic
+ * audience-image sizing rules from imposing photo-style minimum heights.
+ */
+.mira-mkt section[aria-labelledby="ms-audience-heading"] .mira-mkt__screen-overlay {
+  min-height: 0 !important;
+  max-width: none !important;
+  pointer-events: none;
+}
