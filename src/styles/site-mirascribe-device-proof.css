@@ -58,37 +58,34 @@
 }
 
 /*
- * The hero already uses a finished human + real MiraScribe-on-Mac artwork.
- * Render that image directly. Do not stage it as an absolutely-positioned layer;
- * that previously allowed the dark figure surface to cover the photograph in
- * the production render.
+ * One intentional product-in-use hero: the finished human artwork already has
+ * the real MiraScribe UI inside the physical MacBook. Use it as the frame
+ * surface itself so no generic hero image rule can hide the photograph.
  */
 .mira-mkt__hero--human > .mira-mkt__hero-human {
   min-height: 0 !important;
   aspect-ratio: 4 / 3;
-  background: transparent !important;
+  overflow: hidden !important;
+  background-image: url('/images/mirascribe/hero-human-realui.webp') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-color: rgba(7, 13, 24, 0.9) !important;
 }
 
 .mira-mkt__hero--human > .mira-mkt__hero-human::after {
   display: none !important;
 }
 
+/* The same artwork remains in the DOM for semantics/loading evidence; the
+ * visible pixels come from the figure background to avoid the prior stacking bug. */
 .mira-mkt__hero--human > .mira-mkt__hero-human > img {
-  position: relative !important;
-  inset: auto !important;
-  z-index: 1 !important;
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
   min-height: 0 !important;
-  max-width: none !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  object-fit: cover !important;
-  object-position: center center !important;
-  transform: none !important;
-  mix-blend-mode: normal !important;
-  filter: saturate(0.96) contrast(1.02) brightness(0.98) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 .mira-mkt__hero--human > .mira-mkt__hero-human > figcaption {
@@ -103,6 +100,7 @@
 
   .mira-mkt__hero--human > .mira-mkt__hero-human {
     aspect-ratio: 4 / 3;
+    background-position: 54% center !important;
   }
 }
 
