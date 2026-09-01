@@ -18,25 +18,25 @@
   background-repeat: no-repeat;
 }
 
-/* Keep semantic alt text in the DOM while the finished artwork is painted once
- * as the figure background. This prevents inherited audience-image transforms
- * from changing the actual product-in-use composition. */
+/* Paint the actual finished artwork directly. This rule intentionally overrides
+ * the older filmmaker crop/transform rules: the MiraScribe UI is already baked
+ * into the physical MacBook screen and must remain visible as captured. */
 .mira-mkt__human-art--product-in-use > img {
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 1;
+  position: relative !important;
+  inset: auto !important;
+  z-index: 2;
   display: block !important;
   width: 100% !important;
   height: 100% !important;
-  min-height: 0 !important;
+  min-height: 430px !important;
   max-width: none !important;
   object-fit: cover !important;
   object-position: center center !important;
   transform: none !important;
-  opacity: 0.001 !important;
+  opacity: 1 !important;
   visibility: visible !important;
-  filter: none !important;
-  pointer-events: none;
+  mix-blend-mode: normal !important;
+  filter: saturate(0.96) contrast(1.02) brightness(0.98) !important;
 }
 
 @media (max-width: 820px) {
@@ -45,11 +45,17 @@
     aspect-ratio: 730 / 520;
     background-position: 52% center;
   }
+
+  .mira-mkt__human-art--product-in-use > img {
+    min-height: 300px !important;
+    object-position: 52% center !important;
+  }
 }
 
 @media (max-width: 420px) {
-  .mira-mkt__human-art--product-in-use {
-    min-height: 280px;
+  .mira-mkt__human-art--product-in-use,
+  .mira-mkt__human-art--product-in-use > img {
+    min-height: 280px !important;
   }
 }
 
