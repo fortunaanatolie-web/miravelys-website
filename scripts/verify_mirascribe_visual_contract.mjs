@@ -69,44 +69,53 @@ try {
       assert(detachedProductScreens === 0, `${viewport.name}: detached product screenshots remain on the page`);
 
       const heroArtwork = page.locator('.mira-mkt__hero-human img');
-      assert(await heroArtwork.count() === 1, `${viewport.name}: rich hero artwork is missing`);
+      assert(await heroArtwork.count() === 1, `${viewport.name}: expected exactly one in-use hero artwork`);
 
       const audienceArtwork = page.locator('.mira-mkt__human-art img');
       assert(await audienceArtwork.count() >= 2, `${viewport.name}: expected human student and filmmaker artwork`);
-
-      const productInUse = page.locator('.mira-mkt__human-art--product-in-use');
-      assert(await productInUse.count() === 1, `${viewport.name}: expected exactly one product-in-use artwork`);
+      assert(await page.locator('.mira-mkt__human-art--product-in-use').count() === 0, `${viewport.name}: obsolete product-in-use filmmaker surface remains`);
 
       await loadAllMarketingImages(page);
 
-      const heroBox = await page.locator('.mira-mkt__hero-human').boundingBox();
-      assert(heroBox && heroBox.width >= (viewport.name === 'desktop' ? 360 : 280) && heroBox.height >= 300, `${viewport.name}: hero artwork collapsed`);
-
-      const productProof = await productInUse.evaluate(async element => {
-        const style = getComputedStyle(element);
+      const heroProof = await heroArtwork.evaluate(element => {
         const rect = element.getBoundingClientRect();
-        const backgroundImage = style.backgroundImage || '';
-        const match = backgroundImage.match(/url\(["']?(.*?)["']?\)/);
-        const imageUrl = match?.[1] || '';
-        let loaded = false;
-        let naturalWidth = 0;
-        let naturalHeight = 0;
-        if (imageUrl) {
-          const image = new Image();
-          loaded = await new Promise(resolve => {
-            const timeout = setTimeout(() => resolve(false), 30_000);
-            image.onload = () => { clearTimeout(timeout); resolve(true); };
-            image.onerror = () => { clearTimeout(timeout); resolve(false); };
-            image.src = imageUrl;
-          });
-          naturalWidth = image.naturalWidth;
-          naturalHeight = image.naturalHeight;
-        }
-        return { backgroundImage, imageUrl, loaded, naturalWidth, naturalHeight, width: rect.width, height: rect.height };
+        const style = getComputedStyle(element);
+        return {
+          src: element.currentSrc || element.src,
+          naturalWidth: element.naturalWidth,
+          naturalHeight: element.naturalHeight,
+          opacity: Number.parseFloat(style.opacity || '1'),
+          visibility: style.visibility,
+          display: style.display,
+          width: rect.width,
+          height: rect.height,
+        };
       });
-      assert(productProof.backgroundImage.includes('hero-human-realui.webp'), `${viewport.name}: integrated MiraScribe artwork is not the visible filmmaker surface`);
-      assert(productProof.loaded && productProof.naturalWidth > 0 && productProof.naturalHeight > 0, `${viewport.name}: integrated MiraScribe artwork failed to load`);
-      assert(productProof.width >= (viewport.name === 'desktop' ? 360 : 280) && productProof.height >= 260, `${viewport.name}: product-in-use artwork collapsed`);
+      assert(heroProof.src.includes('/images/mirascribe/hero-human-realui.webp'), `${viewport.name}: the required MiraScribe-on-Mac artwork is not the hero image`);
+      assert(heroProof.naturalWidth >= 700 && heroProof.naturalHeight >= 500, `${viewport.name}: hero artwork is not the verified 730×520 in-use asset`);
+      assert(heroProof.opacity > 0.9 && heroProof.visibility !== 'hidden' && heroProof.display !== 'none', `${viewport.name}: in-use hero artwork is visually suppressed`);
+      assert(heroProof.width >= (viewport.name === 'desktop' ? 360 : 280) && heroProof.height >= 300, `${viewport.name}: in-use hero artwork collapsed`);
+
+      const filmmakerArtwork = page.locator('.mira-mkt__human-art--filmmaker img');
+      assert(await filmmakerArtwork.count() === 1, `${viewport.name}: filmmaker context artwork is missing`);
+      const filmmakerProof = await filmmakerArtwork.evaluate(element => {
+        const rect = element.getBoundingClientRect();
+        const style = getComputedStyle(element);
+        return {
+          src: element.currentSrc || element.src,
+          naturalWidth: element.naturalWidth,
+          naturalHeight: element.naturalHeight,
+          opacity: Number.parseFloat(style.opacity || '1'),
+          visibility: style.visibility,
+          display: style.display,
+          width: rect.width,
+          height: rect.height,
+        };
+      });
+      assert(filmmakerProof.src.includes('/images/mirascribe/filmmaker-composite.png'), `${viewport.name}: filmmaker context image changed unexpectedly`);
+      assert(filmmakerProof.naturalWidth > 0 && filmmakerProof.naturalHeight > 0, `${viewport.name}: filmmaker context image failed to load`);
+      assert(filmmakerProof.opacity > 0.9 && filmmakerProof.visibility !== 'hidden' && filmmakerProof.display !== 'none', `${viewport.name}: filmmaker context image is visually suppressed`);
+      assert(filmmakerProof.width >= (viewport.name === 'desktop' ? 300 : 260) && filmmakerProof.height >= 260, `${viewport.name}: filmmaker context artwork collapsed`);
 
       const workflowCards = await page.locator('.mira-mkt__workflow-grid > article').count();
       assert(workflowCards === 4, `${viewport.name}: workflow must contain four visible steps`);
@@ -135,4 +144,4 @@ try {
   await browser.close();
 }
 
-console.log(JSON.stringify({ status: 'PASS', route: '/mirascribe', contract: 'human-led-with-one-integrated-product-in-use-proof' }, null, 2));
+console.log(JSON.stringify({ status: 'PASS', route: '/mirascribe', contract: 'human-led-with-one-in-use-hero-proof' }, null, 2));
