@@ -29,6 +29,84 @@
     rgba(7, 13, 25, 0.72);
 }
 
+/* ---------- Real UI compositing for human artwork ---------- */
+
+/*
+ * The source human artworks were intentionally captured with replaceable
+ * display areas. Never ship the chroma-green placeholders as product UI.
+ * These overlays use the real current MiraScribe screenshots already shipped
+ * by the page and keep the base photography untouched.
+ */
+.mira-mkt__screen-composite {
+  position: relative;
+  isolation: isolate;
+}
+
+.mira-mkt section[aria-labelledby="ms-audience-heading"] .mira-mkt__screen-composite-base {
+  position: relative;
+  z-index: 1;
+  width: 100% !important;
+}
+
+.mira-mkt section[aria-labelledby="ms-audience-heading"] .mira-mkt__screen-overlay {
+  position: absolute !important;
+  z-index: 4;
+  display: block;
+  min-height: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 3px !important;
+  background: #f5f7fa;
+  box-shadow:
+    0 0 0 1px rgba(12, 18, 28, 0.28),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08) !important;
+  object-fit: cover !important;
+  object-position: left top !important;
+  pointer-events: none;
+  user-select: none;
+  filter: brightness(0.9) contrast(0.96) saturate(0.88);
+}
+
+/* Student MacBook screen: replace the green-edged placeholder with real UI. */
+.mira-mkt section[aria-labelledby="ms-audience-heading"] .mira-mkt__screen-overlay--student {
+  left: 9.8%;
+  top: 49.6%;
+  width: 27.7% !important;
+  height: 24.6% !important;
+  transform: perspective(900px) rotate(-10.2deg) skewY(-3.8deg);
+  transform-origin: center center;
+  clip-path: polygon(5% 4%, 91% 0, 100% 79%, 15% 100%);
+}
+
+/*
+ * Filmmaker external display. The overlay deliberately extends to the right
+ * image edge so the exposed green monitor is fully covered on desktop/mobile.
+ */
+.mira-mkt section[aria-labelledby="ms-audience-heading"] .mira-mkt__screen-overlay--filmmaker-monitor {
+  right: -1.2%;
+  top: 15.2%;
+  width: 26.6% !important;
+  height: 37.2% !important;
+  transform: perspective(1000px) rotateY(-2deg) skewY(-1deg);
+  transform-origin: right center;
+  clip-path: polygon(6% 4%, 100% 0, 100% 100%, 0 93%);
+  object-position: 38% 18% !important;
+  filter: brightness(0.72) contrast(1.04) saturate(0.82);
+}
+
+/* Filmmaker MacBook screen: cover both chroma green and the white paste artifact. */
+.mira-mkt section[aria-labelledby="ms-audience-heading"] .mira-mkt__screen-overlay--filmmaker-laptop {
+  left: 68.5%;
+  top: 43.0%;
+  width: 21.8% !important;
+  height: 29.0% !important;
+  transform: perspective(800px) rotate(6.4deg) skewY(1.4deg);
+  transform-origin: center center;
+  clip-path: polygon(5% 0, 94% 7%, 100% 84%, 0 100%);
+  object-position: 8% 10% !important;
+  filter: brightness(0.88) contrast(0.98) saturate(0.86);
+}
+
 /* ---------- Rendered composition refinement ---------- */
 
 /*
