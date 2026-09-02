@@ -41,8 +41,15 @@ export default function MiraScribePage() {
             </div>
           </div>
           <figure className="ms-editorial-hero__image">
-            <img src="/images/mirascribe/mirascribe-hero-hd.webp?v=2" alt="Video editor using MiraScribe on a MacBook with the MiraScribe interface visible within the computer display." loading="eager" fetchPriority="high" decoding="async" />
-            <figcaption>Real product UI, kept inside the physical Mac display.</figcaption>
+            <img
+              src="/images/mirascribe/mirascribe-workspace-dark.webp"
+              width="2197"
+              height="950"
+              alt="The MiraScribe workspace on macOS: the Transcribe, Live Capture, Library and Settings sidebar, a drop area for audio or video, the supported formats, and a Recent transcripts list."
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+            />
           </figure>
         </section>
 
@@ -60,25 +67,21 @@ export default function MiraScribePage() {
             <h2 className="mira-mkt__heading" id="ms-audience-heading">Read first. Return to the recording when it matters.</h2>
           </div>
 
-          <article className="ms-editorial-story">
-            <figure>
-              <img src="/images/mirascribe/student-composite.png" alt="Student studying beside a MacBook after recording a lecture." loading="lazy" decoding="async" />
-            </figure>
-            <div>
-              <p className="mira-mkt__usecase-kicker">Study</p>
-              <h3>A lecture shouldn’t disappear when the class ends.</h3>
-              <p>Where recording is permitted, turn a lecture or lesson into text you can search while studying. Find the name, formula, date, definition, or explanation you need, then go back to that part.</p>
+          <article className="ms-editorial-text-story">
+            <p className="mira-mkt__usecase-kicker">Study</p>
+            <h3>A lecture shouldn’t disappear when the class ends.</h3>
+            <p>Where recording is permitted, turn a lecture or lesson into text you can search while studying. Find the name, formula, date, definition, or explanation you need, then go back to that part.</p>
+            <div className="ms-editorial-proof" aria-label="Study workflow">
+              <span>Lecture</span><i>→</i><span>Transcript</span><i>→</i><span>Search</span><i>→</i><span>Timestamp</span>
             </div>
           </article>
 
-          <article className="ms-editorial-story ms-editorial-story--reverse">
-            <figure>
-              <img src="/images/mirascribe/filmmaker-composite.png" alt="Video editor working with recorded footage in a home editing studio." loading="lazy" decoding="async" />
-            </figure>
-            <div>
-              <p className="mira-mkt__usecase-kicker">Post-production</p>
-              <h3>Stop scrubbing timelines. Search the dialogue.</h3>
-              <p>Transcribe interviews, dialogue, documentary footage, or other recorded material. Search for the line you remember, use its timestamp to return to the source, and export SRT or VTT when subtitles are needed.</p>
+          <article className="ms-editorial-text-story">
+            <p className="mira-mkt__usecase-kicker">Post-production</p>
+            <h3>Stop scrubbing timelines. Search the dialogue.</h3>
+            <p>Transcribe interviews, dialogue, documentary footage, or other recorded material. Search for the line you remember, use its timestamp to return to the source, and export SRT or VTT when subtitles are needed.</p>
+            <div className="ms-editorial-proof" aria-label="Post-production workflow">
+              <span>Footage</span><i>→</i><span>Dialogue</span><i>→</i><span>SRT / VTT</span><i>→</i><span>Timeline</span>
             </div>
           </article>
 

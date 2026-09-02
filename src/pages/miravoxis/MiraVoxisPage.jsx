@@ -14,7 +14,6 @@ import { setDocumentMeta } from '../../lib/documentMeta';
 
 const voxis = productCapabilities.miravoxis;
 const meta = productPageMeta.miravoxis;
-const icon = APP_IDENTITY_ASSETS.miravoxis.icon192;
 const generationNames = voxis.speechGenerationLanguages.map(language => language.name).join(' and ');
 
 const STUDIO_STEPS = [
@@ -26,7 +25,6 @@ const STUDIO_STEPS = [
   ['06', 'Speech', 'After the local engine is installed, generate on this Mac and export the result.'],
 ];
 
-const HERO_BARS = [24, 38, 55, 31, 71, 44, 62, 29, 83, 52, 36, 68, 47, 76, 41, 59, 32, 72, 49, 63, 37, 78, 45, 58];
 
 export default function MiraVoxisPage() {
   useEffect(() => {
@@ -49,7 +47,6 @@ export default function MiraVoxisPage() {
         <section className="mira-mkt__hero mx-studio-hero" aria-label="Product introduction">
           <div className="mx-studio-hero__copy">
             <p className="mira-mkt__eyebrow">A Miravelys product · local voice studio</p>
-            <img src={icon} width={70} height={70} alt="MiraVoxis app icon" />
             <h1 className="mira-mkt__hero-title">Give written words a voice you can direct.</h1>
             <p className="mira-mkt__lead">MiraVoxis reads the sentence before it generates speech — then it speaks from the words you wrote and the performance you set.</p>
             <p className="mira-mkt__lead">Production speech generation currently supports {generationNames}. After the voice engine is installed, inference runs locally on this Mac.</p>
@@ -59,17 +56,17 @@ export default function MiraVoxisPage() {
             </div>
           </div>
 
-          <div className="mx-studio-hero__stage" aria-label="Explanatory performance-direction visual">
-            <p className="mx-studio-hero__stage-label">Performance direction</p>
-            <p className="mx-studio-hero__line">I didn’t say <strong>she</strong> stole the money.</p>
-            <div className="mx-studio-hero__signal" aria-hidden="true">
-              {HERO_BARS.map((height, index) => <i key={`${height}-${index}`} style={{ '--mx-bar': `${height}%` }} />)}
-            </div>
-            <div className="mx-studio-hero__flow" aria-label="Text to performance to voice">
-              <span>Text</span><b aria-hidden="true">→</b><span>Performance</span><b aria-hidden="true">→</b><span>Voice</span>
-            </div>
-            <small>Explanatory visual. The website does not generate speech.</small>
-          </div>
+          <figure className="mx-studio-hero__stage" aria-label="The MiraVoxis Voice Studio on macOS">
+            <img
+              src="/images/miravoxis/miravoxis-voice-inspector.webp"
+              width="2040"
+              height="790"
+              alt="The MiraVoxis Voice Studio on macOS: the Automatic Voice narrator, English running on the VoxCPM2 model with the offline model ready, and the Voice Inspector showing Natural or Studio quality with Expression at 15 percent and Pace at 1.00×."
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+            />
+          </figure>
         </section>
 
         <MiraVoxisPerformanceDemo />

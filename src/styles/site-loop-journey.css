@@ -5,8 +5,12 @@
  */
 
 .site-shell--keynote {
-  --loop-serif: 'Cormorant Garamond', Georgia, serif;
-  --loop-sans: 'Inter', system-ui, sans-serif;
+  --loop-serif: var(--font-display);
+  --loop-sans: var(--font-ui);
+  /* The sticky header is 74px of normal flow at every breakpoint (measured).
+   * The hero pulls that back so its own ground reaches the top of the page
+   * and the header pill floats on it, instead of on a dark strip. */
+  --loop-header-space: 74px;
   --loop-ink: #16201f;
   --loop-ink-soft: rgba(22, 32, 31, 0.72);
   --loop-ivory: #f2efe9;
@@ -75,17 +79,21 @@ html:lang(hi) .site-shell--keynote {
 .site-shell--keynote .hero-section--loop {
   position: relative;
   isolation: isolate;
-  width: var(--loop-page);
+  width: 100%;
+  max-width: none;
   min-height: min(760px, 100svh);
-  margin: 0 auto;
-  padding: clamp(116px, 16vh, 172px) 0 clamp(64px, 9vh, 108px);
+  margin: calc(-1 * var(--loop-header-space)) 0 0;
+  padding:
+    calc(clamp(116px, 16vh, 172px) + var(--loop-header-space))
+    max(0px, calc((100% - var(--loop-page)) / 2))
+    clamp(64px, 9vh, 108px);
   overflow: clip;
 }
 
 .loop-hero__atmosphere {
   position: absolute;
   z-index: -1;
-  inset: 0 calc(50% - 50vw);
+  inset: 0;
   overflow: hidden;
   background:
     radial-gradient(76% 72% at 82% 32%, rgba(244, 197, 142, 0.68) 0%, rgba(244, 197, 142, 0.04) 58%, transparent 72%),
@@ -171,15 +179,15 @@ html:lang(hi) .site-shell--keynote {
 .site-shell--keynote .founder-essay h2 {
   font-family: var(--loop-serif);
   font-weight: 500;
-  letter-spacing: -0.045em;
+  letter-spacing: -0.028em;
   text-wrap: balance;
 }
 
 .site-shell--keynote .loop-hero__copy h1 {
-  max-width: 12.5ch;
+  max-width: 15ch;
   margin: 0;
   font-size: clamp(3rem, 2.08rem + 3.1vw, 5.35rem);
-  line-height: 0.94;
+  line-height: 0.98;
   color: var(--loop-ink);
 }
 
@@ -229,10 +237,10 @@ html:lang(hi) .site-shell--keynote {
 }
 
 .site-shell--keynote .loop-hero__lead {
-  max-width: 37rem;
+  max-width: var(--measure-lede);
   margin: clamp(22px, 3vw, 32px) 0 0;
-  font-size: clamp(1.02rem, 0.96rem + 0.28vw, 1.2rem);
-  line-height: 1.62;
+  font-size: var(--type-lede);
+  line-height: 1.45;
   color: var(--loop-ink-soft);
 }
 
@@ -258,39 +266,63 @@ html:lang(hi) .site-shell--keynote {
 .loop-early-access-note svg { flex: 0 0 auto; }
 
 .site-shell--keynote .loop-hero__actions .keynote-cta,
-.site-shell--keynote .loop-finale .keynote-cta,
 .site-shell--keynote .founder-essay__cta .keynote-cta {
-  min-height: 48px;
-  padding: 12px 20px;
-  color: var(--loop-ivory);
-  background: var(--loop-harbor);
-  border-color: var(--loop-harbor);
-  box-shadow: 0 13px 30px rgba(6, 24, 24, 0.19);
+  min-height: 52px;
+  padding: 0 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 999px;
+  font-family: var(--font-ui, 'Instrument Sans', system-ui, sans-serif);
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--loop-ivory, #f6f3ec);
+  background: var(--loop-harbor, #08201f);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 14px 32px rgba(6, 24, 24, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  text-decoration: none;
+  transition:
+    background-color 0.25s cubic-bezier(0.25, 1, 0.4, 1),
+    color 0.25s cubic-bezier(0.25, 1, 0.4, 1),
+    border-color 0.25s cubic-bezier(0.25, 1, 0.4, 1),
+    box-shadow 0.25s cubic-bezier(0.25, 1, 0.4, 1),
+    transform 0.25s cubic-bezier(0.25, 1, 0.4, 1);
 }
 
 .site-shell--keynote .loop-hero__actions .keynote-cta:hover,
 .site-shell--keynote .founder-essay__cta .keynote-cta:hover {
-  color: var(--loop-harbor);
-  background: var(--loop-sea);
-  border-color: var(--loop-sea);
+  color: #08201f;
+  background: #42e0d4;
+  border-color: #42e0d4;
+  box-shadow: 0 16px 36px rgba(66, 224, 212, 0.32), 0 4px 12px rgba(6, 24, 24, 0.15);
+  transform: translateY(-1px);
+}
+
+.site-shell--keynote .loop-hero__actions .keynote-cta:active,
+.site-shell--keynote .founder-essay__cta .keynote-cta:active {
+  transform: translateY(1px) scale(0.99);
 }
 
 .loop-text-link,
 .site-shell--keynote .loop-text-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  min-height: 44px;
-  color: currentColor;
-  font-size: 0.94rem;
+  gap: 10px;
+  min-height: 52px;
+  color: #16201f;
+  font-size: 0.95rem;
   font-weight: 600;
   line-height: 1.35;
   text-decoration: none;
-  border-bottom: 1px solid currentColor;
-  transition: gap 0.25s var(--mira-ease-cinematic), color 0.25s ease;
+  border-bottom: 1px solid rgba(6, 24, 24, 0.28);
+  transition: gap 0.25s cubic-bezier(0.25, 1, 0.4, 1), border-bottom-color 0.2s ease, color 0.2s ease;
 }
 
-.loop-text-link:hover {
+.loop-text-link:hover,
+.site-shell--keynote .loop-text-link:hover {
+  border-bottom-color: #16201f;
   gap: 12px;
 }
 
@@ -317,7 +349,7 @@ html:lang(hi) .site-shell--keynote {
 
 .loop-hero__phone.iphone13-frame {
   --iphone13-width: clamp(250px, 26vw, 342px);
-  transform: rotate(4deg);
+  transform: none;
   box-shadow: 0 37px 76px rgba(6, 24, 24, 0.32), 0 11px 22px rgba(6, 24, 24, 0.18);
 }
 
@@ -651,7 +683,7 @@ html:lang(hi) .site-shell--keynote {
 
 .loop-support-card__phone.iphone13-frame {
   --iphone13-width: clamp(156px, 14vw, 220px);
-  transform: rotate(4deg) translateY(17px);
+  transform: translateY(17px);
   box-shadow: 0 26px 48px rgba(6, 24, 24, 0.3);
 }
 
@@ -738,7 +770,7 @@ html:lang(hi) .site-shell--keynote {
 
 .loop-trust__phone.iphone13-frame {
   --iphone13-width: clamp(224px, 24vw, 320px);
-  transform: rotate(-3deg);
+  transform: none;
   box-shadow: 0 35px 70px rgba(34, 45, 42, 0.26), 0 0 0 9px rgba(66, 224, 212, 0.05);
 }
 
@@ -816,16 +848,45 @@ html:lang(hi) .site-shell--keynote {
   color: rgba(242, 239, 233, 0.72);
 }
 
+.site-shell--keynote .loop-finale .keynote-cta,
 .loop-finale .keynote-cta {
+  min-height: 54px;
+  padding: 0 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 999px;
+  font-family: var(--font-ui, 'Instrument Sans', system-ui, sans-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   margin-top: 31px;
-  color: var(--loop-harbor) !important;
-  background: var(--loop-ivory) !important;
-  border-color: var(--loop-ivory) !important;
+  color: #08201f !important;
+  background: #f6f3ec !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+  transition:
+    background-color 0.25s cubic-bezier(0.25, 1, 0.4, 1),
+    color 0.25s cubic-bezier(0.25, 1, 0.4, 1),
+    border-color 0.25s cubic-bezier(0.25, 1, 0.4, 1),
+    box-shadow 0.25s cubic-bezier(0.25, 1, 0.4, 1),
+    transform 0.25s cubic-bezier(0.25, 1, 0.4, 1);
 }
 
+.site-shell--keynote .loop-finale .keynote-cta:hover,
 .loop-finale .keynote-cta:hover {
-  background: var(--loop-sea) !important;
-  border-color: var(--loop-sea) !important;
+  background: #42e0d4 !important;
+  color: #08201f !important;
+  border-color: #42e0d4 !important;
+  box-shadow: 0 8px 24px rgba(66, 224, 212, 0.35);
+  transform: translateY(-1px);
+}
+
+.site-shell--keynote .loop-finale .keynote-cta:active,
+.loop-finale .keynote-cta:active {
+  transform: translateY(1px) scale(0.99);
 }
 
 .loop-finale .loop-early-access-note--finale {
@@ -1310,7 +1371,7 @@ html:lang(hi) .site-shell--keynote {
 
   .loop-trust__phone.iphone13-frame {
     --iphone13-width: min(58vw, 250px);
-    transform: rotate(-2deg);
+    transform: none;
   }
 
   .loop-founder-teaser { padding: 52px 16px; }

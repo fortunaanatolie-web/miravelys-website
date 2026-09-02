@@ -1,0 +1,73 @@
+/*
+ * Public-site stylesheet entry point.
+ *
+ * WHY THIS FILE EXISTS
+ * Load order used to live as 30 import statements in main.jsx, where it was
+ * invisible and easy to disturb. Whichever file loaded last won, which is how
+ * "-fixes", "-artwork-fixes" and "-recovery-tweaks" came to exist. Order is now
+ * declared here, in one place, grouped by what each file is responsible for.
+ *
+ * LAYERS
+ *   app       every stylesheet below, in the order listed.
+ *   products  per-product theming. Empty today. A rule here beats any normal
+ *             rule in `app` regardless of specificity, so a new product in the
+ *             family can theme itself without a specificity fight.
+ *   overrides last resort, above both.
+ *
+ * Everything currently shipping sits in ONE layer on purpose. The tree carries
+ * 305 !important declarations that encode today's load order, and !important
+ * reverses under layers — an earlier layer wins. Splitting `app` into finer
+ * layers therefore has to follow the !important cleanup, not precede it.
+ *
+ * Two stylesheets are deliberately absent: mockup-screens.css and
+ * site-screen-story.css are imported by the components that own them and load
+ * with their chunks.
+ */
+
+@layer app, products, overrides;
+
+/* Foundation — tokens, reset, page ground, motion primitives. */
+@import './site-base.css' layer(app);
+@import './site-tokens.css' layer(app);
+@import './site-atmosphere.css' layer(app);
+@import './site-responsive.css' layer(app);
+@import './site-interactions.css' layer(app);
+@import './site-layout-fluid.css' layer(app);
+@import './site-cinematic.css' layer(app);
+@import './site-cross-browser.css' layer(app);
+
+/* Chrome — header, navigation, device frames, modals. */
+@import './site-header.css' layer(app);
+@import './site-motion.css' layer(app);
+@import './site-breakpoints.css' layer(app);
+@import './site-phone-mockup.css' layer(app);
+@import './site-mobile-shell.css' layer(app);
+@import './site-screenshot-placeholder.css' layer(app);
+@import './site-early-access-modal.css' layer(app);
+
+/* Shared marketing surface. */
+@import './site-marketing.css' layer(app);
+@import './site-beauty.css' layer(app);
+@import './site-appearance.css' layer(app);
+@import './site-typography.css' layer(app);
+
+/* Miravelys — the home journey. */
+@import './site-loop-journey.css' layer(app);
+
+/* MiraScribe. The three files after the first are historical patch layers;
+ * they belong inside site-mirascribe-marketing.css and are queued to be
+ * folded in once their !important declarations are resolved. */
+@import './site-mirascribe.css' layer(app);
+@import './site-mirascribe-marketing.css' layer(app);
+@import './site-mirascribe-marketing-fixes.css' layer(app);
+@import './site-mirascribe-artwork-fixes.css' layer(app);
+@import './site-mirascribe-recovery-tweaks.css' layer(app);
+
+/* MiraVoxis. */
+@import './site-miravoxis.css' layer(app);
+
+/* Cross-product ecosystem composition, applied over the product layers. */
+@import './site-premium-ecosystem.css' layer(app);
+@import './site-premium-product-pages.css' layer(app);
+@import './site-premium-evidence-refinement.css' layer(app);
+@import './site-miravoxis-studio-refinement.css' layer(app);

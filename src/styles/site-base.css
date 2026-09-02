@@ -5,11 +5,38 @@
  * entrypoint for the public marketing routes while the legacy source remains
  * available in src/index.css for historical reference.
  */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
-
+/*
+ * Type system.
+ *
+ * The family is held together by shared ROLES and a shared SCALE, not by one
+ * shared typeface. Each product binds its own face to --font-display, so a new
+ * product joins the family by choosing one typeface and inheriting everything
+ * else. The text and UI faces are shared: they are the thread.
+ *
+ * Fonts are requested from the <link> in index.html, not from an @import here,
+ * so the browser can start fetching them before this stylesheet has parsed.
+ */
 :root {
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-text: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-ui: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Legacy role aliases. Both resolve per-product, because custom properties
+   * are substituted in the context of the element that uses them. */
+  --font-serif: var(--font-display);
+  --font-sans: var(--font-ui);
+
+  /* One scale, five steps. --type-lede is the step the sites were missing:
+   * the size that carries a reader from a headline into body copy. */
+  --type-display: clamp(2.75rem, 1.6rem + 4.6vw, 5rem);
+  --type-lede: clamp(1.28rem, 1.16rem + 0.5vw, 1.5rem);
+  --type-body: clamp(1.0625rem, 1.02rem + 0.2vw, 1.125rem);
+  --type-caption: 0.9375rem;
+  --type-label: 0.75rem;
+
+  --measure-lede: 46ch;
+  --measure-body: 66ch;
+
   color-scheme: light;
   background: #f3ede1;
   color: #16201f;
@@ -34,7 +61,8 @@ body {
   min-width: 320px;
   background: #f3ede1;
   color: #16201f;
-  font-family: var(--font-sans);
+  font-family: var(--font-text);
+  font-size: var(--type-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
@@ -264,4 +292,34 @@ textarea {
   .skip-link:focus-visible {
     transition: none !important;
   }
+}
+
+
+/* ---------------------------------------------------------------------------
+   Per-product display faces.
+
+   Everything else — the scale, the spacing, the geometry, the text and UI
+   faces — is shared. A new product in the family binds one line here.
+   --------------------------------------------------------------------------- */
+
+.ms-shell { --font-display: 'Instrument Sans', system-ui, -apple-system, sans-serif; }
+.mx-shell { --font-display: 'Archivo', system-ui, -apple-system, sans-serif; }
+
+/* Chrome, controls and labels are always the UI face, never the text face. */
+button,
+input,
+select,
+textarea,
+kbd,
+.mira-mkt__eyebrow,
+.mira-mkt__usecase-kicker,
+.ms-btn,
+.mx-btn,
+.keynote-cta,
+.ms-nav,
+.mx-nav,
+.site-header,
+.ms-editorial-proof,
+.mx-studio-hero__flow {
+  font-family: var(--font-ui);
 }

@@ -84,13 +84,18 @@ try {
         naturalHeight: element.naturalHeight,
         box: element.getBoundingClientRect().toJSON(),
       }));
-      assert(heroProof.src.includes('/images/mirascribe/mirascribe-hero-hd.webp'), `${viewport.name}: approved hero is not active`);
+      assert(heroProof.src.includes('/images/mirascribe/mirascribe-workspace-dark.webp'), `${viewport.name}: approved hero is not active`);
       assert(heroProof.naturalWidth >= 800 && heroProof.naturalHeight >= 450, `${viewport.name}: hero source is below the established repository delivery floor`);
       assert(heroProof.box.width >= (viewport.name === 'desktop' ? 500 : 300), `${viewport.name}: hero collapsed`);
       assert(heroProof.naturalWidth >= heroProof.box.width * 1.15, `${viewport.name}: hero source width is insufficient for its rendered size (${heroProof.naturalWidth}px source / ${Math.round(heroProof.box.width)}px rendered)`);
       assert(heroProof.naturalHeight >= heroProof.box.height * 1.15, `${viewport.name}: hero source height is insufficient for its rendered size (${heroProof.naturalHeight}px source / ${Math.round(heroProof.box.height)}px rendered)`);
 
-      assert(await page.locator('.ms-editorial-story img').count() === 2, `${viewport.name}: study/film editorial photography is incomplete`);
+      assert(await page.locator('.ms-editorial-story').count() === 0, `${viewport.name}: a photo-led use-case block is still present`);
+      assert(await page.locator('.ms-editorial-text-story').count() === 3, `${viewport.name}: expected three text-led use cases`);
+      const stockSources = await page.evaluate(() => Array.from(document.images)
+        .map(image => image.currentSrc || image.src)
+        .filter(source => /(hero-hd|composite|journalist|lifestyle)/i.test(source)));
+      assert(stockSources.length === 0, `${viewport.name}: stock photography is still being served (${stockSources.join(', ')})`);
       assert(await page.locator('.ms-search-demo').count() === 1, `${viewport.name}: transcript search instrument missing`);
       await page.getByRole('button', { name: 'deadline' }).click();
       await page.getByText('32:18', { exact: true }).waitFor({ state: 'visible' });

@@ -233,11 +233,10 @@
 
 .ms-editorial-hero {
   display: grid;
-  grid-template-columns: minmax(0, .78fr) minmax(520px, 1.22fr);
-  align-items: center;
-  gap: clamp(3.5rem, 7vw, 8rem);
-  min-height: max(720px, calc(100svh - 52px));
-  padding: clamp(5rem, 10vh, 8rem) 0 clamp(6rem, 11vh, 9rem);
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(3rem, 6vw, 5rem);
+  min-height: 0;
+  padding: clamp(2.5rem, 5vh, 4rem) 0 clamp(6rem, 11vh, 9rem);
 }
 
 .ms-editorial-hero__copy { max-width: 40rem; }
@@ -248,21 +247,22 @@
 }
 
 .ms-editorial .mira-mkt__hero-title {
-  max-width: 9.6ch;
+  max-width: 20ch;
   margin-bottom: 1.7rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: clamp(4.25rem, 7vw, 7.5rem);
-  font-weight: 640;
-  line-height: .91;
-  letter-spacing: -.065em;
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 6vw, 6.5rem);
+  font-weight: 600;
+  line-height: .96;
+  letter-spacing: -.035em;
+  text-wrap: balance;
 }
 
 .ms-editorial-hero__lead {
-  max-width: 33rem;
+  max-width: var(--measure-lede);
   margin: 0 0 1rem;
   color: rgba(245,245,242,.92);
-  font-size: clamp(1.22rem, 1.7vw, 1.52rem);
-  line-height: 1.48;
+  font-size: var(--type-lede);
+  line-height: 1.45;
 }
 
 .ms-editorial .mira-mkt__lead {
@@ -279,19 +279,18 @@
 
 .ms-editorial-hero__image {
   margin: 0;
-  align-self: stretch;
-  min-height: 520px;
-  display: grid;
-  align-content: center;
+  width: 100%;
+  min-height: 0;
+  display: block;
 }
 
 .ms-editorial-hero__image img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 2px;
+  border-radius: 4px;
   border: 0;
-  box-shadow: 0 28px 80px rgba(0,0,0,.35);
+  box-shadow: 0 2px 4px rgba(0,0,0,.28), 0 24px 48px rgba(0,0,0,.34), 0 48px 96px rgba(0,0,0,.24);
   transform: none;
 }
 
@@ -446,7 +445,7 @@
 .ms-demo-button { min-height: 44px; padding: .7rem .95rem; border: 1px solid var(--ms-border); border-radius: 10px; color: var(--ms-text); background: var(--ms-surface-raised); box-shadow: inset 0 1px 0 rgba(255,255,255,.05), 0 4px 12px rgba(0,0,0,.24); font-weight: 600; }
 
 .ms-editorial-audiences { padding: clamp(8rem, 14vw, 13rem) 0 0; }
-.ms-editorial-audiences__intro { max-width: 56rem; margin-bottom: clamp(5rem, 9vw, 8rem); }
+.ms-editorial-audiences__intro { max-width: 56rem; margin-bottom: clamp(3rem, 6vw, 5rem); }
 
 .ms-editorial-story {
   display: grid;
@@ -465,7 +464,8 @@
 .ms-editorial-text-story p { max-width: 44rem; color: var(--ms-text-secondary); font-size: clamp(1.03rem,1.25vw,1.17rem); line-height: 1.72; }
 .mira-mkt__usecase-kicker { color: var(--ms-blue); font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
 
-.ms-editorial-text-story { max-width: 920px; margin: 0 auto; padding: clamp(7rem, 12vw, 11rem) 0; border-block: 1px solid var(--ms-border); }
+.ms-editorial-text-story { max-width: 920px; margin: 0 auto; padding: clamp(5rem, 9vw, 8rem) 0; border-block-start: 1px solid var(--ms-border); border-block-end: 0; }
+.ms-editorial-text-story:last-of-type { border-block-end: 1px solid var(--ms-border); }
 .ms-editorial-proof { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1rem; margin-top: 2.3rem; color: rgba(235,237,241,.82); font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
 .ms-editorial-proof i { color: var(--ms-blue); font-style: normal; }
 
@@ -560,7 +560,7 @@
 
 .mx-btn--primary {
   border: 1px solid rgba(255,255,255,.11);
-  background: linear-gradient(180deg, #dcb071, #ad783d);
+  background: #c89355;
   color: #17110b;
   box-shadow: inset 0 1px 0 rgba(255,255,255,.32), 0 2px 2px rgba(0,0,0,.5), 0 10px 28px rgba(0,0,0,.3);
 }
@@ -670,7 +670,7 @@
 
 @media (max-width: 1024px) {
   .site-shell--keynote .loop-hero__copy h1 { font-size: clamp(3.7rem, 8vw, 6.2rem); }
-  .ms-editorial-hero { grid-template-columns: minmax(0,.9fr) minmax(420px,1.1fr); gap: 3rem; }
+  .ms-editorial-hero { gap: 3rem; }
   .ms-editorial .mira-mkt__hero-title { font-size: clamp(3.8rem,7vw,6rem); }
   .ms-search-demo,
   .ms-editorial-workflow,

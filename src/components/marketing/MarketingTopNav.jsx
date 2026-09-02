@@ -151,7 +151,9 @@ export default function MarketingTopNav({
               onNavClick={onNavClick}
               onEarlyAccessClick={onEarlyAccessClick}
               className="top-nav__cta"
-            />
+            >
+              {headerCopy.download}
+            </MarketingCta>
             <button
               ref={menuButtonRef}
               type="button"

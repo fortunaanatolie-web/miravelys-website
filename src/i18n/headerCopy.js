@@ -9,6 +9,7 @@ export const headerCopy = {
     chooseLanguage: 'Choose language',
     homeLabel: 'Miravelys home',
     skipToContent: 'Skip to content',
+    download: 'Download',
   },
   ru: {
     openMenu: 'Открыть меню',
@@ -18,6 +19,7 @@ export const headerCopy = {
     chooseLanguage: 'Выбор языка',
     homeLabel: 'Главная Miravelys',
     skipToContent: 'Перейти к содержанию',
+    download: 'Скачать',
   },
   ro: {
     openMenu: 'Deschide meniul',
@@ -27,6 +29,7 @@ export const headerCopy = {
     chooseLanguage: 'Alege limba',
     homeLabel: 'Pagina principală Miravelys',
     skipToContent: 'Sari la conținut',
+    download: 'Descarcă',
   },
   fr: {
     openMenu: 'Ouvrir le menu',
@@ -36,6 +39,7 @@ export const headerCopy = {
     chooseLanguage: 'Choisir la langue',
     homeLabel: 'Accueil Miravelys',
     skipToContent: 'Aller au contenu',
+    download: 'Télécharger',
   },
   hi: {
     openMenu: 'मेनू खोलें',
@@ -45,6 +49,7 @@ export const headerCopy = {
     chooseLanguage: 'भाषा चुनें',
     homeLabel: 'Miravelys होम',
     skipToContent: 'सामग्री पर जाएँ',
+    download: 'डाउनलोड',
   },
   zh: {
     openMenu: '打开菜单',
@@ -54,6 +59,7 @@ export const headerCopy = {
     chooseLanguage: '选择语言',
     homeLabel: 'Miravelys 首页',
     skipToContent: '跳到内容',
+    download: '下载',
   },
   de: {
     openMenu: 'Menü öffnen',
@@ -63,6 +69,7 @@ export const headerCopy = {
     chooseLanguage: 'Sprache wählen',
     homeLabel: 'Miravelys Startseite',
     skipToContent: 'Zum Inhalt springen',
+    download: 'Laden',
   },
   ja: {
     openMenu: 'メニューを開く',
@@ -72,6 +79,7 @@ export const headerCopy = {
     chooseLanguage: '言語を選択',
     homeLabel: 'Miravelys ホーム',
     skipToContent: 'コンテンツへスキップ',
+    download: 'ダウンロード',
   },
   es: {
     openMenu: 'Abrir menú',
@@ -81,6 +89,7 @@ export const headerCopy = {
     chooseLanguage: 'Elegir idioma',
     homeLabel: 'Inicio de Miravelys',
     skipToContent: 'Ir al contenido',
+    download: 'Descargar',
   },
   pt: {
     openMenu: 'Abrir menu',
@@ -90,6 +99,7 @@ export const headerCopy = {
     chooseLanguage: 'Escolher idioma',
     homeLabel: 'Início Miravelys',
     skipToContent: 'Ir para o conteúdo',
+    download: 'Baixar',
   },
 };
 

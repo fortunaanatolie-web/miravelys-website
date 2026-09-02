@@ -7,11 +7,10 @@
 
 .mx-studio-page .mx-studio-hero.mira-mkt__hero {
   display: grid !important;
-  grid-template-columns: minmax(0, .82fr) minmax(440px, 1.18fr) !important;
-  align-items: center;
-  gap: clamp(4rem, 8vw, 9rem);
-  min-height: max(760px, calc(100svh - 56px));
-  padding: clamp(5rem, 9vh, 8rem) 0 clamp(7rem, 12vh, 10rem) !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: clamp(3rem, 6vw, 5rem);
+  min-height: 0;
+  padding: clamp(2.5rem, 5vh, 4rem) 0 clamp(7rem, 12vh, 10rem) !important;
 }
 
 .mx-studio-hero__copy {
@@ -19,24 +18,14 @@
   max-width: 42rem;
 }
 
-.mx-studio-hero__copy > img {
-  display: block;
-  width: 72px;
-  height: 72px;
-  margin: 0 0 1.8rem;
-  border-radius: 17px;
-  box-shadow:
-    0 0 0 1px rgba(255,255,255,.08),
-    0 18px 46px rgba(0,0,0,.32);
-}
-
 .mx-studio-page .mx-studio-hero .mira-mkt__hero-title {
-  max-width: 9.8ch;
+  max-width: 16ch;
   margin: 0 0 1.8rem;
-  font-size: clamp(4.2rem, 6.7vw, 7.5rem);
-  font-weight: 610;
-  line-height: .9;
-  letter-spacing: -.065em;
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 6vw, 6.5rem);
+  font-weight: 600;
+  line-height: .96;
+  letter-spacing: -.035em;
   text-wrap: balance;
 }
 
@@ -45,35 +34,21 @@
 }
 
 .mx-studio-hero__stage {
-  position: relative;
-  isolation: isolate;
-  min-height: 560px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-  padding: clamp(2rem, 4.5vw, 4.4rem);
-  border: 1px solid rgba(231, 216, 197, .13);
-  border-radius: 26px;
-  background:
-    radial-gradient(80% 72% at 84% 18%, rgba(199, 142, 82, .18), transparent 62%),
-    linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.008)),
-    #101012;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.055),
-    0 44px 96px rgba(0,0,0,.34);
+  margin: 0;
+  width: 100%;
+  min-height: 0;
+  display: block;
 }
 
-.mx-studio-hero__stage::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  inset: -16% auto auto 58%;
-  width: 52%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: rgba(210, 154, 95, .08);
-  filter: blur(46px);
+.mx-studio-hero__stage img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow:
+    0 2px 4px rgba(0,0,0,.3),
+    0 24px 48px rgba(0,0,0,.36),
+    0 48px 96px rgba(0,0,0,.26);
 }
 
 .mx-studio-hero__stage-label {
@@ -262,7 +237,6 @@
   }
 
   .mx-studio-hero__copy { max-width: 47rem; }
-  .mx-studio-hero__stage { min-height: 480px; }
 }
 
 @media (max-width: 620px) {
@@ -272,12 +246,6 @@
     gap: 3.2rem;
   }
 
-  .mx-studio-hero__copy > img {
-    width: 58px;
-    height: 58px;
-    border-radius: 14px;
-    margin-bottom: 1.35rem;
-  }
 
   .mx-studio-page .mx-studio-hero .mira-mkt__hero-title {
     font-size: clamp(3.25rem, 14.2vw, 4.35rem);
