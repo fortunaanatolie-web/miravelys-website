@@ -151,11 +151,14 @@ try {
   await scribeLink.click();
   await page.waitForURL('**/mirascribe');
   await assertIdentity(page, '/mirascribe', 'mirascribe');
+  assert((await page.title()).startsWith('MiraScribe'), `client navigation to MiraScribe left stale title: ${await page.title()}`);
+
   await page.goBack({ waitUntil: 'networkidle' });
   const voxisLink = page.getByRole('link', { name: /MiraVoxis/i }).first();
   await voxisLink.click();
   await page.waitForURL('**/miravoxis');
   await assertIdentity(page, '/miravoxis', 'miravoxis');
+  assert((await page.title()).startsWith('MiraVoxis'), `client navigation to MiraVoxis left stale title: ${await page.title()}`);
   await context.close();
 } finally {
   await browser.close();
