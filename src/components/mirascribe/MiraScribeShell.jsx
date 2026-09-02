@@ -18,7 +18,7 @@ export default function MiraScribeShell({ children, skipTo = '#ms-main', title }
 
   return (
     <div className="ms-shell">
-      <a href={skipTo} className="ms-skip-link sr-only sr-only-focusable">
+      <a href={skipTo} className="skip-link ms-skip-link">
         Skip to main content
       </a>
       <MiraScribeNav />

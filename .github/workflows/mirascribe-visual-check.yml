@@ -1,14 +1,18 @@
-name: MiraScribe Visual Branch Check
+name: Premium Ecosystem Visual Check
 
 on:
   pull_request:
     paths:
-      - 'src/pages/mirascribe/**'
-      - 'src/styles/site-mirascribe*.css'
-      - 'src/main.jsx'
-      - 'public/images/mirascribe/**'
-      - 'public-site/images/mirascribe/**'
+      - 'src/**'
+      - 'public-site/identities/**'
+      - 'public-site/images/**'
+      - 'scripts/prerender_public_routes.mjs'
+      - 'scripts/verify_public_contract.mjs'
+      - 'scripts/verify_product_identity_prerender.mjs'
       - 'scripts/verify_mirascribe_visual_contract.mjs'
+      - 'scripts/verify_premium_ecosystem.mjs'
+      - 'scripts/verify_premium_accessibility.mjs'
+      - 'index.html'
       - 'package.json'
       - 'package-lock.json'
       - '.github/workflows/mirascribe-visual-check.yml'
@@ -40,30 +44,41 @@ jobs:
       - name: Verify public contract
         run: npm run verify:public-contract
 
+      - name: Verify prerendered product identity
+        run: node scripts/verify_product_identity_prerender.mjs
+
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
       - name: Start production preview
         run: |
-          npm run preview -- --host 127.0.0.1 --port 4173 > /tmp/mirascribe-preview.log 2>&1 &
-          echo $! > /tmp/mirascribe-preview.pid
+          npm run preview -- --host 127.0.0.1 --port 4173 > /tmp/mira-preview.log 2>&1 &
+          echo $! > /tmp/mira-preview.pid
           for attempt in {1..30}; do
-            if curl -fsS http://127.0.0.1:4173/mirascribe > /dev/null; then
+            if curl -fsS http://127.0.0.1:4173/ > /dev/null; then
               exit 0
             fi
             sleep 1
           done
-          cat /tmp/mirascribe-preview.log
+          cat /tmp/mira-preview.log
           exit 1
 
-      - name: Verify rendered visual contract
+      - name: Verify MiraScribe rendered contract
         run: node scripts/verify_mirascribe_visual_contract.mjs
+
+      - name: Verify premium ecosystem responsive contract
+        run: node scripts/verify_premium_ecosystem.mjs
+
+      - name: Verify premium accessibility contract
+        run: node scripts/verify_premium_accessibility.mjs
 
       - name: Upload rendered evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: mirascribe-visual-contract
-          path: artifacts/mirascribe-visual-contract/
+          name: premium-ecosystem-visual-evidence
+          path: |
+            artifacts/mirascribe-visual-contract/
+            artifacts/premium-ecosystem/
           if-no-files-found: ignore
           retention-days: 14

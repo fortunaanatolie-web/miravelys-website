@@ -1,0 +1,82 @@
+.mx-studio-hero__rail {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);
+  align-items: center;
+  gap: clamp(.75rem,2vw,1.5rem);
+  max-width: 900px;
+  margin-top: clamp(5rem,9vw,8rem);
+  padding-block: 1.4rem;
+  border-block: 1px solid var(--mx-border);
+}
+.mx-studio-hero__rail span { display: grid; gap: .35rem; }
+.mx-studio-hero__rail b { color: var(--mx-text); font-size: clamp(1.35rem,2vw,2rem); font-weight: 560; letter-spacing: -.035em; }
+.mx-studio-hero__rail small { color: var(--mx-text-muted); font-size: .74rem; line-height: 1.4; }
+.mx-studio-hero__rail i { color: var(--mx-copper); font-style: normal; }
+
+.mx-studio-process {
+  display: grid;
+  grid-template-columns: minmax(260px,.76fr) minmax(0,1.24fr);
+  gap: clamp(3rem,8vw,8rem);
+}
+.mx-studio-process__intro { position: sticky; top: 92px; align-self: start; }
+.mx-studio-process__steps { margin: 0; padding: 0; list-style: none; }
+.mx-studio-process__steps li {
+  display: grid;
+  grid-template-columns: 3rem minmax(0,1fr);
+  gap: 1rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--mx-border);
+}
+.mx-studio-process__steps li:last-child { border-bottom: 1px solid var(--mx-border); }
+.mx-studio-process__steps > li > span { color: var(--mx-copper); font: 650 .73rem/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.mx-studio-process__steps h3 { margin: 0 0 .45rem; color: var(--mx-text); font-size: 1.34rem; font-weight: 570; letter-spacing: -.025em; }
+.mx-studio-process__steps p { margin: 0; max-width: 44rem; color: var(--mx-text-secondary); line-height: 1.67; }
+
+.mx-studio-capabilities .mira-mkt__essays { margin-top: 3rem; }
+.mx-studio-capabilities .mira-mkt__essay h3 { margin: 0 0 .65rem; color: var(--mx-text); font-size: 1.45rem; font-weight: 570; letter-spacing: -.03em; }
+.mx-studio-capabilities .mira-mkt__essay p { margin: 0; color: var(--mx-text-secondary); line-height: 1.67; }
+
+.mx-studio-dialogue {
+  max-width: 850px;
+  margin-top: clamp(5rem,9vw,8rem);
+  padding: clamp(1.5rem,4vw,3rem) 0;
+  border-block: 1px solid var(--mx-border);
+}
+.mx-studio-dialogue p { margin: 0 0 .9rem; color: var(--mx-text-secondary); font: 500 clamp(1.08rem,1.7vw,1.35rem)/1.55 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.mx-studio-dialogue p:last-child { margin-bottom: 0; }
+.mx-studio-dialogue span { display: inline-block; min-width: 8.5rem; color: var(--mx-copper); font-size: .72em; letter-spacing: .04em; }
+.mx-studio-capabilities .mira-mkt__stage-caption { color: var(--mx-text-muted); }
+
+.mx-studio-languages { display: grid; gap: 3rem; }
+.mx-studio-generation { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 2rem; max-width: 800px; }
+.mx-studio-generation span { display: grid; gap: .4rem; padding-top: 1rem; border-top: 1px solid rgba(214,162,102,.42); }
+.mx-studio-generation strong { color: var(--mx-text); font-size: 1.5rem; font-weight: 560; }
+.mx-studio-generation small { color: var(--mx-text-muted); }
+
+.mx-studio-privacy .mira-mkt__heading { max-width: 12ch; }
+.mx-studio-privacy__facts { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: clamp(1.5rem,4vw,3.5rem); margin-top: 3.5rem; }
+.mx-studio-privacy__facts span { display: grid; gap: .45rem; padding-top: 1rem; border-top: 1px solid rgba(214,162,102,.42); color: var(--mx-text-secondary); line-height: 1.55; }
+.mx-studio-privacy__facts strong { color: var(--mx-text); font-size: 1.08rem; font-weight: 570; }
+.mx-studio-privacy a { color: var(--mx-copper); text-underline-offset: .22em; }
+
+.mx-studio-cta { text-align: center; }
+.mx-studio-cta .mira-mkt__heading { max-width: 14ch; margin-inline: auto; }
+.mx-studio-cta .mira-mkt__lead { margin-inline: auto; }
+.mx-studio-cta .mx-btn { margin-top: 1rem; }
+
+/* Flatten product utility components when used inside the studio story. */
+.mx-studio-page .mira-family-language-explorer,
+.mx-studio-page .mira-family-ecosystem-bridge { border-color: var(--mx-border); }
+
+@media (max-width: 900px) {
+  .mx-studio-process { grid-template-columns: 1fr; }
+  .mx-studio-process__intro { position: static; }
+  .mx-studio-privacy__facts { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 620px) {
+  .mx-studio-hero__rail { grid-template-columns: 1fr; gap: .9rem; }
+  .mx-studio-hero__rail i { transform: rotate(90deg); width: fit-content; }
+  .mx-studio-generation { grid-template-columns: 1fr; }
+  .mx-studio-dialogue span { min-width: 0; display: block; margin-bottom: .2rem; }
+}

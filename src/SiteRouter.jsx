@@ -14,6 +14,9 @@ const MiraScribeSupportPage = lazy(() => import('./pages/mirascribe/MiraScribeSu
 const MiraScribePrivacyPage = lazy(() => import('./pages/mirascribe/MiraScribePrivacyPage'));
 const MiraScribeLegalPage = lazy(() => import('./pages/mirascribe/MiraScribeLegalPage'));
 const MiraScribeAcknowledgementsPage = lazy(() => import('./pages/mirascribe/MiraScribeAcknowledgementsPage'));
+const MiraVoxisPage = lazy(() => import('./pages/miravoxis/MiraVoxisPage'));
+const MiraVoxisSupportPage = lazy(() => import('./pages/miravoxis/MiraVoxisSupportPage'));
+const MiraVoxisPrivacyPage = lazy(() => import('./pages/miravoxis/MiraVoxisPrivacyPage'));
 
 const routes = [
   { path: '/', element: <App /> },
@@ -29,19 +32,20 @@ const routes = [
   { path: '/cookies', element: <LegalDocumentPage /> },
 ];
 
-/**
- * MiraScribe routes are intentionally NOT in the localized /:lang/* tree.
- * These are canonical App Store URLs that must never redirect unexpectedly.
- */
-const mirascribeRoutes = [
+/** Product routes are canonical App Store/support URLs and are intentionally
+ * outside the localized /:lang/* tree. They must never redirect through a
+ * locale route or inherit the wrong product identity. */
+const productRoutes = [
   { path: '/products', element: <ProductsPage /> },
   { path: '/mirascribe', element: <MiraScribePage /> },
   { path: '/mirascribe/support', element: <MiraScribeSupportPage /> },
   { path: '/mirascribe/privacy', element: <MiraScribePrivacyPage /> },
   { path: '/mirascribe/legal', element: <MiraScribeLegalPage /> },
   { path: '/mirascribe/acknowledgements', element: <MiraScribeAcknowledgementsPage /> },
+  { path: '/miravoxis', element: <MiraVoxisPage /> },
+  { path: '/miravoxis/support', element: <MiraVoxisSupportPage /> },
+  { path: '/miravoxis/privacy', element: <MiraVoxisPrivacyPage /> },
 ];
-
 
 function LocalizedRoute({ children }) {
   const { lang } = useParams();
@@ -57,19 +61,18 @@ export default function SiteRouter() {
     <BrowserRouter>
       <Suspense fallback={<RouteFallback />}>
         <Routes>
-          {routes.map(r => (
-            <Route key={`root-${r.path}`} path={r.path} element={r.element} />
+          {routes.map(route => (
+            <Route key={`root-${route.path}`} path={route.path} element={route.element} />
           ))}
-          {routes.map(r => (
+          {routes.map(route => (
             <Route
-              key={`lang-${r.path}`}
-              path={`/:lang${r.path === '/' ? '' : r.path}`}
-              element={<LocalizedRoute>{r.element}</LocalizedRoute>}
+              key={`lang-${route.path}`}
+              path={`/:lang${route.path === '/' ? '' : route.path}`}
+              element={<LocalizedRoute>{route.element}</LocalizedRoute>}
             />
           ))}
-          {/* MiraScribe canonical routes — no language prefix, never redirected */}
-          {mirascribeRoutes.map(r => (
-            <Route key={`ms-${r.path}`} path={r.path} element={r.element} />
+          {productRoutes.map(route => (
+            <Route key={`product-${route.path}`} path={route.path} element={route.element} />
           ))}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
@@ -77,4 +80,3 @@ export default function SiteRouter() {
     </BrowserRouter>
   );
 }
-
