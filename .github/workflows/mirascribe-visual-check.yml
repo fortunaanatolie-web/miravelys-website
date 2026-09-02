@@ -8,6 +8,7 @@ on:
       - 'public-site/images/**'
       - 'scripts/prerender_public_routes.mjs'
       - 'scripts/verify_public_contract.mjs'
+      - 'scripts/verify_product_identity_prerender.mjs'
       - 'scripts/verify_mirascribe_visual_contract.mjs'
       - 'scripts/verify_premium_ecosystem.mjs'
       - 'index.html'
@@ -41,6 +42,9 @@ jobs:
 
       - name: Verify public contract
         run: npm run verify:public-contract
+
+      - name: Verify prerendered product identity
+        run: node scripts/verify_product_identity_prerender.mjs
 
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
