@@ -1,13 +1,6 @@
 /**
  * Canonical product identity registry.
- *
- * Adding a future app:
- * 1. Provide the canonical App Store / macOS icon master in the sibling repo.
- * 2. Register source paths in scripts/generate_app_identity_assets.py.
- * 3. Run `npm run generate:app-identity`.
- * 4. Add an entry below with `routePrefixes` (longest prefix wins).
- *
- * Do not scatter favicon logic across pages. Route ownership lives here.
+ * Route ownership, browser identity and social identity live here.
  */
 import { languages } from '../i18n/publicSiteCopy.js';
 import { APP_IDENTITY_ASSETS } from './appIdentityAssets.js';
@@ -24,6 +17,7 @@ export const APP_IDENTITY_RECORDS = {
     routePrefixes: [],
     themeColor: '#f7f3ed',
     ogImageAlt: 'Miravelys — a private place to return to what is true',
+    socialImage: '/og-miravelys.jpg',
   },
   mirascribe: {
     id: 'mirascribe',
@@ -46,10 +40,9 @@ export const APP_IDENTITY_RECORDS = {
     name: 'MiraVoxis',
     siteName: 'MiraVoxis',
     routePrefixes: ['/miravoxis'],
-    themeColor: '#0847bb',
-    ogImageAlt: 'MiraVoxis — local transcription and voice generation for Mac',
+    themeColor: '#0b0b0c',
+    ogImageAlt: 'MiraVoxis — local voice studio for Mac',
   },
-  // MiraForge: add routePrefixes and generate assets when the canonical icon exists.
   miraforge: {
     id: 'miraforge',
     name: 'MiraForge',
@@ -84,12 +77,12 @@ function matchRecord(pathname) {
       }
     }
   }
-
   return best;
 }
 
 export function hydrateAppIdentity(record) {
-  const assets = APP_IDENTITY_ASSETS[record.id] ?? APP_IDENTITY_ASSETS[DEFAULT_APP_ID];
+  const baseAssets = APP_IDENTITY_ASSETS[record.id] ?? APP_IDENTITY_ASSETS[DEFAULT_APP_ID];
+  const assets = record.socialImage ? { ...baseAssets, ogImage: record.socialImage } : baseAssets;
   return { ...record, assets };
 }
 
@@ -100,11 +93,7 @@ export function resolveAppIdentity(pathname) {
 export function identityIconLinkDescriptors(identity) {
   const { assets } = identity;
   const links = [];
-
-  if (assets.faviconSvg) {
-    links.push({ rel: 'icon', type: 'image/svg+xml', href: assets.faviconSvg });
-  }
-
+  if (assets.faviconSvg) links.push({ rel: 'icon', type: 'image/svg+xml', href: assets.faviconSvg });
   links.push(
     { rel: 'icon', type: 'image/png', sizes: '16x16', href: assets.icon16 },
     { rel: 'icon', type: 'image/png', sizes: '32x32', href: assets.icon32 },
@@ -113,7 +102,6 @@ export function identityIconLinkDescriptors(identity) {
     { rel: 'apple-touch-icon', href: assets.appleTouchIcon, sizes: '180x180' },
     { rel: 'manifest', href: assets.manifest },
   );
-
   return links;
 }
 
@@ -132,6 +120,5 @@ export function identityIconHeadMarkup(identity) {
       return `<link ${attrs} data-app-identity="${identity.id}">`;
     })
     .join('\n    ');
-
   return `${links}\n    <meta name="theme-color" content="${identity.themeColor}" data-app-identity="${identity.id}">`;
 }
