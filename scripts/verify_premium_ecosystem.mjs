@@ -20,6 +20,7 @@ const productRoutes = [
 const secondaryRoutes = [
   ['/mirascribe/support', 'mirascribe', 'MiraScribe Support'],
   ['/mirascribe/privacy', 'mirascribe', 'MiraScribe Privacy'],
+  ['/mirascribe/legal', 'mirascribe', 'MiraScribe Legal'],
   ['/mirascribe/acknowledgements', 'mirascribe', 'MiraScribe Acknowledgements'],
   ['/miravoxis/support', 'miravoxis', 'MiraVoxis Support'],
   ['/miravoxis/privacy', 'miravoxis', 'MiraVoxis Privacy'],
@@ -58,6 +59,31 @@ async function assertNoOverflow(page, label) {
   assert(overflow.html <= overflow.viewport + 1 && overflow.body <= overflow.viewport + 1, `${label}: horizontal overflow ${JSON.stringify(overflow)}`);
 }
 
+async function loadVisualAssets(page) {
+  const images = page.locator('main img');
+  const count = await images.count();
+  for (let index = 0; index < count; index += 1) {
+    const image = images.nth(index);
+    await image.scrollIntoViewIfNeeded().catch(() => {});
+    await image.evaluate(async element => {
+      if (!(element instanceof HTMLImageElement)) return;
+      if (!element.complete || element.naturalWidth === 0) {
+        await new Promise((resolve, reject) => {
+          const timeout = setTimeout(() => reject(new Error(`Image load timeout: ${element.currentSrc || element.src}`)), 20_000);
+          element.addEventListener('load', () => { clearTimeout(timeout); resolve(); }, { once: true });
+          element.addEventListener('error', () => { clearTimeout(timeout); reject(new Error(`Image failed: ${element.currentSrc || element.src}`)); }, { once: true });
+        });
+      }
+      await element.decode?.().catch(() => {});
+    });
+  }
+  await page.evaluate(async () => {
+    if (document.fonts?.ready) await document.fonts.ready;
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  });
+  await page.waitForTimeout(100);
+}
+
 await mkdir(artifactDir, { recursive: true });
 const browser = await chromium.launch({ headless: true });
 
@@ -85,11 +111,24 @@ try {
         await page.getByRole('button', { name: 'original wording' }).click();
         await page.getByText('47:06', { exact: true }).waitFor({ state: 'visible' });
       }
+
       if (product.id === 'miravoxis') {
+        assert(await page.locator('.mx-studio-hero__stage').count() === 1, `${viewport.name}: MiraVoxis hero performance stage missing`);
         await page.getByRole('button', { name: 'she' }).click();
         await page.getByText(/SHE — the person is the contrast/).waitFor({ state: 'visible' });
+
+        const languageDetails = page.locator('.mx-studio-language-details');
+        assert(await languageDetails.count() === 1, `${viewport.name}: transcription coverage disclosure missing`);
+        assert(!(await languageDetails.evaluate(element => element.open)), `${viewport.name}: transcription language catalog should be collapsed by default`);
+        const languageSummary = page.getByText('Browse transcription coverage', { exact: true });
+        await languageSummary.click();
+        await page.getByLabel('Search MiraVoxis transcription languages').waitFor({ state: 'visible' });
+        await languageSummary.click();
+        assert(!(await languageDetails.evaluate(element => element.open)), `${viewport.name}: transcription language catalog failed to close`);
       }
 
+      await loadVisualAssets(page);
+      await assertNoOverflow(page, `${viewport.name} ${product.path} after asset load`);
       await page.screenshot({ path: `${artifactDir}/${product.id}-${viewport.name}.png`, fullPage: true });
     }
 
