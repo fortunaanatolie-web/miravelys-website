@@ -1,0 +1,170 @@
+/*
+ * Browser-evidence refinement layer.
+ * Loaded last so the premium product compositions win over legacy marketing
+ * container styles without rewriting support/legal surfaces.
+ */
+
+/* ---------------------------------------------------------------------
+   MiraScribe: editorial information should sit on the page, not in panels.
+   Keep a material surface only for the interactive search instrument.
+   --------------------------------------------------------------------- */
+
+.ms-editorial .ms-editorial-workflow,
+.ms-editorial .ms-editorial-privacy,
+.ms-editorial .ms-editorial-dictation,
+.ms-editorial .ms-editorial-text-story,
+.ms-editorial .ms-editorial-audiences,
+.ms-editorial .ms-editorial-cta {
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.ms-editorial .ms-editorial-workflow,
+.ms-editorial .ms-editorial-privacy,
+.ms-editorial .ms-editorial-dictation {
+  margin-inline: 0 !important;
+  padding-inline: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+
+.ms-editorial .ms-editorial-workflow {
+  border-top: 1px solid var(--ms-border) !important;
+  border-bottom: 0 !important;
+}
+
+.ms-editorial .ms-editorial-privacy {
+  border-top: 1px solid var(--ms-border) !important;
+  border-bottom: 1px solid var(--ms-border) !important;
+}
+
+.ms-editorial .ms-editorial-dictation {
+  border: 0 !important;
+}
+
+.ms-editorial .ms-editorial-workflow::before,
+.ms-editorial .ms-editorial-workflow::after,
+.ms-editorial .ms-editorial-privacy::before,
+.ms-editorial .ms-editorial-privacy::after,
+.ms-editorial .ms-editorial-dictation::before,
+.ms-editorial .ms-editorial-dictation::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Let the workflow read like a magazine index rather than a dashboard. */
+.ms-editorial .ms-editorial-workflow ol,
+.ms-editorial .ms-editorial-workflow li,
+.ms-editorial .ms-editorial-privacy__facts,
+.ms-editorial .ms-editorial-privacy__facts span {
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.ms-editorial .ms-editorial-workflow li {
+  padding-block: clamp(1.7rem, 3vw, 2.35rem);
+}
+
+.ms-editorial .ms-editorial-privacy__facts {
+  gap: clamp(2rem, 5vw, 4.5rem);
+}
+
+.ms-editorial .ms-editorial-privacy__facts span {
+  min-width: 0;
+}
+
+/* Search is an actual grouped interaction, so it earns one restrained surface. */
+.ms-editorial .ms-search-demo__instrument {
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .022);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.045),
+    0 18px 48px rgba(0,0,0,.18);
+}
+
+/* Keep static photography almost frameless. */
+.ms-editorial .ms-editorial-story figure,
+.ms-editorial .ms-editorial-hero__image {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.ms-editorial .ms-editorial-story img,
+.ms-editorial .ms-editorial-hero__image img {
+  border-radius: 2px !important;
+}
+
+/* The final CTA should be a conclusion, not another card. */
+.ms-editorial .ms-editorial-cta {
+  border: 0 !important;
+  padding-inline: 0 !important;
+}
+
+/* ---------------------------------------------------------------------
+   MiraVoxis: same craft rule, different studio material language.
+   Static prose is open; actual interactive/audio structures may be surfaced.
+   --------------------------------------------------------------------- */
+
+.mx-studio-page .mx-studio-process,
+.mx-studio-page .mx-studio-capabilities,
+.mx-studio-page .mx-studio-languages,
+.mx-studio-page .mx-studio-privacy,
+.mx-studio-page .mx-studio-cta {
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.mx-studio-page .mx-studio-process,
+.mx-studio-page .mx-studio-privacy {
+  border-inline: 0 !important;
+}
+
+.mx-studio-page .mx-studio-process::before,
+.mx-studio-page .mx-studio-process::after,
+.mx-studio-page .mx-studio-privacy::before,
+.mx-studio-page .mx-studio-privacy::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Shared mobile editorial discipline. */
+@media (max-width: 900px) {
+  .ms-editorial .ms-editorial-workflow > div,
+  .ms-editorial .ms-search-demo__intro,
+  .mx-studio-page .mx-studio-process__intro {
+    position: static !important;
+  }
+
+  .ms-editorial .ms-editorial-workflow,
+  .ms-editorial .ms-editorial-dictation {
+    grid-template-columns: 1fr !important;
+  }
+
+  .ms-editorial .ms-editorial-dictation {
+    gap: 2.5rem !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .ms-editorial .ms-search-demo__instrument {
+    padding: 1rem;
+    border-radius: 11px;
+  }
+
+  .ms-editorial .ms-editorial-privacy__facts {
+    grid-template-columns: 1fr !important;
+  }
+
+  .ms-editorial .ms-editorial-shortcut {
+    flex-wrap: wrap;
+  }
+}
