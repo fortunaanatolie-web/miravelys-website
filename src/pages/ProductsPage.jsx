@@ -33,6 +33,14 @@ const PRODUCTS = [
     external: false,
     appStore: APPSTORE_MIRASCRIBE,
   },
+  {
+    name: 'MiraVoxis',
+    tagline: 'Voice Studio · Performance · Mac',
+    body: 'Direct written words into speech with control over performance, pronunciation, narrator identity, and dialogue. After its voice engine is installed, generation runs locally on your Mac.',
+    cta: 'Explore MiraVoxis',
+    href: '/miravoxis',
+    external: false,
+  },
 ];
 
 export default function ProductsPage() {
@@ -146,8 +154,9 @@ export default function ProductsPage() {
             }}
           >
             Miravelys is contemplative and cinematic. MiraScribe is precise and Mac-native.
-            Each product defines its own language, visual identity, and functional tone.
-            What they share is a commitment to doing the thing well, without noise.
+            MiraVoxis is a directed local voice studio. Each product defines its own visual
+            language and functional tone. What they share is a commitment to doing the thing
+            well, without noise.
           </p>
         </section>
 
