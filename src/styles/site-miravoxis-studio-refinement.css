@@ -1,0 +1,313 @@
+/*
+ * MiraVoxis studio composition refinement.
+ * This layer is intentionally product-specific and is loaded after the shared
+ * ecosystem system. It makes the marketing page read as a studio rather than
+ * documentation while keeping every capability claim in React/config truth.
+ */
+
+.mx-studio-page .mx-studio-hero.mira-mkt__hero {
+  display: grid !important;
+  grid-template-columns: minmax(0, .82fr) minmax(440px, 1.18fr) !important;
+  align-items: center;
+  gap: clamp(4rem, 8vw, 9rem);
+  min-height: max(760px, calc(100svh - 56px));
+  padding: clamp(5rem, 9vh, 8rem) 0 clamp(7rem, 12vh, 10rem) !important;
+}
+
+.mx-studio-hero__copy {
+  min-width: 0;
+  max-width: 42rem;
+}
+
+.mx-studio-hero__copy > img {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin: 0 0 1.8rem;
+  border-radius: 17px;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.08),
+    0 18px 46px rgba(0,0,0,.32);
+}
+
+.mx-studio-page .mx-studio-hero .mira-mkt__hero-title {
+  max-width: 9.8ch;
+  margin: 0 0 1.8rem;
+  font-size: clamp(4.2rem, 6.7vw, 7.5rem);
+  font-weight: 610;
+  line-height: .9;
+  letter-spacing: -.065em;
+  text-wrap: balance;
+}
+
+.mx-studio-page .mx-studio-hero .mira-mkt__lead {
+  max-width: 36rem;
+}
+
+.mx-studio-hero__stage {
+  position: relative;
+  isolation: isolate;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding: clamp(2rem, 4.5vw, 4.4rem);
+  border: 1px solid rgba(231, 216, 197, .13);
+  border-radius: 26px;
+  background:
+    radial-gradient(80% 72% at 84% 18%, rgba(199, 142, 82, .18), transparent 62%),
+    linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.008)),
+    #101012;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.055),
+    0 44px 96px rgba(0,0,0,.34);
+}
+
+.mx-studio-hero__stage::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: -16% auto auto 58%;
+  width: 52%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(210, 154, 95, .08);
+  filter: blur(46px);
+}
+
+.mx-studio-hero__stage-label {
+  margin: 0 0 clamp(2.2rem, 7vh, 4.8rem);
+  color: rgba(219, 202, 183, .52);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+
+.mx-studio-hero__line {
+  max-width: 12ch;
+  margin: 0;
+  color: #f2eee8;
+  font-size: clamp(2.8rem, 4.3vw, 5.25rem);
+  font-weight: 520;
+  line-height: .98;
+  letter-spacing: -.052em;
+  text-wrap: balance;
+}
+
+.mx-studio-hero__line strong {
+  color: #e4ae72;
+  font-weight: 640;
+}
+
+.mx-studio-hero__signal {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  height: 94px;
+  margin: clamp(2.4rem, 6vh, 4rem) 0 1.7rem;
+  padding: 0 2px;
+  border-block: 1px solid rgba(235,225,210,.08);
+}
+
+.mx-studio-hero__signal i {
+  flex: 1 1 0;
+  min-width: 2px;
+  max-width: 8px;
+  height: var(--mx-bar);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(229,176,116,.86), rgba(111,157,207,.54));
+  transform-origin: center;
+  animation: mx-studio-signal 3.2s ease-in-out infinite alternate;
+}
+
+.mx-studio-hero__signal i:nth-child(3n) { animation-delay: -1.1s; }
+.mx-studio-hero__signal i:nth-child(4n) { animation-delay: -2.2s; }
+
+@keyframes mx-studio-signal {
+  from { transform: scaleY(.82); opacity: .64; }
+  to { transform: scaleY(1); opacity: .96; }
+}
+
+.mx-studio-hero__flow {
+  display: flex;
+  align-items: center;
+  gap: clamp(.65rem, 2vw, 1.25rem);
+  color: rgba(231,224,215,.76);
+  font-size: clamp(.72rem, .9vw, .82rem);
+  font-weight: 650;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.mx-studio-hero__flow b {
+  color: #d5a066;
+  font-weight: 500;
+}
+
+.mx-studio-hero__stage > small {
+  margin-top: 1.15rem;
+  color: var(--mx-text-muted);
+  font-size: .72rem;
+  line-height: 1.45;
+}
+
+/* Keep the signature performance interaction visually important. */
+.mx-studio-page .mx-performance {
+  margin-block: 0 clamp(8rem, 13vw, 12rem);
+}
+
+/* Language coverage is useful reference data, not the visual story of the page. */
+.mx-studio-language-details {
+  max-width: 940px;
+  margin-top: 1.5rem;
+  border-block: 1px solid var(--mx-border);
+}
+
+.mx-studio-language-details > summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: 74px;
+  padding: 1rem 0;
+  cursor: pointer;
+  color: var(--mx-text);
+}
+
+.mx-studio-language-details > summary::-webkit-details-marker { display: none; }
+
+.mx-studio-language-details > summary::after {
+  content: '+';
+  flex: 0 0 auto;
+  color: var(--mx-copper);
+  font-size: 1.3rem;
+  font-weight: 400;
+  transition: transform var(--house-control) var(--house-ease-control);
+}
+
+.mx-studio-language-details[open] > summary::after { transform: rotate(45deg); }
+
+.mx-studio-language-details > summary span {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 580;
+  letter-spacing: -.02em;
+}
+
+.mx-studio-language-details > summary small {
+  margin-left: auto;
+  color: var(--mx-text-muted);
+  font-size: .75rem;
+  line-height: 1.45;
+  text-align: right;
+}
+
+.mx-studio-language-details__body {
+  max-height: 34rem;
+  overflow: auto;
+  padding: 1.25rem 0 2rem;
+  overscroll-behavior: contain;
+}
+
+.mx-studio-language-details__body .mira-family-language-explorer {
+  margin: 0;
+  border-radius: 12px;
+  background: rgba(255,255,255,.018);
+}
+
+/* One quiet family bridge instead of a dense ecosystem component. */
+.mx-studio-bridge {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: clamp(7rem, 12vw, 11rem) 0;
+  border-block: 1px solid var(--mx-border);
+}
+
+.mx-studio-bridge .mira-mkt__heading {
+  max-width: 12ch;
+}
+
+.mx-studio-bridge__link {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  min-height: 44px;
+  margin-top: 1.3rem;
+  color: #e0aa6e;
+  font-weight: 620;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(224,170,110,.45);
+}
+
+.mx-studio-bridge__link span {
+  transition: transform var(--house-control) var(--house-ease-control);
+}
+
+.mx-studio-bridge__link:hover span { transform: translateX(4px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .mx-studio-hero__signal i { animation: none; }
+  .mx-studio-language-details > summary::after,
+  .mx-studio-bridge__link span { transition: none; }
+}
+
+@media (max-width: 980px) {
+  .mx-studio-page .mx-studio-hero.mira-mkt__hero {
+    grid-template-columns: 1fr !important;
+    gap: 4rem;
+    min-height: 0;
+  }
+
+  .mx-studio-hero__copy { max-width: 47rem; }
+  .mx-studio-hero__stage { min-height: 480px; }
+}
+
+@media (max-width: 620px) {
+  .mx-studio-page .mx-studio-hero.mira-mkt__hero {
+    padding-top: 3.5rem !important;
+    padding-bottom: 6rem !important;
+    gap: 3.2rem;
+  }
+
+  .mx-studio-hero__copy > img {
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+    margin-bottom: 1.35rem;
+  }
+
+  .mx-studio-page .mx-studio-hero .mira-mkt__hero-title {
+    font-size: clamp(3.25rem, 14.2vw, 4.35rem);
+    max-width: 9.3ch;
+  }
+
+  .mx-studio-hero__stage {
+    min-height: 0;
+    padding: 1.45rem;
+    border-radius: 18px;
+  }
+
+  .mx-studio-hero__stage-label { margin-bottom: 2.5rem; }
+  .mx-studio-hero__line { font-size: clamp(2.25rem, 11.5vw, 3.15rem); }
+  .mx-studio-hero__signal { height: 76px; margin-block: 2.4rem 1.35rem; gap: 3px; }
+  .mx-studio-hero__flow { flex-wrap: wrap; }
+
+  .mx-studio-language-details > summary {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: .35rem 1rem;
+  }
+
+  .mx-studio-language-details > summary small {
+    order: 3;
+    width: calc(100% - 2rem);
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .mx-studio-language-details > summary::after { margin-left: auto; }
+  .mx-studio-language-details__body { max-height: 28rem; }
+}
