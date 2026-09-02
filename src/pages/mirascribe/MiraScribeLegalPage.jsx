@@ -1,3 +1,4 @@
+import { APP_IDENTITY_ASSETS } from '../../config/appIdentityAssets';
 /**
  * MiraScribeLegalPage — /mirascribe/legal
  * Legal notice, EULA reference, copyright, trademark, disclaimer.
@@ -18,6 +19,7 @@ export default function MiraScribeLegalPage() {
   useEffect(() => {
     document.documentElement.lang = 'en';
     setDocumentMeta({
+      favicon: APP_IDENTITY_ASSETS.mirascribe.faviconIco,
       title: 'Legal — MiraScribe',
       description: 'Legal information for MiraScribe: end user license, copyright, trademark, and disclaimer.',
       ogTitle: 'MiraScribe — Legal',

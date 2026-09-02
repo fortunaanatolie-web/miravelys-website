@@ -1,3 +1,4 @@
+import { APP_IDENTITY_ASSETS } from '../../config/appIdentityAssets';
 /**
  * MiraScribePrivacyPage — /mirascribe/privacy
  * App Store Connect Privacy Policy URL.
@@ -23,6 +24,7 @@ export default function MiraScribePrivacyPage() {
   useEffect(() => {
     document.documentElement.lang = 'en';
     setDocumentMeta({
+      favicon: APP_IDENTITY_ASSETS.mirascribe.faviconIco,
       title: 'Privacy Policy — MiraScribe',
       description: 'MiraScribe privacy policy. Transcription runs locally on your Mac. Audio and transcripts are not uploaded to a remote service.',
       ogTitle: 'MiraScribe Privacy Policy',

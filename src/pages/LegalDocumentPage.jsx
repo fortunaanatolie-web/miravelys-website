@@ -1,3 +1,4 @@
+import { APP_IDENTITY_ASSETS } from '../config/appIdentityAssets';
 import { useEffect, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ShieldCheck } from 'lucide-react';
@@ -44,6 +45,7 @@ export default function LegalDocumentPage() {
   useEffect(() => {
     document.documentElement.lang = t.meta.locale;
     setDocumentMeta({
+      favicon: APP_IDENTITY_ASSETS.miravelys.faviconIco,
       title: legalDoc ? `${legalDoc.title} — Miravelys` : 'Miravelys',
       description: legalDoc?.intro ?? t.footer.line,
       ogTitle: legalDoc ? `${legalDoc.title} — Miravelys` : 'Miravelys',

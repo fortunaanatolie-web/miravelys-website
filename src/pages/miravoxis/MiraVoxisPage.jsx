@@ -62,6 +62,7 @@ export default function MiraVoxisPage() {
   useEffect(() => {
     document.documentElement.lang = 'en';
     setDocumentMeta({
+      favicon: APP_IDENTITY_ASSETS.miravoxis.faviconIco,
       title: meta.title,
       description: meta.description,
       ogTitle: meta.title,

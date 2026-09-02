@@ -1,3 +1,4 @@
+import { APP_IDENTITY_ASSETS } from '../config/appIdentityAssets';
 /**
  * ProductsPage — /products
  * The Miravelys product family directory.
@@ -38,6 +39,7 @@ export default function ProductsPage() {
   useEffect(() => {
     document.documentElement.lang = 'en';
     setDocumentMeta({
+      favicon: APP_IDENTITY_ASSETS.miravelys.faviconIco,
       title: 'Products — Miravelys',
       description: 'Thoughtful software built around attention, clarity, privacy, and human agency. The Miravelys family of products.',
       ogTitle: 'The Miravelys Family',

@@ -1,3 +1,4 @@
+import { APP_IDENTITY_ASSETS } from '../../config/appIdentityAssets';
 /**
  * MiraVoxisPrivacyPage — /miravoxis/privacy
  *
@@ -20,6 +21,7 @@ export default function MiraVoxisPrivacyPage() {
   useEffect(() => {
     document.documentElement.lang = 'en';
     setDocumentMeta({
+      favicon: APP_IDENTITY_ASSETS.miravoxis.faviconIco,
       title: 'MiraVoxis Privacy',
       description:
         'MiraVoxis privacy policy. Transcription and voice generation run on your Mac after models are installed. Model download may contact Hugging Face.',

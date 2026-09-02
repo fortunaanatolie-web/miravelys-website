@@ -1,3 +1,4 @@
+import { APP_IDENTITY_ASSETS } from '../config/appIdentityAssets';
 import { useEffect, useMemo } from 'react';
 import { LifeBuoy, Mail } from 'lucide-react';
 import { resolvePublicSiteCopy } from '../i18n/publicSiteCopy';
@@ -99,6 +100,7 @@ export default function SupportPage() {
   useEffect(() => {
     document.documentElement.lang = t.meta.locale;
     setDocumentMeta({
+      favicon: APP_IDENTITY_ASSETS.miravelys.faviconIco,
       title: `${copy.title} — Miravelys`,
       description: copy.intro,
       ogTitle: `${copy.title} — Miravelys`,

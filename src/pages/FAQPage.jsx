@@ -1,3 +1,4 @@
+import { APP_IDENTITY_ASSETS } from '../config/appIdentityAssets';
 import { useEffect, useMemo } from 'react';
 import { HelpCircle, Plus } from 'lucide-react';
 import { resolvePublicSiteCopy } from '../i18n/publicSiteCopy';
@@ -16,6 +17,7 @@ export default function FAQPage() {
   useEffect(() => {
     document.documentElement.lang = t.meta.locale;
     setDocumentMeta({
+      favicon: APP_IDENTITY_ASSETS.miravelys.faviconIco,
       title: `${faq.title} — Miravelys`,
       description: faq.title,
       ogTitle: `${faq.title} — Miravelys`,

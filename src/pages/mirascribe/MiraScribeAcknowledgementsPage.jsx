@@ -1,3 +1,4 @@
+import { APP_IDENTITY_ASSETS } from '../../config/appIdentityAssets';
 /**
  * MiraScribeAcknowledgementsPage — /mirascribe/acknowledgements
  * Third-party software and model license notices.
@@ -88,6 +89,7 @@ export default function MiraScribeAcknowledgementsPage() {
   useEffect(() => {
     document.documentElement.lang = 'en';
     setDocumentMeta({
+      favicon: APP_IDENTITY_ASSETS.mirascribe.faviconIco,
       title: 'Acknowledgements — MiraScribe',
       description: 'Third-party software and model license notices for MiraScribe.',
       ogTitle: 'MiraScribe — Acknowledgements',

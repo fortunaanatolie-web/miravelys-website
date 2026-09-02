@@ -1,3 +1,4 @@
+import { APP_IDENTITY_ASSETS } from '../../config/appIdentityAssets';
 /**
  * MiraScribeSupportPage — /mirascribe/support
  * App Store Connect Support URL.
@@ -52,6 +53,7 @@ export default function MiraScribeSupportPage() {
   useEffect(() => {
     document.documentElement.lang = 'en';
     setDocumentMeta({
+      favicon: APP_IDENTITY_ASSETS.mirascribe.faviconIco,
       title: 'MiraScribe Support',
       description: 'Get help with MiraScribe for Mac. Contact support or find answers to common questions about transcription, permissions, exports, and more.',
       ogTitle: 'MiraScribe Support',

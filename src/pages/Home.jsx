@@ -1,3 +1,4 @@
+import { APP_IDENTITY_ASSETS } from '../config/appIdentityAssets';
 import { useQuery } from "@tanstack/react-query";
 import { base44 } from "@/api/base44Client";
 import { motion } from "framer-motion";

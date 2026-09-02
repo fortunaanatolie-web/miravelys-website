@@ -1,3 +1,4 @@
+import { APP_IDENTITY_ASSETS } from '../../config/appIdentityAssets';
 /**
  * MiraVoxisSupportPage — /miravoxis/support
  * Intended App Store Connect Support URL.
@@ -56,6 +57,7 @@ export default function MiraVoxisSupportPage() {
   useEffect(() => {
     document.documentElement.lang = 'en';
     setDocumentMeta({
+      favicon: APP_IDENTITY_ASSETS.miravoxis.faviconIco,
       title: 'MiraVoxis Support',
       description: `Contact MiraVoxis Support at ${MIRAVOXIS_SUPPORT_EMAIL}. Help with transcription, Voice Studio, models, permissions, and local runtime issues.`,
       ogTitle: 'MiraVoxis Support',

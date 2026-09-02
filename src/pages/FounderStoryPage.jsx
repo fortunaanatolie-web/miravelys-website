@@ -1,3 +1,4 @@
+import { APP_IDENTITY_ASSETS } from '../config/appIdentityAssets';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { languages, resolvePublicSiteCopy } from '../i18n/publicSiteCopy';
@@ -40,6 +41,7 @@ export default function FounderStoryPage() {
     document.documentElement.lang = t.meta.locale;
     document.documentElement.dir = 'ltr';
     setDocumentMeta({
+      favicon: APP_IDENTITY_ASSETS.miravelys.faviconIco,
       title: `${founderStory.eyebrow} — Miravelys`,
       description: founderStory.intro,
       ogTitle: founderStory.title,
