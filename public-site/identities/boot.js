@@ -109,9 +109,10 @@
 
   function applyRouteHead(pathname) {
     var normalized = normalizePath(pathname);
-    var canonical = SITE_URL + (normalized === '/' ? '/' : normalized);
     var title = TAB_TITLES[normalized];
-    if (title) document.title = title;
+    if (!title) return;
+    var canonical = SITE_URL + normalized;
+    document.title = title;
     upsertLink('canonical', canonical);
     upsertMeta('meta[property="og:url"]', 'og:url', canonical);
     upsertMeta('meta[name="twitter:url"]', 'twitter:url', canonical);
