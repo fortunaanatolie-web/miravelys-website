@@ -1,4 +1,9 @@
 import { languages } from '../i18n/publicSiteCopy';
+import {
+  absoluteAssetUrl,
+  identityIconLinkDescriptors,
+  resolveAppIdentity,
+} from '../config/appIdentity';
 
 const siteUrl = 'https://miravelys.com';
 const canonicalRoutePaths = new Set([
@@ -16,6 +21,9 @@ const canonicalRoutePaths = new Set([
   '/mirascribe/privacy',
   '/mirascribe/legal',
   '/mirascribe/acknowledgements',
+  '/miravoxis',
+  '/miravoxis/support',
+  '/miravoxis/privacy',
 ]);
 
 function upsertMeta(selector, attributes) {
@@ -26,7 +34,7 @@ function upsertMeta(selector, attributes) {
   }
 
   Object.entries(attributes).forEach(([key, value]) => {
-    element.setAttribute(key, value);
+    if (value != null) element.setAttribute(key, value);
   });
 }
 
@@ -38,7 +46,7 @@ function upsertLink(selector, attributes) {
   }
 
   Object.entries(attributes).forEach(([key, value]) => {
-    element.setAttribute(key, value);
+    if (value != null) element.setAttribute(key, value);
   });
 }
 
@@ -111,64 +119,84 @@ function updateRobots(noIndex) {
   if (!existing) document.head.appendChild(robots);
 }
 
+function updateAppIdentity(identity, fallbackFavicon) {
+  document.head
+    .querySelectorAll('link[rel="icon"], link[rel="shortcut icon"], link[rel="apple-touch-icon"], link[rel="manifest"]')
+    .forEach(link => link.remove());
+
+  const descriptors = identity?.assets
+    ? identityIconLinkDescriptors(identity)
+    : [{ rel: 'icon', type: fallbackFavicon?.endsWith('.ico') ? 'image/x-icon' : 'image/png', href: fallbackFavicon }];
+
+  descriptors.filter(descriptor => descriptor.href).forEach(descriptor => {
+    const link = document.createElement('link');
+    Object.entries(descriptor).forEach(([key, value]) => link.setAttribute(key, value));
+    link.dataset.appIdentity = identity?.id ?? 'fallback';
+    document.head.appendChild(link);
+  });
+
+  if (identity) {
+    document.documentElement.dataset.appIdentity = identity.id;
+    upsertMeta('meta[name="theme-color"]', {
+      name: 'theme-color',
+      content: identity.themeColor,
+      'data-app-identity': identity.id,
+    });
+  }
+}
+
 export function setDocumentMeta({
   title,
   description,
   ogTitle,
   ogDescription,
+  ogImage,
+  ogImageAlt,
   noIndex = false,
   alternateLanguages = languages,
   favicon,
 }) {
+  const pathname = window.location.pathname;
+  const identity = resolveAppIdentity(pathname);
+
   if (title) document.title = title;
+  updateAppIdentity(identity, favicon);
 
-  if (favicon) {
-    upsertLink('link[rel="icon"]', { rel: 'icon', type: favicon.endsWith('.ico') ? 'image/x-icon' : 'image/png', href: favicon });
-  } else {
-    upsertLink('link[rel="icon"]', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' });
-  }
-
-
-  const canonicalUrl = new URL(getCanonicalPathname(window.location.pathname), siteUrl).toString();
+  const canonicalUrl = new URL(getCanonicalPathname(pathname), siteUrl).toString();
   upsertLink('link[rel="canonical"]', { rel: 'canonical', href: canonicalUrl });
-  upsertMeta('meta[property="og:url"]', {
-    property: 'og:url',
-    content: canonicalUrl,
-  });
-  upsertMeta('meta[name="twitter:url"]', {
-    name: 'twitter:url',
-    content: canonicalUrl,
-  });
+  upsertMeta('meta[property="og:url"]', { property: 'og:url', content: canonicalUrl });
+  upsertMeta('meta[name="twitter:url"]', { name: 'twitter:url', content: canonicalUrl });
+  upsertMeta('meta[property="og:site_name"]', { property: 'og:site_name', content: identity.siteName });
 
   if (description) {
-    upsertMeta('meta[name="description"]', {
-      name: 'description',
-      content: description,
-    });
+    upsertMeta('meta[name="description"]', { name: 'description', content: description });
   }
 
-  if (ogTitle || title) {
-    upsertMeta('meta[property="og:title"]', {
-      property: 'og:title',
-      content: ogTitle || title,
-    });
-    upsertMeta('meta[name="twitter:title"]', {
-      name: 'twitter:title',
-      content: ogTitle || title,
-    });
+  const resolvedTitle = ogTitle || title;
+  if (resolvedTitle) {
+    upsertMeta('meta[property="og:title"]', { property: 'og:title', content: resolvedTitle });
+    upsertMeta('meta[name="twitter:title"]', { name: 'twitter:title', content: resolvedTitle });
   }
 
-  if (ogDescription || description) {
-    upsertMeta('meta[property="og:description"]', {
-      property: 'og:description',
-      content: ogDescription || description,
-    });
-    upsertMeta('meta[name="twitter:description"]', {
-      name: 'twitter:description',
-      content: ogDescription || description,
-    });
+  const resolvedDescription = ogDescription || description;
+  if (resolvedDescription) {
+    upsertMeta('meta[property="og:description"]', { property: 'og:description', content: resolvedDescription });
+    upsertMeta('meta[name="twitter:description"]', { name: 'twitter:description', content: resolvedDescription });
   }
 
-  updateAlternates(getCanonicalRoutePath(window.location.pathname), alternateLanguages);
+  const resolvedImage = ogImage || identity.assets?.ogImage;
+  const resolvedImageAlt = ogImageAlt || identity.ogImageAlt;
+  if (resolvedImage) {
+    const imageUrl = absoluteAssetUrl(resolvedImage, siteUrl);
+    upsertMeta('meta[property="og:image"]', { property: 'og:image', content: imageUrl });
+    upsertMeta('meta[name="twitter:image"]', { name: 'twitter:image', content: imageUrl });
+  }
+  if (resolvedImageAlt) {
+    upsertMeta('meta[property="og:image:alt"]', { property: 'og:image:alt', content: resolvedImageAlt });
+    upsertMeta('meta[name="twitter:image:alt"]', { name: 'twitter:image:alt', content: resolvedImageAlt });
+  }
+  upsertMeta('meta[name="twitter:card"]', { name: 'twitter:card', content: 'summary_large_image' });
+
+  updateAlternates(getCanonicalRoutePath(pathname), alternateLanguages);
   updateRobots(noIndex);
 }
