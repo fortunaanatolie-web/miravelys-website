@@ -1,0 +1,20 @@
+{
+  "name": "MiraVoxis",
+  "short_name": "MiraVoxis",
+  "display": "browser",
+  "start_url": "/miravoxis",
+  "theme_color": "#0847bb",
+  "background_color": "#0847bb",
+  "icons": [
+    {
+      "src": "/identities/miravoxis/icon-192.5dd1a702.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/identities/miravoxis/icon-512.5dd1a702.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

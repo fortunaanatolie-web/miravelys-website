@@ -1,0 +1,20 @@
+{
+  "name": "MiraScribe",
+  "short_name": "MiraScribe",
+  "display": "browser",
+  "start_url": "/mirascribe",
+  "theme_color": "#0d0f14",
+  "background_color": "#0d0f14",
+  "icons": [
+    {
+      "src": "/identities/mirascribe/icon-192.c650d6bc.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/identities/mirascribe/icon-512.c650d6bc.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

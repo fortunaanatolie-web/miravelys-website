@@ -118,8 +118,16 @@ export function setDocumentMeta({
   ogDescription,
   noIndex = false,
   alternateLanguages = languages,
+  favicon,
 }) {
   if (title) document.title = title;
+
+  if (favicon) {
+    upsertLink('link[rel="icon"]', { rel: 'icon', type: favicon.endsWith('.ico') ? 'image/x-icon' : 'image/png', href: favicon });
+  } else {
+    upsertLink('link[rel="icon"]', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' });
+  }
+
 
   const canonicalUrl = new URL(getCanonicalPathname(window.location.pathname), siteUrl).toString();
   upsertLink('link[rel="canonical"]', { rel: 'canonical', href: canonicalUrl });

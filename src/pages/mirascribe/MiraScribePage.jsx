@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import MiraScribeShell from '../../components/mirascribe/MiraScribeShell';
 import { setDocumentMeta } from '../../lib/documentMeta';
+import { APP_IDENTITY_ASSETS } from '../../config/appIdentityAssets';
 
 const APP_STORE_URL = 'https://apps.apple.com/md/app/mirascribe/id6803891486?mt=12';
 
@@ -13,6 +14,7 @@ export default function MiraScribePage() {
       ogTitle: 'MiraScribe — Private Offline Transcription for Mac',
       ogDescription: 'Turn audio and video into searchable, editable text locally on your Mac. MiraScribe works offline and exports TXT, Markdown, SRT, VTT and timestamped JSON.',
       alternateLanguages: [],
+      favicon: APP_IDENTITY_ASSETS.mirascribe.faviconIco,
     });
   }, []);
 
@@ -30,7 +32,7 @@ export default function MiraScribePage() {
             <span className="text-sm text-muted-foreground">Available on the Mac App Store.</span>
           </div>
           <figure className="mira-mkt__hero-human" aria-label="MiraScribe being used on a MacBook">
-            <img src="/images/mirascribe/hero-human-realui-v3.jpg" alt="Video editor using MiraScribe on a MacBook with the MiraScribe interface visible on the computer screen." loading="eager" fetchPriority="high" decoding="async" />
+            <img src="/images/mirascribe/hero-human-realui-v4.webp" alt="Video editor using MiraScribe on a MacBook with the MiraScribe interface visible on the computer screen." loading="eager" fetchPriority="high" decoding="async" />
             <figcaption>
               <strong>See the words while you work.</strong>
               <span>The product stays in context: MiraScribe running on the Mac, not a detached oversized interface screenshot.</span>

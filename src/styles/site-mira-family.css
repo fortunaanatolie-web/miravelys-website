@@ -1,0 +1,868 @@
+/**
+ * Shared editorial marketing language for MiraScribe and MiraVoxis.
+ * Tokens inherit from .ms-shell / .mx-shell so each product keeps its identity.
+ */
+
+.ms-shell .mira-mkt {
+  --mkt-accent: var(--ms-blue);
+  --mkt-accent-2: var(--ms-indigo);
+  --mkt-accent-soft: var(--ms-indigo-soft);
+  --mkt-accent-wash: var(--ms-indigo-wash);
+  --mkt-text: var(--ms-text);
+  --mkt-secondary: var(--ms-text-secondary);
+  --mkt-muted: var(--ms-text-muted);
+  --mkt-surface: var(--ms-surface);
+  --mkt-raised: var(--ms-surface-raised);
+  --mkt-border: var(--ms-border);
+  --mkt-bg: var(--ms-bg);
+  --mkt-ease: var(--ms-ease);
+  --mkt-on-accent: #fff;
+}
+
+.mx-shell .mira-mkt {
+  --mkt-accent: var(--mx-sapphire-bright);
+  --mkt-accent-2: var(--mx-copper);
+  --mkt-accent-soft: var(--mx-sapphire-soft);
+  --mkt-accent-wash: var(--mx-sapphire-wash);
+  --mkt-text: var(--mx-text);
+  --mkt-secondary: var(--mx-text-secondary);
+  --mkt-muted: var(--mx-text-muted);
+  --mkt-surface: var(--mx-surface);
+  --mkt-raised: var(--mx-surface-raised);
+  --mkt-border: var(--mx-border);
+  --mkt-bg: var(--mx-bg);
+  --mkt-ease: var(--mx-ease);
+  --mkt-on-accent: #061018;
+}
+
+.mira-mkt {
+  --mkt-max: 68rem;
+  max-width: var(--mkt-max);
+  margin: 0 auto;
+}
+
+.mira-mkt > * + * {
+  margin-top: clamp(4.5rem, 10vw, 8rem);
+}
+
+.mira-mkt__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mkt-accent);
+}
+
+.mira-mkt__heading {
+  margin: 0 0 1.25rem;
+  max-width: 18ch;
+  font-size: clamp(2.15rem, 5.4vw, 3.65rem);
+  font-weight: 650;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+  color: var(--mkt-text);
+}
+
+.mira-mkt__heading--wide {
+  max-width: 22ch;
+}
+
+.mira-mkt__heading-break {
+  display: block;
+}
+
+.mira-mkt__lead {
+  margin: 0;
+  max-width: 46ch;
+  font-size: clamp(1.05rem, 2.1vw, 1.28rem);
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--mkt-secondary);
+}
+
+.mira-mkt__lead + .mira-mkt__lead {
+  margin-top: 1rem;
+}
+
+.mira-mkt__hero {
+  padding: clamp(3.5rem, 9vw, 7rem) 0 clamp(1rem, 3vw, 2rem);
+}
+
+.mira-mkt__hero-copy {
+  max-width: 40rem;
+}
+
+.mira-mkt__hero-title {
+  margin: 0 0 1.35rem;
+  max-width: 16ch;
+  font-size: clamp(2.7rem, 8vw, 5rem);
+  font-weight: 650;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+  color: var(--mkt-text);
+}
+
+.mira-mkt__hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.mira-mkt__hero-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  margin-top: 2.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--mkt-border);
+}
+
+.mira-mkt__stat-number {
+  margin: 0;
+  font-size: clamp(4.5rem, 12vw, 7.5rem);
+  font-weight: 650;
+  letter-spacing: -0.07em;
+  line-height: 0.85;
+  color: var(--mkt-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.mira-mkt__stat-label {
+  margin: 0 0 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mkt-accent);
+}
+
+.mira-mkt__stat-note {
+  margin: 0;
+  max-width: 42ch;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--mkt-secondary);
+}
+
+/* ── Illustrations ──────────────────────────────────────────────────────── */
+.mira-mkt__stage {
+  margin-top: 3rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--mkt-border);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--mkt-accent) 8%, transparent), transparent 42%),
+    var(--mkt-surface);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+.mira-mkt__stage-caption {
+  margin: 1rem 0 0;
+  font-size: 0.8125rem;
+  color: var(--mkt-muted);
+}
+
+.mira-mkt__wave-script {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) auto minmax(0, 1.1fr);
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.mira-mkt__wave {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  height: 120px;
+  padding: 16px 8px;
+}
+
+.mira-mkt__wave span {
+  display: block;
+  width: 5px;
+  border-radius: 99px;
+  background: linear-gradient(180deg, var(--mkt-accent), var(--mkt-accent-2));
+  transform-origin: center bottom;
+  animation: mira-wave 1.6s var(--mkt-ease) infinite alternate;
+  animation-delay: var(--d, 0s);
+}
+
+.mira-mkt__stage-arrow {
+  color: var(--mkt-muted);
+  font-size: 1.5rem;
+  letter-spacing: -0.08em;
+}
+
+.mira-mkt__script {
+  display: grid;
+  gap: 10px;
+}
+
+.mira-mkt__script p {
+  margin: 0;
+  height: 11px;
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--mkt-text) 18%, transparent);
+  animation: mira-line 2.4s var(--mkt-ease) infinite;
+}
+
+.mira-mkt__script p:nth-child(1) { width: 92%; animation-delay: 0.05s; }
+.mira-mkt__script p:nth-child(2) { width: 78%; animation-delay: 0.2s; }
+.mira-mkt__script p:nth-child(3) { width: 86%; animation-delay: 0.35s; }
+.mira-mkt__script p:nth-child(4) { width: 64%; animation-delay: 0.5s; }
+.mira-mkt__script p:nth-child(5) { width: 72%; animation-delay: 0.65s; }
+
+.mira-mkt__marks {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.mira-mkt__marks p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--mkt-secondary);
+}
+
+.mira-mkt__marks strong {
+  display: block;
+  margin-bottom: 0.15rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mkt-accent);
+}
+
+/* ── Process rail ───────────────────────────────────────────────────────── */
+.mira-mkt__rail {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1.25rem 1.5rem;
+  counter-reset: none;
+}
+
+.mira-mkt__rail-step {
+  position: relative;
+  padding-top: 0.25rem;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s var(--mkt-ease), transform 0.7s var(--mkt-ease);
+  transition-delay: calc(var(--mira-step, 0) * 90ms);
+}
+
+.mira-mkt__rail.is-inview .mira-mkt__rail-step {
+  opacity: 1;
+  transform: none;
+}
+
+.mira-mkt__rail-index {
+  display: block;
+  margin-bottom: 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+  color: var(--mkt-accent);
+}
+
+.mira-mkt__rail-title {
+  margin: 0 0 0.45rem;
+  font-size: 1.05rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  color: var(--mkt-text);
+}
+
+.mira-mkt__rail-body {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--mkt-secondary);
+}
+
+/* ── Operations ─────────────────────────────────────────────────────────── */
+.mira-mkt__ops {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.mira-mkt__ops li {
+  padding: 1.15rem 1.2rem 1.05rem;
+  border-bottom: 1px solid var(--mkt-border);
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  font-weight: 550;
+  letter-spacing: -0.03em;
+  color: var(--mkt-text);
+}
+
+/* ── Essays / features ──────────────────────────────────────────────────── */
+.mira-mkt__essays {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--mkt-border);
+}
+
+.mira-mkt__essay {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.42fr) minmax(0, 1fr);
+  gap: 1.5rem 3rem;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--mkt-border);
+}
+
+.mira-mkt__essay h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  color: var(--mkt-text);
+}
+
+.mira-mkt__essay p {
+  margin: 0;
+  max-width: 58ch;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--mkt-secondary);
+}
+
+/* ── Language explorer ──────────────────────────────────────────────────── */
+.mira-mkt__lex {
+  margin-top: 2rem;
+}
+
+.mira-mkt__lex-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.mira-mkt__lex-search {
+  flex: 1 1 16rem;
+}
+
+.mira-mkt__lex-search input {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--mkt-border);
+  border-radius: 12px;
+  background: var(--mkt-raised);
+  color: var(--mkt-text);
+  font: inherit;
+  font-size: 1rem;
+}
+
+.mira-mkt__lex-search input::placeholder {
+  color: var(--mkt-muted);
+}
+
+.mira-mkt__lex-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 44px;
+  font-size: 0.9rem;
+  color: var(--mkt-secondary);
+  cursor: pointer;
+}
+
+.mira-mkt__lex-toggle input {
+  width: 1.05rem;
+  height: 1.05rem;
+  accent-color: var(--mkt-accent);
+}
+
+.mira-mkt__lex-note,
+.mira-mkt__lex-empty {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--mkt-muted);
+}
+
+.mira-mkt__lex-alpha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0 0 1.5rem;
+}
+
+.mira-mkt__lex-alpha a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  min-height: 2rem;
+  padding: 0 0.35rem;
+  border-radius: 8px;
+  color: var(--mkt-secondary);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+
+.mira-mkt__lex-alpha a:hover,
+.mira-mkt__lex-alpha a:focus-visible {
+  color: var(--mkt-text);
+  background: var(--mkt-accent-soft);
+}
+
+.mira-mkt__lex-groups {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.mira-mkt__lex-letter {
+  margin: 0 0 0.55rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mkt-muted);
+}
+
+.mira-mkt__lex-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr));
+  gap: 0.35rem 1rem;
+}
+
+.mira-mkt__lex-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  min-height: 2rem;
+  font-size: 0.95rem;
+  color: var(--mkt-text);
+}
+
+.mira-mkt__lex-badge {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mkt-muted);
+}
+
+.mira-mkt__lang-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 2rem 0 0;
+}
+
+.mira-mkt__lang-card {
+  padding: 1.5rem 1.6rem 1.35rem;
+  border: 1px solid var(--mkt-border);
+  border-radius: 20px;
+  background: var(--mkt-surface);
+}
+
+.mira-mkt__lang-card strong {
+  display: block;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 650;
+  letter-spacing: -0.04em;
+  color: var(--mkt-text);
+}
+
+.mira-mkt__lang-card span {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--mkt-muted);
+}
+
+/* ── Pipeline ───────────────────────────────────────────────────────────── */
+.mira-mkt__pipe {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.mira-mkt__pipe li {
+  padding: 1rem 0.75rem 1.1rem;
+  border-top: 1px solid var(--mkt-accent);
+  color: var(--mkt-text);
+}
+
+.mira-mkt__pipe span {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mkt-muted);
+}
+
+.mira-mkt__pipe strong {
+  font-size: 1rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+/* ── Dialogue / pronunciation samples ───────────────────────────────────── */
+.mira-mkt__sample {
+  margin: 1.5rem 0 0;
+  padding: 1.35rem 1.5rem;
+  border-radius: 18px;
+  background: var(--mkt-raised);
+  border: 1px solid var(--mkt-border);
+}
+
+.mira-mkt__sample pre,
+.mira-mkt__sample p {
+  margin: 0;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--mkt-text);
+  white-space: pre-wrap;
+}
+
+.mira-mkt__sample .mira-mkt__role {
+  color: var(--mkt-accent);
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+}
+
+.mira-mkt__pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.mira-mkt__pair dt {
+  margin: 0 0 0.25rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mkt-muted);
+}
+
+.mira-mkt__pair dd {
+  margin: 0;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+  color: var(--mkt-text);
+}
+
+/* ── Privacy matrix ─────────────────────────────────────────────────────── */
+.mira-mkt__matrix {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 2rem;
+  background: var(--mkt-border);
+  border: 1px solid var(--mkt-border);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.mira-mkt__matrix article {
+  padding: 1.35rem 1.4rem 1.25rem;
+  background: var(--mkt-surface);
+}
+
+.mira-mkt__matrix h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  color: var(--mkt-text);
+}
+
+.mira-mkt__matrix p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--mkt-secondary);
+}
+
+.mira-mkt__kicker {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mkt-accent);
+}
+
+/* ── Workflows ──────────────────────────────────────────────────────────── */
+.mira-mkt__flows {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.mira-mkt__flow {
+  padding: 1.4rem 1.5rem 1.3rem;
+  border-left: 2px solid var(--mkt-accent);
+}
+
+.mira-mkt__flow h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.05rem;
+  color: var(--mkt-text);
+}
+
+.mira-mkt__flow p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--mkt-secondary);
+}
+
+/* ── Ecosystem ──────────────────────────────────────────────────────────── */
+.mira-mkt__eco-stat {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.mira-mkt__loop {
+  list-style: none;
+  margin: 2.25rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.mira-mkt__loop li {
+  padding-top: 1rem;
+  border-top: 1px solid var(--mkt-border);
+}
+
+.mira-mkt__loop-kicker {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mkt-accent);
+}
+
+.mira-mkt__loop strong {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 1.15rem;
+  letter-spacing: -0.03em;
+  color: var(--mkt-text);
+}
+
+.mira-mkt__loop p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--mkt-secondary);
+}
+
+.mira-mkt__cross {
+  margin: 2rem 0 0;
+  font-size: 1.05rem;
+  color: var(--mkt-secondary);
+}
+
+.mira-mkt__cross a {
+  color: var(--mkt-accent);
+  font-weight: 650;
+  text-decoration: none;
+  text-underline-offset: 0.2em;
+}
+
+.mira-mkt__cross a:hover,
+.mira-mkt__cross a:focus-visible {
+  text-decoration: underline;
+}
+
+.mira-mkt a:not([class]) {
+  color: var(--mkt-accent);
+}
+
+.mira-mkt details {
+  margin-top: 1.25rem;
+  border-top: 1px solid var(--mkt-border);
+  padding-top: 1rem;
+}
+
+.mira-mkt summary {
+  cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-weight: 650;
+  color: var(--mkt-text);
+}
+
+.mira-mkt details p,
+.mira-mkt details ul {
+  max-width: 62ch;
+  color: var(--mkt-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.mira-mkt__cta-band {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.75rem 0 0;
+  border-top: 1px solid var(--mkt-border);
+}
+
+.mira-mkt__cta-band p {
+  margin: 0;
+  max-width: 40ch;
+  color: var(--mkt-secondary);
+}
+
+/* ── Skip link (product shells) ─────────────────────────────────────────── */
+.ms-skip-link.sr-only:focus,
+.ms-skip-link.sr-only:focus-visible {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 80;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 10px 14px;
+  clip: auto;
+  overflow: visible;
+  white-space: nowrap;
+  border-radius: 8px;
+  background: var(--ms-blue);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ── Motion ─────────────────────────────────────────────────────────────── */
+@keyframes mira-wave {
+  from { transform: scaleY(0.35); }
+  to { transform: scaleY(1); }
+}
+
+@keyframes mira-line {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.8; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mira-mkt__wave span,
+  .mira-mkt__script p,
+  .mira-mkt__rail-step {
+    animation: none;
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ── Responsive recomposition ───────────────────────────────────────────── */
+@media (max-width: 980px) {
+  .mira-mkt__rail,
+  .mira-mkt__loop,
+  .mira-mkt__pipe {
+    grid-template-columns: 1fr;
+  }
+
+  .mira-mkt__rail-step,
+  .mira-mkt__loop li,
+  .mira-mkt__pipe li {
+    display: grid;
+    grid-template-columns: 4.5rem minmax(0, 1fr);
+    column-gap: 1rem;
+    border-top: 0;
+    border-left: 1px solid var(--mkt-border);
+    padding: 0.85rem 0 0.85rem 1rem;
+  }
+
+  .mira-mkt__rail-title,
+  .mira-mkt__loop strong,
+  .mira-mkt__pipe strong {
+    grid-column: 2;
+  }
+
+  .mira-mkt__rail-body,
+  .mira-mkt__loop p {
+    grid-column: 2;
+  }
+
+  .mira-mkt__rail-index,
+  .mira-mkt__loop-kicker,
+  .mira-mkt__pipe span {
+    grid-row: 1 / span 2;
+    align-self: start;
+  }
+
+  .mira-mkt__ops {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mira-mkt__wave-script {
+    grid-template-columns: 1fr;
+  }
+
+  .mira-mkt__stage-arrow {
+    transform: rotate(90deg);
+    justify-self: center;
+  }
+}
+
+@media (max-width: 720px) {
+  .mira-mkt__essay,
+  .mira-mkt__pair,
+  .mira-mkt__lang-pair,
+  .mira-mkt__matrix,
+  .mira-mkt__hero-stat,
+  .mira-mkt__eco-stat {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .mira-mkt__hero-stat,
+  .mira-mkt__eco-stat {
+    gap: 0.75rem;
+  }
+
+  .mira-mkt__hero-title {
+    max-width: none;
+  }
+
+  .mira-mkt__heading {
+    max-width: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .mira-mkt__ops {
+    grid-template-columns: 1fr;
+  }
+
+  .mira-mkt__lex-list {
+    grid-template-columns: 1fr;
+  }
+}
