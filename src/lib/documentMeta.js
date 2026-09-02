@@ -26,16 +26,16 @@ const canonicalRoutePaths = new Set([
   '/miravoxis/privacy',
 ]);
 
-/*
- * Product-owned utility routes use product-first tab titles so several open
- * Miravelys-family tabs remain distinguishable before the user reads the rest
- * of the label. This also keeps hydration consistent with prerender output.
- */
+/* Product-owned routes keep one stable product-first browser title from
+ * prerender through pre-hydration identity boot and React hydration. */
 const productTabTitles = new Map([
+  ['/products', 'Products — Miravelys'],
+  ['/mirascribe', 'MiraScribe — Private Offline Transcription for Mac'],
   ['/mirascribe/support', 'MiraScribe Support'],
   ['/mirascribe/privacy', 'MiraScribe Privacy'],
   ['/mirascribe/legal', 'MiraScribe Legal'],
   ['/mirascribe/acknowledgements', 'MiraScribe Acknowledgements'],
+  ['/miravoxis', 'MiraVoxis — Local Voice Studio for Mac'],
   ['/miravoxis/support', 'MiraVoxis Support'],
   ['/miravoxis/privacy', 'MiraVoxis Privacy'],
 ]);
