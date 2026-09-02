@@ -157,8 +157,15 @@ textarea {
   transition: transform 0.18s ease;
 }
 
-.skip-link:focus {
+/*
+ * Skip navigation is a keyboard safety control, not decorative motion.
+ * Surface it in the viewport immediately when focused so the first Tab always
+ * has a visible target, including under reduced-motion and slow-render states.
+ */
+.skip-link:focus,
+.skip-link:focus-visible {
   transform: translateY(0);
+  transition: none;
 }
 
 .sr-only {
@@ -251,5 +258,10 @@ textarea {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .skip-link:focus,
+  .skip-link:focus-visible {
+    transition: none !important;
   }
 }
