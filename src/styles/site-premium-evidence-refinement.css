@@ -136,6 +136,11 @@
   display: none !important;
 }
 
+/* Each word is a real touch target, including one-letter emphasis choices. */
+.mx-performance__sentence button {
+  min-width: 24px;
+}
+
 /* Shared mobile editorial discipline. */
 @media (max-width: 900px) {
   .ms-editorial .ms-editorial-workflow > div,
