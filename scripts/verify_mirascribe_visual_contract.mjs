@@ -36,6 +36,21 @@ async function assertImagesLoaded(page) {
   });
 }
 
+async function assertEditorialSurface(page, selector, label) {
+  const proof = await page.locator(selector).evaluate(element => {
+    const style = getComputedStyle(element);
+    return {
+      backgroundImage: style.backgroundImage,
+      backgroundColor: style.backgroundColor,
+      borderRadius: style.borderRadius,
+      boxShadow: style.boxShadow,
+    };
+  });
+  assert(proof.borderRadius === '0px', `${label}: still reads as a rounded outer panel (${proof.borderRadius})`);
+  assert(proof.boxShadow === 'none', `${label}: still has an outer panel shadow (${proof.boxShadow})`);
+  assert(proof.backgroundImage === 'none', `${label}: still has decorative panel background image (${proof.backgroundImage})`);
+}
+
 await mkdir(artifactDir, { recursive: true });
 const browser = await chromium.launch({ headless: true });
 
@@ -69,9 +84,11 @@ try {
         naturalHeight: element.naturalHeight,
         box: element.getBoundingClientRect().toJSON(),
       }));
-      assert(heroProof.src.includes('/images/mirascribe/mirascribe-hero-hd.webp'), `${viewport.name}: approved HD hero is not active`);
-      assert(heroProof.naturalWidth >= 1000 && heroProof.naturalHeight >= 600, `${viewport.name}: hero source resolution is unexpectedly low`);
+      assert(heroProof.src.includes('/images/mirascribe/mirascribe-hero-hd.webp'), `${viewport.name}: approved hero is not active`);
+      assert(heroProof.naturalWidth >= 800 && heroProof.naturalHeight >= 450, `${viewport.name}: hero source is below the established repository delivery floor`);
       assert(heroProof.box.width >= (viewport.name === 'desktop' ? 500 : 300), `${viewport.name}: hero collapsed`);
+      assert(heroProof.naturalWidth >= heroProof.box.width * 1.15, `${viewport.name}: hero source width is insufficient for its rendered size (${heroProof.naturalWidth}px source / ${Math.round(heroProof.box.width)}px rendered)`);
+      assert(heroProof.naturalHeight >= heroProof.box.height * 1.15, `${viewport.name}: hero source height is insufficient for its rendered size (${heroProof.naturalHeight}px source / ${Math.round(heroProof.box.height)}px rendered)`);
 
       assert(await page.locator('.ms-editorial-story img').count() === 2, `${viewport.name}: study/film editorial photography is incomplete`);
       assert(await page.locator('.ms-search-demo').count() === 1, `${viewport.name}: transcript search instrument missing`);
@@ -79,6 +96,10 @@ try {
       await page.getByText('32:18', { exact: true }).waitFor({ state: 'visible' });
       await page.getByRole('button', { name: 'Jump to source' }).click();
       await page.getByRole('button', { name: 'Source moment selected' }).waitFor({ state: 'visible' });
+
+      await assertEditorialSurface(page, '.ms-editorial-workflow', `${viewport.name}: workflow`);
+      await assertEditorialSurface(page, '.ms-editorial-privacy', `${viewport.name}: privacy`);
+      await assertEditorialSurface(page, '.ms-editorial-dictation', `${viewport.name}: dictation`);
 
       const overflow = await page.evaluate(() => ({
         viewport: window.innerWidth,
