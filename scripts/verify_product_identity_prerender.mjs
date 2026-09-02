@@ -2,6 +2,7 @@ import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { APP_IDENTITY_ASSETS } from '../src/config/appIdentityAssets.js';
+import { resolveAppIdentity } from '../src/config/appIdentity.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const dist = join(root, 'dist');
@@ -32,10 +33,12 @@ function absoluteAsset(path) {
 }
 
 for (const [path, appId, title] of routes) {
-  const assets = APP_IDENTITY_ASSETS[appId];
+  const identity = resolveAppIdentity(path);
+  const assets = identity.assets;
   const html = await readFile(routeFile(path), 'utf8');
   const canonical = `${siteUrl}${path}`;
 
+  assert(identity.id === appId, `${path}: resolver returned ${identity.id}, expected ${appId}`);
   assert(html.includes(`<title>${title}</title>`), `${path}: prerendered title mismatch`);
   assert(html.includes(`<link rel="canonical" href="${canonical}">`), `${path}: prerendered canonical mismatch`);
   assert(html.includes(`content="${canonical}"`), `${path}: social URL does not contain canonical product route`);
@@ -68,5 +71,5 @@ for (const [path, appId, title] of routes) {
 console.log(JSON.stringify({
   status: 'PASS',
   routes: routes.length,
-  contract: 'route = prerendered title = canonical app icon family',
+  contract: 'route = prerendered title = canonical app identity resolver',
 }, null, 2));
