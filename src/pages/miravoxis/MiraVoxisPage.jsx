@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import MiraVoxisShell from '../../components/miravoxis/MiraVoxisShell';
 import MiraVoxisPerformanceDemo from '../../components/mira-family/MiraVoxisPerformanceDemo';
-import EcosystemBridge from '../../components/mira-family/EcosystemBridge';
 import LanguageExplorer from '../../components/mira-family/LanguageExplorer';
 import ProductJsonLd from '../../components/mira-family/ProductJsonLd';
 import { APP_IDENTITY_ASSETS } from '../../config/appIdentityAssets';
@@ -27,6 +26,8 @@ const STUDIO_STEPS = [
   ['06', 'Speech', 'After the local engine is installed, generate on this Mac and export the result.'],
 ];
 
+const HERO_BARS = [24, 38, 55, 31, 71, 44, 62, 29, 83, 52, 36, 68, 47, 76, 41, 59, 32, 72, 49, 63, 37, 78, 45, 58];
+
 export default function MiraVoxisPage() {
   useEffect(() => {
     document.documentElement.lang = 'en';
@@ -46,22 +47,28 @@ export default function MiraVoxisPage() {
       <ProductJsonLd productId="miravoxis" />
       <main id="mx-overview-main" className="mx-page mx-page--wide mira-mkt mx-studio-page" aria-label="MiraVoxis overview">
         <section className="mira-mkt__hero mx-studio-hero" aria-label="Product introduction">
-          <p className="mira-mkt__eyebrow">A Miravelys product · local voice studio</p>
-          <img src={icon} width={70} height={70} alt="MiraVoxis app icon" />
-          <h1 className="mira-mkt__hero-title">Give written words a voice you can direct.</h1>
-          <p className="mira-mkt__lead">MiraVoxis reads the sentence before it generates speech — then it speaks from the words you wrote and the performance you set.</p>
-          <p className="mira-mkt__lead">Production speech generation currently supports {generationNames}. After the voice engine is installed, inference runs locally on this Mac.</p>
-          <div className="mira-mkt__hero-actions">
-            <Link to="/miravoxis/support" className="mx-btn mx-btn--primary">Support</Link>
-            <Link to="/miravoxis/privacy" className="mx-btn mx-btn--secondary">Privacy</Link>
+          <div className="mx-studio-hero__copy">
+            <p className="mira-mkt__eyebrow">A Miravelys product · local voice studio</p>
+            <img src={icon} width={70} height={70} alt="MiraVoxis app icon" />
+            <h1 className="mira-mkt__hero-title">Give written words a voice you can direct.</h1>
+            <p className="mira-mkt__lead">MiraVoxis reads the sentence before it generates speech — then it speaks from the words you wrote and the performance you set.</p>
+            <p className="mira-mkt__lead">Production speech generation currently supports {generationNames}. After the voice engine is installed, inference runs locally on this Mac.</p>
+            <div className="mira-mkt__hero-actions">
+              <Link to="/miravoxis/support" className="mx-btn mx-btn--primary">Support</Link>
+              <Link to="/miravoxis/privacy" className="mx-btn mx-btn--secondary">Privacy</Link>
+            </div>
           </div>
 
-          <div className="mx-studio-hero__rail" aria-label="MiraVoxis core flow">
-            <span><b>Text</b><small>the words you wrote</small></span>
-            <i aria-hidden="true">→</i>
-            <span><b>Performance</b><small>the direction you set</small></span>
-            <i aria-hidden="true">→</i>
-            <span><b>Voice</b><small>speech generated on this Mac</small></span>
+          <div className="mx-studio-hero__stage" aria-label="Explanatory performance-direction visual">
+            <p className="mx-studio-hero__stage-label">Performance direction</p>
+            <p className="mx-studio-hero__line">I didn’t say <strong>she</strong> stole the money.</p>
+            <div className="mx-studio-hero__signal" aria-hidden="true">
+              {HERO_BARS.map((height, index) => <i key={`${height}-${index}`} style={{ '--mx-bar': `${height}%` }} />)}
+            </div>
+            <div className="mx-studio-hero__flow" aria-label="Text to performance to voice">
+              <span>Text</span><b aria-hidden="true">→</b><span>Performance</span><b aria-hidden="true">→</b><span>Voice</span>
+            </div>
+            <small>Explanatory visual. The website does not generate speech.</small>
           </div>
         </section>
 
@@ -130,14 +137,22 @@ export default function MiraVoxisPage() {
               <span key={language.code}><strong>{language.name}</strong><small>{language.code} · production speech generation</small></span>
             ))}
           </div>
-          <LanguageExplorer
-            languages={voxis.asrLanguages}
-            experimentalLanguages={voxis.asrExperimentalLanguages}
-            searchLabel="Search MiraVoxis transcription languages"
-            experimentalLabel={`Include ${voxis.asrExperimentalLanguageCount} experimental languages`}
-            experimentalNote="These experimental languages are classified inside MiraVoxis. They are not speech-generation languages."
-            idPrefix="mx-asr"
-          />
+          <details className="mx-studio-language-details">
+            <summary>
+              <span>Browse transcription coverage</span>
+              <small>{voxis.asrLanguageCount} production languages · optional experimental coverage</small>
+            </summary>
+            <div className="mx-studio-language-details__body">
+              <LanguageExplorer
+                languages={voxis.asrLanguages}
+                experimentalLanguages={voxis.asrExperimentalLanguages}
+                searchLabel="Search MiraVoxis transcription languages"
+                experimentalLabel={`Include ${voxis.asrExperimentalLanguageCount} experimental languages`}
+                experimentalNote="These experimental languages are classified inside MiraVoxis. They are not speech-generation languages."
+                idPrefix="mx-asr"
+              />
+            </div>
+          </details>
         </section>
 
         <section className="mx-studio-privacy" aria-labelledby="mx-privacy-heading">
@@ -153,7 +168,12 @@ export default function MiraVoxisPage() {
           <p><Link to="/miravoxis/privacy">Read the privacy policy</Link></p>
         </section>
 
-        <EcosystemBridge from="voxis" />
+        <section className="mx-studio-bridge" aria-labelledby="mx-bridge-heading">
+          <p className="mira-mkt__eyebrow">Within the Miravelys family</p>
+          <h2 className="mira-mkt__heading" id="mx-bridge-heading">Speech can become text. Text can become speech.</h2>
+          <p className="mira-mkt__lead">MiraScribe turns recordings into searchable text locally on the Mac. MiraVoxis takes written language in the other direction: toward a directed performance.</p>
+          <Link to="/mirascribe" className="mx-studio-bridge__link">Meet MiraScribe <span aria-hidden="true">→</span></Link>
+        </section>
 
         <section className="mx-studio-cta" aria-labelledby="mx-cta-heading">
           <p className="mira-mkt__eyebrow">MiraVoxis for Apple silicon</p>
