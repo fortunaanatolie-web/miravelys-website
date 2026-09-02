@@ -134,33 +134,44 @@ function noScriptMarkup(lang, title, description, actionLabel) {
     </noscript>`;
 }
 
+
 function withRouteHead(template, lang, route) {
   const path = localizedPath(lang, route.path);
   const head = routeHead(lang, route);
   const { title, description } = getPageMeta(lang, route);
+  const favicon = '/identities/miravelys/favicon.7dc7e212.ico';
+  const faviconType = 'image/x-icon';
+
   const withoutManagedHead = template
     .replace(/<title>[\s\S]*?<\/title>\s*/i, '')
     .replace(/\s*<meta\s+(?:name|property)="(?:description|twitter:[^"]+|og:[^"]+)"[^>]*>/gi, '')
-    .replace(/\s*<link\s+rel="canonical"[^>]*>/gi, '');
+    .replace(/\s*<link\s+rel="canonical"[^>]*>/gi, '')
+    .replace(/\s*<link\s+rel="icon"[^>]*>/gi, '');
 
   return withoutManagedHead
     .replace('<html lang="en">', `<html lang="${lang}">`)
-    .replace('</head>', `    ${head}\n  </head>`)
+    .replace('</head>', `    ${head}\n    <link rel="icon" type="${faviconType}" href="${favicon}" />\n  </head>`)
     .replace(/<noscript>[\s\S]*?<\/noscript>/i, noScriptMarkup(lang, title, description))
     .replace('data-prerender-path=""', `data-prerender-path="${path}"`);
 }
 
+
 function withNotFoundHead(template) {
   const title = '404 — Miravelys';
   const description = 'The requested Miravelys page could not be found.';
+  const favicon = '/identities/miravelys/favicon.7dc7e212.ico';
+  const faviconType = 'image/x-icon';
+
   const withoutManagedHead = template
     .replace(/<title>[\s\S]*?<\/title>\s*/i, '')
     .replace(/\s*<meta\s+(?:name|property)="(?:description|twitter:[^"]+|og:[^"]+)"[^>]*>/gi, '')
-    .replace(/\s*<link\s+rel="canonical"[^>]*>/gi, '');
+    .replace(/\s*<link\s+rel="canonical"[^>]*>/gi, '')
+    .replace(/\s*<link\s+rel="icon"[^>]*>/gi, '');
   const head = [
     `<title>${title}</title>`,
     `<meta name="description" content="${description}">`,
     '<meta name="robots" content="noindex,follow">',
+    `<link rel="icon" type="${faviconType}" href="${favicon}" />`
   ].join('\n    ');
 
   return withoutManagedHead
@@ -177,6 +188,28 @@ function outputFile(path) {
 }
 
 const standaloneRoutes = [
+  {
+    path: '/miravoxis',
+    title: 'MiraVoxis — Voice cloning and text-to-speech for Mac',
+    description: 'Design voices, clone your own, and synthesize speech locally on your Mac. MiraVoxis is a private, on-device voice studio.',
+    priority: '0.9',
+    frequency: 'weekly',
+  },
+  {
+    path: '/miravoxis/support',
+    title: 'MiraVoxis Support',
+    description: 'Get help with MiraVoxis. Contact support or find answers to common questions about voice cloning, synthesis, and more.',
+    priority: '0.7',
+    frequency: 'monthly',
+  },
+  {
+    path: '/miravoxis/privacy',
+    title: 'Privacy Policy — MiraVoxis',
+    description: 'MiraVoxis privacy policy. Voice models run locally on your Mac. Audio and transcripts are not uploaded to a remote service.',
+    priority: '0.6',
+    frequency: 'yearly',
+  },
+
   {
     path: '/products',
     title: 'Products — Miravelys',
@@ -221,8 +254,23 @@ const standaloneRoutes = [
   },
 ];
 
+
 function withStandaloneHead(template, route) {
   const canonical = urlFor(route.path);
+  let favicon = '/favicon.svg';
+  let faviconType = 'image/svg+xml';
+  
+  if (route.path.startsWith('/mirascribe')) {
+    favicon = '/identities/mirascribe/favicon.c650d6bc.ico';
+    faviconType = 'image/x-icon';
+  } else if (route.path.startsWith('/miravoxis')) {
+    favicon = '/identities/miravoxis/favicon.5dd1a702.ico';
+    faviconType = 'image/x-icon';
+  } else {
+    favicon = '/identities/miravelys/favicon.7dc7e212.ico';
+    faviconType = 'image/x-icon';
+  }
+
   const head = [
     `<title>${escapeHtml(route.title)}</title>`,
     `<meta name="description" content="${escapeHtml(route.description)}">`,
@@ -238,12 +286,14 @@ function withStandaloneHead(template, route) {
     `<meta name="twitter:title" content="${escapeHtml(route.title)}">`,
     `<meta name="twitter:description" content="${escapeHtml(route.description)}">`,
     `<meta name="twitter:image" content="${siteUrl}/og-miravelys.jpg">`,
+    `<link rel="icon" type="${faviconType}" href="${favicon}" />`
   ].join('\n    ');
 
   const withoutManagedHead = template
     .replace(/<title>[\s\S]*?<\/title>\s*/i, '')
     .replace(/\s*<meta\s+(?:name|property)="(?:description|twitter:[^"]+|og:[^"]+)"[^>]*>/gi, '')
-    .replace(/\s*<link\s+rel="canonical"[^>]*>/gi, '');
+    .replace(/\s*<link\s+rel="canonical"[^>]*>/gi, '')
+    .replace(/\s*<link\s+rel="icon"[^>]*>/gi, '');
 
   return withoutManagedHead
     .replace('<html lang="en">', '<html lang="en">')
