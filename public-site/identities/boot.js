@@ -31,6 +31,8 @@
     return best;
   }
 
+  var currentId = null;
+
   function addLink(rel, href, extra) {
     var link = document.createElement('link');
     link.rel = rel;
@@ -42,8 +44,6 @@
     }
     document.head.appendChild(link);
   }
-
-  var currentId = null;
 
   function apply(identity) {
     if (!identity || !identity.assets) return;
@@ -69,7 +69,35 @@
     theme.setAttribute(ATTR, identity.id);
   }
 
+  function applyCurrentRouteIdentity() {
+    apply(resolve(location.pathname));
+  }
+
+  /*
+   * React Router changes history before a lazy page's effect can run. Identity
+   * is browser chrome, so update it synchronously with the URL rather than
+   * waiting for page hydration/effects. Page-level metadata can refine title,
+   * description and social fields after the route component mounts.
+   */
+  var nativePushState = history.pushState;
+  var nativeReplaceState = history.replaceState;
+
+  history.pushState = function () {
+    var result = nativePushState.apply(history, arguments);
+    applyCurrentRouteIdentity();
+    return result;
+  };
+
+  history.replaceState = function () {
+    var result = nativeReplaceState.apply(history, arguments);
+    applyCurrentRouteIdentity();
+    return result;
+  };
+
+  addEventListener('popstate', applyCurrentRouteIdentity);
+
   window.__miravelysResolveAppIdentity = resolve;
   window.__miravelysApplyAppIdentity = apply;
-  apply(resolve(location.pathname));
+  window.__miravelysApplyCurrentRouteIdentity = applyCurrentRouteIdentity;
+  applyCurrentRouteIdentity();
 })();
