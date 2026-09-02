@@ -26,6 +26,20 @@ const canonicalRoutePaths = new Set([
   '/miravoxis/privacy',
 ]);
 
+/*
+ * Product-owned utility routes use product-first tab titles so several open
+ * Miravelys-family tabs remain distinguishable before the user reads the rest
+ * of the label. This also keeps hydration consistent with prerender output.
+ */
+const productTabTitles = new Map([
+  ['/mirascribe/support', 'MiraScribe Support'],
+  ['/mirascribe/privacy', 'MiraScribe Privacy'],
+  ['/mirascribe/legal', 'MiraScribe Legal'],
+  ['/mirascribe/acknowledgements', 'MiraScribe Acknowledgements'],
+  ['/miravoxis/support', 'MiraVoxis Support'],
+  ['/miravoxis/privacy', 'MiraVoxis Privacy'],
+]);
+
 function upsertMeta(selector, attributes) {
   let element = document.head.querySelector(selector);
   if (!element) {
@@ -75,6 +89,11 @@ function getCanonicalPathname(pathname) {
   const routePath = getCanonicalRoutePath(pathname);
   if (routePath) return localizedPath(getPathLanguage(pathname), routePath);
   return pathname === '/' ? '/' : pathname.replace(/\/+$/, '');
+}
+
+function resolveTabTitle(pathname, requestedTitle) {
+  const routePath = getCanonicalRoutePath(pathname);
+  return productTabTitles.get(routePath) || requestedTitle;
 }
 
 function updateAlternates(routePath, alternateLanguages) {
@@ -158,8 +177,9 @@ export function setDocumentMeta({
 }) {
   const pathname = window.location.pathname;
   const identity = resolveAppIdentity(pathname);
+  const tabTitle = resolveTabTitle(pathname, title);
 
-  if (title) document.title = title;
+  if (tabTitle) document.title = tabTitle;
   updateAppIdentity(identity, favicon);
 
   const canonicalUrl = new URL(getCanonicalPathname(pathname), siteUrl).toString();
@@ -172,7 +192,7 @@ export function setDocumentMeta({
     upsertMeta('meta[name="description"]', { name: 'description', content: description });
   }
 
-  const resolvedTitle = ogTitle || title;
+  const resolvedTitle = ogTitle || tabTitle;
   if (resolvedTitle) {
     upsertMeta('meta[property="og:title"]', { property: 'og:title', content: resolvedTitle });
     upsertMeta('meta[name="twitter:title"]', { name: 'twitter:title', content: resolvedTitle });
