@@ -5,6 +5,7 @@ import { APP_IDENTITY_ASSETS } from '../src/config/appIdentityAssets.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const dist = join(root, 'dist');
+const siteUrl = 'https://miravelys.com';
 
 const routes = [
   ['/products', 'miravelys', 'Products — Miravelys'],
@@ -26,10 +27,14 @@ function routeFile(path) {
   return join(dist, path.replace(/^\//, ''), 'index.html');
 }
 
+function absoluteAsset(path) {
+  return path.startsWith('http') ? path : `${siteUrl}${path}`;
+}
+
 for (const [path, appId, title] of routes) {
   const assets = APP_IDENTITY_ASSETS[appId];
   const html = await readFile(routeFile(path), 'utf8');
-  const canonical = `https://miravelys.com${path}`;
+  const canonical = `${siteUrl}${path}`;
 
   assert(html.includes(`<title>${title}</title>`), `${path}: prerendered title mismatch`);
   assert(html.includes(`<link rel="canonical" href="${canonical}">`), `${path}: prerendered canonical mismatch`);
@@ -42,11 +47,12 @@ for (const [path, appId, title] of routes) {
     ['48px icon', assets.icon48],
     ['Apple touch icon', assets.appleTouchIcon],
     ['manifest', assets.manifest],
-    ['social image', assets.ogImage],
   ]) {
     assert(html.includes(asset), `${path}: prerendered ${surface} is not ${appId}: ${asset}`);
   }
 
+  const socialImage = absoluteAsset(assets.ogImage);
+  assert(html.includes(`content="${socialImage}"`), `${path}: prerendered social image is not ${appId}: ${socialImage}`);
   assert(html.includes(`data-app-identity="${appId}"`), `${path}: product identity marker is missing from prerendered head`);
 
   if (appId !== 'miravelys') {
