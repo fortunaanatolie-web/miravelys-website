@@ -12,6 +12,8 @@ on:
       - 'scripts/verify_mirascribe_visual_contract.mjs'
       - 'scripts/verify_premium_ecosystem.mjs'
       - 'scripts/verify_premium_accessibility.mjs'
+      - 'scripts/verify_live_production.mjs'
+      - 'scripts/verify_live_production_all.mjs'
       - 'index.html'
       - 'package.json'
       - 'package-lock.json'
@@ -24,7 +26,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -72,6 +74,11 @@ jobs:
       - name: Verify premium accessibility contract
         run: node scripts/verify_premium_accessibility.mjs
 
+      - name: Verify live production domain
+        env:
+          LIVE_BASE_URL: https://www.miravelys.com
+        run: node scripts/verify_live_production_all.mjs
+
       - name: Upload rendered evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -80,5 +87,6 @@ jobs:
           path: |
             artifacts/mirascribe-visual-contract/
             artifacts/premium-ecosystem/
+            artifacts/live-production-verification/
           if-no-files-found: ignore
           retention-days: 14
