@@ -1,26 +1,40 @@
 import { useEffect } from 'react';
+import { ArrowRight, AudioLines, Search, ShieldCheck } from 'lucide-react';
 import MiraScribeShell from '../../components/mirascribe/MiraScribeShell';
-import MiraScribeSearchDemo from '../../components/mira-family/MiraScribeSearchDemo';
 import { setDocumentMeta } from '../../lib/documentMeta';
 import { APP_IDENTITY_ASSETS } from '../../config/appIdentityAssets';
+import { MIRASCRIBE_APP_STORE_URL, productCapabilities } from '../../config/productCapabilities';
 
-const APP_STORE_URL = 'https://apps.apple.com/md/app/mirascribe/id6803891486?mt=12';
+const scribe = productCapabilities.mirascribe;
 
-const WORKFLOW = [
-  ['01', 'Add it', 'Choose a supported audio or video file from your Mac.'],
-  ['02', 'Transcribe it', 'Choose Fast or Best Quality. Select the spoken language or let MiraScribe detect it.'],
-  ['03', 'Work with the words', 'Read, search, correct, listen against the source, and return to timestamps.'],
-  ['04', 'Take it somewhere else', 'Export TXT, Markdown, SRT, VTT, or timestamped JSON.'],
+const PROOF = [
+  ['On-device', 'Core speech transcription runs locally on your Mac.'],
+  [`${scribe.transcriptionLanguageCount} languages`, 'A broad production language set for spoken work.'],
+  ['Search + timestamps', 'Find the words, then return to the moment behind them.'],
+  ['Export-ready', scribe.exportFormats.join(' · ')],
 ];
+
+function Waveform({ compact = false }) {
+  const bars = compact
+    ? [22, 44, 30, 66, 38, 76, 46, 58, 34, 72, 42, 60]
+    : [18, 34, 26, 48, 32, 70, 42, 82, 50, 64, 34, 74, 44, 58, 28, 68, 38, 52, 24, 46, 30, 60];
+  return (
+    <span className={`msv-wave ${compact ? 'is-compact' : ''}`} aria-hidden="true">
+      {bars.map((height, index) => (
+        <i key={index} style={{ '--bar-height': `${height}%`, '--bar-delay': `${index * -0.045}s` }} />
+      ))}
+    </span>
+  );
+}
 
 export default function MiraScribePage() {
   useEffect(() => {
     document.documentElement.lang = 'en';
     setDocumentMeta({
-      title: 'MiraScribe — Private Offline Transcription for Mac',
-      description: 'Turn audio and video into searchable, editable text locally on your Mac. MiraScribe works offline and exports TXT, Markdown, SRT, VTT and timestamped JSON.',
-      ogTitle: 'MiraScribe — Private Offline Transcription for Mac',
-      ogDescription: 'Turn audio and video into searchable, editable text locally on your Mac. MiraScribe works offline and exports TXT, Markdown, SRT, VTT and timestamped JSON.',
+      title: 'MiraScribe — Speak it. Search it. Write with it.',
+      description: `Private local transcription and live dictation for Mac. Turn speech into searchable, editable text in ${scribe.transcriptionLanguageCount} production languages.`,
+      ogTitle: 'MiraScribe — Speak it. Search it. Write with it.',
+      ogDescription: 'For writers, students, interviews, video, research, and every idea that arrives faster out loud.',
       alternateLanguages: [],
       favicon: APP_IDENTITY_ASSETS.mirascribe.faviconIco,
     });
@@ -28,112 +42,159 @@ export default function MiraScribePage() {
 
   return (
     <MiraScribeShell skipTo="#ms-overview-main">
-      <main id="ms-overview-main" className="ms-page ms-page--wide mira-mkt ms-editorial" aria-label="MiraScribe overview">
-        <section className="ms-editorial-hero" aria-label="Product introduction">
-          <div className="ms-editorial-hero__copy">
-            <p className="mira-mkt__eyebrow">A Miravelys product · for Mac</p>
-            <h1 className="mira-mkt__hero-title">Stop replaying recordings. Start reading them.</h1>
-            <p className="ms-editorial-hero__lead">MiraScribe turns audio and video into clear, editable text — privately on your Mac.</p>
-            <p className="mira-mkt__lead">Drop in a lecture, an interview, a video, or a late-night voice memo. Search the transcript, correct the words, return to the timestamp, and listen to the source when context matters.</p>
-            <div className="mira-mkt__hero-actions">
-              <a href={APP_STORE_URL} className="ms-btn ms-btn--primary" target="_blank" rel="noopener noreferrer">Download for Mac</a>
-              <span className="ms-editorial-hero__note">Mac App Store · local transcription</span>
+      <main id="ms-overview-main" className="ms-page-v2" aria-label="MiraScribe overview">
+        <section className="msv-hero" aria-labelledby="msv-hero-title">
+          <div className="msv-hero__media" aria-hidden="true">
+            <img src="/images/mirascribe/editorial/hero-voice.webp" alt="" decoding="async" />
+          </div>
+          <div className="msv-hero__shade" aria-hidden="true" />
+          <div className="msv-hero__content">
+            <div className="msv-product-mark">
+              <img src={APP_IDENTITY_ASSETS.mirascribe.icon192} alt="" width="46" height="46" />
+              <span>MiraScribe</span>
+            </div>
+            <p className="msv-kicker">Private transcription + live dictation for Mac</p>
+            <h1 id="msv-hero-title">Speak it.<br />Search it.<br /><em>Write with it.</em></h1>
+            <p className="msv-hero__lead">Turn speech into usable text — for writing, study, interviews, research, and every idea that arrives better out loud.</p>
+            <div className="msv-hero__actions">
+              <a className="ms-btn ms-btn--primary" href={MIRASCRIBE_APP_STORE_URL} target="_blank" rel="noopener noreferrer">Download for Mac <ArrowRight size={17} /></a>
+              <a className="msv-text-link" href="#msv-stories">Explore what you can do <span>↓</span></a>
+            </div>
+            <div className="msv-trust-row" aria-label="Product highlights">
+              <span>On-device</span><i /> <span>{scribe.transcriptionLanguageCount} languages</span><i /> <span>Searchable text</span><i /> <span>Export-ready</span>
             </div>
           </div>
-          <figure className="ms-editorial-hero__image">
-            <img
-              src="/images/mirascribe/mirascribe-workspace-dark.webp"
-              width="2197"
-              height="950"
-              alt="The MiraScribe workspace on macOS: the Transcribe, Live Capture, Library and Settings sidebar, a drop area for audio or video, the supported formats, and a Recent transcripts list."
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-            />
+          <div className="msv-hero__spoken" aria-hidden="true">
+            <Waveform compact />
+            <p>She knew the letter had been opened.</p>
+            <p>Not because of the seal.</p>
+            <p>Because the room was suddenly too quiet.</p>
+          </div>
+        </section>
+
+        <section className="msv-thesis" aria-labelledby="msv-thesis-title">
+          <div className="msv-thesis__intro">
+            <p className="msv-kicker">A different way to work with words</p>
+            <h2 id="msv-thesis-title">Some thoughts arrive better through your voice.</h2>
+          </div>
+          <div className="msv-thesis__copy">
+            <p>Typing asks you to compose and operate a keyboard at the same time. Speaking can feel faster, freer, and closer to the thought itself.</p>
+            <p>MiraScribe gives spoken ideas a second life as text you can shape, search, study, quote, subtitle, or simply keep.</p>
+            <strong>Think aloud.<br />Edit with your eyes.</strong>
+          </div>
+        </section>
+
+        <section id="msv-stories" className="msv-story msv-story--writer" aria-labelledby="msv-writer-title">
+          <figure className="msv-story__photo is-portrait">
+            <img src="/images/mirascribe/editorial/writer-window.webp" alt="A writer making notes beside a window." loading="lazy" decoding="async" />
+          </figure>
+          <div className="msv-story__copy">
+            <p className="msv-kicker">For writers</p>
+            <h2 id="msv-writer-title">Walk around the room.<br />Tell the story.<br />Edit later.</h2>
+            <p>A first draft does not have to begin at a keyboard. Dictate a scene. Try a line of dialogue. Talk through a character. Capture a chapter while the rhythm is still there.</p>
+            <p>MiraScribe lets the first version arrive in your voice — before editing turns it into something else.</p>
+            <blockquote>“Say it before you start judging it.”</blockquote>
+          </div>
+          <aside className="msv-manuscript" aria-label="Example manuscript text">
+            <span>ROUGH DRAFT · 41</span>
+            <p>The room should feel too quiet before she opens the letter.</p>
+            <p><em>Not empty. Waiting.</em></p>
+            <p>She reads the first line twice before noticing that the rain has stopped.</p>
+          </aside>
+        </section>
+
+        <section className="msv-voice-bridge" aria-label="Voice to words">
+          <p>A thought.</p><Waveform /><p>A voice.</p><span>→</span><strong>Words you can work with.</strong>
+        </section>
+
+        <section className="msv-story msv-story--student" aria-labelledby="msv-student-title">
+          <div className="msv-story__copy">
+            <p className="msv-kicker">For students</p>
+            <h2 id="msv-student-title">An hour-long lecture.<br />Three minutes you actually need.</h2>
+            <p>Recorded material becomes far more useful when you can work with the words inside it. Find the definition, explanation, name, date, or argument without replaying everything from the beginning.</p>
+            <small>Where recording is permitted.</small>
+          </div>
+          <figure className="msv-story__photo is-landscape">
+            <img src="/images/mirascribe/editorial/student-headphones.webp" alt="A student wearing headphones and writing in a notebook." loading="lazy" decoding="async" />
           </figure>
         </section>
 
-        <section className="ms-editorial-statement" aria-labelledby="ms-needle-heading">
-          <p className="mira-mkt__eyebrow">The useful part of transcription</p>
-          <h2 className="mira-mkt__heading" id="ms-needle-heading">Find the needle. Skip the haystack.</h2>
-          <p className="mira-mkt__lead">An hour-long lecture might contain three minutes you really need. An interview might hold one sentence worth coming back to. Don’t replay the whole thing.</p>
+        <section className="msv-story msv-story--interview" aria-labelledby="msv-interview-title">
+          <figure className="msv-story__photo is-landscape">
+            <img src="/images/mirascribe/editorial/interview-podcast.webp" alt="Two people recording a spoken conversation with microphones." loading="lazy" decoding="async" />
+          </figure>
+          <div className="msv-story__copy">
+            <p className="msv-kicker">For interviews & research</p>
+            <h2 id="msv-interview-title">Find the quote.<br />Return to the source.</h2>
+            <p>Interviews, field notes, research conversations, and recorded observations become easier to use when the spoken words are searchable and connected to time.</p>
+            <div className="msv-pull-quote"><blockquote>“That was the moment everything changed.”</blockquote><span>42:17</span></div>
+          </div>
         </section>
 
-        <MiraScribeSearchDemo />
-
-        <section className="ms-editorial-audiences" aria-labelledby="ms-audience-heading">
-          <div className="ms-editorial-audiences__intro">
-            <p className="mira-mkt__eyebrow">Built for spoken information</p>
-            <h2 className="mira-mkt__heading" id="ms-audience-heading">Read first. Return to the recording when it matters.</h2>
+        <section className="msv-creator" aria-labelledby="msv-creator-title">
+          <img src="/images/mirascribe/editorial/creator-microphone.webp" alt="" loading="lazy" decoding="async" />
+          <div className="msv-creator__overlay" aria-hidden="true" />
+          <div className="msv-creator__copy">
+            <p className="msv-kicker">For video, podcasts & spoken media</p>
+            <h2 id="msv-creator-title">Stop scrubbing.<br />Start finding.</h2>
+            <p>Dialogue, interviews, narration, podcasts, and recorded ideas are easier to work with when the words themselves are searchable.</p>
+            <div className="msv-format-line">{scribe.exportFormats.map(format => <span key={format}>.{format}</span>)}</div>
           </div>
-
-          <article className="ms-editorial-text-story">
-            <p className="mira-mkt__usecase-kicker">Study</p>
-            <h3>A lecture shouldn’t disappear when the class ends.</h3>
-            <p>Where recording is permitted, turn a lecture or lesson into text you can search while studying. Find the name, formula, date, definition, or explanation you need, then go back to that part.</p>
-            <div className="ms-editorial-proof" aria-label="Study workflow">
-              <span>Lecture</span><i>→</i><span>Transcript</span><i>→</i><span>Search</span><i>→</i><span>Timestamp</span>
-            </div>
-          </article>
-
-          <article className="ms-editorial-text-story">
-            <p className="mira-mkt__usecase-kicker">Post-production</p>
-            <h3>Stop scrubbing timelines. Search the dialogue.</h3>
-            <p>Transcribe interviews, dialogue, documentary footage, or other recorded material. Search for the line you remember, use its timestamp to return to the source, and export SRT or VTT when subtitles are needed.</p>
-            <div className="ms-editorial-proof" aria-label="Post-production workflow">
-              <span>Footage</span><i>→</i><span>Dialogue</span><i>→</i><span>SRT / VTT</span><i>→</i><span>Timeline</span>
-            </div>
-          </article>
-
-          <article className="ms-editorial-text-story">
-            <p className="mira-mkt__usecase-kicker">Journalism & research</p>
-            <h3>An interview becomes something you can work with.</h3>
-            <p>Search a subject or quote in timestamped text, then return to the original recording when exact wording and context matter. The recording does not need to be sent to a cloud transcription service.</p>
-            <div className="ms-editorial-proof" aria-label="Interview workflow">
-              <span>Interview</span><i>→</i><span>Search</span><i>→</i><span>Timestamp</span><i>→</i><span>Source</span>
-            </div>
-          </article>
         </section>
 
-        <section className="ms-editorial-workflow" aria-labelledby="ms-how-heading">
-          <div>
-            <p className="mira-mkt__eyebrow">Simple by design</p>
-            <h2 className="mira-mkt__heading" id="ms-how-heading">From recording to usable text.</h2>
-            <p className="mira-mkt__lead">Bring the recording in, transcribe it locally, work with the words, then export only what you need.</p>
+        <section className="msv-everyday" aria-labelledby="msv-everyday-title">
+          <div className="msv-everyday__media">
+            <img src="/images/mirascribe/editorial/everyday-phone.webp" alt="A person holding a phone during a quiet moment on the move." loading="lazy" decoding="async" />
           </div>
-          <ol>
-            {WORKFLOW.map(([index, title, body]) => (
-              <li key={index}><span>{index}</span><div><h3>{title}</h3><p>{body}</p></div></li>
+          <div className="msv-everyday__copy">
+            <p className="msv-kicker">For ideas that do not wait</p>
+            <h2 id="msv-everyday-title">Capture the thought<br />before it disappears.</h2>
+            <p>A sentence while walking. A note before sleep. An outline that suddenly makes sense. Not every idea arrives when your hands are on a keyboard.</p>
+            <strong>Your voice can be the first draft of almost anything.</strong>
+          </div>
+        </section>
+
+        <section className="msv-proof" aria-labelledby="msv-proof-title">
+          <header>
+            <p className="msv-kicker">Built for real spoken work</p>
+            <h2 id="msv-proof-title">Beautiful ideas still need practical tools.</h2>
+          </header>
+          <div className="msv-proof__grid">
+            {PROOF.map(([title, body], index) => (
+              <article key={title}>
+                <span>0{index + 1}</span>
+                {index === 0 ? <ShieldCheck size={22} /> : index === 2 ? <Search size={22} /> : <AudioLines size={22} />}
+                <h3>{title}</h3>
+                <p>{body}</p>
+              </article>
             ))}
-          </ol>
-        </section>
-
-        <section className="ms-editorial-privacy" aria-labelledby="ms-privacy-heading">
-          <p className="mira-mkt__eyebrow">On-device by design</p>
-          <h2 className="mira-mkt__heading" id="ms-privacy-heading">What happens on your Mac stays on your Mac.</h2>
-          <p className="mira-mkt__lead">An unpublished interview. A classroom discussion. Research material. A work conversation. A draft idea you haven’t shared yet.</p>
-          <p className="mira-mkt__lead">MiraScribe performs transcription locally on your Mac using bundled speech-recognition models. Your recording does not need to be uploaded to a transcription service.</p>
-          <div className="ms-editorial-privacy__facts" aria-label="Privacy and offline benefits">
-            <span><strong>Local</strong>Transcription runs on your Mac.</span>
-            <span><strong>Offline</strong>The core workflow does not require an internet connection.</span>
-            <span><strong>Under your control</strong>You choose the files and where exported text goes.</span>
           </div>
         </section>
 
-        <section className="ms-editorial-dictation" aria-labelledby="ms-dictation-heading">
-          <div>
-            <p className="mira-mkt__eyebrow">Live Dictation</p>
-            <h2 className="mira-mkt__heading" id="ms-dictation-heading">Speak instead of type.</h2>
-            <p className="mira-mkt__lead">MiraScribe also includes local Live Dictation from the Mac menu bar for notes, drafts, messages, and moments when speaking is faster than typing.</p>
+        <section className="msv-privacy" aria-labelledby="msv-privacy-title">
+          <div className="msv-privacy__ring" aria-hidden="true"><span /><span /><span /><i /></div>
+          <div className="msv-privacy__copy">
+            <p className="msv-kicker">Private by architecture</p>
+            <h2 id="msv-privacy-title">Your unfinished work<br />can stay yours.</h2>
+            <p>Drafts are private. Interviews can be sensitive. Research can be confidential. Personal notes can be personal.</p>
+            <p>MiraScribe’s core speech transcription runs locally on your Mac with a bundled speech model.</p>
+            <div className="msv-privacy__words"><span>Local.</span><span>Private.</span><span>Yours.</span></div>
           </div>
-          <div className="ms-editorial-shortcut" aria-label="MiraScribe dictation shortcut"><kbd>⌥</kbd><kbd>⌘</kbd><kbd>Space</kbd><span>Press. Speak. Keep working.</span></div>
         </section>
 
-        <section className="ms-editorial-cta" aria-labelledby="ms-cta-heading">
-          <p className="mira-mkt__eyebrow">MiraScribe for Mac</p>
-          <h2 id="ms-cta-heading">You already have the recording. Now make it useful.</h2>
-          <p>Built for Apple silicon. Requires macOS 14 or later.</p>
-          <a href={APP_STORE_URL} className="ms-btn ms-btn--primary" target="_blank" rel="noopener noreferrer">Download MiraScribe for Mac</a>
+        <section className="msv-closing" aria-label="Closing thought">
+          <p>The keyboard is not the only place writing begins.</p>
+          <span>Sometimes it begins with a voice.</span>
+        </section>
+
+        <section className="msv-cta" aria-labelledby="msv-cta-title">
+          <div className="msv-product-mark is-center">
+            <img src={APP_IDENTITY_ASSETS.mirascribe.icon192} alt="" width="54" height="54" />
+            <span>MiraScribe for Mac</span>
+          </div>
+          <h2 id="msv-cta-title">You already have the thought.<br />Give it a page.</h2>
+          <p>For writers, students, researchers, creators, and anyone who thinks better out loud.</p>
+          <a className="ms-btn ms-btn--primary" href={MIRASCRIBE_APP_STORE_URL} target="_blank" rel="noopener noreferrer">Download MiraScribe <ArrowRight size={18} /></a>
         </section>
       </main>
     </MiraScribeShell>

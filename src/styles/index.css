@@ -25,6 +25,7 @@
  */
 
 @layer app, products, overrides;
+@import "./v2-mirascribe-editorial.css" layer(app);
 
 /* Foundation — tokens, reset, page ground, motion primitives. */
 @import './site-base.css' layer(app);

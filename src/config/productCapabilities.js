@@ -359,9 +359,9 @@ const generationPhrase = generationNames.join(' and ');
 
 export const productPageMeta = {
   mirascribe: {
-    title: 'MiraScribe — Turn hours of speech into words you can use',
-    description: `Private local transcription for Mac. MiraScribe transcribes speech in ${scribeCount} languages with automatic language detection, timestamps, and searchable transcripts. Your audio stays on this Mac.`,
-    ogDescription: `Transcribe speech in ${scribeCount} languages, locally on your Mac. Search, edit, and export what was said.`,
+    title: 'MiraScribe — Speak it. Search it. Write with it.',
+    description: `Private local transcription and live dictation for Mac. Turn speech into searchable, editable text in ${scribeCount} production languages, with timestamps and exports for writing, study, interviews, and subtitles.`,
+    ogDescription: `Dictate drafts, search recordings, and turn speech into usable text in ${scribeCount} production languages — locally on your Mac.`,
   },
   miravoxis: {
     title: 'MiraVoxis — Speech that starts with the sentence',
