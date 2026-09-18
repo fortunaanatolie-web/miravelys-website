@@ -18,7 +18,7 @@
  * - Do not advertise speaker diarization, translation, code-switching, or "fully offline".
  */
 
-export const MIRASCRIBE_APP_STORE_URL = 'https://apps.apple.com/app/id6787681485';
+export const MIRASCRIBE_APP_STORE_URL = 'https://apps.apple.com/app/id6803891486';
 
 export const MIRASCRIBE_PRODUCTION_LANGUAGES = [
   { code: 'af', name: 'Afrikaans' },
