@@ -37,7 +37,7 @@ const standaloneRoutes = [
   },
   {
     path: '/mirascribe',
-    title: 'MiraScribe — Private Offline Transcription for Mac',
+    title: productPageMeta.mirascribe.title,
     description: productPageMeta.mirascribe.description,
     priority: '0.9', frequency: 'weekly',
   },

@@ -5,7 +5,7 @@
   var SITE_URL = 'https://miravelys.com';
   var TAB_TITLES = {
     '/products': 'Products — Miravelys',
-    '/mirascribe': 'MiraScribe — Private Offline Transcription for Mac',
+    '/mirascribe': 'MiraScribe — Speak it. Search it. Write with it.',
     '/mirascribe/support': 'MiraScribe Support',
     '/mirascribe/privacy': 'MiraScribe Privacy',
     '/mirascribe/legal': 'MiraScribe Legal',

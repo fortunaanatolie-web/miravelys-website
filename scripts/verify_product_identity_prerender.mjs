@@ -10,7 +10,7 @@ const siteUrl = 'https://miravelys.com';
 
 const routes = [
   ['/products', 'miravelys', 'Products — Miravelys'],
-  ['/mirascribe', 'mirascribe', 'MiraScribe — Private Offline Transcription for Mac'],
+  ['/mirascribe', 'mirascribe', 'MiraScribe — Speak it. Search it. Write with it.'],
   ['/mirascribe/support', 'mirascribe', 'MiraScribe Support'],
   ['/mirascribe/privacy', 'mirascribe', 'MiraScribe Privacy'],
   ['/mirascribe/legal', 'mirascribe', 'MiraScribe Legal'],
