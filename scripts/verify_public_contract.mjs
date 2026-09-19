@@ -160,6 +160,14 @@ for (const forbidden of [
   }
 }
 
+const identityBoot = await readFile(join(root, 'public-site', 'identities', 'boot.js'), 'utf8');
+if (!identityBoot.includes('MiraScribe — private transcription for Mac and iPhone')) {
+  throw new Error('MiraScribe identity boot metadata is stale');
+}
+if (!identityBoot.includes('__miravelysApplyCurrentRouteIdentity')) {
+  throw new Error('identity boot lost synchronous route-head updates');
+}
+
 const vercelConfig = JSON.parse(await readFile(join(root, 'vercel.json'), 'utf8'));
 if (vercelConfig.trailingSlash !== false || vercelConfig.cleanUrls !== true || vercelConfig.rewrites) {
   throw new Error('Vercel canonical-routing contract is incomplete');
