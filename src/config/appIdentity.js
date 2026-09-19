@@ -25,7 +25,7 @@ export const APP_IDENTITY_RECORDS = {
     siteName: 'MiraScribe',
     routePrefixes: ['/mirascribe'],
     themeColor: '#0d0f14',
-    ogImageAlt: 'MiraScribe — private transcription for Mac',
+    ogImageAlt: 'MiraScribe — private transcription for Mac and iPhone',
   },
   miraveris: {
     id: 'miraveris',

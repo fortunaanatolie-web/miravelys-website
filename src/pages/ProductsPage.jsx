@@ -153,7 +153,7 @@ export default function ProductsPage() {
               margin: 0,
             }}
           >
-            Miravelys is contemplative and cinematic. MiraScribe is precise and Mac-native.
+            Miravelys is contemplative and cinematic. MiraScribe is precise and Apple-native.
             MiraVoxis is a directed local voice studio. Each product defines its own visual
             language and functional tone. What they share is a commitment to doing the thing
             well, without noise.

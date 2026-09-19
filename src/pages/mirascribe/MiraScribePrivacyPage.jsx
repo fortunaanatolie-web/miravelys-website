@@ -1,18 +1,4 @@
 import { APP_IDENTITY_ASSETS } from '../../config/appIdentityAssets';
-/**
- * MiraScribePrivacyPage — /mirascribe/privacy
- * App Store Connect Privacy Policy URL.
- *
- * This policy is derived exclusively from the verified shipping-build audit:
- *   AppStoreSubmission/APP_PRIVACY_ANSWERS.md     (21 Aug 2026)
- *   AppStoreSubmission/PRODUCT_TRUTH_AUDIT.md     (21 Aug 2026)
- *   AppStoreSubmission/Legal/privacy-policy.md
- *   MIRASCRIBE_TRANSCRIPTION_ENGINE_AUDIT.md      (19 Aug 2026)
- *
- * DO NOT copy this page for Miravelys. Different product, different data flows.
- * DO NOT strengthen claims beyond what code supports.
- * Effective date: 21 August 2026
- */
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import MiraScribeShell from '../../components/mirascribe/MiraScribeShell';
@@ -26,9 +12,9 @@ export default function MiraScribePrivacyPage() {
     setDocumentMeta({
       favicon: APP_IDENTITY_ASSETS.mirascribe.faviconIco,
       title: 'Privacy Policy — MiraScribe',
-      description: 'MiraScribe privacy policy. Transcription runs locally on your Mac. Audio and transcripts are not uploaded to a remote service.',
+      description: 'MiraScribe privacy policy for local transcription on Mac and iPhone. Audio and transcripts are not uploaded to a developer-operated transcription service.',
       ogTitle: 'MiraScribe Privacy Policy',
-      ogDescription: 'Transcription runs locally on your Mac. Your recordings are not sent to a remote service.',
+      ogDescription: 'MiraScribe processes transcription locally on supported Apple devices.',
       alternateLanguages: [],
     });
   }, []);
@@ -37,19 +23,13 @@ export default function MiraScribePrivacyPage() {
     <MiraScribeShell skipTo="#ms-privacy-main">
       <main id="ms-privacy-main" className="ms-page ms-page--narrow" aria-label="MiraScribe privacy policy">
         <article className="ms-legal">
-
           <header style={{ marginBottom: '40px' }}>
             <span className="ms-eyebrow">Privacy Policy</span>
             <h1>MiraScribe Privacy Policy</h1>
-            <p className="ms-legal__meta">Effective date: 21 August 2026</p>
+            <p className="ms-legal__meta">Effective date: 19 September 2026</p>
             <p>
-              This Privacy Policy applies specifically to MiraScribe, a Mac application for
-              speech-to-text transcription and live dictation. MiraScribe is a product in the{' '}
-              <Link to="/products">Miravelys family</Link>.
-            </p>
-            <p>
-              It does not cover the Miravelys mindfulness application, the Miravelys.com website
-              (which has its own <Link to="/privacy">privacy policy</Link>), or any other product.
+              This Privacy Policy applies to MiraScribe for supported Mac and iPhone devices.
+              MiraScribe is a speech-to-text application in the <Link to="/products">Miravelys family</Link>.
             </p>
             <p>
               MiraScribe is developed and distributed by Anatolie Furtuna as a sole proprietor at
@@ -57,159 +37,106 @@ export default function MiraScribePrivacyPage() {
             </p>
           </header>
 
-          {/* ── 1. Scope ── */}
-          <h2>1. Scope</h2>
+          <h2>1. Local processing</h2>
           <p>
-            This policy covers how MiraScribe handles information during the use of the application
-            on your Mac. It covers audio and video files you bring to MiraScribe, microphone
-            recordings from live dictation, transcript data stored in the app, and settings stored
-            locally. It also describes what information, if any, leaves your Mac.
+            MiraScribe is designed to process transcription locally on your device. Audio and video
+            selected for transcription are not uploaded to a developer-operated transcription server.
+            The app does not require an account to transcribe, review, save, or export text.
           </p>
 
-          {/* ── 2. Audio and video files ── */}
-          <h2>2. Audio and video files you provide</h2>
+          <h2>2. Audio and video you provide</h2>
           <p>
-            When you import an audio or video file for transcription, MiraScribe reads the file
-            from the location you chose using macOS file-access controls. The file remains in its
-            original location. MiraScribe does not copy the file to a remote server.
+            Files are accessed only after you choose them through system file-selection controls.
+            On iPhone, you may also select a video through Apple's system Photos picker. If a selected
+            Photos item exists only in iCloud, Apple's Photos service may download that item before
+            handing MiraScribe a local file. That system transfer is governed by Apple's services;
+            MiraScribe still performs transcription locally after receiving the file.
           </p>
           <p>
-            For formats that require conversion before transcription (for example, certain video
-            containers), MiraScribe creates a temporary audio file on your Mac, uses it for
-            transcription, and then removes it. Temporary files older than 24 hours are swept on
-            the next session.
-          </p>
-          <p>
-            MiraScribe does not upload audio or video content to a remote transcription service.
-            Transcription is performed on your Mac using a bundled speech model.
+            MiraScribe may create temporary local working copies or prepared audio needed to process
+            supported media. These files remain on the device and are removed when they are no longer
+            needed unless a saved transcript intentionally retains a local source reference.
           </p>
 
-          {/* ── 3. Microphone ── */}
-          <h2>3. Microphone and live dictation</h2>
+          <h2>3. Microphone</h2>
           <p>
-            MiraScribe requests access to the microphone only when you start live dictation.
-            Microphone access is not used at any other time. A temporary recording is made while
-            you dictate; it is processed locally and removed after the text is produced.
+            MiraScribe requests microphone access only when you choose a recording or live-capture
+            feature that needs it. Microphone audio is processed locally. You can revoke microphone
+            permission in your device's privacy settings.
           </p>
           <p>
-            If you grant Accessibility access, MiraScribe can paste completed dictation text
-            directly into the frontmost app. Without this permission, the completed text is
-            copied to the clipboard instead. Accessibility access is optional.
-          </p>
-          <p>
-            You can withdraw microphone or Accessibility permissions at any time in
-            System Settings → Privacy &amp; Security.
+            On Mac, optional Accessibility permission may be used for automatic paste in compatible
+            dictation workflows. This permission is not required for iPhone transcription.
           </p>
 
-          {/* ── 4. Transcripts ── */}
-          <h2>4. Transcripts and library data</h2>
+          <h2>4. Transcripts, Library, and settings</h2>
           <p>
-            Transcripts, timestamps, edits, and library records are stored locally on your Mac
-            inside the app's sandbox container (Application Support). This data does not sync
-            to a developer server. MiraScribe does not have access to your transcripts through
-            iCloud, CloudKit, or any other sync mechanism in the audited shipping build.
+            Transcripts, timestamps, edits, Library records, and app preferences are stored locally
+            in the app's container on your device. MiraScribe does not provide a developer-operated
+            transcript sync service and does not upload your Library to the developer.
           </p>
           <p>
-            To delete transcripts, remove them from the MiraScribe library. To remove all app
-            data, delete MiraScribe from your Mac; macOS will offer to remove the associated
-            container data.
-          </p>
-          <p>
-            Because transcripts are stored only on your Mac, the developer cannot remotely
-            retrieve or delete them on your behalf.
+            You can delete saved transcripts from the Library and remove exported files from the
+            destination you selected. Because this content is stored locally, the developer cannot
+            remotely retrieve or delete your transcript Library on your behalf.
           </p>
 
-          {/* ── 5. Speech model ── */}
-          <h2>5. Speech model</h2>
+          <h2>5. Local transcription components</h2>
           <p>
-            MiraScribe ships with a bundled speech model (a Whisper-based Core ML model,
-            approximately 600 MB). The model is included in the App Store download. MiraScribe
-            does not download models after installation. When you transcribe a recording,
-            macOS may create local Core ML compilation cache files — these remain on your Mac.
-          </p>
-          <p>
-            The model provider (OpenAI / Argmax OSS) does not receive information about your
-            recordings. Inference runs locally.
+            The transcription components needed by the shipping app are included with the app and
+            operate locally. MiraScribe does not require a separate transcription-resource download
+            after installation. The operating system may create local compilation or cache files to
+            optimize on-device processing.
           </p>
 
-          {/* ── 6. Settings ── */}
-          <h2>6. Settings and preferences</h2>
+          <h2>6. Network communication</h2>
           <p>
-            Language selection, quality mode, and other preferences are stored locally using
-            macOS UserDefaults. This data is not shared with the developer.
+            MiraScribe does not use a developer-operated network service for transcription, analytics,
+            advertising, or account sync. Network activity can occur when you intentionally open a
+            website or support link, when Apple's App Store or operating-system services operate, or
+            when Apple's Photos service retrieves a user-selected iCloud asset.
           </p>
 
-          {/* ── 7. Network ── */}
-          <h2>7. Network communication</h2>
+          <h2>7. Analytics, advertising, and tracking</h2>
           <p>
-            In the audited shipping build, MiraScribe does not make outbound network connections
-            for transcription, analytics, crash reporting, or advertising. The only network
-            activity associated with MiraScribe is standard Apple App Store and operating-system
-            services (such as App Store receipt validation and software updates), which are
-            governed by Apple's own privacy policies.
+            The shipping app does not include developer-operated analytics, advertising, or tracking
+            SDKs. MiraScribe does not track you across apps or websites.
           </p>
 
-          {/* ── 8. Analytics and tracking ── */}
-          <h2>8. Analytics, crash reporting, and tracking</h2>
+          <h2>8. Exports and sharing</h2>
           <p>
-            The audited shipping build does not include analytics SDKs, crash-reporting SDKs,
-            or advertising SDKs that report usage data to the developer. MiraScribe does not
-            track you across other applications or websites.
+            When you export or share a transcript, you choose the destination. Any third-party app or
+            service you select is governed by its own privacy practices. MiraScribe does not silently
+            transmit your exported content to the developer.
           </p>
 
-          {/* ── 9. Exports and sharing ── */}
-          <h2>9. Exports and sharing</h2>
+          <h2>9. Data sale and third-party access</h2>
           <p>
-            When you export a transcript, you choose the destination. Any third-party app or
-            service you share a transcript with is governed by its own privacy practices.
-            MiraScribe does not transmit export data on your behalf.
+            MiraScribe does not sell personal data from the app. The developer does not receive your
+            recordings or transcript Library through the normal app workflow.
           </p>
 
-          {/* ── 10. Data sale ── */}
-          <h2>10. Data sale and third-party access</h2>
+          <h2>10. Support correspondence</h2>
           <p>
-            MiraScribe does not sell your personal data. Because transcription, library data,
-            and settings are all local, the developer does not hold personal data to sell or
-            share with third parties.
+            If you email support, we receive the information you choose to send, such as your email
+            address and message. It is used to respond to your request and is not app telemetry.
           </p>
 
-          {/* ── 11. Website ── */}
-          <h2>11. Miravelys.com website</h2>
+          <h2>11. Website</h2>
           <p>
-            If you visit miravelys.com or this page, the website is hosted on Vercel's
-            infrastructure. Vercel may process standard server-side access log data (IP address,
-            browser type, requested path, and similar information) as part of normal hosting
-            operations. This is governed by{' '}
-            <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">
-              Vercel's privacy policy
-            </a>. The website does not use advertising pixels, tracking cookies, or analytics SDKs.
+            Miravelys.com is hosted using third-party web infrastructure. Standard server access logs,
+            such as IP address, browser information, and requested path, may be processed by the hosting
+            provider as part of normal website delivery. The MiraScribe app does not use those website
+            logs as in-app analytics.
           </p>
 
-          {/* ── 12. Children ── */}
-          <h2>12. Children</h2>
+          <h2>12. Changes to this policy</h2>
           <p>
-            MiraScribe is a professional productivity application. It is not directed toward
-            children under 13. If you are under 13, please do not use MiraScribe.
+            If MiraScribe's data practices materially change, this policy and the App Store privacy
+            disclosures will be updated before the changed behavior is distributed.
           </p>
 
-          {/* ── 13. Support correspondence ── */}
-          <h2>13. Support correspondence</h2>
-          <p>
-            If you contact us for support, we receive only the information you choose to include
-            in your message (such as your email address and a description of the issue). This
-            information is used solely to respond to your request. We retain support emails for
-            a reasonable period and do not share them with third parties except as required by law.
-          </p>
-
-          {/* ── 14. Changes ── */}
-          <h2>14. Changes to this policy</h2>
-          <p>
-            If MiraScribe's data practices change in a material way, we will update this policy
-            and revise the effective date. We encourage you to review this page periodically.
-          </p>
-
-          {/* ── 15. Contact ── */}
-          <h2>15. Contact</h2>
+          <h2>13. Contact</h2>
           <p>
             Questions about this Privacy Policy:{' '}
             <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>

@@ -275,14 +275,14 @@ export const productCapabilities = {
     cloudTranscription: false,
     exportFormats: ['txt', 'md', 'srt', 'vtt', 'json'],
     platform: {
-      os: 'macOS 14.0 Sonoma or later',
-      hardware: 'Apple Silicon',
-      modelStorage: 'Bundled speech model, approximately 600 MB',
+      os: 'macOS 14.0 Sonoma or later; iOS 17 or later',
+      hardware: 'Apple Silicon Mac; iPhone 13 or newer',
+      modelStorage: 'Bundled local transcription components',
     },
     appStoreUrl: MIRASCRIBE_APP_STORE_URL,
     downloadAvailable: true,
     engine: {
-      family: 'Whisper large-v3 / large-v3-turbo via WhisperKit Core ML',
+      family: 'Local on-device speech recognition',
       status: 'production',
       bundled: true,
     },
@@ -360,8 +360,8 @@ const generationPhrase = generationNames.join(' and ');
 export const productPageMeta = {
   mirascribe: {
     title: 'MiraScribe — Speak it. Search it. Write with it.',
-    description: `Private local transcription and live dictation for Mac. Turn speech into searchable, editable text in ${scribeCount} production languages, with timestamps and exports for writing, study, interviews, and subtitles.`,
-    ogDescription: `Dictate drafts, search recordings, and turn speech into usable text in ${scribeCount} production languages — locally on your Mac.`,
+    description: `Private local transcription on Mac and iPhone, with live dictation on Mac. Turn speech into searchable, editable text in ${scribeCount} production languages, with timestamps and exports for writing, study, interviews, and subtitles.`,
+    ogDescription: `Record, search, and turn speech into usable text in ${scribeCount} production languages — locally on supported Mac and iPhone devices.`,
   },
   miravoxis: {
     title: 'MiraVoxis — Speech that starts with the sentence',

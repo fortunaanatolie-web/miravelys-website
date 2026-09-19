@@ -113,7 +113,7 @@ try {
       }));
       assert(overflow.documentWidth <= overflow.viewport + 1 && overflow.bodyWidth <= overflow.viewport + 1, `${viewport.name}: horizontal overflow ${JSON.stringify(overflow)}`);
 
-      const cta = page.getByRole('link', { name: 'Download MiraScribe for Mac' }).last();
+      const cta = page.getByRole('link', { name: 'View in App Store' }).last();
       await cta.scrollIntoViewIfNeeded();
       const ctaBox = await cta.boundingBox();
       assert(ctaBox && ctaBox.height >= 44, `${viewport.name}: CTA is below 44px`);

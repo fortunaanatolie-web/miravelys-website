@@ -8,7 +8,7 @@ import { MIRASCRIBE_APP_STORE_URL, productCapabilities } from '../../config/prod
 const scribe = productCapabilities.mirascribe;
 
 const PROOF = [
-  ['On-device', 'Core speech transcription runs locally on your Mac.'],
+  ['On-device', 'Core speech transcription runs locally on supported Mac and iPhone devices.'],
   [`${scribe.transcriptionLanguageCount} languages`, 'A broad production language set for spoken work.'],
   ['Search + timestamps', 'Find the words, then return to the moment behind them.'],
   ['Export-ready', scribe.exportFormats.join(' · ')],
@@ -32,7 +32,7 @@ export default function MiraScribePage() {
     document.documentElement.lang = 'en';
     setDocumentMeta({
       title: 'MiraScribe — Speak it. Search it. Write with it.',
-      description: `Private local transcription and live dictation for Mac. Turn speech into searchable, editable text in ${scribe.transcriptionLanguageCount} production languages.`,
+      description: `Private local transcription on Mac and iPhone, with live dictation on Mac. Turn speech into searchable, editable text in ${scribe.transcriptionLanguageCount} production languages.`,
       ogTitle: 'MiraScribe — Speak it. Search it. Write with it.',
       ogDescription: 'For writers, students, interviews, video, research, and every idea that arrives faster out loud.',
       alternateLanguages: [],
@@ -53,11 +53,11 @@ export default function MiraScribePage() {
               <img src={APP_IDENTITY_ASSETS.mirascribe.icon192} alt="" width="46" height="46" />
               <span>MiraScribe</span>
             </div>
-            <p className="msv-kicker">Private transcription + live dictation for Mac</p>
+            <p className="msv-kicker">Private transcription for Mac + iPhone</p>
             <h1 id="msv-hero-title">Speak it.<br />Search it.<br /><em>Write with it.</em></h1>
             <p className="msv-hero__lead">Turn speech into usable text — for writing, study, interviews, research, and every idea that arrives better out loud.</p>
             <div className="msv-hero__actions">
-              <a className="ms-btn ms-btn--primary" href={MIRASCRIBE_APP_STORE_URL} target="_blank" rel="noopener noreferrer">Download for Mac <ArrowRight size={17} /></a>
+              <a className="ms-btn ms-btn--primary" href={MIRASCRIBE_APP_STORE_URL} target="_blank" rel="noopener noreferrer">View in App Store <ArrowRight size={17} /></a>
               <a className="msv-text-link" href="#msv-stories">Explore what you can do <span>↓</span></a>
             </div>
             <div className="msv-trust-row" aria-label="Product highlights">
@@ -177,7 +177,7 @@ export default function MiraScribePage() {
             <p className="msv-kicker">Private by architecture</p>
             <h2 id="msv-privacy-title">Your unfinished work<br />can stay yours.</h2>
             <p>Drafts are private. Interviews can be sensitive. Research can be confidential. Personal notes can be personal.</p>
-            <p>MiraScribe’s core speech transcription runs locally on your Mac with a bundled speech model.</p>
+            <p>MiraScribe’s core speech transcription runs locally on supported Mac and iPhone devices with bundled on-device components.</p>
             <div className="msv-privacy__words"><span>Local.</span><span>Private.</span><span>Yours.</span></div>
           </div>
         </section>
@@ -190,7 +190,7 @@ export default function MiraScribePage() {
         <section className="msv-cta" aria-labelledby="msv-cta-title">
           <div className="msv-product-mark is-center">
             <img src={APP_IDENTITY_ASSETS.mirascribe.icon192} alt="" width="54" height="54" />
-            <span>MiraScribe for Mac</span>
+            <span>MiraScribe for Mac + iPhone</span>
           </div>
           <h2 id="msv-cta-title">You already have the thought.<br />Give it a page.</h2>
           <p>For writers, students, researchers, creators, and anyone who thinks better out loud.</p>

@@ -44,13 +44,13 @@ const standaloneRoutes = [
   {
     path: '/mirascribe/support',
     title: 'MiraScribe Support',
-    description: 'Get help with MiraScribe for Mac: transcription, permissions, exports, and local workflows.',
+    description: 'Get help with MiraScribe for Mac and iPhone: transcription, permissions, imports, exports, and local workflows.',
     priority: '0.7', frequency: 'monthly',
   },
   {
     path: '/mirascribe/privacy',
     title: 'MiraScribe Privacy',
-    description: 'MiraScribe privacy information for local transcription and files on your Mac.',
+    description: 'MiraScribe privacy information for local transcription and files on supported Mac and iPhone devices.',
     priority: '0.6', frequency: 'yearly',
   },
   {
@@ -62,7 +62,7 @@ const standaloneRoutes = [
   {
     path: '/mirascribe/acknowledgements',
     title: 'MiraScribe Acknowledgements',
-    description: 'Third-party software and model license notices for MiraScribe.',
+    description: 'Third-party open-source license notices for MiraScribe.',
     priority: '0.4', frequency: 'yearly',
   },
   {

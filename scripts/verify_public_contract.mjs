@@ -111,6 +111,55 @@ if (!notFound.includes('<title>404 — Miravelys</title>') || !notFound.includes
   throw new Error('branded static 404 contract is missing');
 }
 
+const mirascribeRoutes = [
+  '/mirascribe',
+  '/mirascribe/privacy',
+  '/mirascribe/support',
+  '/mirascribe/legal',
+  '/mirascribe/acknowledgements',
+];
+for (const route of mirascribeRoutes) {
+  const page = join(dist, route.slice(1), 'index.html');
+  await mustExist(page, `MiraScribe static route ${route}`);
+  const html = await readFile(page, 'utf8');
+  if (!html.includes(`<link rel="canonical" href="https://miravelys.com${route}">`)) {
+    throw new Error(`MiraScribe canonical metadata is missing for ${route}`);
+  }
+}
+
+const mirascribePublicSources = await Promise.all([
+  'MiraScribePage.jsx',
+  'MiraScribePrivacyPage.jsx',
+  'MiraScribeSupportPage.jsx',
+  'MiraScribeLegalPage.jsx',
+  'MiraScribeAcknowledgementsPage.jsx',
+].map(file => readFile(join(root, 'src', 'pages', 'mirascribe', file), 'utf8')));
+const mirascribePublicText = mirascribePublicSources.join('\n');
+
+for (const required of [
+  'Private transcription for Mac + iPhone',
+  'This Privacy Policy applies to MiraScribe for supported Mac and iPhone devices.',
+  'Help for MiraScribe on Mac and iPhone.',
+  'Privacy Policy',
+  'End User License Agreement',
+]) {
+  if (!mirascribePublicText.includes(required)) {
+    throw new Error(`MiraScribe public/App Store support contract is missing: ${required}`);
+  }
+}
+
+for (const forbidden of [
+  'large-v3-turbo',
+  'large-v3-v20240930',
+  '216 MB',
+  '632 MB',
+  'approximately 600 MB',
+]) {
+  if (mirascribePublicText.includes(forbidden)) {
+    throw new Error(`MiraScribe public pages expose retired implementation detail: ${forbidden}`);
+  }
+}
+
 const vercelConfig = JSON.parse(await readFile(join(root, 'vercel.json'), 'utf8'));
 if (vercelConfig.trailingSlash !== false || vercelConfig.cleanUrls !== true || vercelConfig.rewrites) {
   throw new Error('Vercel canonical-routing contract is incomplete');
