@@ -249,8 +249,9 @@ async function assertPromo(page, language, route, targetName) {
 
   const icon = promo.locator('img[src*="/identities/mirascribe/icon-192."]');
   await icon.waitFor({ state: 'visible' });
+  const iconDecoded = await icon.evaluate(image => image.decode().then(() => true, () => false));
   assert(
-    await icon.evaluate(image => image.complete && image.naturalWidth > 0),
+    iconDecoded && await icon.evaluate(image => image.naturalWidth > 0),
     `${route} (${language}/${targetName}): MiraScribe app icon did not load`,
   );
 
