@@ -77,12 +77,20 @@ try {
 
     try {
       for (const route of routes) {
-        const response = await page.goto(baseUrl + route, { waitUntil: 'networkidle' });
+        const response = await page.goto(baseUrl + route, { waitUntil: 'domcontentloaded' });
         assert(response?.ok(), profile.name + ' ' + route + ': HTTP ' + response?.status());
-        assert(await page.locator('.ms-store-promo').count() === 0, profile.name + ' ' + route + ': redundant Now on Mac/iPhone strip remains');
+
+        if (route.startsWith('/mirascribe')) {
+          await page.locator('.ms-shell').waitFor({ state: 'attached' });
+        }
 
         const storeLinks = page.locator('a[href^="https://apps.apple.com/"]');
         const expectedCount = route === '/mirascribe' ? 2 : route === '/products' ? 1 : 0;
+        if (expectedCount > 0) {
+          await storeLinks.first().waitFor({ state: 'attached' });
+        }
+
+        assert(await page.locator('.ms-store-promo').count() === 0, profile.name + ' ' + route + ': redundant Now on Mac/iPhone strip remains');
         const count = await storeLinks.count();
         assert(count === expectedCount, profile.name + ' ' + route + ': expected ' + expectedCount + ' store links, found ' + count);
         for (const link of await storeLinks.all()) {
