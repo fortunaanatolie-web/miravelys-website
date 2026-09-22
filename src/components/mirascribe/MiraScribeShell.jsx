@@ -8,7 +8,6 @@
 import { useEffect } from 'react';
 import MiraScribeNav from './MiraScribeNav';
 import MiraScribeFooter from './MiraScribeFooter';
-import MiraScribeStorePromo from './MiraScribeStorePromo';
 
 export default function MiraScribeShell({ children, skipTo = '#ms-main', title }) {
   useEffect(() => {
@@ -23,7 +22,6 @@ export default function MiraScribeShell({ children, skipTo = '#ms-main', title }
         Skip to main content
       </a>
       <MiraScribeNav />
-      <MiraScribeStorePromo />
       <div id="ms-main">
         {children}
       </div>
