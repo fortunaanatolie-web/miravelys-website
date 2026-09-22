@@ -15,6 +15,7 @@ const routes = [
   '/mirascribe/privacy',
   '/mirascribe/legal',
   '/mirascribe/acknowledgements',
+  '/products',
 ];
 const localizedCopy = {
   en: {
@@ -260,6 +261,21 @@ async function assertPromo(page, language, route, targetName) {
   assert((await cta.getAttribute('rel'))?.includes('noopener'), `${route} (${language}): App Store link is missing noopener`);
 }
 
+async function assertMiraScribeDownloadLinks(page, targetName, route) {
+  const expectedUrl = storeTargets[targetName].url;
+  if (route === '/mirascribe') {
+    for (const label of ['View in App Store', 'Download MiraScribe']) {
+      const link = page.getByRole('link', { name: label, exact: true });
+      assert(await link.getAttribute('href') === expectedUrl, `${route} (${targetName}): ${label} points to the wrong product or platform`);
+    }
+  }
+  if (route === '/products') {
+    const card = page.getByRole('listitem').filter({ has: page.getByRole('heading', { name: 'MiraScribe' }) });
+    const link = card.getByRole('link', { name: /App Store/ });
+    assert(await link.getAttribute('href') === expectedUrl, `${route} (${targetName}): MiraScribe card points to the wrong product or platform`);
+  }
+}
+
 async function assertRoutesAndLocales(browser, profileName, targetName, viewport) {
   const context = await createContext(browser, profileName, viewport);
   const page = await context.newPage();
@@ -273,6 +289,7 @@ async function assertRoutesAndLocales(browser, profileName, targetName, viewport
       const response = await page.goto(`${baseUrl}${route}`, { waitUntil: 'domcontentloaded' });
       assert(response?.ok(), `${route}: returned ${response?.status()}`);
       await assertPromo(page, 'en', route, targetName);
+      await assertMiraScribeDownloadLinks(page, targetName, route);
     }
 
     await page.goto(`${baseUrl}/mirascribe/privacy`, { waitUntil: 'domcontentloaded' });
@@ -335,6 +352,7 @@ try {
       await setLanguage(page, 'en');
       await page.reload({ waitUntil: 'domcontentloaded' });
       await assertPromo(page, 'en', '/mirascribe', targetName);
+      await assertMiraScribeDownloadLinks(page, targetName, '/mirascribe');
     } finally {
       await context.close();
     }

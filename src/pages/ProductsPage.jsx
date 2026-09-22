@@ -12,8 +12,11 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import MiraScribeShell from '../components/mirascribe/MiraScribeShell';
 import { setDocumentMeta } from '../lib/documentMeta';
-
-const APPSTORE_MIRASCRIBE = 'https://apps.apple.com/app/id6787681485';
+import {
+  MIRASCRIBE_STORE_TARGET,
+  resolveMiraScribeStoreTarget,
+  resolveMiraScribeStoreUrl,
+} from '../lib/mirascribeStoreTarget';
 
 const PRODUCTS = [
   {
@@ -26,12 +29,12 @@ const PRODUCTS = [
   },
   {
     name: 'MiraScribe',
-    tagline: 'Transcription · Speech · Mac',
-    body: 'Turn recordings into clear, structured text — privately on your Mac. MiraScribe uses a bundled speech model so your audio is processed on your device, not sent to a remote service.',
+    tagline: 'Transcription · Speech · Mac + iPhone',
+    body: 'Turn recordings into clear, structured text — privately on supported Mac and iPhone devices. Core speech transcription runs on your device, not on a remote server.',
     cta: 'Explore MiraScribe',
     href: '/mirascribe',
     external: false,
-    appStore: APPSTORE_MIRASCRIBE,
+    appStore: true,
   },
   {
     name: 'MiraVoxis',
@@ -44,6 +47,9 @@ const PRODUCTS = [
 ];
 
 export default function ProductsPage() {
+  const storeTarget = resolveMiraScribeStoreTarget();
+  const storeUrl = resolveMiraScribeStoreUrl(storeTarget);
+
   useEffect(() => {
     document.documentElement.lang = 'en';
     setDocumentMeta({
@@ -108,13 +114,13 @@ export default function ProductsPage() {
                 {p.appStore && (
                   <div style={{ marginTop: '10px' }}>
                     <a
-                      href={p.appStore}
+                      href={storeUrl}
                       className="ms-btn ms-btn--secondary"
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{ fontSize: '0.8125rem', padding: '8px 16px' }}
                     >
-                      Mac App Store
+                      {storeTarget === MIRASCRIBE_STORE_TARGET.MAC ? 'Mac App Store' : 'App Store for iPhone'}
                     </a>
                   </div>
                 )}

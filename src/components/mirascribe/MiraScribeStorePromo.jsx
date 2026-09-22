@@ -1,14 +1,10 @@
 import { useEffect, useState } from 'react';
 import { APP_IDENTITY_ASSETS } from '../../config/appIdentityAssets';
-import {
-  MIRASCRIBE_APP_STORE_URL,
-  MIRASCRIBE_IOS_APP_STORE_URL,
-} from '../../config/productCapabilities';
 import { resolveMiraScribeStorePromoCopy } from '../../i18n/mirascribeStorePromoCopy';
 import { getSiteLanguage, subscribeSiteLanguage } from '../../lib/siteLanguage';
 import {
-  MIRASCRIBE_STORE_TARGET,
   resolveMiraScribeStoreTarget,
+  resolveMiraScribeStoreUrl,
 } from '../../lib/mirascribeStoreTarget';
 
 function AppleLogo() {
@@ -31,9 +27,7 @@ export default function MiraScribeStorePromo() {
   const [language, setLanguage] = useState(getSiteLanguage);
   const [storeTarget] = useState(resolveMiraScribeStoreTarget);
   const copy = resolveMiraScribeStorePromoCopy(language, storeTarget);
-  const storeUrl = storeTarget === MIRASCRIBE_STORE_TARGET.MAC
-    ? MIRASCRIBE_APP_STORE_URL
-    : MIRASCRIBE_IOS_APP_STORE_URL;
+  const storeUrl = resolveMiraScribeStoreUrl(storeTarget);
 
   useEffect(() => subscribeSiteLanguage(setLanguage), []);
 

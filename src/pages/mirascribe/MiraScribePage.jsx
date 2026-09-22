@@ -3,7 +3,8 @@ import { ArrowRight, AudioLines, Search, ShieldCheck } from 'lucide-react';
 import MiraScribeShell from '../../components/mirascribe/MiraScribeShell';
 import { setDocumentMeta } from '../../lib/documentMeta';
 import { APP_IDENTITY_ASSETS } from '../../config/appIdentityAssets';
-import { MIRASCRIBE_APP_STORE_URL, productCapabilities } from '../../config/productCapabilities';
+import { productCapabilities } from '../../config/productCapabilities';
+import { resolveMiraScribeStoreTarget, resolveMiraScribeStoreUrl } from '../../lib/mirascribeStoreTarget';
 
 const scribe = productCapabilities.mirascribe;
 
@@ -28,6 +29,8 @@ function Waveform({ compact = false }) {
 }
 
 export default function MiraScribePage() {
+  const storeUrl = resolveMiraScribeStoreUrl(resolveMiraScribeStoreTarget());
+
   useEffect(() => {
     document.documentElement.lang = 'en';
     setDocumentMeta({
@@ -57,7 +60,7 @@ export default function MiraScribePage() {
             <h1 id="msv-hero-title">Speak it.<br />Search it.<br /><em>Write with it.</em></h1>
             <p className="msv-hero__lead">Turn speech into usable text — for writing, study, interviews, research, and every idea that arrives better out loud.</p>
             <div className="msv-hero__actions">
-              <a className="ms-btn ms-btn--primary" href={MIRASCRIBE_APP_STORE_URL} target="_blank" rel="noopener noreferrer">View in App Store <ArrowRight size={17} /></a>
+              <a className="ms-btn ms-btn--primary" href={storeUrl} target="_blank" rel="noopener noreferrer">View in App Store <ArrowRight size={17} /></a>
               <a className="msv-text-link" href="#msv-stories">Explore what you can do <span>↓</span></a>
             </div>
             <div className="msv-trust-row" aria-label="Product highlights">
@@ -194,7 +197,7 @@ export default function MiraScribePage() {
           </div>
           <h2 id="msv-cta-title">You already have the thought.<br />Give it a page.</h2>
           <p>For writers, students, researchers, creators, and anyone who thinks better out loud.</p>
-          <a className="ms-btn ms-btn--primary" href={MIRASCRIBE_APP_STORE_URL} target="_blank" rel="noopener noreferrer">Download MiraScribe <ArrowRight size={18} /></a>
+          <a className="ms-btn ms-btn--primary" href={storeUrl} target="_blank" rel="noopener noreferrer">Download MiraScribe <ArrowRight size={18} /></a>
         </section>
       </main>
     </MiraScribeShell>

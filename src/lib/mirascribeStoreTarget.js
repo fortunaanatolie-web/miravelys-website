@@ -1,3 +1,8 @@
+import {
+  MIRASCRIBE_APP_STORE_URL,
+  MIRASCRIBE_IOS_APP_STORE_URL,
+} from '../config/productCapabilities';
+
 export const MIRASCRIBE_STORE_TARGET = Object.freeze({
   IPHONE: 'iphone',
   MAC: 'mac',
@@ -22,4 +27,10 @@ export function resolveMiraScribeStoreTarget(browserNavigator) {
   return isMac && !isMobile
     ? MIRASCRIBE_STORE_TARGET.MAC
     : MIRASCRIBE_STORE_TARGET.IPHONE;
+}
+
+export function resolveMiraScribeStoreUrl(target) {
+  return target === MIRASCRIBE_STORE_TARGET.MAC
+    ? MIRASCRIBE_APP_STORE_URL
+    : MIRASCRIBE_IOS_APP_STORE_URL;
 }
