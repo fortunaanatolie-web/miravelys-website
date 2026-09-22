@@ -19,6 +19,7 @@
  */
 
 export const MIRASCRIBE_APP_STORE_URL = 'https://apps.apple.com/app/id6803891486';
+export const MIRASCRIBE_IOS_APP_STORE_URL = 'https://apps.apple.com/md/app/mirascribe/id6803891486';
 
 export const MIRASCRIBE_PRODUCTION_LANGUAGES = [
   { code: 'af', name: 'Afrikaans' },
