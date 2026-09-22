@@ -77,7 +77,7 @@ try {
 
     try {
       for (const route of routes) {
-        const response = await page.goto(baseUrl + route, { waitUntil: 'domcontentloaded' });
+        const response = await page.goto(baseUrl + route, { waitUntil: 'networkidle' });
         assert(response?.ok(), profile.name + ' ' + route + ': HTTP ' + response?.status());
         assert(await page.locator('.ms-store-promo').count() === 0, profile.name + ' ' + route + ': redundant Now on Mac/iPhone strip remains');
 
